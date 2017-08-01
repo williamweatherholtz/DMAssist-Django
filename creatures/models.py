@@ -1,0 +1,18 @@
+from django.db import models
+
+# Create your models here.
+class CreatureInfo(models.Model):
+    slug = models.SlugField(max_length=75)
+    name = models.CharField(max_length=75, unique=True)
+    min_hd = models.PositiveSmallIntegerField()
+    max_hd = models.PositiveSmallIntegerField()
+    min_hp_mod = models.SmallIntegerField()
+    max_hp_mod = models.SmallIntegerField()
+    min_appearing = models.PositiveSmallIntegerField()
+    max_appearing = models.PositiveSmallIntegerField()
+    lair_chance = models.DecimalField(max_digits=3, decimal_places=2, default = 0.0)
+    base_xp = models.IntegerField(default=0)
+    level = models.IntegerField(null=True)
+    
+    def __str__(self):
+        return self.name

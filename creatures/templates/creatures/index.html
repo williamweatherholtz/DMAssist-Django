@@ -1,0 +1,13 @@
+{% extends "home/base.html" %}
+
+{% block content %}
+    {% if creature_list %}
+        <ul>
+        {% for creature in creature_list %}
+            <li><a href="{% url 'creatures:detail' creature.slug %}">{{creature.name}}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No creatures available.</p>
+    {% endif %}
+{% endblock %}

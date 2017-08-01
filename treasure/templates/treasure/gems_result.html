@@ -1,0 +1,16 @@
+{% extends 'treasure/base.html' %}
+
+{% block treasure_content %}
+    <form action="{% url 'treasure:gems' %}" method="GET">
+        <input type="submit" value="Reset" />
+    </form>
+{% endblock %}
+
+{% block treasure_results %}
+    <p> There are {{ gem_count }} gems. </p>
+    <ul>
+        {% for gem in gem_list %}
+            <li>{{ gem }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

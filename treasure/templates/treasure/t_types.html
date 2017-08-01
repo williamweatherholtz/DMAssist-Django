@@ -1,0 +1,9 @@
+{% extends "treasure/base.html" %}
+
+{% block treasure_content %}
+    <form action="{% url 'treasure:t_types' %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Roll Treasure" />
+    </form>
+{% endblock %}

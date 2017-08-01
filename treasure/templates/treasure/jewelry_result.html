@@ -1,0 +1,16 @@
+{% extends 'treasure/base.html' %}
+
+{% block treasure_content %}
+    <form action="{% url 'treasure:jewelry' %}" method="GET">
+        <input type="submit" value="Reset" />
+    </form>
+{% endblock %}
+
+{% block treasure_results %}
+    <p> There are {{ jewelry_count }} pieces of jewelry. </p>
+    <ul>
+        {% for item in jewelry_list %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'treasure/base.html' %}
+
+{% block treasure_content %}
+    <form action="{% url 'treasure:t_types' %}" method="GET">
+        <input type="submit" value="Reset" />
+    </form>
+{% endblock %}
+
+{% block treasure_results %}
+    <p> {{ treasure }} </p>
+{% endblock %}
