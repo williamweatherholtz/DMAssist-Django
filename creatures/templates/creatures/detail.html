@@ -2,7 +2,43 @@
 
 {% block content %}
     <p>{{creature.name}}</p>
+    <p>Level {{ creature.level }}</p>
     
+    
+    <p>
+        {% if creature.max_hd > 0 %}
+            {% if creature.min_hd != creature.max_hd %}
+                {{creature.min_hd}} - {{creature.max_hd}}
+            {% else %}
+                {{creature.min_hd}}
+            {% endif %} HD
+            {% if creature.max_hp_mod > 0 %}
+                + 
+            {% endif %}
+        {% endif %}
+        
+        {% if creature.max_hp_mod > 0 %}
+            {% if creature.min_hp_mod != creature.max_hp_mod %}
+                {{creature.min_hp_mod}} - {{creature.max_hp_mod}}
+            {% else %}
+                {{creature.min_hp_mod}}
+            {% endif %}
+            HP
+        {% endif %}
+    </p>
+    
+    <p>
+        Number Appearing: 
+        {% if creature.min_appearing != creature.max_appearing %} 
+            {{ creature.min_appearing }} - 
+        {% endif %}
+        {{ creature.max_appearing }}
+    </p>
+    
+    <p>
+        Lair Chance: 
+        {{ creature.lair_chance }}
+    </p>
     
     
 {% endblock %}

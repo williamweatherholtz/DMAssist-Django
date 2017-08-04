@@ -42,7 +42,7 @@ SECRET_KEY = get_secret('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1','192.168.0.2']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1','192.168.0.2', 'dma.herokuapp.com']
 
 
 # Application definition
@@ -51,6 +51,8 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'creatures.apps.CreaturesConfig',
     'treasure.apps.TreasureConfig',
+    'random_encounters.apps.RandomEncountersConfig',
+    'spells.apps.SpellsConfig',
     
     'django.contrib.admin',
     'django.contrib.auth',

@@ -22,5 +22,7 @@ urlpatterns = [
     url(r'', include('home.urls')),
     url(r'^treasure/', include('treasure.urls')),
     url(r'^creatures/', include('creatures.urls')),
+    url(r'^random_encounters/', include('random_encounters.urls')),
+    url(r'^spells/', include('spells.urls')),
     url(r'^admin/', admin.site.urls),
 ]

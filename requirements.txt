@@ -1,1 +1,1 @@
-django-bootstrap3
+-r requirements/heroku.txt

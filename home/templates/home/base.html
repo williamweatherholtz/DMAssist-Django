@@ -10,11 +10,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    
-    <title> {% block title %}DM Assist{% endblock %}</title>
 {% endblock %}
 {% block head_extras %}
 {% endblock %}
@@ -26,6 +23,8 @@
         <li><a href="/">Home</a></li>
         <li><a href="/creatures/">Creatures</a></li>
         <li><a href="/treasure/">Treasure</a></li>
+        <li><a href="/random_encounters/">Random Encounters</a></li>
+        <li><a href="/spells/">Spells</a></li>
     </ul>
     
     <div id="content">
