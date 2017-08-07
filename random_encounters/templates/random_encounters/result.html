@@ -1,0 +1,13 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+
+    {% if encounters %}
+        {% for encounter in encounters %}
+            <p> {{ encounter }} </p>
+        {% endfor %}
+    {% else %}
+        <p> No encounters </p>
+    {% endif %}
+
+{% endblock %}

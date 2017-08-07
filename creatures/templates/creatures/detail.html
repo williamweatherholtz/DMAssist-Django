@@ -1,5 +1,9 @@
 {% extends "home/base.html" %}
 
+{% block title_suffix %}
+ - {{creature.name}} Detail
+{% endblock %}
+
 {% block content %}
     <p>{{creature.name}}</p>
     <p>Level {{ creature.level }}</p>
