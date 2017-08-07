@@ -1,6 +1,12 @@
 .w3-button{
     border-style:solid;
-    border-color:blue;
+    border-color:white;
+}
+
+.w3-btn{
+    border-style:ridge;
+    border-color:white;
+    background-color:indigo;
 }
 
 .nav{
@@ -20,4 +26,12 @@ input{
 pre{
     background-color: black;
     color:white;
+}
+
+option{
+    background-color: indigo;
+}
+
+select{
+    background-color: indigo;
 }
