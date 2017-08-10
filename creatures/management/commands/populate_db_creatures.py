@@ -2,12 +2,15 @@
 Adds existing creature list from Kivy project to database
 """
 
+import sqlite3
+
+from django.db.utils import IntegrityError
 from django.core.management.base import BaseCommand
 from django.template.defaultfilters import slugify
 
 from creatures.models import CreatureInfo
 
-from .basic_creature_info_definitions import creature_list
+from dma.dnd.basic_creature_info_definitions import creature_list
 
 class Command(BaseCommand):
     
@@ -27,9 +30,12 @@ class Command(BaseCommand):
                 level = creature.level
             )
             
-            c.save()
-            
-            print('added {} to database'.format(creature.name))
+            try:
+                c.save()
+            except IntegrityError:
+                print('{} already in database'.format(creature.name))
+            else:
+                print('added {} to database'.format(creature.name))
         
     def handle(self, *args, **options):
         self._create_creatures()
