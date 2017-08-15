@@ -2,4 +2,14 @@
 
 {% block title_suffix %}
  - Spells
- {% endblock %}
+{% endblock %}
+
+{% block content %}
+    {% if spell_list %}
+        <ul>
+        {% for spell in spell_list %}
+            <li>{{spell}}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}

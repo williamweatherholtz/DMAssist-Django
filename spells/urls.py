@@ -1,8 +1,8 @@
 from django.conf.urls import url
 
-from .views import index_view
+from .views import IndexView
 
 app_name = 'spells'
 urlpatterns = [
-    url(r'^$', index_view, name='view')
+    url(r'^$', IndexView.as_view(), name='index')
 ]

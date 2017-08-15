@@ -2,6 +2,8 @@ from .roll import roll
 
 from random import sample,choice
 
+
+#contains minimal info on spells (name, class and level)
 class Spell():
     def __init__(self, name, spell_class, level):
         self.name = name
@@ -40,7 +42,7 @@ class Spell():
             self.role == other.role):
             return True
         else: return False
-        
+              
 def randomSpellScroll(num,mu_min,mu_max,cl_min=0,cl_max=0):
     #Set cleric range to mu_range if cl_min/max are not given
     if (not cl_min): cl_min = mu_min

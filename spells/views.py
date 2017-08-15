@@ -1,5 +1,11 @@
 from django.shortcuts import render
+from django.views import generic
 
-def index_view(request):
-    return render(request, 'spells/index.html')
+from .models import SpellInfo
 
+class IndexView(generic.ListView):
+    template_name = 'spells/index.html'
+    context_object_name = 'spell_list'
+
+    def get_queryset(self):
+        return SpellInfo.objects.order_by('name')

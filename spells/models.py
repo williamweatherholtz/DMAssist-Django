@@ -7,4 +7,14 @@ class SpellInfo(models.Model):
     level = models.SmallIntegerField()
     
     def __str__(self):
-        return self.slug
+        role = 'Unknown'
+        if self.spell_class == 'C':
+            role = 'Cleric'
+        elif self.spell_class == 'M':
+            role = 'Magic User'
+        elif self.spell_class == 'D':
+            role = 'Druid'
+        elif self.spell_class == 'I':
+            role = 'Illusionist'
+            
+        return '{} -  {} Level {} '.format(self.name, role, self.level)
