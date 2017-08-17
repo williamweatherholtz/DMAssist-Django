@@ -10,9 +10,18 @@ class CreatureInfo(models.Model):
     max_hp_mod = models.SmallIntegerField()
     min_appearing = models.PositiveSmallIntegerField()
     max_appearing = models.PositiveSmallIntegerField()
-    lair_chance = models.DecimalField(max_digits=3, decimal_places=2, default = 0.0)
+    lair_chance = models.DecimalField(max_digits=6, decimal_places=4, default = 0.0)
     base_xp = models.IntegerField(default=0)
     level = models.IntegerField(null=True)
     
     def __str__(self):
         return self.name
+    
+    def __eq__(self, other):
+        my_vars = vars(self)
+        their_vars = vars(other)
+        
+        my_fields = {key: val for key, val in my_vars.items() if key not in ['_state', 'id']}
+        their_fields = {key: val for key, val in their_vars.items() if key not in ['_state', 'id']}
+        
+        return my_fields == their_fields
