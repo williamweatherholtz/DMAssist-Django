@@ -868,7 +868,7 @@ druid_spells = [
         duration_lvl=tp(1,R),
         sourcebook=U
     ),
-    Spell('Slow Poison','D',2
+    Spell('Slow Poison','D',2,
         cast=tp(0),
         duration=tp(0),
         duration_lvl=tp(0),
@@ -1624,7 +1624,7 @@ mu_spells = [
     Spell('Detect Illusion','M',3,
         cast=tp(3,S),
         duration=tp(2,R),
-        duration_lvl=tp(1,R)
+        duration_lvl=tp(1,R),
         sourcebook=U
     ),
     Spell('Dispel Magic','M',3,
@@ -2926,7 +2926,7 @@ illusionist_spells = [
     Spell('Death Fog','I',6,
         cast=tp(6,S),
         duration=tp(1,VA),
-        duration=tp(1,R),
+        duration_lvl=tp(1,R),
         sourcebook=U
     ),
     Spell('Demi-Shadow Magic','I',6,
@@ -3039,7 +3039,7 @@ def randomIllusionistSpells(num=1,level=None):
 def test_module():
     print(cleric_spells[0].cast_time)
     print(cleric_spells[0].duration)
-    print(cleric_spells[0].sourcebook)
+    print(cleric_spells[0].sourcebook.value)
 
 
 if __name__ == '__main__':
