@@ -13,11 +13,11 @@ from creatures.models import CreatureInfo
 from dma.dnd.basic_creature_info_definitions import creature_list
 
 class Command(BaseCommand):
-    
+
     def _create_creatures(self):
         num_added = 0
         num_modified = 0
-        
+
         for creature in creature_list:
             c = CreatureInfo(
                 slug = slugify(creature.name),
@@ -32,33 +32,33 @@ class Command(BaseCommand):
                 base_xp = creature.base_xp,
                 level = creature.level
             )
-            
+
             try:
                 c.save()
             except IntegrityError:
                 conflict = CreatureInfo.objects.get(name=creature.name)
-         
+
                 if conflict != c:
                     fields = {key: val for key, val in vars(c).items() if key not in ['_state', 'id']}
-                    
+
                     print(fields)
                     print()
                     print(vars(conflict))
-                    
+
                     for field in fields.keys():
                         new_val = getattr(c, field)
                         if new_val != getattr(conflict, field):
                             setattr(conflict, field, new_val)
-                    
+
                     conflict.save()
-                    
+
                     num_modified += 1
 
             else:
                 num_added += 1
                 print('added {} to database'.format(creature.name))
-            
+
         print('{} creature entries added, {} modified'.format(num_added, num_modified))
-        
+
     def handle(self, *args, **options):
         self._create_creatures()

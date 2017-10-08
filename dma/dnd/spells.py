@@ -1,4 +1,5 @@
 from random import sample,choice
+from decimal import Decimal
 
 from .roll import roll
 from .time import TimePeriod, TimeUnit
@@ -287,7 +288,7 @@ cleric_spells = [
     ),
     Spell('Snake Charm','C',2,
         cast=tp(5,S),
-        duration=tp(VA),
+        duration=tp(1,VA),
         sourcebook=V
     ),
     Spell('Speak With Animals','C',2,
@@ -1069,7 +1070,7 @@ druid_spells = [
     ),
     Spell('Spike Stones','D',5,
         cast=tp(6,S),
-        duration=(1,VA),
+        duration=tp(1,VA),
         duration_lvl=tp(1,R),
         sourcebook=U,
     ),
@@ -1264,7 +1265,7 @@ mu_spells = [
         sourcebook=V
     ),
     Spell('Feather Fall','M',1,
-        cast=tp(0.1,S),
+        cast=tp(Decimal(0.1),S),
         duration_lvl=tp(1,S),
         sourcebook=V
     ),
@@ -2633,7 +2634,7 @@ illusionist_spells = [
     Spell('Alter Self','I',2,
         cast=tp(2,S),
         duration=tp(1,VA),
-        duration_lvl=(2,R),
+        duration_lvl=tp(2,R),
         sourcebook=U
     ),
     Spell('Blindness','I',2,

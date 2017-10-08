@@ -5,7 +5,11 @@ class SpellInfo(models.Model):
     name = models.CharField(max_length=75)
     spell_class = models.CharField(max_length=1)
     level = models.SmallIntegerField()
-    
+    cast_time = models.DecimalField(max_digits=15, decimal_places=5)
+    duration = models.DecimalField(max_digits=20, decimal_places=5)
+    duration_per_level = models.DecimalField(max_digits=15, decimal_places=5)
+    source = models.CharField(max_length=50)
+
     def __str__(self):
         role = 'Unknown'
         if self.spell_class == 'C':
