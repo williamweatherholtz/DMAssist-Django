@@ -28,16 +28,16 @@ print('DIR: {}'.format(curr_dir), stderr)
 
 with open('dma/secrets.json') as f:
     secrets = json.loads(f.read())
-    
+
 def get_secret(setting, secrets=secrets):
     try:
         return secrets[setting]
     except KeyError:
         error_msg = 'Set the {0} environment variable'.format(setting)
         raise ImproperlyConfigured(error_msg)
-        
+
 SECRET_KEY = get_secret('SECRET_KEY')
-    
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -53,7 +53,9 @@ INSTALLED_APPS = [
     'treasure.apps.TreasureConfig',
     'random_encounters.apps.RandomEncountersConfig',
     'spells.apps.SpellsConfig',
-    
+
+    'django_filters',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

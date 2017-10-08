@@ -1,1 +1,2 @@
 -r requirements/heroku.txt
+django-filters

@@ -5,11 +5,12 @@
 {% endblock %}
 
 {% block content %}
-    {% if spell_list %}
-        <ul>
-        {% for spell in spell_list %}
-            <li>{{spell}}</li>
-        {% endfor %}
-        </ul>
-    {% endif %}
+    <form action="" method="get">
+        {{filter.form.as_p}}
+        <input type="submit" />
+    </form>
+
+    {% for obj in filter.qs %}
+        {{obj.slug }}
+    {% endfor %}
 {% endblock %}

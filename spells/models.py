@@ -20,5 +20,5 @@ class SpellInfo(models.Model):
             role = 'Druid'
         elif self.spell_class == 'I':
             role = 'Illusionist'
-            
+
         return '{} -  {} Level {} '.format(self.name, role, self.level)
