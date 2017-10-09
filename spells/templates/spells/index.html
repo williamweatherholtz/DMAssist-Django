@@ -11,6 +11,8 @@
     </form>
 
     {% for obj in filter.qs %}
-        {{obj.slug }}
+        <p>
+        {{ obj }}
+        </p>
     {% endfor %}
 {% endblock %}

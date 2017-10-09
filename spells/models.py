@@ -9,6 +9,7 @@ class SpellInfo(models.Model):
     duration = models.DecimalField(max_digits=20, decimal_places=5)
     duration_per_level = models.DecimalField(max_digits=15, decimal_places=5)
     source = models.CharField(max_length=50)
+    description = models.TextField(default="Missing description")
 
     def __str__(self):
         role = 'Unknown'

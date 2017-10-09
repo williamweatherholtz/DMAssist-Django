@@ -29,7 +29,8 @@ class Command(BaseCommand):
                 cast_time = spell.cast_time.in_rounds(),
                 duration = spell.duration.in_rounds(),
                 duration_per_level = spell.duration_per_level.in_rounds(),
-                source = spell.sourcebook.value
+                source = spell.sourcebook.value,
+                description = spell.description
             )
 
             try:
