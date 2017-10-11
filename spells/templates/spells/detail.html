@@ -1,0 +1,25 @@
+{% extends "home/base.html" %}
+
+{% block title_suffix %}
+ - {{spell.name}} Detail
+{% endblock %}
+
+{% block content %}
+    <p>{{spell}}</p>
+    <p>Source: {{spell.source}}</p>
+    <p> Cast Time:
+    {% if spell.cast_time >= 0 %}
+        {{ spell.cast_str }}
+    {% elif spell.cast_time == -1 %}
+        Variable
+    {% else %}
+        {{ spell.cast_time }} Decisegments
+    {% endif %}
+    </p>
+
+    <p> Duration:
+        {{ spell.duration_str }}
+    </p>
+
+    <p> Description : {{ spell.description }} </p>
+{% endblock %}

@@ -10,9 +10,10 @@
         <input type="submit" />
     </form>
 
-    {% for obj in filter.qs %}
-        <p>
-        {{ obj }}
+    <ul>
+    {% for spell in filter.qs %}
+        <li><a href="{% url 'spells:detail' spell.slug %}">{{spell}}</a></li>
         </p>
     {% endfor %}
+    </ul>
 {% endblock %}

@@ -12,18 +12,31 @@ def test_module():
     #Conversion testing
     print('{} rounds'.format(period.in_rounds()))
 
-#common time units, values relative to rounds
+
+
+#common time units, values relative to decisegments
 #assumes 24hr days, 365 day years
 class TimeUnit(Enum):
-    decisegment = Decimal(.01)
-    segment = Decimal(.1)
-    round = Decimal(1)
-    turn = Decimal(10)
-    hour = Decimal(60)
-    day = Decimal(1440)
-    year = Decimal(525600)
-    variable = Decimal('NaN')
-    permanent = Decimal('Infinity')
+    decisegment = 1
+    segment = 10
+    round = 100
+    turn = 1000
+    hour = 6000
+    day = 144000
+    year = 525600
+    variable = -1
+    permanent = -2
+
+#Take a integer value of decisegments
+#Return the largest evenly divisible unit
+def simplify(ds):
+    val = ds
+    for unit in list(TimeUnit)[-3::-1]:
+        if val >= unit.value:
+            if val % unit.value == 0:
+                return TimePeriod(val//unit.value, unit)
+
+    return TimePeriod(val, unit)
 
 class TimePeriod():
     def __init__(self, val=1, unit=TimeUnit.round):
@@ -38,11 +51,12 @@ class TimePeriod():
             #pluralize
             return str + 's'
 
-    def in_rounds(self):
+    @property
+    def decisegments(self):
         if self.unit is TimeUnit.variable:
-            return Decimal(-2)
+            return -1
         elif self.unit is TimeUnit.permanent:
-            return Decimal(-1)
+            return -2
         else:
             return self.value * self.unit.value
 

@@ -21,14 +21,15 @@ class Command(BaseCommand):
             druid_spells + mu_spells + illusionist_spells)
 
         for spell in spell_list:
+            print(spell.name)
             s = SpellInfo(
                 slug = slugify(str(spell)),
                 name = spell.name,
                 level = spell.level,
                 spell_class = spell.role,
-                cast_time = spell.cast_time.in_rounds(),
-                duration = spell.duration.in_rounds(),
-                duration_per_level = spell.duration_per_level.in_rounds(),
+                cast_time = spell.cast_time.decisegments,
+                duration = spell.duration.decisegments,
+                duration_per_level = spell.duration_per_level.decisegments,
                 source = spell.sourcebook.value,
                 description = spell.description
             )
