@@ -116,7 +116,8 @@ cleric_spells = [
     Spell('Combine','C',1,
         cast=tp(1,R),
         duration=tp(1,VA),
-        sourcebook=U
+        sourcebook=U,
+        desc="This spell enables three to five clerics to combine their abilities and thereby empower one of their number to cast a spell or turn undead with greater efficacy. The highest-level cleric of the group (or one of such, as applicable) stands, while the other clerics join hands in a surrounding circle. All the participating clerics then cast the combine spell together. The central cleric temporarily functions as if of higher level, gaining one level for each encircling cleric. The maximum gain is four levels, and the maximum duration is 3 turns. The increase applies to the cleric's effective level for determining the results of attempts to turn undead, and to spell details which vary by the level of the caster. The encircling clerics must concentrate on maintaining the combine effect. They gain no armor class bonuses from shield or dexterity, and their attackers gain a +4 bonus on all \"to hit\" rolls. The central cleric gains no additional spells, but may cast any previously memorized spell(s), often with bonus effects."
     ),
     Spell('Command','C',1,
         cast=tp(1,S),
@@ -152,12 +153,14 @@ cleric_spells = [
     Spell('Endure Cold/Heat','C',1,
         cast=tp(1,R),
         duration_lvl=tp(9,T),
-        sourcebook=U
+        sourcebook=U,
+        desc="The recipient of this spell is provided with protection from normal extremes of cold or heat (depending on which application is used). He or she can stand unclothed in temperatures as low as -30°F or as high as 130°F (depending on application) with no ill effect. A temperature extreme beyond either of those limits will cause 1 hit point of exposure damage per hour for every degree above or below those limits. (Without the benefit of protection such as this, exposure damage is 1 hit point per turn for each degree of temperature.) The spell will last for the prescribed duration, or until the recipient is affected by any form of magical cold (including white dragon breath) or magical heat. The cancellation of the spell will occur regardless of which application was used and regardless of which type of magical effect hits the character (e.g. Endure Cold will be cancelled by magical heat or fire as well as by magical cold). The recipient of the spell will not suffer damage from the magical heat or cold during the round in which the spell is broken, but will be vulnerable to all such attacks starting on the following round. The spell will be cancelled instantly if either Resist Fire or Resist Cold is cast upon the recipient."
     ),
     Spell('Invisibility to Undead','C',1,
         cast=tp(4,S),
         duration=tp(6,R),
-        sourcebook=U
+        sourcebook=U,
+        desc="This spell is quite similar to Sanctuary, but only affects undead of 4 or fewer hit dice. A saving throw versus spell is made for each type of undead within 30 feet of the caster, and if failed, all undead of that type will ignore the caster completely for the duration of the spell. (Note that this negates subsequent attempts by the caster to turn those undead.) However, if the saving throw suceeds, all undead of that type will attack the spell caster in preference to any other possible targets. The effect of this spell ends if the caster attacks or attempts to cast any other spell. If the caster is of neutral morals (with respect to good and evil), the undead save at -2. The material component is the cleric's holy symbol."
     ),
     Spell('Light','C',1,
         cast=tp(4,S),
@@ -169,17 +172,20 @@ cleric_spells = [
     Spell('Magic Stone','C',1,
         cast=tp(1,R),
         duration=tp(6,R),
-        sourcebook=U
+        sourcebook=U,
+        desc="To use this spell, the cleric picks up a small stone or pebble and then (via the casting process) places a magical aura on it. The spell cannot affect stones that are already magical. The magic stone can be thrown at a target up to 4\" distant (assuming no intervening obstacles and sufficient head room). It will act as a +1 weapon for \"to hit\" determination, and if a hit is scored the stone will do 1 point of damage. Ranges are 2\"/3\"/4\", with standard modifications. If the stone travels more than 4\" from the thrower or if it does not score a hit, the missile loses its dweomer and falls harmlessly to the ground. A magic stone must be thrown within 6 rounds after the casting of the spell is completed, or it turns back into an ordinary item. A hit from the stone will break the concentration of a spell caster only if the victim fails a saving throw versus spell. Any target with innate magic resistance cannot be affected by the stone. A Shield spell will protect a target from a magic stone, as will a Brooch of Shielding, a Protection from Normal Missiles spell, a Minor Globe of Invulnerability, or any similar (more powerful) magic. A cleric of 6th through 10th level can enchant 2 stones with this spell, one of 11th through 15th level can use it on 3 stones, and an additional stone is allowed for every five levels of experience the caster has gained beyond the 11th (i.e., 4 stones at 16th level, 5 stones at 21st level, etc.). It is possible for a cleric to give the enchanted stone(s) to another character to throw. Note that some religious organizations forbid their clerics from using this spell, since it enables the cleric to use a missile weapon (of sorts)."
     ),
     Spell('Penetrate Disguise','C',1,
         cast=tp(2,R),
         duration=tp(1,R),
-        sourcebook=U
+        sourcebook=U,
+        desc="By means of this spell, the cleric is empowered to see through a disguise composed solely of makeup or altered clothing (i.e., non-magical in nature). The cleric cannot identify what class or profession the disguised figure actually belongs to, nor the true appearance of the figure; the spell merely points out that the target figure is posing as someone or something else. The spell doesn not detect actual rank or status and cannot reaveal an illusion for what it is, but it can detect whether a figure is the object of a Friends spell. The spell cannot detect any deception involving alignment. The target of the spell is allowed a saving throw versus spell, and if this saving throw is made, the disguise will be enhanced in the eyes of the cleric, so that the caster becomes convinced that the target figure actually is what he claims to be. Being under the effect of a Bless spell, wearing magic armor, or using a magic item of protection (such as a cloak or ring) will give the target an appropriate bonus to the saving throw."
     ),
     Spell('Portent','C',1,
         cast=tp(1,T),
         duration=tp(1,VA),
-        sourcebook=U
+        sourcebook=U,
+        desc="This spell enables the cleric to tell something of his or another figure's future \"luck\". This \"luck\" takes the form of an improvement or reduction in a \"to hit\" roll or a saving throw at some point in the future unknown to the character who is the object of the portent. After this spell is cast, the Dungeon Master makes two die rolls in secret: First, 1d12, to determine at what point in the future the portent takes effect; second, 1d6 to determine the exact effect (roll of 1 = -3; 2 = -2; 3 = -1; 4 = +1; 5 = +2; 6 = +3). Based upon the result of the 1d6 roll, the DM should indicate to the player of the cleric character whether the portent is good, fair(which can be moderately good or moderately bad), or poor. The recipient of the spell will usually also be given this information. The result of the d12 roll represents the number of \"to hit\" rolls or saving throws that the target character must make before the roll to be affected by the portent occurs; e.g. if a 12 is rolled, then the 12th such roll thereafter will be the one to which the portent is applied. Die rolls only apply toward this count if they are taken in life-or-death (i.e., combat or peril) situations; the count is suspended if the character contrives to perform (for instance) saving throws against non-harmful effects in an effort to \"sidestep\" the portent. Die rolls that do apply toward this count include: Saving throws made in combat or against magical effects, \"to hit\" rolls made by an opponent against the character. When the die roll designated by the portent is made, the result will be adjusted upward or downward as indicated by the result of the d6 roll; thus, the character will be either more or less likely to succeed on a saving throw. The material component for this spell is either a numbered wheel or tea leaves."
     ),
     Spell('Precipitation','C',1,
         cast=tp(3,S),
@@ -223,7 +229,8 @@ cleric_spells = [
         cast=tp(4,S),
         duration=tp(1,R),
         duration_lvl=tp(1,R),
-        sourcebook=U
+        sourcebook=U,
+        desc="The recipient of this spell gains the benefit of a Bless spell and a special benison of 1-8 additional hit points. The bless lasts as long as the aid spell, as do the hit points thus gained. The aid allows a character to actually have more hit points than the character's full normal total. The added hit points last only for the duration of the aid spell. Any damage taken by the recipient while the aid spell is in effect is taken off the 1-8 additional hit points before regular ones are lost. Hit points bestowed by an aid spell and then lost cannot be regained by curative magic. Example: A 1st-level fighter has 8 hit points, takes 2 points of damage, and then recieves and aid spell which gives 6 additional hit points. The fighter now has 12 hit points, 6 of which are temporary. If he is then hit for 7 points of damage, 1 regular point and all 6 of the temporary points are lost. The material components of this spell are a tiny strip of white cloth with a sticky substance (such as tree sap) on the ends, plus the cleric's holy symbol."
     ),
     Spell('Augury','C',2,
         cast=tp(2,R),
@@ -246,17 +253,20 @@ cleric_spells = [
     Spell('Detect Life','C',2,
         cast=tp(1,R),
         duration=tp(5,R),
-        sourcebook=U
+        sourcebook=U,
+        desc="By the use of this spell, a cleric can tell if a target creature is alive. The magic will detect life in the recipient of a Feign Death spell, or someone in a coma, deathlike trance, or state of suspended animation. If cast upon the body of a creature that is engaged with astral travel, it will reveal that the creature is alive. The spell works on plants and plant creatures as well as animals. The spell's range is diminished if more than a one-inch thickness of wood or stone lies between the cleric and the subject. Each inch of thickness of a wood or stone barrier is treated as 10 feet of open space. A barrier of metal of any thickness will cause the spell to fail and be ruined. Any form of mental protection, including those of psionic or magical nature, will likewise ruin the spell without anything being detected. The spell will detect the first living creature that lies along the cleric's line of sight (and within range), or else the first creature that crosses the line-of-sight path before the duration expires."
     ),
     Spell('Dust Devil','C',2,
         cast=tp(3,R),
         duration_lvl=tp(1,R),
-        sourcebook=U
+        sourcebook=U,
+        desc="This spell enables a cleric to conjure up a weak air elemental - a dust devil of AC 4, 2 HD, MV 18\", 1 attack for 1-4 points of damage, which can be hit by normal weapons. Magic weapons of any type cause it double damage. The dust devil appears as a small whirlwind 5 feet in diameter at its base, 15 feet tall, and 10 feet across at the top. It will move as directed by the cleric, but will be dispelled if ordered to go farther than 3\" away from the spell caster. The winds of the dust devil can hold a gas cloud or a creature in gaseous form at bay or push it away from the caster (though it cannot damage or dispel such a cloud). Its winds are sufficient to put out torches, small campfires, exposed lanterns, and other small, open flames of non-magical origin. If skimming along the ground in an area of loose dust, sand or ash, the dust devil will pick up these particles and disperse them in a cloud 30 feet in diameter centered around the dust devil. Normal vision is not possible through the cloud, and creatures caught in the cloud will be effectively blinded until one round after they are free of it. Spell casting is virtually impossible for someone caught inside such a cloud or inside the dust devil itself; even if the creature fails to score damage on the victim from the buffeting of its winds, a spell caster must make a saving throw versus spell to keep his or her concentration (and the spell) from being ruined. Any creature native to the Elemental Plane of Air - even another creature of the same sort - can dismiss a dust devil at will from a distance of 3\" or less. Creatures not native to the plane occupied by the spell caster are not affected by the dust devil. It is automatically dispelled if it contacts any creature with innate magic resistance - but not until after it gets a chance to hit and do damage."
     ),
     Spell('Enthrall','C',2,
         cast=tp(1,R),
         duration=tp(1,VA),
-        sourcebook=U
+        sourcebook=U,
+        desc="A cleric who uses this spell can bind and enthrall an audience that can fully understand his or her language. Listeners of the same race as the cleric are allowed a saving throw versus spell; those of a different race which is generally unfriendly to the cleric's race save at +4. It is impossible to enthrall a character or creature with more than 4 levels or hit dice, or one with a wisdom score greater than 15. To effect the spell, the caster must speak without interruption for a full round. Thereafter, the enchantment lasts for as long as the cleric keeps speaking, to a maximum of 6 turns. Those who fail their saving throw will view the cleric as if he or she had a charisma of 21 (loyalty base +70%, reaction adjustment +50%). They will stand and listen to the cleric's words, but will not act on them as if a suggestion had been cast. When the cleric stops talking, the spell is broken and the listeners regain control of their own minds. Any form of attack (i.e. a successful hit or the casting of a spell) against the cleric will instantly cancel the enthrall spell, as will any attempt by the cleric to cast a different spell or perform some other action. Members of the audience who make a successful saving throw will view the cleric as having a charisma of 3; they may (50% chance) hoot and jeer, allowing a new saving throw for others listening. If the cleric tries to take undue advantage of the spell by preaching about a religion or alignment opposed to that to which the members of the audience subscribe, each \"offended\" listener is allowed a new saving throw at +5."
     ),
     Spell('Find Traps','C',2,
         cast=tp(5,S),
@@ -274,7 +284,8 @@ cleric_spells = [
     Spell('Holy Symbol','C',2,
         cast=tp(1,T),
         duration=tp(1,P),
-        sourcebook=U
+        sourcebook=U,
+        desc="This spell is used to prepare a cleric's holy symbol, or to create a new symbol to replace a lost or damaged one. The new symbol-to-be, which is the spell's material component (and obviously is not consumed in the casting), must be crafted of appropriate material depending on the religion/deity in question, and must be of the proper shape and design - a cleric cannot pick up just any item and make it into a holy symbol. A cleric may posess two holy symbols at one time, and this spell can be used to create a second one as a spare. No cleric can create a holy symbol related to a religion or deity other than the one that he or she worships. The holy symbol of a good or evil cleric will radiate a faint aura of good or evil, but it is not a magical item per se. The holy symbol of a cleric who is of neutral morals (with respect to good and evil) will have no such aura."
     ),
     Spell('Know Allignment','C',2,
         cast=tp(1,R),
@@ -285,7 +296,8 @@ cleric_spells = [
     Spell('Messenger','C',2,
         cast=tp(1,R),
         duration_lvl=tp(1,H),
-        sourcebook=U
+        sourcebook=U,
+        desc="This spell enables the cleric to call upon a small (size S) creature of at least animal intelligence to act as his or her messenger. The spell does not affect creatures that are \"giant\" types, and it will not work on creatures with an intelligence score of 4 or higher, or with a rating of low intelligence or better (whichever applies). If the creature is already within range, the cleric, using some type of food desirable to the animal as a lure, can call the animal to come. The animal is allowed a saving throw versus spell, and if this succeeds the spell fails. If the saving throw is failed, the animal will advance toward the cleric and await his or her bidding. The cleric can communicate with the animal in a crude fashion, telling it to go to a certain place, but directions must be simple. The spell caster can attach some small item or note to the animal. If so instructed, the animal will then wait at that location until the duration of the spell expires. (Note that unless the intended recipient of a message is expecting a messenger in the form of a small animal or bird, the carrier may be ignored.) When the spell's duration expires, the animal or bird will return to its normal activities. The intended reciever of a message gains no communication ability."
     ),
     Spell('Resist Fire','C',2,
         cast=tp(5,S),
@@ -330,12 +342,14 @@ cleric_spells = [
     Spell('Withdraw','C',2,
         cast=tp(3,S),
         duration=tp(1,VA),
-        sourcebook=U
+        sourcebook=U,
+        desc="By means of a withdraw spell, the cleric effectively alters the flow of time with regard to himself or herself. While but 1 segment of time passes for those not affected by the spell, the cleric is able to spend 1 round of time in contemplation. The base spell duration is 2 segments (2 rounds, from the cleric's point of view), and the cleric adds 1 additional increment of time for each level of experience he or she possesses. Thus, at 5th level of experience, the spell caster could spend up to 6 rounds cogitating on some matter while but 6 segments of time passed for all others. (The DM must allow the spell caster 1 minute of real time per segment to ponder some problem or question. No discussion with non-affected characters is permitted.) Note that while affected by a withdraw spell, the cleric can perform only these particular acts: the casting of an augury spell, any curing or healing spells, or any informational spells - and all such spells can only be cast upon the cleric himself or herself. The casting of any of these spells in a different fashion (e.g. a Cure Light Wounds bestowed upon a companion) will cause the magic of the withdraw spell to cease. Similarly, the cleric who is affected by the withdraw spell cannot walk or run, become invisible, or otherwise engage in actions othen than thinking, reading, and the like. The withdrawn cleric can be affected by the actions of the others while under the influence of this spell, and any attack upon the cleric which succeeds will break the spell."
     ),
     Spell('Wyvern Watch','C',2,
         cast=tp(5,S),
         duration=tp(8,H),
-        sourcebook=U
+        sourcebook=U,
+        desc="This spell is known as wyvern watch because of the insubstantial haze brought forth by its casting, which vaguely resembles a wyvern. It is typically used to guard some area against intrusion. Any creature that approaches within 1\" of the area in question is subject to attack from the spell force. The \"wyvern\" will strike, and any creature so attacked must make its saving throw versus spell or else stand paralyzed for 1 round per level of the caster, or until freed by the spell caster, by a dispel magic spell, or by a remove paralysis spell. A successful saving throw indicates that the target creature was missed by the attack of the wyvern-form and the spell remains in place. As soon as a target creature is successfully struck by the wyvern-form, the paralysis takes effect and the force of the spell itself is dissipated. The spell force will likewise dissipate if no intruder is struck by the wyvern-form for 8 hours after the spell is cast. Any creature approaching the space being guarded by the wyvern-form may be able to detect its presence before coming close enough to be attacked; this chance of detection is 90% in bright light, 30% in twilight conditions, and 0% in darkness. The material component is the cleric's holy/unholy symbol."
     ),
     Spell('Animate Dead','C',3,
         cast=tp(1,R),
@@ -375,7 +389,8 @@ cleric_spells = [
     Spell('Death\'s Door','C',3,
         cast=tp(5,S),
         duration_lvl=tp(1,H),
-        sourcebook=U
+        sourcebook=U,
+        desc="When a cleric employs this spell, he or she touches a human or demi-human who is unconscious and \"at death's door\" (-1 to -9 hit points). The spell immediately brings the individual to 0 hit points. While the individual remains unconscious, bleeding and deterioration are stopped for the duration of the death's door spell. The subject, because of being treated by the spell and now being at 0 hit points, can be brought to consciousness, and have hit points restored, by means of Cure Light Wounds, Cure Serious Wounds, etc., potions such as healing or extra-healing, or clerical or other items which magically restore lost hit points. The material components of the spell are the cleric's holy/unholy symbol, a bit of white linen, and any form of unguent."
     ),
     Spell('Dispel Magic','C',3,
         cast=tp(6,S),
@@ -394,7 +409,8 @@ cleric_spells = [
         cast=tp(5,S),
         duration=tp(1,T),
         duration_lvl=tp(1,T),
-        sourcebook=U
+        sourcebook=U,
+        desc="By means of this spell the caster is able to empower himself or herself, or another creature of man-size and comparable mass, to withstand non-magical fires up to temperatures of 2,000°F. It also confers a +2 bonus to saving throws against magical fires. For every level of experience above the minimum required to create the dweomer (5th), the caster can affect an additional man-sized creature. This growing power enables multiple individuals, or one or more of greater than man-size and mass, to be affected by the flame walk spell. For instance, an 11th-level caster could empower both himself or herself and a steed such as a horse to move in molten lava. (Consider a horse to be equivalent to 6 humans for purposes of this spell; conversely, halfling-sized creatures count as ½ human apiece, and pixie-sized creatures are considered equivalent to ¼ human each.) The material componenets of the spell are at least 500 gp of powdered ruby and the cleric's holy/unholy symbol."
     ),
     Spell('Glyph of Warding','C',3,
         cast=tp(1,VA),
@@ -412,17 +428,20 @@ cleric_spells = [
     Spell('Magical Vestment','C',3,
         cast=tp(1,R),
         duration_lvl=tp(6,R),
-        sourcebook=U
+        sourcebook=U,
+        desc="This spell enchants the caster's vestment, providing protection equivalent to armor. It will only function while the cleric is on ground consecrated to his or her deity (cf. 1st-level Ceremony spell). If any armor or protective device is worn during the spell duration, the vestment protects as if normal chain mail armor. If no other protection is worn, the vestment also gains a +1 enchantment for each four levels of the cleric, to a maximum effect of chain mail +4 (base AC 1). The magic lasts for 6 rounds per level of the caster, or until the caster loses consciousness or leaves the consecrated area. The material components are the vestment to be enchanted and the cleric's holy symbol."
     ),
     Spell('Meld Into Stone','C',3,
         cast=tp(7,S),
         duration=tp(1,VA),
-        sourcebook=U
+        sourcebook=U,
+        desc="The magic of this spell, when properly cast, allows the cleric to meld his or her body and possessions worn or carried into a large stone. To effect the spell, the cleric stands next to the stone to be melded into (which must be large enough to accomodate the cleric's body in all three dimensions) while holding a small sample of the same type of stone. When casting is complete, the cleric and up to 100 pounds of his or her non-living gear blend into the stone. Magical artifacts and relics are not affected by the spell. If the dimensions of the stone are not sufficient, or if the cleric is wearing and carrying more than 100 pounds of gear, the spell will fail and be wasted. The magic lasts for 9-16 (1d8 + 8) rounds, the variable part of the duration rolled secretly by the DM. At any time before the duration expires, the cleric can step out of the stone along the same surface that he or she used to enter it (i.e., the spell does not allow movement through the stone such as would a Passwall or Phase Door spell). If the duration runs out before the cleric exits the stone, then he or she will be expelled from the stone and take 4-32 (4d8) points of damage — and each piece of gear affected must save versus petrification or turn to stone. While in the stone, the cleric is aware of the passage of time; however, he or she cannot see or hear anything that may be going on around the stone. The following spells will harm the cleric if cast upon the stone that he or she is occupying: Stone to Flesh will expel the cleric and inflict 4-32 points of damage, but items carried need not save. Stone Shape will cause 4-16 (4d4) points of damage, but will not expel the cleric. Transmute Rock to Mud expels the cleric and will slay the victim instantly unless he or she makes a succussful saving throw versus spell."
     ),
     Spell('Negative Plane Protection','C',3,
         cast=tp(1,R),
         duration_lvl=tp(1,T),
-        sourcebook=U
+        sourcebook=U,
+        desc="This spell enables the caster or any other eligible creature touched to be partially protected from an undead monster that has an existence on the Negative Material Plane (such as a shadow, wight, wraith, spectre, or vampire). The dweomer of the spell opens a channel to the Positive Material Plane, the energy from which helps to offset the effect of the undead creature's attack. The recipient is allowed a saving throw versus death magic if he or she is touched (attacked) by an undead creature. Success indicates that the recipient takes normal hit-point damage from the attack, but does not suffer the drain of experience that would otherwise take place. In addition, the undead creature takes 2-12 (2d6) hit points of damage from the Positive Plane energy. The magic is only proof against one such attack, and dissipates after that attack whether or not the saving throw is successful. If the saving throw versus death magic is failed, the recipient of the spell takes double the usual physical damage in addition to the loss of experience that normally occurs. The spell will also protect the recipient from the effect of a magic-user's Energy Drain spell, but in such a case the magic-user is not affected. The contact between the Positive and Negative Planes that this spell brings about will cause a bright flash of light and sound like that of a thunderclap, but these phenomena do not cause damage in any event. The protection will last for 1 turn per level of the cleric casting the spell, or until the recipient is successfully attacked by an undead monster. This spell cannot be cast on the Negative Material Plane."
     ),
     Spell('Prayer','C',3,
         cast=tp(6,S),
@@ -441,7 +460,10 @@ cleric_spells = [
         cast=tp(6,S),
         duration=tp(1,P),
         duration_lvl=tp(0),
-        sourcebook=U
+        sourcebook=U,
+        desc=("By the use of this spell, the cleric can free the subject creature(s) from the effects of paralyzation or similar forces (such as a Hold spell). By casting this spell and then pointing his or her finger in the proper direction, the cleric can remove paralysis from as many as 4 creatures that are within range and within the area of affect. There must be no physical or magical barrier between the caster and the creature(s) to be affected, or else the spell will fail and be wasted. Each target of the spell obtains a new saving throw versus paralyzation, at a +3 bonus if only one creature is involved, +2 if two creatures are to be affected, and +1 if three or four reatures are the target.\n\n"
+            "The reverse of the spell, Cause Paralysis, can affect only one target, which must be touched by the cleric (successful roll \"to hit\") using his or her holy/unholy symbol. If the victim fails a saving throw versus spell, paralyzation will set in for a duration of 1-6 rounds plus 1 round per level of the caster. Clerics of good alignment should be very discerning in their use of cause paralysis, and this spell might actually be prohibited to clerics belonging to certain good-aligned orders."
+        )
     ),
     Spell('Speak With Dead','C',3,
         cast=tp(1,T),
@@ -452,17 +474,26 @@ cleric_spells = [
         cast=tp(7,S),
         duration=tp(1,T),
         duration_lvl=tp(1,T),
-        sourcebook=U
+        sourcebook=U,
+        desc="By means of this spell, the caster is able to empower himself or herself or another creature of man-size and comparable mass to tread upon water as if it were firm, grassy ground (cf. ring of water walking). For every level of the caster above the minimum required to create the dweomer (5th level), he or she can affect an additional man-sized creature. This growing power enables multiple individuals, or one or more of greater size and mass, to be affected by the water walk spell. For instance, an 11th-level caster could additionally affect a horse, so that he or she could move atop the waves while mounted. (Consider a horse to be equivalent to 6 humans for purposes of this spell.) The material components for this spell are a piece of cork and the cleric's holy/unholy symbol."
     ),
     Spell('Abjure','C',4,
         cast=tp(1,R),
         duration=tp(1,P),
-        sourcebook=U
+        sourcebook=U,
+        desc=("When a cleric employs a spell of this sort, he or she is attempting to return a creature from another plane of existence to its own plane. The exact name of the type of creature to be affected by the abjure spell must be known. If the creature also has a specific (proper) name, then that too must be known and used. The naming cleric then compares his or her level against the level or hit dice of the creature under abjuration, in the same way that the success of a Dispel Magic spell is determined (base 50% chance of success, plus or minus the level/HD difference between the caster and the creature to be affected). The percent chance for success is then compared to a percentile dice roll. If the roll is equal to or less than the chance to abjure, the creature is instantly sent back to its own plane. In all other cases the spell fails. (The creature might not wish to remain on the caster's plane, and in such a case it could be appreciative of the cleric's attempt to return it to its home.)\n\n"
+            "The reverse of the spell, Implore, entreats some like-aligned creature from another plane to come to the cleric casting the spell. Success must be determined just as if abjure had been cast. In like vein, the spell caster must know the exact name of the type of creature as well as its given name, if any. If the implore spell succeeds, the cleric has absolutely no guarantee that the creature summoned from another plane will be favorably disposed to him or her. Neither version of the spell will function upon deities, but might affect servants or minions thereof.\n\n"
+            "The material components for an abjure spell are a holy/unholy symbol, holy or unholy water, and often some material inimical to the creature. In reversed form, the material components are the same except for the last, which must be something that the implored creature craves or respects."
+        )
     ),
     Spell('Cloak of Fear','C',4,
         cast=tp(6,S),
         duration_lvl=tp(1,T),
-        sourcebook=U
+        sourcebook=U,
+        desc=("The casting of this spell empowers the cleric to radiate a personal aura of fear out to a 3' radius. Any character or creature that intrudes upon this aura must save versus spell or run away in fear for 6 rounds (cf. 3rd-level magic-user spell Fear). The spell will only remain in effect until one creature fails to save, whereupon the dweomer of the spell is dissipated. The spell has no effect upon creatures that themselves radiate fear, or upon undead creatures of any sort, and it is not dissipated upon contact by such creatures. It likewise remains in effect if an intruder makes a successful saving throw, but will expire after a duration of 1 turn per level of the cleric if not brought down earlier. Note that members of the cleric's party are not immune to the effects of the spell. The cleric may cancel the aura at any time before the duration ends if desired.\n\n"
+            "The reverse of the spell, Cloak of Bravery, can be cast upon the cleric or upon another creature which is a willing recipient. A character or creature protected by a cloak of bravery gains a +3 bonus to the saving throw against any form of magical fear encountered. The magic of the cloak of bravery works only once and only upon a single figure, and is dispelled whether or not the recipient succeeds on his or her saving throw. The magic does not negate or otherwise affect the innate ability of a creature (such as a devil) to radiate fear, so that the creature can still affect others in the vicinity.\n\n"
+            "The material components for a cloak of fear are a miniature quiver and a chicken feather; for a cloak of bravery, the necessary items are a drop of alcohol and the brain of a newt."
+        )
     ),
     Spell('Cure Serious Wounds','C',4,
         cast=tp(7,S),
@@ -492,12 +523,19 @@ cleric_spells = [
     Spell('Giant Insect','C',4,
         cast=tp(1,VA),
         duration_lvl=tp(2,R),
-        sourcebook=U
+        sourcebook=U,
+        desc=("By means of this spell, the cleric can turn one or more normal-sized insects into larger forms which resemble the \"giant\" forms of such creatures as described in the Monster Manual books or the FIEND FOLIO® Tome. The number of insects that can be affected is dependent upon the cleric's level: one at 7th-9th level, two at 10th or 11th level, three at 12th or 13th level, and four at 14th or higher level. The magic only works upon one type of insect at one time; i.e., a cleric cannot use the same casting of the spell to affect both an ant and a fly. The casting time for a giant insect spell is one round per hit die of the resulting giant creature(s); if the casting is interrupted for any reason, the subject insect(s) will die and the spell will be ruined. A monster created by this spell will have as many attacks per round as its namesake, but will not do full damage unless the created form has as many hit dice as the usual giant version of the same insect. Although it may have more hit dice than a standard giant form, the created insect can never exceed the damage figures given in the books. Example: A cleric of 14th level can use the giant insect spell to enlarge a normal wasp to one having 6 HD (instead of the usual 4 HD for a giant wasp; see Monster Manual), but the creature would still do damage of 2-8/1-4. Conversely, a 7th-level cleric can use this spell to create a giant wasp of 3 HD, and such a creature would have reduced damage figures of 2-6/1-3 — three-fourths of the damage potential of a \"real\" giant wasp, since it only has three-fourths of the usual number of hit dice for such a creature.\n\n"
+            "The spell will only work on actual insects. Arachnids, crustaceans, and other types of small creatures are not affected. The giant insects created will not have any special attacks or defenses possessed by the standard giant forms; however, armor class, movement rate, and other physical characteristics are as described in the creature's book listing. Any giant insects created by this spell will not attempt to harm the cleric, but the cleric's control of such creatures is limited. He or she could give them simple commands such as \"attack\", \"defend\", \"guard\", and so forth, but could not instruct them to attack a certain creature or guard against a particular occurence. Unless commanded to do otherwise, the giant insects will attemp to attack whomever or whatever is near them.\n\n"
+            "The reverse of the spell, shrink insect, will reduce the size of standard giant insects as well as those created by the unreversed form of the spell. The shrinking will be at a rate of 1 HD for every 4 levels of the casting cleric, with a maximum of 6 HD of reduction (to a minimum of ⅛ HD, or 1 hp). Special attacks possessed by a standard giant insect will be retained, but at a weaker level which allows a bonus to the saving throw versus the attack. For instance, a 9th-level cleric could cast shrink insect upon a standard giant wasp to reduce it form 4 HD to 1 HD. The resulting insect would still be able to use its poison string, but the saving throw against such an attack would be at a +3 bonus (or perhaps higher), and the hit-point damage from its normal attacks would be reduced to 1-2 for a bite and 1 point for a sting — one-fourth of the usual amounts, since the creature is only one-fourth of its original size. The material component for either version of the spell is the cleric's holy/unholy symbol."
+        )
     ),
     Spell('Imbue With Spell Ability','C',4,
         cast=tp(1,T),
         duration=tp(1,VA),
-        sourcebook=U
+        sourcebook=U,
+        desc=("By the use of this spell, the cleric can bestow the ability to cast a particular spell upon a character normally unable to cast spells. The magic is only effective on thieves, fighters, cavaliers, assassins, monks, rangers (of under 8th level), and paladins (of under 9th level) — it will not work on a member of any other character class or sub-class, nor will it function upon a monster or any individual with less than one full hit die. The spell or spells to be imbued in the subject must be ones the cleric presently carries (i.e., has prayed for), and they can only be spells of an informational or defensive nature, or a cure light wounds spell. An attempt to transfer any other sort of spell will cause the magic to fail, and then no spells will be imbued in the recipient even if other allowable spells were also chosen. As many as three separate spells can be imbued, including one 2nd-level spell and one or two 1st-level spells. In order to recieve any spell, the subject character must have a wisdom score of 9 or higher. A single 1st-level spell can be imbued in any eligible recipient, but the recipient must be at least 3rd level to recieve two 1st-level spells, and must be at least 5th level to recieve a 2nd-level spell. If a transferred spell's characteristics (range, duration, area of effect, etc.) are variable according to the level of the caster, then the recipient will cast them at his or her own level. All other spell details (e.g., casting time, components, etc.) apply normally.\n\n"
+            "When a cleric casts imbue with spell ability upon another character, the cleric loses that particular spell from his or her repertoire and cannot memorize more spells until the recipient uses all of the spells that were transferred. The material components for this spell are the cleric's holy/unholy symbol, plus some minor item \"borrowed\" from the intended recipient which is symbolic of his or her profession (a lockpick for a thief, a dagger for an assassin, etc.). The \"borrowed\" item is consumed in the casting of the spell."
+        )
     ),
     Spell('Lower Water','C',4,
         cast=tp(1,T),
@@ -529,13 +567,15 @@ cleric_spells = [
     Spell('Spell Immunity','C',4,
         cast=tp(1,R),
         duration_lvl=tp(1,T),
-        sourcebook=U
+        sourcebook=U,
+        desc="By means of this spell, the cleric or any creature touched is made immune to the effects of a specified spell of 4th level or lower that the cleric has directly experienced. For instance, if the cleric has been hit by a fireball spell at some time, then this spell can be used to protect someone from the effect of a fireball. This spell cannot affect an intended recipient who is already magically protected by a spell or another temporary effect. The magic of this spell will only protect against actual cast spells, not against effects of magic items or a creature's innate spell-like abilities, but immunity lasts for the full duration of the spell. Only one spell immunity can be in effect upon a single creature at one time; any applications subsequent to the first have no effect until the first duration ends. The spell immunity does not extend to items carried by the recipient, which must still make saving throws (if applicable) to avoid damage. Only a particular spell can be protected against, not a certain class of spells or a group of spells which are similar in effect; thus, someone given immunity from lightning bolt spells would still be vulnerable to a shocking grasp. The material component for spell immunity is the same (if any) as for the spell to be protected against."
     ),
     Spell('Spike Growth','C',4,
         cast=tp(7,S),
         duration=tp(1,VA),
         duration_lvl=tp(1,T),
-        sourcebook=U
+        sourcebook=U,
+        desc="Wherever any sort of plant growth of moderate size or density is found, this spell is of service. It enables the caster to cause ground-covering vegetation and/or roots and rootlets to become very hard and sharply pointed. In effect the groud cover, while appearing to be unchanged, acts as if the area were strewn with caltrops. In areas of bare ground or earthen pits, roots and rootlets will act in the same way. Without the use of a spell such as true seeing, similar magical aids, or some other special means of detection (such as detect traps), an area affected by spike growth is absolutely undetectable as such until a victim enters the area and takes damage. Even then, the creature will not be able to determine the extent of the perilous area unless some means of magical detection is used. For each 1\" of movement through the area, a victim will incur 2 \"attacks\" from the spike growth. Hit probability is as if the caster of the spell were making an attack, and any successful hit causes 1-4 points of damage. Spells which control or harm vegetation, or a dispel magic spell, will negate the area of the dweomer. The components for this spell are the cleric's holy symbol plus either seven sharp thorns or seven small twigs, each sharpened to a point."
     ),
     Spell('Sticks to Snakes','C',4,
         cast=tp(7,S),
@@ -554,12 +594,14 @@ cleric_spells = [
         cast=tp(1,S),
         duration=tp(6,T),
         duration_lvl=tp(1,T),
-        sourcebook=U
+        sourcebook=U,
+        desc="The spell enables the cleric to tread upon air just as if it were solid ground. Moving upward is similar to walking up a hill, and the more steep the ascent, the slower the rate of movement: Ascending at a 45° angle is done at one-half normal movement, a 60° angle reduces movement to one-fourth of normal, and traveling straight upward can be done at one-eighth the normal rate. Similarly, rapid descent is possible, almost as if the cleric were running downhill; invert the above proportions, so that traveling straight downward can be done at eight times the normal movement rate (or, of course, at any slower rate the traveller desires). An air walking creature is always in control of his or her own movement rate; someone traveling straight down at a rapid rate can \"stop on a copper piece\" to avoid crashing into the ground or some other solid object. Someone attempting to air walk while a gust of wind spell is in effect in the same area will move at one-half the usual rate if going into the gust, or twice the usual rate if traveling in the same direction. The spell can be placed upon any creature touched, up to and including one of giant size. For example, the caster could place the spell upon a trained horse and ride it through the air. Of course, an animal not accustomed to such movement would panic, so the steed would certainly need careful and lengthy training. The material components for the spell are the cleric's holy/unholy symbol and a bit of thistledown."
     ),
     Spell('Animate Dead Monsters','C',5,
         cast=tp(7,S),
         duration=tp(1,P),
-        sourcebook=U
+        sourcebook=U,
+        desc="This spell enables the caster to animate 1 humanoid or semi-humanoid skeleton or corpse for every 2 levels of experience which he or she has attained. The dweomer animates the remains and empoweres the caster to give commands. Direct commands or instructions of up to about 12 words in length will be obeyed by the skeletons or zombies animated (cf. animate dead spell). Monster types which can be animated by this spell include but are not limited to: apes (carnivorous and giant), bugbears, ettins, giants (all varieties), ogres, and trolls (all varieties). In general, the remains must be of bipedal monsters of more than 3 hit dice and with endoskeletons similar to those of humans, except in size (which must be greater than 7' height). Corpses animated by this spell are treated either as monster zombies (see Monster Manual II), or else as normal (living) creatures of the same form if that creature type normally has less than 6 hit dice. Skeletons animated by this spell are treated as monsters of half the hit dice (rounded up) of the normal sort. Animated monsters of either type receive their normal physical attacks, but have no special attacks or defenses other than those typically possessed by monster zombies or skeletons. The material components for the spell are the cleric's holy/unholy symbol and a small specimen of the type of creature which is to be animated."
     ),
     Spell('Atonement','C',5,
         cast=tp(1,T),
@@ -594,7 +636,14 @@ cleric_spells = [
     Spell('Golem','C',5,
         cast=tp(8,S),
         duration=tp(1,VA),
-        sourcebook=U
+        sourcebook=U,
+        desc=("In order for this spell to operate, the cleric must first construct the form of the golem to be made. The cleric must do this personally and then place a prayer spell upon the construction. All golems must be man-shaped and approximately man-sized, although they can be as small as 3' or as large as 7' tall. The sort of golem that can be created depends on the material used and the level of the cleric:\n\n"
+            "At 9th or higher level, the cleric can create a straw golem. Construction time is 1 hour, duration thereafter is 1 hour per level. The golem has AC 10, MV 12\", HD 2+4, hp 20, #AT 2, D 1-2/1-2, SD immune to piercing weapons, half damage from blunt weapons. Carrying capacity is 30 pounds. The golem is highly susceptible to flame (taking double normal damage).\n\n"
+            "At 11th and higher level, the cleric can create a rope golem. Construction time is 3 hours, duration thereafter is 3 hours per level. The golem has AC 8, MV 9\", HD 3+6, hp 30, #AT 1, D 1-6 plus strangulation (6 points per round after scoring a hit until destroyed or caused to release its grip), SD immune to blunt weapons, half damage from piercing weapons. Carrying capacity is 40 pounds.\n\n"
+            "At 13th and higher level, the cleric can create a leather golem. Construction time is 9 hours, duration thereafter is 6 hours per level. The golem has AC 6, MV 6\", HD 4+8, hp 40, #AT 2, D 1-6/1-6, SD +1 or better magic weapon to hit, half damage from blunt weapons. Carrying capacity is 50 pounds.\n\n"
+            "At 15th or higher level, the cleric can create a wood golem. Construction time is 27 hours, duration thereafter is 12 hours per level. The golem has AC 4, MV 3\", HD 5+10, hp 50, #AT 1, D 3-12, SD +1 or better magic weapon to hit, immune to blunt and piercing weapons. Carrying capacity is 60 pounds.\n\n"
+            "These creations are collectively known as lesser golems to distinguish them from the golems described in the Monster Manual. Similar to their namesakes, these golems have no minds, so spells such as charm, fear, hold, sleep, and the like have no effect on them. The dweomer of the lesser golem enables it to save as if it were a cleric of the same experience level as the one who created it. These golems cannot speak, but they can comprehend and carry out simple instructions involving no more than a dozen words."
+        )
     ),
     Spell('Insect Plague','C',5,
         cast=tp(1,T),
@@ -606,7 +655,8 @@ cleric_spells = [
     Spell('Magic Font','C',5,
         cast=tp(5,T),
         duration=tp(1,VA),
-        sourcebook=U
+        sourcebook=U,
+        desc="This spell causes a holy/unholy water font to serve as a scrying device. The spell will not function unless the cleric is in good standing with his or her deity. The basin of holy/unholy water becomes similar to a crystal ball (see Dungeon Masters Guide, Miscellaneous Magic Treasure section, under crystal ball). For each vial of capacity of the basin of the font, the cleric may scry for 1 round; thus, the duration of the magic font spell is directly related to the size of the holy/unholy water receptacle. For the chances of a character being able to detect scrying, see the crystal ball description in the Dungeon Masters Guide and the text for the magic-user spell magic mirror herein. The material components for this spell, the cleric's holy/unholy symbol and the font and its trappings, are not exhausted by the use of the spell."
     ),
     Spell('Plane Shift','C',5,
         cast=tp(8,S),
@@ -623,7 +673,30 @@ cleric_spells = [
     Spell('Rainbow','C',5,
         cast=tp(7,S),
         duration_lvl=tp(1,R),
-        sourcebook=U
+        sourcebook=U,
+        desc=("In order to effect this spell, the cleric must be in sight of a rainbow of any sort, or have a special component (see below). The rainbow spell has four applications, and the cleric is able to decide which one is desired at the time of casting. These applications are:\n\n"
+            "Bow: The spell creates a shimmering, multi-layered bow of rainbow hues. It is light and easy to pull, so that anyone with a strength of 6 or better can use it. It is magic, each of its missiles being equal to a +3 weapon, and there is no non-proficiency penalty for its use. However, it can only be employed by a member of a character class permitted to use a bow. The bow will fire 7 missiles before disappearing. It fires once or twice per round, according to the user's desire. Each time a missile is fired, one hue leaves the bow, corresponding to the color of arrow that is released. Each color of arrow has the ability to cause double damage to certain creatures, as follows:\n"
+            "Red — fire dwellers/users\n"
+            "Orange — earth elementals\n"
+            "Yellow — vegetable targets (including fungus creatures, shambling mounds, treants, etc.)\n"
+            "Green — aquatic creatures and water elementals\n"
+            "Blue — aerial creatures, electricity-using creatures, and air elementals\n"
+            "Indigo — acid-usigng or poison-using creatures\n"
+            "Violet — metallic or regenerating creatures\n"
+            "When the bow is drawn, an arrow of the appropriate color magically appears, nocked and ready. If no color is requested, or a color that has already been used is asked for, then the next arrow (in the order of the spectrum) will appear.\n\n"
+            "Bridge: The caster causes the rainbow to form a seven-hued bridge. The bridge is as many feet wide as the cleric has levels of experience, and it can bear as much weight, in hundreds of pounds, as the cleric has levels of experience. It will be at least 20' long and can be as long as 120', according to the desire of the caster. If the bridge's weight limit is exceeded at any time, the bridge will simply disappear into nothingness; otherwise it will last for the length of the spell duration or until ordered out of existence by the caster.\n\n"
+            "Elevator: When desired, the caster can cause the rainbow to life his or her person, and all those within a 10' radius, skyward. The effect is to carry the cleric and others, if any, in a path arching upward to as high an altitude as the cleric desires, and then down again if desired. Care must be taken to reach a place of safety before the spell duration expires, or the rainbow elevator will disappear, leaving those treading upon it with no means of support. Movement along the rainbow elevator is at a rate of 12\", and the arc of the rainbow trails out 12\" behind those traveling upon it.\n\n"
+            "Flagon: When used in this form, the rainbow swirls and condenses into a seven-colored vessel which contains seven measures of pure water. Each time a measure of the water is poured out, one of the hues of the container mixes with it to produce a magical draught. Any measures of the liquid that remain unused at the expiration of the spell duration will disappear, along with the container itself, whether the contents have been poured from the flagon or not. The draughts and their effects are:\n"
+            "Red — cure light wounds\n"
+            "Orange — resist fire\n"
+            "Yellow — cure blindness\n"
+            "Green — slow poison\n"
+            "Blue — cure disease\n"
+            "Indigo — resist cold\n"
+            "Violet — remove paralysis\n"
+            "The effects of each draught consumed will be as if the appropriate spell had been cast by a cleric of 12th level, and these effects will persist after the duration of the spell expires.\n\n"
+            "The components for this spell are the cleric's holy/unholy symbol and a vial of holy/unholy water. If no rainbow is in the vicinity, the cleric can substitute a diamond of not less than 1,000 gp value, specifically prepared by him or her when in sight of a rainbow by the casting of bless and prayer spells upon the gem. Only the holy symbol remains after the spell is cast."
+        )
     ),
     Spell('Raise Dead','C',5,
         cast=tp(1,R),
@@ -635,7 +708,8 @@ cleric_spells = [
         cast=tp(6,S),
         duration=tp(1,VA),
         duration_lvl=tp(1,T),
-        sourcebook=U
+        sourcebook=U,
+        desc="The spike stones spell causes rock to shape itself into long, sharp points which tend to blend into the background. It is effective on both natural rock and worked stone. The spike stones serve to impede progress through an area or actually inflict damage. If an area is carefully observed, each observer is 25% likely to notice the sharp points of rock. Otherwise, those entering the area of effect of the spell will suffer 1-4 points of damage from each spike stone that hits, success of such attacks determined as if the caster of the spell were actually engaging in combat. Those entering the area are subject to attack immediately upon setting foot in the area and upon each step taken therein afterward. The initial step will be sufficient to allow the individual to become aware of some problem only if the initial attack succeeds; otherwise movement will continue and the spike stones will remain unnoticed until damage occurs. Charging or running victims will suffer 2 attacks per 1\" of movement rate over the area of effect after initial damage is taken before being able to halt. Others will suffer but 1 additional attack-like check. Those falling into pits so affected by spike stones will suffer 6 such attack-like checks, each made at +2 probability \"to hit\" for each 10' of distance fallen, and +2 on damage inflicted per 10' distance fallen, spike damage being in addition to falling damage. The material component of this spell is four tiny stalactites."
     ),
     Spell('True Seeing','C',5,
         cast=tp(8,S),
@@ -682,7 +756,14 @@ cleric_spells = [
     Spell('Forbiddance','C',6,
         cast=tp(6,R),
         duration=tp(1,P),
-        sourcebook=U
+        sourcebook=U,
+        desc=("This spell can be used only to secure a consecrated area (cf. ceremony spell). The effect on the enchanted area is based on the ethics (law/chaos) and morals (good/evil) of those trying to enter it, relative to the caster's.\n\n"
+            "Identical morals and ethics: Cannot enter area unless password is known (no saving throw).\n\n"
+            "Different ethics: Save versus spell to enter the area; if failed, take 2-12 points of damage.\n\n"
+            "Different morals: Save versus spell to enter the area; if failed, take 4-24 points of damage.\n\n"
+            "Once a saving throw is failed, a intruder can never enter the forbidden area until the dweomer ceases. Effects are cumulative, and multiple required saving throws are certainly possible. The caster is immune to the spell's effect. Intruders who enter by making saving throws will feel uneasy and tense, despite their success. In addition to the cleric's holy/unholy symbols, components include holy/unholy water, silver/dung, and iron/sulfur."
+
+        )
     ),
     Spell('Heal','C',6,
         cast=tp(1,R),
@@ -693,7 +774,8 @@ cleric_spells = [
     Spell('Heroes\' Feast','C',6,
         cast=tp(1,T),
         duration=tp(1,H),
-        sourcebook=U
+        sourcebook=U,
+        desc="This special dweomer enables the cleric to bring forth a great feast which will serve as many creatures as the cleric has levels of experience. The spell creates a magnificent table, chairs, service, and all the necessary food and drink. Those partaking of the feast are cured of all diseases, are immune to poison for 12 hours, and healed of 5-8 points of damage after imbibing the nectar-like beverage which is part of the feast. The ambrosia-like food that is consumed is equal to a bless spell that lasts for 12 hours. Also, during this period, the persons who consumed the feast are immune to fear, hopelessness, and panic. The feast takes one full hour to consume, and the beneficial effects do not set in until after this hour is over. If the feast is interrupted for any reason, the spell is ruined and all effects of the dweomer are negated. The material components of the spell are the cleric's holy/unholy symbol and specially fermented honey taken from the cells of bee larvae destined for royal status."
     ),
     Spell('Part Water','C',6,
         cast=tp(1,T),
@@ -740,7 +822,8 @@ cleric_spells = [
     Spell('Exaction','C',7,
         cast=tp(1,R),
         duration=tp(1,VA),
-        sourcebook=U
+        sourcebook=U,
+        desc="When this spell is employed, the cleric confronts some powerful creature from another plane (including devas and powerful \"name\" demons, for instance, but not demigods or deities of any sort) and requires of it some duty or quest. The creature may not be one ethically or morally opposed to the cleric (i.e. not evil if the cleric is good, not chaotic if the cleric is lawful). Note that an absolute (true) neutral creature is in effect greatly opposed to both good and evil, and both law and chaos. The spell caster must know something about the creature to exact service from it, or else he or she must offer some fair trade in return for the service. That is, if the cleric is aware that the creature has received some favor from someone of the cleric's alignment, then the exaction can name this as cause; if no balancing reason for service is known, then some valuable gift or service must be pledged in return for the exaction. The service exacted must be reasonable with respect to the past or promised favor or reward. The spell then acts as a quest upon the creature which is to perform the required service. Immediately upon completion of the service, the subject creature is transported to the vicinity of the cleric, and the cleric must then and there return the promised reward, whether it is irrevocable cancellation of a past debt or the giving of some service or other material reward. Upon so doing, the creature is instantly freed to return to its own plane. Failure to fulfill the promise to the letter results in the cleric being subject to exaction by the subject creature or by its master, liege, etc., at the very least. At worst, the creature may attack the reneging cleric without fear of any of his or her spells affecting it, for the failure to live up to the bargain gives the creature total immunity from the spell powers of the cleric so doing. The material components of this spell are the cleric's holy/unholy symbol, some matter or substance from the plane of the creature from whom an exaction is to be expected, and knowledge of the creature's nature and/or actions which is written out on a parchment leaf that is burned to seal the bargain."
     ),
     Spell('Gate','C',7,
         cast=tp(5,S),
@@ -774,7 +857,10 @@ cleric_spells = [
     Spell('Succor','C',7,
         cast=tp(1,D),
         duration=tp(1,VA),
-        sourcebook=U
+        sourcebook=U,
+        desc=("By casting this spell, the cleric creates a powerful dweomer in some specially prepared object — a string of prayer beads, a small clay tablet, an ivory baton, etc. This object will radiate magic, for it contains the power to instantaneously transport its possessor to the sanctuary of the cleric who created its dweomer. Once the item is magicked, the cleric must give it willingly to an individual, at the same time informing him or her of a command word to be spoken when the item is to be used. To make use of the item, the recipient must speak the command word at the same time that he or she rends or breaks the item. When this is done, the individual and all that he or she is wearing and carrying will be instantly transported to the sanctuary of the cleric just as if the individual were capable of speaking a word of recall spell. No other creatures can be affected.\n\n"
+        "The reversed application of the spell enables the cleric to be transported to the vicinity of the possessor of the dweomered item when it is broken and the command word said. The cleric can choose not to be affected by this \"summons\" by making that decision at the instant when the transportation is to take place, but if he or she so chooses, then the opportunity is gone forever and the spell is wasted. The cost of preparing the special item (for either version of the spell) varies from 2,000 to 5,000 gold pieces."
+        )
     ),
     Spell('Symbol','C',7,
         cast=tp(3,S),
@@ -806,12 +892,35 @@ druid_spells = [
     Spell('Ceremony','D',1,
         cast=tp(1,H),
         duration=tp(1,P),
-        sourcebook=U
+        sourcebook=U,
+        desc=("The druidic ceremony spell is similar to the clerical spell of the same name. It has a number of applications within the hierarchy of druids. The effect of a ceremony spell does not leave behind an aura of magic, although a know alignment spell or similar magic might reveal the force of true neutrality involved in the magic. Druidic ceremonies include the following, which can be cast by a druid of the indicated or higher level:\n\n"
+            "1st-level druid: coming of age, rest eternal, marriage\n"
+            "3rd-level druid: dedication, investiture\n"
+            "7th-level druid: initiation, special vows\n"
+            "9th-level druid: hallowed ground\n"
+            "12th-level druid: cast out\n\n"
+            "The characteristics of the various types of druidic ceremony spells are as follows:\n\n"
+            "Coming of age is performed upon young people in druidic societies, usually when they reach the age of 14, and is symbolic of the young man's or young woman's entrance into adulthood. Effects of the spell are the same as for the clerical version (+1 bonus to a single saving throw); see the cleric text for other details.\n\n"
+            "Rest eternal is cast upon the body of a deceased being, by means of which the soul/spirit of the creature is hastened in its journey to its final resting place. The spells raise dead and resurrection will not restore life to a character who has been the object of this spell, although a wish spell would serve that purpose.\n\n"
+            "Marriage is essentially identical to the clerical ceremony of the same name.\n\n"
+            "Dedication allows the recipient of the spell to be taken into the ranks of the druid's followers/worshipers, provided that the character is true neutral in alignment. A recipient of this spell is charged, as are druids, with the responsibility to preserve and protect nature and the balance of forces in the world. In other respects it is similar to the clerical ceremony of the same name.\n\n"
+            "Investiture is a rite that must be performed upon a character before he or she can become an Aspirant (1st-level druid). It conveys no other benefit.\n\n"
+            "Initiation imbues the druid with the shape-changing and immunity to woodland charm powers that become available to the character upon attaining 7th level. This ceremony must be performed upon a druid immediately after he or she begins to advance upward through the 7th level of experience; if cast earlier than this, it will not work, and the druid will not have the benefit of the above-mentioned special powers until receiving initiation. Usually a druid must seek out another druid of 7th or higher level to perform the rite, but in unusual cases a druid may cast it upon himself or herself.\n\n"
+            "Special vows is a ceremony that operates in the same fashion as the clerical rite of the same name. It does not work upon paladins, but will function upon cavaliers of any alignment.\n\n"
+            "Hallowed ground is cast by the druid on his or her permanent grove. This ceremony ensorcels the trees of the grove so that they will never be affected by disease or natural disasters. The ground remains hallowed for as long as the druid maintains this grove as his or her permanent base.\n\n"
+            "Cast out is a form of excommunication or punishment that can be performed by a druid upon someone who has committed sacrilege upon the natural environment or in some other way violated the principles and standards of druidism. Its effects may be lessened at a later date by the casting of the reversed version of this ceremony, either by the same druid or another one of at least as high a level as the original caster, but the casting out can never be completely neutralized except by a Hierophant Druid of any level. A character who has been cast out exudes a powerful negative aura, causing any natural creature encountered to react negatively to the character. This includes all normal (non-magical) animals, monsters native to the woodlands, domesticated beasts such as horses and dogs, and all druids and their followers.\n\n"
+            "Casting out is a very powerful form of punishment, and can only be performed by a druid who has received permission from his or her Archdruid to do so. Similarly, an Archdruid must get permission from the Great Druid, and the Great Druid from the Grand Druid. The Grand Druid does not need to obtain permission, but his or her actions may be reversed by a Hierophant Druid at any time.\n\n"
+            "This ceremony is usually only used on occasions where the severity of an offense warrants an extreme punishment; a druid who asks for and is denied permission to perform it, or one who later has his or her actions offset by another druid, may be subject to punishment by higher-ranking members of the hierarchy. An intended recipient of this ceremony who is unwilling recieves a saving throw versus spell, at -4, to negate its effects.\n\n"
+            "The components of a ceremony spell always include mistletoe, and the rite (of any sort) must be performed in a druid grove or some other natural, healthy patch of forest. Such ceremonies are normally conducted either at dawn or dusk, the times when night and day are in balance."
+        )
     ),
     Spell('Detect Balance','D',1,
         cast=tp(1,S),
         duration_lvl=tp(1,R),
-        sourcebook=U
+        sourcebook=U,
+        desc=("This spell allows the druid to determine if non-neutral forces and alignments are at work in the area of effect (upon or in the object or creature being scanned). An alignment that is partly neutral (such as that of a neutral good cleric) will radiate a mild aura, while an alignment that has no neutral component (such as that of a chaotic good fighter) will give off a strong aura. The spell does not determine exact alignment, but only tells the druid if the object or creature being examined is something other than true neutral; a paladin and a chaotic evil thief, for instance, will radiate the same aura at the same strength.\n\n"
+            "The spell will not function upon non-living items that do not have a natural aura (such as a vial of poison), but will work upon an object such as an aligned magical sword. Creatures that are under the effect of an unknowable alignment spell or similar magic will not radiate any aura when this spell is used upon them. If the magic is used upon something or someone that exudes a true neutral alignment (such as another druid), it will produce a smooth, well-balanced aura identifiable as one of neutrality."
+        )
     ),
     Spell('Detect Magic','D',1,
         cast=tp(3,S),
@@ -822,7 +931,10 @@ druid_spells = [
     Spell('Detect Poison','D',1,
         cast=tp(1,R),
         duration_lvl=tp(1,R),
-        sourcebook=U
+        sourcebook=U,
+        desc=("By means of this spell the druid is able to determine if some object, creature, or area contains poison or has been poisoned. In general, the area which can be perused by the dweomer of the spell is 1 cubic yard of space. Therefore, the druid cannot determine if an entire pond is poisoned, but he or she could tell if a portion — or something within the portion — scanned during the round contain poison. There is also a 5% chance per level of experience of the caster that the type of poison used or contained in the area scanned will also be discovered by the spell, i.e., contact poison (insinuative), ingestive, or respirative (gas).\n\n"
+            "While more than one area can be scanned with a detect poison spell during the duration of the spell, it is almost fruitless to attempt to determine poison type for all of those areas; any single failure on the \"5% chance per level\" roll to detect poison type makes this spell useless for this purpose for the remainder of the duration of that particular casting. In addition to mistletoe, the druid needs a yew leaf as a material component for this spell. The latter item will turn brown if poison is present, so that several will possibly be needed to fully utilize the entire spell duration."
+        )
     ),
     Spell('Detect Snares & Pits','D',1,
         cast=tp(3,S),
@@ -866,7 +978,8 @@ druid_spells = [
     Spell('Precipitation','D',1,
         cast=tp(3,S),
         duration_lvl=tp(1,S),
-        sourcebook=U
+        sourcebook=U,
+        desc="This spell is identical to the 1st-level clerical spell of the same name, except that the druid needs mistletoe as an additional material component."
     ),
     Spell('Predict Weather','D',1,
         cast=tp(1,R),
@@ -932,12 +1045,14 @@ druid_spells = [
     Spell('Flame Blade','D',2,
         cast=tp(3,S),
         duration_lvl=tp(1,R),
-        sourcebook=U
+        sourcebook=U,
+        desc="When a druid casts this spell, he or she causes a ray of red-hot fire to spring forth from his or her hand. This blade-like ray is actually wielded as if it were a scimitar, and if the druid scores a successful hit while employing the flame blade, the creature struck will take 5-8 points of damage — with a damage bonus of +2 if the creature is of the undead class or is especially vulnerable to fire, or a -2 penalty to damage if the creature is protected from fire. No damage can be inflicted upon a creature which is a fire-dweller or which uses fire as an attack form. The flame blade will ignite combustible materials such as parchment, straw, dry sticks, cloth, etc. However, it is not a magical weapon in the normal sense of the term except with respect to undead monsters, so creatures that can be struck only by magical weapons are not harmed by this spell unless they are of the undead class. In addition to mistletoe, the druid must have a leaf of sumac in order to cast the spell."
     ),
     Spell('Goodberry','D',2,
         cast=tp(5,S),
         duration=tp(1,R),
-        sourcebook=U
+        sourcebook=U,
+        desc="When a druid casts a goodberry spell upon a handful or freshly picked berries, from 2 to 8 of them will become magical. The druid casting the spell (as well as any other druid of 3rd or higher level) will be able to immediately discern which berries were affected. A detect magic spell will discover this also. Berries with the dweomer will either enable a hungry creature of approximately man-size to eat one and be as well-nourished as if a full normal meal were eaten, or else the berry will cure 1 point of physical damage due to wounds or other similar causes, subject to a maximum of 8 points of such curing in any 24-hour period. The reverse of the spell, badberry, causes rotten berries to appear wholesome but each actually delivers 1 point of poison damage (no saving throw) if ingested. The material component of the spell is mistletoe passed over the freshly picked, edible berries to be enspelled (blueberries, blackberries, rapberries, currants, gooseberries, etc.)."
     ),
     Spell('Heat Metal','D',2,
         cast=tp(4,S),
@@ -965,13 +1080,19 @@ druid_spells = [
     Spell('Reflecting Pool','D',2,
         cast=tp(2,H),
         duration_lvl=tp(1,R),
-        sourcebook=U
+        sourcebook=U,
+        desc=("This spell enables the druid to cause a pool of normal water found in a natural setting to act as a scrying device. The pool can be no greater diameter than 2 feet per level of the spell caster. The effect is to create a scrying device similar to a crystal ball, in much the same fashion as the magic-user spell magic mirror and the clerical spell magic font, both described elsewhere in this text. The scrying can extend only to those planes of existence which are coexistent with or border upon the Prime Material Plane, i.e. the Inner Planes (including the Para-elemental Planes, Plane of Shadow, et al.). Penalties for attempting to scry beyond the druid's own plane, as given in the description for crystal ball (see Dungeon Masters Guide) are applicable.\n\n"
+            "The following spells can be cast through a reflecting pool, with a 5% per level chance of operating correctly: detect magic, detect snares and pits, detect poison. Infravision and ultravision will operate normally through the reflecting pool, as will the spells starshine and moonbeam (see hereafter). The druid must use both mistletoe and the oil extracted from such nuts as the hickory and the walnut, refined, and dropped in three measures upon the surface of the pool. (A measure need be no more than a single ounce of oil.)"
+        )
     ),
     Spell('Slow Poison','D',2,
         cast=tp(0),
         duration=tp(0),
         duration_lvl=tp(0),
-        sourcebook=U
+        sourcebook=U,
+        desc=("This spell is identical to the 2nd-level clerical spell slow poison, except that if the druid is able to determine that the poison was one made from some living plant, he or she has a 5% chance per level of knowing an herbal antidote which will neutralize the poison. (If the actual type of poison is not given by the Dungeon Master, a successful casting of detect poison [type] indicates an organic poison which can be countered.) A dice roll equal to or less than the druid's chance to find an antidote indicates neutralization.\n\n"
+            "The druid uses mistletoe as a material component for this spell, and crushed garlic must be rubbed on the recipient's feet. Antidotes must be obtained from green vegetables outdoors, or from an herbalist or similar source of supply."
+        )
     ),
     Spell('Trip','D',2,
         cast=tp(4,S),
@@ -995,6 +1116,7 @@ druid_spells = [
         cast=tp(5,S),
         duration=tp(1,R),
         sourcebook=U,
+        desc="This spell is essentially the same as the 3rd-level clerical spell of the same name, with only the following special notations and additions: Lightning cannot be called by the use of a cloudburst spell, and a call lightning spell cannot be used in the same area at the same time. Also, the druid must use mistletoe as an additional material component."
     ),
     Spell('Cure Disease','D',3,
         cast=tp(1,R),
@@ -1012,6 +1134,7 @@ druid_spells = [
         cast=tp(5,S),
         duration=tp(5,R),
         sourcebook=U,
+        desc="This spell is essentially the same as the 2nd-level clerical spell of the same name, except as noted above, and with the following additional difference. Because of the shorter duration, only five creatures (maximum) can be examined by this spell, and it cannot be reversed."
     ),
     Spell('Neutralize Poison','D',3,
         cast=tp(5,S),
@@ -1048,11 +1171,13 @@ druid_spells = [
         duration=tp(1,VA),
         duration_lvl=tp(1,T),
         sourcebook=U,
+        desc="This spell is essentially the same as the 4th-level clerical spell of the same name, except as noted above, and with the following additional differences: The affected area will radiate an aura of magic, and a detect snares and pits spell will reveal the location of the spike growth. The druid must use mistletoe as a material component (in place of the cleric's holy symbol) in addition to the seven small twigs or thorns."
     ),
     Spell('Starshine','D',3,
         cast=tp(5,S),
         duration_lvl=tp(1,T),
         sourcebook=U,
+        desc="A starshine spell enables the druid to softly illuminate an area as if it were exposed to a clear night sky filled with stars. Regardless of the height of the open area in which the spell is cast, the area immediately beneath it will be lit by starshine. Vision will be clear at up to 30', indistinct out to 60', and beyond that only gleams and glitters will be discernible. The starshine allows shadows. It enhances ultravision to its full potential but does not affect infravision. The spell makes the area of effect actually appear to be a night sky, but disbelief of the illusion merely allows the disbeliever to note that the \"stars\" are actually evoked lights. The material components are several stalks from an amaryllis (especially Hypoxis) and several holly berries."
     ),
     Spell('Stone Shape','D',3,
         cast=tp(1,R),
@@ -1191,6 +1316,7 @@ druid_spells = [
         cast=tp(7,S),
         duration_lvl=tp(1,R),
         sourcebook=U,
+        desc="By means of this spell the druid is able to cause a beam of soft, pale light to strike downward from overhead and illuminate whatever area he or she is pointing at. The light is exactly the same as moonlight, so that colors other than shades of black, gray, or white will not be determinable. The spell caster can easily cause the moonbeam to move to any area that he or she can see and point to. This makes the spell an effective way to spotlight something, for example an opponent. While the moonbeam allows shadows, a creature centered in a moonbeam spell is most certainly under observation. The reflected light from this spell allows dim visual perception 1\" beyond the area of affect. The light does not adversely affect infravision, and enhances ultravision to its greatest potential. The material components are several seeds of any moonseed plant and a piece of opalescent feldspar (moonstone)."
     ),
     Spell('Pass Plant','D',5,
         cast=tp(7,S),
@@ -1202,6 +1328,7 @@ druid_spells = [
         duration=tp(1,VA),
         duration_lvl=tp(1,R),
         sourcebook=U,
+        desc="This spell is the same as the 5th-level clerical spell of the same name."
     ),
     Spell('Sticks To Snakes','D',5,
         cast=tp(7,S),
@@ -1260,12 +1387,17 @@ druid_spells = [
         cast=tp(1,T),
         duration_lvl=tp(1,D),
         sourcebook=U,
+        desc="This spell enables the druid to select a healthy oak tree and cast a dweomer upon it so as to cause it to serve as a protector. The spell can be cast on but a single tree at a time, and while a liveoak cast by a particular druid is in effect, he or she cannot cast another such spell. The tree upon which the dweomer is cast must be within 10 feet of the druid's dwelling place, within a place sacred to the druid, or within 10' of something the druid wishes to guard or protect. The liveoak spell can be cast upon a healthy tree of small, medium, or large size according to desire and availability. A \"triggering\" phrase of up to a maximum of one word per level of the spell caster is then placed upon the dweomered oak; for instance \"Attack any persons who come near without first saying 'sacred mistletoe'\" is an 11-word trigger phrase that could be used by a druid of 11th or higher level casting the spell. The liveoak triggers the tree into becoming a treant of appropriate size and attack capability, matching the specifications of the Monster Manual description, but with only a 3\" movement rate. An oak enchanted by this spell will radiate a magic aura, and can be returned to normal by a successful casting of dispel magic or upon the desire of the druid who enchanted it. The druid needs mistletoe to cast this spell."
     ),
     Spell('Transmute Water To Dust','D',6,
         cast=tp(8,S),
         duration=tp(1,P),
         sourcebook=U,
+        desc=("When this spell is cast, the subject area instantly undergoes a change from liquid to powdery dust. Note that if the water is already muddy, the area of effect will be expanded to double normal, while if wet mud is concerned the area of effect will be quadrupled. If water remains in contact with the transmuted dust, the former will quickly permeate the latter, turning dust into silty mud if a sufficient quantity of water exists to do so, otherwise soaking or dampening the dust accordingly."
+            "Only liquid actually existing in the area of effect at the moment of spell casting is affected. Liquids which are only partially water will be affected insofar as the actual water is concerned, except that potions which contain water as a component part will be rendered useless. Living creatures are unaffected, except for those native to the Elemental Plane of Water. Such creatures receive a saving throw versus spell to escape the effect, and only one such creature can be affected by any single casting of this spell, regardless of the creature's size or the size of the spell's area of effect. The reverse of the spell is simple a very high-powered create water spell which requires a pinch of normal dust as an additional material component. For either usage of the spell, other components required are diamond dust of at least 500 gp value, a bit of seashell, and the druid's mistletoe."
+        )
     ),
+
     Spell('Transport Via Plants','D',6,
         cast=tp(3,S),
         duration=tp(1,D),
@@ -1298,8 +1430,12 @@ druid_spells = [
     ),
     Spell('Changestaff','D',7,
         cast=tp(3,S),
-        duration=tp(1,VA),
+        duration_lvl=tp(1,T),
         sourcebook=U,
+        desc=("By means of this spell, the druid is able to change his or her staff from a pole of dead wood into a treant of largest size. In order to cast the dweomer, the druid must first have located a tree struck by lightning within the past 24 hours (1%-5% chance for any given tree, depending on the severity of the storm). He or she must then select a sound limb, remove it from the tree, and prepare a specially cured section. This section must be shaped and carved so as to be ready to accept the magic which the druid will then place upon it. The staff must be of ash, oak, or yew wood. Curing by sun drying and special smoke requires 28 days. Shaping, carving, smoothing, and polishing require another 28 days. The druid cannot adventure or engage in other strenuous activity during either of these periods. The finished staff, engraved with scenes of woodland life, is then rubbed with the juice of holly berries, and the end of it is thrust into the earth of the druid's grove while he or she speaks with plants, calling upon the staff to assist in time of need. The item is then charged with a dweomer which will last for many changes from staff to treant and back again.\n\n"
+            "While the staff/treant will initially be of largest size and greatest number of hit points, each 8 points of damage it accumulates actually reduces it by 1 hit die. The staff begins at 12 hit dice and 96 hit points, goes to 11 and 88, 10 and 80, 9 and 72, etc. As it loses hit dice, it becomes smaller in size, thus losing attack power as well. If and when the staff/treant is brought below 7 hit dice, the thing crumbles to sawdust-like powder and is lost. The staff cannot ever be brought upwards in hit dice or hit points, except by a wish (which restores it completely). Of course, a new staff can always be sought out, seasoned, as so forth, to begin the process anew.\n\n"
+            "When the druid plants the end of the staff in the ground and speaks a special command prayer and invocation, the staff turns into a treant. It can and will defend the druid, or obey him or her in any way. However, it is by no means a true treant, and it cannot converse with actual treants. The transformation lasts for as many turns as the druid has levels of experience, until the druid commands the thing to return to its true form, or until the thing is destroyed, whichever first occurs. In order to cast a changestaff spell, the druid must have either mistletoe or leaves (ash, oak, or yew) of the same sort as the staff."
+        )
     ),
     Spell('Chariot of Sustarre','D',7,
         cast=tp(1,T),
@@ -1352,6 +1488,9 @@ druid_spells = [
         cast=tp(3,S),
         duration=tp(1,R),
         sourcebook=U,
+        desc=("When a sunray spell is cast, the druid evokes a burning beam of light which is similar to a ray of actual sunlight in all important aspects. It inflicts blindness for 1-3 rounds upon all creatures within its area of effect unless a successful saving throw versus spell is made. Creatures using ultravision at the time may be blinded for 2-8 rounds, while those to whom sunlight is harmful or unnatural will suffer permanent blindness unless the save is made, in which case blindness lasts for 2-12 rounds. Those within its area of effect, as well as creatures within 2\" of its perimeter, will have no infravisual capabilites for 2-5 rounds.\n\n"
+            "Undead (including vampires) caught within its main area of effect must save versus spell, taking 8-48 points of damage or half damage if a save is made. Those within the secondary area of effect (up to 2\" from the perimeter) take 3-18 points of damage or no damage if save is made. The ultraviolet light generated by the spell will inflict damage on fungoid creatures and subterranean fungi just as if they were undead, but no saving throw is possible. The material components are an aster seed and a piece of aventurine feldspar (sunstone)."
+        )
     ),
     Spell('Transmute Metal To Wood','D',7,
         cast=tp(9,S),

@@ -51,8 +51,8 @@ class Command(BaseCommand):
                     for field in fields.keys():
                         new_val = getattr(s, field)
                         if new_val != getattr(conflict, field):
-                            print('s: {}'.format(new_val))
-                            print('conf: {}'.format(getattr(conflict, field)))
+                            #print('s: {}'.format(new_val))
+                            #print('conf: {}'.format(getattr(conflict, field)))
 
                             any_change = True
                             setattr(conflict, field, new_val)

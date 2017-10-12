@@ -21,5 +21,5 @@
         {{ spell.duration_str }}
     </p>
 
-    <p> Description : {{ spell.description }} </p>
+    <p> Description : {{ spell.description | linebreaks }} </p>
 {% endblock %}
