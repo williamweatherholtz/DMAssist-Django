@@ -410,7 +410,7 @@ cleric_spells = [
         duration=tp(1,T),
         duration_lvl=tp(1,T),
         sourcebook=U,
-        desc="By means of this spell the caster is able to empower himself or herself, or another creature of man-size and comparable mass, to withstand non-magical fires up to temperatures of 2,000°F. It also confers a +2 bonus to saving throws against magical fires. For every level of experience above the minimum required to create the dweomer (5th), the caster can affect an additional man-sized creature. This growing power enables multiple individuals, or one or more of greater than man-size and mass, to be affected by the flame walk spell. For instance, an 11th-level caster could empower both himself or herself and a steed such as a horse to move in molten lava. (Consider a horse to be equivalent to 6 humans for purposes of this spell; conversely, halfling-sized creatures count as ½ human apiece, and pixie-sized creatures are considered equivalent to ¼ human each.) The material componenets of the spell are at least 500 gp of powdered ruby and the cleric's holy/unholy symbol."
+        desc="By means of this spell the caster is able to empower himself or herself, or another creature of man-size and comparable mass, to withstand non-magical fires up to temperatures of 2,000°F. It also confers a +2 bonus to saving throws against magical fires. For every level of experience above the minimum required to create the dweomer (5th), the caster can affect an additional man-sized creature. This growing power enables multiple individuals, or one or more of greater than man-size and mass, to be affected by the flame walk spell. For instance, an 11th-level caster could empower both himself or herself and a steed such as a horse to move in molten lava. (Consider a horse to be equivalent to 6 humans for purposes of this spell; conversely, halfling-sized creatures count as ½ human apiece, and pixie-sized creatures are considered equivalent to ¼ human each.) The material components of the spell are at least 500 gp of powdered ruby and the cleric's holy/unholy symbol."
     ),
     Spell('Glyph of Warding','C',3,
         cast=tp(1,VA),
@@ -601,7 +601,7 @@ cleric_spells = [
         cast=tp(7,S),
         duration=tp(1,P),
         sourcebook=U,
-        desc="This spell enables the caster to animate 1 humanoid or semi-humanoid skeleton or corpse for every 2 levels of experience which he or she has attained. The dweomer animates the remains and empoweres the caster to give commands. Direct commands or instructions of up to about 12 words in length will be obeyed by the skeletons or zombies animated (cf. animate dead spell). Monster types which can be animated by this spell include but are not limited to: apes (carnivorous and giant), bugbears, ettins, giants (all varieties), ogres, and trolls (all varieties). In general, the remains must be of bipedal monsters of more than 3 hit dice and with endoskeletons similar to those of humans, except in size (which must be greater than 7' height). Corpses animated by this spell are treated either as monster zombies (see Monster Manual II), or else as normal (living) creatures of the same form if that creature type normally has less than 6 hit dice. Skeletons animated by this spell are treated as monsters of half the hit dice (rounded up) of the normal sort. Animated monsters of either type receive their normal physical attacks, but have no special attacks or defenses other than those typically possessed by monster zombies or skeletons. The material components for the spell are the cleric's holy/unholy symbol and a small specimen of the type of creature which is to be animated."
+        desc="This spell enables the caster to animate 1 humanoid or semi-humanoid skeleton or corpse for every 2 levels of experience which he or she has attained. The dweomer animates the remains and empowers the caster to give commands. Direct commands or instructions of up to about 12 words in length will be obeyed by the skeletons or zombies animated (cf. animate dead spell). Monster types which can be animated by this spell include but are not limited to: apes (carnivorous and giant), bugbears, ettins, giants (all varieties), ogres, and trolls (all varieties). In general, the remains must be of bipedal monsters of more than 3 hit dice and with endoskeletons similar to those of humans, except in size (which must be greater than 7' height). Corpses animated by this spell are treated either as monster zombies (see Monster Manual II), or else as normal (living) creatures of the same form if that creature type normally has less than 6 hit dice. Skeletons animated by this spell are treated as monsters of half the hit dice (rounded up) of the normal sort. Animated monsters of either type receive their normal physical attacks, but have no special attacks or defenses other than those typically possessed by monster zombies or skeletons. The material components for the spell are the cleric's holy/unholy symbol and a small specimen of the type of creature which is to be animated."
     ),
     Spell('Atonement','C',5,
         cast=tp(1,T),
@@ -1512,11 +1512,16 @@ mu_spells = [
         duration=tp(1,VA),
         duration_lvl=tp(1,T),
         sourcebook=U,
+        desc="When an alarm spell is cast, the magic-user causes a selected area to react to the presence of any living creature larger than a normal rat, i.e. anything larger than about one-half cubic foot in volume or more than about 3 pounds in weight. The area of effect can be a portal, a section of floor, stairs, etc. As soon as any living creature sets foot upon the area, touches it, or otherwise contacts it, the alarm spell will evoke a loud ringing which will be clearly heard within a 60' radius. (Reduce the radius by 10' for interposing doors, by 20' for substantial interposing walls.) The sound will last for 1 segment and then cease. While undead creatures will not cause the spell to function, invisible creatures, as well as those from other planes who are otherwise alive, will do so. Ethereal or astrally projected creatures will not trigger an alarm, but flying and levitating creatures will. The material components of this spell are a tiny bell and a piece of very fine silver wire."
     ),
     Spell('Armor','M',1,
         cast=tp(1,R),
         duration=tp(1,P),
         sourcebook=U,
+        desc=("By means of this spell, the caster creates a magical field of force which serves as if it were leather armor (AC 8). If the spell is cast upon a person already armored, it has no effect. However, if it is cast upon a creature with an armor class normally better than 9 (due to its size, speed, skin, etc.) it will benefit the normal armor class by one step, i.e. AC 8 becomes 7, AC 7 becomes 6, and so on. The magic armor spell does not slow or hinder movement, adds no weight or encumbrance, nor does it prevent spell casting. It lasts until dispelled or until the wearer sustains cumulative damage totaling greater than 8 points + 1 per level of the caster. Thus, the wearer might take 8 points from an attack, then several turns later sustain an additional 1 point of damage. Unless the spell were cast by a magic-user of 2nd level or higher, it would be dispelled at this time. Until it is dispelled, the armor spell allows the wearer full benefits of the armor class gained due to the dweomer.\n\n"
+        "Note: This spell will not function in conjunction with protective magic devices other than a ring of protection. The material component is a piece of finely cured leather which has been blessed by a cleric."
+
+        )
     ),
     Spell('Burning Hands','M',1,
         cast=tp(1,S),
@@ -1575,6 +1580,7 @@ mu_spells = [
         cast=tp(1,S),
         duration=tp(1,R),
         sourcebook=U,
+        desc="By means of this spell, the magic-user changes a volume of water to a volative, flammable substance similar to alcohol and likewise lighter than water. If this substance is exposed to flame, fire, or even a spark, it will burst into flames and burn with a hot fire. Each creature subject to firewater flame will suffer 2-12 hit points of damage. The firewater created will evaporate and be useless within 1 round, even if it is securely contained and sealed, so it must be utilized (ignited) within 10 segments of its creation. The material components of this spell are a few grains of sugar and a raisin."
     ),
     Spell('Friends','M',1,
         cast=tp(1,S),
@@ -1586,6 +1592,7 @@ mu_spells = [
         cast=tp(1,S),
         duration=tp(1,P),
         sourcebook=U,
+        desc="A grease spell creates an area covered by a slippery substance of a fatty, greasy nature. Any creature stepping upon this area will have to save versus petrification or slip, skid, and fall. Of course, if a creature is aware of the area, it can possibly be avoided. The spell can also be used to cause a greasy coating on some surface other than underfoot — a rope, ladder rungs, weapon handle, etc. Lone material objects will always be subject to such a spell use, but if the magic is cast upon an object wielded or employed by a creature, the creature must fail a saving throw versus spell for the grease to be effective. A single saving throw will negate the effects. The material component of the spell is a bit of pork rind, butter, or other greasy material."
     ),
     Spell('Hold Portal','M',1,
         cast=tp(1,S),
@@ -1621,6 +1628,7 @@ mu_spells = [
         cast=tp(1,S),
         duration_lvl=tp(1,R),
         sourcebook=U,
+        desc="When a melt spell is cast, the magic-user effectively raises the temperature in the area of effect. This sudden increase in warmth will melt ice in 1 round, so that a 1st level magic-user can melt a cube of solid ice, 1 yard on a side, in 1 round after the spell is cast, so that the ice becomes water. Twice this volume of snow can be affected, so that the spell will melt 1 cubic yard of snow in ½ round, or will turn 2 cubic yards (1 yd. x 1 yd. x 2 yds.) of snow to water in 1 round. Against monsters such as white dragons, winter wolves, yeti, woolly rhinos, those composed of para-elemental ice, and the like, a melt spell will inflict 2 points of damage per level of the spell caster, or 1 point per level if the subject creature makes its saving throw versus spell. The melt spell is generally ineffective against types of creatures other than those enumerated above. The material components for a melt spell are a few crystals or rock salt and a pinch of soot."
     ),
     Spell('Mending','M',1,
         cast=tp(1,S),
@@ -1640,6 +1648,13 @@ mu_spells = [
         duration=tp(12,T),
         duration_lvl=tp(6,T),
         sourcebook=U,
+        desc=("By means of this spell, the caster calls a normal animal to serve him or her as a mount. The animal will serve willingly and well, but at the expiration of the spell duration it will disappear, returning to its own place. The type of mount gained by this spell depends on the level of the caster; of course, a caster of sufficiently high level to qualify for a camel (for instance) can choose a \"lower level\" mount if he or she so desires. Available mounts are these:\n"
+            "1st through 3rd level: mule or light horse\n"
+            "4th through 7th level: draft horse or warhorse\n"
+            "8th through 12 level: camel\n"
+            "13th level & up: elephant (and houda at 18th level)\n\n"
+            "The mount will not come with any riding gear, unless it is of a class lower than the caster would normally be entitled to gain, i.e. a 4th level magic-user can gain a warhorse without saddle and harness or a light horse with saddle and harness. The statistics of the animal gained are typical of all creatures of the same class. The material component of the spell is a bit of hair or dung from the type of animal to be conjured."
+        )
     ),
     Spell('Nystul\'s Magic Aura','M',1,
         cast=tp(1,R),
@@ -1651,6 +1666,7 @@ mu_spells = [
         cast=tp(1,S),
         duration_lvl=tp(1,S),
         sourcebook=U,
+        desc="This spell is identical to the 1st-level clerical spell of the same name, except that a holy symbol is not part of the material component."
     ),
     Spell('Protection From Evil','M',1,
         cast=tp(1,S),
@@ -1674,6 +1690,7 @@ mu_spells = [
         cast=tp(1,R),
         duration=tp(1,VA),
         sourcebook=U,
+        desc="The run spell enables the recipient to run at full speed (twice normal speed) for from 5-8 hours without tiring. However, after so running the individual must spend a like number of hours resting, as well as drinking plenty of liquids and eating heartily. For every 2 levels of experience of the spell caster, another individual can be affected, i.e. at 4th level, 2 individuals can be touched and empowered to run; at 6th level, 3 individuals; etc. Only humans and demi-humans in their natural forms are affected by this spell, and barbarians having the special running ability of that class are immune to the spell's effects. The material component of this spell is an elixir made from the juice of dried plums boiled in spring water and the oil of 5-8 beans of a spurge (castor) plant."
     ),
     Spell('Shield','M',1,
         cast=tp(1,S),
@@ -1703,6 +1720,7 @@ mu_spells = [
         cast=tp(1,R),
         duration=tp(0),
         sourcebook=U,
+        desc="A taunt spell enables the caster to jape and jeer effectively with respect to any creature with an intelligence of 2 or greater. The spell's dweomer gives the magic-user's words and sounds real meaning to the subject creature or creatures. These words and sounds will challenge the subject(s), be insulting, and in general cause irritation and anger. If the subject creature or creatures fail to save versus spell, the taunt spell will cause them to rush forth in fury to do battle with the spell caster, and each and every affected creature so coming will certainly attack the spell caster if physically capable of doing so, i.e. they will seek to use body weapons and hand-held weapons rather than attacking from a distance. Separation by an impenetrable or uncrossable boundary (a wall of flame, a deep chasm) will cause the spell to break. Only one sort of creature can be affected by a single taunt spell; in a mixed group of orcs and goblins (for instance) the caster would be able to affect either the orcs or the goblins (caster's choice), but not both at once. The magic affects creatures closest to the spell caster first, regardless of maximum range. Thus, if a group of gnolls were being taunted by a 10th-level magic-user, the nearest ten creatures would be subject to the spell first, even though the spell caster might prefer to affect the gnollish shaman at the rear of the group. Troops under a strong leader would gain a saving throw bonus of +1 to +4, at the DM's discretion."
     ),
     Spell('Tenser\'s Floating Disc','M',1,
         cast=tp(1,S),
@@ -1729,6 +1747,7 @@ mu_spells = [
         cast=tp(1,S),
         duration=tp(1,P),
         sourcebook=U,
+        desc="When this spell is cast, the magic-user is able to inscribe, visibly or invisibly, his or her personal rune or mark, as well as up to six additional characters of smaller size. A wizard mark spell allows the caster to etch the rune upon stone, metal, or any softer substance without harm to the material upon which the mark is placed. If an invisible mark is made, detect magic will cause it to glow and be readable (which does not necessarily imply understandability). Detect invisibility, true seeing, true sight, a gem of seeing, or a robe of eyes will likewise note an invisible wizard mark. A read magic spell will reveal the maker's intent, and an erase spell will wipe clean a wizard marked surface. The material components for the casting of this spell are a pinch of diamond dust (about 50 gp worth) and a pigment or pigments for coloration of the mark. If the mark is to be invisible, the pigments are still needed, but the caster uses a stylus of some sort rather than his or her digit."
     ),
     Spell('Write','M',1,
         cast=tp(1,R),
@@ -1746,6 +1765,7 @@ mu_spells = [
         cast=tp(2,S),
         duration_lvl=tp(1,R),
         sourcebook=U,
+        desc="When this spell is employed, the magic-user causes any ropelike object of non-living material to behave as he or she orders. The subject can be string, yarn, cord, line, rope, or even a cable. About 50' of normal rope (1 inch diameter), plus 5' per level of the spell caster, can be affected. Reduce length proportionally when diameter increases, and increase length by 50% when diameter is halved. The commands possible to give under a bind spell are: Coil (form a neat, coiled stack); Coil & Knot; Loop; Loop & Knot; Tie & Knot; and the reverses of all of the above (Uncoil, etc.). The rope or other ropelike object must be within about 1 foot of any object in order for it to respond properly, so it must usually be thrown or hurled nearby. Any creature affected by the ropelike object can, of course, interact with it as if it were a normal object. The creature's hold overrides the dweomer on the rope, and the rope takes 2 points of slashing damage before breaking. The rope cannot be used as a garrot, but can be used as a trip line or to entangle (as the druid spell) a single opponent. The dweomer does not cause the rope to have magical properties beyond its ability to obey commands (cf. rope of climbing, rope of entanglement)."
     ),
     Spell('Continual Light','M',2,
         cast=tp(2,S),
@@ -1765,6 +1785,7 @@ mu_spells = [
         duration=tp(24,T),
         duration_lvl=tp(6,T),
         sourcebook=U,
+        desc="This spell allows the magic-user to specially prepare a garment so as to hold far more than it normally could. A finely sewn gown or robe of high-quality material (at least 300 gp value) is fashioned so as to contain numerous hand-sized pockets. One dozen is the minimum number. The deeppockets spell then makes one of these pockets able to hold 1,000 gp worth of weight (5 cubic feet volume) as if it were only 100 gp of weight. Furthermore, there will be no discernible bulge where the special pocket is. The spell can be changed to allow 10 pockets each of 100 gp weight capability (½ cubic foot volume each). If a robe or like garment is sewn with 100 or more pockets (1,000 gp minimum cost), then 100 pockets can be dweomered to contain 10 gp weight each and hold ⅙ cubic foot volume each. If the spell duration expires while there is material within the enchanted pockets, or a dispel magic is cast upon the enchanted garment, the wearer must make a saving throw versus spell. Failure indicates the material in those pockets has gone from extra-dimensional space to astral space — lost forever. Success indicates the material suddenly and totally appears around the wearer and immediately falls to the ground. In addition to the garment, the material components of this spell are a tiny golden needle and a strip of fine cloth given a half-twist and fastened at the ends."
     ),
     Spell('Detect Evil','M',2,
         cast=tp(2,S),
@@ -1788,6 +1809,7 @@ mu_spells = [
         cast=tp(2,S),
         duration_lvl=tp(1,R),
         sourcebook=U,
+        desc="A flaming sphere spell causes a burning globe of normal-type fire to come into being up to 1\" distant from the spell caster. This sphere will then begin rolling in the direction in which the magic-user points, even though it might be uphill. It will roll over low barriers such as walls, furniture, etc., as long as these barriers are not over 4' tall. Flammable substances will be set afire by contact with the sphere. Creatures struck will suffer 2-8 points of damage. All creatures within a 5' radius of the sphere's center must save versus spell or else take the indicated damage. A successful save negates the flaming sphere. The flaming sphere moves at a rate of 1\" per round as long as the spell caster points in the direction it is to move, for it otherwise merely stays at rest and flames. It can be extinguished by the same means as any normal fire of its size. The material components are a bit of tallow, a pinch of sulphur, and a dusting of powdered iron."
     ),
     Spell('Fools Gold','M',2,
         cast=tp(1,R),
@@ -1811,6 +1833,11 @@ mu_spells = [
         cast=tp(2,S),
         duration=tp(1,VA),
         sourcebook=U,
+        desc=("An irritation spell affects the epidermis of the subject creature. Creatures having very thick or insensitive skins (such as buffalo, elephants, scaled creatures, etc.) are basically unaffected by the dweomer. There are two versions of the spell, either of which can be cast from the standard preparation:\n\n"
+            "Itching — When cast, this causes the subject to feel an instant itching sensation on some portion of its body. If 5-8 segments are not immediately spent scratching this irritated area, the subject creature will be so affected that the next 3 rounds will be spent squirming and twisting, effectively lowering the subject's armor class by 4 and its \"to hit\" probability by 2 during this time. Spells are ruined for the initial round this spell is in effect, but not for the following three rounds.\n\n"
+            "Rash — When a rash version of the spell is cast, the subject creature will notice nothing for 1-4 rounds, but thereafter its entire skin will begin to break out in red welts which faintly itch. The rash will persist until either a cure disease or dispel magic is cast upon it. It lowers comeliness by 1 point per day until four days have passed, i.e. maximum loss of comeliness is 4 points. After one week, the subject's dexterity is lowered by 1 point also. Symptoms vanish immediately upon the removal of the rash, all statistics returning to normal.\n\n"
+            "The material component for this spell is powdered leaf from poison ivy, oak, or sumac."
+        )
     ),
     Spell('Knock','M',2,
         cast=tp(1,S),
@@ -1822,6 +1849,7 @@ mu_spells = [
         cast=tp(1,R),
         duration_lvl=tp(1,R),
         sourcebook=U,
+        desc="Except as noted above, this spell is the same as the 2nd-level clerical spell of the same name. If a target creature is scried for only one round, only its alignment ethic (law/chaos) will be discerned."
     ),
     Spell('Leomund\'s Trap','M',2,
         cast=tp(3,R),
@@ -1851,6 +1879,7 @@ mu_spells = [
         cast=tp(4,S),
         duration=tp(1,VA),
         sourcebook=U,
+        desc="By means of this spell, the magic-user creates a magic \"arrow\" which speeds itself to its target as if fired from the bow of a fighter of the same level as the magic-user casting the spell. The arrow is equal to a +1 weapon for hit determination purposes. The effect of a hit might inflict damage on the target even if it would not normally be harmed by an arrow or magic weapon of only +1 value. This is due to the acid. The arrow itself does 2-5 points of damage. The acid which gushes forth when it hits is equal to an acid missile of 8-ounce volume (1' diam. area of effect, 2-8 hit points damage, plus item saving throw; splash does not apply). The acid's strength increases by one round's worth of damage for every 3 levels of experience of the spell caster above the 3rd, so that damage will occur over two rounds if the spell cast is from a 4th-6th level magic-user, unless the target can have the acid neutralized. The material components of the spell are a dart and powdered rhubarb leaf and adder stomach."
     ),
     Spell('Mirror Image','M',2,
         cast=tp(2,S),
@@ -1862,11 +1891,18 @@ mu_spells = [
         cast=tp(2,R),
         duration=tp(1,P),
         sourcebook=U,
+        desc=("A preserve spell enables the caster to retain some item fresh and whole until some later time when it is needed in a spell. Of course, the dweomer is ineffective in retaining the potency of material such as mistletoe, holly berries, and similar stuffs which must be gathered periodically. It is likewise ineffective in preserving the deceased for later resurrection. It is otherwise effectual. The sort of material which can be treated by a preserve spell depends upon the level of the caster:\n"
+            "Hard, relatively dry material: 2nd-4th level\n"
+            "Soft, relatively wet material: 5th-7th level\n"
+            "Semi-liquid and liquid materials: 8th level & up\n\n"
+            "A container is necessary only in cases where a relatively high degree of moisture is concerned. The material components of the spell are a pinch of dust, a bit of resin (or amber), and a drop of brandy."
+        )
     ),
     Spell('Protection From Cantrips','M',2,
         cast=tp(2,S),
         duration_lvl=tp(1,D),
-        sourcebook=U
+        sourcebook=U,
+        desc="By casting this spell, the magic-user provides immunity to the effects of cantrips cast by other magic-users, apprentices, or creatures that use cantrip magic. The spell will protect the caster, or one item or person that he or she touches (such as a spell book or a drawer containing spell components). Any cantrip that is cast against the person or item in question dissipates with an audible popping sound. This spell is often used by a magic-user with mischievous apprentices, or one who wishes apprentices to clean or shine an area using elbow grease instead of magic. Any unwilling target of this spell must be touched (via a roll \"to hit\") and is allowed a saving throw versus spell to escape the effect."
     ),
     Spell('Pyrotechnics','M',2,
         cast=tp(2,S),
@@ -1912,12 +1948,14 @@ mu_spells = [
     Spell('Tasha\'s Uncontrollable Hideous Laughter','M',2,
         cast=tp(2,S),
         duration=tp(1,R),
-        sourcebook=U
+        sourcebook=U,
+        desc="This spell enables the caster to cause the subject to perceive everything as hilariously funny. The effect is not immediate, and the subject creature will feel only a slight tingling on the round the dweomer is placed, but on the round immediately following, it will begin smiling, then giggling, chuckling, tittering, snickering, guffawing, and finally collapsing into gales of uncontrollable hideous laughter. Although this magic mirth lasts only a single round, the affected creature must spend the next round regaining its feet, and it will be at -2 from its strength (or -2 \"to hit\" and damage) on the 3rd and 4th rounds following the spell casting. A successful save versus spell negates the effect. The saving throw depends on the intelligence of the creature. Creatures with intelligence of 3 or less are totally unaffected. Those with intelligence of 4-8 save at -6; those with intelligence of 9-12 save at -4; those with intelligence of 13-15 save at -2; and those with intelligence of 16 or greater have normal saving throw probability. The material components of the spell are a small feather, a tiny wooden paddle, and a minute tort. The tort is hurled at the subject, while the feather is waved in one hand and the paddle is tapped against the posterior of the spell caster."
     ),
     Spell('Vocalize','M',2,
         cast=tp(1,R),
         duration=tp(5,R),
-        sourcebook=U
+        sourcebook=U,
+        desc="This spell allows the recipient to cast spells that normally require a verbal component without having to make a sound, so long as the casting of the subsequent spell(s) takes place entirely within the duration of the vocalize spell. This spell is of great use in situations where quiet is desired, or when the recipient is under the influence of a silence spell. The vocalize spell does not negate possible effects upon other vocal communication (a message spell could be cast from within an area of magical silence, but no information would be transmitted back to the caster). The spell does not negate the effect of silence, but merely offsets it for the purpose of subsequent spell casting. If a spell cast by means of a vocalize spell has some audible effect, that sound will be masked for as long as the silence remains in force. The material component of this spell is a bell without a clapper, or else a jailbird's tongue."
     ),
     Spell('Web','M',2,
         cast=tp(2,S),
@@ -1928,7 +1966,8 @@ mu_spells = [
     Spell('Whip','M',2,
         cast=tp(2,S),
         duration_lvl=tp(1,R),
-        sourcebook=U
+        sourcebook=U,
+        desc="By means of this spell, the magic-user creates a material, whip-like substance up to 1\" distant from his or her person. The spell caster can then wield this whip by moving his or her hand as if it held an actual one, for the magical one will respond to movements made by its evoker. The lash can be used so as to make both a whistling crack and an actual strike each turn. The sound alone is sufficient to keep animals at bay unless they save versus spell. Any animal actually struck (as indicated by a normal \"to hit\" die roll) must save versus spell at -1 to -4 or else slink away and not return for at least an hour. Note that the whip does not do actual damage to the creature struck. Creatures with intelligence above 3 are not affected, nor are giant-sized animals above bear-size, nor are monsters. The whip can also be used in melee combat, a successful \"to hit\" roll indicating that the lash has struck and wrapped around an opponent's weapon. If that weapon is an edged one, the whip must make a saving throw versus crushing blow (13 or better); if the weapon is non-edged, the whip must save versus normal blow (6 or better). Success on this saving throw indicates that the whip has torn the weapon from the opponent's hand — unless the opponent succeeds on a saving throw versus spell. An affected weapon will be cast to the ground, and the opponent must take 1 round to recover it. The magic bonus of a target weapon applies as a penalty to the whip's saving throw versus crushing blow or normal blow, and the magic resistance of an intended target opponent must fail for a \"to hit\" roll to be possible in the first place. The material component for the spell is a small bit of silk braided so as to form a miniature whip."
     ),
     Spell('Wizard Lock','M',2,
         cast=tp(2,S),
@@ -1939,7 +1978,8 @@ mu_spells = [
     Spell('Zephyr','M',2,
         cast=tp(2,S),
         duration=tp(1,S),
-        sourcebook=U
+        sourcebook=U,
+        desc="By means of this spell, a gentle draft of air moves from the spell caster and travels in the direction that he or she is facing. It continues until the maximum area of effect is reached. The force of the zephyr is sufficient to cause small flames to waver and dance. It fans flames and fires of larger size, making them hotter (+1 on damage dice, if applicable). It will hold back moving clouds of vapors (such as cloudkill) for 1 round. It will weaken such vapors as fog cloud and wall of fog so as to reduce their duration by half. It will move stagnant air, vapors, or even poisonous gases backwards by 1\", and this force likewise reduces their duration and potency by half, unless the vapor or gas is renewed by some source. The material component for this spell is a piece of fine parchment, accordion-folded and tacked near the bottom with a pin of ivory or silver."
     ),
     Spell('Blink','M',3,
         cast=tp(1,S),
@@ -1962,13 +2002,15 @@ mu_spells = [
     Spell('Cloudburst','M',3,
         cast=tp(3,S),
         duration=tp(1,R),
-        sourcebook=U
+        sourcebook=U,
+        desc="This spell is identical to the 3rd-level clerical spell of the same name, except that a holy symbol is not part of the material component."
     ),
     Spell('Detect Illusion','M',3,
         cast=tp(3,S),
         duration=tp(2,R),
         duration_lvl=tp(1,R),
-        sourcebook=U
+        sourcebook=U,
+        desc="This spell is the same as the 1st-level illusionist spell detect illusion, except as noted above."
     ),
     Spell('Dispel Magic','M',3,
         cast=tp(3,S),
@@ -2044,7 +2086,8 @@ mu_spells = [
     Spell('Item','M',3,
         cast=tp(3,S),
         duration_lvl=tp(6,T),
-        sourcebook=U
+        sourcebook=U,
+        desc="By means of this spell, the magic-user is able to touch any normal, non-magical item of a size appropriate to the allowable area of effect and cause it to shrink to one-twelfth of its normal size. Optionally, the caster can also change its now-shrunken composition to a cloth-like one. Only living things are entitled to a saving throw versus spell, but each save is at +4. Objects and creatures transformed to cloth make saving throws normally (as if not altered) against subsequent attacks. Objects changed by an item spell can be returned to normal composition and size merely by tossing them onto any solid surface or by word of command from the original spell caster. It is possible to affect a fire and its fuel with this spell."
     ),
     Spell('Leomund\'s Tiny Hut','M',3,
         cast=tp(3,S),
@@ -2061,12 +2104,18 @@ mu_spells = [
     Spell('Material','M',3,
         cast=tp(1,R),
         duration=tp(1,P),
-        sourcebook=U
+        sourcebook=U,
+        desc="A material spell allows the magic-user to actually bring into being certain common things. There is no difficulty in causing common basic materials such as stone, earth (soil), or wood to appear. These sorts of materials in raw, unworked form are easily gained by means of this spell. Similarly, other inorganic or non-living materials such as water, air, dung, straw, etc., can be conjured. When simple plants are concerned, such as when the caster attempts to bring into being an area of grass, there is a base 100% chance of total failure, modified downward by 1% per level of the spell caster. Animal life can never be affected by this spell. In no event can worked, refined, or fabricated items be brought into being by a material spell, nor can rough gems or precious metals. The spell essentially enables the magic-user to create common things of a basic nature."
     ),
     Spell('Melf\'s Minute Meteors','M',3,
         cast=tp(5,S),
         duration=tp(1,VA),
-        sourcebook=U
+        sourcebook=U,
+        desc=("This spell is unusual in two respects. First, the dweomer enables the caster to cast small globes of fire, each of which bursts into a 1 ft. diameter sphere upon impact, inflicting 1-4 points of damage upon the target creature — or otherwise igniting combustible materials (even solid planks). These meteors are missile weapons thrown by the mage, with misses being treated as grenade-like missiles. This ability continues from round to round until the caster has fired off as many as these \"meteors\" as he or she has levels of experience, until he or she decides to forego casting any additional missiles still remaining, or until a dispel magic spell is successfully cast upon the magic-user. Second, once Melf's Minute Meteors is cast, the magic-user has the option to discharge the available missiles at the rate of 1 every 2 segments, as desired, or 1 every round (beginning with the initial round of casting). The magic-user may not switch between these options once one of them is chosen.\n\n"
+            "In the first option, the caster must point at the desired target on the second segment after the spell is cast, and a missile will be discharged. This process is repeated every 2 segments thereafter until all of the missiles are so released. Naturally, this usually will mean that the spell actually carries over into at least the following round.\n\n"
+            "If the second option is chosen, the magic-user can withhold or discharge missiles as he or she sees fit, so long as one missile is let go during each subsequent round. This option has the benefit of enabling the spell caster to actually discharge one of the \"meteors\" and conjure some other spell as well in the same round. The other spell must be of such nature as to not require the continuing concentration of the spell caster, or else he or she will involuntarily forego the casting of any further missiles from the original spell. However, the magic-user's opportunity to discharge a missile and cast a spell in the same round is of such benefit that the potential loss is not of concern. If the magic-user fails to maintain an exact mental count of the number of missiles remaining, this is an unfailing indication that he or she has involuntarily foregone the remaining portion of the spell.\n\n"
+            "The components necessary for the casting of this dweomer are nitre and sulphur formed into a bead by the admixture or pine tar, and a small hollow tube of minute proportion, fashioned from gold. The tube costs no less than 1,000 gp to construct, so fine is its workmanship and magical engraving, but it remains potent throughout numerous castings of this spell — unless damaged by accident or abuse."
+        )
     ),
     Spell('Monster Summoning I','M',3,
         cast=tp(3,S),
@@ -2096,12 +2145,14 @@ mu_spells = [
     Spell('Secret Page','M',3,
         cast=tp(1,T),
         duration=tp(1,P),
-        sourcebook=U
+        sourcebook=U,
+        desc="When cast, a secret page spell alters the actual contents of a page to appear to be something entirely different. Thus, a map can be changed to become a treatise on burnishing ebony walking sticks; the text of a spell can be altered to show a ledger page or even another form of spell, etc. Confuse languages and explosive runes may be cast upon the secret page, but comprehend languages will not reveal the actual contents of the secret page. The caster is able to reverse the effect of the spell by the mere utterance of a command word, then peruse the actual page, and return it to its secret page form thereafter. The caster can also remove the spell by double repetition of the command word. Others noting the dim magic of a page with this spell cloaking its true contents can attempt a dispel magic, bit if it fails, the page will be destroyed. Short of an alter reality or wish spell, only will-o-wisp or boggart essence will reveal the true nature of the subject of a secret page spell, if that page is not subjected to dispel magic. The material component of the spell is powdered herring scales."
     ),
     Spell('Sepia Snake Sigil','M',3,
         cast=tp(3,S),
         duration=tp(1,VA),
-        sourcebook=U
+        sourcebook=U,
+        desc="There are three forms of this spell, but each eventually causes the conjuration of a deep brown snake-like force. This so-called sepia snake springs into being and strikes at the nearest living creature (but the sepia snake will not attack the magic-user who cast the spell). Its attack is made as if it were a monster with hit dice equal to the level of the magic-user who cast the dweomer. If it is successful in striking, the victim is engulfed in a shimmering amber field of force, frozen and immobilized until the caster releases the dweomer or until a dispel magic spell does so. Until then, nothing can get at the victim, move the shimmering force surrounding him or her, or otherwise affect the field or the victim. The victim does not age, grow hungry, sleep or regain spells while in this state, and is not aware of his or her surroundings. If the sepia snake misses its target, it dissipates in a flash of brown light, with a loud noise and a puff of dun-colored smoke which is 1\" in diameter and lasts for 1 round. The three applications are: 1) as a glowing sigil in the air drawn by the spell caster and pointed at the intended target; 2) as a glyph of umber marked on some surface that is touched or gazed upon; and 3) as a small character written into some magic work to protect it. The components for the spell are 100 gp worth of powdered amber, a scale from any snake, and a pinch of mushroom spores."
     ),
     Spell('Slow','M',3,
         cast=tp(3,S),
@@ -2132,7 +2183,8 @@ mu_spells = [
     Spell('Wind Wall','M',3,
         cast=tp(3,S),
         duration_lvl=tp(1,R),
-        sourcebook=U
+        sourcebook=U,
+        desc="This spell brings forth an invisible curtain of wind of considerable strength — sufficient to blow birds as large as crows upward, or to tear papers and like materials from unsuspecting hands. (If in doubt, a saving throw versus spell determines whether the subject maintains its grasp.) Normal insects cannot pass such a barrier. Loose material, even cloth garments, caught in a wind wall will fly upward. The material components are a tiny fan and a feather of exotic origin."
     ),
     Spell('Charm Monster','M',4,
         cast=tp(4,S),
@@ -2161,7 +2213,8 @@ mu_spells = [
     Spell('Dispel Illusion','M',4,
         cast=tp(4,S),
         duration=tp(1,P),
-        sourcebook=U
+        sourcebook=U,
+        desc="This spell is similar to the 3rd-level illusionist spell of the same name. A magic-user attempting to dispel an illusion is considered at two levels below his actual level with respect to illusion/phantasm spells cast by an illusionist."
     ),
     Spell('Enchanted Weapon','M',4,
         cast=tp(1,T),
@@ -2172,7 +2225,8 @@ mu_spells = [
     Spell('Evard\'s Black Tentacles','M',4,
         cast=tp(8,S),
         duration=tp(1,R),
-        sourcebook=U
+        sourcebook=U,
+        desc="By means of this spell the caster creates many rubbery, black tentacles in the area of effect of the dweomer. These waving members seem to spring forth from the earth, floor, or whatever surface is underfoot — including water. Each tentacle is 10' long, AC 4, and takes as many points of damage to destroy as the magic-user who cast the spell has levels of experience. Furthermore, there will be one such tentacle for each of the levels of experience of the spell caster. Any creature within range of the writhing tentacles is subject to attack. If more than one target is within range of a tentacle, the probability of attack on each is determined and the result found by die roll. A victim of a tentacle attack must make a saving throw versus spell. If this succeeds, the victim takes 1-4 hit points of damage from initial contact with the tentacle, and it then is destroyed. Failure to save indicates that the damage inflicted will be 2-8 points, the ebon member is wrapped around its victim, and damage will be 3-12 points on the second and succeeding rounds. Since these tentacles have no intelligence to guide them, there is a possibility that they will entwine any object — a tree, post, pillar — or continue to squeeze a dead opponent. Once grasped, a tentacle remains wrapped around its chosen target until the tentacle is destroyed by some form of attack or it disappears due to the expiration of the dweomer's duration. The component for this spell is a piece of tentacle from a giant octopus or giant squid."
     ),
     Spell('Extension I','M',4,
         cast=tp(2,S),
@@ -2228,12 +2282,17 @@ mu_spells = [
     Spell('Leomund\'s Secure Shelter','M',4,
         cast=tp(4,T),
         duration_lvl=tp(6,T),
-        sourcebook=U
+        sourcebook=U,
+        desc=("This spell enables the magic-user to magically call into being a sturdy cottage or lodge, made of material which is common in the area where the spell is cast — stone, timber, or (at worst) sod. The floor area of lodging will be 30 square feet per level of the spell caster, and the surface will be level, clean, and dry. In all respects the lodging will resemble a normal cottage, with a sturdy door, two or more shuttered windows, and a small fireplace.\n\n"
+            "While the lodging will be secure against winds of up to 70 miles per hour, it has no heating or cooling source (other than natural insulation qualities). Therefore, it must be heated as a normal dwelling, and extreme heat will certainly affect it, and its occupants, adversely. The dwelling does, however, provide considerable security otherwise, as it will be as strong as a normal stone building regardless of its material composition, will resist flames and fire as if it were stone, and will be generally impervious to normal missiles (but not the sort cast by siege machinery or giants). The door, shutters, and even chimney are secure against intrusion, the two former being wizard locked and the latter being secured by a top grate of iron and a narrow flue. In addition, these three areas are protected by an alarm spell (qv). Lastly, an unseen servant (qv) is called up to provide service to the spell caster.\n\n"
+            "The inside of a Leomund's Secure Shelter will contain crude furnishings as desired by the spell caster — up to 8 bunks, a trestle table and benches, as many as 4 chairs or 8 stools, and a writing desk. The material components of this spell are a square chip of stone, crushed lime, a few grains of sand, a sprinkling of water, and several splinters of wood. These must be augmented by the components of the alarm and unseen servant spells if these are to be included in the spell; i.e. string and silver wire and a small bell."
+        )
     ),
     Spell('Magic Mirror','M',4,
         cast=tp(1,H),
         duration_lvl=tp(1,R),
-        sourcebook=U
+        sourcebook=U,
+        desc="By means of this spell, the magic-user changes a normal mirror into a scrying device similar to a crystal ball. The details of the use of a scrying device are found on p. 141 of the DMG under the description for the crystal ball. The mirror used must be of finely wrought and highly polished silver of a minimum cost of 1,000 gp. This mirror is not harmed by casting of the spell as are the other material components — the eye of a hawk, an eagle, or even a roc, and nitric acid, copper and zinc (cf. 5th-level cleric spell magic font and 2nd-level druid spell reflecting pool). The following spells can be cast through a magic mirror: detect magic, detect good/evil, message, and detect illusion. There is a chance of the target realizing he or she is being watched. The base chance for a target to detect any crystal ball-like spell is listed in the crystal ball item description, with the following additions: A cavalier has a base 5% chance of detecting scrying and a barbarian has a base 1% chance."
     ),
     Spell('Massmorph','M',4,
         cast=tp(1,T),
@@ -2257,7 +2316,8 @@ mu_spells = [
     Spell('Otiluke\'s Resilient Sphere','M',4,
         cast=tp(4,S),
         duration_lvl=tp(1,R),
-        sourcebook=U
+        sourcebook=U,
+        desc="When this spell is cast, the result is a globe of shimmering force which encapsulates the subject creature — if it is small enough to fit within the diameter of the sphere and it fails to successfully save versus spell. The resilient sphere will contain its subject for as long as the dweomer persists, and it is not subject to damage of any sort except from a rod of cancellation, a wand of negation, or a disintegrate or dispel magic spell. These will cause it to be destroyed without harm to the subject. Nothing can pass through the sphere, inside or out, and the target can breathe normally. The subject may struggle, but all that will occur is a movement of the sphere. The globe can be physically moved either by people outside the globe, or by the struggles of those within. The material components of the spell are a hemispherical piece of diamond (or similar hard, clear gem material) and a matching hemispherical piece of gum arabic."
     ),
     Spell('Plant Growth','M',4,
         cast=tp(4,S),
@@ -2292,18 +2352,21 @@ mu_spells = [
     Spell('Shout','M',4,
         cast=tp(1,S),
         duration=tp(1,VA),
-        sourcebook=U
+        sourcebook=U,
+        desc="When a shout spell is cast, the magic-user empowers himself or herself with tremendous vocal powers. Via the dweomer of the spell, the caster releases an ear-splitting noise which has a principal effect in a cone shape radiating from the mouth of the caster to a 3\" terminus. Any creature within this area will be deafened for 2-12 rounds and take a like amount (2-12 points) of damage (unless a saving throw is made). Any exposed brittle or similar substance subject to sonic vibrations will be shattered by a shout, e.g. a wall of ice. A spell of this nature can be employed but once per day, for otherwise the caster might permanently deafen himself or herself. The material components for casting the shout spell are a drop of honey, a drop of citric acid, and a small cone made from a bull's or ram's horn."
     ),
     Spell('Stoneskin','M',4,
         cast=tp(1,S),
         duration=tp(1,VA),
-        sourcebook=U
+        sourcebook=U,
+        desc="When this spell is cast, the affected creature gains a virtual immunity to any attack by cut, blow, projectile or the like. Thus, even a sword of sharpness would not affect a creature protected by stoneskin, nor would a rock hurled by a giant, a snake's strike, etc. However, magic attacks from such spells as fireball, magic missile, lightning bolt, and so forth would have normal effect. Any attack or attack sequence from a single opponent dispels the dweomer, although it makes the creature immune to that single attack or attack sequence. Attacks with relatively soft weapons, such as a monk's hands, an ogrillon's first, etc, will inflict 1-2 points of damage on the attacker for each such attack while the attacked creature is protected by the stoneskin spell, but will not dispel the dweomer. The material components of the spell are granite and diamond dust sprinkled on the recipient's skin."
     ),
     Spell('Ultravision','M',4,
         cast=tp(4,S),
         duration=tp(6,T),
         duration_lvl=tp(6,T),
-        sourcebook=U
+        sourcebook=U,
+        desc="By means of this spell the magic-user empowers the recipient to see radiation in the ultraviolet spectrum. In night conditions this means that vision will be clear, as if it were daylight, to a range of 100 yards, and shadowy and indistinct from beyond 100 yards to about 300 yards distance. If the night is very dark, with thick clouds overhead, reduction of ultravisual sight is 50%. Where more than about 6 feet of earth or 3 feet of stone interpose between the sky and the individual, such as in virtually any underground area, ultravision allows only vision of the dimmest sort in about a 3-foot radius, since the ultraviolet rays are screened out. (Of course, if an emission source is nearby, the visual capabilities improve accordingly.) Nearby light, including the radiance shed by magic items, tends to spoil ultravision, the brightness of the rays \"blinding\" the eyes to dimmer areas more distant. The material component for this spell is a crushed amethyst of at least 500 gp value."
     ),
     Spell('Wall of Fire','M',4,
         cast=tp(4,S),
@@ -2344,7 +2407,8 @@ mu_spells = [
     Spell('Avoidance','M',5,
         cast=tp(3,S),
         duration=tp(1,P),
-        sourcebook=U
+        sourcebook=U,
+        desc="By means of this spell, the caster sets up a natural repulsion between the affected object and any living things. Thus, any living creature attempting to touch the affected object will be repulsed (unable to come closer than 1'), or will repulse the affected object, depending on the relative mass of the two; i.e., a lone halfling attempting to touch an iron chest with an avoidance spell upon it will be thrown back; a dozen such halflings would find themselves unable to come within 1' of the chest, while the chest would skitter away from a giant-sized creature as the creature approached. The material component for the spell is a magnetized needle. Because the spell cannot be cast upon living things, any attempt to cast avoidance upon the apparel or possessions borne by a living creature entitle the subject creature to make a saving throw. The reverse of this spell, attraction, uses the same material components, and sets up a natural attraction between the affected object and all living things. The creature will be drawn to the object if the creature is smaller, or the object will slide toward the creature if the creature is of greater mass than the object. A successful bend bars roll must be made to remove an object once it has adhered to another object or creature in this fashion."
     ),
     Spell('Bigby\'s Interposing Hand','M',5,
         cast=tp(5,S),
@@ -2377,7 +2441,12 @@ mu_spells = [
     Spell('Dismissal','M',5,
         cast=tp(1,R),
         duration=tp(1,P),
-        sourcebook=U
+        sourcebook=U,
+        desc=("By means of this spell, a magic-user on the Prime Material Plane seeks to force or allow some creature from another plane of existence to return to its proper plane (cf. 4th-level cleric spell abjure). The name of the type of creature to be returned must be known and used in the spell. Magic resistance, if any, is checked for effect immediately. Then, the level of the spell caster is compared to the level or number of hit dice of the creature being dismissed. If the magic-user has a higher number, the difference between his or her level is subtracted from the saving throw score of the creature to be affected by the dismissal. If the creature has a higher level or higher number of hit dice than the level of the caster, then that difference is added to its saving throw score. Exception: If the creature desires to be dismissed, then only an unmodified saving throw is needed. Certain arcane works are reputed to allow greatly enhanced chances for spell success. If the spell is successful, the creature is instantly whisked away, but the spell has a 20% chance of actually sending the subject to a plane other than its own.\n\n"
+            "The reverse of the spell, beckon, attempts to conjure up a known and named (if applicable) creature from another plane. Success or failure is determined in the same manner as for a dismissal spell, but in this case magic resistance is only checked if the creature has no known proper name. If the spell succeeds, the creature is instantly transported from wherever it was to the plane of the spell caster. This does not guarantee that the beckoned creature will be kindly disposed to the magic-user, nor will it in any way be subject to his or her wishes or commands without some additional constraint. Because of this, various sorts of protective measures are generally taken when using this form of the spell, and even with careful preparation, the results might be unwholesome.\n\n"
+            "This spell does not work on creatures that are native to the Prime Material Plane but travel to other planes (such as shedu), nor against creatures that have part of their ancestry in the Prime Material Plane (such as cambions).\n\n"
+            "The material components of the spell vary with the type of creature to be dismissed or called. In general, items which are inimical and distasteful to the subject creature are used for dismissal, and for a beckon spell materials which are pleasing, desirable, and rewarding must be used."
+        )
     ),
     Spell('Distance Distortion','M',5,
         cast=tp(6,S),
@@ -2388,7 +2457,11 @@ mu_spells = [
     Spell('Dolor','M',5,
         cast=tp(5,S),
         duration=tp(2,R),
-        sourcebook=U
+        sourcebook=U,
+        desc=("By means of this spell, the magic-user attempts to force compliance or obedience from some oppositely aligned or hostile creature from a plane foreign to that of the spell caster. The dweomer causes unease in the creature in question during its mere reading, and on the round thereafter, the subject becomes nervous and filled with doubts, while on the last round of effect the creature actually feels a dull, all-encompassing dolor. The initial effects cause the subject creature to make all saving throws versus commands and non-offensive spells (including charms) at -1 on the dice rolled to determine whether or not it resists, the adjustment favoring compliance. The secondary effects cause the adjustment to go to -2. The tertiary effect brings with it an adjustment of -3. Thereafter, the creature is no longer affected and it makes further saving throws without adjustment.\n\n"
+            "The verbal component of the spell must deal with the class of creature in question, containing as much information as possible about the subject creature.\n\n"
+            "When uttering the spell, the magic-user can be mentally assailed by the creature if the subject has a higher intelligence than the spell caster. In such a case, the creature has a 5% chance per point of superior intelligence of effectively charming and dominating the magic-user. In the case of such control, the creature will then do with the spell caster as its alignment dictates. If the spell caster is distracted or interrupted during the casting of the spell, the subject creature is able to automatically effect the charm and domination."
+        )
     ),
     Spell('Extension II','M',5,
         cast=tp(4,S),
@@ -2399,7 +2472,10 @@ mu_spells = [
     Spell('Fabricate','M',5,
         cast=tp(1,VA),
         duration=tp(1,P),
-        sourcebook=U
+        sourcebook=U,
+        desc=("By means of this spell, the magic-user is able to convert material of one sort into a product of desired nature which is of basically the same material as was initially used when the fabricate was cast. Thus, the spell caster can fabricate a wooden bridge from a clump of trees, a rope from a patch of hemp, clothes from flax or wool, and so forth. Magical or living things cannot be created or altered by a fabricate spell. The quality of items made by means of the spell is commensurate with the quality of material used as the basis for the new fabrication. If mineral material is worked with, the area of effect is reduced by a factor of nine; i.e., 1 cubic yard becomes 1 cubic foot.\n\n"
+            "Articles requiring a high degree of craftsmanship (jewlery, swords, glass, crystal, etc.) cannot be fabricated unless the magic-user actually has great skill in the craft considered. Casting requires 1 full round per cubic yard (or foot) of material to be affected."
+        )
     ),
     Spell('Feeblemind','M',5,
         cast=tp(5,S),
@@ -2416,7 +2492,11 @@ mu_spells = [
     Spell('Leomund\'s Lamentable Belabourment','M',5,
         cast=tp(5,S),
         duration=tp(1,VA),
-        sourcebook=U
+        sourcebook=U,
+        desc=("By means of this spell, the magic-user causes a combination of fascination, confusion, and rage upon one or more creatures able to understand the language in which the spell caster speaks. Upon casting the spell, the magic-user begins discussion of some topic germane to the creature or creatures to be affected. Those not saving versus spell will immediately begin to converse with the spell caster, agreeing or disagreeing, all most politely. As long as the spell caster chooses, he or she can maintain the spell by conversing with the subject(s). As long as there is no attack made upon them, they will ignore all else going on around them, instead \"choosing\" to spend their time exclusively talking and arguing. This saving throw, and all saving throws in this spell, is modified by the target's intelligence as follows: Creatures with intelligence of 2 or lower are not affected by the spell, but those with intelligence of 3-7 save at -1. Beings with intelligence of 8-10 save normally, those with intelligence of 11-14 at +1, and those with intelligence scores of 15 or higher at +2.\n\n"
+            "If the spell is maintained for more than 3 rounds, each subject creature must attempt another save versus spell. Those failing to save this time will wander off in confusion for 3-12 rounds, avoiding the proximity of the spell caster in any event. Those who make the confusion save are still kept in fascination and must also save in the 4th, 5th, and 6th rounds (or as long as the caster continues the dweomer) to avoid the confusion effect. If the spell is maintained for more than 6 rounds, each subject must save versus spell to avoid going into a rage — either at oneself, if one is the sole object of the spell, or at all other subjects of the spell — and attacking (regular \"to hit\" probability) against one's own person, or falling upon the nearest other subject of the dweomer with intent to kill. This rage will last for 2-5 rounds. Those subjects who save versus spell on the rage check will realize that they have fallen prey to the spell and will collapse on the ground, lamenting their foolishness, for 1-4 rounds unless they are attacked or otherwise disturbed.\n\n"
+            "If during the course of the maintenance of the spell the caster is attacked or otherwise distracted, he or she is still protected, for the subject or subjects will not notice. The magic-user can leave at any time after the casting and the subject(s) will continue on for 1 full round as if he or she were still there to converse with. In these cases, however, saving throws for continuance of the spell are not applicable, even if, for instance, the subject(s) would otherwise have had to save to avoid confusion or rage. Note that the spell is entirely verbal."
+        )
     ),
     Spell('Leomund\'s Secret Chest','M',5,
         cast=tp(1,T),
@@ -2452,7 +2532,10 @@ mu_spells = [
     Spell('Sending','M',5,
         cast=tp(1,T),
         duration=tp(1,VA),
-        sourcebook=U
+        sourcebook=U,
+        desc=("By means of this spell, the caster is empowered to contact a single creature with whom he or she is familiar and whose name and appearance are well known. If the creature in question is not on the same plane of existence as the spell caster, there is a 5% chance per plane removed that the sending will not arrive; i.e., if the subject were two planes removed there would be a 10% chance of failure. The magic-user can send one word per level of experience, with articles not considered; e.g. a, an, and the are not treated as words with respect to the message sent. Although the sending is received, the subject creature is not obligated to act upon it in any manner. The sending, if successful, will be understoof even though the creature has an intelligence of as little as 1 factor (1 point, or animal intelligence).\n\n"
+            "The material component for this spell consists of two tiny cylinders, each with one open end, connected by a short piece of copper wire."
+        )
     ),
     Spell('Stone Shape','M',5,
         cast=tp(1,R),
