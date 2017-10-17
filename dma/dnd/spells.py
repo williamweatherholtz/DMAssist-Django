@@ -106,12 +106,31 @@ cleric_spells = [
         cast=tp(1,R),
         duration=tp(6,R),
         sourcebook=V,
-        desc="Upon uttering the Bless spell, the caster raises the morale of friendly creatures by +1. Furthermore, it raises their \"to hit\" dice rolls by +1. A blessing, however, will affect only those not already engaged in melee combat. This spell can be reversed by the cleric to a curse upon enemies which lowers morale and \"to hit\" by -1. The caster determines at what range (up to 6\") he or she will cast the spell, and it then affects all creatures in on area 5\" square centred on the point the spell was cast upon. In addition to the verbal and somatic gesture components, the Bless requires holy water, while the Curse requires the sprinkling of specially polluted water."
+        desc="Upon uttering the <i>bless</i> spell, the caster raises the morale of friendly creatures by +1. Furthermore, it raises their \"to hit\" dice rolls by +1. A blessing, however, will affect only those not already engaged in melee combat. This spell can be reversed by the cleric to a <i>curse</i> upon enemies which lowers morale and \"to hit\" by -1. The caster determines at what range (up to 6\") he or she will cast the spell, and it then affects all creatures in on area 5\" square centred on the point the spell was cast upon. In addition to the verbal and somatic gesture components, the <i>bless</i> requires holy water, while the <i>curse</i> requires the sprinkling of specially polluted water."
     ),
     Spell('Ceremony','C',1,
         cast=tp(1,H),
         duration=tp(1,P),
-        sourcebook=U
+        sourcebook=U,
+        desc=("<i>Ceremony</i> has a number of applications in the religious organization, depending on the level of the cleric. The effect of a <i>ceremony</i> spell does not leave behind an aura of magic, although in some cases an aura of good or evil might be present (and thus detectable). The specific <i>ceremony</i> spells can vary from religion to religion, but usually encompass these:\n\n"
+            "\t1st-level cleric: <i>coming of age, burial, marriage</i>\n"
+            "\t3rd-level cleric: <i>dedication, investiture, consecrate item</i>\n"
+            "\t5th-level cleric: <i>ordination, special vows</i>\n"
+            "\t7th-level cleric: <i>consecrate ground</i>\n"
+            "\t9th-level cleric: <i>anathematize</i>\n\n"
+            "Each of these varieties of the <i>ceremony</i> spell requires a cleric of the indicated level or a higher one, with additional restrictions as described below. For all <i>ceremony</i> spells except <i>anathematize</i> (see below), no saving throw is called for, since the recipient is either inanimate or presumed to be willing to be affected by the magic, any version of the spell except for <i>anathematize</i> will simply fail if it is cast on a person who (for some reason) is unwilling to receive the benefit. Briefly, the <i>ceremonies</i> listed do the following things:\n\n"
+            "<i>Coming of age</i> is a limited form of <a href=\"/spells/bless-cleric-lvl-1\"><i>bless</i></a> spell which is cast upon a young man (and in some cultures a young woman) at some point relatively early in life, often the age of 12. A young person who receives this spell gets a +1 bonus to any single saving throw, which can be taken at any time after the <i>coming of age ceremony</i> is completed. In some cultures, the <i>coming of age ceremony</i> has a symbolic significance, such that an adolescent must receive this blessing before he or she can enjoy the rights and privileges of adulthood.\n\n"
+            "<i>Burial</i> magically protects a corpse, and bestows it with the blessing of the religious organization. The body is shielded for one week as if by a <i>protection from evil</i> spell, and anyone trying to disinter the corpse within that time must make a saving throw versus spell or stop and flee in fear for one turn.\n\n"
+            "<i>Marriage</i> has no tangible after-effect (i.e., it does not guarantee happiness or harmony), but it usually carries a moral or legal significance, not dissimilar in nature to the various rites of marriage which are performed in our real world.\n\n"
+            "<i>Dedication</i> allows the recipient of the spell to be taken into the ranks of the casting cleric's religion, making that person a sanctioned worshiper of the cleric's deity. The effect of a <i>dedication</i> is permanent, unless the worshiper demonstrates a desire to change allegiance to a different deity. In such a case, the earlier <i>dedication</i> can be overridden by a new <i>dedication</i> cast by a cleric of a higher level than the one who performed the previous <i>dedication</i>.\n\n"
+            "The rite of <i>investiture</i> must be performed on any aspiring cleric before that character can achieve the status of a first-level cleric.\n\n"
+            "<i>Consecrate item</i> must be performed on any object to be placed on an altar or some other location within a religious edifice. To prevent it from losing its potency, holy (or unholy) water must be kept in a properly <i>consecrated</i> container.\n\n"
+            "<i>Ordination</i> must be performed on a cleric before the character can become the priest of a congregation or assume similar sorts of duties, and even an adventuring cleric must be <i>ordained</i> before he or she can gain followers and establish a following or other sort of group. In all cases, the cleric performing the <i>ordination</i> must be of higher level than the recipient; this <i>ceremony</i> is often conducted as part of the training a cleric receives in order to advance from second to third level.\n\n"
+            "<i>Special vows</i> can be received by a would-be cavalier or paladin before that character embarks upon a career in the desired profession. The effects of this spell persist for as long as it takes the character to accumulate enough experience points to rise to the upper limit of his or her current level. The <i>special vows</i> can then be renewed as part of the character's training between levels, or at any time during advancement through the next higher level. A cavalier or paladin who has received <i>special vows</i> is immune to the effects of <i>bestow curse</i> spells (but not cursed items) for as long as the <i>special vows</i> remain in effect. Additionally, this <i>ceremony</i> renders the subject more susceptible (-4 on saving throw) to any <i>quest</i> spell cast upon him or her by a cleric of the same alignment as the caster of the <i>special vows</i>.\n\n"
+            "<i>Consecrate ground</i> should be performed upon an area before any holy (unholy) structure is built on the site. A religious edifice constructed on ground that has not been <i>consecrated</i> will slowly but irrevocably fall into a state of disrepair and has a 1% chance per year, cumulative, of actually collapsing as a result of this oversight. This spell must be cast before the area in question is altered in any way (e.g., landscaping) and before any construction materials are brought to the site; it will have no effect if it is done as an afterthought. <i>Consecrate ground</i> can also be used on a plot of land destined for use as a graveyard, and in such case the graveyard itself automatically turns undead each round with the same effectiveness as a 3rd-level cleric. Or, if the <i>consecration</i> of a would-be graveyard is performed by an evil cleric, any undead creatures occupying the area are treated as if they were being protected and controlled by an evil cleric of 3rd level.\n\n"
+            "<i>Anathematize</i> is a form of excommunication by means of which the offender is literally branded on the cheek, forehead, arm, or hand with a symbol, sigil, or sign that identifies the subject (to those who understand the symbol) as someone who has committed a serious offense in the eyes of his or her deity. An unwilling subject of this spell is allowed a saving throw versus spell, at -4, to escape its effects. If the recipient is not truly deserving of the telling brand, the spell fails when cast. A successful <i>atonement</i> causes the brand to fade, and possibly vanish. If the offending actions were caused magically or by some other external force, the brand utterly disappears. If the offending actions were natural, the brand cannot be completely removed.\n\n"
+            "The components for the various <i>ceremony</i> spells vary from religion to religion, but the material component always involves the use of the cleric's holy symbol in one way or another. Standard costs for the casting of these spells are as follows: <i>coming of age</i>, 5-15 sp; <i>burial</i>, 5-50 gp; <i>marriage</i>, 1-20 gp; <i>dedication</i>, 1-10 sp (or sometimes free); <i>investiture</i>, 1-100 gp (or sometimes free); <i>item consecration</i>, usually free; <i>ordination</i>, usually free but possibly as much as 200 gp; <i>special vows</i>, 1-100 gp (or sometimes free); <i>consecrate groud</i>, 100-600 gp depending on the size of the area to be affected and the level of the cleric performing the spell; and <i>anathematize</i> is always performed at no charge, since the casting of this spell is always deemed to be in the best interests of the cleric's religion."
+        )
     ),
     Spell('Combine','C',1,
         cast=tp(1,R),
@@ -123,32 +142,32 @@ cleric_spells = [
         cast=tp(1,S),
         duration=tp(1,R),
         sourcebook=V,
-        desc="This spell enables the cleric to issue a command of a single word. The command must be uttered in a language which the spell recipient is able to understand. The individual will obey to the best of his/her/its ability only so long as the command is absolutely clear and unequivocal, i.e. \"Suicide!\" could be a noun, so the creature would ignore the command. A command to \"Die!\" would cause the recipient to fall in a faint or cataleptic state for 1 round, but thereafter the creature would be alive and well. Typical command words are: back, halt, flee, run, stop, fall, fly, go, leave, surrender, sleep. rest, etc. Undead are not affected by a command. Creatures with intelligence of 13 or more, and creatures with 6 or more hit dice (or experience levels) are entitled to a saving throw versus magic. (Creatures with 13 or higher intelligence and 6 hit dice/levels do not get 2 saving throws!)"
+        desc="This spell enables the cleric to issue a <i>command of a single word</i>. The <i>command</i> must be uttered in a language which the spell recipient is able to understand. The individual will obey to the best of his/her/its ability only so long as the <i>command</i> is absolutely clear and unequivocal, i.e. \"Suicide!\" could be a noun, so the creature would ignore the <i>command</i>. A <i>command</i> to \"Die!\" would cause the recipient to fall in a faint or cataleptic state for 1 round, but thereafter the creature would be alive and well. Typical <i>command words</i> are: back, halt, flee, run, stop, fall, fly, go, leave, surrender, sleep. rest, etc. Undead are not affected by a <i>command</i>. Creatures with intelligence of 13 or more, and creatures with 6 or more hit dice (or experience levels) are entitled to a saving throw versus magic. (Creatures with 13 or higher intelligence and 6 hit dice/levels do not get 2 saving throws!)"
     ),
     Spell('Create Water','C',1,
         cast=tp(1,R),
         duration=tp(1,P),
         sourcebook=V,
-        desc="When the cleric casts a Create Water spell, four gallons of water are generated for every level of experience of the caster, i.e. a 2nd level cleric creates eight gallons of water, a 3rd level twelve gallons, a 4th level sixteen gallons, etc. The water is clean and drinkable (it is just like rain water). Reversing the spell, Destroy Water, obliterates without trace (such as vapour, mist, fog or steam) a like quantity of water. Created water will last until normally used or evaporated, spilled, etc. Water can be created or destroyed in an area as small as will actually contain the liquid or in an area as large as 27 cubic feet (one cubic yard). The spell requires at least a drop of water to create, or a pinch of dust to destroy, water. Note that water cannot be created within a living thing."
+        desc="When the cleric casts a <i>create water</i> spell, four gallons of water are generated for every level of experience of the caster, i.e. a 2nd level cleric creates eight gallons of water, a 3rd level twelve gallons, a 4th level sixteen gallons, etc. The water is clean and drinkable (it is just like rain water). Reversing the spell, <i>destroy water</i>, obliterates without trace (such as vapour, mist, fog or steam) a like quantity of water. Created water will last until normally used or evaporated, spilled, etc. Water can be created or destroyed in an area as small as will actually contain the liquid or in an area as large as 27 cubic feet (one cubic yard). The spell requires at least a drop of water to create, or a pinch of dust to destroy, water. Note that water cannot be created within a living thing."
     ),
     Spell('Cure Light Wounds','C',1,
         cast=tp(5,S),
         duration=tp(1,P),
         sourcebook=V,
-        desc="Upon laying his or her hand upon a creature, the cleric causes from 1 to 8 hit points of wound or other injury damage to the creature's body to be healed. This healing will not affect creatures without corporeal bodies, nor will it cure wounds of creatures not living or those which can be harmed only by iron, silver, and/or magical weapons. Its reverse, Cause Light Wounds, operates in the same manner; and if a person is avoiding this touch, a melee combat \"to hit\" die is rolled to determine if the cleric's hand strikes the opponent and causes such a wound. Note that cured wounds are permanent only insofar as the creature does not sustain further damage, and that caused wounds will heal - or can be cured - just as any normal injury will. Caused light wounds are 1 to 8 hit points of damage."
+        desc="Upon laying his or her hand upon a creature, the cleric causes from 1 to 8 hit points of wound or other injury damage to the creature's body to be healed. This healing will not affect creatures without corporeal bodies, nor will it cure wounds of creatures not living or those which can be harmed only by iron, silver, and/or magical weapons. Its reverse, <i>cause light wounds</i>, operates in the same manner; and if a person is avoiding this touch, a melee combat \"to hit\" die is rolled to determine if the cleric's hand strikes the opponent and causes such a wound. Note that cured wounds are permanent only insofar as the creature does not sustain further damage, and that caused wounds will heal — or can be cured — just as any normal injury will. Caused light wounds are 1 to 8 hit points of damage."
     ),
     Spell('Detect Evil','C',1,
         cast=tp(1,R),
         duration=tp(1,T),
         duration_lvl=tp(5,R),
         sourcebook=V,
-        desc="This is a spell which discovers emanations of evil, or of good in the case of the reverse spell, from any creature or object. For example, evil alignment or an evilly cursed object will radiate evil, but a hidden trop or an unintelligent viper will not. The duration of a Detect Evil (or Detect Good) spell is 1 turn + ½ turn (5 rounds, or 5 minutes) per level of the cleric. Thus a cleric of 1st level of experience can cast a spell with a 1½ turn duration, at 2nd level a 2 turn duration, 2½ at 3rd, etc. The spell has a path of detection 1\" wide in the direction in which the cleric is facing. It requires the use of the cleric's holy (or unholy) symbol as its material component, with the cleric holding it before him or her."
+        desc="This is a spell which discovers emanations of evil, or of good in the case of the reverse spell, from any creature or object. For example, evil alignment or an evilly cursed object will radiate evil, but a hidden trap or an unintelligent viper will not. The duration of a <i>detect evil</i> (or <i>detect good</i>) spell is 1 turn + ½ turn (5 rounds, or 5 minutes) per level of the cleric. Thus a cleric of 1st level of experience can cast a spell with a 1½ turn duration, at 2nd level a 2 turn duration, 2½ at 3rd, etc. The spell has a path of detection 1\" wide in the direction in which the cleric is facing. It requires the use of the cleric's holy (or unholy) symbol as its material component, with the cleric holding it before him or her."
     ),
     Spell('Detect Magic','C',1,
         cast=tp(1,R),
         duration=tp(1,T),
         sourcebook=V,
-        desc="When the Detect Magic spell is cast, the cleric detects magical radiations in a path 1\" wide, and up to 3\", long, in the direction he or she is facing. The caster can turn 60° per round. Note that stone walls of 1' or more thickness, solid metal of but 1/12' thickness, or 3' or more of solid wood will black the spell. The spell requires the use of the cleric's holy (or unholy) symbol."
+        desc="When the <i>detect magic</i> spell is cast, the cleric detects magical radiations in a path 1\" wide, and up to 3\", long, in the direction he or she is facing. The caster can turn 60° per round. Note that stone walls of 1' or more thickness, solid metal of but 1/12' thickness, or 3' or more of solid wood will black the spell. The spell requires the use of the cleric's holy (or unholy) symbol."
     ),
     Spell('Endure Cold/Heat','C',1,
         cast=tp(1,R),
@@ -167,7 +186,7 @@ cleric_spells = [
         duration=tp(6,T),
         duration_lvl=tp(1,T),
         sourcebook=V,
-        desc="This spell causes excitation of molecules so as to make them brightly luminous. The light thus caused is equal to torch light in brightness, but its sphere is limited to 4\" in diameter. It lasts for the duration indicated (7 turns at 1st experience level, 8 at 2nd, 9 at 3rd, etc.) or until the caster utters a word to extinguish the light. The Light spell is reversible, causing darkness in the same area and under the same conditions, except the blackness persists for only one half the duration that light would last. If this spell is cast upon a creature, the applicable magic resistance and saving throw dice rolls must be made. Success indicates that the spell affects the area immediately behind the creature, rather than the creature itself. In all other cases, the spell takes effect where the caster directs as long as he or she has a line of sight or unobstructed path for the spell; fight can spring from air, rock, metal, wood, or almost any similar substance."
+        desc="This spell causes excitation of molecules so as to make them brightly luminous. The <i>light</i> thus caused is equal to torch light in brightness, but its sphere is limited to 4\" in diameter. It lasts for the duration indicated (7 turns at 1st experience level, 8 at 2nd, 9 at 3rd, etc.) or until the caster utters a word to extinguish the light. The light spell is reversible, causing <i>darkness</i> in the same area and under the same conditions, except the blackness persists for only one half the duration that light would last. If this spell is cast upon a creature, the applicable magic resistance and saving throw dice rolls must be made. Success indicates that the spell affects the area immediately behind the creature, rather than the creature itself. In all other cases, the spell takes effect where the caster directs as long as he or she has a line of sight or unobstructed path for the spell; <i>light</i> can spring from air, rock, metal, wood, or almost any similar substance."
     ),
     Spell('Magic Stone','C',1,
         cast=tp(1,R),
@@ -197,33 +216,33 @@ cleric_spells = [
         duration=tp(0,R),
         duration_lvl=tp(3,R),
         sourcebook=V,
-        desc="When this spell is cast, it acts as if it were a magical armour upon the recipient. The protection encircles the recipient at a one foot distance, thus preventing bodily contact by creatures of an enchanted or conjured nature such as aerial servants, demons, devils, djinn, efreet, elementals, imps, invisible stalkers, night hags, quasits, salamanders, water weirds, wind walkers, and xorn. Summoned animals or monsters are similarly hedged from the protected creature. Furthermore, any and all attacks launched by evil creatures incur a penalty of -2 from dice rolls \"to hit\" the protected creature, and any saving throws caused by such attacks are made at +2 on the protected creature's dice. This spell can be reversed to become Protection From Good, although it still keeps out enchanted evil creatures as well. To complete this spell, the cleric must truce a 3' diameter circle upon the floor (or ground) with holy water for Protection From Evil, with blood for Protection From Good - or in the air using burning incense or smouldering dung with respect to evil/good."
+        desc="When this spell is cast, it acts as if it were a magical armor upon the recipient. The protection encircles the recipient at a one foot distance, thus preventing bodily contact by creatures of an enchanted or conjured nature such as aerial servants, demons, devils, djinn, efreet, elementals, imps, invisible stalkers, night hags, quasits, salamanders, water weirds, wind walkers, and xorn. Summoned animals or monsters are similarly hedged from the protected creature. Furthermore, any and all attacks launched by evil creatures incur a penalty of -2 from dice rolls \"to hit\" the protected creature, and any saving throws caused by such attacks are made at +2 on the protected creature's dice. This spell can be reversed to become <i>protection from good</i>, although it still keeps out enchanted evil creatures as well. To complete this spell, the cleric must trace a 3' diameter circle upon the floor (or ground) with holy water for protection from evil, with blood for protection from good — or in the air using burning incense or smouldering dung with respect to evil/good."
     ),
     Spell('Purify Food & Drink','C',1,
         cast=tp(1,R),
         duration=tp(1,P),
         sourcebook=V,
-        desc="When cast, the spell will make spoiled, rotten, poisonous or otherwise contaminated food and/or water pure and suitable for eating and/or drinking. Up to 1 cubic foot of food and/or drink can be thus made suitable for consumption. The reverse of the spell putrefies food and drink, even spoiling holy water. Unholy water is spoiled by pure water."
+        desc="When cast, the spell will make spoiled, rotten, poisonous or otherwise contaminated food and/or water pure and suitable for eating and/or drinking. Up to 1 cubic foot of food and/or drink can be thus made suitable for consumption. The reverse of the spell <i>putrefies food and drink</i>, even spoiling holy water. Unholy water is spoiled by <i>purify water</i>."
     ),
     Spell('Remove Fear','C',1,
         cast=tp(4,S),
         duration=tp(0),
         sourcebook=V,
-        desc="By touch, the cleric instils courage in the spell recipient, raising the creature's saving throw against magical fear attacks by +4 on dice rolls for 1 turn. If the recipient has already been affected by fear, and failed the appropriate saving throw, the touch allows another saving throw to be made, with a bonus of +1 on the dice for every level of experience of the caster, i.e. a 2nd level cleric gives a +2 bonus, a 3rd level +3, etc. A \"to hit\" dice roll must be made to touch an unwilling recipient. The reverse of the spell, Cause Fear, causes the victim to flee in panic at maximum movement speed away from the caster for 1 round per level of the cleric causing such fear. Of course, Cause Fear can be countered by Remove Fear and vice versa."
+        desc="By touch, the cleric instils courage in the spell recipient, raising the creature's saving throw against magical <i>fear</i> attacks by +4 on dice rolls for 1 turn. If the recipient has already been affected by fear, and failed the appropriate saving throw, the touch allows another saving throw to be made, with a bonus of +1 on the dice for every level of experience of the caster, i.e. a 2nd level cleric gives a +2 bonus, a 3rd level +3, etc. A \"to hit\" dice roll must be made to touch an unwilling recipient. The reverse of the spell, <i>cause fear</i>, causes the victim to flee in panic at maximum movement speed away from the caster for 1 round per level of the cleric causing such fear. Of course, <i>cause fear</i> can be countered by <i>remove fear</i> and vice versa."
     ),
     Spell('Resist Cold','C',1,
         cast=tp(1,R),
         duration=tp(0),
         duration_lvl=tp(1,T),
         sourcebook=V,
-        desc="When this spell is placed on a creature by a cleric, the creature's body is inured to cold. The recipient can stand zero degrees Fahrenheit without discomfort, even totally nude. Greater cold, such as that produced by a sword of cold, ice storm, cold wand, or white dragon's breath, must be saved against. All saving throws against cold are made with a bonus of +3, and damage sustained is one-half (if the saving throw is not made) or one-quarter (if the saving throw is made) of damage normal from that attack form. The resistance lasts for 1 turn per level of experience of the caster. A pinch of sulphur is necessary to complete this spell."
+        desc="When this spell is placed on a creature by a cleric, the creature's body is inured to cold. The recipient can stand zero degrees Fahrenheit without discomfort, even totally nude. Greater cold, such as that produced by a sword of cold, <a href=\"/spells/ice-storm-magic-user-lvl-4/\"><i>ice storm</i></a>, cold wand, or white dragon's breath, must be saved against. All saving throws against cold are made with a bonus of +3, and damage sustained is one-half (if the saving throw is not made) or one-quarter (if the saving throw is made) of damage normal from that attack form. The resistance lasts for 1 turn per level of experience of the caster. A pinch of sulphur is necessary to complete this spell."
     ),
     Spell('Sanctuary','C',1,
         cast=tp(4,S),
         duration=tp(2,R),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="When the cleric casts a Sanctuary spell, any opponent must make a saving throw versus magic in order to strike or otherwise attack him or her. If the saving throw is not made, the creature will attack another and totally ignore the cleric protected by the spell. If the saving throw is made, the cleric is subject to normal attack process including dicing for weapons to hit, saving throws, damage. Note that this spell does not prevent the operation of area attacks (Fireball, Ice Storm, etc.). During the period of protection afforded by this spell, the cleric cannot take offensive action, but he or she may use non-attack spells or otherwise act in any way which does not violate the prohibition against offensive action, This allows the cleric to heal wounds, for example, or to bless, perform an augury, chant, cast a light in the area (not upon on opponent!), and so on, The components of the spell include the cleric's holy/unholy symbol and a small silver mirror."
+        desc="When the cleric casts a <i>sanctuary</i> spell, any opponent must make a saving throw versus magic in order to strike or otherwise attack him or her. If the saving throw is not made, the creature will attack another and totally ignore the cleric protected by the spell. If the saving throw is made, the cleric is subject to normal attack process including dicing for weapons to hit, saving throws, damage. Note that this spell does not prevent the operation of area attacks (<a href=\"/spells/fireball-magic-user-lvl-3/\"><i>fireball</i></a>, <a href=\"/spells/ice-storm-magic-user-lvl-4/\"><i>ice storm</i></a>, etc.). During the period of protection afforded by this spell, the cleric cannot take offensive action, but he or she may use non-attack spells or otherwise act in any way which does not violate the prohibition against offensive action, This allows the cleric to heal wounds, for example, or to <a href=\"/spells/bless-cleric-lvl-1\"><i>bless</i></a>, perform an <a href=\"/spells/augury-cleric-lvl-2/\"><i>augury</i></a>, <a href=\"/spells/chant-cleric-lvl-2/\"><i>chant</i></a>, cast a <a href=\"/spells/light-cleric-lvl-1\"><i>light</i></a> in the area (not upon on opponent!), and so on, The components of the spell include the cleric's holy/unholy symbol and a small silver mirror."
     ),
     Spell('Aid','C',2,
         cast=tp(4,S),
@@ -236,19 +255,19 @@ cleric_spells = [
         cast=tp(2,R),
         duration=tp(0),
         sourcebook=V,
-        desc="The cleric casting an Augury spell seeks to divine whether an action in the immediate future (within 3 turns) will be for the benefit of, or harmful to, the party. The base chance for correctly divining the augury is 70%, plus 1% far each level of the cleric casting the spell, i.e. 71% at 1st level, 72% at 2nd, etc, Your referee will determine any adjustments due far the particular conditions of each augury. For example, assume that a party is considering the destruction of a weird seal which closes a portal. Augury is used to find if weal or woe will be the ultimate result to the party. The material component for Augury is a set of gem-inlaid sticks, dragon bones, or similar tokens, or the wet leaves of on infusion which remain in the container after the infused brew is consumed. If the last method is used, a crushed pearl of at least 100 g.p. value must be added to the concoction before it is consumed."
+        desc="The cleric casting an <i>augury</i> spell seeks to divine whether an action in the immediate future (within 3 turns) will be for the benefit of, or harmful to, the party. The base chance for correctly divining the <i>augury</i> is 70%, plus 1% for each level of the cleric casting the spell, i.e. 71% at 1st level, 72% at 2nd, etc. Your referee will determine any adjustments due for the particular conditions of each <i>augury</i>. For example, assume that a party is considering the destruction of a weird seal which closes a portal. <i>Augury</i> is used to find if weal or woe will be the ultimate result to the party. The material component for <i>augury</i> is a set of gem-inlaid sticks, dragon bones, or similar tokens, or the wet leaves of an infusion which remain in the container after the infused brew is consumed. If the last method is used, a crushed pearl of at least 100 g.p. value must be added to the concoction before it is consumed."
     ),
     Spell('Chant','C',2,
         cast=tp(1,T),
         duration=tp(0),
         sourcebook=V,
-        desc="By means of the chant, the cleric brings into being a special favour upon himself or herself and his or her party, and causes harm to his or her enemies. Once the Chant spell is completed, all attacks, damage and saving throws made by those in the area of effect who are friendly to the cleric are at +1, while those of the cleric's enemies are at -1. This bonus/penalty continues as long as the cleric continues to chant the mystic syllables and is stationary. An interruption, however, such as an attack which succeeds and causes damage, grappling the chanter, or a magical silence, will break the spell."
+        desc="By means of the <i>chant</i>, the cleric brings into being a special favour upon himself or herself and his or her party, and causes harm to his or her enemies. Once the <i>chant</i> spell is completed, all attacks, damage and saving throws made by those in the area of effect who are friendly to the cleric are at +1, while those of the cleric's enemies are at -1. This bonus/penalty continues as long as the cleric continues to chant the mystic syllables and is stationary. An interruption, however, such as an attack which succeeds and causes damage, grappling the chanter, or a magical <a href=\"/spells/silence-15-radius-cleric-lvl-2/\"><i>silence</i></a>, will break the spell."
     ),
     Spell('Detect Charm','C',2,
         cast=tp(1,R),
         duration=tp(1,T),
         sourcebook=V,
-        desc="When used by a cleric, this spell will detect whether or not a person or monster is under the influence of a Charm spell. Up to 10 creatures can be thus checked before the spell wanes. The reverse of the spell protects from such detection, but only a single creature can be so shielded."
+        desc="When used by a cleric, this spell will detect whether or not a person or monster is under the influence of a <i>charm</i> spell. Up to 10 creatures can be thus checked before the spell wanes. The reverse of the spell protects from such detection, but only a single creature can be so shielded."
     ),
     Spell('Detect Life','C',2,
         cast=tp(1,R),
@@ -272,14 +291,14 @@ cleric_spells = [
         cast=tp(5,S),
         duration=tp(3,T),
         sourcebook=V,
-        desc="When a cleric casts a find traps spell, all traps - concealed normally or magically - of magical or mechanical nature become visible to him or her. Note that this spell is directional. and the caster must face the desired direction in order to determine if a trap is laid in that particular direction."
+        desc="When a cleric casts a <i>find traps</i> spell, all traps — concealed normally or magically — of magical or mechanical <i>nature</i> become visible to him or her. Note that this spell is directional. and the caster must face the desired direction in order to determine if a trap is laid in that particular direction."
     ),
     Spell('Hold Person','C',2,
         cast=tp(5,S),
         duration=tp(4,R),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="This spell holds immobile, and freezes in places, from 1-3 humans or humanoid creatures (see below) for 5 or more melee rounds. The level of the cleric casting the Hold Person spell dictates the length of time the effect will last. The basic duration is 5 melee rounds at 1st level, 6 rounds at 2nd level, 7 rounds at 3rd level, etc. If the spell is cast at three persons, each gets a saving throw at the normal score; if only two persons are being enspelled, each makes their saving throw at -1 on their die; if the spell is cast at but one person, the saving throw die is at -2. Persons making their saving throws are totally unaffected by the spell. Creatures affected by a Hold Person spell are: brownies, dryads, dwarves, elves, gnolls, gnomes, goblins, half-elves, halflings, half-orcs, hobgoblins, humans, kobolds, lizard men, nixies, orcs, pixies, sprites, and troglodytes. The spell caster needs a small, straight piece of iron as the material component of this spell."
+        desc="This spell holds immobile, and freezes in places, from 1-3 humans or humanoid creatures (see below) for 5 or more melee rounds. The level of the cleric casting the <i>hold person</i> spell dictates the length of time the effect will last. The basic duration is 5 melee rounds at 1st level, 6 rounds at 2nd level, 7 rounds at 3rd level, etc. If the spell is cast at three persons, each gets a saving throw at the normal score; if only two persons are being enspelled, each makes their saving throw at -1 on their die; if the spell is cast at but one person, the saving throw die is at -2. Persons making their saving throws are totally unaffected by the spell. Creatures affected by a <i>hold person</i> spell are: brownies, dryads, dwarves, elves, gnolls, gnomes, goblins, half-elves, halflings, half-orcs, hobgoblins, humans, kobolds, lizard men, nixies, orcs, pixies, sprites, and troglodytes. The spell caster needs a small, straight piece of iron as the material component of this spell."
     ),
     Spell('Holy Symbol','C',2,
         cast=tp(1,T),
@@ -291,7 +310,7 @@ cleric_spells = [
         cast=tp(1,R),
         duration=tp(1,T),
         sourcebook=V,
-        desc="A Know Alignment spell enables the cleric to exactly read the aura of a person - human, semi-human, or non-human. This will reveal the exact alignment of the person. Up to 10 persons can be examined with this spell. The reverse totally obscures alignment, even from this spell, of a single person for 1 turn, two persons for 5 rounds, etc. Certain magical devices will negate the ability to Know Alignment."
+        desc="A <i>know alignment</i> spell enables the cleric to exactly read the aura of a person — human, semi-human, or non-human. This will reveal the exact alignment of the person. Up to 10 persons can be examined with this spell. The reverse totally obscures alignment, even from this spell, of a single person for 1 turn, two persons for 5 rounds, etc. Certain magical devices will negate the ability to <i>know alignment</i>."
     ),
     Spell('Messenger','C',2,
         cast=tp(1,R),
@@ -304,40 +323,40 @@ cleric_spells = [
         duration=tp(0),
         duration_lvl=tp(1,T),
         sourcebook=V,
-        desc="When this spell is placed upon a creature by a cleric, the creature's body is toughened to withstand heat, and boiling temperature is comfortable. The recipient of the resist tire spell can even stand in the midst of very hot or magical fires such as those produced by red-hot charcoal, a large amount of burning oil, flaming swords, fire storms, fire balls, meteor swarms. or red dragon's breath - but these will affect the creature, to some extent. The recipient of the spell gains a bonus of +3 an saving throws against such attack forms, and all damage sustained is reduced by 50%; therefore, if the saving throw is not made, the creature sustains one-half damage, and if the saving throw is mode only one-quarter damage is sustained, Resistance to fire lasts for 1 turn for each level of experience of the cleric placing the spell. The caster needs a drop of mercury as the material component of this spell."
+        desc="When this spell is placed upon a creature by a cleric, the creature's body is toughened to withstand heat, and boiling temperature is comfortable. The recipient of the <i>resist fire</i> spell can even stand in the midst of very hot or magical fires such as those produced by red-hot charcoal, a large amount of burning oil, flaming swords, <a href=\"/spells/fire-storm-druid-lvl-7/\"><i>fire storms</i></a>, <a href=\"/spells/fireball-magic-user-lvl-3/\"><i>fire balls</i></a>, <a href=\"/spells/meteor-swarm-magic-user-lvl-9/\"><i>meteor swarms</i></a>. or red dragon's breath — but these will affect the creature, to some extent. The recipient of the spell gains a bonus of +3 on saving throws against such attack forms, and all damage sustained is reduced by 50%; therefore, if the saving throw is not made, the creature sustains one-half damage, and if the saving throw is made only one-quarter damage is sustained. Resistance to fire lasts for 1 turn for each level of experience of the cleric placing the spell. The caster needs a drop of mercury as the material component of this spell."
     ),
     Spell('Silence 15\' Radius','C',2,
         cast=tp(5,S),
         duration=tp(0),
         duration_lvl=tp(2,R),
         sourcebook=V,
-        desc="Upon casting this spell, complete silence prevails in the area of its effect. All sound is stopped, so all conversation is impossible, spells cannot be cast and no noise whatsoever issues forth, The spell can be cast into the air or upon an object. The spell of Silence lasts for 2 rounds for each level of experience of the cleric, i.e. 2 rounds at 1st level, 4 at 2nd, 6 at 3rd, 8 at 4th and so forth. The spell can be cast upon a creature, and the effect will then radiate from the creature and move as it moves. If the creature is unwilling, it saves against the spell, and if the saving throw is made, the spell effect locates about one foot behind the target creature."
+        desc="Upon casting this spell, complete silence prevails in the area of its effect. All sound is stopped, so all conversation is impossible, spells cannot be cast and no noise whatsoever issues forth. The spell can be cast into the air or upon an object. The spell of <i>silence</i> lasts for 2 rounds for each level of experience of the cleric, i.e. 2 rounds at 1st level, 4 at 2nd, 6 at 3rd, 8 at 4th and so forth. The spell can be cast upon a creature, and the effect will then radiate from the creature and move as it moves. If the creature is unwilling, it saves against the spell, and if the saving throw is made, the spell effect locates about one foot behind the target creature."
     ),
     Spell('Slow Poison','C',2,
         cast=tp(1,S),
         duration=tp(0),
         duration_lvl=tp(6,T),
         sourcebook=V,
-        desc="When this spell is placed upon a poisoned individual it greatly slows the effects of any venom, even causing a supposedly dead individual to have life restored if it is cast upon the victim within a number of turns less than or equal to the level of experience of the cleric after the poisoning was suffered. i.e. a victim poisoned up to 10 turns previously could be temporarily saved by a 10th or higher level cleric who cast Slow Poison upon the victim. While this spell does not neutralize the venom, it does prevent it from substantially harming the individual for the duration of its magic, but each turn the poisoned creature will lose 1 hit point from the effect of the venom (although the victim will never go below 1 hit point while the Slow Poison spell's duration lasts). Thus, in the example above, the victim poisoned 10 turns previously has only 10 hit points, so when the 10th level cleric casts the spell, the victim remains with 1 hit point until the spell duration expires, and hopefully during that period a full cure can be accomplished. The material components of this spell are the cleric's holy/unholy symbol and a bud of garlic which must be crushed and smeared on the victim's bare feet."
+        desc="When this spell is placed upon a poisoned individual it greatly slows the effects of any venom, even causing a supposedly dead individual to have life restored if it is cast upon the victim within a number of turns less than or equal to the level of experience of the cleric after the poisoning was suffered, i.e. a victim poisoned up to 10 turns previously could be temporarily saved by a 10th or higher level cleric who cast <i>slow poison</i> upon the victim. While this spell does not neutralize the venom, it does prevent it from substantially harming the individual for the duration of its magic, but each turn the poisoned creature will lose 1 hit point from the effect of the venom (although the victim will never go below 1 hit point while the <i>slow poison</i> spell's duration lasts). Thus, in the example above, the victim poisoned 10 turns previously has only 10 hit points, so when the 10th level cleric casts the spell, the victim remains with 1 hit point until the spell duration expires, and hopefully during that period a full cure can be accomplished. The material components of this spell are the cleric's holy/unholy symbol and a bud of garlic which must be crushed and smeared on the victim's bare feet."
     ),
     Spell('Snake Charm','C',2,
         cast=tp(5,S),
         duration=tp(1,VA),
         sourcebook=V,
-        desc="When this spell is cast, a hypnotic pattern is set up which causes one or more snakes to cease all activity except a semi-erect postured swaying movement. If the snakes are charmed while in a torpor, the duration of the spell is 3 to 6 turns (d4 + 2); if the snakes are not torpid, but are not aroused and angry, the charm lasts 1 to 3 turns; if the snakes are angry and/or attacking, the snake charm spell will last from 5 to 8 melee rounds (d4+4). The cleric casting the spell can charm snakes whose hit points are less than or equal to those of the cleric. On the average, a 1st level cleric could charm snakes with a total of 4 or 5 hit points; a 2nd level cleric 9 hit points, a 3rd level 13 or 14 hit points, etc. The hit points can represent a single snake or several of the reptiles, but the total hit points cannot exceed those of the cleric casting the spell."
+        desc="When this spell is cast, a hypnotic pattern is set up which causes one or more snakes to cease all activity except a semi-erect postured swaying movement. If the snakes are charmed while in a torpor, the duration of the spell is 3 to 6 turns (d4 + 2); if the snakes are not torpid, but are not aroused and angry, the charm lasts 1 to 3 turns; if the snakes are angry and/or attacking, the <i>snake charm</i> spell will last from 5 to 8 melee rounds (d4+4). The cleric casting the spell can charm snakes whose hit points are less than or equal to those of the cleric. On the average, a 1st level cleric could charm snakes with a total of 4 or 5 hit points; a 2nd level cleric 9 hit points, a 3rd level 13 or 14 hit points, etc. The hit points can represent a single snake or several of the reptiles, but the total hit points cannot exceed those of the cleric casting the spell."
     ),
     Spell('Speak With Animals','C',2,
         cast=tp(5,S),
         duration=tp(0),
         duration_lvl=tp(2,R),
         sourcebook=V,
-        desc="By employing this spell, the cleric is empowered to comprehend and communicate with any warm or cold-blooded animal which is not mindless (such as an amoeba). The cleric is able to ask questions, receive answers, and generally be on amicable terms with the animal. This ability lasts for 2 melee rounds for each level of experience of the cleric employing the spell. Even if the bent of the animal is opposite to that of the cleric (evil/good, good/evil), it and any others of the same kind with it will not attack while the spell lasts. If the animal is neutral or of the some general bent as the cleric (evil/evil, good/good), there is a possibility that the animal, and its like associates, will do some favour or service for the cleric. This possibility will be determined by the referee by consulting a special reaction chart, using the charisma of the cleric and his actions as the major determinants. Note that this spell differs from speak with monsters (q.v.), for it allows conversation only with basically normal, non-fantastic creatures such as apes, bears, cats, dogs, elephants, and so on."
+        desc="By employing this spell, the cleric is empowered to comprehend and communicate with any warm or cold-blooded animal which is not mindless (such as an amoeba). The cleric is able to ask questions, receive answers, and generally be on amicable terms with the animal. This ability lasts for 2 melee rounds for each level of experience of the cleric employing the spell. Even if the bent of the animal is opposite to that of the cleric (evil/good, good/evil), it and any others of the same kind with it will not attack while the spell lasts. If the animal is neutral or of the some general bent as the cleric (evil/evil, good/good), there is a possibility that the animal, and its like associates, will do some favour or service for the cleric. This possibility will be determined by the referee by consulting a special reaction chart, using the charisma of the cleric and his actions as the major determinants. Note that this spell differs from <a href=\"/spells/speak-with-monsters-cleric-lvl-6/\"><i>speak with monsters</i></a>, for it allows conversation only with basically normal, non-fantastic creatures such as apes, bears, cats, dogs, elephants, and so on."
     ),
     Spell('Spiritual Hammer','C',2,
         cast=tp(5,S),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="By calling upon his or her deity, the cleric casting a Spiritual Hammer spell brings into existence a field of force which is shaped vaguely like a hammer. This area of force is hammer-sized, and as long as the cleric who invoked it concentrates upon the hammer, it will strike at any opponent within its range as desired by the cleric. The force area strikes as a magical weapon equal to one plus per 3 levels of experience of the spell caster for purposes of being able to strike creatures, although it has no magical plusses whatsoever \"to hit\", and the damage it causes when it scores a hit is exactly the same as a normal war hammer, i.e. 1-6 versus opponents of man-sire or smaller, 1-4 upon larger opponents. Furthermore, the hammer strikes at exactly the same level as the cleric controlling it, just as if the cleric was personally wielding the weapon. As soon as the cleric ceases concentration, the Spiritual Hammer is dispelled. Note: If the cleric is behind an opponent, the force can strike from this position, thus gaining all bonuses for such an attack and negating defensive protections such as shield and dexterity. The material component of this spell is a normal war hammer which the cleric must hurl towards opponents whilst uttering a plea to his or her deity. The hammer disappears when the spell is cast."
+        desc="By calling upon his or her deity, the cleric casting a <i>spiritual hammer</i> spell brings into existence a field of force which is shaped vaguely like a hammer. This area of force is hammer-sized, and as long as the cleric who invoked it concentrates upon the <i>hammer</i>, it will strike at any opponent within its range as desired by the cleric. The force area strikes as a magical weapon equal to one plus per 3 levels of experience of the spell caster for purposes of being able to strike creatures, although it has no magical plusses whatsoever \"to hit\", and the damage it causes when it scores a hit is exactly the same as a normal war hammer, i.e. 1-6 versus opponents of man-size or smaller, 1-4 upon larger opponents. Furthermore, the hammer strikes at exactly the same level as the cleric controlling it, just as if the cleric was personally wielding the weapon. As soon as the cleric ceases concentration, the <i>spiritual hammer</i> is dispelled. <i>Note:</i> If the cleric is behind an opponent, the force can strike from this position, thus gaining all bonuses for such an attack and negating defensive protections such as shield and dexterity. The material component of this spell is a normal war hammer which the cleric must hurl towards opponents whilst uttering a plea to his or her deity. The hammer disappears when the spell is cast."
     ),
     Spell('Withdraw','C',2,
         cast=tp(3,S),
@@ -355,7 +374,7 @@ cleric_spells = [
         cast=tp(1,R),
         duration=tp(1,P),
         sourcebook=V,
-        desc="This spell creates the lowest of the undead monsters, skeletons or zombies, from the bones or bodies of dead humans. The effect is to cause these remains to become animated and obey the commands of the cleric casting the spell. The skeletons or zombies will follow, remain in an area and attack any creature (or just a specific type of creature) entering the place, etc. The spell will animate the monsters until they are destroyed or until the magic is dispelled. (See Dispel Magic spell). The cleric is able to animate 1 skeleton or 1 zombie for each level of experience he or she has attained. Thus, a 2nd level cleric can animate 2 of these monsters, a 3rd level 3, etc. The act of animating dead is not basically a good one, and it must be used with careful consideration and good reason by clerics of good alignment. It requires a drop of blood, a piece of human flesh, and a pinch of bone powder or a bone shard to complete the spell."
+        desc="This spell creates the lowest of the <i>undead</i> monsters, skeletons or zombies, from the bones or bodies of dead humans. The effect is to cause these remains to become animated and obey the commands of the cleric casting the spell. The skeletons or zombies will follow, remain in an area and attack any creature (or just a specific type of creature) entering the place, etc. The spell will animate the monsters until they are destroyed or until the magic is dispelled. (See <a href=\"/spells/dispel-magic-cleric-lvl-3/\"><i>dispel magic</i></a> spell). The cleric is able to animate 1 skeleton or 1 zombie for each level of experience he or she has attained. Thus, a 2nd level cleric can animate 2 of these monsters, a 3rd level 3, etc. The act of animating dead is not basically a good one, and it must be used with careful consideration and good reason by clerics of good alignment. It requires a drop of blood, a piece of human flesh, and a pinch of bone powder or a bone shard to complete the spell."
     ),
     Spell('Cloudburst','C',3,
         cast=tp(5,S),
@@ -366,7 +385,7 @@ cleric_spells = [
         cast=tp(6,S),
         duration=tp(1,P),
         sourcebook=V,
-        desc="This spell is similar to a Light spell, except that it lasts until negated (by a Continual Darkness or Dispel Magic spell) and its brightness is very great, being nearly as illuminating as full daylight. It can be cast into air, onto an object, or at a creature, In the third case, the Continual Light affects the space about one foot behind the creature if the latter makes its saving throw. Note that this spell will blind a creature if it is successfully cast upon the visual organs, for example. Its reverse causes complete absence of light."
+        desc="This spell is similar to a <a href=\"/spells/light-cleric-lvl-1/\"><i>light</i></a> spell, except that it lasts until negated (by a <i>continual darkness</i> or <a href=\"/spells/dispel-magic-cleric-lvl-3/\"><i>dispel magic</i></a> spell) and its brightness is very great, being nearly as illuminating as full daylight. It can be cast into air, onto an object, or at a creature, In the third case, the <i>continual light</i> affects the space about one foot behind the creature if the latter makes its saving throw. Note that this spell will blind a creature if it is successfully cast upon the visual organs, for example. Its reverse causes complete absence of light."
     ),
     Spell('Create Food & Water','C',3,
         cast=tp(1,T),
@@ -378,13 +397,13 @@ cleric_spells = [
         cast=tp(1,R),
         duration=tp(1,P),
         sourcebook=V,
-        desc="By touching the creature afflicted, the cleric employing the spell can permanently cure most forms of blindness. Its reverse, Cause Blindness, requires a successful touch upon the victim, and if the victim then makes the saving throw, the effect is negated."
+        desc="By touching the creature afflicted, the cleric employing the spell can permanently cure most forms of blindness. Its reverse, <i>cause blindness</i>, requires a successful touch upon the victim, and if the victim then makes the saving throw, the effect is negated."
     ),
     Spell('Cure Disease','C',3,
         cast=tp(1,T),
         duration=tp(1,P),
         sourcebook=V,
-        desc="The cleric cures most diseases - including those of a parasitic, bacterial, or viral nature - by placing his or her hand upon the diseased creature. The affliction rapidly disappears thereafter, making the cured creature whole and well in from 1 turn to 1 week, depending on the kind of disease and the state of its advancement when the cure took place. The reverse of the Cure Disease spell is Cause Disease. To be effective. the cleric must touch the intended victim, and the victim must fail the saving throw. The disease caused will begin to affect the victim in 16 turns, causing the afflicted creature to lose 1 hit point per turn, and 1 point of strength per hour, until the creature is at 10% of original hit points and strength, at which time the afflicted is weak and virtually helpless."
+        desc="The cleric cures most diseases — including those of a parasitic, bacterial, or viral nature — by placing his or her hand upon the diseased creature. The affliction rapidly disappears thereafter, making the cured creature whole and well in from 1 turn to 1 week, depending on the kind of disease and the state of its advancement when the cure took place. The reverse of the <i>cure disease</i> spell is <i>cause disease</i>. To be effective. the cleric must touch the intended victim, and the victim must fail the saving throw. The disease caused will begin to affect the victim in 1-6 turns, causing the afflicted creature to lose 1 hit point per turn, and 1 point of strength per hour, until the creature is at 10% of original hit points and strength, at which time the afflicted is weak and virtually helpless."
     ),
     Spell('Death\'s Door','C',3,
         cast=tp(5,S),
@@ -396,14 +415,14 @@ cleric_spells = [
         cast=tp(6,S),
         duration=tp(1,P),
         sourcebook=V,
-        desc="When a cleric casts this spell, it neutralizes or negates the magic it comes in contact with as follows: A Dispel Magic will not affect a specially enchanted item such as a scroll, magic ring, wand, rod, staff, miscellaneous magic item, magic weapon, magic shield, or magic armour. It will destroy magic potions (they are treated as 12th level for purposes of this spell), remove spells cast upon persons or objects, or counter the casting of spells in the area of effect. The base chance for success of a Dispel Magic spell is 50%. For every level of experience of the character casting the Dispel Magic above that of the creature whose magic is to be dispelled (or above the efficiency level of the object from which the magic is issuing), the base chance increases by 5%, so that if there are 10 levels of difference, there is a 100% chance. For every level below the experience/efficiency level of the creature/object, the base chance is reduced by 2%. Note that this spell can be very effective when used upon charmed and similarly beguiled creatures. It is automatic in negating the spell caster's own magic."
+        desc="When a cleric casts this spell, it neutralizes or negates the magic it comes in contact with as follows: A <i>dispel magic</i> will not affect a specially enchanted item such as a scroll, magic ring, wand, rod, staff, miscellaneous magic item, magic weapon, magic shield, or magic armor. It will destroy magic potions (they are treated as 12th level for purposes of this spell), remove spells cast upon persons or objects, or counter the casting of spells in the area of effect. The base chance for success of a <i>dispel magic</i> spell is 50%. For every level of experience of the character casting the <i>dispel magic</i> above that of the creature whose magic is to be dispelled (or above the efficiency level of the object from which the magic is issuing), the base chance increases by 5%, so that if there are 10 levels of difference, there is a 100% chance. For every level below the experience/efficiency level of the creature/object, the base chance is reduced by 2%. Note that this spell can be very effective when used upon <i>charmed</i> and similarly beguiled creatures. It is automatic in negating the spell caster's own magic."
     ),
     Spell('Feign Death','C',3,
         cast=tp(2,S),
         duration=tp(1,T),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="Except as noted above, this spell is the same as the third level magic-user spell, Feign Death (q.v.). Note that a character of any level may be affected by the cleric casting this spell, and that the material components are a pinch of graveyard dirt and the cleric's holy/unholy symbol."
+        desc="Except as noted above, this spell is the same as the third level magic-user spell, <a href=\"/spells/feign-death-magic-user-lvl-3/\"><i>feign death</i></a>. Note that a character of any level may be affected by the cleric casting this spell, and that the material components are a pinch of graveyard dirt and the cleric's holy/unholy symbol."
     ),
     Spell('Flame Walk','C',3,
         cast=tp(5,S),
@@ -416,14 +435,14 @@ cleric_spells = [
         cast=tp(1,VA),
         duration=tp(1,P),
         sourcebook=V,
-        desc="A Glyph of Warding is a powerful inscription magically drawn to prevent unauthorized or hostile creatures from passing, entering, or opening. It can be used to guard a small bridge, ward an entry, or as a trap on a chest or box. When the spell is cast, the cleric weaves a tracery of faintly glowing lines around the warding sigil. For every square foot of area to be protected, 1 segment of time is required to trace the warding lines from the glyph, plus the initial segment during which the sigil itself is traced. A maximum of a 5' X 5' area per level can be warded. When the spell is completed, the glyph and tracery become invisible, but any creature touching the protected area without first speaking the name of the glyph the cleric has used to serve as a ward will be subject to the magic it stores. Saving throws apply, and will either reduce effects by one-half or negate them according to the glyph employed. The cleric must use incense to trace this spell, and then sprinkle the area with powdered diamond (at least 2,000 g.p. worth) if it exceeds 50 square feet. Typical glyphs shock for 2 points of electrical damage per level of the spell caster, explode for a like amount of fire damage, paralyze, blind, or even drain a life energy level (if the cleric is of high enough level to cast this glyph)."
+        desc="A <i>glyph of warding</i> is a powerful inscription magically drawn to prevent unauthorized or hostile creatures from passing, entering, or opening. It can be used to guard a small bridge, ward an entry, or as a trap on a chest or box. When the spell is cast, the cleric weaves a tracery of faintly glowing lines around the warding sigil. For every square foot of area to be protected, 1 segment of time is required to trace the warding lines from the glyph, plus the initial segment during which the sigil itself is traced. A maximum of a 5' X 5' area per level can be warded. When the spell is completed, the glyph and tracery become invisible, but any creature touching the protected area without first speaking the name of the glyph the cleric has used to serve as a ward will be subject to the magic it stores. Saving throws apply, and will either reduce effects by one-half or negate them according to the glyph employed. The cleric must use incense to trace this spell, and then sprinkle the area with powdered diamond (at least 2,000 g.p. worth) if it exceeds 50 square feet. Typical glyphs shock for 2 points of electrical damage per level of the spell caster, explode for a like amount of fire damage, paralyze, blind, or even drain a life energy level (if the cleric is of high enough level to cast this glyph)."
     ),
     Spell('Locate Object','C',3,
         cast=tp(1,T),
         duration=tp(0),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="This spell aids in location of a known or familiar object. The cleric casts the spell, slowly turns, and knows when he or she is facing in the direction of the object to be located, provided the object is within range, i.e. 7\" for 1st level clerics, 8\" for 2nd, 9\" for 3rd, etc, The casting requires the use of a piece of lodestone, The spell will locate such objects as apparel, jewellery, furniture, tools, weapons, or even a ladder or stairway. By reversal (obscure object), the cleric is able to hide an object from location by spell, crystal ball, or similar means. Neither application of the spell will affect a living creature."
+        desc="This spell aids in location of a known or familiar object. The cleric casts the spell, slowly turns, and knows when he or she is facing in the direction of the object to be located, provided the object is within range, i.e. 7\" for 1st level clerics, 8\" for 2nd, 9\" for 3rd, etc. The casting requires the use of a piece of lodestone. The spell will locate such objects as apparel, jewellery, furniture, tools, weapons, or even a ladder or stairway. By reversal (<i>obscure object</i>), the cleric is able to hide an object from location by spell, crystal ball, or similar means. Neither application of the spell will affect a living creature."
     ),
     Spell('Magical Vestment','C',3,
         cast=tp(1,R),
@@ -448,13 +467,13 @@ cleric_spells = [
         duration=tp(0),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="This spell exactly duplicates the effects of a Chant with regard to bonuses of +1 for friendly attacks and saving throws and -1 on like enemy dice. However, once the Prayer is uttered, the cleric can do other things, unlike a Chant which he or she must continue to make the spell effective. The cleric needs a silver holy symbol, prayer beads, or a similar device as the material component of this spell."
+        desc="This spell exactly duplicates the effects of a <a href=\"/spells/chant-cleric-lvl-2/\"><i>chant</i></a> with regard to bonuses of +1 for friendly attacks and saving throws and -1 on like enemy dice. However, once the <i>prayer</i> is uttered, the cleric can do other things, unlike a <a href=\"/spells/chant-cleric-lvl-2/\"><i>chant</i></a> which he or she must continue to make the spell effective. The cleric needs a silver holy symbol, prayer beads, or a similar device as the material component of this spell."
     ),
     Spell('Remove Curse','C',3,
         cast=tp(6,S),
         duration=tp(1,P),
         sourcebook=V,
-        desc="Upon casting this spell, the cleric is usually able to remove a curse - whether it be on an object, a person, or in the form of some undesired sending or evil presence. Note that the Remove Curse spell will not affect a cursed shield, weapon or suit of armour, for example, although the spell will typically enable the person afflicted with any such cursed item to be rid of it. The reverse of the spell is not permanent; the Bestow Curse lasts for 1 turn for every level of experience of the cleric using the spell. It will lower one ability of the victim to 3 (your DM will determine which by random selection) 50% of the time; reduce the victim's \"to hit\" and saving throw probabilities by -4 25% of the time; or make the victim 50% likely per turn to drop whatever he, she, or it is holding (or simply do nothing in the case of creatures not using tools) 25% of the time. It is possible for a cleric to devise his or her own curse, and it should be similar in power to those shown. Consult your referee. The target of a Bestow Curse spell must be touched. If the victim is touched, a saving throw is still applicable; and if it is successful, the effect is negated."
+        desc="Upon casting this spell, the cleric is usually able to remove a curse — whether it be on an object, a person, or in the form of some undesired sending or evil presence. Note that the <i>remove curse</i> spell will not affect a cursed shield, weapon or suit of armor, for example, although the spell will typically enable the person afflicted with any such cursed item to be rid of it. The reverse of the spell is <i>not</i> permanent; the <i>bestow curse</i> lasts for 1 turn for every level of experience of the cleric using the spell. It will lower one ability of the victim to 3 (your DM will determine which by random selection) 50% of the time; reduce the victim's \"to hit\" and saving throw probabilities by -4 25% of the time; or make the victim 50% likely per turn to drop whatever he, she, or it is holding (or simply do nothing in the case of creatures not using tools) 25% of the time. It is possible for a cleric to devise his or her own curse, and it should be similar in power to those shown. Consult your referee. The target of a <i>bestow curse</i> spell must be touched. If the victim is touched, a saving throw is still applicable; and if it is successful, the effect is negated."
     ),
     Spell('Remove Paralysis','C',3,
         cast=tp(6,S),
@@ -468,7 +487,23 @@ cleric_spells = [
     Spell('Speak With Dead','C',3,
         cast=tp(1,T),
         duration=tp(1,VA),
-        sourcebook=V
+        sourcebook=V,
+        desc=("Upon casting a <i>speak with the dead</i> spell, the cleric is able to ask several questions of a dead creature in a set period of time and receive answers according to the knowledge of that creature. Of course, the cleric must be able to converse in the language which the dead creature once used. The length of time the creature has been dead is a factor, since only higher level clerics can converse with the long-dead. Likewise, the number of questions which can be answered and the length of time in which the questions can be asked are dependent upon the level of experience of the cleric. The cleric needs a holy symbol and burning incense in order to cast this spell upon the body, remains, or portion thereof.\n\n"
+            "<table>"
+            "<tr>"
+            "<th>Level of Experience</th>"
+            "<th>Maximum Length of Time Dead</th>"
+            "<th>Time Questioned</th>"
+            "<th>Number of Questions</th>"
+            "</tr>"
+            "<tr><td>up to 7th</td><td>1 week</td><td>1 round</td><td>2</td></tr>"
+            "<tr><td>7th—8th</td><td>1 month</td><td>3 rounds</td><td>3</td></tr>"
+            "<tr><td>9th—12th</td><td>1 year</td><td>1 turn</td><td>4</td></tr>"
+            "<tr><td>13th—15th</td><td>10 years</td><td>2 turns</td><td>5</td></tr>"
+            "<tr><td>16th—20th</td><td>100 years</td><td>3 turns</td><td>6</td></tr>"
+            "<tr><td>21st and up</td><td>1,000 years</td><td>6 turns</td><td>7</td></tr>"
+            "</table>"
+        )
     ),
     Spell('Water Walk','C',3,
         cast=tp(7,S),
@@ -499,26 +534,26 @@ cleric_spells = [
         cast=tp(7,S),
         duration=tp(1,P),
         sourcebook=V,
-        desc="This spell is a more potent version of the Cure Light Wounds spell (q.v.). Upon laying his or her hand upon a creature, the cleric causes from 3 to 17 (2d8+1) hit points of wound or other injury damage to the creature's body to be healed. This healing will affect only those creatures listed in the Cure Light Wounds spell explanation. Cause Serious Wounds, the reverse of the spell, operates similarly to the Cause Light Wounds spell, the victim having to be touched first, and if the touch is successful, it will inflict 3 to 17 hit points."
+        desc="This spell is a more potent version of the <a href=\"/spells/cure-light-wounds-cleric-lvl-1/\"><i>cure light wounds</i></a> spell. Upon laying his or her hand upon a creature, the cleric causes from 3 to 17 (2d8+1) hit points of wound or other injury damage to the creature's body to be healed. This healing will affect only those creatures listed in the <a href=\"/spells/cure-light-wounds-cleric-lvl-1/\"><i>cure light wounds</i></a> spell explanation. <i>Cause serious wounds</i>, the reverse of the spell, operates similarly to the <a href=\"/spells/cure-light-wounds-cleric-lvl-1/\"><i>cause light wounds</i></a> spell, the victim having to be touched first, and if the touch is successful, it will inflict 3 to 17 hit points."
     ),
     Spell('Detect Lie','C',4,
         cast=tp(7,S),
         duration=tp(0),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="When the cleric employs this spell, the recipient is immediately able to determine if truth is being spoken. The spell lasts one round for each level of experience of the cleric casting the Detect Lie. Gold dust is necessary for this spell. Its reverse, Undetectable Lie, makes bald-face untruths seem reasonable, or simply counters the Detect Lie spell powers. The reverse spell requires brass dust as its material component."
+        desc="When the cleric employs this spell, the recipient is immediately able to determine if truth is being spoken. The spell lasts one round for each level of experience of the cleric casting the <i>detect lie</i>. Gold dust is necessary for this spell. Its reverse, <i>undetectable lie</i>, makes bald-face untruths seem reasonable, or simply counters the <i>detect lie</i> spell powers. The reverse spell requires brass dust as its material component."
     ),
     Spell('Divination','C',4,
         cast=tp(1,T),
         duration=tp(0,R),
         sourcebook=V,
-        desc="Similar to an Augury spell, a Divination spell is used to determine information regarding an area. The area can be a small woods, large building, or section of a dungeon level. In any case, its location must be known. The spell gives information regarding the relative strength of creatures in the area: whether a rich, moderate or poor treasure is there; and the relative chances for incurring the wrath of evil or good supernatural, super powerful beings if the area is invaded and attacked. The base chance for correct divination is 60%, plus 1% for each level of experience of the cleric casting the spell, i.e. 65% at 5th level, 66% at 6th, etc. The Dungeon Master will make adjustments to this base chance considering the facts regarding actual area being divined. If the result is not correct, inaccurate information will be obtained. The material components of the Divination are a sacrificial creature, incense, and the holy symbol of the cleric. If an unusually potent Divination is attempted, sacrifice of particularly valuable gems or jewellery and/or magic items may be required."
+        desc="Similar to an <a href=\"/spells/augury-cleric-lvl-2/\"><i>augury</i></a> spell, a <i>divination</i> spell is used to determine information regarding an area. The area can be a small woods, large building, or section of a dungeon level. In any case, its location must be known. The spell gives information regarding the relative strength of creatures in the area: whether a rich, moderate or poor treasure is there; and the relative chances for incurring the wrath of evil or good supernatural, super powerful beings if the area is invaded and attacked. The base chance for correct <i>divination</i> is 60%, plus 1% for each level of experience of the cleric casting the spell, i.e. 65% at 5th level, 66% at 6th, etc. The Dungeon Master will make adjustments to this base chance considering the facts regarding actual area being divined. If the result is not correct, inaccurate information will be obtained. The material components of the Divination are a sacrificial creature, incense, and the holy symbol of the cleric. If an unusually potent <i>divination</i> is attempted, sacrifice of particularly valuable gems or jewellery and/or magic items may be required."
     ),
     Spell('Exorcise','C',4,
         cast=tp(1,VA),
         duration=tp(1,P),
         sourcebook=V,
-        desc="The spell of Exorcism will negate possession of a creature or an object by any outside or supernatural force. This includes control of a creature by some force in an object, possession by Magic Jar (q.v.) spell, demonic possession, curse and even charm, for the Exorcise spell is similar to a Dispel Magic spell. Furthermore, it will affect a magical item if such is the object of the exorcism. Thus a soul object of any sort which comes under successful Exorcism will make the life force of the creature concerned wholly inhabit its nearest material body, wholly and completely. (Cf. ADVANCED DUNGEONS & DRAGONS, MONSTER MANUAL, Demon.) The Exorcise spell, once begun. cannot be interrupted, or else it is spoiled and useless. The base chance for success is a random 1% to 100%. Each turn of Exorcism the dice are rolled, and if the base chance number, or less, is rolled, the spell is successful. Base chance of success is modified by -1% for each level of difference between the cleric's level of experience and the level of the possessor or possessing magic, where the smaller number is the cleric's level. In the obverse, a +1% cumulative is added. The referee can determine base chance according to the existing circumstances if he or she so desires. Material components for this spell are the holy object of the cleric and holy water (or unholy, in the case of evil clerics, with respect to object and water). A religious artifact or relic can increase the chance of success by from 1% to 50%, according to the power of the artifact or relic."
+        desc="The spell of <i>exorcism</i> will negate possession of a creature or an object by any outside or supernatural force. This includes control of a creature by some force in an object, possession by <a href=\"/spells/magic-jar-magic-user-lvl-5/\"><i>magic jar</i></a> spell, demonic possession, curse and even charm, for the <i>exorcise</i> spell is similar to a <i>dispel magic</i> spell. Furthermore, it will affect a magical item if such is the object of the exorcism. Thus a soul object of any sort which comes under successful exorcism will make the life force of the creature concerned wholly inhabit its nearest material body, wholly and completely. (Cf. ADVANCED DUNGEONS & DRAGONS, MONSTER MANUAL, Demon.) The <i>exorcise</i> spell, once begun, cannot be interrupted, or else it is spoiled and useless. The base chance for success is a random 1% to 100%. Each turn of exorcism the dice are rolled, and if the base chance number, or less, is rolled, the spell is successful. Base chance of success is modified by -1% for each level of difference between the cleric's level of experience and the level of the possessor or possessing magic, where the smaller number is the cleric's level. In the obverse, a +1% cumulative is added. The referee can determine base chance according to the existing circumstances if he or she so desires. Material components for this spell are the holy object of the cleric and holy water (or unholy, in the case of evil clerics, with respect to object and water). A religious artifact or relic can increase the chance of success by from 1% to 50%, according to the power of the artifact or relic."
     ),
     Spell('Giant Insect','C',4,
         cast=tp(1,VA),
@@ -542,27 +577,27 @@ cleric_spells = [
         duration=tp(0),
         duration_lvl=tp(1,T),
         sourcebook=V,
-        desc="The cleric casting a lower water spell causes water or similar fluid in the area of effect to sink away. Lowering is 5% of original effect for every level of experience of the cleric, i.e. 40% at 8th level, 45% at 9th, 50% at 10th, etc. The effect of the spell lasts for 1 turn for each level of experience of the cleric casting it. Likewise, the area of effect increases by level of experience, an 8th level cleric affecting an area of 8\" x 8\", a 9th level an area of 9\" x 9\", and so forth. Material components of this spell are the cleric's religious symbol and a pinch of dust. The reverse of the spell causes the water or similar fluid to return to its normal highest level, plus one foot for every level of experience of the cleric casting it."
+        desc="The cleric casting a <i>lower water</i> spell causes water or similar fluid in the area of effect to sink away. Lowering is 5% of original effect for every level of experience of the cleric, i.e. 40% at 8th level, 45% at 9th, 50% at 10th, etc. The effect of the spell lasts for 1 turn for each level of experience of the cleric casting it. Likewise, the area of effect increases by level of experience, an 8th level cleric affecting an area of 8\" x 8\", a 9th level an area of 9\" x 9\", and so forth. Material components of this spell are the cleric's religious symbol and a pinch of dust. The reverse of the spell causes the water or similar fluid to return to its normal highest level, plus one foot for every level of experience of the cleric casting it."
     ),
     Spell('Neutralize Poison','C',4,
         cast=tp(7,S),
         duration=tp(1,P),
         sourcebook=V,
-        desc="By means of a Neutralize Poison spell, the cleric detoxifies any sort of venom in the creature or substance touched. Note that an opponent, such as a poisonous reptile or snake (or even an envenomed weapon of an opponent) unwilling to be so touched requires the cleric to score a hit in melee combat. Effects of the spell are permanent only with respect to poison existing in the touched creature at the time of the touch, i.e. creatures (or objects) which generate new poison will not be permanently detoxified. The reversed spell, Poison, likewise requires an attack (a \"to hit\" touch which succeeds), and the victim is allowed a saving throw versus poison. If the latter is unsuccessful, the victim is killed by the poison."
+        desc="By means of a <i>neutralize poison</i> spell, the cleric detoxifies any sort of venom in the creature or substance touched. Note that an opponent, such as a poisonous reptile or snake (or even an envenomed weapon of an opponent) unwilling to be so touched requires the cleric to score a hit in melee combat. Effects of the spell are permanent only with respect to poison existing in the touched creature at the time of the touch, i.e. creatures (or objects) which generate new poison will <i>not</i> be permanently detoxified. The reversed spell, <i>poison</i>, likewise requires an attack (a \"to hit\" touch which succeeds), and the victim is allowed a saving throw versus poison. If the latter is unsuccessful, the victim is killed by the poison."
     ),
     Spell('Protection From Evil 10\' Radius','C',4,
         cast=tp(7,S),
         duration=tp(0,R),
         duration_lvl=tp(1,T),
         sourcebook=V,
-        desc="The globe of protection of this spell is identical in all respects to a Protection From Evil (q.v.) spell except that it encompasses a much larger area and the duration of the Protection From Evil, 10' Radius spell is greater. To complete this spell, the cleric must trace a circle 20' in diameter using holy water or blood, incense or smouldering dung as according to the Protection From Evil spell."
+        desc="The globe of protection of this spell is identical in all respects to a <a href=\"/spells/protection-from-evil-cleric-lvl-1/\"><i>protection from evil</i></a> spell except that it encompasses a much larger area and the duration of the <i>protection from evil, 10' radius</i> spell is greater. To complete this spell, the cleric must trace a circle 20' in diameter using holy water or blood, incense or smouldering dung as according to the <a href=\"/spells/protection-from-evil-cleric-lvl-1/\"><i>protection from evil</i></a> spell."
     ),
     Spell('Speak With Plants','C',4,
         cast=tp(1,T),
         duration=tp(0),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="When cast, a Speak With Plants spell enables the cleric to converse, in very rudimentary terms, with all sorts of living vegetables. Thus, the cleric can question plants as to whether or not creatures have passed through them, cause thickets to part to enable easy passage, require vines to entangle pursuers, and similar things. The spell does not enable the cleric to animate non-ambulatory vegetation. The power of the spell lasts for 1 melee round for each level of experience of the cleric who cast it. All vegetation within the area of effect are under command of the spell. The material components for this spell are a drop of water, a pinch of dung, and a flame."
+        desc="When cast, a <i>speak with plants</i> spell enables the cleric to converse, in very rudimentary terms, with all sorts of living vegetables. Thus, the cleric can question plants as to whether or not creatures have passed through them, cause thickets to part to enable easy passage, require vines to entangle pursuers, and similar things. The spell does not enable the cleric to animate non-ambulatory vegetation. The power of the spell lasts for 1 melee round for each level of experience of the cleric who cast it. All vegetation within the area of effect are under command of the spell. The material components for this spell are a drop of water, a pinch of dung, and a flame."
     ),
     Spell('Spell Immunity','C',4,
         cast=tp(1,R),
@@ -582,13 +617,13 @@ cleric_spells = [
         duration=tp(0),
         duration_lvl=tp(2,R),
         sourcebook=V,
-        desc="By means of this spell the cleric is able to change 1 stick to a snake for each level of experience he or she has attained, i.e. a 9th level cleric can change 9 sticks into 9 snakes. These snakes will attack as commanded by the cleric. There must, of course, be sticks or similar pieces of wood (such as torches, spears, etc.) to turn into snakes. Note that magical items such as staves and spears which are enchanted are not affected by the spell. Only sticks within the area of effect will be changed. The probability of a snake thus changed being venomous is 5% per level of experience of the spell caster, so that there is a 55% probability of any given snake created by the spell being poisonous when sticks are turned to snakes by an 11th level cleric, 60% at 12th level, etc. The effect lasts for 2 melee rounds for each level of experience of the spell caster. The material components of the spell are a small piece of bark and several snake scales. The reverse changes snakes to sticks for the duration appropriate, or it negates the Sticks To Snakes spell according to the level of the cleric countering the spell, i.e. a 10th level cleric casting the reverse spell can turn only 10 snakes back to sticks."
+        desc="By means of this spell the cleric is able to change 1 stick to a snake for each level of experience he or she has attained, i.e. a 9th level cleric can change 9 sticks into 9 snakes. These snakes will attack as commanded by the cleric. There must, of course, be sticks or similar pieces of wood (such as torches, spears, etc.) to turn into snakes. Note that magical items such as staves and spears which are enchanted are not affected by the spell. Only sticks within the area of effect will be changed. The probability of a snake thus changed being venomous is 5% per level of experience of the spell caster, so that there is a 55% probability of any given snake created by the spell being poisonous when sticks are turned to snakes by an 11th level cleric, 60% at 12th level, etc. The effect lasts for 2 melee rounds for each level of experience of the spell caster. The material components of the spell are a small piece of bark and several snake scales. The reverse changes <i>snakes to sticks</i> for the duration appropriate, or it negates the <i>sticks to snakes</i> spell according to the level of the cleric countering the spell, i.e. a 10th level cleric casting the reverse spell can turn only 10 snakes back to sticks."
     ),
     Spell('Tongues','C',4,
         cast=tp(7,S),
         duration=tp(1,T),
         sourcebook=V,
-        desc="This spell enables the cleric to speak the language of any creature inside the spell area, whether it is a racial tongue or an alignment language. The reverse of the spell cancels the effect of the Tongues spell or confuses verbal communication of any sort within the area of effect."
+        desc="This spell enables the cleric to speak the language of any creature inside the spell area, whether it is a racial tongue or an alignment language. The reverse of the spell cancels the effect of the <i>tongues</i> spell or confuses verbal communication of any sort within the area of effect."
     ),
     Spell('Air Walk','C',5,
         cast=tp(1,S),
@@ -607,31 +642,31 @@ cleric_spells = [
         cast=tp(1,T),
         duration=tp(1,P),
         sourcebook=V,
-        desc="This spell is used by the cleric to remove the onus of unwilling or unknown deeds from the person who is the subject of the Atonement The spell will remove the effects of magical alignment change as well. The person for whom Atonement is being made must be either truly repentant or not in command of his or her own will so as to be able to be repentant. Your referee will judge this spell in this regard, noting any past instances of its use upon the person. Deliberate misdeeds and acts of knowing and wilful nature cannot be atoned for with this spell. The material components of this spell are the cleric's religious symbol, prayer beads or wheel or book, and burning incense."
+        desc="This spell is used by the cleric to remove the onus of unwilling or unknown deeds from the person who is the subject of the <i>atonement</i>. The spell will remove the effects of magical alignment change as well. The person for whom <i>atonement</i> is being made must be either truly repentant or not in command of his or her own will so as to be able to be repentant. Your referee will judge this spell in this regard, noting any past instances of its use upon the person. Deliberate misdeeds and acts of knowing and willful nature cannot be atoned for with this spell. The material components of this spell are the cleric's religious symbol, prayer beads or wheel or book, and burning incense."
     ),
     Spell('Commune','C',5,
         cast=tp(1,T),
         duration=tp(0),
         sourcebook=V,
-        desc="By use of a Commune spell the cleric is able to contact his or her divinity - or agents thereof - and request information in the form of questions which can be answered by a simple \"yes\" or \"no\". The cleric is allowed one such question for every level of experience he or she has attained. The answers given will be correct. It is probable that the referee will limit the use of Commune spells to one per adventure, one per week, or even one per month, for the \"gods\" dislike frequent interruptions. The material components necessary to a Commune spell are the cleric's religious symbol, holy/unholy water, and incense."
+        desc="By use of a <i>commune</i> spell the cleric is able to contact his or her divinity — or agents thereof — and request information in the form of questions which can be answered by a simple \"yes\" or \"no\". The cleric is allowed one such question for every level of experience he or she has attained. The answers given will be correct. It is probable that the referee will limit the use of <i>commune</i> spells to one per adventure, one per week, or even one per month, for the \"gods\" dislike frequent interruptions. The material components necessary to a <i>commune</i> spell are the cleric's religious symbol, holy/unholy water, and incense."
     ),
     Spell('Cure Critical Wounds','C',5,
         cast=tp(8,S),
         duration=tp(1,P),
         sourcebook=V,
-        desc="The Cure Critical Wounds spell is a very potent version of the Cure Light Wounds spell (q.v.). The cleric lays his or her hand upon a creature and heals from 6 to 27 (3d8+3) hit points of damage from wounds or other damage. The spell does not affect creatures excluded in the Cure Light Wounds spell explanation. Its reverse, Cause Critical Wounds, operates in the same fashion as other Cause Wounds spells, requiring a successful touch to inflict the 6-27 hit points of damage. Caused wounds heal as do wounds of other sorts."
+        desc="The <i>cure critical wounds</i> spell is a very potent version of the <a href=\"/spells/cure-light-wounds-cleric-lvl-1/\"><i>cure light wounds</i></a> spell. The cleric lays his or her hand upon a creature and heals from 6 to 27 (3d8+3) hit points of damage from wounds or other damage. The spell does not affect creatures excluded in the <a href=\"/spells/cure-light-wounds-cleric-lvl-1/\"><i>cure light wounds</i></a> spell explanation. Its reverse, <i>cause critical wounds</i>, operates in the same fashion as other <i>cause wounds</i> spells, requiring a successful touch to inflict the 6-27 hit points of damage. Caused wounds heal as do wounds of other sorts."
     ),
     Spell('Dispel Evil','C',5,
         cast=tp(8,S),
         duration=tp(1,R),
         sourcebook=V,
-        desc="The cleric using this spell causes summoned creatures of evil nature, or monsters enchanted and caused to perform evil deeds, to return to their own plane or place. Examples of such creatures are: aerial servants, demons, devils, djinn, efreet, elementals, and invisible stalkers. Note that this spell lasts for 1 melee round for each level of experience of the caster, and while the spell is in effect all creatures which could be affected by it attack at a -7 penalty' on their \"to hit\" dice when engaging the spell caster. The reverse of the spell, Dispel Good, functions against summoned or enchanted creatures of good alignment or sent to aid the cause of good. The material components for this spell are the cleric's religious object and holy/unholy water."
+        desc="The cleric using this spell causes summoned creatures of evil nature, or monsters enchanted and caused to perform evil deeds, to return to their own plane or place. Examples of such creatures are: aerial servants, demons, devils, djinn, efreet, elementals, and invisible stalkers. Note that this spell lasts for 1 melee round for each level of experience of the caster, and while the spell is in effect all creatures which could be affected by it attack at a -7 penalty on their \"to hit\" dice when engaging the spell caster. The reverse of the spell, <i>dispel good</i>, functions against summoned or enchanted creatures of good alignment or sent to aid the cause of good. The material components for this spell are the cleric's religious object and holy/unholy water."
     ),
     Spell('Flame Strike','C',5,
         cast=tp(8,S),
         duration=tp(1,S),
         sourcebook=V,
-        desc="When the cleric calls down a Flame Strike spell, a column of fire roars downward in the exact location called for by the caster. If any creature is within the area of effect of a Flame Strike, it must make a saving throw. Failure to make the save means the creature has sustained 6-48 (6d8) hit points of damage; otherwise, 3-24 (3d8) hit points of damage are taken. The material component of this spell is a pinch of sulphur."
+        desc="When the cleric calls down a <i>flame strike</i> spell, a column of fire roars downward in the exact location called for by the caster. If any creature is within the area of effect of a <i>flame strike</i>, it must make a saving throw. Failure to make the save means the creature has sustained 6-48 (6d8) hit points of damage; otherwise, 3-24 (3d8) hit points of damage are taken. The material component of this spell is a pinch of sulphur."
     ),
     Spell('Golem','C',5,
         cast=tp(8,S),
@@ -650,7 +685,7 @@ cleric_spells = [
         duration=tp(0),
         duration_lvl=tp(1,T),
         sourcebook=V,
-        desc="When this spell is cast by the cleric, a horde of creeping, hopping, and flying insects swarm in a thick cloud. These insects obscure vision, limiting it to 3\". Creatures within the insect plague sustain 1 hit point of damage for each melee round they remain in it due to the bites and stings of the insects, regardless of armour class. The referee will cause all creatures with fewer than five hit dice to check morale. Creatures with two or fewer hit dice will automatically move at their fastest possible speed in a straight line in a random direction until they are not less than 24\" distant from the cloud of insects. Creatures with fewer than five hit dice which fail their morale check will behave likewise. Heavy smoke will drive off insects within its bounds. Fire will also drive insects away; a Wall of Fire in a ring shape will keep the Insect Plague outside its confines, but a Fireball will simply clear insects from its blast area for 1 turn. Lightning and cold/ice act likewise. The plague lasts for 1 turn for each level of experience of the cleric casting the spell, and thereafter the insects disperse. The insects swarm in an area which centres around a summoning point determined by the spell caster, which point can be up to 36\" distant from the cleric. The Insect Plague does not move thereafter for as long as it lasts. Note that the spell can be countered by casting a Dispel Magic upon the summoning point. A cube of force (a special magic item) would keep insects away from a character seeking the centre of the swarm, but invisibility would afford no protection. The material components of this spell area few grains of sugar, some kernels of grain, and a smear of fat."
+        desc="When this spell is cast by the cleric, a horde of creeping, hopping, and flying insects swarm in a thick cloud. These insects obscure vision, limiting it to 3\". Creatures within the <i>insect plague</i> sustain 1 hit point of damage for each melee round they remain in it due to the bites and stings of the insects, regardless of armour class. The referee will cause all creatures with fewer than five hit dice to check morale. Creatures with two or fewer hit dice will automatically move at their fastest possible speed in a straight line in a random direction until they are not less than 24\" distant from the cloud of insects. Creatures with fewer than five hit dice which fail their morale check will behave likewise. Heavy smoke will drive off insects within its bounds. Fire will also drive insects away; a <a href=\"/spells/wall-of-fire-druid-lvl-5/\"><i>wall of fire</i></a> in a ring shape will keep the <i>insect plague</i> outside its confines, but a fire ball will simply clear insects from its blast area for 1 turn. Lightning and cold/ice act likewise. The plague lasts for 1 turn for each level of experience of the cleric casting the spell, and thereafter the insects disperse. The insects swarm in an area which centers around a summoning point determined by the spell caster, which point can be up to 36\" distant from the cleric. The <i>insect plague</i> does not move thereafter for as long as it lasts. Note that the spell can be countered by casting a <i>dispel magic</i> upon the summoning point. A <i>cube of force</i> (a special magic item) would keep insects away from a character seeking the center of the swarm, but invisibility would afford <i>no</i> protection. The material components of this spell are a few grains of sugar, some kernels of grain, and a smear of fat."
     ),
     Spell('Magic Font','C',5,
         cast=tp(5,T),
@@ -662,13 +697,13 @@ cleric_spells = [
         cast=tp(8,S),
         duration=tp(1,P),
         sourcebook=V,
-        desc="When the Plane Shift spell is cast, the cleric moves himself or herself or some other creature to another plane of existence. The recipient of the spell will remain in the new plane until sent forth by some like means. If several persons link hands in a circle, up to seven can be affected by the Plane Shift at the same time. The material component of this spell is a small, forked metal rod - the exact size and metal type dictating to which plane of existence the spell will send the affected creature(s) to. (Your referee will determine specifics regarding how and what planes are reached.) An unwilling victim must be touched in order to be sent thusly: and in addition, the creature also is allowed a saving throw, and if the latter is successful the effect of the spell is negated."
+        desc="When the <i>plane shift</i> spell is cast, the cleric moves himself or herself or some other creature to another plane of existence. The recipient of the spell will remain in the new plane until sent forth by some like means. If several persons link hands in a circle, up to seven can be affected by the <i>plane shift</i> at the same time. The material component of this spell is a small, forked metal rod — the exact size and metal type dictating to which plane of existence the spell will send the affected creature(s) to. (Your referee will determine specifics regarding how and what planes are reached.) An unwilling victim must be <i>touched</i> in order to be sent thusly: and in addition, the creature also is allowed a saving throw, and if the latter is successful the effect of the spell is negated."
     ),
     Spell('Quest','C',5,
         cast=tp(8,S),
         duration=tp(1,P),
         sourcebook=V,
-        desc="The Quest is a spell by means of which the cleric requires the affected creature to perform a service and return to the cleric with proof that the deed was accomplished. The Quest can, for example, require the location and return of some important or valuable object, the rescue of a notable person, the release of some creature, the capture of a stronghold, the slaying of a person, the delivery of some item, and so forth. If the Quest is not properly followed due to disregard, delay, or perversion, the creature affected by the spell loses 1 from its saving throw dice for each day of such action, and this penalty will not be removed until the Quest is properly discharged or the cleric cancels it. (There are certain circumstances which will temporarily suspend a Quest, and other which will discharge or cancel it; your Dungeon Master will give you appropriate information as the need to know arises.) The material component of this spell is the cleric's religious symbol."
+        desc="The <i>quest</i> is a spell by means of which the cleric requires the affected creature to perform a service and return to the cleric with proof that the deed was accomplished. The quest can, for example, require the location and return of some important or valuable object, the rescue of a notable person, the release of some creature, the capture of a stronghold, the slaying of a person, the delivery of some item, and so forth. If the <i>quest</i> is not properly followed due to disregard, delay, or perversion, the creature affected by the spell loses 1 from its saving throw dice for each day of such action, and this penalty will not be removed until the <i>quest</i> is properly discharged or the cleric cancels it. (There are certain circumstances which will temporarily suspend a <i>quest</i>, and other which will discharge or cancel it; your Dungeon Master will give you appropriate information as the need to know arises.) The material component of this spell is the cleric's religious symbol."
     ),
     Spell('Rainbow','C',5,
         cast=tp(7,S),
@@ -702,7 +737,7 @@ cleric_spells = [
         cast=tp(1,R),
         duration=tp(1,P),
         sourcebook=V,
-        desc="When the cleric casts a raise dead spell, he or she can restore life to a dwarf, gnome, half-elf, halfling, or human. The length of time which the person has been dead is of importance, as the cleric can raise dead persons only up to a certain point, the limit being 1 day for each level of experience of the cleric, i.e. a 9th level cleric can raise a person dead for up to 9 days. Note that the body of the person must be whole, or otherwise missing parts will still be missing when the person is brought back to life. Also, the resurrected person must make a special saving throw to survive the ordeal (see CHARACTER ABILITIES, Constitution). Furthermore, the raised person is weak and helpless in any event, and he or she will need one full day of rest in bed for each day he or she was dead. The somatic component of the spell is a pointed finger. The reverse of the spell, Slay L living, allows the victim a saving throw, and if it is successful, the victim sustains damage equal only to that caused by a Cause Serious Wounds spell. i.e. 3-17 hit points. An evil cleric can freely use the reverse spell; a good cleric must exercise extreme caution in its employment, being absolutely certain that the victim of the Slay Living spell is evil and that his or her death is a matter of great necessity and for good, otherwise the alignment of the cleric will be sharply changed. Note that newly made undead, excluding skeletons, which fall within the days of being dead limit are affected by Raise Dead spells cast upon them. The effect of the spell is to cause them to become resurrected dead, providing the constitution permits survival; otherwise, they are simply dead."
+        desc="When the cleric casts a <i>raise dead</i> spell, he or she can restore life to a dwarf, gnome, half-elf, halfling, or human. The length of time which the person has been dead is of importance, as the cleric can raise dead persons only up to a certain point, the limit being 1 day for each level of experience of the cleric, i.e. a 9th level cleric can raise a person dead for up to 9 days. Note that the body of the person must be whole, or otherwise missing parts will still be missing when the person is brought back to life. Also, the resurrected person must make a special saving throw to survive the ordeal (see CHARACTER ABILITIES, Constitution). Furthermore, the raised person is weak and helpless in any event, and he or she will need one full day of rest in bed for each day he or she was dead. The somatic component of the spell is a pointed finger. The reverse of the spell, <i>slay living</i>, allows the victim a saving throw, and if it is successful, the victim sustains damage equal only to that caused by a <a href=\"/spells/cure-serious-wounds-cleric-lvl-4/\"><i>cause serious wounds</i></a> spell, i.e. 3-17 hit points. An evil cleric can freely use the reverse spell; a good cleric must exercise extreme caution in its employment, being absolutely certain that the victim of the <i>slay living</i> spell is evil and that his or her death is a matter of great necessity and for good, otherwise the alignment of the cleric will be sharply changed. Note that newly made <i>undead</i>, excluding skeletons, which fall within the days of being dead limit are affected by <i>raise dead</i> spells cast upon them. The effect of the spell is to cause them to become resurrected dead, providing the constitution permits survival; otherwise, they are simply dead."
     ),
     Spell('Spike Stones','C',5,
         cast=tp(6,S),
@@ -716,42 +751,42 @@ cleric_spells = [
         duration=tp(0),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="When the cleric employs this spell, all things within the area of the True Seeing effect appear as they actually are. Secret doors become plain. The exact location of displaced things is obvious. Invisible things and those which are astral or ethereal become quite visible. Illusions and apparitions are seen through. Polymorphed, changed, or magicked things are apparent. Even the aura projected by creatures becomes visible, so that the cleric is able to know whether they are good or evil or between. The spell requires an ointment for the eyes. The ointment is made from very rare mushroom powder, saffron, and fat. The reverse of the spell, False Seeing, causes the person to see things as they are not, rich being poor, rough smooth, beautiful ugly. The ointment for the reverse spell is concocted of oil, poppy dust, and pink orchid essence. For both spells, the ointment must be aged for 1-6 months."
+        desc="When the cleric employs this spell, all things within the area of the <i>true seeing</i> effect appear as they actually are. Secret doors become plain. The exact location of displaced things is obvious. Invisible things and those which are astral or ethereal become quite visible. Illusions and apparitions are seen through. Polymorphed, changed, or magicked things are apparent. Even the aura projected by creatures becomes visible, so that the cleric is able to know whether they are good or evil or between. The spell requires an ointment for the eyes. The ointment is made from very rare mushroom powder, saffron, and fat. The reverse of the spell, <i>false seeing</i>, causes the person to see things as they are not, rich being poor, rough smooth, beautiful ugly. The ointment for the reverse spell is concocted of oil, poppy dust, and pink orchid essence. For both spells, the ointment must be aged for 1-6 months."
     ),
     Spell('Aerial Servant','C',6,
         cast=tp(9,S),
         duration=tp(0),
         duration_lvl=tp(1,D),
         sourcebook=V,
-        desc="This spell summons an invisible Aerial Servant (see ADVANCED DUNGEONS & DRAGONS, MONSTER MANUAL) to do the bidding of the cleric who conjured it. The creature does not fight, but it obeys the command of the cleric with respect to finding and returning with whatever object or creature that is described to it. Of course, the object or creature must be such as to allow the aerial servant to physically bring it to the cleric or his or her assign. The spell caster should keep in mind the consequences of having an aerial servant prevented, for any reason, from completion of the assigned duty. The spell lasts for a maximum of 1 day for each level of experience of the cleric who cast it. The aerial servant returns to its own plane whenever the spell lapses, its duty is fulfilled, it is dispelled, the cleric releases it, or the cleric is slain. The cleric must have a Protection From Evil spell, or be within a magic circle, thaumaturgic triangle, or pentagram when summoning an aerial servant unless the cleric has his or her religious symbol or a religious artifact or relic to use to control the creature. Otherwise, the creature will slay its summoner and return from whence it came. The aerial servant will always attack by complete surprise when sent on a mission, and gain the benefit of 4 free melee rounds unless the creature involved is able to detect invisible objects, in which case a six-sided die is rolled, and 1 = 1 free round, 2 = 2 free rounds, 3 = 3 free rounds, 4 = 4 free rounds, and 5 or 6 = 0 free rounds (the opponent is not surprised at all). Each round the aerial servant must dice to score a hit, and when a hit is scored, it means the aerial servant has grabbed the item or creature it was sent to take and bring back to the cleric. If a creature is involved, the aerial servant's strength is compared to the strength of the creature to be brought. If the creature in question does not have a strength rating, roll the appropriate number of the correct type of hit dice for the aerial servant and for the creature it has grabbed. The higher total is the stronger."
+        desc="This spell summons an invisible <a href=\"/creatures/aerial-servant/\"><i>aerial servant</i></a> to do the bidding of the cleric who conjured it. The creature does not fight, but it obeys the command of the cleric with respect to finding and returning with whatever object or creature that is described to it. Of course, the object or creature must be such as to allow the <i>aerial servant</i> to physically bring it to the cleric or his or her assign. The spell caster should keep in mind the consequences of having an <i>aerial servant</i> prevented, for any reason, from completion of the assigned duty. The spell lasts for a maximum of 1 day for each level of experience of the cleric who cast it. The <i>aerial servant</i> returns to its own plane whenever the spell lapses, its duty is fulfilled, it is dispelled, the cleric releases it, or the cleric is slain. The cleric must have a <a href=\"/spells/protection-from-evil-cleric-lvl-1/\"><i>protection from evil</i></a> spell, or be within a magic circle, thaumaturgic triangle, or pentagram when summoning an <i>aerial servant</i> unless the cleric has his or her religious symbol or a religious artifact or relic to use to control the creature. Otherwise, the creature will slay its summoner and return from whence it came. The <i>aerial servant</i> will always attack by complete surprise when sent on a mission, and gain the benefit of 4 free melee rounds unless the creature involved is able to detect invisible objects, in which case a six-sided die is rolled, and 1 = 1 free round, 2 = 2 free rounds, 3 = 3 free rounds, 4 = 4 free rounds, and 5 or 6 = 0 free rounds (the opponent is not surprised at all). Each round the <i>aerial servant</i> must dice to score a hit, and when a hit is scored, it means the <i>aerial servant</i> has grabbed the item or creature it was sent to take and bring back to the cleric. If a creature is involved, the <i>aerial servant's</i> strength is compared to the strength of the creature to be brought. If the creature in question does not have a strength rating, roll the appropriate number of the correct type of hit dice for the <i>aerial servant</i> and for the creature it has grabbed. The higher total is the stronger."
     ),
     Spell('Animate Object','C',6,
         cast=tp(9,S),
         duration=tp(0),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="This powerful spell enables the cleric casting it to imbue inanimate objects with mobility and a semblance of life. The animated object, or objects, then attack whomever or whatever the cleric first designates. The object can be of any material whatsoever - wood, metal, stone, fabric, leather, ceramic, glass, etc. The speed of movement of the object is dependent upon its means of propulsion and its weight. A large wooden table would be rather heavy, but its legs would give it speed. A rug could only slither along. A jar would roll. Thus a large stone pedestal would rock forward at 1\" per round, a stone statue would move at 4\" per round, a wooden statue 8\" per round, an ivory stool of light weight would move at 12\". Slithering movement is about 1\" to 2\" per round, rolling 3\" to 6\" per round. The damage caused by the attack of an animated object is dependent upon its form and composition. Light, supple objects can only obscure vision, obstruct movement, bind, trip. smother, etc. Light, hard objects can fall upon or otherwise strike for 1-2 hit points of damage or possibly obstruct and trip as do light, supple objects. Hard, medium weight objects can crush or strike for 2-8 hit points of damage, those larger and heavier doing 3-12, 4-16, or even 5-20 hit points of damage. The frequency of attack of animated objects is dependent upon their method of locomotion, appendages, and method of attack. This varies from as seldom as once every five melee rounds to as frequently as once per melee round. The armour class of the object animated is basically a function of material and movement ability with regard to hitting. Damage is dependent upon the type of weapon and the object struck. A sharp cutting weapon is effective against fabric, leather, wood and like substances. Heavy smashing and crushing weapons are useful against wood, stone, and metal objects. Your referee will determine all of these factors, as well as how much damage the animated object can sustain before being destroyed. The cleric can animate 1 cubic foot of material for each level of experience he or she has attained. Thus, a 14th level cleric could animate one or more objects whose solid volume did not exceed 14 cubic feet, i.e. a large statue, two rugs, three chairs, or a dozen average crocks."
+        desc="This powerful spell enables the cleric casting it to imbue inanimate objects with mobility and a semblance of life. The animated object, or objects, then attack whomever or whatever the cleric first designates. The object can be of any material whatsoever — wood, metal, stone, fabric, leather, ceramic, glass, etc. The speed of movement of the object is dependent upon its means of propulsion and its weight. A large wooden table would be rather heavy, but its legs would give it speed. A rug could only slither along. A jar would roll. Thus a large stone pedestal would rock forward at 1\" per round, a stone statue would move at 4\" per round, a wooden statue 8\" per round, an ivory stool of light weight would move at 12\". Slithering movement is about 1\" to 2\" per round, rolling 3\" to 6\" per round. The damage caused by the attack of an animated object is dependent upon its form and composition. Light, supple objects can only obscure vision, obstruct movement, bind, trip. smother, etc. Light, hard objects can fall upon or otherwise strike for 1-2 hit points of damage or possibly obstruct and trip as do light, supple objects. Hard, medium weight objects can crush or strike for 2-8 hit points of damage, those larger and heavier doing 3-12, 4-16, or even 5-20 hit points of damage. The frequency of attack of animated objects is dependent upon their method of locomotion, appendages, and method of attack. This varies from as seldom as once every five melee rounds to as frequently as once per melee round. The armour class of the object animated is basically a function of material and movement ability with regard to hitting. Damage is dependent upon the type of weapon and the object struck. A sharp cutting weapon is effective against fabric, leather, wood and like substances. Heavy smashing and crushing weapons are useful against wood, stone, and metal objects. Your referee will determine all of these factors, as well as how much damage the animated object can sustain before being destroyed. The cleric can animate 1 cubic foot of material for each level of experience he or she has attained. Thus, a 14th level cleric could animate one or more objects whose solid volume did not exceed 14 cubic feet, i.e. a large statue, two rugs, three chairs, or a dozen average crocks."
     ),
     Spell('Blade Barrier','C',6,
         cast=tp(9,S),
         duration=tp(0),
         duration_lvl=tp(3,R),
         sourcebook=V,
-        desc="The cleric employs this spell to set up a wall of circling, razor-sharp blades. These whirl and flash in endless movement around an immobile point. Any creature which attempts to pass through the Blade Barrier suffers 8-64 (8d8) hit points of damage in doing so. The barrier remains for 3 melee rounds for every level of experience of the cleric casting it. The barrier can cover any area from as small as 5' square to as large as 2\" square, i.e. 20'x20' under ground, 60'x60' outdoors."
+        desc="The cleric employs this spell to set up a wall of circling, razor-sharp blades. These whirl and flash in endless movement around an immobile point. Any creature which attempts to pass through the <i>blade barrier</i> suffers 8-64 (8d8) hit points of damage in doing so. The barrier remains for 3 melee rounds for every level of experience of the cleric casting it. The barrier can cover any area from as small as 5' square to as large as 2\" square, i.e. 20'x20' under ground, 60'x60' outdoors."
     ),
     Spell('Conjure Animals','C',6,
         cast=tp(9,S),
         duration=tp(0),
         duration_lvl=tp(2,R),
         sourcebook=V,
-        desc="The Conjure Animals spell enables the cleric to summon a mammal, or several of them, to his locale in order that the creature(s) can attack the cleric's opponents. The conjured animal(s) remain in the cleric's locale for 2 melee rounds for each level of experience of the cleric conjuring it (them), or until slain. The spell caster can, by means of his incantation, call up one or more mammals with hit dice whose total does not exceed his or her level. Thus, a cleric of 12th level could conjure one mammal with 12 hit dice, two with 6 hit dice each, three with 4 hit dice each, 4 with a hit dice each, six with 2 hit dice each, or 12 with 1 hit die each. For every +1 (hit point) of a creature's hit dice, count 1/4 of a hit die, i.e. a creature with 4+3 hit dice equals a 4¾ hit dice creature. The creature(s) summoned by the spell will unfailingly attack the opponent(s) of the cleric by whom the spell was cast."
+        desc="The <i>conjure animals</i> spell enables the cleric to summon a mammal, or several of them, to his locale in order that the creature(s) can attack the cleric's opponents. The conjured animal(s) remain in the cleric's locale for 2 melee rounds for each level of experience of the cleric conjuring it (them), or until slain. The spell caster can, by means of his incantation, call up one or more mammals with hit dice whose total does not exceed his or her level. Thus, a cleric of 12th level could conjure one mammal with 12 hit dice, two with 6 hit dice each, three with 4 hit dice each, 4 with a hit dice each, six with 2 hit dice each, or 12 with 1 hit die each. For every +1 (hit point) of a creature's hit dice, count 1/4 of a hit die, i.e. a creature with 4+3 hit dice equals a 4¾ hit dice creature. The creature(s) summoned by the spell will unfailingly attack the opponent(s) of the cleric by whom the spell was cast."
     ),
     Spell('Find The Path','C',6,
         cast=tp(3,R),
         duration=tp(0),
         duration_lvl=tp(1,T),
         sourcebook=V,
-        desc="By use of this spell, the cleric is enabled to find the shortest, most direct route that he or she is seeking, be it the way to or from or out of a locale. The locale can be outdoors or underground, a trap or even a maze spell. The spell will enable the cleric to select the correct direction which will eventually lead him or her to egress, the exact path to follow (or actions to take), and this knowledge will persist as long as the spell lasts, i.e. 1 turn for each level of experience of the cleric casting find the path. The spell frees the cleric, and those with him or her from a Maze spell in a single melee round and will continue to do so as long as the spell lasts. The material component of this spell is a set of divination counters of the sort favoured by the cleric - bones, ivory counters, sticks, carved runes, or whatever. The reverse, Lose The Path, makes the creature touched totally lost and unable to find its way for the duration of the spell, although it can be led, of course."
+        desc="By use of this spell, the cleric is enabled to find the shortest, most direct route that he or she is seeking, be it the way to or from or out of a locale. The locale can be outdoors or underground, a trap or even a <a href=\"/spells/maze-magic-user-lvl-8/\"><i>maze</i></a> spell. The spell will enable the cleric to select the correct direction which will eventually lead him or her to egress, the exact path to follow (or actions to take), and this knowledge will persist as long as the spell lasts, i.e. 1 turn for each level of experience of the cleric casting <i>find the path</i>. The spell frees the cleric, and those with him or her from a <a href=\"/spells/maze-magic-user-lvl-8/\"><i>maze</i></a> spell in a single melee round and will continue to do so as long as the spell lasts. The material component of this spell is a set of divination counters of the sort favoured by the cleric — bones, ivory counters, sticks, carved runes, or whatever. The reverse, <i>lose the path</i>, makes the creature touched totally lost and unable to find its way for the duration of the spell, although it can be led, of course."
     ),
     Spell('Forbiddance','C',6,
         cast=tp(6,R),
@@ -769,7 +804,7 @@ cleric_spells = [
         cast=tp(1,R),
         duration=tp(1,P),
         sourcebook=V,
-        desc="The very potent Heal spell enables the cleric to wipe away disease and injury in the creature who receives the benefits of the spell. It will completely cure any and all diseases and/or blindness of the recipient and heal all hit points of damage suffered due to wounds or injury, save 1 to 4 (d4). It dispels a Feeblemind spell. Naturally, the effects can be negated by later wounds, injuries, and diseases. The reverse, Harm, infects the victim with a disease and causes loss of all hit points, as damage, save 1 to 4 (d4), if a successful touch is inflicted. For creatures not affected by the Heal (or Harm) spell, see Cure Light Wounds."
+        desc="The very potent <i>heal</i> spell enables the cleric to wipe away disease and injury in the creature who receives the benefits of the spell. It will completely cure any and all diseases and/or blindness of the recipient and heal all hit points of damage suffered due to wounds or injury, save 1 to 4 (d4). It dispels a <a href=\"/spells/feeblemind-druid-lvl-6/\"><i>feeblemind</i></a> spell. Naturally, the effects can be negated by later wounds, injuries, and diseases. The reverse, <i>harm</i>, infects the victim with a disease and causes loss of all hit points, as damage, save 1 to 4 (d4), if a successful touch is inflicted. For creatures not affected by the <i>heal</i> (or <i>harm</i>) spell, see <a href=\"/spells/cure-light-wounds-cleric-lvl-1/\"><i>cure light wounds</i></a>."
     ),
     Spell('Heroes\' Feast','C',6,
         cast=tp(1,T),
@@ -782,42 +817,82 @@ cleric_spells = [
         duration=tp(0),
         duration_lvl=tp(1,T),
         sourcebook=V,
-        desc="By employing a Part Water spell, the cleric is able to cause water or similar liquid to move apart. thus forming a trough. The depth and length of the trough created by the spell is dependent upon the level of the cleric, and a trough 3' deep by 1' by 1\" (10' or 10 yards) is created per level, i.e. at 12th level the cleric would part water 36' deep by 12' wide by 24\" (240' or 240 yards) long. The trough will remain as long as the spell lasts or until the cleric who cast it opts to end its effects (cf. Dispel Magic). The material component of this spell is the cleric's religious symbol."
+        desc="By employing a <i>part water</i> spell, the cleric is able to cause water or similar liquid to move apart, thus forming a trough. The depth and length of the trough created by the spell is dependent upon the level of the cleric, and a trough 3' deep by 1' by 1\" (10' or 10 yards) is created per level, i.e. at 12th level the cleric would part water 36' deep by 12' wide by 24\" (240' or 240 yards) long. The trough will remain as long as the spell lasts or until the cleric who cast it opts to end its effects (cf. <a href=\"/spells/dispel-magic-cleric-lvl-3/\"><i>dispel magic</i></a>). The material component of this spell is the cleric's religious symbol."
     ),
     Spell('Speak With Monsters','C',6,
         cast=tp(9,S),
         duration=tp(0),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="When cast, the Speak With Monsters spell allows the cleric to converse with any type of creature which has any form of communicative ability. That is, the monster will understand the intent of what is said to it by the cleric. The creature or creatures thus spoken to will be checked by your referee in order to determine reaction. All creatures of the same type as that chosen by the cleric to speak to can likewise understand if they are within range. The spell lasts for 1 melee round per level of experience of the cleric casting it. and during its duration conversation can take place as the monster is able and desires."
+        desc="When cast, the <i>speak with monsters</i> spell allows the cleric to converse with any type of creature which has any form of communicative ability. That is, the monster will understand the intent of what is said to it by the cleric. The creature or creatures thus spoken to will be checked by your referee in order to determine reaction. All creatures of the same type as that chosen by the cleric to speak to can likewise understand if they are within range. The spell lasts for 1 melee round per level of experience of the cleric casting it. and during its duration conversation can take place as the monster is able and desires."
     ),
     Spell('Stone Tell','C',6,
         cast=tp(1,T),
         duration=tp(1,T),
         sourcebook=V,
-        desc="When the cleric casts a Stone Tell upon an area, the very stones will speak and relate to the caster who or what has touched them as well as telling what is covered, concealed, or simply behind the place they are. The stones will relate complete descriptions as required. The material components for this spell area drop of mercury and a bit of clay."
+        desc="When the cleric casts a <i>stone tell</i> upon an area, the very stones will speak and relate to the caster who or what has touched them as well as telling what is covered, concealed, or simply behind the place they are. The stones will relate complete descriptions as required. The material components for this spell area drop of mercury and a bit of clay."
     ),
     Spell('Word of Recall','C',6,
         cast=tp(1,S),
         duration=tp(0),
         sourcebook=V,
-        desc="The Word Of Recall spell takes the cleric instantly back to his or her sanctuary when the word is uttered. The sanctuary must be specifically designated in advance by the cleric. It must be a well known place, but it can be any distance from the cleric, above or below ground. Transportation by the Word Of Recall spell is infallibly safe. The cleric is able to transport, in addition to himself or herself, 250 gold pieces weight cumulative per level of experience. Thus, a 15th level cleric could transport his or her person and 3,750 (375 pounds) gold pieces weight in addition; this extra matter can be equipment, treasure, or living material such as another person."
+        desc="The <i>word of recall</i> spell takes the cleric instantly back to his or her sanctuary when the word is uttered. The sanctuary must be specifically designated in advance by the cleric. It must be a well known place, but it can be any distance from the cleric, above or below ground. Transportation by the <i>word of recall</i> spell is infallibly safe. The cleric is able to transport, in addition to himself or herself, 250 gold pieces weight cumulative per level of experience. Thus, a 15th level cleric could transport his or her person and 3,750 (375 pounds) gold pieces weight in addition; this extra matter can be equipment, treasure, or living material such as another person."
     ),
     Spell('Astral Spell','C',7,
         cast=tp(3,T),
         duration=tp(0),
         sourcebook=V,
-        desc="By means of the Astral Spell a cleric is able to project his or her astral body into the Astral Plane, leaving his or her physical body and material possessions behind on the Prime Material Plane, (the plane on which the entire universe and all of its parallels have existence). Only certain magic items which have multi-planed existence can be brought into the Astral Plane. As the Astral Plane touches upon all of the first levels of the Outer Planes, the cleric can travel astrally to any of these Outer Planes as he or she wills. The cleric then leaves the Astral Plane, forming a body on the plane of existence he or she has chosen to enter. It is also possible to travel astrally anywhere in the Prime Material Plane by means of the Astral Spell, but a second body cannot be formed on the Prime Material Plane. As a general rule, a person astrally projected can be seen only by creatures on the Astral Plane. At all times the astral body is connected to the material by a silvery cord. If the cord is broken, the affected person is killed, astrally and materially, but generally only the psychic wind can normally cause the cord to break. When a second body is formed on a different plane. the silvery cord remains invisibly attached to the new body, and the cord simply returns to the latter where it rests on the Prime Material Plane, reviving it from its state of suspended animation. Although astrally projected persons are able to function on the Astral Plane, their actions do not affect creatures not existing on the Astral Plane. The spell lasts until the cleric desires to end it, or until it is terminated by some outside means (Dispel Magic or destruction of the cleric's body on the Prime Material Plane). The cleric can take up to five other creatures with him or her by means of the Astral Spell, providing the creatures are linked in a circle with the cleric. These fellow travellers are dependent upon the cleric and can be stranded. Travel in the Astral Plane can be slow or fast according to the cleric's desire. The ultimate destination arrived at is subject to the conceptualization of the cleric. (See APPENDIX IV, THE KNOWN PLANES OF EXISTENCE, for further information on the Astral Plane and astral projection.)"
+        desc="By means of the <i>astral spell</i> a cleric is able to project his or her astral body into the <i>Astral Plane</i>, leaving his or her physical body and material possessions behind on the <i>Prime Material Plane</i>, (the plane on which the entire universe and all of its parallels have existence). Only certain magic items which have multi-planed existence can be brought into the <i>Astral Plane</i>. As the <i>Astral Plane</i> touches upon all of the first levels of the <i>Outer Planes</i>, the cleric can travel astrally to any of these <i>Outer Planes</i> as he or she wills. The cleric then leaves the <i>Astral Plane</i>, forming a body on the plane of existence he or she has chosen to enter. It is also possible to travel astrally anywhere in the <i>Prime Material Plane</i> by means of the <i>astral spell</i>, but a second body cannot be formed on the <i>Prime Material Plane</i>. As a general rule, a person astrally projected can be seen only by creatures on the <i>Astral Plane</i>. At all times the astral body is connected to the material by a silvery cord. If the cord is broken, the affected person is killed, astrally and materially, but generally only the psychic wind can normally cause the cord to break. When a second body is formed on a different plane, the silvery cord remains invisibly attached to the new body, and the cord simply returns to the latter where it rests on the <i>Prime Material Plane</i>, reviving it from its state of suspended animation. Although astrally projected persons are able to function on the <i>Astral Plane</i>, their actions do not affect creatures not existing on the <i>Astral Plane</i>. The spell lasts until the cleric desires to end it, or until it is terminated by some outside means (<a href=\"/spells/dispel-magic-cleric-lvl-3/\"><i>dispel magic</i></a> or destruction of the cleric's body on the <i>Prime Material Plane</i>). The cleric can take up to five other creatures with him or her by means of the <i>astral spell</i>, providing the creatures are linked in a circle with the cleric. These fellow travellers are dependent upon the cleric and can be stranded. Travel in the <i>Astral Plane</i> can be slow or fast according to the cleric's desire. The ultimate destination arrived at is subject to the conceptualization of the cleric. (See APPENDIX IV, THE KNOWN PLANES OF EXISTENCE, for further information on the <i>Astral Plane</i> and astral projection.)"
     ),
     Spell('Control Weather','C',7,
         cast=tp(1,T),
         duration=tp(1,VA),
-        sourcebook=V
+        sourcebook=V,
+        desc=("The <i>control weather</i> spell allows a cleric to change the weather in the area he or she is in at the time the spell is cast. The spell will affect the weather for from 4 to 48 hours (4d12) in an area of from 4 to 16 square miles (4d4). It requires 1 turn to cast the spell, and an additional 1 to 4 (d4) turns for the effects of the weather to be felt. The <i>control weather</i> spell will not radically change the temperature, i.e. from below zero to a 100 degree temperature heat wave. The weather control possible depends upon the prevailing conditions:\n\n"
+            "<table>"
+            "<tr><th>CLEAR WEATHER</th><th>PARTLY CLOUDY WEATHER</th><th>CLOUDY WEATHER</th></tr>"
+            "<tr><td>Very clear</td><td>Clear weather</td><td>Partly cloudy</td></tr>"
+            "<tr><td>Light clouds or hazy</td><td>Cloudy</td><td>Deep clouds</td></tr>"
+            "<tr><td></td><td>Mist/Light rain/Small hail</td><td>Fog</td></tr>"
+            "<tr><td></td><td>Sleet/Light snow</td><td>Heavy rain/Large hail</td></tr>"
+            "<tr><td></td><td></td><td>Driving sleet/Heavy snow</td></tr>"
+            "</table>\n"
+            "<table>"
+            "<tr><th>HOT WEATHER</th><th>WARM WEATHER</th><th>COOL WEATHER</th><th>COLD WEATHER</th></tr>"
+            "<tr><td>Warm weather</td><td>Hot weather</td><td>Warm weather</td><td>Cool weather</td></tr>"
+            "<tr><td>Sweltering heat</td><td>Cool weather</td><td>Cold weather</td><td>Arctic cold</td></tr>"
+            "</table>\n"
+            "<table>"
+            "<tr><th>CALM</th><th>LIGHT WIND</th><th>STRONG WIND</th><th>GALE</th><th>STORM</th></tr>"
+            "<tr><td>Dead calm</td><td>Calm</td><td>Light wind</td><td>Strong wind</td><td>Gale</td></tr>"
+            "<tr><td>Light breeze</td><td>Strong wind</td><td>Gale</td><td>Storm</td><td>Hurricane-Typhoon</td></tr>"
+            "</table>\n\n"
+            "All three aspects of the weather (clouds/precipitation, temperature, and wind) can be controlled, but only as shown. For example, a day which is <i>clear</i>, <i>warm</i>, and with <i>light wind</i> can be controlled to become <i>hazy</i>, <i>hot</i>, and <i>calm</i>. Contradictions are not possible — <i>fog</i> and <i>strong wind</i>, for example. Multiple <i>control weather</i> spells can be used only in succession. The material components for this spell are the cleric's religious symbol, incense, and prayer beads or similar prayer object. Obviously, this spell functions only in areas where there are appropriate climatic conditions."
+        )
     ),
     Spell('Earthquake','C',7,
         cast=tp(1,T),
         duration=tp(1,R),
-        sourcebook=V
+        sourcebook=V,
+        desc=("When this spell is cast by a cleric, a local tremor of fairly high strength rips the ground. The shock is over in one melee round. The <i>earthquake</i> affects all terrain, vegetation, structures, and creatures in its locale. The area of effect of the <i>earthquake</i> spell is circular, the diameter being ½\" for every level of experience of the cleric casting it, i.e. a 20th level cleric casts an <i>earthquake</i> spell with a 10\" diameter area of effect. Effects are as follows:\n\n"
+            "TERRAIN\n"
+            "Cave or cavern — Collapses roof\n"
+            "Cliffs — Crumble causing landslide\n"
+            "Ground — Cracks open, causing creatures to fall in and be killed as follows:\n"
+            "   — Size S — 1 in 4 (d4)\n"
+            "   — Size M — 1 in 6 (d6)\n"
+            "   — Size L — 1 in 8 (d8)\n"
+            "Marsh — Drains water off to form muddy, rough ground\n"
+            "Tunnel — Caves in\n\n"
+            "VEGETATION\n"
+            "Small growth — No effect\n"
+            "Trees — 1 in 3 are uprooted and fall\n\n"
+            "STRUCTURES\n"
+            "All structures — Sustain from 5 to 60 points (5d12) of structural damage; those taking full damage are thrown down in rubble\n\n"
+            "CREATURES\n"
+            "See above\n\n"
+            "The material components for this spell are a pinch of dirt, a piece of rock, and a lump of clay."
+        )
     ),
     Spell('Exaction','C',7,
         cast=tp(1,R),
@@ -829,37 +904,47 @@ cleric_spells = [
         cast=tp(5,S),
         duration=tp(1,VA),
         sourcebook=V,
-        desc="The casting of a Gate spell has two effects: first, it causes an ultra-dimensional connection between the plane of existence the cleric is an and that plane on which dwells a specific being of great power, the result enabling the being to merely step through the gate or portal, from its plane to that of the cleric; second, the utterance of the spell attracts the attention of the dweller on the other plane. When casting the spell, the cleric must name the demon, devil, demi-god, god, or similar being he or she desires to make use of the Gate and come to the cleric's aid. There is a 100% certainty that something will step through the gate. The actions of the being which comes through will depend on many factors, including the alignment of the cleric, the nature of those in company with him or her, and who or what opposes or threatens the cleric. Your Dungeon Master will have a sure method of dealing with the variables of the situation. The being gated in will either return immediately (very unlikely) or remain to take action."
+        desc="The casting of a <i>gate</i> spell has two effects: first, it causes an ultra-dimensional connection between the plane of existence the cleric is an and that plane on which dwells a specific being of great power, the result enabling the being to merely step through the gate or portal, from its plane to that of the cleric; second, the utterance of the spell attracts the attention of the dweller on the other plane. When casting the spell, the cleric must name the demon, devil, demi-god, god, or similar being he or she desires to make use of the <i>gate</i> and come to the cleric's aid. There is a 100% certainty that something will step through the gate. The actions of the being which comes through will depend on many factors, including the alignment of the cleric, the nature of those in company with him or her, and who or what opposes or threatens the cleric. Your Dungeon Master will have a sure method of dealing with the variables of the situation. The being gated in will either return immediately (very unlikely) or remain to take action."
     ),
     Spell('Holy (Unholy) Word','C',7,
         cast=tp(1,S),
         duration=tp(1,VA),
-        sourcebook=V
+        sourcebook=V,
+        desc=("The utterance of a <i>holy (unholy) word</i> has tremendous power. It drives off evil (good) creatures from other planes, forcing them to return to their own plane(s) of existence. It further affects other creatures of differing alignment as follows:\n\n"
+            "<table>"
+            "<tr><th>Creature's Hit Dice or Level</th><th>General</th><th>Move</th><th>Attack Dice</th><th>Spells</th></tr>"
+            "<tr><td>less than 4</td><td>kills</td><td>-</td><td>-</td><td>-</td></tr>"
+            "<tr><td>4 to 7+</td><td>paralyzes 1-4 turns</td><td>-</td><td>-</td><td>-</td></tr>"
+            "<tr><td>8 to 11+</td><td>stuns 2-8 rounds</td><td>-50%</td><td>-4</td><td>-</td></tr>"
+            "<tr><td>12 or more</td><td>defeans 1-4 rounds</td><td>-25%</td><td>-2</td><td>50% chance of failure</td></tr>"
+            "</table>\n\n"
+            "Affected creatures must be within the 6\" diameter area of effect centering on the cleric casting the spell."
+        )
     ),
     Spell('Regenerate','C',7,
         cast=tp(3,R),
         duration=tp(1,P),
         sourcebook=V,
-        desc="When a Regenerate spell is cast, body members (fingers, toes, hands, feet, arms, legs, tails, or even the heads of multi-headed creatures), bones, or organs will grow back. The process of regeneration requires but 1 round if the member(s) severed is (are) present and touching the creature, 2-8 turns otherwise. The reverse, Wither, causes the member or organ touched to shrivel and cease functioning in 1 round, dropping off into dust in 2-8 turns. As is usual, creatures must be touched in order to have harmful effect occur. The material components of this spell are a prayer device and holy/unholy water."
+        desc="When a <i>regenerate</i> spell is cast, body members (fingers, toes, hands, feet, arms, legs, tails, or even the heads of multi-headed creatures), bones, or organs will grow back. The process of regeneration requires but 1 round if the member(s) severed is (are) present and touching the creature, 2-8 turns otherwise. The reverse, <i>wither</i>, causes the member or organ touched to shrivel and cease functioning in 1 round, dropping off into dust in 2-8 turns. As is usual, creatures must be touched in order to have harmful effect occur. The material components of this spell are a prayer device and holy/unholy water."
     ),
     Spell('Restoration','C',7,
         cast=tp(3,R),
         duration=tp(1,P),
         sourcebook=V,
-        desc="When this spell is cast, the life energy level of the recipient creature is raised upwards by one. This subsumes previous life energy level drain of the creature by some force or monster. Thus, if a 10th level character had been struck by a wight and drained to 9th level, the Restoration spell would bring the character up to exactly the number of experience points necessary to restore him or her to 10th level once again. and restoring additional hit dice (or hit points) and level functions accordingly. Restoration is only effective if the spell is cast within 1 day/level of experience of the cleric casting it of the recipient's loss of life energy. The reverse, Energy Drain, draws away a life energy level (cf. such \"undead\" as spectre, wight, vampire). The Energy Drain requires the victim to be touched. A Restoration spell will restore the intelligence of a creature affected by a Feeblemind spell (q.v.)."
+        desc="When this spell is cast, the life energy level of the recipient creature is raised upwards by one. This subsumes previous life energy level drain of the creature by some force or monster. Thus, if a 10th level character had been struck by a wight and drained to 9th level, the <i>restoration</i> spell would bring the character up to exactly the number of experience points necessary to restore him or her to 10th level once again, and restoring additional hit dice (or hit points) and level functions accordingly. <i>Restoration</i> is only effective if the spell is cast within 1 day/level of experience of the cleric casting it of the recipient's loss of life energy. The reverse, <i>energy drain</i>, draws away a life energy level (cf. such \"undead\" as <a href=\"/creatures/spectre/\">spectre</a>, <a href=\"/creatures/wight/\">wight</a>, <a href=\"/creatures/vampire/\">vampire</a>). The <i>energy drain</i> requires the victim to be touched. A <i>restoration</i> spell will restore the intelligence of a creature affected by a <a href=\"/spells/feeblemind-druid-lvl-6/\"><i>feeblemind</i></a> spell."
     ),
     Spell('Resurrection','C',7,
         cast=tp(1,T),
         duration=tp(1,P),
         sourcebook=V,
-        desc="The cleric employing this spell is able to restore life and complete strength to the person he/she bestows the Resurrection upon. The person can have been dead up to 10 years cumulative per level of the cleric casting the spell, i.e. a 19th level cleric can resurrect the bones of a person dead up to 190 years. See raise dead for limitations on what persons can be raised. The reverse, Destruction, causes the victim of the spell to be instantly dead and turned to dust. Destruction requires a touch, either in combat or otherwise. The material components of the spell are the cleric's religious symbol and holy/unholy water. Employment of this spell makes it impossible for the cleric to cast further spells or engage in combat until he or she has had one day of bed rest for each level of experience of the person brought back to life or destroyed."
+        desc="The cleric employing this spell is able to restore life and complete strength to the person he/she bestows the <i>resurrection</i> upon. The person can have been dead up to 10 years cumulative per level of the cleric casting the spell, i.e. a 19th level cleric can resurrect the bones of a person dead up to 190 years. See <a href=\"/spells/raise-dead-cleric-lvl-5/\"><i>raise dead</i></a> for limitations on what persons can be raised. The reverse, <i>destruction</i>, causes the victim of the spell to be instantly dead and turned to dust. <i>Destruction</i> requires a touch, either in combat or otherwise. The material components of the spell are the cleric's religious symbol and holy/unholy water. Employment of this spell makes it impossible for the cleric to cast further spells or engage in combat until he or she has had one day of bed rest for each level of experience of the person brought back to life or destroyed."
     ),
     Spell('Succor','C',7,
         cast=tp(1,D),
         duration=tp(1,VA),
         sourcebook=U,
         desc=("By casting this spell, the cleric creates a powerful dweomer in some specially prepared object — a string of prayer beads, a small clay tablet, an ivory baton, etc. This object will radiate magic, for it contains the power to instantaneously transport its possessor to the sanctuary of the cleric who created its dweomer. Once the item is magicked, the cleric must give it willingly to an individual, at the same time informing him or her of a command word to be spoken when the item is to be used. To make use of the item, the recipient must speak the command word at the same time that he or she rends or breaks the item. When this is done, the individual and all that he or she is wearing and carrying will be instantly transported to the sanctuary of the cleric just as if the individual were capable of speaking a word of recall spell. No other creatures can be affected.\n\n"
-        "The reversed application of the spell enables the cleric to be transported to the vicinity of the possessor of the dweomered item when it is broken and the command word said. The cleric can choose not to be affected by this \"summons\" by making that decision at the instant when the transportation is to take place, but if he or she so chooses, then the opportunity is gone forever and the spell is wasted. The cost of preparing the special item (for either version of the spell) varies from 2,000 to 5,000 gold pieces."
+            "The reversed application of the spell enables the cleric to be transported to the vicinity of the possessor of the dweomered item when it is broken and the command word said. The cleric can choose not to be affected by this \"summons\" by making that decision at the instant when the transportation is to take place, but if he or she so chooses, then the opportunity is gone forever and the spell is wasted. The cost of preparing the special item (for either version of the spell) varies from 2,000 to 5,000 gold pieces."
         )
     ),
     Spell('Symbol','C',7,
@@ -867,18 +952,18 @@ cleric_spells = [
         duration=tp(0),
         duration_lvl=tp(1,T),
         sourcebook=V,
-        desc=("The cleric casting this spell inscribes a symbol in the air or upon any surface, according to his or her wish. The symbol glows for 1 turn for each level of experience of the cleric casting it. The particular symbol used can be selected by the cleric at the time of casting, selection being limited to:\n"
+        desc=("The cleric casting this spell inscribes a <i>symbol</i> in the air or upon any surface, according to his or her wish. The symbol glows for 1 turn for each level of experience of the cleric casting it. The particular symbol used can be selected by the cleric at the time of casting, selection being limited to:\n\n"
             "HOPELESSNESS	- Creatures seeing it must turn back in dejection and/or surrender to capture or attack unless they save versus magic. Its effects last for 3 to 12 turns.\n"
             "PAIN	- Creatures affected suffer -4 on \"to hit\" dice and -2 on dexterity ability score due to wracking pains. The effects last for 2-20 turns.\n"
-            "PERSUASION	- Creatures seeing the symbol become of the same alignment as and friendly to the cleric who scribed the symbol for from 1 to 20 turns unless a saving throw versus magic is made.\n"
-            "The material components of this spell are mercury and phosphorus. (cf. eighth level magic-user symbol spell."
+            "PERSUASION	- Creatures seeing the symbol become of the same alignment as and friendly to the cleric who scribed the symbol for from 1 to 20 turns unless a saving throw versus magic is made.\n\n"
+            "The material components of this spell are mercury and phosphorus. (cf. eighth level magic-user <a href=\"/spells/symbol-magic-user-lvl-8/\"><i>symbol</i></a> spell."
         )
     ),
     Spell('Wind Walk','C',7,
         cast=tp(1,R),
         duration_lvl=tp(6,T),
         sourcebook=V,
-        desc="This spell enables the cleric, and possibly one or two other persons. to alter the substance of his or her body to cloud-like vapours. A magical wind then wafts the cleric along at a speed of up to 60\" per turn, or as slow as 6\" per turn, as the spell caster wills. The Wind Walk spell lasts as long as the cleric desires, up to a maximum duration o 6 turns (one hour) per level of experience of the caster. For every 8 levels of experience the cleric has attained, up to 24, he or she is able to touch another and carry that person. or those two persons, along with the Wind Walk. Persons wind walking are not invisible but appear misty and are transparent. If fully clothed in white they are 80% likely to be mistaken for clouds, fog, vapours, etc. The material components of this spell are fire and holy/unholy water."
+        desc="This spell enables the cleric, and possibly one or two other persons. to alter the substance of his or her body to cloud-like vapours. A magical wind then wafts the cleric along at a speed of up to 60\" per turn, or as slow as 6\" per turn, as the spell caster wills. The <i>wind walk</i> spell lasts as long as the cleric desires, up to a maximum duration of 6 turns (one hour) per level of experience of the caster. For every 8 levels of experience the cleric has attained, up to 24, he or she is able to touch another and carry that person, or those two persons, along with the <i>wind walk</i>. Persons wind walking are not invisible but appear misty and are transparent. If fully clothed in white they are 80% likely to be mistaken for clouds, fog, vapours, etc. The material components of this spell are fire and holy/unholy water."
     )
 ]
 
@@ -887,7 +972,7 @@ druid_spells = [
         cast=tp(6,T),
         duration=tp(1,P),
         sourcebook=V,
-        desc="By means of this spell the druid is able to show any animal which is of at least animal intelligence (but not above semi-intelligent rating) that the druid is disposed to be its friend. If the animal does not make its saving throw versus magic immediately when the spell is begun, it will stand quietly while the druid finishes the spell. Thereafter, it will follow the druid about, and he or she can teach it 3 specific \"tricks\" or tasks for each point of intelligence it possesses. (Typical tasks are those taught a dog or similar pet, i.e. they cannot be complex.) Training for each such \"trick\" must be done over a period of 1 week, and all must be done within 3 months of acquiring the creature. During the training period the animal will not harm the druid, but if the creature is left alone for more than 3 days it will revert to its natural state and act accordingly. The druid may use this spell to attract up to 2 hit dice of animal(s) per level of experience he or she possesses. This also means that the druid can never have more hit dice of animals so attracted and trained than are equal to or less than twice his or her levels of experience. Only neutral animals can be attracted, befriended, and trained. The material components of this spell ore mistletoe and a piece of food attractive to the animal subject."
+        desc="By means of this spell the druid is able to show any animal which is of at least <i>animal</i> intelligence (but not above <i>semi</i>-intelligent rating) that the druid is disposed to be its friend. If the animal does not make its saving throw versus magic immediately when the spell is begun, it will stand quietly while the druid finishes the spell. Thereafter, it will follow the druid about, and he or she can teach it 3 specific \"tricks\" or tasks for each point of intelligence it possesses. (Typical tasks are those taught a dog or similar pet, i.e. they cannot be complex.) Training for each such \"trick\" must be done over a period of 1 week, and all must be done within 3 months of acquiring the creature. During the training period the animal will not harm the druid, but if the creature is left alone for more than 3 days it will revert to its natural state and act accordingly. The druid may use this spell to attract up to 2 hit dice of animal(s) per level of experience he or she possesses. This also means that the druid can never have more hit dice of animals so attracted and trained than are equal to or less than twice his or her levels of experience. Only <i>neutral</i> animals can be attracted, befriended, and trained. The material components of this spell ore mistletoe and a piece of food attractive to the animal subject."
     ),
     Spell('Ceremony','D',1,
         cast=tp(1,H),
@@ -926,7 +1011,7 @@ druid_spells = [
         cast=tp(3,S),
         duration=tp(12,R),
         sourcebook=V,
-        desc="Except as noted above, this spell is the same as the first level cleric spell of the same name."
+        desc="Except as noted above, this spell is the same as the <a href=\"/spells/detect-evil-cleric-lvl-1/\">first level cleric spell</a> of the same name."
     ),
     Spell('Detect Poison','D',1,
         cast=tp(1,R),
@@ -941,39 +1026,39 @@ druid_spells = [
         duration=tp(0),
         duration_lvl=tp(4,R),
         sourcebook=V,
-        desc='Upon casting this spell, the druid is able to detect snares & pits along the 1" wide by 4" long area of effect path and thus avoid such deadfalls. Note that in the underground only simple pits, not all forms of traps, would be detected by means of this spell. Outdoors, the spell detects all forms of traps - deadfalls, missile trips, snares, etc. The spell lasts 4 melee rounds for each level of experience of the druid casting it, i.e. 4 rounds at the 1st level, 8 at the 2nd, 12 (1 turn plus 2 rounds) at the 3rd, etc.'
+        desc='Upon casting this spell, the druid is able to <i>detect snares & pits</i> along the 1" wide by 4" long area of effect path and thus avoid such deadfalls. Note that in the underground only simple pits, not all forms of traps, would be detected by means of this spell. Outdoors, the spell detects all forms of traps — deadfalls, missile trips, snares, etc. The spell lasts 4 melee rounds for each level of experience of the druid casting it, i.e. 4 rounds at the 1st level, 8 at the 2nd, 12 (1 turn plus 2 rounds) at the 3rd, etc.'
     ),
     Spell('Entangle','D',1,
         cast=tp(3,S),
         duration=tp(1,T),
         sourcebook=V,
-        desc="By means of this spell the druid is able to cause plants in the area of effect to entangle creatures within the area. The grasses, weeds, bushes, and even trees wrap, twist, and entwine about creatures, thus holding them fast for the duration of the spell. If any creature in the area of effect makes its saving throw, the effect of the spell is to slow its movement by 50% for the spell duration."
+        desc="By means of this spell the druid is able to cause plants in the area of effect to <i>entangle</i> creatures within the area. The grasses, weeds, bushes, and even trees wrap, twist, and entwine about creatures, thus holding them fast for the duration of the spell. If any creature in the area of effect makes its saving throw, the effect of the spell is to slow its movement by 50% for the spell duration."
     ),
     Spell('Faerie Fire','D',1,
         cast=tp(3,S),
         duration=tp(0),
         duration_lvl=tp(4,R),
         sourcebook=V,
-        desc="When the druid casts this spell, he or she outlines an object or creature with a pale glowing light. The completeness of the lining is dependent upon the number of linear feet the druid is able to affect, about 12' per level (i.e. one 6' man or two 3' kobolds). If there is sufficient power, several objects or creatures can be covered by the faerie fire, but one must be fully outlined before the next is begun, and all must be within the area of effect. Outlined objects or creatures (including those otherwise invisible) are visible at 8\" in the dark, 4\" if the viewer is near a bright light source. Outlined creatures are easier to strike, thus opponents gain +2 on \"to hit\" dice. The faerie fire can be blue, green, or violet according to the word of the druid at the time he or she casts the spell. The faerie fire does not itself cause any harm to the object or creature lined."
+        desc="When the druid casts this spell, he or she outlines an object or creature with a pale glowing light. The completeness of the lining is dependent upon the number of linear feet the druid is able to affect, about 12' per level (i.e. one 6' man or two 3' kobolds). If there is sufficient power, several objects or creatures can be covered by the <i>faerie fire</i>, but one must be fully outlined before the next is begun, and all must be within the area of effect. Outlined objects or creatures (including those otherwise invisible) are visible at 8\" in the dark, 4\" if the viewer is near a bright light source. Outlined creatures are easier to strike, thus opponents gain +2 on \"to hit\" dice. The <i>faerie fire</i> can be blue, green, or violet according to the word of the druid at the time he or she casts the spell. The <i>faerie fire</i> does not itself cause any harm to the object or creature lined."
     ),
     Spell('Invisibility to Animals','D',1,
         cast=tp(4,S),
         duration=tp(1,T),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="When an Invisibility To Animals spell is cast by a druid, the recipient of the magic becomes totally undetectable with respect to normal animals with intelligence under 6. Normal animals includes giant-sized varieties, but it excludes any with magical abilities or powers. The magicked individual is able to walk amongst animals or pass through them as if he or she did not exist. For example, this individual could stand before the hungriest of lions or a tyrannosaurus rex and not be molested or even noticed. However, a nightmare, hell hound, or winter wolf would certainly be aware of the individual. The material component of this spell is holly rubbed over the individual."
+        desc="When an <i>invisibility to animals</i> spell is cast by a druid, the recipient of the magic becomes totally undetectable with respect to normal animals with intelligence under 6. Normal animals includes giant-sized varieties, but it excludes any with magical abilities or powers. The magicked individual is able to walk amongst animals or pass through them as if he or she did not exist. For example, this individual could stand before the hungriest of <a href=\"/creatures/lion/\">lions</a> or a <a href=\"/creatures/tyrannosaurus/\">tyrannosaurus rex</a> and not be molested or even noticed. However, a <a href=\"/creatures/nightmare/\">nightmare</a>, <a href=\"/creatures/hell-hound/\">hell hound</a>, or <a href=\"/creatures/winter-wolf/\">winter wolf</a> would certainly be aware of the individual. The material component of this spell is holly rubbed over the individual."
     ),
     Spell('Locate Animals','D',1,
         cast=tp(1,R),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc='The druid with a Locate Animals spell is able to determine the direction and distance of any of the desired animals within the area of effect. The sought after animal can be of any sort, but the druid must concentrate on the sort desired. The cleric faces in a direction, thinks of the animal desired, and he or she then knows if any such animal is within spell range. During a round of spell effect duration, the druid must face in only one direction, i.e., only a 2" wide path can be known. The spell lasts 1 round per level of experience of the druid, while the length of the path is 2" per level of experience.'
+        desc='The druid with a <i>locate animals</i> spell is able to determine the direction and distance of any of the desired animals within the area of effect. The sought after animal can be of any sort, but the druid must concentrate on the sort desired. The druid faces in a direction, thinks of the animal desired, and he or she then knows if any such animal is within spell range. During a round of spell effect duration, the druid must face in only one direction, i.e., only a 2" wide path can be known. The spell lasts 1 round per level of experience of the druid, while the length of the path is 2" per level of experience.'
     ),
     Spell('Pass Without Trace','D',1,
         cast=tp(1,R),
         duration_lvl=tp(1,T),
         sourcebook=V,
-        desc="When this spell is cast, the recipient can move through any type of terrain - mud, snow, dust, etc. - and leave neither footprint nor scent. Thus, tracking a person or other creature covered by this dweomer is impossible. The material components of this spell are a leaf of mistletoe (which must be burned thereafter and the ashes powdered and scattered) and a sprig of pine or evergreen. Note: The area which is passed over will radiate a dweomer for 6-36 turns after the affected creature passes."
+        desc="When this spell is cast, the recipient can move through any type of terrain — mud, snow, dust, etc. — and leave neither footprint nor scent. Thus, tracking a person or other creature covered by this dweomer is impossible. The material components of this spell are a leaf of mistletoe (which must be burned thereafter and the ashes powdered and scattered) and a sprig of pine or evergreen. <i>Note</i>: The area which is passed over will radiate a dweomer for 6-36 turns after the affected creature passes."
     ),
     Spell('Precipitation','D',1,
         cast=tp(3,S),
@@ -985,62 +1070,76 @@ druid_spells = [
         cast=tp(1,R),
         duration_lvl=tp(2,H),
         sourcebook=V,
-        desc="When a Predict Weather spell is cast by a druid, he or she gains 100% accurate knowledge of the weather (sky, temperature, precipitation) in a nine square mile area centring on the druid. For each level of experience of the druid casting the spell, two hours advance weather can be forecast. Thus, at 1st level the druid knows what the weather will be for two hours; at second level he or she knows the weather for 4 hours in advance, etc."
+        desc="When a <i>predict weather</i> spell is cast by a druid, he or she gains 100% accurate knowledge of the weather (sky, temperature, precipitation) in a nine square mile area centering on the druid. For each level of experience of the druid casting the spell, two hours advance weather can be forecast. Thus, at 1st level the druid knows what the weather will be for two hours; at second level he or she knows the weather for 4 hours in advance, etc."
     ),
     Spell('Purify Water','D',1,
         cast=tp(1,R),
         duration=tp(1,P),
         sourcebook=V,
-        desc="This spell makes dirty, contaminated water clean and pure, suitable for consumption. Up to one cubic foot per level of the druid casting the spell can be thus purified. The reverse of the spell, Contaminate Water, works in exactly the same manner, and even holy/unholy water can be spoiled by its effects."
+        desc="This spell makes dirty, contaminated water clean and pure, suitable for consumption. Up to one cubic foot per level of the druid casting the spell can be thus purified. The reverse of the spell, <i>contaminate water</i>, works in exactly the same manner, and even holy/unholy water can be spoiled by its effects."
     ),
     Spell('Shillelagh','D',1,
         cast=tp(1,S),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="This spell enables the druid to change his own oaken cudgel into a magical weapon which is +1 to hit and inflicts 2-8 hit points of damage on opponents up to man-sized, 2-5 hit points of damage on larger opponents. The druid must wield the shillelagh, of course. The material components of this spell are an oaken club, any mistletoe, and a shamrock leaf."
+        desc="This spell enables the druid to change his own oaken cudgel into a magical weapon which is +1 to hit and inflicts 2-8 hit points of damage on opponents up to man-sized, 2-5 hit points of damage on larger opponents. The druid must wield the <i>shillelagh</i>, of course. The material components of this spell are an oaken club, any mistletoe, and a shamrock leaf."
     ),
     Spell('Speak With Animals','D',1,
         cast=tp(3,S),
         duration_lvl=tp(2,R),
         sourcebook=V,
-        desc="Except as noted above, this spell is the same as the second level cleric spell of the same name."
+        desc="Except as noted above, this spell is the same as the <a href=\"/spells/speak-with-animals-cleric-lvl-2/\">second level cleric spell</a> of the same name."
     ),
     Spell('Barkskin','D',2,
         cast=tp(3,S),
         duration=tp(4,R),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="When the druid casts the Barkskin spell upon a creature, its armour class improves 1 place because the creature's skin becomes as tough as bark. In addition, saving throws versus all attack forms except magic increase by +1. This spell can be placed on the druid casting it or on any other creature he or she touches. In addition to mistletoe. the caster must have a handful of bark from an oak as the material component of the spell."
+        desc="When the druid casts the <i>barkskin</i> spell upon a creature, its armour class improves 1 place because the creature's skin becomes as tough as bark. In addition, saving throws versus all attack forms except magic increase by +1. This spell can be placed on the druid casting it or on any other creature he or she touches. In addition to mistletoe. the caster must have a handful of bark from an oak as the material component of the spell."
     ),
     Spell('Charm Person Or Mammal','D',2,
         cast=tp(4,S),
         duration=tp(1,VA),
-        sourcebook=V
+        sourcebook=V,
+        desc=("This spell will affect any single person or mammal it is cast upon. The creature then will regard the druid who cast the spell as a trusted friend and ally to be heeded and protected. The spell does not enable the druid to control the charmed creature as if it were an automaton, but any word or action of the druid will be view in its most favorable way. Thus, a charmed creature would not obey a suicide command, but might believe the druid if assured that the only chance to save the druid's life is if the creature holds back an onrushing red dragon for \"just a round or two\". Note also that the spell does not empower the druid with linguistic capabilites beyond those he or she normally possesses. The duration of the spell is a function of the charmed creature's intelligence, and it is tied to the saving throw. The spell may be broken if a saving throw is made, and this saving throw is checked on a periodic basis according to the creature's intelligence:\n\n"
+            "<table>"
+            "<tr><th>Intelligence Score</th><th>Period Between Checks</th></tr>"
+            "<tr><td>3 or less</td><td>3 months</td></tr>"
+            "<tr><td>4 to 6</td><td>2 months</td></tr>"
+            "<tr><td>7 to 9</td><td>1 month</td></tr>"
+            "<tr><td>10 to 12</td><td>3 weeks</td></tr>"
+            "<tr><td>13 to 14</td><td>2 weeks</td></tr>"
+            "<tr><td>15 to 16</td><td>1 week</td></tr>"
+            "<tr><td>17</td><td>3 days</td></tr>"
+            "<tr><td>18</td><td>2 days</td></tr>"
+            "<tr><td>19 or more</td><td>1 day</td></tr>\n\n"
+            "If the druid harms, or attempts to harm, the charmed creature by some overt action, or if a <a href=\"/spells/dispel-magic-cleric-lvl-3/\"><i>dispel magic</i></a> is successfully cast upon the charmed creature, the <i>charm</i> will be broken automatically. The spell affects all mammalian animals and persons. The term <i>person</i> includes all bipedal human and humanoid creatures of approximately man-size, or less than man-size, including those affected by the <a href=\"/spells/hold-person-cleric-lvl-2/\"><i>hold person</i></a> spell. If the recipient of the <i>charm person/charm mammal</i> spell makes its saving throw versus the spell, its effect is negated."
+        )
     ),
     Spell('Create Water','D',2,
         cast=tp(1,T),
         duration=tp(1,P),
         sourcebook=V,
-        desc="The druid can create pure, drinkable water by means of a Create Water spell. He or she creates 1 cubic foot of water for each level of experience attained. The water can be created at a maximum distance of 1\" from the druid."
+        desc="The druid can create pure, drinkable water by means of a <i>create water</i> spell. He or she creates 1 cubic foot of water for each level of experience attained. The water can be created at a maximum distance of 1\" from the druid."
     ),
     Spell('Cure Light Wounds','D',2,
         cast=tp(4,S),
         duration=tp(1,P),
         sourcebook=V,
-        desc="With the exception of the fact that the druid must have mistletoe (of any sort) to effect this spell, it is the same as the first level cleric Cure Light Wounds spell."
+        desc="With the exception of the fact that the druid must have mistletoe (of any sort) to effect this spell, it is the same as the first level cleric <a href=\"/spells/cure-light-wounds-cleric-lvl-1/\"><i>cure light wounds</i></a> spell."
     ),
     Spell('Feign Death','D',2,
         cast=tp(3,S),
         duration=tp(4,R),
         duration_lvl=tp(2,R),
         sourcebook=V,
-        desc="Except as noted above, this spell is the same as the third level magic-user Feign Death spell (q.v.). The material component is a piece of dead oak leaf (in addition to mistletoe, of course)."
+        desc="Except as noted above, this spell is the same as the third level magic-user <a href=\"/spells/feign-death-magic-user-lvl-3/\"><i>feign death</i></a> spell. The material component is a piece of dead oak leaf (in addition to mistletoe, of course)."
     ),
     Spell('Fire Trap','D',2,
         cast=tp(1,T),
         duration=tp(1,P),
         sourcebook=V,
-        desc="This spell is the same as the fourth level magic-user Fire Trap spell (q.v.) except as shown above and for the fact that the material components are holly berries and a stick of charcoal to trace the outline of the closure."
+        desc="This spell is the same as the fourth level magic-user <a href=\"/spells/fire-trap-magic-user-lvl-4/\"><i>fire trap</i></a> spell except as shown above and for the fact that the material components are holly berries and a stick of charcoal to trace the outline of the closure."
     ),
     Spell('Flame Blade','D',2,
         cast=tp(3,S),
@@ -1057,7 +1156,23 @@ druid_spells = [
     Spell('Heat Metal','D',2,
         cast=tp(4,S),
         duration=tp(7,R),
-        sourcebook=V
+        sourcebook=V,
+        desc=("By means of the <i>heat metal</i> spell, the druid is able to excite the molecules of ferrous metal (iron, iron alloys, steel) and thus cause the affected metal to become hot. On the first round of the spell, the effect is merely to cause the metal to be very warm and uncomfortable to touch, and this is also the effect on the last melee round of the spell's duration. The second and sixth (next to last) round effect is to cause blisters and damage; the third, fourth, and fifth rounds the metal becomes searing hot, causing disability and damage to exposed flesh, as shown below:\n\n"
+            "<table>"
+            "<tr><th>Metal Temperature</th><th>Damage Per Round</th><th>Disability Per Round</th></tr>"
+            "<tr><td>very warm</td><td>none</td><td>none</td></tr>"
+            "<tr><td>hot</td><td>1-4 hit points</td><td>none</td></tr>"
+            "<tr><td>searing</td><td>2-8 hit points</td><td>hands or feet\n2-8 days\n\nhead\n1-4 turns unconsciousness\n\nbody\n1-4 days</td></tr>\n\n"
+            "</table>"
+            "Note also that materials such as wood, leather, or flammable cloth will smoulder and burn if exposed to searing hot metal, and such materials will then cause searing damage to exposed flesh on the next round. <i>Fire resistance</i> (potion or ring) or a <a href=\"/spells/protection-from-fire-druid-lvl-3/\"><i>protection from fire</i></a> spell totally negates the effects of a <i>heat metal</i> spell, as will immersion in water or snow, or exposure to a <a href=\"/spells/cone-of-cold-magic-user-lvl-5/\"><i>cold</i></a> or <a href=\"/spells/ice-storm-magic-user-lvl-4/\"><i>ice storm</i></a> spell. For each level of experience of the druid casting the spell, he or she is able to affect the metal of one man-sized creature, i.e. amrs and armor, or a single mass of metal equal to 500 gold pieces in weight, cumulative. The reverse, <i>chill metal</i>, counters a <i>heat metal</i> spell or else causes metal to act as follows:\n\n"
+            "<table>"
+            "<tr><th>Metal Temperature</th><th>Damage Per Round</th><th>Disability</th></tr>"
+            "<tr><td>cold</td><td>none</td><td>none</td></tr>"
+            "<tr><td>icy</td><td>1-2 hit points</td><td>none</td></tr>"
+            "<tr><tr>freezing</td><td>1-4 hit points</td><td>amputation of fingers, toes, nose, or ears</td></tr>"
+            "</table>\n\n"
+            "The <i>chill metal</i> spell is countered by a <a href=\"/spells/resist-cold-cleric-lvl-1/\"><i>resist cold</i></a> spell, or by any great heat, i.e. proximity to a blazing fire (not a mere torch), a magical <i>flaming sword</i>, a <a href=\"/spells/wall-of-fire-druid-lvl-5/\"><i>wall of fire</i></a>, etc."
+        )
     ),
     Spell('Locate Plants','D',2,
         cast=tp(1,R),
@@ -1069,13 +1184,13 @@ druid_spells = [
         cast=tp(4,S),
         duration_lvl=tp(4,R),
         sourcebook=V,
-        desc="This spell causes a misty vapour to arise around the druid. It persists in this locale for 4 rounds per level of experience of the druid casting the spell, and it reduces visibility of any sort (including infravision) to 2' to 8' (2d4). The area of effect is a cubic progression based on the druid's level of experience, a 1\" cube at 1st level, a 2\" cube at 2nd level, a 3\" cube at 3rd level, and so on. Underground, the height of the vapour is restricted to 1\", although the length and breadth of the cloud is not so limited. A strong wind will cut the duration of an Obscurement spell by 75%."
+        desc="This spell causes a misty vapor to arise around the druid. It persists in this locale for 4 rounds per level of experience of the druid casting the spell, and it reduces visibility of any sort (including infravision) to 2' to 8' (2d4). The area of effect is a cubic progression based on the druid's level of experience, a 1\" cube at 1st level, a 2\" cube at 2nd level, a 3\" cube at 3rd level, and so on. Underground, the height of the vapor is restricted to 1\", although the length and breadth of the cloud is not so limited. A strong wind will cut the duration of an <i>obscurement</i> spell by 75%."
     ),
     Spell('Produce Flame','D',2,
         cast=tp(4,S),
         duration_lvl=tp(2,R),
         sourcebook=V,
-        desc="A bright flame, equal in brightness to a torch, springs forth from the druid's palm when he or she casts a Produce Flame spell. This magical flame lasts for 2 melee rounds for each level of the druid casting the spell. The flame does not harm the druid's person. but it is hot, and it will cause combustion of inflammable materials (paper, cloth, dry wood, oil, etc.). The druid is capable of hurling the magical flame as a missile, with a range of 4\". The flame will flash on impact, igniting combustibles within a 3' diameter of its centre of impact. and then extinguish itself. The druid can cause it to go out any time he or she desires, but fire caused by the flame cannot be so extinguished."
+        desc="A bright flame, equal in brightness to a torch, springs forth from the druid's palm when he or she casts a <i>produce flame</i> spell. This magical flame lasts for 2 melee rounds for each level of the druid casting the spell. The flame does not harm the druid's person. but it is hot, and it will cause combustion of inflammable materials (paper, cloth, dry wood, oil, etc.). The druid is capable of hurling the magical flame as a missile, with a range of 4\". The flame will flash on impact, igniting combustibles within a 3' diameter of its centre of impact. and then extinguish itself. The druid can cause it to go out any time he or she desires, but fire caused by the flame cannot be so extinguished."
     ),
     Spell('Reflecting Pool','D',2,
         cast=tp(2,H),
@@ -1098,19 +1213,19 @@ druid_spells = [
         cast=tp(4,S),
         duration_lvl=tp(1,T),
         sourcebook=V,
-        desc="The spell caster must use a length of vine, a stick, pole, rope, or similar object to cast this magic upon. The Trip spell causes the object to rise slightly off the ground or floor it is resting on and trip creatures crossing it if they fail to make their saving throw versus magic. Note that only as many creatures can be tripped as are actually stepping across the magicked object, i.e. a 3' long piece of rope could trip only 1 man-sized creature. Creatures moving at a very rapid pace (running) when tripped will take 1-6 (d6) hit points of damage and be stunned for 2-5 (d4+1) rounds if the surface they full upon is very hard, but if it is turf or non-hard they will merely be stunned for 2-5 segments. Very large creatures such as elephants will not be at all affected by a Trip. The object magicked will continue to trip all creatures passing over it, including the spell caster, for as long as the spell duration lasts. Creatures aware of the object and its potential add +4 to their saving throw when crossing it. The object is 80% undetectable without magical means of detection."
+        desc="The spell caster must use a length of vine, a stick, pole, rope, or similar object to cast this magic upon. The <i>trip</i> spell causes the object to rise slightly off the ground or floor it is resting on and trip creatures crossing it if they fail to make their saving throw versus magic. Note that only as many creatures can be tripped as are actually stepping across the magicked object, i.e. a 3' long piece of rope could trip only 1 man-sized creature. Creatures moving at a very rapid pace (running) when tripped will take 1-6 (d6) hit points of damage and be stunned for 2-5 (d4+1) rounds if the surface they full upon is very hard, but if it is turf or non-hard they will merely be stunned for 2-5 segments. Very large creatures such as elephants will not be at all affected by a <i>trip</i>. The object magicked will continue to trip all creatures passing over it, including the spell caster, for as long as the spell duration lasts. Creatures aware of the object and its potential add +4 to their saving throw when crossing it. The object is 80% undetectable without magical means of detection."
     ),
     Spell('Warp Wood','D',2,
         cast=tp(4,S),
         duration=tp(1,P),
         sourcebook=V,
-        desc="When this spell is cast the druid causes a volume of wood to bend and warp, permanently destroying its straightness, form and strength. The range of a Warp Wood spell is 1\" for each level of experience of the druid casting it. It affects approximately a fifteen inch shaft of wood of up to one inch diameter per level of the druid. Thus, at 1st level, a druid might be able to warp a hand axe handle, or four crossbow bolts, at 5th level he or she could warp the shaft of a typical magic spear. Note that boards or planks can also be affected, causing a door to be sprung or a boat or ship to leak."
+        desc="When this spell is cast the druid causes a volume of wood to bend and warp, permanently destroying its straightness, form and strength. The range of a <i>warp wood</i> spell is 1\" for each level of experience of the druid casting it. It affects approximately a fifteen inch shaft of wood of up to one inch diameter per level of the druid. Thus, at 1st level, a druid might be able to warp a hand axe handle, or four crossbow bolts, at 5th level he or she could warp the shaft of a typical magic spear. Note that boards or planks can also be affected, causing a door to be sprung or a boat or ship to leak."
     ),
     Spell('Call Lightning','D',3,
         cast=tp(1,T),
         duration_lvl=tp(1,T),
         sourcebook=V,
-        desc="When a Call Lightning spell is cast, there must be a storm of some sort in the area - a rain shower, clouds and wind, hot and cloudy conditions, or even a tornado. The druid is then able to call down belts of lightning from sky to ground. Each bolt will cause damage equal to 2 eight-sided dice (2d8) plus 1 like die (d8) for each level of experience of the druid casting the spell. Thus, a 4th level druid calls down a six-die (6d8) bolt. The bolt of lightning flashes down in a perpendicular stroke at whatever distance the spell caster decides, up to the 36\" radial distance maximum. Any creature within a 1\" radius of the path or the point where the lightning strikes will take full damage, unless a saving throw is made, in which case only one-half damage is taken. Full/half damage refers to the number of hit dice of the lightning bolt, i.e. if it is of eight dice strength, the victim will take either eight dice (8d8) or four dice (4d8), if the saving throw is made, of damage. The druid is able to call one bolt of lightning every 10 melee rounds (1 turn), to a maximum number of turns equal to the level of experience he or she has attained, i.e. 1 bolt/turn for each level of experience. Note: This spell is normally usable outdoors only."
+        desc="When a <i>call lightning</i> spell is cast, there must be a storm of some sort in the area — a rain shower, clouds and wind, hot and cloudy conditions, or even a tornado. The druid is then able to call down belts of lightning from sky to ground. Each bolt will cause damage equal to 2 eight-sided dice (2d8) plus 1 like die (d8) for each level of experience of the druid casting the spell. Thus, a 4th level druid calls down a six-die (6d8) bolt. The bolt of lightning flashes down in a perpendicular stroke at whatever distance the spell caster decides, up to the 36\" radial distance maximum. Any creature within a 1\" radius of the path or the point where the lightning strikes will take full damage, unless a saving throw is made, in which case only one-half damage is taken. Full/half damage refers to the number of hit dice of the lightning bolt, i.e. if it is of eight dice strength, the victim will take either eight dice (8d8) or four dice (4d8), if the saving throw is made, of damage. The druid is able to call one bolt of lightning every 10 melee rounds (1 turn), to a maximum number of turns equal to the level of experience he or she has attained, i.e. 1 bolt/turn for each level of experience. Note: This spell is normally usable outdoors only."
     ),
     Spell('Cloudburst','D',3,
         cast=tp(5,S),
@@ -1122,13 +1237,13 @@ druid_spells = [
         cast=tp(1,R),
         duration=tp(1,P),
         sourcebook=V,
-        desc="This spell is the same as the 3rd level cleric Cure Disease spell (q.v.), with the exception that the druid must have mistletoe to effect it. It is reversible to Cause Disease also."
+        desc="This spell is the same as the 3rd level cleric <a href=\"/spells/cure-disease-cleric-lvl-3/\"><i>cure disease</i></a> spell, with the exception that the druid must have mistletoe to effect it. It is reversible to <i>cause disease</i> also."
     ),
     Spell('Hold Animal','D',3,
         cast=tp(5,S),
         duration_lvl=tp(2,R),
         sourcebook=V,
-        desc="By means of this spell the druid holds one to four animals rigid. Animals affected are normal or giant-sized mammals, birds, or reptiles, but not monsters such as centaurs, gorgons, harpies, naga, etc. That is, apes, bears, crocodiles, dogs, eagles, foxes, giant beavers, and similar animals are subject to this spell. The hold lasts for 2 melee rounds per level of experience of the druid casting it. It is up to the druid as to how many animals he or she wishes to hold with the spell, but the greater the number, the better chance each will have of not being affected by the spell. Note that a maximum body weight of 400 pounds (100 pounds with respect to non-mammals)/animal/level of experience of the druid can be affected, i.e. an 8th level druid can affect up to four 3,200 pound mammals or a like number of 800 pound non-mammals such as birds or reptiles. Each animal gets a saving throw: if only 1 is the subject of the spell, it has a penalty of -4 on its die roll to save; if 2 are subject, they each receive a penalty of -2 on their die rolls; if 3 are subject, they each receive a penalty of -1 on their die rolls; if 4 are subject, each makes a normal saving throw."
+        desc="By means of this spell the druid holds one to four animals rigid. Animals affected are normal or giant-sized mammals, birds, or reptiles, but not monsters such as centaurs, gorgons, harpies, naga, etc. That is, apes, bears, crocodiles, dogs, eagles, foxes, giant beavers, and similar animals are subject to this spell. The <i>hold</i> lasts for 2 melee rounds per level of experience of the druid casting it. It is up to the druid as to how many animals he or she wishes to <i>hold</i> with the spell, but the greater the number, the better chance each will have of not being affected by the spell. Note that a maximum body weight of 400 pounds (100 pounds with respect to non-mammals)/animal/level of experience of the druid can be affected, i.e. an 8th level druid can affect up to four 3,200 pound mammals or a like number of 800 pound non-mammals such as birds or reptiles. Each animal gets a saving throw: if only 1 is the subject of the spell, it has a penalty of -4 on its die roll to save; if 2 are subject, they each receive a penalty of -2 on their die rolls; if 3 are subject, they each receive a penalty of -1 on their die rolls; if 4 are subject, each makes a normal saving throw."
     ),
     Spell('Know Alignment','D',3,
         cast=tp(5,S),
@@ -1140,31 +1255,31 @@ druid_spells = [
         cast=tp(5,S),
         duration=tp(1,P),
         sourcebook=V,
-        desc="This spell is the same as the 4th level cleric Neutralize Poison spell (q.v.)."
+        desc="This spell is the same as the 4th level cleric <a href=\"/spells/neutralize-poison-cleric-lvl-4/\"><i>neutralize poison</i></a> spell (q.v.)."
     ),
     Spell('Plant Growth','D',3,
         cast=tp(1,R),
         duration=tp(1,P),
         sourcebook=V,
-        desc="When a Plant Growth spell is cast by the druid, he or she causes normal vegetation a grow, entwine, and entangle to form a thicket or jungle which creatures must hack or force a way through at a movement rate of 1\" per, or 2\" per with respect to larger than man-sized creatures. Note that the area must have brush and trees in it in order to allow this spell to go into effect. Briars, bushes, creepers, lianas, roots, saplings, thistles, thorn, trees, vines, and weeds become so thick and overgrown in the area of effect as to form a barrier. The area of effect is 2\" x 2\" square per level of experience of the druid, in any square or rectangular shape that the druid decides upon at the time of the spell casting. Thus an 8th level druid can affect a maximum area of 16\" x 16\" square, a 32\" x 8\" rectangle, a 64\" X 4\" rectangle, 128\" x 2\" rectangle, etc. The spell's effects persist in the area until it is cleared by labour, fire, or such magical means as a Dispel Magic spell (q.v.)"
+        desc="When a <i>plant growth</i> spell is cast by the druid, he or she causes normal vegetation to grow, entwine, and entangle to form a thicket or jungle which creatures must hack or force a way through at a movement rate of 1\" per, or 2\" per with respect to larger than man-sized creatures. Note that the area must have brush and trees in it in order to allow this spell to go into effect. Briars, bushes, creepers, lianas, roots, saplings, thistles, thorn, trees, vines, and weeds become so thick and overgrown in the area of effect as to form a barrier. The area of effect is 2\" x 2\" square per level of experience of the druid, in any square or rectangular shape that the druid decides upon at the time of the spell casting. Thus an 8th level druid can affect a maximum area of 16\" x 16\" square, a 32\" x 8\" rectangle, a 64\" X 4\" rectangle, 128\" x 2\" rectangle, etc. The spell's effects persist in the area until it is cleared by labor, fire, or such magical means as a <a href=\"/spells/dispel-magic-cleric-lvl-3/\"><i>dispel magic</i></a> spell."
     ),
     Spell('Protection From Fire','D',3,
         cast=tp(5,S),
         duration_lvl=tp(1,T),
         sourcebook=V,
-        desc="The effect of a Protection From Fire spell differs according to the recipient of the magic - the druid or some other creature. If the spell is cast upon the druid, it confers complete invulnerability to normal fires (torches, bonfires, oil fires, and the like) and to exposure to magical fires such as demon fire, burning hands, fiery dragon breath, Fireball, Fire Seeds, Fire Storm, Flame Strike, hell hound breath, Meteor Swarm, pyrohydra breath, etc. until an accumulation of 12 hit points of potential damage per level of experience of the druid has been absorbed by the Protection From Fire spell, at which time the spell is negated. Otherwise the spell lasts for 1 turn per level of experience of the druid. If the spell is cast upon another creature, it gives invulnerability to normal fire, gives a bonus of +4 on saving throw die rolls made versus fire attacks, and reduces damage sustained from magical fires by 50%."
+        desc="The effect of a <i>protection from fire</i> spell differs according to the recipient of the magic — the druid or some other creature. If the spell is cast upon the druid, it confers complete invulnerability to normal fires (torches, bonfires, oil fires, and the like) and to exposure to magical fires such as demon fire, <a href=\"/spells/burning-hands-magic-user-lvl-1/\"><i>burning hands</i></a>, fiery dragon breath, <a href=\"/spells/fireball-magic-user-lvl-3/\"><i>fire ball</i></a>, <a href=\"/spells/fire-seeds-druid-lvl-6/\"><i>fire seeds</i></a>, <a href=\"/spells/fire-storm-druid-lvl-7/\"><i>fire storm</i></a>, <a href=\"/spells/flame-strike-cleric-lvl-5/\"><i>flame strike</i></a>, hell hound breath, <a href=\"/spells/meteor-swarm-magic-user-lvl-9/\"><i>meteor swarm</i></a>, pyrohydra breath, etc. until an accumulation of 12 hit points of potential damage per level of experience of the druid has been absorbed by the <i>protection from fire</i> spell, at which time the spell is negated. Otherwise the spell lasts for 1 turn per level of experience of the druid. If the spell is cast upon another creature, it gives invulnerability to normal fire, gives a bonus of +4 on saving throw die rolls made versus fire attacks, and reduces damage sustained from magical fires by 50%."
     ),
     Spell('Pyrotechnics','D',3,
         cast=tp(5,S),
         duration=tp(1,VA),
         sourcebook=V,
-        desc="A Pyrotechnics spell can have either of two effects. It produces a flashing and fiery burst of glowing, coloured aerial fireworks which lasts 1 segment per experience level of the druid casting the spell and temporarily blinds those creatures in the area of effect or under it or within 12\" of the area (and in any event in unobstructed line of sight); or it causes a thick writhing stream of smoke to arise from the fire source of the spell and form a choking cloud which lasts for 1 round per experience level of the druid casting it, covering a roughly globular area from the ground or floor up (or conforming to the shape of a confined area), which totally obscures vision beyond 2'. The spell requires a fire of some sort in range. The area of Pyrotechnics effect is 10 times the volume of the fire source with respect to fireworks, 100 times with respect to smoke. In either case, the fire source is immediately extinguished by the employment of the spell."
+        desc="A <i>pyrotechnics</i> spell can have either of two effects. It produces a flashing and fiery burst of glowing, coloured aerial <i>fireworks</i> which lasts 1 segment per experience level of the druid casting the spell and temporarily blinds those creatures in the area of effect or under it or within 12\" of the area (and in any event in unobstructed line of sight); or it causes a thick writhing stream of <i>smoke</i> to arise from the fire source of the spell and form a choking cloud which lasts for 1 round per experience level of the druid casting it, covering a roughly globular area from the ground or floor up (or conforming to the shape of a confined area), which totally obscures vision beyond 2'. The spell requires a fire of some sort in range. The area of <i>pyrotechnics</i> effect is 10 times the volume of the fire source with respect to <i>fireworks</i>, 100 times with respect to <i>smoke</i>. In either case, the fire source is immediately extinguished by the employment of the spell."
     ),
     Spell('Snare','D',3,
         cast=tp(3,R),
         duration=tp(1,P),
         sourcebook=V,
-        desc="This spell enables the druid to make a snare which is 90% undetectable without magical aid. The snare can be made from any supple vine, a thong, or a rope. When the Snare spell is cast upon it, the cordlike object blends with the background of its location. One end of the snare is tied in a loop which will contract about 1 or more of the limbs of any creature stepping inside the circle (note that the head of a worm or snake could also be thus ensnared). If a strong and supple tree is nearby, the snare will be fastened to it, and the dweomer of the spell will cause it to bend and then straighten when the loop is triggered, thus causing 1-6 hit points of damage to the creature trapped, and lifting off the ground by the trapped member(s) (or strangling it if the head/neck triggered the snare). If no such sapling or tree is available, the cord-like object will tighten upon the member(s) and then enwrap the entire creature, doing no damage, but tightly binding it. The snare is magical, so for 1 hour it is breakable only by storm giant or greater strength (23); each hour thereafter, the snare material loses magic so as to become 1 point more breakable per hour - 22 after 2 hours, 21 after 3, 20 after 4 - until 6 full hours have elapsed. At that time, 18 strength will break the bonds. After 12 hours have elapsed, the materials of the snare lose all of the magical properties, and the loop opens, freeing anything it had held. The druid must have a snake skin and a piece of sinew from a strong animal to weave into the cord-like object from which he or she will make the snare. Only mistletoe is otherwise needed."
+        desc="This spell enables the druid to make a <i>snare</i> which is 90% undetectable without magical aid. The <i>snare</i> can be made from any supple vine, a thong, or a rope. When the <i>snare</i> spell is cast upon it, the cordlike object blends with the background of its location. One end of the <i>snare</i> is tied in a loop which will contract about 1 or more of the limbs of any creature stepping inside the circle (note that the head of a worm or snake could also be thus ensnared). If a strong and supple tree is nearby, the snare will be fastened to it, and the dweomer of the spell will cause it to bend and then straighten when the loop is triggered, thus causing 1-6 hit points of damage to the creature trapped, and lifting it off the ground by the trapped member(s) (or strangling it if the head/neck triggered the <i>snare</i>). If no such sapling or tree is available, the cord-like object will tighten upon the member(s) and then enwrap the entire creature, doing no damage, but tightly binding it. The snare is magical, so for 1 hour it is breakable only by storm giant or greater strength (23); each hour thereafter, the snare material loses magic so as to become 1 point more breakable per hour — 22 after 2 hours, 21 after 3, 20 after 4 — until 6 full hours have elapsed. At that time, 18 strength will break the bonds. After 12 hours have elapsed, the materials of the <i>snare</i> lose all of the magical properties, and the loop opens, freeing anything it had held. The druid must have a snake skin and a piece of sinew from a strong animal to weave into the cord-like object from which he or she will make the <i>snare</i>. Only mistletoe is otherwise needed."
     ),
     Spell('Spike Growth','D',3,
         cast=tp(3,S),
@@ -1183,13 +1298,13 @@ druid_spells = [
         cast=tp(1,R),
         duration=tp(1,P),
         sourcebook=V,
-        desc="This spell is exactly the same as the fifth level magic-user spell, Stone Shape (q.v.), except as noted above and for the requirement of mistletoe as an additional component to enable a druid to cast the spell."
+        desc="This spell is exactly the same as the fifth level magic-user spell, <a href=\"/spells/stone-shape-magic-user-lvl-5/\"><i>stone shape</i></a>, except as noted above and for the requirement of mistletoe as an additional component to enable a druid to cast the spell."
     ),
     Spell('Summon Insects','D',3,
         cast=tp(1,R),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="When a Summon Insects spell is cast by a druid, he or she attracts flying insects 70% of the time. The exact insects called will be bees, biting flies, hornets, or wasps if flying insects are indicated, or biting ants or pinching beetles if non-flying insects are determined. A cloud of the flying type, or a swarm of the crawling sort, will appear after the spell is cast. They will attack any creature the druid points to. The attacked creature will sustain 2 hit points of damage per melee round, and it can do nothing but attempt to fend off these insects during the time it is so attacked. The summoned insects can be caused to attack another opponent. but there will be at least a 1 round delay while they leave the former recipient and attack the new victim, and crawling insects can travel only about 12' per round (maximum speed over smooth ground). It is possible in underground situations that the druid could summon 1-4 giant ants by means of the spell, but the possibility is only 30% unless giant ants are nearby. The materials needed for this spell are mistletoe, a flower and a bit of mud or wet clay."
+        desc="When a <i>summon insects</i> spell is cast by a druid, he or she attracts flying insects 70% of the time. The exact insects called will be bees, biting flies, hornets, or wasps if flying insects are indicated, or biting ants or pinching beetles if non-flying insects are determined. A cloud of the flying type, or a swarm of the crawling sort, will appear after the spell is cast. They will attack any creature the druid points to. The attacked creature will sustain 2 hit points of damage per melee round, and it can do nothing but attempt to fend off these insects during the time it is so attacked. The summoned insects can be caused to attack another opponent, but there will be at least a 1 round delay while they leave the former recipient and attack the new victim, and crawling insects can travel only about 12' per round (maximum speed over smooth ground). It is possible in underground situations that the druid could summon 1-4 giant ants by means of the spell, but the possibility is only 30% unless giant ants are nearby. The materials needed for this spell are mistletoe, a flower and a bit of mud or wet clay."
     ),
     Spell('Tree','D',3,
         cast=tp(5,S),
@@ -1202,7 +1317,7 @@ druid_spells = [
         cast=tp(5,S),
         duration_lvl=tp(6,T),
         sourcebook=V,
-        desc="The recipient of a Water Breathing spell is able to freely breathe underwater for the duration of the spell, i.e. 6 turns for each level of experience of the druid casting the spell. The reverse, Air Breathing, allows water breathing creatures to comfortably survive in the atmosphere for an equal duration."
+        desc="The recipient of a <i>water breathing</i> spell is able to freely breathe underwater for the duration of the spell, i.e. 6 turns for each level of experience of the druid casting the spell. The reverse, <i>air breathing</i>, allows water breathing creatures to comfortably survive in the atmosphere for an equal duration."
     ),
     Spell('Animal Summoning I','D',4,
         cast=tp(6,S),
@@ -2244,7 +2359,7 @@ mu_spells = [
         cast=tp(4,S),
         duration_lvl=tp(2,R),
         sourcebook=V,
-        desc="By means of this spell the magic-user causes a normal fire source such as a brazier, flambeau, or bonfire to serve as a magical agent, for from this source he or she causes a gossamer veil of multi-hued flame to circle the fire at 5' distance. Any creatures observing the fire or the dancing circle of flame around it must save versus magic or be charmed into remaining motionless and gazing, transfixed at the flames. While so charmed, creatures are subject to Suggestion spells of 12 or fewer words, saving against their influence at -3. The Fire Charm is broken by any physical attack upon the charmed creature, if a solid object is interposed between the creature and the veil of flames so as to obstruct vision, or when the duration of the spell is at an end. Note that the veil of flame is not a magical fire, and passing through it incurs the same type and amount of damage as would be sustained from passing through its original fire source. The material component for this spell is a small piece of multicoloured silk of exceptional thinness which the dweomercraefter must throw into the fire source."
+        desc="By means of this spell the magic-user causes a normal fire source such as a brazier, flambeau, or bonfire to serve as a magical agent, for from this source he or she causes a gossamer veil of multi-hued flame to circle the fire at 5' distance. Any creatures observing the fire or the dancing circle of flame around it must save versus magic or be charmed into remaining motionless and gazing, transfixed at the flames. While so charmed, creatures are subject to Suggestion spells of 12 or fewer words, saving against their influence at -3. The Fire Charm is broken by any physical attack upon the charmed creature, if a solid object is interposed between the creature and the veil of flames so as to obstruct vision, or when the duration of the spell is at an end. Note that the veil of flame is not a magical fire, and passing through it incurs the same type and amount of damage as would be sustained from passing through its original fire source. The material component for this spell is a small piece of multicoloured silk of exceptional thinness which the dweomercrafter must throw into the fire source."
     ),
     Spell('Fire Shield','M',4,
         cast=tp(4,S),
@@ -2595,12 +2710,22 @@ mu_spells = [
     Spell('Chain Lightning','M',6,
         cast=tp(6,S),
         duration=tp(0),
-        sourcebook=U
+        sourcebook=U,
+        desc=("When this spell is cast, the electrical discharge begins as a single stroke of lightning, ¼\" wide, commencing from the fingertips of the caster and extending to the primary target, which must lie within the maximum range of the spell as dictated by the level of the caster.\n\n"
+            "Chain lightning differs sharply from a lightning bolt spell in that it has a primary target as opposed to an area effect. If the primary target makes a successful saving throw versus spell, one-half damage from the bolt of chain lightning is taken; otherwise full damage (1d6 points per level of the spell caster) will be inflicted.\n\n"
+            "In addition, after striking the initial target, the bolt arcs to the nearest other object, be it animal, vegetable, or mineral. This chain of striking continues from one object to another object nearest it, possibly setting up an oscillation between two (presumably stationary or immobilized) objects, or a regular pattern involving three or more objects. If two or more possible targets are equidistant, the chain lightning will arc to metal first, then to the one with the most fluid, otherwise at random. The chain keeps building up to as many \"links\" (including the initial target) as the spell caster has levels. Thus, a 12th-level magic-user casting the spell would hit 12 targets: the primary target first, then 11 other (not necessarily different) targets. After the initial strike, each object subsequently struck is entitled to a saving throw versus spell, if applicable. Success on the save indicates that the stroke actually arced to the next nearest target, and the target that saved takes no damage.\n\n"
+            "The arcing bolt will continue until it has struck the appropriate number of objects, as indicated by a target's failure to save or lack of the opportunity to do so (as for an inanimate object of non-magical nature), until the stroke fades out or strikes a target that grounds it. Direction is never a consideration in plotting the path of the arcing chain lightning. Distance is a factor, though; a single arc can never be longer than the range limit. If, in order to arc, the bolt must travel a greater distance than its maximum range, the stroke fades into nothing. A tree or a substantial piece of conductive metal — such as interconnecting iron bars of a large cell or cage — will ground the lightning stroke and prevent further arcing.\n\n"
+            "The lightning inflicts one less d6 of damage on each target it hits after striking the primary target for the first time; if the initial target was struck by a 12d6 bolt, the next target struck takes an 11d6 bolt, then 10d6, 9d6, 8d6, 7d6, and so on all the way down to 1d6 — the last spurt of energy from the bolt. (A saving throw for half damage applies on each strike, different from the save versus spell to see if the lightning actually hits a secondary target.) The caster can be struck by an arc from his or her own spell. The material components are a bit of fur; an amber, glass or crystal rod; and as many silver pins as the spell caster has levels of experience."
+        )
     ),
     Spell('Contingency','M',6,
         cast=tp(1,T),
         duration_lvl=tp(1,D),
-        sourcebook=U
+        sourcebook=U,
+        desc=("By means of this spell, the magic-user is able to place another spell upon his or her person so that the latter spell will come into effect upon occurrence of the situation dictated during the casting of the contingency spell. The contingency spell and the spell it is to bring into effect — the \"companion\" spell — are, in effect, cast at the same time (the 1-turn casting time indicated above is a total for both castings). The spell to be brought into effect by the prescribed contingency must be one which affects the magic-user's person (feather fall, levitation, fly, statue, feign death, etc.) and of a level no higher than one-third of the experience level of the caster (rounded down), to an upper limit of the 6th level spell: a 4th level \"companion spell\" maximum at 12th, 13th or 14th level of experience; a 5th level maximum at 15th, 16th, or 17th level of experience, and a 6th level maximum at 18th level of experience and beyond. Only one contingency spell can be in effect upon the spell caster at any one time; if a second is used, the first one (if still active) is cancelled.\n\n"
+            "The situation prescribed to bring the spell into effect must be clear, although it can be rather general. For example, a contingency cast with an airy water \"companion spell\" might prescribe that any time the magic-user is plunged into or otherwise engulfed in water or similar liquid, the airy water spell will instantly come into effect. Likewise, the contingency could bring a feather fall into effect anytime the magic-user falls over 2' distance. In all cases, the contingency immediately brings into effect the second spell, the latter being \"cast\" instantaneously when the prescribed circumstances occur. Note that complex, complicated, and/or convoluted prescribed conditions for effecting the play of the dweomer are likely to cause the whole spell complex (the contingency spell and the companion magic) to simply fail when called upon.\n\n"
+            "The material components of this spell are (in addition to those of the companion spell) 100 gp worth of quicksilver, an elephant ivory statuette of the magic-user, and an eyelash of an ogre magi, ki-rin or similar spell-using creature. Note that the ivory statuette is not destroyed by the spell casting (although it might be subject to wear and tear), and it must be carried on the person of the spell caster for the contingency spell to perform its function when called upon."
+        )
     ),
     Spell('Control Weather','M',6,
         cast=tp(1,T),
@@ -2628,7 +2753,14 @@ mu_spells = [
     Spell('Ensnarement','M',6,
         cast=tp(1,T),
         duration=tp(1,VA),
-        sourcebook=U
+        sourcebook=U,
+        desc=("The casting of this spell attempts a dangerous act — the luring of a powerful creature from another plane to a specially prepared trap where it will be held until it agrees to perform one service in return for freedom from the ensarement spell. The spell causes an awareness of a gate-like opening on the plane of the creature to be ensnared. A special saving throw is then made to determine if the creature detects the nature of the planar opening as a trap or believes it to be a gate. To save, the creature must roll equal to or less than its intelligence score on 3d6. The score modified by the difference between the creature's intelligence and that of the spell caster's. If the creature has a higher score, the difference is subtracted from its dice roll to save. If the spell caster has a higher score, the difference is added to the total of the 3d6.\n\n"
+            "If the saving throw succeeds the creature merely ignores the spell-created opening, and the dweomer fails. If the saving throw is not made, the creature steps into the opening and is ensnared. The type of creature to be ensnared must be known and stated, and if it has a specific, proper, or given name, this also must be used in casting of the ensnarement spell.\n\n"
+            "When actually ensnared, the creature coming from another plane to that of the spell caster is not constrained from harming the one who trapped it. Therefore, the caster uses a magic circle (for creatures from the upper planes or the Astral Plane), a thaumatugic triangle (for creatures from the Ethereal, Elemental, or Concordant Opposition planes), or a pentagram (for creatures from the lower and infernal planes). Regardless of such protection, there is a chance that the entrapped creature will be able to break free and wreak its vengeance upon the spell caster. The base chance for an ensnared creature to break free depends on the manner in which the confining design was made. A hand-done one has a base chance of 20% of being broken, one inlaid or carved has only a base of 10%. and that for the first time only (which indicates whether or not the job was done properly). This base chance is modified by the total score of the magic-user's combined intelligence and experience level compared to the intelligence and the experience level or number of hit dice of the creature summoned. If the spell caster has a higher total, that difference is subtracted from the percentage chance for the creature to break free. If the creature has a higher total, that difference is added to its chance to break free.\n\n"
+            "The chance may be further modified by care in preparation of the protective symbol. If the hand-made protection is inscribed over a long period of time, using specially prepared pigments (1,000 gp per turn of application), the chance of an ensnared creature breaking free is reduced by 1% for every turn spent so preparing; i.e. an expenditure of 1 turn and 1,000 gp reduces the chance of breaking free by 1%. This can bring the base chance to 0%, but the further modifications for intelligence and level/hit dice still must be made thereafter, and no amount of special preparation can negate that risk. Similarly, an inlaid or inscribed design can be brought to 0% chance of being broken by inlaying it with various metals, minerals, etc. This effort will require a minimum of one full month of time and add not less than 50,000 gp to the basic cost of having the protection inlaid or inscribed into stone. Any breaking of the lines of protection or blurring of the glyphs, runes, and sigils which guard the magical barrier will spoil the efficacy of the dweomer and allow the creature to break free automatically. Even a straw droppped across the lines of a circle destroy its power. Fortunately, the creature within cannot so much as place a straw upon any portion of the inscribed protective device, for the magic of the barrier absolutely prevents it.\n\n"
+            "Once safely ensnared, the creature can be kept for as long as the spell caster dares. (Remember the danger of something breaking the inscription!) The caster can offer bribes, use promises, or make threats in order to exact one service from the captive creature. The DM will then assign a value to what the magic-user has said to the ensnared creature, rating it from 0 to 6. This rating is then subtracted from the intelligence score of the creature. If the creature makes its saving throw, a score equal to or less than its adjusted intelligence, it will refuse service. New offers, bribes, etc. can be made, or the old ones re-offered 24 hours later, when the creature's intelligence has dropped by 1 point due to confinement. This can be repeated until the creature promises to serve, until it breaks free, or until the caster decides to release it by means of some riddance spell. It need not be stressed that certain other spells can be used to force a captive creature into submission.\n\n"
+            "Once the single service is completed, the creature need only so inform the spell caster to be instantly teleported from whence it came. Revenge can be sought (cf. efreeti, aerial servant, and invisible stalker). Impossible commands or unreasonable commands will never be agreed to."
+        )
     ),
     Spell('Extension III','M',6,
         cast=tp(5,S),
@@ -2639,7 +2771,13 @@ mu_spells = [
     Spell('Eyebite','M',6,
         cast=tp(1,S),
         duration=tp(1,VA),
-        sourcebook=U
+        sourcebook=U,
+        desc=("An eyebit spell enables the caster to merely meet the gaze of his or her subject and speak a single word to cause the dweomer to be effectuated. With this single spell, the caster can choose which particular effect is to strike the subject, but the eyebite spell is then dissipated, even though only one of its four possible effects were used. The four effects of the spell to be chosen from are these:\n\n"
+            "Charm: The magic-user can charm a person or monster by gaze and vocalization of a single word. The effect is to make the charmed subject absolutely loyal and docile with respect to the charmer, even to the point of personal danger. It is otherwise the same as a charm person or charm monster spell. A successful saving throw versus spell negates this effect.\n\n"
+            "Fear: The magic-user can cause fear by gaze and vocalization of a single word. The subject will act as if struck by a fear spell unless a saving throw versus spell is successful.\n\n"
+            "Sicken: This power enables the caster to merely gaze at the subject, speak a word, and cause sudden nausea and sickness to sweep over the subject's body. The victim will be at one-half normal abilities (strength, intelligence, etc.) from the pain and fever (creatures without ability scores are not affected). Movement will be at one-half normal rate also, and the victim will have to rest half of each turn in order to be able to move at all. A saving throw versus spell will negate the power of the dweomer. Otherwise, the victim will remain struck by the sickness, losing one actual point of constitution per day until death occurs at zero consitution points. The effects are negated by a successful dispel magic spell or heal spell. Alter reality, limited wish, and wish spells will also remove the sickness, but a cure disease will not. Note: All non-human, non-demi-human, and non-humanoid creatures save at +4 versus this effect.\n\n"
+            "Sleep: The magic-user can cause any individual to fall into a comatose slumber by means of a gaze and a single word, unless the subject makes its saving throw versus spell. Creatures normally subject to the 1st-level spell sleep save at -2. Undead are not subject to this power. Affected creatures must be shaken or otherwise shocked to bring them back to conciousness."
+        )
     ),
     Spell('Geas','M',6,
         cast=tp(4,S),
@@ -2692,7 +2830,8 @@ mu_spells = [
     Spell('Mordenkainen\'s Lucubration','M',6,
         cast=tp(1,S),
         duration=tp(0),
-        sourcebook=U
+        sourcebook=U,
+        desc="By use of this spell, the magic-user is able to instantly recall any spell he or she has used and otherwise forgotten during the past 24 hours. The spell must have been memorized and actually used during the stated time period, and it cannot be of greater power than fifth level. Mordenkainen's Lubrication enables the spell caster to recall any 1st- through 5th-level spell precisely as if it had never been cast. Only one such spell can be so recalled by use of the lubrication dweomer. The spell recalled can thereafter be cast normally on any succeeding round. Material spell components must be available if the spell recalled requires such, or else the remembered spell is not usable until the material components are available."
     ),
     Spell('Move Earth','M',6,
         cast=tp(1,VA),
@@ -2750,12 +2889,17 @@ mu_spells = [
     Spell('Transmute Water To Dust','M',6,
         cast=tp(6,S),
         duration=tp(1,P),
-        sourcebook=U
+        sourcebook=U,
+        desc="This spell is identical to the 6th-level druid spell of the same name, except as noted above. The magic-user does not need mistletoe as a material component."
     ),
     Spell('Banishment','M',7,
         cast=tp(7,S),
         duration=tp(1,P),
-        sourcebook=U
+        sourcebook=U,
+        desc=("A banishment spell enables the caster to force some creature from another plane to return to its own abode. The effect is instantaneous, and the subject cannot come back without some special summoning or means of egress from its own plane to the one from which it was banished. More than one creature can be forced into magical banishment, providing the spell caster is of sufficient strength (levels of experience) to do so, and providing that the potential subjects are within range of the spell. The spell requires that the magic-user both name the type of creature(s) to be sent away, give its true and proper name as well, and call upon powers opposed to the creature(s). In any event, the target creature's magic resistance must be defeated for the spell to be effective.\n\n"
+            "The material components of the spell are substances harmful, hateful, and/or opposed to the nature of the subject(s) of the dweomer. For every such substance included in the casting, a subject creature loses -2 from the dice rolled to determine its save versus spell. For example, if iron, holy water, sunstone, and a sprig of rosemary were used in casting a banishment upon a demon, its saving throw versus the spell would be made at -8 (four substances times the factor of 2). Special items, such as hair from the tail of a ki-rin, or couatl feathers, could also be added to bring the factor up to -3 or -4 per such item. In contrast, a devil's scale or titan's hair, or mistletoe blessed by a druid might lower the factor to -1 with respect to a demon. If the subject creature makes its saving throw versus the spell, the caster will be stung by a backlash of energy, take 2-12 points of damage, and be stunned for 2-12 segments.\n\n"
+            "Note: If the powers called upon when casting the banishment spell are directly and actively opposed to the creature(s) to be banished, or if they are favorably and actively concerned with the interests of the spell caster, these powers can augment the efficacy of the spell components by from -1 (least concerned) to -6 (most concerned). Specifics of this effect are left up to the judgement of the referee."
+        )
     ),
     Spell('Bigby\'s Grasping Hand','M',7,
         cast=tp(7,S),
@@ -2797,7 +2941,11 @@ mu_spells = [
         cast=tp(1,VA),
         duration=tp(6,T),
         duration_lvl=tp(1,T),
-        sourcebook=U
+        sourcebook=U,
+        desc=("This powerful spell enables the caster to bring into being a cube or force, but it is unlike the magic item of that name in one important respect: the forcecage does not have solid walls of force; it has alternating bands of force with ½' gaps between. Thus, it is truly a cage rather than an enclosed space with solid walls. Creatures within the area of effect of the dweomer are caught and contained unless they are able to pass through the opening — and of course all spells and breath weapons can pass through the gaps in the bars of force of the forcecage. Furthermore, creatures with a magic resistance can apply that resistance in a single attempt to pass through the walls of the cage. If resistance fails, then the creature in question is caged. Regardless of success, any and all other creatures also in the area of effect of the spell are trapped unless they also have magic resistance which allows them to escape. The forcecage is also unlike the solid-walled protective device, cube of force, in that it can be gotten rid of only by means of a dispel magic spell or by expiration of the dweomer.\n\n"
+            "By means of special preparation at the time of memorization, a forcecage spell can be altered to a forcecube spell. Forcecube has one-eighth the area of effect (a cube 1\" on a side), and the dweomer then resembles the magic of a cube of force in all respects except for the differences between a cast spell and the magic of a device, including the methods of defeating its power.\n\n"
+            "Although the actual casting of either application of the spell requires no material component, the study of the spell required to commit it to memory does demand that the magic-user powder a diamond of at least 1,000 gp value, using the diamond dust to trace the outlines of the cage or cube he or she desirse to create via spell casting at some later time. Thus, in memorization, the diamond dust is employed and expended, for upon completion of study, the magic-user must then toss the dust into the air and it will disappear."
+        )
     ),
     Spell('Limited Wish','M',7,
         cast=tp(1,VA),
@@ -2821,7 +2969,11 @@ mu_spells = [
     Spell('Mordenkainen\'s Magnificent Mansion','M',7,
         cast=tp(7,R),
         duration_lvl=tp(1,H),
-        sourcebook=U
+        sourcebook=U,
+        desc=("By means of this spell, the magic-user conjures up an extra-dimensional dwelling, entrance to which can be gained only at a single point of space on the plane from which the spell was cast. From the entry point, those creatures observing the area will see only a faint shimmering in the air, an area of some 4' in width and 8' in height. The caster of the spell controls entry to the mansion, and the portal is shut and made invisible behind him when he enters. He may open it again from his own side at will. Once observers have passed beyond the entrance, they will behold a magnificent foyer and numerous chambers beyond. The place will be furnished and contain sufficient foodstuffs to serve a nine-course banquet to as many dozens of people as the spell caster has levels of experience. There will be a staff of near-transparent servants, liveried and obedient, there to wait upon all who enter. The atmosphere and temperature will be clean, fresh, and warm.\n\n"
+            "Since the place can be entered only through its special portal, outside conditions do not affect the mansion, nor do conditions inside it pass to the plane beyond. Rest and relaxation within the place is normal, but the food is not. It will seem excellent and be quite filling as long as one is within the place. Once outside, however, its effects disappear immediately, and ravenous hunger will strike unless the individuals actually ate normal food. For each imaginary meal eaten inside the mansion, the individual must spend 1 hour sitting and eating normal fare. Failure to do so means that he or she has lost as many points of strength as he or she ate meals when in the mansion-like space. Such strength loss is restorable upon eating as noted, but this must be done within 6 hours or the loss of strength will be permanent. The components for this spell are a miniature portal carved from ivory, a small piece of polished marble, and a tiny silver spoon. These are utterly destroyed when the spell is cast.\n\n"
+            "(It is worth mentioning that this spell has been used in conjunction with a normal portal, as well as with illusion magic. There is evidence that the design and interior of the space created can be altered to suit the caster's wishes.)"
+        )
     ),
     Spell('Mordenkainen\'s Sword','M',7,
         cast=tp(7,S),
@@ -2851,7 +3003,8 @@ mu_spells = [
         cast=tp(1,R),
         duration=tp(7,D),
         duration_lvl=tp(1,D),
-        sourcebook=U
+        sourcebook=U,
+        desc="When cast, this spell not only prevents detection and location spells from working to detect or locate the objects affected by the sequester spell, it also renders the affected object(s) invisiblle to any form of sight or seeing. Thus a sequester spell can mask a secret door, a treasure vault, or whatever. Of course, it does not render the subject proof from tactile discovery or from devices such as robe of eyes or a gem of seeing. If cast upon a creature not desiring to be affected and able to resist and avoid the spell, a normal saving throw versus spell is given. Living creatures (and even undead types) affected by a sequester spell become comatose and are kept effectively in a state of suspended animation until the spell wears off or is dispelled. The material components for the spell are basilisk eyelash, gum arabic, and a dram of whitewash."
     ),
     Spell('Simulacrum','M',7,
         cast=tp(1,VA),
@@ -2868,17 +3021,48 @@ mu_spells = [
     Spell('Teleport Without Error','M',7,
         cast=tp(1,S),
         duration=tp(0),
-        sourcebook=U
+        sourcebook=U,
+        desc="This spell is similar to a teleport spell. The caster is able to transport himself or herself, along with the material weight noted for a teleport spell, to any known location on his or her home plane — with no chance of error. The spell also enables the caster to travel to other planes of existence, but any such plane is, at best, \"Studied carefully.\" This assumes the caster has, in fact actually been to the plane and carefully perused an area so that it could later be used as a destination for teleportation without error. The table for teleport is used for teleporting to other planes, with the appropriate knowledge of the plane to which transportation is desired used to determine the chance of error. (Exception: See 9th-level magic-user spell succor, described hereafter.) The caster can do nothing else in the round that he or she appears from a teleport."
     ),
     Spell('Torment','M',7,
         cast=tp(1,R),
         duration=tp(1,VA),
-        sourcebook=U
+        sourcebook=U,
+        desc=("When this spell is cast, the magic-user seeks to force submission and obedience from a captive creature from another plane from whom a service is being demanded (also see dolor and ensnarement spells herein). The initial uttering of the spell causes a link from the caster to the captive creature bound in a magic circle, thaumaturgic triangle, or pentagram. (An intended victim of this spell must fail a magic resistance check, if applicable, for the torment to have any effect.) Thereafter, the magic-user continues to read the balance of the specially prepared writing, and each round this continues, the captive feels progressively worse — discomfort and then pain. The first two rounds bring twinges, the third and fourth rounds of reading brings shooting pains, and the fifth and sixth rounds of reading cause aches and then cramps.\n\n"
+            "The creature refusing to submit to the performance of a service is given a straight saving throw versus spell, adjusted each round for the intensity of the dweomer to be affected by it. The save in the first round is made at -1 to the die roll, the second at -2, the third at -3, the fourth at -4, and the fifth and sixth at -6 and -8 respectively. Failing the saving throw indicates the creature has agreed to the mage's demands. There is no penalty following round 8 in any event.\n\n"
+            "The effects of the torment will have an effect on the creature should it break loose. The creature is -1 on initiative for every 2 rounds the spell has been in effect, up to a maximum penalty of -4 on round 8. In addition, the creature is -1 to hit and -1 per die of damage after 3 rounds of the spell, this increasing by -1 per round to -4 in round 6, then decreasing again to -1 in round 9.\n\n"
+            "It is likely that any intelligent creature with low moral standards will submit once it realizes the nature of the spell it is being subjected to. Naturally, this does not cause the creature to feel anything other than immense hatred for the magic-user. The forced service will be carried out to the letter, as is the case with all such agreements, but the creature will most certainly seek whatever revenge it can.\n\n"
+            "Preparation for the casting of a torment spell requires either the secret name for the type of creature or its given name to be inscribed in the text of the incantation. The caster must also identify himself or herself. This establishes the link and allows the dweomer to be efficacious. However, for every 1 point of intelligence of the creature above that of the spell caster, there is a 1% chance that the captive creature will gain control, draw the caster into the confines of its prison, and carry him or her off to its own plane and whatever fate is thus decreed. If the magic-user is interrupted or distracted during the reading, there is a 5% chance per point of intelligence of the captive creature that it will gain control.\n\n"
+            "The material component of the spell is the aforementioned \"specially prepared writing\" (in the form of a scroll). Its special inks will require an expenditure of not less than 1,000 gp per hit die of the creature to be affected by the dweomer of the spell."
+        )
     ),
     Spell('Truename','M',7,
         cast=tp(1,VA),
         duration=tp(1,VA),
-        sourcebook=U
+        sourcebook=U,
+        desc=("This spell enables the magic-user to have great power over any living thing which has a name, generic or individual, known to the spell caster. Naturally, most true names are not known (even by the creaturs themselves), for the common names of most things are not their true and secret names. True names are discovered through hard work, spying, extensive use of legend lore and sagecraft (at the most difficult levels). The casting of a truename spell requires the magic-user to call out the true name of the subject and then begin a recitation of verse which encompasses the nature and/or history of the subject. This will require 3 segments. Thereafter, still in verse (and preferably rhyming or near-rhyming), the caster must desrive the desired result of the truename spell. Each possible result differs in the length of time necessary to effectuate it:\n\n"
+            "Multiple Suggestion: The verse can contain from 1 to 4 suggestion powers, just as if each were a spell. Each verse requires 1 segment to recite. (See suggestion spell.) In a total of 7 segments (including the time for the initial reading), 4 suggestions can be made.\n\n"
+            "Weakness and Surrender: The verses recited cause actual loss of 1 point of strength (-1 to hit and damage, -1 on movement rate) for each segment of recitation. With the loss of each point of strength, the subject must save versus paralyzation or meekly surrender. Each verse must continue for 1 segment. Strength loss is recovered in from 2-8 rounds after the recitation ceases, and with recovery of strength the subject regains its will to resist."
+            "Polymorph: The verses can cause the subject to change into something else, just as if a polymorph any object spell had been cast. No system shock saving throw is needed. The length of time in verses (1 segment per verse) to cause the polymorph depends on how radical the change:\n"
+            "mineral to animal = 10 verses\n"
+            "mineral to vegetable = 9 verses\n"
+            "vegetable to animal = 8 verses\n"
+            "monster to normal = 7 verses\n"
+            "monster to monster = 6 verses\n"
+            "other to human = 5 verses\n"
+            "animal to animal = 4 verses\n"
+            "vegetable to vegetable = 3 verses\n"
+            "mineral to mineral = 2 verses\n\n"
+            "The reverse of the preceding cases also holds. In cases not stated, the DM is to use the closest stated case as a guide. The subject returns to its natural form in time. Duration is 6 turns per level of the spell caster minus 1 turn for every verse required to effect the polymorph. The subject will think and behave exactky as a non-polymorphed thing of the same type, but have its original hit points.\n\n"
+            "Transport: When the transport verses are recited, the subject will be teleported without error or otherwise moved to some other place. The number of verses required depends on the location of the transport:\n"
+            "same plane/100 mile range = 4 verses\n"
+            "same plane/500 mile range = 5 verses\n"
+            "same plane/2,000 mile range = 6 verses\n"
+            "one plane/world removed = 7 verses\n"
+            "two planes/worlds removed = 8 verses\n\n"
+            "The subject will automatically by altered so as to be able to physically survive the normal conditions of the place to which it is sent. There is no saving throw if the subjects are willing, even if they have a magic resistance.\n\n"
+            "If at any time during the recitation of the spell the caster is interrupted, the magic fails and the spell is lost."
+        )
     ),
     Spell('Vanish','M',7,
         cast=tp(2,S),
@@ -2889,7 +3073,8 @@ mu_spells = [
     Spell('Volley','M',7,
         cast=tp(1,S),
         duration=tp(1,VA),
-        sourcebook=U
+        sourcebook=U,
+        desc="This highly dangerous dweomer enables the prospective recipient of a spell to turn the casting back upon its sender. Thus, the range, duration, area of effect, and saving throw of this spell depend upon circumstances and the spell being volleyed. Assume that a power word kill is cast at a magic-user prepared with a volley spell. The volley has been cast also, so that when the power word kill is aimed at the target, the volley causes the spell to bounce back upon its caster. Then, if the caster of the first spell fails to make a saving throw versus spell, the power word kill works upon its caster rather than its intended target. However, if the original caster does save versus spell, the spell once again flies toward the original target. The caster of the volley spell must then save versus spell, or be affected by the attack. Again, if the caster of the volley spell saves, then the spell is returned to its originator, who must again save or be affected. The spell will be sent back and forth until one or the other fails to save, or until the spell loses its power. The entire spell is volleyed, such that if a lightning bolt were to start 10 feet before the volleying magic-user, the full spell would be returned, leaving others in the volleying party unscathed. Each exchange will take a single second. A spell will lose power if it passes through a number of exchanges equal to its level, counting each volley, but not the original casting, as half of a single exchange; i.e., a 1st-level spell will be cast, volleyed the first time, (perhaps) return volleyed, and then will dissipate; a 2nd-level spell would go through four volley portions (two complete exchanges) before being exhausted; and so on. The material component is a bit of bent willow or other flexible wood, crisscrossed with specially prepared strands of gut."
     ),
     Spell('Antipathy/Sympathy','M',8,
         cast=tp(6,T),
@@ -2904,7 +3089,18 @@ mu_spells = [
     Spell('Binding','M',8,
         cast=tp(1,VA),
         duration=tp(1,VA),
-        sourcebook=U
+        sourcebook=U,
+        desc=("A binding spell enables the caster to capture a creature from the lower planes. The subject must already be confined by some form of restraining diagram. The duration of the spell depends upon the form of the binding and the level of the caster(s), as well as the length of time the spell is actually uttered. The components vary according to the form of the dweomer, but include: a continuous chanting utterance read from the scroll or book page giving the spell; gestures appropriate to the form of binding; and materials such as miniature chains of special metal (iron for demonkind, silver for diabolical creatures, nickel for the minions of Hades, etc.), soporific herbs of the rarest sort, a diamond or corundum gem of great size (1,000 gp value per hit die of the subject creature), and a vellum depiction or carved statuette of the subject to be captured.\n\n"
+            "A saving throw is not applicable as long as the experience level(s) of the caster(s) is (are) at least twice as great as the hit dice of the subject. In a case where the foregoing does not hold, then the subject gains a saving throw versus spell, modified by the form of binding being attempted and the relative ratio of level(s) of experience of the caster(s) to the subject creature's hit dice. For purposes of determining this number, the level of the principal caster is augmented by one-third of the level of experience of each assistant magic-user of 9th or higher level, and an additional level is gained for each assistant of 4th to 8th level. No more than six other magic-users can assist with a binding spell. The various forms of binding are these:\n\n"
+            "Chaining: The subject is confined by restraints which generate an antipathy affecting all creatures who approach the subject, except the caster. Duration is as long as one year per level of the caster(s). The subject of this form of binding (as well as of slumber and bound slumber; see below), remains within the restraining diagram.\n\n"
+            "Slumber: Brings a comatose sleep upon the subject for a duration of up to one year per level of the caster(s).\n\n"
+            "Bound Slumber: A combination of chaining and slumber which lasts for up to one month per level of the caster(s).\n\n"
+            "Hedged Prison: The subject is transported to or otherwise brought within a confined area from which it may not wander by any means until freed. The dweomer remains until the magical hedge is somehow broken.\n\n"
+            "Metamorphosis: Causes the subject to change to some noncorporeal form, save for its head or face. The binding is permanent until some prescribed act frees the subject.\n\n"
+            "Minimus Containment: The subject is shrunk to a height of one inch or even less and held within the hedged prison of some gem or similar object. The subject of a minimus containment, metamorphosis, or hedged prison radiates a very faint aura of magic.\n\n"
+            "The saving throw, if applicable, is made at the normal level for the chaining form of the spell. Slumber allows the subject a +1, bound slumber a +2, hedged prison a +3, metamorphosis a +4, and minimus containment a +5 on the save. However, if the subject is initially weakened by magical means such as dolor or torment spells, the saving throw is subject to an adjustment or -1 for the former spell, -2 for the latter spell, and -4 for both in successive combination. A successful saving throw enables the subject to burst its bonds and do as it pleases.\n\n"
+            "A binding spell can be renewed in the case of the first three forms of the dweomer, for the subject does not have the opportunity to break the bonds. After one year the subject gains a normal saving throw versus spell. Whenever it is successful, the binding spell is broken and the subject creature is free. (If anything has caused a weakening of the chaining or slumber, such as attempts to contact the subject or magically touch it, a normal saving throw applies to the renewal of the spell.)"
+        )
     ),
     Spell('Clone','M',8,
         cast=tp(1,T),
@@ -2915,7 +3111,8 @@ mu_spells = [
     Spell('Demand','M',8,
         cast=tp(1,T),
         duration=tp(1,VA),
-        sourcebook=U
+        sourcebook=U,
+        desc="This spell is essentially the same as a sending spell. Demand differs from sending in that the spell caster may phrase his or her message so as to contain a suggestion spell and if the subject fails to make its saving throw versus spell, it will do its best to carry out the suggestion contained in the message of the demand. Of course, if the message is relatively impossible or incongruous according to the circumstances which exist for the subject at the time the demand comes, the message is understood but no saving throw is necessary and the suggestion is ineffective. The material components of the spell are a pair of cylinders, each open at one end, connected by a thin piece of copper wire and some small part of the subject creature — a hair, bit of nail, etc."
     ),
     Spell('Glassteel','M',8,
         cast=tp(8,S),
@@ -2956,7 +3153,8 @@ mu_spells = [
     Spell('Otiluke\'s Telekinetc Sphere','M',8,
         cast=tp(4,S),
         duration_lvl=tp(1,R),
-        sourcebook=U
+        sourcebook=U,
+        desc="This spell is exactly the same as the 4th-level magic-user spell, Otiluke's Resilient Sphere, with the addition that the interior of the globe is virtually weightless; i.e., anything contained within it weighs only 1/16 of its normal weight. Any subject weighing up to 5,000 pounds can be telekinetically lifted in the sphere by the caster. Range of control extends to a maximum distance of 1\" per level of the caster after the sphere has actually succeeded in encapsulating a subject or subjects. Note that even if more than 5,000 pounds of weight is englobed, the essential weight is but 1/16 of actual, so the orb can be rolled without exceptional effort. Because of the reduced weight, rapid motion or falling within the field of the sphere is relatively harmless to the obect therein, althought it can be disastrous should the globe disappear when the subject inside is high above a hard surface. In addition to the material components for the resilient sphere, the caster must have a pair of small bar magnets to effectuate this spell."
     ),
     Spell('Otto\'s Irresistible Dance','M',8,
         cast=tp(5,S),
@@ -2989,7 +3187,11 @@ mu_spells = [
     Spell('Sink','M',8,
         cast=tp(8,S),
         duration=tp(1,VA),
-        sourcebook=U
+        sourcebook=U,
+        desc=("When the magic-user casts a sink spell, he or she must chant the spell for 4 segments without interruption. At that juncture, the subject creature or object will become rooted to the spot unless a saving throw versus spell (with respect to a creature) or a saving throw versus disintegration (for an object with magical properties) is successful. (Note: \"Magical properties\" include those of magic items as listed in the Dungeon Masters Guide, those of items enchanted or otherwise of magical origin, and those of items with protection-type spells or with permanent magical properties or similar spells upon them.) Items of a non-magical nature are not entitled to a saving throw. The subject will also become of the same density as the surface upon which it stands at this juncture if its saving throw was not successful.\n\n"
+            "The spell caster now has the option of ceasing his or her spell and leaving the subject as it is, in which case the spell will lose its dweomer in 4 turns, and the subject will return to normal. If the magic-user proceeds with the spell, the subject will begin to slowly sink into the ground. On the 5th segment the subject will sink to one-quarter of its height, on the 6th another quarter, on the 7th another, and on the 8th segment it will be totally sunken into the ground.\n\n"
+            "This virtual entombment will place a living subject into a state which duplicates stasis but does not otherwise harm the subject. Non-living or living, the subject will exist in undamaged form in the surface into which it was sunk, its upper extremity as far beneath the surface as the subject has height; i.e., a 6' high subject will be 6' beneath the surface, while a 60' high subject will have its uppermost portion 60' below ground level. If the ground around the subject is somehow removed, the spell is broken and the subject will return to normal — although it will not then rise up. Such spells as dig, transmute rock to mud, and freedom (reverse of imprisonment) will not harm the subject of a sink spell and will be helpful in recovering it in many cases. If a detect magic spell is cast over an area upon which a sink spell was used, it will reveal a faint dweomer of undefinable nature, even if the subject is beyond detection range. If the subject is within range of the detect magic, the dweomer will be noted as magic of an enchantment-alteration nature."
+        )
     ),
     Spell('Symbol','M',8,
         cast=tp(8,S),
@@ -3016,12 +3218,16 @@ mu_spells = [
     Spell('Crystalbrittle','M',9,
         cast=tp(9,S),
         duration=tp(1,P),
-        sourcebook=U
+        sourcebook=U,
+        desc=("The dweomer of this spell causes metal, whether as soft as gold or as hard as adamantite, to turn to a crystalline substance as brittle and fragile as crystal. Thus a sword, metal shield, metal armor, or even iron golem can be changed to a delicate, glass-like material easily shattered by any forceful blow. Furthermore, this change is unalterable short of by means of a wish spell; i.e., dispel magic will not reverse the spell.\n\n"
+            "The caster must physically touch the target item — equal to a hit in combat if the item is being worn or wielded, or is a monster. Any single metal item can be affected by the spell. Thus a suit of armor being worn by the subject can be changed to crystal, but the subject's shield would not be affected, or vice versa. All items gain a saving throw equal to their magical bonus value or protection. A +1/+3 sword would get a 10% (average of the two plusses) chance to save; +5 magic armor a 25% chance to be unaffected; an iron golem a 15% chance to save (for it is only hit by magic weapons of +3 or better quality). Artifacts and relics of metal have a 95% chance to be unaffected by the spell. Affected items not immediately protected will be shattered and permanently destroyed if struck by a normal blow from a metal tool or any weighty weapon, including a staff."
+        )
     ),
     Spell('Energy Drain','M',9,
         cast=tp(3,S),
         duration=tp(1,P),
-        sourcebook=U
+        sourcebook=U,
+        desc="By casting this spell, the magic-user opens a channel between the plane he or she is on and the Negative Material Plane, the caster becoming the conducter between the two planes. As soon as he or she touches (equal to a hit if melee is involved) any living creature, the victim loses two energy levels (as if struck by a spectre). A monster loses two hit dice permanently, both for hit points and attack ability. A character loses level, hit dice and hit points, and abilities permanently (until regained through adventuring, if applicable). The material component of this spell is essence of spectre or vampire dust. Preparation requires three segments, the material component is then cast forth, and upon touching the victim the magic-user speaks the triggering word, causing the dweomer to take effect instantly. There is always a 5% (1 in 20) chance that the caster will also be affected by the energy drain and lose one energy level at the same time the victim is drained of two. Humans or humanoids brought to zero energy level by this spell become juju zombies."
     ),
     Spell('Gate','M',9,
         cast=tp(9,S),
@@ -3051,7 +3257,10 @@ mu_spells = [
     Spell('Mordenkainen\'s Disjunction','M',9,
         cast=tp(9,S),
         duration=tp(1,P),
-        sourcebook=U
+        sourcebook=U,
+        desc=("When this spell is cast, all magic and/or magic items within the radius of the spell, except those on the person of or being touched by the spell caster, are disjoined. That is, spells being cast are separated into their individual components (usually spoiling the effect as does a dispel magic), and permanent and magicked items must likewise save (versus spell if actually cast on a creature, or versus a dispel magic otherwise) or be turned into normal items. Even artifacts and relics are subject to Mordenkainen's Disjunction, although there is only a 1% chance per level of the spell caster of actually affecting such powerful items. Thus, all potions, scrolls, rings, rods et al, miscellaneous magic items, artifacts and relics, arms and armor, swords and miscellaneous weapons within 3\" of the spell caster can possibly lose all their magical properties when Mordenkainen's Disjunction is cast.\n\n"
+            "Note: Destroying artifacts is a dangerous business, and 95% likely to attract the attention of some powerful being who has an interest or connection with the device. Additionally, if an artifact is destroyed, the casting magic-user must save versus spell at -4 or permanently lose all spell casting abilities."
+        )
     ),
     Spell('Power Word, Kill','M',9,
         cast=tp(1,S),
@@ -3073,7 +3282,8 @@ mu_spells = [
     Spell('Succor','M',9,
         cast=tp(1,VA),
         duration=tp(1,VA),
-        sourcebook=U
+        sourcebook=U,
+        desc="This spell is essentially the same as the 7th-level cleric spell of the same name. A succor spell cast by a magic-user will teleport without error the individual breaking the object and speaking the command word. If the reverse is used, the archmage is likewise brought to the presence of the individual. Unlike the cleric spell of the same name (qv), the summoned archmage has no choice than to answer the summons, making this version of the spell rare indeed. Intervening planes have only a 1% chance each, cumulative, of causing irrevocable loss of the individual or spell caster involved in the succor. The material component used must be gem material of not less than 5,000 gp value; whether it is a faceted gem or not is immaterial. The components can only be enchanted once per month (usually on the night of a clear, full moon). At that time, the object is \"set\" for the type of succor and its final destination (either the location of the spell casting or an area well known to the mage)."
     ),
     Spell('Temporal Stasis','M',9,
         cast=tp(9,S),
@@ -3177,12 +3387,14 @@ illusionist_spells = [
     Spell('Read Illusionist Magic','I',1,
         cast=tp(1,S),
         duration_lvl=tp(2,R),
-        sourcebook=U
+        sourcebook=U,
+        desc="This spell is the same as the 1st level magic-user spell read magic, except that it applies only to spells usable by and used by illusionists, as well as to various other inscriptions written in illusionist-type magic script by illusionists."
     ),
     Spell('Spook','I',1,
         cast=tp(1,S),
         duration=tp(1,VA),
-        sourcebook=U
+        sourcebook=U,
+        desc="A spook spell enables the illusionist to play upon natural fears to cause the subject creature to perceive the spell caster as someone or something inimical. Without actually knowing what this is, the illusionist merely advances threateningly upon the subject, and if a successful saving throw versus spell is not made, the creature will react by rapidly turning and fleeing in as opposite a direction from the illusionist as possible (effects as a wand of fear, though items carried are not dropped). Although the spell caster does not actually pursue the fleeing creature, a phantasm from its own mind will do so. However, each round after the initial casting of the spook spell the creature is entitled to another saving throw, and each such saving throw is at a cumulative +1 per round, until the subject sucessfully saves versus spell and the spell is broken. In any event, the spell will function only against creatures with intelligence of not less than 1."
     ),
     Spell('Wall of Fog','I',1,
         cast=tp(1,S),
@@ -3194,7 +3406,8 @@ illusionist_spells = [
         cast=tp(2,S),
         duration=tp(1,VA),
         duration_lvl=tp(2,R),
-        sourcebook=U
+        sourcebook=U,
+        desc="When this spell is cast the illusionist is able to alter himself or herself in a manner similar to a change self spell. However, alter self enables the caster to effect a quasi-real change, so that size can be altered by 50% of actual. If the form selected has wings, the illusionist can actually fly, but only at one-quarter the rate of speed of a true creature of that type, and with a loss of two Maneuverability Classes (to a minimum of \"E\"). If the form has gills, he can breathe underwater as long as the spell lasts. Using alter self to change into a larger creature does not permit additional attacks or damage unless the illusionist is accustomed to this form."
     ),
     Spell('Blindness','I',2,
         cast=tp(2,S),
@@ -3224,7 +3437,8 @@ illusionist_spells = [
     Spell('Fascinate','I',2,
         cast=tp(2,S),
         duration=tp(1,VA),
-        sourcebook=U
+        sourcebook=U,
+        desc="By means of this spell the illusionist attempts to captivate the subject creature's attention and gain its love, friendship and/or obedience. The spell creates an illusion around the spell caster so that he or she becomes, in the eyes of the subject, a trusted and/or desired companion. Unless a saving throw versus spell is successful, the subject will follow the illusionist wherever he or she goes, if possible without undue risk to life and safety. If the illusionist is able to converse with the fascinated creature, the subject will obey requests from the spell caster as long as a roll of 3d6 per request does not exceed the comeliness of the illusionist. (Requests which are obviously against the better interests of the creature add +1 to the dice roll, and the more hazardous and unreasonable of these requestse will add from +2 to +6 to the dice roll.) The spell is shattered whenever comeliness is exceeded, and the subject will certainly be filled with rage and hate. Creatures of normal sort with animal intelligence will remain fascinated for only a short period of time (1-4 days), but if the illusionist has been careful to treat the subject well, attend to its needs, and feed it, there is a 2% chance per point of comeliness of the illusionist that the subject will willingly choose to befriend and follow him or her. Otherwise, the creature will attack (if it was not cared for) or leave (if it was cared for) when the spell wears off. Non-intelligent creatures are not subject to a fascinate spell (cf. charm person)."
     ),
     Spell('Fog Cloud','I',2,
         cast=tp(2,S),
@@ -3273,7 +3487,8 @@ illusionist_spells = [
         cast=tp(2,S),
         duration=tp(6,T),
         duration_lvl=tp(1,T),
-        sourcebook=U
+        sourcebook=U,
+        desc="Except as noted above, this spell is essentially the same as the 4th-level magic-user spell of the same name. Note additionally that creatures with high intelligence might be able to detect invisible creatures by the use of ultravision, either natural or magically bestowed. The required material component for the illusionist version of this spell is a powdered essence of carrots."
     ),
     Spell('Ventriloquism','I',2,
         cast=tp(2,S),
@@ -3285,7 +3500,8 @@ illusionist_spells = [
     Spell('Whispering Wind','I',2,
         cast=tp(2,S),
         duration=tp(1,VA),
-        sourcebook=U
+        sourcebook=U,
+        desc="By means of this spell the illusionist is able to either send a message or cause some desired sound effect. The whispering wind can be prepared to travel as many tens of feet underground or miles above ground as the spell caster has levels of experience. Thus, a 3rd-level illusionist could send the spell wafting 30' in a dungeon or as far as three miles outdoors. The whispering wind will be as gentle and unnoticed as a zephyr until it reaches the desired objective of the spell caster. It then delivers its whisper-quiet message or other sound for a duration of up to two segments. The dweomer then fades and vanishes — as it will do if the subject is beyond range, or more than two hours of time have elapsed, or it is magically dispelled. The illusionist can prepare the spell to bear a message of up to 12 words, cause the spell to deliver other sounds for 12 seconds, or merely have the whispering wind seem to be a faint stirring of the air which has a susurrant sound. He or she can likewise cause the whispering wind to move as slowly as 1\" per round or as quickly as 20\" (or any rate in between). When the spell reaches its objective, it swirls and remains for the full two segments, regardless of its speed otherwise. As with the magic mouth spell, no spells may be cast through the whispering wind."
     ),
     Spell('Continual Darkness','I',3,
         cast=tp(3,S),
@@ -3302,7 +3518,8 @@ illusionist_spells = [
     Spell('Delude','I',3,
         cast=tp(3,S),
         duration_lvl=tp(1,T),
-        sourcebook=U
+        sourcebook=U,
+        desc="By means of a delude spell, the illusionist is able to replace the aura of his or her own alignment with that of any other creature within a 3\" radius, although the creature must be of higher than animal intelligence for the aura exchange to work. The target creature retains his or her original alignment. Any attempt to know alignment will discover only the aura (alignment) which the illusionist has opted to assume. A detect good or detect evil will detect this only of the subsituted creature's aura. The creature whose aura has been copied will radiate magic, but the illusionist will radiate magic only to the creature whose aura has been exchanged. If delude is used in conjunction with a change self or alter self spell, the actual class of the illusionist will be totally hidden, and he or she will absolutely appear to be whatever class he or she has chosen to appear as, for a saving throw (versus spell) applies only to the aura transfer."
     ),
     Spell('Dispel Illusion','I',3,
         cast=tp(3,S),
@@ -3349,12 +3566,19 @@ illusionist_spells = [
     Spell('Phantom Steed','I',3,
         cast=tp(1,T),
         duration_lvl=tp(6,T),
-        sourcebook=U
+        sourcebook=U,
+        desc=("When this spell is cast the illusionist creates a quasi-real, horse-like creature. This creature can be ridden only by the illusionist who created it, or by any person for whom the illusionist creates such a mount specifically. All phantom steeds have black heads and bodies with gray manes and tails, and smoke-colored, insubstantial hooves which make no sound. Their eyes are milky-colored. They do not fight, but all normal animals shun them, so only monstrous ones will attack. If more than 12 points of damage accrue to such a mount, the dweomer is dispelled and the phantom steed disappears. A phantom steed moves at a maximum rate of 4\" per level of the spell caster. It has what seems to be a saddle and a bit and bridle, but it can not carry saddlebags and the like — only its rider and what he or she carries. These mounts gain certain powers according to the level of the illusionist who created them:\n\n"
+            "8th level: Ability to pass over sandy, muddy, or even swampy ground without difficulty.\n\n"
+            "10th level: Ability to pass over water as if it were firm, dry ground.\n\n"
+            "12th level: Ability to travel in the air as if it were firm land instead, so chasms and the like can be crossed without benefit of a bridge. Note, however, that the mount can not casually take off and fly.\n\n"
+            "14th level: Ability to perform as if it were a pegasus."
+        )
     ),
     Spell('Phantom Wind','I',3,
         cast=tp(3,S),
         duration_lvl=tp(1,R),
-        sourcebook=U
+        sourcebook=U,
+        desc="When this spell is employed, the illusionist creates a wind which cannot be seen or felt. This movement of air does, however, serve to blow light objects before it, flutter curtains or drapes, flap loose clothing (such as capes, cloaks, and mantles), fan fires, and move clouds of gaseous materials (such as a wall of fog, a fog cloud, a cloudkill cloud, etc.). The wind created moves in the direction in which the illusionist points, its effects being felt in a progressively longer path as the spell continues, at a movement rate of 1\" per round, with the effects lasting the entire course of the path. Thus, the spell could, for example, be employed to move several sailed vessels, but the first affected by the wind would also be the one to move the farthest."
     ),
     Spell('Rope Trick','I',3,
         cast=tp(3,S),
@@ -3377,7 +3601,8 @@ illusionist_spells = [
     Spell('Wraithform','I',3,
         cast=tp(1,S),
         duration_lvl=tp(2,R),
-        sourcebook=U
+        sourcebook=U,
+        desc="When this spell is cast, the illusionist and all of his or her gear become insubstantial. The caster can be hit only by magic weapons of +1 or better, or by creatures otherwise able to affect those struck only by magic weapons. Undead of most sorts will ignore an individual in wraithform, believing him or her to be a wraith or spectre, though a lich or \"special\" undead may save versus spell at -4 to recognize the dweomer. The illusionist will be able to pass through small holes or narrow openings, even mere cracks, with all he or she wears or holds in his or her hands, as long as the spell persists. No form of attack is possible when in wraithform, except against creatures which exist on the Ethereal Plane, where all attacks (both ways) are normal. Dispel illusion and dispel magic are the only ways to force an illusionist in wraithform back to normal form. The spell caster can return to normal form at will, but this ends the spell effect. The material components for this spell are a bit of gauze and a wisp of smoke."
     ),
     Spell('Confusion','I',4,
         cast=tp(4,S),
@@ -3394,7 +3619,9 @@ illusionist_spells = [
     Spell('Dispel Magic','I',4,
         cast=tp(4,S),
         duration=tp(1,P),
-        sourcebook=U
+        sourcebook=U,
+        desc="This spell is essentially identical to the 3rd-level clerical spell of the same name. An illusionist casts this spell as if he or she were two levels below actual, i.e. a 9th-level illusionist casts a dispel magic as if he or she were of 7th level."
+
     ),
     Spell('Emotion','I',4,
         cast=tp(4,S),
@@ -3428,7 +3655,8 @@ illusionist_spells = [
     Spell('Rainbow Pattern','I',4,
         cast=tp(4,S),
         duration=tp(1,VA),
-        sourcebook=U
+        sourcebook=U,
+        desc="By means of this spell the illusionist creates a pastel, glowing, rainbow-hued band of interplaying patterns. The effect is the same as a hypnotic pattern spell. However, once the rainbow pattern is cast, the illusionist need only gesture in the direction he or she desires, and the pattern of colors will move slowly off in that direction, at the rate of 3\" per round. It will persist without further attention from the spell caster for 1-3 rounds, and all creatures (up to 24 levels or hit dice) subject to the dweomer will follow the moving rainbow of light. If the pattern leads its targets into a dangerous area (through flame, off a cliff), allow a second saving throw. If the view of the lights is completely blocked (by an obscurement spell, for instance), the spell is negated. The material components for the spell are a crystal prism and a piece of phosphor."
     ),
     Spell('Shadow Monsters','I',4,
         cast=tp(4,S),
@@ -3440,17 +3668,20 @@ illusionist_spells = [
         cast=tp(4,S),
         duration=tp(1,VA),
         duration_lvl=tp(1,R),
-        sourcebook=U
+        sourcebook=U,
+        desc="When this spell is cast, the illusionist creates an area of fog similar to the effect of a wall of fog spell. However, while these rolling, billowing vapors conform to a wall of fog in most respects, only a very strong wind can move them, and any creature attempting to move through the solid fog will progress at a rate of but 1' per 1\" of normal movement rate per round. A gust of wind spell cannot affect it. A fireball, flame strike, or a wall of fire will burn it away in a single round. The material components for the spell are a pinch of dried, powdered peas combined with powdered animal hoof."
     ),
     Spell('Vacancy','I',4,
         cast=tp(4,S),
         duration_lvl=tp(1,T),
-        sourcebook=U
+        sourcebook=U,
+        desc="When a vacancy spell is cast, the illusionist causes an area to appear to be vacant, neglected, and unused. Those who behold the area will see dust on the floor, cobwebs, dirt, or any other condition which would be typical of a long-abandoned place. If they pass through the area of spell effect, they will seemingly leave tracks, tear away cobwebs, and so on. Unless they actually contact some object cloaked by the spell, the place will seem empty of what is actually contains. Merely brushing some invisible object will not cause the vacancy spell to be disturbed, and only forceful contact will allow any chance to note that all is not as it seems. The spell is a very powerful combination of advanced invisibility/illusion, but it can cloak only non-living things. Living things will not be invisible, but their presence does not otherwise disturb the spell. If forceful contact with a cloaked object occurs, those creatures subject to the dweomer will be able to penetrate the spell only if they discover several items which they cannot \"see\"; each is then entitled a saving throw versus spell. Failure indicates a belief that the objects only are invisible. A dispel illusion or dispel magic spell will remove the dweomer, so that the actual area can be viewed as it is in reality. True seeing, a gem of seeing, and similar effects can penetrate the deception, but detect invisibility cannot. The illusionist must have a square of finest black silk to effect the spell. This material component must be of not less than 100 gp value."
     ),
     Spell('Advanced Illusion','I',5,
         cast=tp(5,S),
         duration_lvl=tp(1,R),
-        sourcebook=U
+        sourcebook=U,
+        desc="This spell is essentially a spectral forces spell which operates through a program (similar to a programmed illusion spell) determined by the caster. It is thus unnecessary for the illusionist to concentrate on the spell for longer than 5 segments after casting it, as the program has then been started and will continue. The illusion has visual, full audial, olfactory, and thermal components. If any viewer actively attempts to disbelieve the dweomer, then he or she gains a saving throw versus spell. If any viewer successfully disbelieves and communicates this fact to other viewers able to comprehend the communication, each such viewer gains a saving throw versus spell with a +4 bonus. The material components are a bit of fleece and several grains of sand."
     ),
     Spell('Chaos','I',5,
         cast=tp(5,S),
@@ -3467,12 +3698,24 @@ illusionist_spells = [
     Spell('Dream','I',5,
         cast=tp(1,D),
         duration=tp(1,VA),
-        sourcebook=U
+        sourcebook=U,
+        desc=("A dream spell is a form of limited wish, but it has far more limited scope. The illusionist must actually find a comfortable place to rest, lie prone, compose his or her thoughts so as to concentrate upon the desired result, and then go to sleep. If he or she has an undisturbed sleep of not less than 8 hours duration, the dream magic will be effectuated 1 to 12 hours thereafter. Typical things which can be brought about by a dream are:\n\n"
+            "Recovery of an individual's lost hit points\n"
+            "Restoration of a body member such as a hand or foot\n"
+            "Success in locating some object not heavily guarded by magic wards and protections\n"
+            "Discovery of a means of ingress or egress\n"
+            "Location of a safe path through a wilderness\n"
+            "Improvement of chances for gaining a rich treasure\n"
+            "Approximate strength of enemy/opponent forces. Note: If a creature scried by this effect has 7+ or more hit dice, it may make a saving throw versus spell. If successful, it will be undetected by the dream, and might furthermore sense the illusionist as if detecting invisible.\n\n"
+            "It must be noted that a dream is not an ultra-powerful spell, and the results of its casting must be strictly limited. The guide given above denotes the maximum capability of the casting of a dream spell. Results will never exceed these parameters on a permanent basis. If, for example, a dead companion, slain in a recent battle, were dreamed alive, he or she would remain living for but 1 turn per level of experience of the illusionist casting the spell. Thereafter, the dweomer would disappear, the companion would return to his or her previous state, and a more permanent form of magic would be needed to allow the lost individual to actually live fully again.\n\n"
+            "A dream cannot by affected by an extension or permanency spell. The illusionist can use this spell but once per week. If it is cast twice within the same week, the spell will absolutely fail the second time and the illusionist will age from 1-10 years."
+        )
     ),
     Spell('Magic Mirror','I',5,
         cast=tp(1,H),
         duration_lvl=tp(1,R),
-        sourcebook=U
+        sourcebook=U,
+        desc="This spell is virtually the same as the 4th-level magic-user spell of the same name. It uses the same material components, except that if the illusionist casts a vision spell in place of the normal material components, the mirror will scry properly, although the vision spell will not function normally."
     ),
     Spell('Major Creation','I',5,
         cast=tp(1,T),
@@ -3514,7 +3757,10 @@ illusionist_spells = [
     Spell('Tempus Fugit','I',5,
         cast=tp(5,S),
         duration_lvl=tp(5,T),
-        sourcebook=U
+        sourcebook=U,
+        desc=("This powerful illusion affects the minds and bodies of all those within the area of effect. The spell causes those affected to perceive the passage of time in a much faster manner. Those entering this area after the casting is completed are similarly affected. Every turn (10 minutes) spent under the tempus fugit spell seems like a full hour to those within its dweomer. Because of this, all functions of affected individuals are speeded up accordingly. They must eat, sleep, and so forth according to an accelerated rate. The duration of other spells cast within the tempus fugit area is also sped up accordingly. One hour is as six to them, four hours a full day. This acceleration of time allows rest, renewal of spells, and recovery of hit points lost.\n"
+            "If desired, the spell caster can reverse the spell so that time is slowed for the individuals: An hour will seem only a turn, a day merely four hours. Reversal requires no special preparation. In either case, the illusionist is also affected by the spell. Under the reverse, the effects will always last at least one turn after the caster desires its dispelling, because his or her reactions are so greatly slowed."
+        )
     ),
     Spell('Conjure Animals','I',6,
         cast=tp(6,S),
@@ -3526,7 +3772,14 @@ illusionist_spells = [
         cast=tp(6,S),
         duration=tp(1,VA),
         duration_lvl=tp(1,R),
-        sourcebook=U
+        sourcebook=U,
+        desc=("The casting of a death fog spell creates an area of solid fog which has the additional property of being highly acidic. The vapors are deadly to living things, so that vegetation exposed to them will die — grass and similar small plants in 2 rounds, bushes and shrubs in 4, small trees in 8, and large trees in 16 rounds. Animal life not immune to acid will suffer damage according to the length of time it is exposed to the vapors of a death fog:\n\n"
+            "1st round: 1 point\n"
+            "2nd round: 2 points\n"
+            "3rd round: 4 points\n"
+            "4th & each succeeding round: 8 points\n\n"
+            "The characteristics of a death fog are otherwise the same as a solid fog. The material components are a pinch of dried and powdered peas, powdered animal hoof, and strong acid of any sort (including highly distilled vinegar or acid crystals)."
+        )
     ),
     Spell('Demi-Shadow Magic','I',6,
         cast=tp(6,S),
@@ -3544,12 +3797,14 @@ illusionist_spells = [
     Spell('Mirage Arcane','I',6,
         cast=tp(1,VA),
         duration=tp(1,VA),
-        sourcebook=U
+        sourcebook=U,
+        desc="The dweomer of this spell is similar to that of the vacancy spell, only it is more powerful and elaborate. Mirage arcane is also similar to the mirage cantrip. The spell enables the caster to make an area appear to be something other than it is. The illusionist is able to make it appear as whatever he or she envisions. The spell will remain as long as the caster maintains a faint concentration upon it, and even after this is no longer held the spell will persist for a total of 6 turns plus 1 additional turn for each experience level of the caster. (Note: Faint concentration can be maintained during normal conversation but not while spell casting, in melee, or if harmed by an attack.) In all cases the mirage arcane must be of some place the illusionist has actually seen personally. If he or she actually has a small bit of anything connected with the place envisioned to create this spell, then it takes on a form of reality. In its basic form, where casting time is but 3 segments, forceful contact and tactile discovery are necesarry to have any hope of discovering the magic, short of a detection device or spell. In its more complex from, where a material component is used, and 6 segments of casting time are expended, detection is possible only by some magical means, whether device, item, or spell. Either form of mirage arcane is subject to dispel illusion or dispel magic. As with all powerful illusions, the mind of the beholder will cause appropriate effects upon the viewer's body. Conversely, belief cannot usually affect the laws of nature and magic. However, under the influence of this spell, the viewer could possibly walk across a bed of hot coals thinking it was a shallow stream of water which was cooling his feet (and taking no damage), dine upon imaginary food and actually be nutritionally satisfied, or rest comfortably upon a bed of sharp stones, thinking it to be a featherbed. Gravity, for instance, is not affected by the dweomer, so that an envisioned bridge spanning a deep chasm will not support the believer. Those who may be there to witness the event will see it as a sudden disappearance of the individual. They will in no way connect it with an illusion unless they are otherwise aware of some magic at work."
     ),
     Spell('Mislead','I',6,
         cast=tp(1,S),
         duration_lvl=tp(1,R),
-        sourcebook=U
+        sourcebook=U,
+        desc="When a mislead spell is cast by the illusionist, he or she actually creates a phantasmal double at the same time that he or she is cloaked by improved invisibility magic. The illusionist is then free to go elsewhere while his or her phantasm seemingly moves away. The spell allows the phantasm of the illusionist to speak and gesture as if it were real, and there are full olfactory and touch components as well. A detect illusion, true seeing or true sight spell, or a gem of seeing, will reveal the illusion for what it is, and a detect invisibility, true sight, or true seeing spell, or a gem of seeing or robe of eyes, can detect the invisible illusionist (cf. shadow door)."
     ),
     Spell('Permanent Illusion','I',6,
         cast=tp(6,S),
@@ -3560,7 +3815,8 @@ illusionist_spells = [
     Spell('Phantasmagoria','I',6,
         cast=tp(6,S),
         duration_lvl=tp(1,R),
-        sourcebook=U
+        sourcebook=U,
+        desc="By means of this spell, the illusionist prepares a special form of spectral forces spell which is triggered by some special action. The phantasmagoria typically includes a full visual, audial, olfactory, and touch illusion which involves falling, sliding, or moving rapidly. The effect can be aimed at making the subjects believe that they are so doing or that something else is doing so. For example, the phantasmagoria may be triggered when falling into a pit, reaching the center of an area, opening a door, or performing some like action. The subject(s) will then believe that the fall continues for scores of feet; that the pit has opened and that they are hopelessly sliding down into an unknown area; that a wall of water is rushing down from the area beyond the just-opened door, or whatever. Note that unlike the programmed illusion spell, the phantasmagoria spell must always involve the illusion of something falling or rushing, or a dwindling perspective."
     ),
     Spell('Programmed Illusion','I',6,
         cast=tp(6,S),
@@ -3613,7 +3869,8 @@ illusionist_spells = [
     Spell('Shadow Walk','I',7,
         cast=tp(1,S),
         duration_lvl=tp(6,T),
-        sourcebook=U
+        sourcebook=U,
+        desc="In order to effectuate a shadow walk spell, the illusionist must be in an area of heavy shadows. The caster and any creatures he or she touches will then be transported to the edge of the Prime Material Plane where it borders the Plane of Shadow. In this region the illusionist can move at a relative rate of up to 7 leagues per turn, moving normally on the borders of the Plane of Shadow but aware of his or her position relative to the Prime Material Plane. Thus, rapid travel can be accomplished by stepping from the Plane of Shadow to the Prime Material Plane, with the destination controlled by the illusionist. The shadow walk spell can also be used to travel to other planes which border on the Plane of Shadow, but this requires a rather perilous transit of the Plane of Shadow to arrive at a border with another plane of reality. Any creatures touched by the illusionist when shadow walk it cast will also make the transition to the borders of the Plane of Shadow. They may opt to follow the illusionist, wander off into Shadowland, or stumble back onto the Prime Material Plane (50% chance for either result if they are lost or abandoned by the illusionist). Creatures unwilling to accompany the illusionist into the Plane of Shadow get a saving throw, negating the effect if made."
     ),
     Spell('Vision','I',7,
         cast=tp(7,S),
@@ -3624,7 +3881,8 @@ illusionist_spells = [
     Spell('Weird','I',7,
         cast=tp(7,S),
         duration=tp(1,VA),
-        sourcebook=U
+        sourcebook=U,
+        desc="When this spell is cast the illusionist must be able to converse with the subject or subjects to bring the dweomer into being. During the casting, the illusionist must call out to the subject or subjects, informing one or all that their final fate, indeed their doom is now upon them. The force of the magic is such that even if the subject or subjects make their saving throw, fear will paralyze them for a full 7 segments, and they will lose 1-4 strength points from this fear, although the lost strength will return in 7 rounds. Failure to save versus spell will cause the subject or subjects to face their nemesis, the opponent(s) most feared and inimical to them. Actual combat must then take place, for no magical means of escape will be possible. The foe fought is real for all intents and purposes. If the subject or subjects lose, then death occurs. If the weird caused by the dweomer is slain, then the subject or subjects emerge with no damage, no loss of items seemingly used in the combat, and no loss of spells likewise seemingly expended. The characters gain experience for defeating the weird if applicable. Although each round of combat seems normal, it takes but 1 segment of real time. During the course of the spell, the illusionist must concentrate fully upon maintaining it."
     ),
     Spell('First Level Magic-User Spells','I',7,
         cast=tp(1,VA),

@@ -21,7 +21,6 @@ class Command(BaseCommand):
             druid_spells + mu_spells + illusionist_spells)
 
         for spell in spell_list:
-            print(spell.name)
             s = SpellInfo(
                 slug = slugify(str(spell)),
                 name = spell.name,

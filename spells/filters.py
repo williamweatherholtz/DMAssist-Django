@@ -6,5 +6,6 @@ class SpellFilter(django_filters.FilterSet):
     class Meta:
         model = SpellInfo
         fields = {
-            'slug': ['contains']
+            'slug': ['contains'],
+            'description': ['contains']
         }
