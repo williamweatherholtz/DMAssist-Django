@@ -3176,37 +3176,49 @@ mu_spells = [
         cast=tp(7,S),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="Bigby's Grasping Hand is a superior version of the sixth level Bigby's Forceful Hand spell (q.v.), being like it in many ways. The Grasping Hand can actually hold motionless a creature or object of up to 1,000 pounds weight, or move creatures as a double strength Forceful Hand. The material component is a leather glove."
+        desc="<i>Bigby's Grasping Hand</i> is a superior version of the sixth level <a href=\"/spells/bigbys-forceful-hand-magic-user-lvl-6/\"><i>Bigby's Forceful Hand</i></a> spell, being like it in many ways. The <i>Grasping Hand</i> can actually hold motionless a creature or object of up to 1,000 pounds weight, or move creatures as a double strength <a href=\"/spells/bigbys-forceful-hand-magic-user-lvl-6/\"><i>Forceful Hand</i></a>. The material component is a leather glove."
     ),
     Spell('Cacodemon','M',7,
         cast=tp(1,VA),
         duration=tp(1,VA),
-        sourcebook=V
+        sourcebook=V,
+        desc=("This perilous excercise in dweomercraeft summons up a powerful demon of type IV, V, or VI, depending upon the demon's name being known to the magic-user. Note that this spell is <i>not</i> of sufficient power to bring a demon of greater power, and lesser sorts are not called as they have no known names. In any event, the spell caster <i>must</i> know the name of the type IV, V, or VI demon he or she is summoning. As the spell name implies, the demon so summoned is most angry and evilly disposed. The spell caster must be within a circle of <i>protection</i> (or a thaumaturgic triangle with <a href=\"/spells/protection-from-evil-cleric-lvl-1/\"><i>protection from evil</i></a>) and the demon confined within a pentagram (circled pentacle) if he or she is to avoid being slain or carried off by the summoned cacodemon. The summoned demon can be treated with as follows:\n\n"
+            "1) The magic-user can require the monster to perform a desired course of action by force of threat and pain of a <a href=\"/spells/spiritwrack-magic-user-lvl-6/\"><i>spiritwrack</i></a> spell, allowing freedom whenever the demon performs the full extent of the service, and forcing the demon to pledge word upon it. This is exceedingly dangerous, as a minor error in such a bargain will be seized upon by the monster to reverse the desired outcome or simply to kill and devour the summoner. Furthermore, the demon will bear great enmity for the magic-user forever after such forced obedience, so the spell caster had better be most powerful and capable.\n\n"
+            "2) By tribute of fresh human blood and the promise of 1 or more human sacrifices, the summoner can bargain with the demon for willing service. Again, the spell caster is well advised to have ample protection and power to defend himself or herself, as the demon might decide the offer is insufficient — or it is easier to enjoy the summoner's slow death — and decide not to accept the bargain as offered. Although the demon will have to abide by a pledge, as his name is known, he will have to hold only to the exact word of the arrangement, not to the spirit of the agreement. On the other hand, only highly evil magic-users are likely to attempt to strike such a bargain, and the summoned <i>cacodemon</i> might be favorably disposed towards such a character, especially if he or she is also chaotic.\n\n"
+            "3) The summoned demon can be the object of a <a href=\"/spells/trap-the-soul-magic-user-lvl-8/\"><i>trap the soul</i></a> spell. In this case, the magic-user will not speak with or bargain for the demon's services, although the <i>cacodemon</i> might be eager to reach an accord with the dweomercraefter before he is forced into imprisonment. The trapping of the demon is risky only if proper precautions have not been taken, for failure to confine the monster usually means only that it is able to escape to its own plane. Once trapped, the demon must remain imprisoned until the possessor of his object of confinement breaks it and frees him, and this requires one service from the now loosed monster. If the individual(s) freeing the demon fails to demand a service when the monster asks what is required of him, the demon is under no constraint not to slay the liberator(s) on the spot, but if a service is required, the creature must first do his best to perform it and then return to the Abyss.\n\n"
+            "The duration of service of any demon must be limited unless the demon is willing to serve for an extended period. Any required course of action or service which effectively requires an inordinate period of time to perform, or is impossible to perform, is 50% likely to free the demon from his obligations and enable him to be unconstrained in his vengeance upon the spell caster if he or she is not thereafter continually protected, for a demon so freed can remain on the plane it was summoned to for as long as 666 days.\n\n"
+            "The demon summoned will be exceptionally strong, i.e. 8 hit points per hit die.\n\n"
+            "Casting time is 1 hour per type (numeric) of the demon to be summoned. If there is any interruption during this period, the spell fails. If there is an interruption while the <i>cacodemon</i> is summoned, it is 10% probable that it will be able to escape its boundaries and attack the magic-user, this percentage rising cumulatively each round of continued interruption.\n\n"
+            "Each demon is entitled to a saving throw versus this summoning spell. If a score higher than the level of the magic-user summoning is rolled with 3d6 (2d10 with respect to type VI demons), that particular spell failed to bring the desired demon. When this occurs, it is certain that the named demon is imprisoned or destroyed or the name used was not perfectly correct, so the spell caster will have to call upon another name to bring forth a cacodemon.\n\n"
+            "The components of this spell are 5 flaming black candles; a brazier of hot coals upon which must be burned sulphur, bat hairs, lard, soot, mercuric-nitric acid crystals, mandrake root, alcohol, and a piece of parchment with the demon's name inscribed in runes inside a pentacle; and a dish of blood from some mammal (preferably a human, of course) placed inside the area where the <i>cacodemon</i> is to be held."
+        )
     ),
     Spell('Charm Plants','M',7,
         cast=tp(1,T),
         duration=tp(1,P),
         sourcebook=V,
-        desc="The Charm Plants spell allows the spell caster to bring under command vegetable life forms, communicate with them, and these plants will obey instructions to the best of their ability. The spell will charm plants in a 3\" x 1\" area. While the spell does not endow the vegetation with new abilities, it does allow the magic-user to command the plants to use whatever they have in order to fulfil his or her instructions, and if the plants in the area of effect do have special or unusual abilities, these will be used as commanded by the magic-user. The saving throw applies only to intelligent plants, and it is made at -4 on the die roll. The material components of the spell area pinch of humus, a drop of water and a twig or leaf."
+        desc="The <i>charm plants</i> spell allows the spell caster to bring under command vegetable life forms, communicate with them, and these plants will obey instructions to the best of their ability. The spell will <i>charm plants</i> in a 3\" x 1\" area. While the spell does not endow the vegetation with new abilities, it does allow the magic-user to command the plants to use whatever they have in order to fulfil his or her instructions, and if the plants in the area of effect do have special or unusual abilities, these will be used as commanded by the magic-user. The saving throw applies only to intelligent plants, and it is made at -4 on the die roll. The material components of the spell area pinch of humus, a drop of water and a twig or leaf."
     ),
     Spell('Delayed Blast Fireball','M',7,
         cast=tp(7,S),
         duration=tp(5,R),
         sourcebook=V,
-        desc="This spell creates a fire ball with +1 on each of its dice of damage, and it will not release its blast for from 1 to 50 segments (1/10 to 5 rounds), according to the command upon casting by the magic-user. In other respects, the spell is the same as the third level Fireball spell (q.v.)."
+        desc="This spell creates a <i>fire ball</i> with +1 on each of its dice of damage, and it will not release its blast for from 1 to 50 segments (1/10 to 5 rounds), according to the command upon casting by the magic-user. In other respects, the spell is the same as the third level <a href=\"/spells/fireball-magic-user-lvl-3/\"><i>fireball</i></a> spell."
     ),
     Spell('Drawmij\'s Instant Summons','M',7,
         cast=tp(1,S),
         duration=tp(0),
         sourcebook=V,
-        desc="When this spell is cast, the magic-user teleports some desired item from virtually any location directly to his or her hand. The object must be singular, can be no larger than a sword is long, have no more mass and weight than a shield (about 75 g.p. weight), and it must be non-living. To prepare this spell, the magic-user must hold a gem of not less than 5,000 g.p. value in his or her hand and utter all but the final word of the conjuration. He or she then must have this same gem available to cast the spell. All that is then required is that the magic-user utter the final word while crushing the gem, and the desired item is transported instantly into the spell caster's right or left hand as he or she desires. The item must, of course, have been previously touched during the initial incantation and specifically named, and only that particular item will be summoned by the spell. If the item is in the possession of another creature, the spell will not work, but the caster will know who the possessor is and roughly where he, she, or it is located when the summons is cast. Items can be summoned from other planes of existence, but only if such items are not in the possession (not necessarily physical grasp) of another creature. For each level of experience above the 14th, the magic-user is able to summon a desired item from 1 plane further removed from the plane he or she is upon at the time the spell is cast, i.e. 1 plane at 14th level, but 2 at 15th, 3 at 16th. etc. Thus, a magic-user of 16th level could effect the spell even if the item desired was on the second layer of one of the outer planes, but at 14th level the magic-user would be able to summon the item only if it were on one of the Elemental Planes or the Astral or the Ethereal Plane."
+        desc="When this spell is cast, the magic-user teleports some desired item from virtually any location directly to his or her hand. The object must be singular, can be no larger than a sword is long, have no more mass and weight than a shield (about 75 g.p. weight), and it must be non-living. To prepare this spell, the magic-user must hold a gem of not less than 5,000 g.p. value in his or her hand and utter all but the final word of the conjuration. He or she then must have this same gem available to cast the spell. All that is then required is that the magic-user utter the final word while crushing the gem, and the desired item is transported instantly into the spell caster's right or left hand as he or she desires. The item must, of course, have been previously touched during the initial incantation and specifically named, and only that particular item will be summoned by the spell. If the item is in the possession of another creature, the spell will not work, but the caster will know who the possessor is and roughly where he, she, or it is located when the <i>summons</i> is cast. Items can be summoned from other planes of existence, but only if such items are not in the possession (not necessarily physical grasp) of another creature. For each level of experience above the 14th, the magic-user is able to summon a desired item from 1 plane further removed from the plane he or she is upon at the time the spell is cast, i.e. 1 plane at 14th level, but 2 at 15th, 3 at 16th. etc. Thus, a magic-user of 16th level could effect the spell even if the item desired was on the second layer of one of the outer planes, but at 14th level the magic-user would be able to summon the item only if it were on one of the Elemental Planes or the Astral or the Ethereal Plane."
     ),
     Spell('Duo-Dimension','M',7,
         cast=tp(7,S),
         duration=tp(3,R),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="A Duo-Dimension spell causes the caster to have only two dimensions, height and width but no depth. He or she is thus invisible when a sideways turn is made, and this invisibility can only be detected by means of a true seeing spell or similar means. In addition, the duo-dimensional magic-user can pass through the thinnest of spaces as long as they have the proper height according to his or her actual length - going through the space between a door and its frame is a simple matter. The magic-user can perform all actions on a normal basis. He or she can turn and become invisible, move in this state, and appear again next round and cast a spell, disappearing on the following round. Note that when turned the magic-user cannot be affected by any form of attack, but when visible he or she is subject to triple the amount of damage normal for an attack form, i.e. a dagger thrust would inflict 3-12 hit points of damage if it struck a duo-dimensional magic-user. Furthermore, the magic-user has a portion of his or her existence on the Astral Plane when the spell is in effect, and he or she is subject to possible notice from creatures thereupon. If noticed, it is 25% probable that the magic-user will be entirety brought to the Astral Plane by attack from the astral creature. The material components of this spell are a thin, flat ivory likeness of the spell caster (which must be of finest workmanship, gold filigreed, and enamelled and gem-studded at an average cost of 5,000 to 10,000 g.p.) and a strip of parchment. As the spell is uttered, the parchment is given a half twist and joined at the ends. The figurine is then passed through the parchment loop, and both disappear forever."
+        desc=("A <i>duo-dimension</i> spell causes the caster to have only two dimensions, height and width but no depth. He or she is thus invisible when a sideways turn is made, and this invisibility can only be detected by means of a <a href=\"/spells/true-seeing-cleric-lvl-5/\"><i>true seeing</i></a> spell or similar means. In addition, the <i>duo-dimensional</i> magic-user can pass through the thinnest of spaces as long as they have the proper height according to his or her actual length — going through the space between a door and its frame is a simple matter. The magic-user can perform all actions on a normal basis. He or she can <i>turn</i> and become invisible, move in this state, and appear again next round and cast a spell, disappearing on the following round. Note that when <i>turned</i> the magic-user cannot be affected by any form of attack, but when visible he or she is subject to triple the amount of damage normal for an attack form, i.e. a dagger thrust would inflict 3-12 hit points of damage if it struck a <i>duo-dimensional</i> magic-user. Furthermore, the magic-user has a portion of his or her existence on the Astral Plane when the spell is in effect, and he or she is subject to possible notice from creatures thereupon. If noticed, it is 25% probable that the magic-user will be entirety brought to the Astral Plane by attack from the astral creature.\n\n"
+            "The material components of this spell are a thin, flat ivory likeness of the spell caster (which must be of finest workmanship, gold filigreed, and enamelled and gem-studded at an average cost of 5,000 to 10,000 g.p.) and a strip of parchment. As the spell is uttered, the parchment is given a half twist and joined at the ends. The figurine is then passed through the parchment loop, and both disappear forever."
+        )
     ),
     Spell('Forcecage','M',7,
         cast=tp(1,VA),
@@ -3222,20 +3234,20 @@ mu_spells = [
         cast=tp(1,VA),
         duration=tp(1,VA),
         sourcebook=V,
-        desc="A Limited Wish is a very potent but difficult spell. It will fulfil literally, but only partially or for a limited duration, the utterance of the spell caster. Thus, the actuality of the past, present or future might be altered (but possibly only for the magic-user unless the warding of the Limited Wish is most carefully stated) in some limited manner. The use of a Limited Wish will not substantially change major realities, nor will it bring wealth or experience merely by asking. The spell can, for example, restore some hit points (or all hit points for a limited duration) lost by the magic-user. It can reduce opponent hit probabilities or damage, it can increase duration of some magical effect, it can cause a creature to be favourably disposed to the spell caster, and so on (cf. Wish). The Limited Wish can possibly give a minor clue to some treasure or magic item. Greedy desires will usually end in disaster for the wisher. Casting time is the actual number of seconds - at six per segment - to phrase the Limited Wish."
+        desc="A <i>limited wish</i> is a very potent but difficult spell. It will fulfil literally, but only partially or for a limited duration, the utterance of the spell caster. Thus, the actuality of the past, present or future might be altered (but possibly only for the magic-user unless the wording of the <i>limited wish</i> is most carefully stated) in some limited manner. The use of a <i>limited wish</i> will not substantially change major realities, nor will it bring wealth or experience merely by asking. The spell can, for example, restore some hit points (or all hit points for a limited duration) lost by the magic-user. It can reduce opponent hit probabilities or damage, it can increase duration of some magical effect, it can cause a creature to be favourably disposed to the spell caster, and so on (cf. <a href=\"/spells/wish-magic-user-lvl-9/\"><i>wish</i></a>). The <i>limited wish</i> can possibly give a minor clue to some treasure or magic item. Greedy desires will usually end in disaster for the wisher. Casting time is the actual number of seconds — at six per segment — to phrase the <i>limited wish</i>."
     ),
     Spell('Mass Invisibility','M',7,
         cast=tp(7,S),
         duration=tp(1,P),
         sourcebook=V,
-        desc="This is the same as an Invisibility spell (q.v.) except that it can hide creatures in a 3\" x 3\" area, up to 300 to 400 man-sized creatures, 30 to 40 giants, or 6 to 8 large dragons."
+        desc="This is the same as an <a href=\"/spells/invisibility-magic-user-lvl-2/\"><i>invisibility</i></a> spell except that it can hide creatures in a 3\" x 3\" area, up to 300 to 400 man-sized creatures, 30 to 40 giants, or 6 to 8 large dragons."
     ),
     Spell('Monster Summoning V','M',7,
         cast=tp(6,S),
         duration=tp(6,R),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="This spell summons 1-2 fifth level monsters, and they will appear in 1-3 rounds. See Monster Summoning I for other details."
+        desc="This spell summons 1-2 fifth level monsters, and they will appear in 1-3 rounds. See <a href=\"/spells/monster-summoning-i-magic-user-lvl-3/\"><i>monster summoning I</i></a> for other details."
     ),
     Spell('Mordenkainen\'s Magnificent Mansion','M',7,
         cast=tp(7,R),
@@ -3250,25 +3262,25 @@ mu_spells = [
         cast=tp(7,S),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="Upon casting this spell, the magic-user brings into being a shimmering sword-like plane of force. The spell caster is able to mentally wield this weapon (to the exclusion of activities other than movement), causing it to move and strike as if it were being used by a fighter. The basic chance for Mordenkainen's Sword to hit is the same as the chance for a sword wielded by a fighter of one-half the level of the spell caster, i.e. if cast by a 12th level magic-user, the weapon has the same hit probability as a sword wielded by a 6th level fighter. The sword has no magical \"to hit\" bonuses, but it can hit any sort of opponent even those normally struck only by +3 weapons or astral, ethereal or out of phase; and it will hit any armor class on a roll of 19 or 20. It inflicts 5-20 hit points on opponents of man-size or smaller, and 5-30 on opponents larger than man-sized. It can be used to subdue. It lasts until the spell duration expires, a dispel magic is used successfully upon it, or its caster no longer desires it. The material component is a miniature platinum sword with a grip and pommel of copper and zinc which costs 500 g.p. to construct, and which disappears after the spell's completion."
+        desc="Upon casting this spell, the magic-user brings into being a shimmering sword-like plane of force. The spell caster is able to mentally wield this weapon (to the exclusion of activities other than movement), causing it to move and strike as if it were being used by a fighter. The basic chance for <i>Mordenkainen's Sword</i> to hit is the same as the chance for a sword wielded by a fighter of one-half the level of the spell caster, i.e. if cast by a 14th level magic-user, the weapon has the same hit probability as a sword wielded by a 7th level fighter. The sword has no magical \"to hit\" bonuses, but it can hit any sort of opponent even those normally struck only by +3 weapons or astral, ethereal or out of phase; and it will hit <i>any</i> armor class on a roll of 19 or 20. It inflicts 5-20 hit points on opponents of man-size or smaller, and 5-30 on opponents larger than man-sized. It can be used to subdue. It lasts until the spell duration expires, a <a href=\"/spells/dispel-magic-cleric-lvl-3/\"><i>dispel magic</i></a> is used successfully upon it, or its caster no longer desires it. The material component is a miniature platinum sword with a grip and pommel of copper and zinc which costs 500 g.p. to construct, and which disappears after the spell's completion."
     ),
     Spell('Phase Door','M',7,
         cast=tp(7,S),
         duration=tp(0),
         sourcebook=V,
-        desc="When this spell is cast, the magic-user attunes he or her body, and a section of wall is affected as if by a Passwall spell (q.v.). The Phase Door is invisible to all creatures save the spell caster, and only he or she can use the space or passage the spell creates, disappearing when the Phase Door is entered, and appearing when it is exited. The Phase Door lasts for 1 usage for every 2 levels of experience of the spell caster. It can be dispelled only by a casting of Dispel Magic from a higher level magic-user, or by several lower level magic-users, casting in concert, whose combined levels of experience are more than double that of the magic-user who cast the spell."
+        desc="When this spell is cast, the magic-user attunes his or her body, and a section of wall is affected as if by a <a href=\"/spells/passwall-magic-user-lvl-5/\"><i>passwall</i></a> spell. The <i>phase door</i> is invisible to all creatures save the spell caster, and only he or she can use the space or passage the spell creates, disappearing when the <i>phase door</i> is entered, and appearing when it is exited. The <i>phase door</i> lasts for 1 usage for every 2 levels of experience of the spell caster. It can be dispelled only by a casting of <a href=\"/spells/dispel-magic-cleric-lvl-3/\"><i>dispel magic</i></a> from a higher level magic-user, or by several lower level magic-users, casting in concert, whose combined levels of experience are more than double that of the magic-user who cast the spell."
     ),
     Spell('Power Word, Stun','M',7,
         cast=tp(1,S),
         duration=tp(1,VA),
         sourcebook=V,
-        desc="When a Power Word, Stun is uttered, any creature of the magic-user's choice will be stunned - reeling and unable to think cogently or act for 2 to 8 (2d4) melee rounds. Of course, the magic-user must be facing the creature, and it must be within the spell caster's range or ½\" per level of experience. Creatures with 1 to 30 hit points will be stunned for 4-16 (4d4) rounds, those with 31 to 60 hit points will be stunned for 2 to (2d4) rounds, those with 61 to 90 hit points will be stunned for 1 to 4 (d4) rounds, and creatures with over 90 hit points will not be affected. Note that if a creature is weakened due to any cause so that its hit points are below the usual maximum, the current number of hit points possessed will be used."
+        desc="When a <i>power word, stun</i> is uttered, any creature of the magic-user's choice will be stunned — reeling and unable to think coherently or act — for 2 to 8 (2d4) melee rounds. Of course, the magic-user must be facing the creature, and it must be within the spell caster's range of ½\" per level of experience. Creatures with 1 to 30 hit points will be stunned for 4-16 (4d4) rounds, those with 31 to 60 hit points will be stunned for 2 to 8 (2d4) rounds, those with 61 to 90 hit points will be stunned for 1 to 4 (d4) rounds, and creatures with over 90 hit points will not be affected. Note that if a creature is weakened due to any cause so that its hit points are below the usual maximum, the <i>current</i> number of hit points possessed will be used."
     ),
     Spell('Reverse Gravity','M',7,
         cast=tp(7,S),
         duration=tp(1,S),
         sourcebook=V,
-        desc="This spell reverses gravity in the area of effect, causing all unfixed objects and creatures within it to \"fall\" upwards. The Reverse Gavity lasts for 1 second (1/6 segment) during which time the objects and creatures will \"fall\" 16' up. If some solid object is encountered in this \"fall\", the object strikes it in the some manner as a normal downward fall. At the end of the spell duration, the affected objects and creatures fall downwards. As the spell affects an area, objects tens, hundreds or even thousands of feet in the air can be affected. The material components of this spell are a lodestone and iron filings."
+        desc="This spell reverses gravity in the area of effect, causing all unfixed objects and creatures within it to \"fall\" upwards. The <i>reverse gravity</i> lasts for 1 second (1/6 segment) during which time the objects and creatures will \"fall\" 16' up. If some solid object is encountered in this \"fall\", the object strikes it in the some manner as a normal downward fall. At the end of the spell duration, the affected objects and creatures fall downwards. As the spell affects an area, objects tens, hundreds or even thousands of feet in the air can be affected. The material components of this spell are a lodestone and iron filings."
     ),
     Spell('Sequester','M',7,
         cast=tp(1,R),
@@ -3281,13 +3293,13 @@ mu_spells = [
         cast=tp(1,VA),
         duration=tp(1,P),
         sourcebook=V,
-        desc="By means of this spell the magic-user is able to create a duplicate of any creature. The duplicate appears exactly the same as the real. There are differences: the simulacrum will have only 51% to 60% (50% + 1% to 10%) of the hit points of the real creature, there will be personality differences, there will be areas of knowledge which the duplicate does not have, and a Detect Magic spell will instantly reveal it as a simulacrum, as will a True Seeing spell. At all times the simulacrum remains under the absolute command of the magic-user who created it, although no special telepathic link exists, so command must be exercised in the normal manner. The spell creates the form of the creature, but it is only a zombie-like creature. A Reincarnation spell must be used to give the duplicate a vital force, and a Limited Wish spell must be used to empower the duplicate with 40% to 65% (35% + 5% to 30%) of the knowledge and personality of the original. The level, if any, of the simulacrum, will be from 20% to 50% of the original creature. The duplicate creature is formed from ice or snow. The spell is cast over the rough form, and some piece of the creature to be duplicated must be placed inside the snow or ice. Additionally, the spell requires powdered ruby. The simulacrum has no ability to become more powerful, i.e. it cannot increase its levels or abilities."
+        desc="By means of this spell the magic-user is able to create a duplicate of any creature. The duplicate appears exactly the same as the real. There are differences: the <i>simulacrum</i> will have only 51% to 60% (50% + 1% to 10%) of the hit points of the real creature, there will be personality differences, there will be areas of knowledge which the duplicate does not have, and a <a href=\"/spells/detect-magic-cleric-lvl-1/\"><i>detect magic</i></a> spell will instantly reveal it as a <i>simulacrum</i>, as will a <a href=\"/spells/true-seeing-cleric-lvl-5/\"><i>true seeing</i></a> spell. At all times the <i>simulacrum</i> remains under the absolute command of the magic-user who created it, although no special telepathic link exists, so command must be exercised in the normal manner. The spell creates the form of the creature, but it is only a zombie-like creature. A <a href=\"/spells/reincarnation-magic-user-lvl-6/\"><i>reincarnation</i></a> spell must be used to give the duplicate a vital force, and a <a href=\"/spells/limited-wish-magic-user-lvl-7/\"><i>limited wish</i></a> spell must be used to empower the duplicate with 40% to 65% (35% + 5% to 30%) of the knowledge and personality of the original. The level, if any, of the <i>simulacrum</i>, will be from 20% to 50% of the original creature. The duplicate creature is formed from ice or snow. The spell is cast over the rough form, and some piece of the creature to be duplicated must be placed inside the snow or ice. Additionally, the spell requires powdered ruby. The <i>simulacrum</i> has no ability to become more powerful, i.e. it cannot increase its levels or abilities."
     ),
     Spell('Statue','M',7,
         cast=tp(7,S),
         duration_lvl=tp(6,T),
         sourcebook=V,
-        desc="When a Statue dweomer is cast, the magic-user or other creature is apparently turned to solid stone, along with any garments and equipment worn or carried. The initial transformation from flesh to stone requires 1 full round after the spell is cast. Thereafter the creature can withstand any inspection and appear to be a stone statue, although a faint magic will be detected from the stone if it is checked for. Despite being in this condition, the petrified individual can see, hear, and smell normally. Feeling is only as acute as that which will actually affect the granite-hard substance of the individual's body, i.e. chipping is equal to a slight wound, but breaking off one of the statue's arms is another matter. The individual under the magic of a Statue spell can return to normal state in 1/6 of a segment, and then return to statue state in the same period if he or she so desires, as long as the spell duration is in effect. During the initial transformation from flesh to stone, the creature must make a saving throw of 82% or less, with -1 deducted from the dice roll score for each point of his or her constitution score, so an 18 constitution indicates certain success. Failure indicates system shock and resultant death. The material components of this spell are lime, sand, and a drop of water stirred by an iron bar such as a nail or spike."
+        desc="When a <i>statue</i> dweomer is cast, the magic-user or other creature is apparently turned to solid stone, along with any garments and equipment worn or carried. The initial transformation from flesh to stone requires 1 full round after the spell is cast. Thereafter the creature can withstand any inspection and appear to be a stone statue, although a faint magic will be detected from the stone if it is checked for. Despite being in this condition, the petrified individual can see, hear, and smell normally. Feeling is only as acute as that which will actually affect the granite-hard substance of the individual's body, i.e. chipping is equal to a slight wound, but breaking off one of the statue's arms is another matter. The individual under the magic of a <i>statue</i> spell can return to normal state in 1/6 of a segment, and then return to <i>statue</i> state in the same period if he or she so desires, as long as the spell duration is in effect. During the initial transformation from flesh to stone, the creature must make a saving throw of 82% or less, with -1 deducted from the dice roll score for each point of his or her constitution score, so an 18 constitution indicates certain success. Failure indicates system shock and resultant death. The material components of this spell are lime, sand, and a drop of water stirred by an iron bar such as a nail or spike."
     ),
     Spell('Teleport Without Error','M',7,
         cast=tp(1,S),
@@ -3339,7 +3351,7 @@ mu_spells = [
         cast=tp(2,S),
         duration=tp(1,P),
         sourcebook=V,
-        desc="When the magic-user employs this spell, he or she causes an object to vanish. The magic-user can cause the object to be teleported (see Teleport spell) if it weighs up to a maximum of 500 g.p. per level of experience of the spell caster, i.e. 14th level magic-user can vanish and cause to reappear at his or her desired location 7000 g.p. weight. Greater objects can be made to vanish, but they are simply placed into the ethereal plane and replaced with stone. Thus, a door can be made to disappear, and it will be replaced by a stone wall of 1' thickness, or equal in thickness to the door, whichever is greater. The maximum volume of material which can be affected is 3 cubic feet per level of experience. Thus, both weight and volume limit the spell. A Dispel Magic which is successful will bring back vanished items from the ethereal plane."
+        desc="When the magic-user employs this spell, he or she causes an object to <i>vanish</i>. The magic-user can cause the object to be teleported (see <a href=\"/spells/teleport-magic-user-lvl-5/\"><i>teleport</i></a> spell) if it weighs up to a maximum of 500 g.p. per level of experience of the spell caster, i.e. 14th level magic-user can <i>vanish</i> and cause to reappear at his or her desired location 7000 g.p. weight. Greater objects can be made to <i>vanish</i>, but they are simply placed into the ethereal plane and replaced with stone. Thus, a door can be made to disappear, and it will be replaced by a stone wall of 1' thickness, or equal in thickness to the door, whichever is greater. The maximum volume of material which can be affected is 3 cubic feet per level of experience. Thus, both weight and volume limit the spell. A <a href=\"/spells/dispel-magic-cleric-lvl-3/\"><i>dispel magic</i></a> which is successful will bring back vanished items from the ethereal plane."
     ),
     Spell('Volley','M',7,
         cast=tp(1,S),
@@ -3350,12 +3362,28 @@ mu_spells = [
     Spell('Antipathy/Sympathy','M',8,
         cast=tp(6,T),
         duration_lvl=tp(12,T),
-        sourcebook=V
+        sourcebook=V,
+        desc=("This spell allows the magic-user to set up certain vibrations which will tend to either repel or attract a specific type of living, intelligent creature or characters of a particular alignment. The magic-user must decide which effect is desired with regard to what creature or alignment type before beginning the dweomercraefting, for the components of each application differ. The spell cannot be cast upon living creatures.\n\n"
+            "<i>Antipathy</i>: This dweomer causes the affected creature or alignment type to feel an overpowering urge to leave the area or not touch the affected item. If a saving throw versus magic is successful, the creature may stay/touch the item, but the creature will feel very uncomfortable, and a persistent itching will cause it to suffer the loss of 1 point of dexterity per round the area or item is remained in or touched, subject to a maximum of 4 points. Failure to save versus magic forces the creature/alignment type to abandon the magicked area or item, shunning it permanently and never willingly enter/touch it until the spell is removed or expires. The material component for this application of the spell is a lump of alum soaked in vinegar.\n\n"
+            "<i>Sympathy</i>: By casting the <i>sympathy</i> application of the spell, the magic-user can cause a particular type of creature or alignment of character to feel elated and pleased to be in an area or with the prospect of touching or possessing an object or item. The desire to stay in the area or touch/possess the magicked object/item will be overpowering, and unless a saving throw versus magic is made, the creature or character will stay or refuse to release the object. If the saving throw is successful, the creature or character is released from the enchantment, but a subsequent saving throw must be made from 1-6 turns later, and if this one fails, the affected creature will return to the area or object. The material components of this spell are 1,000 g.p. worth of crushed pearls and a drop of honey.\n\n"
+            "Note that the particular kind of creature to be affected must be named specifically, i.e. red dragons, hill giants, wererats, lammasu, catoblepas, vampires, etc. Likewise, the specific alignment type for characters must be named, i.e. chaotic evil, chaotic good, lawful neutral, neutral, etc.\n\n"
+            "If this spell is cast upon an area, a 10' per side cube can be magicked per level of experience of the magic-user. If an object or item is magicked, only that single thing can be enchanted, but affected creatures/characters save versus magic thereon at -2."
+        )
     ),
     Spell('Bigby\'s Clenched Fist','M',8,
         cast=tp(8,S),
         duration_lvl=tp(1,R),
-        sourcebook=V
+        sourcebook=V,
+        desc=("<i>Bigby's Clenched Fist</i> spell brings forth a huge disembodied hand which is balled into a fist. This magical member is under the mental control of the spell caster, and he or she can cause it to strike an opponent each round. No other spell casting or magical activity may be undertaken for the duration of the spell. The <i>Clenched Fist</i> never misses, but the effectiveness of its blow varies from round to round.\n\n"
+            "<table>"
+            "<tr><th>Die Roll</th><th>Result</th></tr>"
+            "<tr><td>1-12</td><td>glancing blow — 1 to 6 hit points</td></tr>"
+            "<tr><td>13-16</td><td>solid punch — 2 to 12 hit points</td></tr>"
+            "<tr><td>17-19</td><td>hard punch — 3 to 18 hit points and opponent is stunned next round</td></tr>"
+            "<tr><td>20</td><td>crushing punch — 4 to 24 hit points and opponent is stunned for next 3 rounds</td></tr>"
+            "</table>\n\n"
+            "Note: Any <i>stunned</i> opponent allows the magic-user to add +4 to his or her die roll to determine how well the <i>fist</i> strikes, as the opponent is not capable of dodging or defending against the attack effectively. (This spell can be used with any of the other <i>Hand</i> spells of the Archmage Bigby.) The material component of this spell is a leather glove and a small device consisting of four rings joined so as to form a slightly curved line, with an \"I\" upon which the bottoms of the rings rest, the whole fashioned of an alloyed metal of copper and zinc. The <i>Fist</i> is destroyed by damage equal to the hit points of its caster being inflicted upon it."
+        )
     ),
     Spell('Binding','M',8,
         cast=tp(1,VA),
@@ -3377,7 +3405,7 @@ mu_spells = [
         cast=tp(1,T),
         duration=tp(1,P),
         sourcebook=V,
-        desc="This spell creates a duplicate of a person. This clone is in all respects the duplicate of the individual, complete to the level of experience, memories, etc. However, the duplicate is the person, so that if the original and a duplicate exist at the same time, each knows of the other's existence; and the original person and the clone will each desire to do away with the other, for such an alter-ego is unbearable to both. If one cannot destroy the other, one (95%) will go insane (75% likely to be the clone) and destroy itself, or possibly (5%) both will become mad and commit suicide. These probabilities will occur within 1 week of the dual existence. The material component of the spell is a small piece of the flesh of the person to be duplicated. Note that the clone will become the person as he or she existed at the time at which the flesh was taken, and all subsequent knowledge, experience, etc. will be totally unknown to the clone. Also, the clone will be a physical duplicate, and possessions of the original are another matter entirely. Note that a clone takes from 2-8 months to grow, and only after that time is dual existence established."
+        desc="This spell creates a duplicate of a person. This clone is in all respects the duplicate of the individual, complete to the level of experience, memories, etc. However, the duplicate <i>is</i> the person, so that if the original and a duplicate exist at the same time, each knows of the other's existence; and the original person and the <i>clone</i> will each desire to do away with the other, for such an alter-ego is unbearable to both. If one cannot destroy the other, one (95%) will go insane (75% likely to be the <i>clone</i>) and destroy itself, or possibly (5%) both will become mad and commit suicide. These probabilities will occur within 1 week of the dual existence. The material component of the spell is a small piece of the flesh of the person to be duplicated. Note that the <i>clone</i> will become the person as he or she existed at the time at which the flesh was taken, and all subsequent knowledge, experience, etc. will be totally unknown to the <i>clone</i>. Also, the <i>clone</i> will be a physical duplicate, and possessions of the original are another matter entirely. Note that a clone takes from 2-8 months to grow, and only after that time is dual existence established."
     ),
     Spell('Demand','M',8,
         cast=tp(1,T),
@@ -3389,39 +3417,51 @@ mu_spells = [
         cast=tp(8,S),
         duration=tp(1,P),
         sourcebook=V,
-        desc="The Glassteel spell turns crystal or glass into a transparent substance which has the tensile strength and unbreakability of actual steel. Only a relatively small volume of material can be affected, a maximum weight of 10 pounds per level of experience of the spell caster, and it must form one whole object. The material components of this spell area small piece of glass and a small piece of steel."
+        desc="The <i>glassteel</i> spell turns crystal or glass into a transparent substance which has the tensile strength and unbreakability of actual steel. Only a relatively small volume of material can be affected, a maximum weight of 10 pounds per level of experience of the spell caster, and it must form one whole object. The material components of this spell area small piece of glass and a small piece of steel."
     ),
     Spell('Incendiary Cloud','M',8,
         cast=tp(2,S),
         duration=tp(1,VA),
         sourcebook=V,
-        desc="An Incendiary Cloud spell exactly resembles the smoke effects of a Pyrotechnics spell (q.v.), except that its minimum dimensions are a cloud of 10' height by 20' length and breadth. This dense vapor cloud billows forth, and on the 3rd round of its existence it begins to flame, causing ½ hit point per level of the magic-user who cast it. On the 4th round it does 1 hit point of damage per level of the caster, and on the 5th round it again drops to ½ h.p. of damage per level of the magic-user as its flames burn out. Any successive rounds of existence are simply harmless smoke which obscures vision within its confines. Creatures within the cloud need make only 1 saving throw if it is successful, but if they fail the first, they roll again an the 4th and 5th rounds (if necessary) to attempt to reduce damage sustained by one-half. In order to cast this spell the magic-user must have an available fire source (just as with a Pyrotechnics spell), scrapings from beneath a dung pile, and a pinch of dust."
+        desc="An <i>incendiary cloud</i> spell exactly resembles the smoke effects of a <a href=\"/spells/pyrotechnics-druid-lvl-3/\"><i>pyrotechnics</i></a> spell, except that its minimum dimensions are a cloud of 10' height by 20' length and breadth. This dense vapor cloud billows forth, and on the 3rd round of its existence it begins to flame, causing ½ hit point per level of the magic-user who cast it. On the 4th round it does 1 hit point of damage per level of the caster, and on the 5th round it again drops to ½ h.p. of damage per level of the magic-user as its flames burn out. Any successive rounds of existence are simply harmless smoke which obscures vision within its confines. Creatures within the cloud need make only 1 saving throw if it is successful, but if they fail the first, they roll again an the 4th and 5th rounds (if necessary) to attempt to reduce damage sustained by one-half. In order to cast this spell the magic-user must have an available fire source (just as with a <a href=\"/spells/pyrotechnics-druid-lvl-3/\"><i>pyrotechnics</i></a> spell), scrapings from beneath a dung pile, and a pinch of dust."
     ),
     Spell('Mass Charm','M',8,
         cast=tp(8,S),
         duration=tp(1,VA),
         sourcebook=V,
-        desc="A Mass Charm spell affects either persons or monsters just as a Charm Person spell or a Charm Monster spell (qq.v.) does. The Mass Charm, however, will affect a number of creatures whose combined levels of experience and/or hit dice does not exceed twice the level of experience of the spell caster. All affected creatures must be within the spell range and within a maximum area of 3\" by 3\". Note that the creatures' saving throws are unaffected by the number of recipients (cf. Charm Person and Charm Monster), but all target creatures are subject to a penalty of -2 on the saving throw because of the efficiency and power of a Mass Charm spell."
+        desc="A <i>mass charm</i> spell affects either persons or monsters just as a <a href=\"/spells/charm-person-magic-user-lvl-1/\"><i>charm person</i></a> spell or a <a href=\"/spells/charm-monster-magic-user-lvl-4/\"><i>charm monster</i></a> spell does. The <i>mass charm</i>, however, will affect a number of creatures whose combined levels of experience and/or hit dice does not exceed twice the level of experience of the spell caster. All affected creatures must be within the spell range and within a maximum area of 3\" by 3\". Note that the creatures' saving throws are unaffected by the number of recipients (cf. <a href=\"/spells/charm-person-magic-user-lvl-1/\"><i>charm person</i></a> and <a href=\"/spells/charm-monster-magic-user-lvl-4/\"><i>charm monster</i></a>), but all target creatures are subject to a penalty of -2 on the saving throw because of the efficiency and power of a <i>mass charm</i> spell."
     ),
     Spell('Maze','M',8,
         cast=tp(3,S),
         duration=tp(1,VA),
-        sourcebook=V
+        sourcebook=V,
+        desc=("An extra-dimensional space is brought into being upon utterance of a <i>maze</i> spell. The recipient will wander in the shifting labyrinth of force planes for a period of time which is totally dependent upon its intelligence. (Note: Minotaurs are not affected by this spell.)\n\n"
+            "<table>"
+            "<tr><th>Intelligence of Mazed Creature</th><th>Time Trapped in Maze</th></tr>"
+            "<tr><td>under 3</td><td>2 to 8 turns</td></tr>"
+            "<tr><td>3 to 5</td><td>1 to 4 turns</td></tr>"
+            "<tr><td>6 to 8</td><td>5 to 20 rounds</td></tr>"
+            "<tr><td>9 to 11</td><td>4 to 16 rounds</td></tr>"
+            "<tr><td>12 to 14</td><td>3 to 12 rounds</td></tr>"
+            "<tr><td>15 to 17</td><td>2 to 8 rounds</td></tr>"
+            "<tr><td>18 and up</td><td>1 to 4 rounds</td></tr>"
+            "</table>"
+        )
     ),
     Spell('Mind Blank','M',8,
         cast=tp(1,S),
         duration=tp(1,D),
         sourcebook=V,
-        desc="When the very powerful Mind Blank spell is cast, the recipient is totally protected from all devices and/or spells which detect, influence, or read emotions and/or thoughts. Protection includes Augury, Charm, Command, Confusion, Divination, empathy (all forms), ESP, Fear, Feeblemind, Mass Ssuggestion, Phantasmal Killer, possession, rulership, soul trapping, Suggestion, and telepathy. Cloaking protection also extends to prevention of discovery or information gathering by crystal balls or other scrying devices, Clairaudience, Clairvoyance, communing, contacting other planes. or Wsh-related methods (Wishing, Limited Wish, Alter Reality). Of course, exceedingly powerful deities would be able to penetrate the spell's powers. Note that this spell also protects from psionic-related detection and/or influence such as Domination (or Mass Domination), Hypnosis, Invisibility (the psionic sort is mind related), and Precognition, plus those powers which are already covered as spells."
+        desc="When the very powerful <i>mind blank</i> spell is cast, the recipient is totally protected from all devices and/or spells which detect, influence, or read emotions and/or thoughts. Protection includes <a href=\"/spells/augury-cleric-lvl-2/\"><i>augury</i></a>, <a href=\"/spells/charm-person-or-mammal-druid-lvl-2/\"><i>charm</i></a>, <a href=\"/spells/command-cleric-lvl-1/\"><i>command</i></a>, <a href=\"/spells/confusion-druid-lvl-7/\"><i>confusion</i></a>, <a href=\"/spells/divination-cleric-lvl-4/\"><i>divination</i></a>, empathy (all forms), <a href=\"/spells/esp-magic-user-lvl-2/\"><i>ESP</i></a>, <a href=\"/spells/fear-magic-user-lvl-4/\"><i>fear</i></a>, <a href=\"/spells/feeblemind-druid-lvl-6/\"><i>feeblemind</i></a>, <a href=\"/spells/mass-suggestion-illusionist-lvl-6/\"><i>mass suggestion</i></a>, <a href=\"/spells/phantasmal-killer-illusionist-lvl-4/\"><i>phantasmal killer</i></a>, possession, rulership, <a href=\"/spells/trap-the-soul-magic-user-lvl-8/\"><i>soul trapping</i></a>, <a href=\"/spells/suggestion-magic-user-lvl-3/\"><i>suggestion</i></a>, and <i>telepathy</i>. Cloaking protection also extends to prevention of discovery or information gathering by <i>crystal balls</i> or other scrying devices, <a href=\"/spells/clairaudience-magic-user-lvl-3/\"><i>clairaudience</i></a>, <a href=\"/spells/clairvoyance-magic-user-lvl-3/\"><i>clairvoyance</i></a>, <a href=\"/spells/commune-cleric-lvl-5/\"><i>communing</i></a>, <a href=\"/spells/contact-other-plane-magic-user-lvl-5/\"><i>contacting other planes</i></a>, or wish-related methods (<a href=\"/spells/wish-magic-user-lvl-9/\"><i>wishing</i></a>, <a href=\"/spells/limited-wish-magic-user-lvl-7/\"><i>limited wish</i></a>, <a href=\"/spells/alter-reality-illusionist-lvl-7/\"><i>alter reality</i></a>). Of course, exceedingly powerful deities would be able to penetrate the spell's powers. Note that this spell also protects from psionic-related detection and/or influence such as <i>domination</i> (or <i>mass domination</i>), <i>hypnosis</i>, <i>invisibility</i> (the psionic sort is mind related), and <i>precognition</i>, plus those powers which are already covered as spells."
     ),
     Spell('Monster Summoning VI','M',8,
         cast=tp(8,S),
         duration=tp(7,R),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="This spell summons 1 or 2 sixth level monsters, the creature(s) appearing in 1 to 3 rounds. See Monster Summoning I for other details."
+        desc="This spell summons 1 or 2 sixth level monsters, the creature(s) appearing in 1 to 3 rounds. See <a href=\"/spells/monster-summoning-i-magic-user-lvl-3/\"><i>monster summoning I</i></a> for other details."
     ),
-    Spell('Otiluke\'s Telekinetc Sphere','M',8,
+    Spell('Otiluke\'s Telekinetic Sphere','M',8,
         cast=tp(4,S),
         duration_lvl=tp(1,R),
         sourcebook=U,
@@ -3431,29 +3471,67 @@ mu_spells = [
         cast=tp(5,S),
         duration=tp(1,VA),
         sourcebook=V,
-        desc="When Otto's Irresistible Dance is placed upon a creature, the spell causes the recipient to begin dancing, feet shuffling and tapping. This dance makes it impossible for the victim to do anything other than caper and prance, this cavorting lowering the armor class of the creature by -4, making saving throws impossible, and negating any consideration of a shield. Note that the creature must be touched - possibly as if melee combat were taking place and the spell caster were striking to do damage."
+        desc="When <I>Otto's Irresistible Dance</i> is placed upon a creature, the spell causes the recipient to begin dancing, feet shuffling and tapping. This dance makes it impossible for the victim to do anything other than caper and prance, this cavorting lowering the armor class of the creature by -4, making saving throws impossible, and negating any consideration of a shield. Note that the creature must be touched — possibly as if melee combat were taking place and the spell caster were striking to do damage."
     ),
     Spell('Permanency','M',8,
         cast=tp(2,R),
         duration=tp(1,P),
         sourcebook=V,
-        desc="This spell affects the duration of certain other spells, making the duration permanent. The spells upon which a personal Permanency will be effective are: Comprehend Languages, Detect Evil, Detect Invisibility, Detect Magic, Infravision, Protection From Evil, Protection From Normal Missiles, Read Magic, Tongues, Unseen Servant. The magic-user casts the desired spell and then follows with the Permanency spell. Each Permanency spell lowers the magic-users constitution by 1 point. The magic-user cannot cast these spells upon other creatures. In addition to personal use, the Permanency spell can be used to make the following object/creature or area effect spells lasting: Enlarge, Fear, Gust Of Wind, Invisibility, Magic Mouth, Prismatic Sphere, Stinking Cloud, Wall Of Fire, Wall Of Force, Web. The former application of Permanency can be dispelled only by a magic-user of greater level than the spell caster was when he or she initially cast it. The Permanency application to other spells allows it to be cast simultaneously with any of the latter when no living creature is the target, but the Permanency can be dispelled normally, and thus the entire spell negated."
+        desc=("This spell affects the duration of certain other spells, making the duration <i>permanent</i>. The spells upon which a personal <i>permanency</i> will be effective are:\n\n"
+            "<a href=\"/spells/comprehend-languages-magic-user-lvl-1/\"><i>comprehend languages</i></a>\n"
+            "<a href=\"/spells/detect-evil-cleric-lvl-1/\"><i>detect evil</i></a>\n"
+            "<a href=\"/spells/detect-invisibility-magic-user-lvl-2/\"><i>detect invisibility</i></a>\n"
+            "<a href=\"/spells/detect-evil-cleric-lvl-1/\"><i>detect magic</i></a>\n"
+            "<a href=\"/spells/infravision-magic-user-lvl-3/\"><i>infravision</i></a>\n"
+            "<a href=\"/spells/protection-from-evil-cleric-lvl-1/\"><i>protection from evil</i></a>\n"
+            "<a href=\"/spells/protection-from-normal-missiles-magic-user-lvl-3/\"><i>protection from normal missiles</i></a>\n"
+            "<a href=\"/spells/read-magic-magic-user-lvl-1/\"><i>read magic</i></a>\n"
+            "<a href=\"/spells/tongues-magic-user-lvl-3/\"><i>tongues</i></a>\n"
+            "<a href=\"/spells/unseen-servant-magic-user-lvl-1/\"><i>unseen servant</i></a>\n\n"
+            "The magic-user casts the desired spell and then follows with the <i>permanency</i> spell. Each <i>permanency</i> spell lowers the magic-users constitution by 1 point. The magic-user cannot cast these spells upon other creatures. In addition to personal use, the <i>permanency</i> spell can be used to make the following object/creature or area effect spells lasting:\n\n"
+            "<a href=\"/spells/enlarge-magic-user-lvl-1/\"><i>enlarge</i></a>\n"
+            "<a href=\"/spells/fear-magic-user-lvl-4/\"><i>fear</i></a>\n"
+            "<a href=\"/spells/gust-of-wind-magic-user-lvl-3/\"><i>gust of wind</i></a>\n"
+            "<a href=\"/spells/invisibility-magic-user-lvl-2/\"><i>invisibility</i></a>\n"
+            "<a href=\"/spells/magic-mouth-magic-user-lvl-2/\"><i>magic mouth</i></a>\n"
+            "<a href=\"/spells/prismatic-sphere-magic-user-lvl-9/\"><i>prismatic sphere</i></a>\n"
+            "<a href=\"/spells/stinking-cloud-magic-user-lvl-2/\"><i>stinking cloud</i></a>\n"
+            "<a href=\"/spells/wall-of-fire-magic-user-lvl-4/\"><i>wall of fire</i></a>\n"
+            "<a href=\"/spells/wall-of-force-magic-user-lvl-5/\"><i>wall of force</i></a>\n"
+            "<a href=\"/spells/web-magic-user-lvl-2/\"><i>web</i></a>\n\n"
+            "The former application of <i>permanency</i> can be dispelled only by a magic-user of greater level than the spell caster was when he or she initially cast it. The <i>permanency</i> application to other spells allows it to be cast simultaneously with any of the latter when no living creature is the target, but the <i>permanency</i> can be dispelled normally, and thus the entire spell negated."
+        )
     ),
     Spell('Polymorph Any Object','M',8,
         cast=tp(1,R),
         duration=tp(1,VA),
-        sourcebook=V
+        sourcebook=V,
+        desc=("This spell changes one object (living or otherwise) into another. When used as a <a href=\"/spells/polymorph-other-magic-user-lvl-4/\"><i>polymorph other</i></a> or <a href=\"/spells/stone-to-flesh-magic-user-lvl-6/\"><i>stone to flesh</i></a>, simply treat the spell as a more powerful version, with saving throws made at -4 on the die. When it is cast in order to change other objects, the duration of the spell will depend on how radically removed the original was from its magicked state, as well as how different in size. This will be determined by your Dungeon Master by comparing:\n\n"
+            "<i>kingdom</i> — animal, vegetable, mineral\n"
+            "<i>class</i> — mammals, bipeds, fungi, metals, spheres, etc.\n"
+            "<i>relationship</i> — twig is to tree, sand is to beach, etc.\n"
+            "<i>size</i> — smaller, equal, larger\n"
+            "shape — comparative resemblance of the original to the polymorphed state\n"
+            "intelligence — particularly with regard to a change in which the end product is more intelligent\n\n"
+            "Change in <i>kingdom</i> makes the spell work for hours or turns, i.e. hours if one removed, turns if two removed. Other changes likewise affect spell duration. Thus, changing a lion to an androsphinx would be permanent, but turning a turnip to a purple worm would be a change of only hours duration; turning a tusk into an elephant would be permanent, but turning a twig into a sword would be only a change of several turns duration. All <i>polymorphed</i> objects radiate a strong magic, and if a <a href=\"/spells/dispel-magic-cleric-lvl-3/\"><i>dispel magic</i></a> is used upon them, they will return to their natural form. Note that a <a href=\"/spells/stone-to-flesh-magic-user-lvl-6/\"><i>stone to flesh</i></a>, or its reverse, will affect objects under this spell. The material components of this spell are mercury, gum arabic, and smoke. N.B.: <i>System shock</i> applies to living creatures, as do the restrictions noted regarding <a href=\"/spells/polymorph-other-magic-user-lvl-4/\"><i>polymorph others</i></a> and <a href=\"/spells/stone-to-flesh-magic-user-lvl-6/\"><i>stone to flesh</i></a>."
+        )
     ),
     Spell('Power Word, Blind','M',8,
         cast=tp(1,S),
         duration=tp(1,VA),
         sourcebook=V,
-        desc="When a Power Word, Blind is cast, one or more creatures within spell range and area of effect will become temporarily sightless. The spell affects up to 100 hit points of creatures, but the duration is dependent upon how many hit points of creatures are affected. If 50 or less points are affected, blindness lasts for 2 to 5 (d4+1) turns, if 51 or more hit points of creatures are affected, the spell duration is but 2 to 5 rounds. Note that the spell caster must indicate which creatures he or she desires to affect with the spell, noting one as target center, prior to determining results. Creatures with over 100 hit points are not affected. Blindness can be removed by Cure Blindness or Dispel Magic."
+        desc="When a <i>power word, blind</i> is cast, one or more creatures within spell range and area of effect will become temporarily sightless. The spell affects up to 100 hit points of creatures, but the duration is dependent upon how many hit points of creatures are affected. If 50 or less points are affected, blindness lasts for 2 to 5 (d4+1) turns, if 51 or more hit points of creatures are affected, the spell duration is but 2 to 5 rounds. Note that the spell caster must indicate which creatures he or she desires to affect with the spell, noting one as target center, prior to determining results. Creatures with over 100 hit points are not affected. Blindness can be removed by <a href=\"/spells/cure-blindness-cleric-lvl-3/\"><i>cure blindness</i></a> or <a href=\"/spells/dispel-magic-cleric-lvl-3/\"><i>dispel magic</i></a>."
     ),
     Spell('Serten\'s Spell Immunity','M',8,
         cast=tp(1,VA),
         duration_lvl=tp(1,T),
-        sourcebook=V
+        sourcebook=V,
+        desc=("By use of this spell the magic-user is able to confer virtual immunity to certain spells and magical attack forms upon those he or she touches and magicks. For every 4 levels of experience of the magic-user, 1 creature can be protected by the <i>Serten's Spell Immunity</i> spell, but the duration of the protection is similarly disbursed upon these additional figures. (Example: A 16th level magic-user can cast the dweomer upon 1 creature and it will last 16 turns, or he or she can place it upon 2 creatures for an 8 turn duration, or upon 4 creatures for but 4 turns duration.) The protection gives a bonus to saving throws as follows:\n\n"
+            "<i>Beguiling, Charm, Suggestion</i>   +9\n"
+            "<i>Command, Domination, Fear, Hold, Scare</i> +7\n"
+            "<i>Geas, Quest</i> +5\n\n"
+            "The material component of this spell is a diamond which must be crushed and sprinkled over the spell recipients, and each such creature must also have in its possession a diamond of any size, intact and carried on its person."
+        )
     ),
     Spell('Sink','M',8,
         cast=tp(8,S),
@@ -3467,24 +3545,41 @@ mu_spells = [
     Spell('Symbol','M',8,
         cast=tp(8,S),
         duration=tp(1,P),
-        sourcebook=V
+        sourcebook=V,
+        desc=("A <i>symbol</i> spell causes the creation of magical runes which affect creatures which pass over, touch, read, or pass through a portal upon which the <i>symbol</i> is inscribed. Upon casting the spell, the magic-user inscribes the <i>symbol</i> upon whatever surface he or she desires. Likewise, the spell caster is able to place the <i>symbol</i> of his or her choice, using any one of the following:\n\n"
+            "<i>Death</i> — One or more creatures whose total hit points do not exceed 80 are slain.\n\n"
+            "<i>Discord</i> — All creatures are affected and immediately fall to loudly bickering and arguing; furthermore, there is a 50% probability that creatures of different alignment will attack each other. The bickering lasts for 5-20 rounds; the fighting for 2-8 rounds.\n\n"
+            "<i>Fear</i> — This <i>symbol</i> operates as an extra-strong <a href=\"/spells/fear-magic-user-lvl-4/\"><i>fear</i></a> spell, causing all creatures to save vs. the spell at -4 on the die or panic and flee as if affected by a <a href=\"/spells/fear-magic-user-lvl-4/\"><i>fear</i></a> spell."
+            "<i>Hopelessness</i> — All creatures are affected and must turn back in dejection unless they save versus magic. Affected creatures will submit to the demands of any opponent, i.e. surrender, get out, etc.; the <i>hopelessness</i> lasts for 3 to 12 (3d4) turns, and during this period it is 25% probable that affected creatures will take no action during any round, and 25% likely that those taking action will turn back or retire from battle, as applicable.\n\n"
+            "<i>Insanity</i> — One or more creatures whose total hit points do not exceed 120 will become insane and remain so, acting as if a <a href=\"/spells/confusion-druid-lvl-7/\"><i>confusion</i></a> spell had been placed upon them until a <a href=\"/spells/heal-cleric-lvl-6/\"><i>heal</i></a>, <a href=\"/spells/restoration-cleric-lvl-7/\"><i>restoration</i></a>, or <a href=\"/spells/wish-magic-user-lvl-9/\"><i>wish</i></a> spell is used to remove the madness.\n\n"
+            "<i>Pain</i> — All creatures are affected, having wracking pains shooting through their bodies, which causes them to have -2 on dexterity and -4 on attack dice for from 2-20 turns.\n\n"
+            "<i>Sleep</i> — All creatures under 8+1 hit dice will immediately fall into a catatonic slumber and cannot be awakened for 5 to 16 (d12 + 4) turns.\n\n"
+            "<i>Stunning</i> — One or more creatures whose total hit points do not exceed 160 will be <i>stunned</i> and reeling for 3-12 (3d4) rounds, dropping anything it or they hold in manipulative members.\n\n"
+            "The type of symbol cannot be recognized without it being read and thus activating its effects. The material components of this spell are powdered black opal and diamond dust worth not less than 5000 g.p. each."
+        )
     ),
     Spell('Trap The Soul','M',8,
         cast=tp(1,VA),
         duration=tp(1,P),
         sourcebook=V,
-        desc="This spell is similar to the Magic Jar, except that the Trap The Soul spell forces the subject creature's life force (and its material body, if any) into a special prison magicked by the spell caster. The subject of the spell must be seen by the caster, and the magic-user must know the subject's true name as well when the final word is uttered. Preparatory to the actual casting of the Trap The Soul the magic-user must prepare the soul prison, a gem of 1,000 g.p. value for every hit die or level of experience the creature whose soul is to be trapped possesses, i.e. it requires a gem of 10,000 g.p. value to trap a 10 hit dice (or 10th level) creature by placing an Enchant An Item spell upon it and then placing a Maze spell into the gem, thereby forming the prison for the soul to be trapped. There are 2 manners in which the soul of the victim can be imprisoned. The final word of the spell can be spoken when the creature is within spell range, but this entitles it to exercise its magic resistance (if any) and a saving throw versus magic as well, and if the latter is successful, the gem shatters. The second method of soul trapping is far more insidious, for it tricks the victim into accepting a trigger object inscribed with the final spell word which will automatically place the creature's soul into the trap. If this method is used, it will be necessary to name the triggering item when the prison gem is magicked. A Sympathy spell may be placed on the trigger item. As soon as the subject creature picks up or accepts the trigger item, its soul is automatically transferred to the gem. The gem prison will hold the soul trapped until time indefinite, or until it is broken and the soul is released, allowing the material body to reform. If the creature trapped is a powerful creature from another plane (and this could actually mean a character trapped by some inhabitant of another plane of existence when the character is not on the Prime Material Plane), it can be required to perform a service immediately upon being freed. Otherwise, the creature can go totally free once the gem imprisoning it is broken."
+        desc="This spell is similar to the <a href=\"/spells/magic-jar-magic-user-lvl-5/\"><i>magic jar</i></a>, except that the <i>trap the soul</i> spell forces the subject creature's life force (and its material body, if any) into a special prison magicked by the spell caster. The subject of the spell must be seen by the caster, and the magic-user must know the subject's true name as well when the final word is uttered. Preparatory to the actual casting of the <i>trap the soul</i>, the magic-user must prepare the soul prison, a gem of 1,000 g.p. value for every hit die or level of experience the creature whose soul is to be trapped possesses, i.e. it requires a gem of 10,000 g.p. value to trap a 10 hit dice (or 10th level) creature by placing an <a href=\"/spells/enchant-an-item-magic-user-lvl-6/\"><i>enchant an item</i></a> spell upon it and then placing a <a href=\"/spells/maze-magic-user-lvl-8/\"><i>maze</i></a> spell into the gem, thereby forming the prison for the soul to be trapped. There are 2 manners in which the soul of the victim can be imprisoned. The final word of the spell can be spoken when the creature is within spell range, but this entitles it to exercise its magic resistance (if any) and a saving throw versus magic as well, and if the latter is successful, the gem shatters. The second method of soul trapping is far more insidious, for it tricks the victim into accepting a trigger object inscribed with the final spell word which will automatically place the creature's soul into the trap. If this method is used, it will be necessary to name the triggering item when the prison gem is magicked. A <a href=\"/spells/antipathysympathy-magic-user-lvl-8/\"><i>sympathy</i></a> spell may be placed on the trigger item. As soon as the subject creature picks up or accepts the trigger item, its soul is automatically transferred to the gem. The gem prison will hold the soul trapped until time indefinite, or until it is broken and the soul is released, allowing the material body to reform. If the creature trapped is a powerful creature from another plane (and this could actually mean a character trapped by some inhabitant of another plane of existence when the character is not on the Prime Material Plane), it can be required to perform a service immediately upon being freed. Otherwise, the creature can go totally free once the gem imprisoning it is broken."
     ),
     Spell('Astral Spell','M',9,
         cast=tp(9,S),
         duration=tp(0),
         sourcebook=V,
-        desc="Except as noted above, this spell is the same as the seventh level cleric spell, Astral Spell (q.v.)."
+        desc="Except as noted above, this spell is the same as the seventh level cleric spell, <a href=\"/spells/astral-spell-cleric-lvl-7/\"><i>astral spell</i></a>."
     ),
     Spell('Bigby\'s Crushing Hand','M',9,
         cast=tp(9,S),
         duration_lvl=tp(1,R),
-        sourcebook=V
+        sourcebook=V,
+        desc=("<i>Bigby's Crushing Hand</i> causes the appearance of a huge disembodied hand which is similar to <a href=\"/spells/bigbys-forceful-hand-magic-user-lvl-6/\"><i>Bigby's Forceful Hand</i></a> and <a href=\"/spells/bigbys-clenched-fist-magic-user-lvl-8/\"><i>Bigby's Clenched Fist</i></a>. The <i>Crushing Hand</i> is under the mental control of the caster, and he or she can cause it to grasp and squeeze an opponent. Damage from this constriction depends on the number of rounds it acts upon the victim:\n\n"
+            "1st round: 1-10 hit points\n"
+            "2nd & 3rd rounds: 2-20 hit points\n"
+            "4th & beyond: 4-40 hit points\n\n"
+            "The <i>hand</i> can sustain hit points equal to those of the magic-user who created it before being dispelled. The material components of the spell are a glove of snake skin and the shell of an egg."
+        )
     ),
     Spell('Crystalbrittle','M',9,
         cast=tp(9,S),
@@ -3504,26 +3599,26 @@ mu_spells = [
         cast=tp(9,S),
         duration=tp(1,VA),
         sourcebook=V,
-        desc="Except as noted above, this spell is the same as the seventh level cleric spell, Gate (q.v.)."
+        desc="Except as noted above, this spell is the same as the seventh level cleric spell, <a href=\"/spells/gate-cleric-lvl-7/\"><i>gate</i></a>."
     ),
     Spell('Imprisonment','M',9,
         cast=tp(9,S),
         duration=tp(1,P),
         sourcebook=V,
-        desc="When on Imprisonment spell is cast and the victim is touched, the recipient is entombed in a state of suspended animation (cf. Temporal Stasis) in a small sphere far below the surface of the earth. The victim remains there unless a reverse of the spell, with the creature's name and background, is cast. Magical search by crystal ball, a Locate Objects spell or similar means will not reveal the fact that a creature is imprisoned. The reverse (Freedom) spell will cause the appearance of the victim at the spot he, she or it was entombed and sunk into the earth. There is a 10% chance that 1 to 100 other creatures will be freed from Imprisonment at the same time if the magic-user does not perfectly get the name and background of the creature to be freed. The spell only works if the name and background of the victim are known."
+        desc="When an <i>imprisonment</i> spell is cast and the victim is touched, the recipient is entombed in a state of suspended animation (cf. <a href=\"/spells/temporal-stasis-magic-user-lvl-9/\"><i>temporal stasis</i></a>) in a small sphere far below the surface of the earth. The victim remains there unless a reverse of the spell, with the creature's name and background, is cast. Magical search by <i>crystal ball</i>, a <a href=\"/spells/locate-object-cleric-lvl-3/\"><i>locate objects</i></a> spell or similar means will not reveal the fact that a creature is <i>imprisoned</i>. The reverse (<i>freedom</i>) spell will cause the appearance of the victim at the spot he, she or it was entombed and sunk into the earth. There is a 10% chance that 1 to 100 other creatures will be freed from Imprisonment at the same time if the magic-user does not perfectly get the name and background of the creature to be freed. The spell only works if the name and background of the victim are known."
     ),
     Spell('Meteor Swarm','M',9,
         cast=tp(9,S),
         duration=tp(0),
         sourcebook=V,
-        desc="A Meteor Swarm is a very powerful and spectacular spell which is similar to a Fireball in many aspects. When it is cast, either four spheres of 2' diameter or eight spheres of 1' diameter spring from the outstretched hand of the magic-user and streak in a straight line up to the distance demanded by the spell caster, up to the maximum range. Any creature in the straight line path of these missiles will receive the full effect of the missile, or missiles, without benefit of a saving throw. The \"meteor\" missiles leave a fiery trail of sparks, and each bursts as a Fireball (q.v.). The large spheres each do 10 to 40 hit points of damage, the four bursting in a diamond or box pattern. Each has a 3\" diameter area of effect, and each sphere will be 2\" apart, along the sides of the pattern, so that there are overlapping areas of effect, and the center will be exposed to all four blasts. The eight small spheres have one-half diameter (1½\") and one-half the damage potential (5-20). They burst in a pattern of a box within a diamond or vice versa, each of the outer sides 2\" long. and the inner sides being 1\" long. Note that the center will have 4 areas of overlapping effect, and there are numerous peripheral areas which have two overlapping areas of effect. A saving throw for each area of effect will indicate whether full hit points of damage, or half the indicated amount of damage, will be sustained by creatures within each area, except as already stated with regard to the missiles impacting."
+        desc="A <i>meteor swarm</i> is a very powerful and spectacular spell which is similar to a <a href=\"/spells/fireball-magic-user-lvl-3/\"><i>fireball</i></a> in many aspects. When it is cast, either four spheres of 2' diameter or eight spheres of 1' diameter spring from the outstretched hand of the magic-user and streak in a straight line up to the distance demanded by the spell caster, up to the maximum range. Any creature in the straight line path of these missiles will receive the full effect of the missile, or missiles, without benefit of a saving throw. The \"meteor\" missiles leave a fiery trail of sparks, and each bursts as a <a href=\"/spells/fireball-magic-user-lvl-3/\"><i>fireball</i></a>. The large spheres each do 10 to 40 hit points of damage, the four bursting in a diamond or box pattern. Each has a 3\" diameter area of effect, and each sphere will be 2\" apart, along the sides of the pattern, so that there are overlapping areas of effect, and the center will be exposed to all four blasts. The eight small spheres have one-half diameter (1½\") and one-half the damage potential (5-20). They burst in a pattern of a box within a diamond or vice versa, each of the outer sides 2\" long, and the inner sides being 1\" long. Note that the center will have 4 areas of overlapping effect, and there are numerous peripheral areas which have two overlapping areas of effect. A saving throw for each area of effect will indicate whether full hit points of damage, or half the indicated amount of damage, will be sustained by creatures within each area, except as already stated with regard to the missiles impacting."
     ),
     Spell('Monster Summoning VII','M',9,
         cast=tp(9,S),
         duration=tp(8,R),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="This spell summons 1 or 2 seventh level monsters which appear 1 round after the spell is cast, or 1 8th level monster which will appear 2 rounds after the spell is cast. See Monster Summoning I for other details."
+        desc="This spell summons 1 or 2 seventh level monsters which appear 1 round after the spell is cast, or 1 8th level monster which will appear 2 rounds after the spell is cast. See <a href=\"/spells/monster-summoning-i-magic-user-lvl-3/\"><i>monster summoning I</i></a> for other details."
     ),
     Spell('Mordenkainen\'s Disjunction','M',9,
         cast=tp(9,S),
@@ -3537,18 +3632,31 @@ mu_spells = [
         cast=tp(1,S),
         duration=tp(1,P),
         sourcebook=V,
-        desc="When a Power Word, Kill is uttered, one or more creatures within the spell range and area of effect will be slain. The Power Word will destroy a creature with up to 60 hit points, or it will kill 2 or more creatures with 10 or fewer hit points, up to a maximum of 20 hit points. The option to attack a single creature, or multiple creatures, must be stated along with the spell range and area of effect center."
+        desc="When a <i>power word, kill</i> is uttered, one or more creatures within the spell range and area of effect will be slain. The <i>power word</i> will destroy a creature with up to 60 hit points, or it will kill 2 or more creatures with 10 or fewer hit points, up to a maximum of 20 hit points. The option to attack a single creature, or multiple creatures, must be stated along with the spell range and area of effect center."
     ),
     Spell('Prismatic Sphere','M',9,
         cast=tp(7,S),
         duration_lvl=tp(1,T),
-        sourcebook=V
+        sourcebook=V,
+        desc=("This spell enables the magic-user to conjure up an opaque globe of shimmering, multi-colored spheres of light to surround him or her which give protection from all forms of attack. This scintillating sphere flashes all the seven colors of the visible spectrum, and each of these spheres of color has a different power and purpose. Any creature with fewer than eight hit dice will be blinded for from 2 to 8 turns by the colors of the sphere. This phenomenon is immobile and only the spell caster can pass in and out the <i>prismatic sphere</i> without harm. Note that typically the upper hemisphere of the globe will be visible, as the spell caster is at the center of the sphere, so the lower half is usually hidden by the floor surface he or she is standing upon. The colors and effects of the <i>prismatic sphere</i>, as well as what will negate each globe, are:\n\n"
+            "<table>"
+            "<tr><th>Color of Globe</th><th>Order of Globe</th><th>Effects of Globe</th><th>Spell Negated By</th></tr>"
+            "<tr><td>red</td><td>1st</td><td>prevents all non-magical missiles — inflicts 10 hit points of damage</td><td><a href=\"/spells/cone-of-cold-magic-user-lvl-5/\"><i>cone of cold</i></a></td></tr>"
+            "<tr><td>orange</td><td>2nd</td><td>prevents all magical missiles — inlficts 20 hit points of damage</td><td><a href=\"/spells/gust-of-wind-magic-user-lvl-3/\"><i>gust of wind</i></a></td></tr>"
+            "<tr><td>yellow</td><td>3rd</td><td>prevents poisons, gasses, and petrification — inflicts 40 hit points of damage</td><td><a href=\"/spells/disintegrate-magic-user-lvl-6/\"><i>disintegrate</i></a></td></tr>"
+            "<tr><td>green</td><td>4th</td><td>prevents all breath weapons — save vs. poison or dead</td><td><a href=\"/spells/passwall-magic-user-lvl-5/\"><i>passwall</i></a></td></tr>"
+            "<tr><td>blue</td><td>5th</td><td>prevents location/detection and psionics — save vs. petrification or turned to stone</td><td><a href=\"/spells/magic-missile-magic-user-lvl-1/\"><i>magic missile</i></a></td></tr>"
+            "<tr><td>indigo</td><td>6th</td><td>prevents all magical spells — save vs. wand or insane</td><td><a href=\"/spells/continual-light-cleric-lvl-3/\"><i>continual light</i></a></td></tr>"
+            "<tr><td>violet</td><td>7th</td><td>force field protection — save vs. magic or sent to another plane</td><td><a href=\"/spells/dispel-magic-cleric-lvl-3/\"><i>dispel magic</i></a></td></tr>"
+            "</table>\n\n"
+            "Note that a <i>rod of cancellation</i> will destroy a <i>prismatic sphere</i>. Otherwise, anything entering the sphere will be destroyed, any creature subject to the effects of each and every globe as indicated, i.e. 70 hit points of damage plus death, petrification, insanity, and/or instantaneous transportation to another plane, and only the four latter effects are subject to saving throws. The individual globes may be destroyed by appropriate magical attacks in consecutive order, the 1st globe destroyed before any others, then the 2nd, etc."
+        )
     ),
     Spell('Shape Change','M',9,
         cast=tp(9,S),
         duration_lvl=tp(1,T),
         sourcebook=V,
-        desc="With this spell, the magic-user is able to assume the form of any creature short of a demigod, greater devil, demon prince, singular dragon type, greater demon or the like. The spell caster becomes the creature he or she wishes, and has all of the abilities save those dependent upon intelligence, for the mind of the creature is that of the spell caster. Thus, he or she can change into a griffon, thence to an efreet, and then to a titan, etc. These creatures have whatever hit points the magic-user has at the time of the Shape Change. Each alteration in form requires 1 segment. No system shock is incurred. Example: A wizard is in combat and assumes the form of a will o' wisp, and when this form is no longer useful, the wizard changes into a stone golem and walks away. When pursued, the golem-shape is changed to that of a flea, which hides upon a horse until it can hop off and become a bush. If detected as the latter, the magic-user can become a dragon, pool of water, or just about anything else. The material component of the spell is a jade circlet worth no less than 5000 g.p. which will shatter at the expiration of the magic's duration. In the meantime it is left in the wake of the Shape Change, and premature shattering will cause the magic to be dispelled."
+        desc="With this spell, the magic-user is able to assume the form of any creature short of a demi-god, greater devil, demon prince, singular dragon type, greater demon or the like. The spell caster becomes the creature he or she wishes, and has all of the abilities save those dependent upon intelligence, for the mind of the creature is that of the spell caster. Thus, he or she can change into a griffon, thence to an efreet, and then to a titan, etc. These creatures have whatever hit points the magic-user has at the time of the <i>shape change</i>. Each alteration in form requires 1 segment. No system shock is incurred. Example: A wizard is in combat and assumes the form of a will o' wisp, and when this form is no longer useful, the wizard changes into a stone golem and walks away. When pursued, the golem-shape is changed to that of a flea, which hides upon a horse until it can hop off and become a bush. If detected as the latter, the magic-user can become a dragon, pool of water, or just about anything else. The material component of the spell is a jade circlet worth no less than 5000 g.p. which will shatter at the expiration of the magic's duration. In the meantime it is left in the wake of the <i>shape change</i>, and premature shattering will cause the magic to be dispelled."
     ),
     Spell('Succor','M',9,
         cast=tp(1,VA),
@@ -3560,19 +3668,19 @@ mu_spells = [
         cast=tp(9,S),
         duration=tp(1,P),
         sourcebook=V,
-        desc="Upon casting this spell, the magic-user places the recipient creature into a state of suspended animation. This cessation of time means that the creature does not grow older. Its body functions virtually cease. This state persists until the magic is removed by a Dispel Magic spell or the reverse of the spell (Temporal Reinstatement) is uttered. Note that the reverse requires only a single word and no somatic or material components. The material component of a Temporal Stasis spell is a powder composed of diamond, emerald, ruby, and sapphire dust, one stone of each type being required."
+        desc="Upon casting this spell, the magic-user places the recipient creature into a state of suspended animation. This cessation of time means that the creature does not grow older. Its body functions virtually cease. This state persists until the magic is removed by a <a href=\"/spells/dispel-magic-cleric-lvl-3/\"><i>dispel magic</i></a> spell or the reverse of the spell (<i>temporal reinstatement</i>) is uttered. Note that the reverse requires only a single word and no somatic or material components. The material component of a <i>temporal stasis</i> spell is a powder composed of diamond, emerald, ruby, and sapphire dust, one stone of each type being required."
     ),
     Spell('Time Stop','M',9,
         cast=tp(9,S),
         duration=tp(1,VA),
         sourcebook=V,
-        desc="Upon casting a Time Stop spell, the magic-user causes the flow of time to stop in the area of effect, and outside this area the sphere simply seems to shimmer for an instant. During the period of spell duration, the magic-user can move and act freely within the area where time is stopped, but all other creatures there are frozen in their actions, for they are literally between ticks of the time clock, and the spell duration is subjective to the caster. No creature can enter the area of effect without being stopped in time also, and if the magic-user leaves it, he or she immediately negates the spell. When spell duration ceases, the magic-user will again be operating in normal time."
+        desc="Upon casting a <i>time stop</i> spell, the magic-user causes the flow of time to stop in the area of effect, and outside this area the sphere simply seems to shimmer for an instant. During the period of spell duration, the magic-user can move and act freely within the area where time is stopped, but all other creatures there are frozen in their actions, for they are literally between ticks of the time clock, and the spell duration is subjective to the caster. No creature can enter the area of effect without being stopped in time also, and if the magic-user leaves it, he or she immediately negates the spell. When spell duration ceases, the magic-user will again be operating in normal time."
     ),
     Spell('Wish','M',9,
         cast=tp(1,VA),
         duration=tp(1,VA),
         sourcebook=V,
-        desc="The Wish spell is a more potent version of a Limited Wish (q.v.). If it is used to alter reality with respect to hit points sustained by a party, to bring a dead character to life, or to escape from a difficult situation by lifting the spell caster (and his or her party) from one place to another, it will not cause the magic-user any disability. Other forms of wishes, however, will cause the spell caster to be weak (-3 on strength) and require 2 to 8 days of bed rest due to the stresses the wish places upon time, space, and his or her body. Regardless of what is wished for, the exact terminology of the Wish spell is likely to be carried through. (This discretionary power of the referee is necessary in order to maintain game balance. As wishing another character dead would be grossly unfair, for example, your DM might well advance the spell caster to a future period where the object is no longer alive, i.e. putting the wishing character out of the campaign.)"
+        desc="The <i>wish</i> spell is a more potent version of a <a href=\"/spells/limited-wish-magic-user-lvl-7/\"><i>limited wish</i></a>. If it is used to alter reality with respect to hit points sustained by a party, to bring a dead character to life, or to escape from a difficult situation by lifting the spell caster (and his or her party) from one place to another, it will not cause the magic-user any disability. Other forms of wishes, however, will cause the spell caster to be weak (-3 on strength) and require 2 to 8 days of bed rest due to the stresses the <i>wish</i> places upon time, space, and his or her body. Regardless of what is wished for, the exact terminology of the <i>wish</i> spell is likely to be carried through. (This discretionary power of the referee is necessary in order to maintain game balance. As wishing another character dead would be grossly unfair, for example, your DM might well advance the spell caster to a future period where the object is no longer alive, i.e. putting the wishing character out of the campaign.)"
     )
 ]
 
@@ -3581,13 +3689,13 @@ illusionist_spells = [
         cast=tp(5,S),
         duration_lvl=tp(3,R),
         sourcebook=V,
-        desc="Except as noted above, this spell is the same as the second level magic-user spell, Audible Glamour (q.v.)."
+        desc="Except as noted above, this spell is the same as the second level magic-user spell, <a href=\"/spells/audible-glamer-magic-user-lvl-2/\"><i>audible glamer</i></a>."
     ),
     Spell('Change Self','I',1,
         cast=tp(1,S),
         duration=tp(1,VA),
         sourcebook=V,
-        desc="This spell enables the Illusionist to alter the appearance of his or her form - including clothing and equipment - to appear 1' shorter or taller; thin, fat, or in between; human, humanoid, or any other generally man-shaped bipedal creature. The duration of the spell is 2 to 12 (2d6) rounds base plus 2 additional rounds per level of experience of the spell caster."
+        desc="This spell enables the illusionist to alter the appearance of his or her form — including clothing and equipment — to appear 1' shorter or taller; thin, fat, or in between; human, humanoid, or any other generally man-shaped bipedal creature. The duration of the spell is 2 to 12 (2d6) rounds base plus 2 additional rounds per level of experience of the spell caster."
     ),
     Spell('Chromatic Orb','I',1,
         cast=tp(1,S),
@@ -3598,57 +3706,57 @@ illusionist_spells = [
         cast=tp(1,S),
         duration=tp(1,S),
         sourcebook=V,
-        desc="Upon casting this spell, the Illusionist causes a vivid fan-shaped spray of clashing colors to spring forth from his or her hand. From 1 to 6 creatures within the area of effect can be affected. The spell caster is able to affect 1 level or hit die of creatures for each of his or her levels of experience. Affected creatures are struck unconscious for 2 to 8 rounds if their level is less than or equal to that of the spell caster; they are blinded for 1 to 4 rounds if their level or number of hit dice is 1 or 2 greater than the Illusionist; and they are stunned (cf. power word, stun, seventh level magic-user spell) for 2 to 8 segments if their level or number of hit dice is 3 or more greater than the spell caster. All creatures above the level of the spell caster and all creatures of 6th level or 6 hit dice are entitled to a saving throw versus the color spray spell. The material components of this spell area pinch each of powder or sand colored red, yellow and blue."
+        desc="Upon casting this spell, the illusionist causes a vivid fan-shaped spray of clashing colors to spring forth from his or her hand. From 1 to 6 creatures within the area of effect can be affected. The spell caster is able to affect 1 level or hit die of creatures for each of his or her levels of experience. Affected creatures are struck unconscious for 2 to 8 rounds if their level is less than or equal to that of the spell caster; they are blinded for 1 to 4 rounds if their level or number of hit dice is 1 or 2 greater than the illusionist; and they are stunned (cf. <a href=\"/spells/power-word-stun-magic-user-lvl-7/\"><i>power word, stun</i></a>, seventh level magic-user spell) for 2 to 8 segments if their level or number of hit dice is 3 or more greater than the spell caster. All creatures above the level of the spell caster and all creatures of 6th level or 6 hit dice are entitled to a saving throw versus the <i>color spray</i> spell. The material components of this spell area pinch each of powder or sand colored red, yellow and blue."
     ),
     Spell('Dancing Lights','I',1,
         cast=tp(1,S),
         duration_lvl=tp(2,R),
         sourcebook=V,
-        desc="This spell is the same as the first level magic-user spell, Dancing Lights (q.v.)."
+        desc="This spell is the same as the first level magic-user spell, <a href=\"/spells/dancing-lights-magic-user-lvl-1/\"><i>dancing lights</i></a>."
     ),
     Spell('Darkness','I',1,
         cast=tp(1,S),
         duration=tp(1,VA),
         sourcebook=V,
-        desc="Except as noted above, this spell is the same as the second level magic-user spell of Darkness (q.v.)."
+        desc="Except as noted above, this spell is the same as the second level magic-user spell of <a href=\"/spells/darkness-15-radius-magic-user-lvl-2/\"><i>darkness</i></a>."
     ),
     Spell('Detect Illusion','I',1,
         cast=tp(1,S),
         duration=tp(3,R),
         duration_lvl=tp(2,R),
         sourcebook=V,
-        desc="By means of this spell the Illusionist is able to see an Illusion and know it for exactly that. Note that it can be used to enable others to see Illusions as unreal if the spell caster touches the creature with both hands and the creature looks at the Illusion while so touched. The material component is a piece of yellow tinted crystal, glass, or mica."
+        desc="By means of this spell the illusionist is able to see an illusion and know it for exactly that. Note that it can be used to enable others to see illusions as unreal if the spell caster touches the creature with both hands and the creature looks at the illusion while so touched. The material component is a piece of yellow tinted crystal, glass, or mica."
     ),
     Spell('Detect Invisibility','I',1,
         cast=tp(1,S),
         duration_lvl=tp(5,R),
         sourcebook=V,
-        desc="Except as noted above, this spell is the same as the second level magic-user spell, Detect Invisibility (q.v.)."
+        desc="Except as noted above, this spell is the same as the second level magic-user spell, <a href=\"/spells/detect-invisibility-magic-user-lvl-2/\"><i>detect invisibility</i></a>."
     ),
     Spell('Gaze Reflection','I',1,
         cast=tp(1,S),
         duration=tp(1,R),
         sourcebook=V,
-        desc="The gaze reflection spell creates a mirror-like area of air before the Illusionist. Any gaze attack, such as that of a basilisk or a medusa, will be reflected back upon the gazer if it looks upon the spell caster."
+        desc="The <i>gaze reflection</i> spell creates a mirror-like area of air before the illusionist. Any gaze attack, such as that of a basilisk or a medusa, will be reflected back upon the gazer if it looks upon the spell caster."
     ),
     Spell('Hypnotism','I',1,
         cast=tp(1,S),
         duration=tp(1,R),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="The gestures of the Illusionist, along with his or her droning incantation, cause from 1 to 6 creatures to become susceptible to suggestion (see the third level magic-user suggestion spell). The suggestion must be given after the hypnotism spell is cast, and until that time the success of the spell is unknown. Note that the subsequent suggestion is not a spell, but simply a vocalized urging. Creatures which make their saving throw are not under hypnotic influence."
+        desc="The gestures of the illusionist, along with his or her droning incantation, cause from 1 to 6 creatures to become susceptible to <i>suggestion</i> (see the third level magic-user <a href=\"/spells/suggestion-magic-user-lvl-3/\"><i>suggestion</i></a> spell). The <i>suggestion</i> must be given after the <i>hypnotism</i> spell is cast, and until that time the success of the spell is unknown. Note that the subsequent <i>suggestion</i> is not a spell, but simply a vocalized urging. Creatures which make their saving throw are not under hypnotic influence."
     ),
     Spell('Light','I',1,
         cast=tp(1,S),
         duration_lvl=tp(1,T),
         sourcebook=V,
-        desc="This spell is the same as the first level magic-user Light spell (q.v.) (cf. first level cleric Light spell.)"
+        desc="This spell is the same as the first level magic-user <a href=\"/spells/light-magic-user-lvl-1/\"><i>light</i></a> spell (cf. first level cleric <a href=\"/spells/light-cleric-lvl-1/\"><i>light</i></a> spell.)"
     ),
     Spell('Phantasmal Force','I',1,
         cast=tp(1,S),
         duration=tp(1,VA),
         sourcebook=V,
-        desc="Except as noted above, this spell is the same as the third level magic-user spell, Phantasmal Force (q.v.)."
+        desc="Except as noted above, this spell is the same as the third level magic-user spell, <a href=\"/spells/phantasmal-force-magic-user-lvl-3/\"><i>phantasmal force</i></a>."
     ),
     Spell('Phantom Armor','I',1,
         cast=tp(1,R),
@@ -3671,7 +3779,7 @@ illusionist_spells = [
         cast=tp(1,S),
         duration=tp(1,VA),
         sourcebook=V,
-        desc="By casting this spell. the Illusionist creates a wall of misty vapors in whatever area within the spell range he or she desires. The wall of fag obscures all sight normal and/or infravisual, beyond 2'. The area of effect is a cube of 2\" per side per level of experience of the spell caster. The misty vapors persist for 3 or more rounds unless blown away by a strong breeze (cf. gust of wind). The material component is a pinch of split dried peas."
+        desc="By casting this spell. the illusionist creates a wall of misty vapors in whatever area within the spell range he or she desires. The <i>wall of fog</i> obscures all sight normal and/or infravisual, beyond 2'. The area of effect is a cube of 2\" per side per level of experience of the spell caster. The misty vapors persist for 3 or more rounds unless blown away by a strong breeze (cf. <a href=\"/spells/gust-of-wind-magic-user-lvl-3/\"><i>gust of wind</i></a>). The material component is a pinch of split dried peas."
     ),
     Spell('Alter Self','I',2,
         cast=tp(2,S),
@@ -3684,26 +3792,26 @@ illusionist_spells = [
         cast=tp(2,S),
         duration=tp(1,P),
         sourcebook=V,
-        desc="The blindness spell causes the recipient creature to become blind and able to see only a greyness before its eyes. Various cure spells will not remove this effect, and only a dispel magic or the spell caster can do away with the blindness if the creature fails its initial saving throw versus the spell."
+        desc="The <i>blindness</i> spell causes the recipient creature to become blind and able to see only a greyness before its eyes. Various <i>cure</i> spells will not remove this effect, and only a <a href=\"/spells/dispel-magic-cleric-lvl-3/\"><i>dispel magic</i></a> or the spell caster can do away with the blindness if the creature fails its initial saving throw versus the spell."
     ),
     Spell('Blur','I',2,
         cast=tp(2,S),
         duration=tp(3,R),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="When a blur spell is cast, the Illusionist causes the outline of his or her form to become blurred, shifting and wavery. This distortion causes all missile and melee combat attacks to be made at -4 on the first attempt and -2 on all successive attacks. It alto allows a +1 on the saving throw die roll for any direct magical attack."
+        desc="When a <i>blur</i> spell is cast, the illusionist causes the outline of his or her form to become blurred, shifting and wavery. This distortion causes all missile and melee combat attacks to be made at -4 on the first attempt and -2 on all successive attacks. It alto allows a +1 on the saving throw die roll for any direct magical attack."
     ),
     Spell('Deafness','I',2,
         cast=tp(2,S),
         duration=tp(1,P),
         sourcebook=V,
-        desc="The deafness spell causes the recipient creature to become totally deaf and unable to hear any sounds (cf. blindness). This deafness can be done away with only by means of a dispel magic or by the spell caster. The victim is allowed a saving throw. The material component of the spell is beeswax."
+        desc="The <i>deafness</i> spell causes the recipient creature to become totally deaf and unable to hear any sounds (cf. <a href=\"/spells/blindness-illusionist-lvl-2/\"><i>blindness</i></a>). This <i>deafness</i> can be done away with only by means of a <a href=\"/spells/dispel-magic-cleric-lvl-3/\"><i>dispel magic</i></a> or by the spell caster. The victim is allowed a saving throw. The material component of the spell is beeswax."
     ),
     Spell('Detect Magic','I',2,
         cast=tp(2,S),
         duration_lvl=tp(2,R),
         sourcebook=V,
-        desc="This spell is similar to the first level cleric and the first level magic-user spell, Detect Magic (qq.v.)."
+        desc="This spell is similar to the first level cleric and the first level magic-user spell, <a href=\"/spells/detect-magic-cleric-lvl-1/\"><i>detect magic</i></a>."
     ),
     Spell('Fascinate','I',2,
         cast=tp(2,S),
@@ -3716,43 +3824,43 @@ illusionist_spells = [
         duration=tp(4,R),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="The fog cloud is a billowing mass of misty vapors which is of similar appearance to a Cloudkill (q.v.), the fog being greenish. The spell caster creates the fog cloud and it moves away from him or her at a 1\" per round rate. Although it behaves in most respects just as if it were a Cloudkill, the only effect of the fog is to obscure vision, just as a wall of fog does."
+        desc="The <i>fog cloud</i> is a billowing mass of misty vapors which is of similar appearance to a <a href=\"/spells/cloudkill-magic-user-lvl-5/\"><i>cloudkill</i></a>, the fog being greenish. The spell caster creates the <i>fog cloud</i> and it moves away from him or her at a 1\" per round rate. Although it behaves in most respects just as if it were a <a href=\"/spells/cloudkill-magic-user-lvl-5/\"><i>cloudkill</i></a>, the only effect of the fog is to obscure vision, just as a <a href=\"/spells/wall-of-fog-illusionist-lvl-1/\"><i>wall of fog</i></a> does."
     ),
     Spell('Hypnotic Pattern','I',2,
         cast=tp(2,S),
         duration=tp(1,VA),
         sourcebook=V,
-        desc="When this spell is cast the Illusionist creates a weaving, turning pattern of subtle colors in the air. This hypnotic pattern will cause any creature looking at it to become fascinated and stand gazing at it as long as the spell caster continues to maintain the shifting interplay of glowing lines. Note that the spell can captivate a maximum of 24 levels, or hit dice, of creatures, i.e. 24 creatures with 1 hit die each, 12 with 2 hit dice, etc. All creatures affected must be within the area of effect, and each is entitled to a saving throw. The Illusionist need not utter a sound. but he or she must gesture appropriately while holding a glowing stick of incense or a crystal rod filled with phosphorescent material."
+        desc="When this spell is cast the illusionist creates a weaving, turning pattern of subtle colors in the air. This <i>hypnotic pattern</i> will cause any creature looking at it to become fascinated and stand gazing at it as long as the spell caster continues to maintain the shifting interplay of glowing lines. Note that the spell can captivate a maximum of 24 levels, or hit dice, of creatures, i.e. 24 creatures with 1 hit die each, 12 with 2 hit dice, etc. All creatures affected must be within the area of effect, and each is entitled to a saving throw. The illusionist need not utter a sound. but he or she must gesture appropriately while holding a glowing stick of incense or a crystal rod filled with phosphorescent material."
     ),
     Spell('Improved Phantasmal Force','I',2,
         cast=tp(2,S),
         duration=tp(1,VA),
         sourcebook=V,
-        desc="Except as noted above, and as detailed hereafter, this spell is the same as the third level magic-user Phantasmal Force spell (q.v.). The spell caster can maintain the illusion with minimal concentration. i.e. he or she can move at half normal speed (but not cast other spells). Some minor sounds are included in the effects of the spell, but not understandable speech. Also, by concentration on the form of the phantasm, the Improved Phantasmal Force will continue for 2 rounds after the Illusionist ceases to concentrate upon the spell."
+        desc="Except as noted above, and as detailed hereafter, this spell is the same as the third level magic-user <a href=\"/spells/phantasmal-force-magic-user-lvl-3/\"><i>phantasmal force</i></a> spell. The spell caster can maintain the illusion with minimal concentration. i.e. he or she can move at half normal speed (but not cast other spells). Some minor sounds are included in the effects of the spell, but not understandable speech. Also, by concentration on the form of the phantasm, the <i>improved phantasmal force</i> will continue for 2 rounds after the illusionist ceases to concentrate upon the spell."
     ),
     Spell('Invisibility','I',2,
         cast=tp(2,S),
         duration=tp(1,P),
         sourcebook=V,
-        desc="Except as noted above, this spell is the same as the second level magic-user spell, Invisibility (q.v.)."
+        desc="Except as noted above, this spell is the same as the second level magic-user spell, <a href=\"/spells/invisibility-magic-user-lvl-2/\"><i>invisibility</i></a>."
     ),
     Spell('Magic Mouth','I',2,
         cast=tp(2,S),
         duration=tp(1,VA),
         sourcebook=V,
-        desc="This spell is the same as the second level magic-user Magic Mouth spell (q.v.)."
+        desc="This spell is the same as the second level magic-user <a href=\"/spells/magic-mouth-magic-user-lvl-2/\"><i>magic mouth</i></a> spell."
     ),
     Spell('Mirror Image','I',2,
         cast=tp(2,S),
         duration_lvl=tp(3,R),
         sourcebook=V,
-        desc="Except as noted above, and except for the fact that there are 2-5 (d4 + 1) mirror images created, this spell is the same as the second level magic-user spell, Mirror Image (q.v.)."
+        desc="Except as noted above, and except for the fact that there are 2-5 (d4 + 1) <i>mirror images</i> created, this spell is the same as the second level magic-user spell, <a href=\"/spells/mirror-image-magic-user-lvl-2/\"><i>mirror image</i></a>."
     ),
     Spell('Misdirection','I',2,
         cast=tp(2,S),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="By means of this spell the Illusionist misdirects the information from a detection-type spell, i.e. detect charm, detect evil, detect invisibility, detect lie, detect magic and detect snares & pits. While the detection spell functions, the information it reveals will indicate the wrong area, creature. or the opposite of the truth with respect to detect evil or detect lie. The Illusionist directs the spell effect upon the creature or item which is the object of the detection spell. If the caster of the detection-type spell fails his or her saving throw, the misdirection takes place."
+        desc="By means of this spell the illusionist misdirects the information from a detection-type spell, i.e. <a href=\"/spells/detect-charm-cleric-lvl-2/\"><i>detect charm</i></a>, <a href=\"/spells/detect-evil-cleric-lvl-1/\"><i>detect evil</i></a>, <a href=\"/spells/detect-invisibility-magic-user-lvl-2/\"><i>detect invisibility</i></a>, <a href=\"/spells/detect-lie-cleric-lvl-4/\"><i>detect lie</i></a>, <a href=\"/spells/detect-magic-cleric-lvl-1/\"><i>detect magic</i></a> and <a href=\"/spells/detect-snares-pits-druid-lvl-1/\"><i>detect snares & pits</i></a>. While the detection spell functions, the information it reveals will indicate the wrong area, creature. or the opposite of the truth with respect to <a href=\"/spells/detect-evil-cleric-lvl-1/\"><i>detect evil</i></a> or <a href=\"/spells/detect-lie-cleric-lvl-4/\"><i>detect lie</i></a>. The illusionist directs the spell effect upon the creature or item which is the object of the detection spell. If the caster of the detection-type spell fails his or her saving throw, the <i>misdirection</i> takes place."
     ),
     Spell('Ultravision','I',2,
         cast=tp(2,S),
@@ -3766,7 +3874,7 @@ illusionist_spells = [
         duration=tp(4,R),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="Except as noted above, this spell is the same as the first level magic-user spell, Ventriloquism (q.v.)."
+        desc="Except as noted above, this spell is the same as the first level magic-user spell, <a href=\"/spells/ventriloquism-magic-user-lvl-1/\"><i>ventriloquism</i></a>."
     ),
     Spell('Whispering Wind','I',2,
         cast=tp(2,S),
@@ -3778,13 +3886,13 @@ illusionist_spells = [
         cast=tp(3,S),
         duration=tp(1,P),
         sourcebook=V,
-        desc="When this spell is cast, a globe of impenetrable darkness is created. The effects of this darkness, as well as the material component of the spell, are the same as the second level magic-user spell, Darkness, 15' Radius (cf. Continual Light)."
+        desc="When this spell is cast, a globe of impenetrable darkness is created. The effects of this darkness, as well as the material component of the spell, are the same as the second level magic-user spell, <a href=\"/spells/darkness-15-radius-magic-user-lvl-2/\"><i>darkness, 15' radius</i></a> (cf. <a href=\"/spells/continual-light-cleric-lvl-3/\"><i>continual light</i></a>)."
     ),
     Spell('Continual Light','I',3,
         cast=tp(3,S),
         duration=tp(1,P),
         sourcebook=V,
-        desc="This spell is the same as the second level cleric Continual Light spell (q.v.), except as noted above."
+        desc="This spell is the same as the second level cleric <a href=\"/spells/continual-light-cleric-lvl-3/\"><i>continual light</i></a> spell, except as noted above."
     ),
     Spell('Delude','I',3,
         cast=tp(3,S),
@@ -3796,43 +3904,43 @@ illusionist_spells = [
         cast=tp(3,S),
         duration=tp(1,P),
         sourcebook=V,
-        desc="By means of this spell, the spell caster can dispel any phantasmal force - with or without audible glamour - cast by a non-illusionist; and the spell has the same chance of dispelling any illusion/phantasm spells at another Illusionist as a dispel magic spell (q.v.) does, i.e. 50% base chance adjusted by 2% downward, or 5% upward for each level of experience lesser/greater of the Illusionist casting the dispel illusion compared to the Illusionist casting the spell to be dispelled."
+        desc="By means of this spell, the spell caster can dispel any <a href=\"/spells/phantasmal-force-magic-user-lvl-3/\"><i>phantasmal force</i></a> — with or without <a href=\"/spells/audible-glamer-magic-user-lvl-2/\"><i>audible glamer</i></a> — cast by a non-illusionist; and the spell has the same chance of dispelling any illusion/phantasm spells at another illusionist as a <a href=\"/spells/dispel-magic-cleric-lvl-3/\"><i>dispel magic</i></a> spell does, i.e. 50% base chance adjusted by 2% downward, or 5% upward for each level of experience lesser/greater of the illusionist casting the <i>dispel illusion</i> compared to the illusionist casting the spell to be dispelled."
     ),
     Spell('Fear','I',3,
         cast=tp(3,S),
         duration=tp(1,VA),
         sourcebook=V,
-        desc="Except as noted above, this spell is the same as the fourth level magic-user spell, Fear (q.v.)."
+        desc="Except as noted above, this spell is the same as the fourth level magic-user spell, <a href=\"/spells/fear-magic-user-lvl-4/\"><i>fear</i></a>."
     ),
     Spell('Hallucinatory Terrain','I',3,
         cast=tp(5,R),
         duration=tp(1,VA),
         sourcebook=V,
-        desc="Except as noted above, this spell is the same as the fourth level magic-user Hallucinatory Terrain spell (q.v.)."
+        desc="Except as noted above, this spell is the same as the fourth level magic-user <a href=\"/spells/hallucinatory-terrain-magic-user-lvl-4/\"><i>hallucinatory terrain</i></a> spell."
     ),
     Spell('Illusionary Script','I',3,
         cast=tp(1,VA),
         duration=tp(1,P),
         sourcebook=V,
-        desc="This spell enables the Illusionist to write instructions or other information on parchment, paper, skin, etc. The Illusionary Script appears to be some form of foreign or magical writing. Only the person (or class of persons or whatever} whom the Illusionist desires to read the writing will be able to do so, although another Illusionist will recognize it for Illusionary Script. Others attempting to read it will become confused as from a confusion spell (q.v.) for 5 to 20 turns, minus 1 turn for each level of experience he or she has attained. The material component of the spell is a lead-based ink which requires special manufacture by an alchemist."
+        desc="This spell enables the illusionist to write instructions or other information on parchment, paper, skin, etc. The <i>illusionary script</i> appears to be some form of foreign or magical writing. Only the person (or class of persons or whatever} whom the illusionist desires to read the writing will be able to do so, although another illusionist will recognize it for <i>illusionary script</i>. Others attempting to read it will become confused as from a <a href=\"/spells/confusion-druid-lvl-7/\"><i>confusion</i></a> spell for 5 to 20 turns, minus 1 turn for each level of experience he or she has attained. The material component of the spell is a lead-based ink which requires special manufacture by an alchemist."
     ),
     Spell('Invisibility 10\' Radius','I',3,
         cast=tp(3,S),
         duration=tp(1,P),
         sourcebook=V,
-        desc="Except as noted above, this spell is the same as the third level magic-user spell, Invisibility, 10' Radius (q.v.). See also the second level magic-user spell, Invisibility."
+        desc="Except as noted above, this spell is the same as the third level magic-user spell, <a href=\"/spells/invisibility-10-radius-magic-user-lvl-3/\">invisibility, 10' radius</i></a>. See also the second level magic-user spell, <a href=\"/spells/invisibility-magic-user-lvl-2/\"><i>invisibility</i></a>."
     ),
     Spell('Non-detection','I',3,
         cast=tp(3,S),
         duration_lvl=tp(1,T),
         sourcebook=V,
-        desc="By casting this spell, the Illusionist makes himself or herself invisible to divination spells such as clairaudience, clairvoyance, \"detects\", and ESP. It also prevents location by such magic items as crystal balls and ESP medallions. The material component of the spell is a pinch of diamond dust."
+        desc="By casting this spell, the illusionist makes himself or herself invisible to divination spells such as <a href=\"/spells/clairaudience-magic-user-lvl-3/\"><i>clairaudience</i></a>, <a href=\"/spells/clairvoyance-magic-user-lvl-3/\"><i>clairvoyance</i></a>, <i>\"detects\"</i>, and <a href=\"/spells/esp-magic-user-lvl-2/\"><i>ESP</i></a>. It also prevents location by such magic items as <i>crystal balls</i> and <i>ESP medallions</i>. The material component of the spell is a pinch of diamond dust."
     ),
     Spell('Paralyzation','I',3,
         cast=tp(3,S),
         duration=tp(1,P),
         sourcebook=V,
-        desc="The paralyzation spell enables the spell caster to create illusionary muscle slowdown in creatures whose combined hit dice do not exceed twice the total level of experience of the Illusionist. If the recipient creatures fail their saving throws, they become paralyzed, and a dispel illusion or dispel magic spell must be used to remove the effect, or the Illusionist may dispel it at anytime he or she desires."
+        desc="The <i>paralyzation</i> spell enables the spell caster to create illusionary muscle slowdown in creatures whose combined hit dice do not exceed twice the total level of experience of the illusionist. If the recipient creatures fail their saving throws, they become paralyzed, and a <a href=\"/spells/dispel-illusion-illusionist-lvl-3/\"><i>dispel illusion</i></a> or <a href=\"/spells/dispel-magic-cleric-lvl-3/\"><i>dispel magic</i></a> spell must be used to remove the effect, or the illusionist may dispel it at anytime he or she desires."
     ),
     Spell('Phantom Steed','I',3,
         cast=tp(1,T),
@@ -3855,19 +3963,19 @@ illusionist_spells = [
         cast=tp(3,S),
         duration_lvl=tp(2,T),
         sourcebook=V,
-        desc="This spell is the same as the second level magic-user spell, Rope Trick (q.v.)."
+        desc="This spell is the same as the second level magic-user spell, <a href=\"/spells/rope-trick-magic-user-lvl-2/\"><i>rope trick</i></a>."
     ),
     Spell('Spectral Force','I',3,
         cast=tp(3,S),
         duration=tp(1,VA),
         sourcebook=V,
-        desc="The spectral force spell creates an illusion in which sound, smell and thermal illusions are included. It is otherwise similar to the second level Improved Phantasmal Force spell (q.v.). The spell will last for 3 rounds after concentration."
+        desc="The <i>spectral force</i> spell creates an illusion in which sound, smell and thermal illusions are included. It is otherwise similar to the second level <a href=\"/spells/improved-phantasmal-force-illusionist-lvl-2/\"><i>improved phantasmal force</i></a> spell. The spell will last for 3 rounds after concentration."
     ),
     Spell('Suggestion','I',3,
         cast=tp(3,S),
         duration=tp(0),
         sourcebook=V,
-        desc="Except as noted above, this spell is the same as the third level magic-user spell, Suggestion (q.v.)."
+        desc="Except as noted above, this spell is the same as the third level magic-user spell, <a href=\"/spells/suggestion-magic-user-lvl-3/\"><i>suggestion</i></a>."
     ),
     Spell('Wraithform','I',3,
         cast=tp(1,S),
@@ -3879,49 +3987,67 @@ illusionist_spells = [
         cast=tp(4,S),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="Except as noted above, this spell is the same as the fourth level magic-user Confusion spell (q.v.). See also the seventh level druid Confusion spell."
+        desc="Except as noted above, this spell is the same as the fourth level magic-user <a href=\"/spells/confusion-magic-user-lvl-4/\"><i>confusion</i></a> spell. See also the seventh level druid <a href=\"/spells/confusion-druid-lvl-7/\"><i>confusion</i></a> spell."
     ),
     Spell('Dispel Exhaustion','I',4,
         cast=tp(4,S),
         duration_lvl=tp(3,T),
         sourcebook=V,
-        desc="By means of this spell, the Illusionist is able to restore 50% of lost hit points to all persons (humans, demi-humans and humanoids) he or she touches during the round it is cast, subject to a maximum of four persons. The spell gives the illusion to the person touched that he or she is fresh and well, stamina is renewed, but when the spell duration expires, the recipient drops back to their actual hit point strength. The spell will allow recipients to move at double speed for 1 round every turn (cf. haste spell)."
+        desc="By means of this spell, the illusionist is able to restore 50% of lost hit points to all persons (humans, demi-humans and humanoids) he or she touches during the round it is cast, subject to a maximum of four persons. The spell gives the illusion to the person touched that he or she is fresh and well. Stamina is renewed, but when the spell duration expires, the recipient drops back to their actual hit point strength. The spell will allow recipients to move at double speed for 1 round every turn (cf. <a href=\"/spells/haste-magic-user-lvl-3/\"><i>haste</i></a> spell)."
     ),
     Spell('Dispel Magic','I',4,
         cast=tp(4,S),
         duration=tp(1,P),
         sourcebook=U,
-        desc="This spell is essentially identical to the 3rd-level clerical spell of the same name. An illusionist casts this spell as if he or she were two levels below actual, i.e. a 9th-level illusionist casts a dispel magic as if he or she were of 7th level."
+        desc="This spell is essentially identical to the <a href=\"/spells/dispel-magic-cleric-lvl-3/\"><i>3rd-level clerical spell</i></a> of the same name. An illusionist casts this spell as if he or she were two levels below actual, i.e. a 9th-level illusionist casts a <i>dispel magic</i> as if he or she were of 7th level."
 
     ),
     Spell('Emotion','I',4,
         cast=tp(4,S),
         duration=tp(1,VA),
-        sourcebook=V
+        sourcebook=V,
+        desc=("When this spell is cast, the illusionist can project his or her choice of 1 of the following 4 emotions:\n\n"
+            "1. <i>Fear</i>: This is the same as the <a href=\"/spells/fear-magic-user-lvl-4/\">spell of the same name</a>, but as it is not illusionary, the saving throw is made at -2. It counters/is countered by <i>rage</i>.\n\n"
+            "2. <i>Hate</i>: The effect of <i>hate</i> is to raise morale, saving throw dice, \"to hit\" dice, and damage done by +2. It counters/is countered by <i>hopelessness</i>.\n\n"
+            "3. <i>Hopelessness</i>: This has the same effect as the <a href=\"/spells/symbol-cleric-lvl-7/\"><i>hopelessness</i> symbol</a>. It counters/is countered by <i>hate</i>.\n\n"
+            "4. <i>Rage</i>: The <i>rage</i> emotion causes the recipient to become berserk, attack at a +1 on the \"to hit\" dice, do +3 hit points of damage, and gives a temporary +5 hit points to the enraged creature. The recipient will fight without shield, and regardless of life as well. It counters/is countered by <i>fear</i>.\n\n"
+            "The spell lasts as long as the illusionist continues to concentrate on projecting the chosen <i>emotion</i>"
+        )
     ),
     Spell('Improved Invisibility','I',4,
         cast=tp(4,S),
         duration=tp(4,R),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="This spell is similar to invisibility, but the recipient is able to attack, either by missile discharge, melee combat, or spell casting and remain unseen. Note, however, that there are sometimes telltale traces, a shimmering, so that an observant opponent can attack the invisible spell recipient. Such attacks are at -4 on the \"to hit\" dice, and all saving throws are made at +4."
+        desc="This spell is similar to <a href=\"/spells/invisibility-magic-user-lvl-2/\"><i>invisibility</i></a>, but the recipient is able to attack, either by missile discharge, melee combat, or spell casting and remain unseen. Note, however, that there are sometimes telltale traces, a shimmering, so that an observant opponent can attack the invisible spell recipient. Such attacks are at -4 on the \"to hit\" dice, and all saving throws are made at +4."
     ),
     Spell('Massmorph','I',4,
         cast=tp(4,S),
         duration=tp(1,VA),
         sourcebook=V,
-        desc="Except as noted above, this spell is the same as the fourth level magic-user spell, Massmorph (q.v.)."
+        desc="Except as noted above, this spell is the same as the fourth level magic-user spell, <a href=\"/spells/massmorph-magic-user-lvl-4/\"><i>massmorph</i></a>."
     ),
     Spell('Minor Creation','I',4,
         cast=tp(1,T),
         duration_lvl=tp(6,T),
         sourcebook=V,
-        desc="This spell enables the Illusionist to create an item of non-living, vegetable nature, i.e. soft goods, rope, wood, etc. The item created cannot exceed 1 cubic foot per level of the spell caster in volume., (Cf. ADVANCED DUNGEONS & DRAGONS, MONSTER MANUAL, Djinni.) Note the limits of the spell's duration, The spell caster must have at least a tiny piece of matter of the same type of item he or she plans to create by means of the minor creation spell, i.e. a bit of twisted hemp to create rope, a splinter of wood to create a door, and so forth."
+        desc="This spell enables the illusionist to create an item of non-living, vegetable nature, i.e. soft goods, rope, wood, etc. The item created cannot exceed 1 cubic foot per level of the spell caster in volume., (Cf. <a href=\"/creatures/djinni/\"><i>Djinni</i></a>.) Note the limits of the spell's duration, The spell caster must have at least a tiny piece of matter of the same type of item he or she plans to create by means of the minor creation spell, i.e. a bit of twisted hemp to create rope, a splinter of wood to create a door, and so forth."
     ),
     Spell('Phantasmal Killer','I',4,
         cast=tp(4,S),
         duration_lvl=tp(1,R),
-        sourcebook=V
+        sourcebook=V,
+        desc=("When this spell is cast, the illusionist creates the illusion of the most fearsome thing imagined, simply by forming the fears of the subject creature's subconcious mind into something which its concious mind can visualize — <i>the</i> most horrible beast. Only the spell caster and the spell recipient can see the <i>phantasmal killer</i>, but if it succeeds in scoring a hit, the victim dies (from fright). The beast attacks as a 4 hit dice monster with respect to its victim. It is invulnerable to all attacks, and it can pass through any barriers, for it exists only in the beholder's mind. The only defense against a <i>phantasmal killer</i> is an attempt to disbelieve, which can be tried but once, or slaying or rendering unconscious the illusionist who cast the spell. Note that the saving throw against this spell is not standard. The subject must roll three six-sided dice (3d6) and score a sum equal to or less than its intelligence ability score in order to disbelieve the apparition. The dice score is modified as follows:\n\n"
+            "<table>"
+            "<tr><th>Condition</th><th>Modifier*</th></tr>"
+            "<tr><td>Complete surprise</td><td>+2</td></tr>"
+            "<tr><td>Surprise</td><td>+1</td></tr>"
+            "<tr><td>Subject previously attacked by this spell</td><td>-1 per previous attack</td></tr>"
+            "<tr><td>Subject is an illusionist</td><td>-2</td></tr>"
+            "<tr><td>Subject is wearing a <i>helm of telepathy</i></td><td>-3 plus the ability to turn the <i>phantasmal killer</i> upon its creator if disbelieved</td></tr>"
+            "*Note that magic resistance and wisdom factors also apply, magic resistance being checked first to determine spell operation (or -1 to -5 on dice if spell resistance is at that of a dwarf, gnome, etc.), and then wisdom bonus applies as a minus to the dice roll to match or score less than intelligence.\n\n"
+            "If the subject of the attack by a <i>phantasmal killer</i> succeeds in disbelieving and is wearing a <i>helm of telepathy</i>, the beast can be turned upon the illusionist, and then he or she must disbelieve it or be subject to its attack and possible effects."
+        )
     ),
     Spell('Rainbow Pattern','I',4,
         cast=tp(4,S),
@@ -3933,7 +4059,7 @@ illusionist_spells = [
         cast=tp(4,S),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="The shadow monsters spell enables the Illusionist to create semi-real phantasms of one or more monsters. The total hit dice of the shadow monster or monsters thus created cannot exceed the level of experience of the Illusionist; thus a 10th level Illusionist can create one creature which has 10 hit dice (in normal circumstances), two which have 5 hit dice (normally), etc. All shadow monsters created by one spell must be of the same sort, i.e. hobgoblins, orcs, spectres, etc. They have 20% of the hit points they would normally have. To determine this, roll the appropriate hit dice and multiply by .20, any score less than .4 is dropped - in the case of monsters with one (or fewer) hit dice, this indicates the monster was not successfully created - and scores of .4 or greater are rounded up to one hit point. If the creature or creatures viewing the shadow monsters fail their saving throw and believe the illusion, the shadow monsters perform as normal with respect to armor class and attack forms. If the viewer or viewers make their saving throws, the shadow monsters are armor class 10 and do only 20% of normal melee damage (biting, clawing, weapon, etc.), dropping fractional damage less than .4 as done with hit points. Example: A shadow monster dragonne attacks a person knowing it is only quasi-real. The monster strikes with 2 claw attacks and 1 bite, hitting as a 9 die monster. All 3 attacks hit, and the normal damage dice are rolled: d8 scored 5, d8 scores 8, 3d6 scores 11 and each total is multiplied by .2 (.2 x 5 = 1, .2 x 8 = 1.6 = 2, 2 x 11 = 2.2 = 2) and 5 hit points of real damage are scored upon the victim."
+        desc="The <i>shadow monsters</i> spell enables the illusionist to create semi-real phantasms of one or more monsters. The total hit dice of the shadow monster or monsters thus created cannot exceed the level of experience of the illusionist; thus a 10th level illusionist can create one creature which has 10 hit dice (in normal circumstances), two which have 5 hit dice (normally), etc. All <i>shadow monsters</i> created by one spell must be of the same sort, i.e. hobgoblins, orcs, spectres, etc. They have 20% of the hit points they would normally have. To determine this, roll the appropriate hit dice and multiply by .20, any score less than .4 is dropped — in the case of monsters with one (or fewer) hit dice, this indicates the monster was not successfully created — and scores of .4 or greater are rounded up to one hit point. If the creature or creatures viewing the <i>shadow monsters</i> fail their saving throw and believe the illusion, the <i>shadow monsters</i> perform as normal with respect to armor class and attack forms. If the viewer or viewers make their saving throws, the <i>shadow monsters</i> are armor class 10 and do only 20% of normal melee damage (biting, clawing, weapon, etc.), dropping fractional damage less than .4 as done with hit points. Example: A <i>shadow monster</i> <a href=\"/creatures/dragonne/\">dragonne</a> attacks a person knowing it is only quasi-real. The monster strikes with 2 claw attacks and 1 bite, hitting as a 9 die monster. All 3 attacks hit, and the normal damage dice are rolled: d8 scored 5, d8 scores 8, 3d6 scores 11 and each total is multiplied by .2 (.2 x 5 = 1, .2 x 8 = 1.6 = 2, 2 x 11 = 2.2 = 2) and 5 hit points of real damage are scored upon the victim."
     ),
     Spell('Solid Fog','I',4,
         cast=tp(4,S),
@@ -3958,13 +4084,15 @@ illusionist_spells = [
         cast=tp(5,S),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="This spell is similar to the seventh level druid confusion spell (q.v.), but all creatures in the area of effect are confused for the duration of the spell. Only fighters other than paladins or rangers and Illusionists are able to combat the spell effects and are thus allowed a saving throw. Similarly, monsters which do not employ magic and have intelligences of 4 (semi-intelligent) or less are entitled to saving throws. The material component for this spell is a small disc of bronze and a small rod of iron."
+        desc=("This spell is similar to the seventh level druid <a href=\"/spells/confusion-druid-lvl-7/\"><i>confusion</i></a> spell, but all creatures in the area of effect are confused for the duration of the spell. Only fighters other than paladins or rangers and illusionists are able to combat the spell effects and are thus allowed a saving throw. Similarly, monsters which do not employ magic and have intelligences of 4 (semi-intelligent) or less are entitled to saving throws.\n\n"
+            "The material component for this spell is a small disc of bronze and a small rod of iron."
+        )
     ),
     Spell('Demi-Shadow Monsters','I',5,
         cast=tp(5,S),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="This spell is similar to the fourth level spell, shadow monsters, except that the monsters created are of 40% hit points. Damage potential is 40% of normal, and they are armor class 8."
+        desc="This spell is similar to the fourth level spell, <a href=\"/spells/shadow-monsters-illusionist-lvl-4/\"><i>shadow monsters</i></a>, except that the monsters created are of 40% hit points. Damage potential is 40% of normal, and they are armor class 8."
     ),
     Spell('Dream','I',5,
         cast=tp(1,D),
@@ -3992,38 +4120,38 @@ illusionist_spells = [
         cast=tp(1,T),
         duration_lvl=tp(6,T),
         sourcebook=V,
-        desc="This spell is comparable to a minor creation spell (q.v.) except that it allows the Illusionist to create mineral objects. If vegetable objects are created, they have a duration of 12 turns per level of experience of the spell caster."
+        desc="This spell is comparable to a <a href=\"/spells/minor-creation-illusionist-lvl-4/\"><i>minor creation</i></a> spell except that it allows the illusionist to create mineral objects. If vegetable objects are created, they have a duration of 12 turns per level of experience of the spell caster."
     ),
     Spell('Maze','I',5,
         cast=tp(5,S),
         duration=tp(1,VA),
         sourcebook=V,
-        desc="This spell, except as noted above, is the same as the eighth level magic-user Maze spell (q.v.)."
+        desc="This spell, except as noted above, is the same as the eighth level magic-user <a href=\"/spells/maze-magic-user-lvl-8/\"><i>maze</i></a> spell."
     ),
     Spell('Projected Image','I',5,
         cast=tp(5,S),
         duration=tp(1,VA),
         sourcebook=V,
-        desc="Except as shown above, this spell is the same as the sixth level magic-user spell Project Image (q.v.)."
+        desc="Except as shown above, this spell is the same as the sixth level magic-user spell <a href=\"/spells/project-image-magic-user-lvl-6/\"><i>project image</i></a>."
     ),
     Spell('Shadow Door','I',5,
         cast=tp(2,S),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="By means of this spell, the Illusionist creates the illusion of a door. The illusion also permits the Illusionist to appear to step through this \"door\" and disappear, when in reality he or she has darted aside, and can then flee totally invisible for the spell duration. Creatures viewing this are deluded into seeing/entering an empty 10' x 10' room if they open the \"door\". Only a true seeing spell, a gem of seeing, or similar magical means will discover the Illusionist."
+        desc="By means of this spell, the illusionist creates the illusion of a door. The illusion also permits the illusionist to appear to step through this \"door\" and disappear, when in reality he or she has darted aside, and can then flee totally invisible for the spell duration. Creatures viewing this are deluded into seeing/entering an empty 10' x 10' room if they open the \"door\". Only a <a href=\"/spells/true-seeing-cleric-lvl-5/\"><i>true seeing</i></a> spell, a <i>gem of seeing</i>, or similar magical means will discover the illusionist."
     ),
     Spell('Shadow Magic','I',5,
         cast=tp(5,S),
         duration=tp(1,VA),
         sourcebook=V,
-        desc="The shadow magic spell allows the Illusionist to cast a quasi-real magic-user spell. This spell can be magic missile, fireball, lightning bolt, or cone of cold and will have normal effects upon creatures in the area of effect if they fail to make their saving throws. If saving throws are made, the shadow magic spell will inflict but 1 hit point of damage per level of experience of the Illusionist casting it, regardless of which quasi-real spell was cast."
+        desc="The <i>shadow magic</i> spell allows the illusionist to cast a quasi-real magic-user spell. This spell can be <a href=\"/spells/magic-missile-magic-user-lvl-1/\"><i>magic missile</i></a>, <a href=\"/spells/fireball-magic-user-lvl-3/\"><i>fireball</i></a>, <a href=\"/spells/lightning-bolt-magic-user-lvl-3/\"><i>lightning bolt</i></a>, or <a href=\"/spells/cone-of-cold-magic-user-lvl-5/\"><i>cone of cold</i></a> and will have normal effects upon creatures in the area of effect if they fail to make their saving throws. If saving throws are made, the <i>shadow magic</i> spell will inflict but 1 hit point of damage per level of experience of the illusionist casting it, regardless of which quasi-real spell was cast."
     ),
     Spell('Summon Shadow','I',5,
         cast=tp(5,S),
         duration=tp(1,R),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="When this spell is cast, the Illusionist conjures up 1 shadow (see ADVANCED DUNGEONS & DRAGONS. MONSTER MANUAL) for every three levels of experience he or she has attained. These monsters are under the control of the spell caster and will attack his or her enemies on command. The shadows will remain until slain or turned or the spell duration expires. The material component for this spell is a bit of smoky quartz."
+        desc="When this spell is cast, the illusionist conjures up 1 <a href=\"/creatures/shadow/\">shadow</a> for every three levels of experience he or she has attained. These monsters are under the control of the spell caster and will attack his or her enemies on command. The <i>shadows</i> will remain until slain or turned or the spell duration expires. The material component for this spell is a bit of smoky quartz."
     ),
     Spell('Tempus Fugit','I',5,
         cast=tp(5,S),
@@ -4037,7 +4165,7 @@ illusionist_spells = [
         cast=tp(6,S),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="Except as shown above. this spell is the same as the sixth level cleric spell, Conjure Animals (q.v.)."
+        desc="Except as shown above, this spell is the same as the sixth level cleric spell, <a href=\"/spells/conjure-animals-cleric-lvl-6/\"><i>conjure animals</i></a>."
     ),
     Spell('Death Fog','I',6,
         cast=tp(6,S),
@@ -4056,14 +4184,14 @@ illusionist_spells = [
         cast=tp(6,S),
         duration=tp(1,VA),
         sourcebook=V,
-        desc="This spell is similar to the fifth level Shadow Magic spell (q.v.), but in addition to the quasi-real spells listed thereunder it enables the Illusionist to cast a quasi-real Wall of Fire, Wall of Ice, or Cloudkill. If recognized as Demi-Shadow Magic (the victim makes its saving throw), the Magic Missile, Fireball, et al. do 2 hit points of damage per level of experience of the spell caster, the wall spells cause 1-4 hit points of damage per level, and the Cloudkill will slay only creatures with fewer than 2 hit dice."
+        desc="This spell is similar to the fifth level <a href=\"/spells/shadow-magic-illusionist-lvl-5/\"><i>shadow magic</i></a> spell, but in addition to the quasi-real spells listed thereunder it enables the illusionist to cast a quasi-real <a href=\"/spells/wall-of-fire-druid-lvl-5/\"><i>wall of fire</i></a>, <a href=\"/spells/ice-storm-magic-user-lvl-4/\"><i>wall of ice</i></a>, or <a href=\"/spells/cloudkill-magic-user-lvl-5/\"><i>cloudkill</i></a>. If recognized as <i>demi-shadow magic</i> (the victim makes its saving throw), the <a href=\"/spells/magic-missile-magic-user-lvl-1/\"><i>magic missile</i></a>, <a href=\"/spells/fireball-magic-user-lvl-3/\"><i>fireball</i></a>, et al. do 2 hit points of damage per level of experience of the spell caster, the <i>wall</i> spells cause 1-4 hit points of damage per level, and the <a href=\"/spells/cloudkill-magic-user-lvl-5/\"><i>cloudkill</i></a> will slay only creatures with fewer than 2 hit dice."
     ),
     Spell('Mass Suggestion','I',6,
         cast=tp(6,S),
         duration=tp(4,T),
         duration_lvl=tp(4,T),
         sourcebook=V,
-        desc="This spell is the same as the third level Suggestion spell, except that the Illusionist is able to cast the spell upon more than one subject, provided the prospective recipients of the suggestion are within the 3\" range. One creature per level of experience the spell caster has attained can be affected. If only one creature is the subject, its saving throw is at -2. The suggestion must be the same for all hearing it."
+        desc="This spell is the same as the third level <a href=\"/spells/suggestion-illusionist-lvl-3/\"><i>suggestion</i></a> spell, except that the illusionist is able to cast the spell upon more than one subject, provided the prospective recipients of the suggestion are within the 3\" range. One creature per level of experience the spell caster has attained can be affected. If only one creature is the subject, its saving throw is at -2. The suggestion must be the same for all hearing it."
     ),
     Spell('Mirage Arcane','I',6,
         cast=tp(1,VA),
@@ -4081,7 +4209,7 @@ illusionist_spells = [
         cast=tp(6,S),
         duration=tp(1,P),
         sourcebook=V,
-        desc="This spell creates a lasting Spectral Force (q.v.) which requires no concentration. It is subject to Dispel Magic, of course."
+        desc="This spell creates a lasting <a href=\"/spells/spectral-force-illusionist-lvl-3/\"><i>spectral force</i></a> which requires no concentration. It is subject to <a href=\"/spells/dispel-magic-cleric-lvl-3/\"><i>dispel magic</i></a>, of course."
     ),
     Spell('Phantasmagoria','I',6,
         cast=tp(6,S),
@@ -4093,49 +4221,59 @@ illusionist_spells = [
         cast=tp(6,S),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="By means of this spell, the Illusionist sets up a Spectral Forces spell (q.v.) which will activate upon command or when a specified condition occurs (cf. Magic Mouth). The illusion will last for a maximum of 1 round per level of the spell caster."
+        desc="By means of this spell, the illusionist sets up a <a href=\"/spells/spectral-force-illusionist-lvl-3/\"><i>spectral forces</i></a> spell which will activate upon command or when a specified condition occurs (cf. <a href=\"/spells/magic-mouth-magic-user-lvl-2/\"><i>magic mouth</i></a>). The illusion will last for a maximum of 1 round per level of the spell caster."
     ),
     Spell('Shades','I',6,
         cast=tp(6,S),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="This spell is related to shadow monsters and demi-shadow monsters (qq.v.), but the monsters created are of 60% hit points and damage potential and are of armor class 6."
+        desc="This spell is related to <a href=\"/spells/shadow-monsters-illusionist-lvl-4/\"><i>shadow monsters</i></a> and <a href=\"/spells/demi-shadow-monsters-illusionist-lvl-5/\"><i>demi-shadow monsters</i></a>, but the monsters created are of 60% hit points and damage potential and are of armor class 6."
     ),
     Spell('True Sight','I',6,
         cast=tp(1,R),
         duration_lvl=tp(1,R),
         sourcebook=V,
-        desc="This spell is very like the fifth level cleric spell, True Seeing (q.v.). However, while the true sight spell allows the Illusionist to see its actual or former form, it does not allow determination of alignment."
+        desc="This spell is very like the fifth level cleric spell, <a href=\"/spells/true-seeing-cleric-lvl-5/\"><i>true seeing</i></a>. However, while the <i>true sight</i> spell allows the illusionist to see its actual or former form, it does not allow determination of alignment."
     ),
     Spell('Veil','I',6,
         cast=tp(3,S),
         duration_lvl=tp(1,T),
         sourcebook=V,
-        desc="The veil spell enables the Illusionist to instantly change the appearance of his or her surroundings and/or party or create Hallucinatory Terrain (q.v.) so as to fool even the most clever creatures unless they have true seeing/sight, a gem of seeing, or similar magical aid. The veil can make a sumptuous room seem a filthy den and even touch will conform to the visual illusion. If hallucinatory terrain is created, touch will not cause it to vanish."
+        desc="The <i>veil</i> spell enables the illusionist to instantly change the appearance of his or her surroundings and/or party or create <a href=\"/spells/hallucinatory-terrain-magic-user-lvl-4/\"><i>hallucinatory terrain</i></a> so as to fool even the most clever creatures unless they have <a href=\"/spells/true-seeing-cleric-lvl-5/\"><i>true seeing</i></a>/<a href=\"/spells/true-sight-illusionist-lvl-6/\"><i>sight</i></a>, a <i>gem of seeing</i>, or similar magical aid. The <i>veil</i> can make a sumptuous room seem a filthy den and even touch will conform to the visual illusion. If <a href=\"/spells/hallucinatory-terrain-magic-user-lvl-4/\"><i>hallucinatory terrain</i></a> is created, touch will not cause it to vanish."
     ),
     Spell('Alter Reality','I',7,
         cast=tp(1,VA),
         duration=tp(1,VA),
         sourcebook=V,
-        desc="The Alter Reality spell is similar to the seventh level magic-user Limited Wish spell (q.v.). In order to effect the magic fully, the Illusionist must depict the enactment of the alteration of reality through the casting of a Phantasmal Force, as well as verbalization in a limited form, before the spell goes into action."
+        desc="The <i>alter reality</i> spell is similar to the seventh level magic-user <a href=\"/spells/limited-wish-magic-user-lvl-7/\"><i>limited wish</i></a> spell. In order to effect the magic fully, the illusionist must depict the enactment of the alteration of reality through the casting of a <a href=\"/spells/phantasmal-force-magic-user-lvl-3/\"><i>phantasmal force</i></a>, as well as verbalization in a limited form, before the spell goes into action."
     ),
     Spell('Astral Spell','I',7,
         cast=tp(3,T),
         duration=tp(1,VA),
         sourcebook=V,
-        desc="This spell is the same as the seventh level cleric spell, Astral Spell (q.v.)."
+        desc="This spell is the same as the seventh level cleric spell, <a href=\"/spells/astral-spell-cleric-lvl-7/\"><i>astral spell</i></a>."
     ),
     Spell('Prismatic Spray','I',7,
         cast=tp(7,S),
         duration=tp(0),
         sourcebook=V,
-        desc="When this spell is cast, the Illusionist causes 7 rays of the Prismatic Sphere spell (q.v.) to spring from his or her hand. Any creature in the area of effect will be touched by 1 or more of the rays. To determine which ray strikes the concerned creature, roll an eight-sided die: 1 = red 2 = orange 3 = yellow 4 = green 5 = blue 6 = indigo 7 = violet 8 = struck by 2 rays, roll again twice ignoring any 8's. Saving throws apply only with respect to those prismatic color rays which call for such."
+        desc=("When this spell is cast, the illusionist causes 7 rays of the <a href=\"/spells/prismatic-sphere-magic-user-lvl-9/\"><i>prismatic sphere</i></a> spell to spring from his or her hand. Any creature in the area of effect will be touched by 1 or more of the rays. To determine which ray strikes the concerned creature, roll an eight-sided die:\n\n"
+            "1 = red\n"
+            "2 = orange\n"
+            "3 = yellow\n"
+            "4 = green\n"
+            "5 = blue\n"
+            "6 = indigo\n"
+            "7 = violet\n"
+            "8 = struck by 2 rays, roll again twice ignoring any 8's.\n\n"
+            "Saving throws apply only with respect to those prismatic color rays which call for such."
+        )
     ),
     Spell('Prismatic Wall','I',7,
         cast=tp(7,S),
         duration_lvl=tp(1,T),
         sourcebook=V,
-        desc="The prismatic wall spell is similar to the Prismatic Sphere spell (q.v.). It differs only in that the spell creates a wall, or curtain, of scintillating colors. The wall is of maximum proportions of 4' wide per level of experience of the spell caster and 2' high per level of experience."
+        desc="The <i>prismatic wall</i> spell is similar to the <a href=\"/spells/prismatic-sphere-magic-user-lvl-9/\"><i>prismatic sphere</i></a> spell. It differs only in that the spell creates a wall, or curtain, of scintillating colors. The wall is of maximum proportions of 4' wide per level of experience of the spell caster and 2' high per level of experience."
     ),
     Spell('Shadow Walk','I',7,
         cast=tp(1,S),
@@ -4147,7 +4285,7 @@ illusionist_spells = [
         cast=tp(7,S),
         duration=tp(1,VA),
         sourcebook=V,
-        desc="At such time as the Illusionist wishes to gain supernatural guidance, he or she casts a Vision spell, calling upon whatever power he or she desires aid from, and asking the question for which a vision is to be given to answer. Two six-sided dice are rolled. If they total 2 to 6, the power is annoyed and will cause the Illusionist, by ultra-powerful geas or quest to do some service, and no question will be answered. If the dice total 7 to 9, the power is indifferent, and some minor vision, possibly unrelated to the question, will be given. A score of 10 or better indicates the vision is granted. Note that the material component of the spell is the sacrifice of something valued by the spell caster and/or by the power supplicated. The more precious the sacrifice, the better he chance of spell success, for a very precious item will give a bonus of +1 on the dice, one that is extremely precious will add +2, and a priceless/nonesuch will add +3."
+        desc="At such time as the illusionist wishes to gain supernatural guidance, he or she casts a <i>vision</i> spell, calling upon whatever power he or she desires aid from, and asking the question for which a vision is to be given to answer. Two six-sided dice are rolled. If they total 2 to 6, the power is annoyed and will cause the illusionist, by ultra-powerful <a href=\"/spells/geas-magic-user-lvl-6/\"><i>geas</i></a> or <a href=\"/spells/quest-cleric-lvl-5/\"><i>quest</i></a> to do some service, and no question will be answered. If the dice total 7 to 9, the power is indifferent, and some minor <i>vision</i>, possibly unrelated to the question, will be given. A score of 10 or better indicates the <i>vision</i> is granted. Note that the material component of the spell is the sacrifice of something valued by the spell caster and/or by the power supplicated. The more precious the sacrifice, the better he chance of spell success, for a very precious item will give a bonus of +1 on the dice, one that is extremely precious will add +2, and a priceless/nonesuch will add +3."
     ),
     Spell('Weird','I',7,
         cast=tp(7,S),
@@ -4159,7 +4297,29 @@ illusionist_spells = [
         cast=tp(1,VA),
         duration=tp(1,VA),
         sourcebook=V,
-        desc="The Illusionist gains four of the following first level magic-user spells at the 14th level of experience and an additional one as each additional level of experience is gained. The spells are:  Affect Normal Fires, Burning Hands, Charm Person, Comprehend Languages, Enlarge, Erase, Feather Fall, Friends, Hold Portal, Magic Missile, Mending, Message, Nystul's Magic Aura, Protection from Evil, Read Magic, Shield, Shocking Grasp, Sleep, Tenser's Floating Disc, Unseen Servant. The Illusionist may learn any spell or spells from the preceding list. He or she must seek the spells in the same manner as a magic-user. If the Illusionist chooses to take this \"spell\", he or she actually takes four or more first level magic-user spells as a seventh level spell."
+        desc=("The illusionist gains four of the following first level magic-user spells at the 14th level of experience and an additional one as each additional level of experience is gained. The spells are:\n\n"
+            "<a href=\"/spells/affect-normal-fires-magic-user-lvl-1/\"><i>Affect Normal Fires</i></a>\n"
+            "<a href=\"/spells/burning-hands-magic-user-lvl-1/\"><i>Burning Hands</i></a>\n"
+            "<a href=\"/spells/charm-person-magic-user-lvl-1/\"><i>Charm Person</i></a>\n"
+            "<a href=\"/spells/comprehend-languages-magic-user-lvl-1/\"><i>Comprehend Languages</i></a>\n"
+            "<a href=\"/spells/enlarge-magic-user-lvl-1/\"><i>Enlarge</i></a>\n"
+            "<a href=\"/spells/erase-magic-user-lvl-1/\"><i>Erase</i></a>\n"
+            "<a href=\"/spells/feather-fall-magic-user-lvl-1/\"><i>Feather Fall</i></a>\n"
+            "<a href=\"/spells/friends-magic-user-lvl-1/\"><i>Friends</i></a>\n"
+            "<a href=\"/spells/hold-portal-magic-user-lvl-1/\"><i>Hold Portal</i></a>\n"
+            "<a href=\"/spells/magic-missile-magic-user-lvl-1/\"><i>Magic Missile</i></a>\n"
+            "<a href=\"/spells/mending-magic-user-lvl-1/\"><i>Mending</i></a>\n"
+            "<a href=\"/spells/message-magic-user-lvl-1/\"><i>Message</i></a>\n"
+            "<a href=\"/spells/nystuls-magic-aura-magic-user-lvl-1/\"><i>Nystul's Magic Aura</i></a>\n"
+            "<a href=\"/spells/protection-from-evil-magic-user-lvl-1/\"><i>Protection from Evil</i></a>\n"
+            "<a href=\"/spells/read-magic-magic-user-lvl-1/\"><i>Read Magic</i></a>\n"
+            "<a href=\"/spells/shield-magic-user-lvl-1/\"><i>Shield</i></a>\n"
+            "<a href=\"/spells/shocking-grasp-magic-user-lvl-1/\"><i>Shocking Grasp</i></a>\n"
+            "<a href=\"/spells/sleep-magic-user-lvl-1/\"><i>Sleep</i></a>\n"
+            "<a href=\"/spells/tensers-floating-disc-magic-user-lvl-1/\"><i>Tenser's Floating Disc</i></a>\n"
+            "<a href=\"/spells/unseen-servant-magic-user-lvl-1/\"><i>Unseen Servant</i></a>\n\n"
+            "The illusionist may learn any spell or spells from the preceding list. He or she must seek the spells in the same manner as a magic-user. If the illusionist chooses to take this \"spell\", he or she actually takes four or more first level magic-user spells as a seventh level spell."
+        )
     )
 ]
 
