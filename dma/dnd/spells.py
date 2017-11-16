@@ -1188,7 +1188,7 @@ druid_spells = [
             "<tr><th>Metal Temperature</th><th>Damage Per Round</th><th>Disability</th></tr>"
             "<tr><td>cold</td><td>none</td><td>none</td></tr>"
             "<tr><td>icy</td><td>1-2 hit points</td><td>none</td></tr>"
-            "<tr><tr>freezing</td><td>1-4 hit points</td><td>amputation of fingers, toes, nose, or ears</td></tr>"
+            "<tr><td>freezing</td><td>1-4 hit points</td><td>amputation of fingers, toes, nose, or ears</td></tr>"
             "</table>\n\n"
             "The <i>chill metal</i> spell is countered by a <a href=\"/spells/resist-cold-cleric-lvl-1/\"><i>resist cold</i></a> spell, or by any great heat, i.e. proximity to a blazing fire (not a mere torch), a magical <i>flaming sword</i>, a <a href=\"/spells/wall-of-fire-druid-lvl-5/\"><i>wall of fire</i></a>, etc."
         )
