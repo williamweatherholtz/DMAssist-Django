@@ -30,7 +30,10 @@ class Command(BaseCommand):
                 duration = spell.duration.decisegments,
                 duration_per_level = spell.duration_per_level.decisegments,
                 source = spell.sourcebook.value,
-                description = spell.description
+                description = spell.description,
+                saving_throw = spell.save,
+                aoe = spell.aoe,
+                range = spell.range
             )
 
             try:

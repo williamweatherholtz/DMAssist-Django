@@ -2,6 +2,7 @@ import django_filters
 from django import forms
 
 from spells.models import SpellInfo, CLASS_CHOICES
+from spells.forms import SpellForm
 
 def spell_class_query(request):
     if request is None:
@@ -23,5 +24,5 @@ class SpellFilter(django_filters.FilterSet):
         fields = {
             'name': ['contains'],
             'description': ['contains'],
-            'level': ['exact'],
         }
+        form = SpellForm

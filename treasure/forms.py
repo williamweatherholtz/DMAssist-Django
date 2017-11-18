@@ -5,7 +5,7 @@ class ItemCountForm(forms.Form):
         required = True, label='Count',
         min_value=1, max_value=10000
     )
-    
+
 class TreasureTypeForm(forms.Form):
     #regex matches at least one alphabetic character with possible numbers in front
     types_str = forms.RegexField(

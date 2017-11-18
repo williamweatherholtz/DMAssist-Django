@@ -17,9 +17,15 @@ class SpellInfo(models.Model):
     cast_time = models.IntegerField()
     duration = models.IntegerField()
     duration_per_level = models.IntegerField()
+    range = models.CharField(max_length=75)
+    aoe = models.CharField(max_length=150, blank=True, default='')
+    saving_throw = models.CharField(max_length=75)
     source = models.CharField(max_length=50)
     description = models.TextField(default="Missing description")
 
+    class Meta:
+        ordering = ['spell_class','level','name']
+    
     def __str__(self):
         role = 'Unknown'
         if self.spell_class == 'C':
