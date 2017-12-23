@@ -9,7 +9,7 @@
         {{filter.form.as_p}}
         <input type="submit" />
     </form>
-
+    
     <ul>
     {% for spell in filter.qs %}
         <li><a href="{% url 'spells:detail' spell.slug %}">{{spell}}</a></li>

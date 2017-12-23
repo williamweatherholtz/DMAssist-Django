@@ -10,6 +10,9 @@ def spell_class_query(request):
         
     return SpellInfo.objects.all()
 
+class RangeInput(forms.NumberInput):
+    input_type = 'range'
+    
 class SpellFilter(django_filters.FilterSet):
     spell_class = django_filters.ChoiceFilter(
         choices = CLASS_CHOICES,
@@ -17,7 +20,9 @@ class SpellFilter(django_filters.FilterSet):
         widget = forms.Select
     )
     
-    level = django_filters.RangeFilter()
+    level = django_filters.RangeFilter(
+        #widget = RangeInput()
+    )
 
     class Meta:
         model = SpellInfo
@@ -26,3 +31,4 @@ class SpellFilter(django_filters.FilterSet):
             'description': ['contains'],
         }
         form = SpellForm
+

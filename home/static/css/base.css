@@ -45,10 +45,10 @@ table, th, td{
     border: 1px solid indigo;
 }
 
-a:link{
+p a:link{
     color: turquoise;
 }
 
-a:visited{
+p a:visited{
     color: turquoise;
 }

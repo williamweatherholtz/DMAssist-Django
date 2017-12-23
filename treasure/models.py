@@ -5,7 +5,7 @@ from django.db import models
 from dma.dnd.gem import Gem
 from dma.dnd.jewelry import Jewelry
 
-from dma.dnd.treasure import Treasure
+from dma.dnd.treasure import Treasure, gemsValue
   
 class GemResults():
     def __init__(self, count):

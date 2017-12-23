@@ -1,4 +1,5 @@
 {% extends 'treasure/base.html' %}
+{% load app_filters %}
 
 {% block treasure_content %}
     <form action="{% url 'treasure:gems' %}" method="GET">
@@ -7,7 +8,7 @@
 {% endblock %}
 
 {% block treasure_results %}
-    <p> There are {{ gem_count }} gems. </p>
+    <p> There are {{ gem_count }} gems with a total value of {{ gem_list | gems_total_value }}</p>
     <ul>
         {% for gem in gem_list %}
             <li>{{ gem }}</li>
