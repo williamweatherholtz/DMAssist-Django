@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.contrib.auth import views as auth_views
 
 from home.views import IndexView
 
@@ -24,5 +25,6 @@ urlpatterns = [
     url(r'^creatures/', include('creatures.urls')),
     url(r'^random_encounters/', include('random_encounters.urls')),
     url(r'^spells/', include('spells.urls')),
+    url('accounts/', include('django.contrib.auth.urls')),
     url(r'^admin/', admin.site.urls),
 ]
