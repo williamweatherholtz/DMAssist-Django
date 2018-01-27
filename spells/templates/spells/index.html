@@ -10,10 +10,11 @@
         <input type="submit" />
     </form>
     
+    <p>{{filter.qs|length}} spells found.</p>
+    
     <ul>
     {% for spell in filter.qs %}
         <li><a href="{% url 'spells:detail' spell.slug %}">{{spell}}</a></li>
-        </p>
     {% endfor %}
     </ul>
 {% endblock %}

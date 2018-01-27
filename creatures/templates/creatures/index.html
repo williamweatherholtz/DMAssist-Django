@@ -5,13 +5,16 @@
 {% endblock %}
 
 {% block content %}
-    {% if creature_list %}
-        <ul>
-        {% for creature in creature_list %}
-            <li><a href="{% url 'creatures:detail' creature.slug %}">{{creature.name}}</a></li>
-        {% endfor %}
-        </ul>
-    {% else %}
-        <p>No creatures available.</p>
-    {% endif %}
+    <form action="" method="get">
+        {{filter.form.as_p}}
+        <input type="submit" />
+    </form>
+    
+    <p>{{filter.qs|length}} creatures found.</p>
+    
+    <ul>
+    {% for creature in filter.qs %}
+        <li><a href="{% url 'creatures:detail' creature.slug %}">{{creature}}</a></li>
+    {% endfor %}
+    </ul>
 {% endblock %}

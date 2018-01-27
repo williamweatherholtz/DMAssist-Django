@@ -7,7 +7,7 @@
 {% block content %}
     <p>{{creature.name}}</p>
     <p>Level {{ creature.level }}</p>
-
+    <p>XP Value: {{creature.base_xp}}</p>
 
     <p>
         {% if creature.max_hd > 0 %}
@@ -43,6 +43,5 @@
         Lair Chance:
         {{ creature.lair_chance }}
     </p>
-
 
 {% endblock %}

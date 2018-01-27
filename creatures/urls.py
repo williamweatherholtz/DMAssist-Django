@@ -1,9 +1,9 @@
 from django.conf.urls import url
 
-from . import views
+from .views import DetailView, creature_list
 
 app_name = 'creatures'
 urlpatterns = [
-    url(r'^$', views.IndexView.as_view(), name='index'),
-    url(r'^(?P<slug>[^\n]+)/$', views.DetailView.as_view(), name='detail'),
+    url(r'^$', creature_list, name='searcher'),
+    url(r'^(?P<slug>[^\n]+)/$', DetailView.as_view(), name='detail'),
 ]
