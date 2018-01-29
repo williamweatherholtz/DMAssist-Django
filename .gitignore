@@ -1,3 +1,9 @@
+#misc stuff
+_unicode_symbols.txt
+
+#database - everything can just be repopulated at this point
+*.sqlite3
+
 #migrations (don't need these pre-production)
 migrations/
 
