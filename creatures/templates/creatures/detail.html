@@ -7,7 +7,11 @@
 {% block content %}
     <p>{{creature.name}}</p>
     <p>Level {{ creature.level }}</p>
-    <p>XP Value: {{creature.base_xp}}</p>
+    <p>XP: {{creature.base_xp}}
+        {% if creature.xp_per_hp %}
+            + {{creature.xp_per_hp}}/HP
+        {% endif %}
+    </p>
 
     <p>
         {% if creature.max_hd > 0 %}

@@ -5,7 +5,7 @@ from decimal import Decimal, getcontext
 
 class BasicCreatureInfo():
     def __init__(self, name, hd, hp, num = (1,1), lair=0.0,
-                 base_xp = 0, lvl=None):
+                 base_xp = 0, lvl=None, xp_hp = 0):
         
         getcontext().prec = 4
         
@@ -15,5 +15,6 @@ class BasicCreatureInfo():
         self.num_appearing = num
         self.lair_chance = Decimal(lair).normalize()
         self.base_xp = base_xp
+        self.xp_per_hp = xp_hp
         self.level = lvl
 

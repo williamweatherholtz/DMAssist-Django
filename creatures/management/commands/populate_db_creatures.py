@@ -30,6 +30,7 @@ class Command(BaseCommand):
                 max_appearing = creature.num_appearing[1],
                 lair_chance = creature.lair_chance,
                 base_xp = creature.base_xp,
+                xp_per_hp = creature.xp_per_hp,
                 level = creature.level
             )
 

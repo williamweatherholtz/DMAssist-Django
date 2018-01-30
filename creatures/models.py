@@ -12,6 +12,7 @@ class CreatureInfo(models.Model):
     max_appearing = models.PositiveSmallIntegerField()
     lair_chance = models.DecimalField(max_digits=6, decimal_places=4, default = 0.0)
     base_xp = models.IntegerField(default=0)
+    xp_per_hp = models.IntegerField(default=0)
     level = models.IntegerField(null=True)
     
     def __str__(self):
