@@ -7,8 +7,8 @@ exceptional_values = {0:25,1:35,2:45,3:55,4:65,5:75,6:125,7:175,8:275,
 
                       
 
-def determineXPperHP(hd, xp_mod):
-    effective_hd = hd + (xp_mod // 8)
+def determineXPperHP(hd, hp_mod):
+    effective_hd = hd + (hp_mod // 8)
     
     if effective_hd <= 0: xp = 5; bracket = 0
     elif effective_hd == 1: xp = 10; bracket = 1
@@ -37,8 +37,8 @@ def determineXPperHP(hd, xp_mod):
 def determineXP(creature):
 
     xp_per_hp = determineXPperHP(
-        creature.hit_die[0],
-        creature.hit_die[1])
+        creature.hit_die,
+        creature.hp_mod)
     
     xp = xp_per_hp * creature.hp
     

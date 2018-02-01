@@ -1,6 +1,30 @@
+from random import randint
+
 from django.db import models
 
-# Create your models here.
+from dma.dnd.roll import roll
+
+"""
+Creature class represents an individual creature
+"""        
+class Creature(models.Model):
+    def __init__(self, type_name, hp, xp, combat_hd, name=None):
+        self.creature_name = type_name
+        self.hp = hp
+        self.xp = xp
+        self.combat_hd = combat_hd
+        self.name = name
+        
+    def __eq__(self, other):
+        return self.xp == other.xp
+
+    def __gt__(self, other):
+        return self.xp > other.xp
+        
+            
+"""
+CreatureInfo represents attributes for a type of creature
+"""
 class CreatureInfo(models.Model):
     slug = models.SlugField(max_length=75)
     name = models.CharField(max_length=75, unique=True)
@@ -26,3 +50,24 @@ class CreatureInfo(models.Model):
         their_fields = {key: val for key, val in their_vars.items() if key not in ['_state', 'id']}
         
         return my_fields == their_fields
+
+    def roll_standard_encounter(self):
+        creatures = []
+        n = randint(self.min_appearing, self.max_appearing)
+        
+        for i in range(n):
+            hd = randint(self.min_hd, self.max_hd)
+            hp_mod = randint(self.min_hp_mod, self.max_hp_mod)
+            hp = roll(8, hd) + hp_mod
+            xp = self.base_xp + (hp * self.xp_per_hp)
+            
+            #adjust effective hd for combat if creature has over +3 extra
+            #each full +8 hp mod is counted as another hit die
+            if (hp_mod > 3):
+                combat_hd = hd + ((hp_mod -3) // 8) + 1
+            else:
+                combat_hd = hd
+            
+            creatures.append(Creature(self.name, hp, xp, combat_hd))
+        
+        return creatures

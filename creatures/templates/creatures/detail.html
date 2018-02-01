@@ -47,5 +47,11 @@
         Lair Chance:
         {{ creature.lair_chance }}
     </p>
+    
+    <form action="{% url 'creatures:detail' creature.slug %}" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Roll Standard Encounter" />
+    </form>
 
 {% endblock %}

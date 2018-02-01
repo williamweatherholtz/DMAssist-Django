@@ -1,0 +1,16 @@
+{% extends "home/base.html" %}
+
+{% block title_suffix %}
+ - {{creature_info.name}} Encounter
+{% endblock %}
+
+{% block content %}
+    <p>
+    Encounter contains {{creature_count}} creatures with total XP of {{xp_total}}. 
+    </p>
+    <ul>
+    {% for c in creatures %}
+        <li> {{c.hp}} HP, {{c.xp}} XP, Combat HD {{c.combat_hd}} - {{c.creature_name}}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}
