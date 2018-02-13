@@ -1,7 +1,7 @@
 import django_filters
 from django import forms
 
-from spells.models import SpellInfo, CLASS_CHOICES
+from spells.models import SpellInfo, CLASS_CHOICES, SOURCE_CHOICES
 
 class SpellFilter(django_filters.FilterSet):
     name = django_filters.CharFilter(
@@ -18,6 +18,12 @@ class SpellFilter(django_filters.FilterSet):
         widget = forms.Select
     )
     
+    source = django_filters.ChoiceFilter(
+        choices = SOURCE_CHOICES,
+        empty_label = None,
+        widget = forms.Select
+    )
+    
     level = django_filters.RangeFilter()
 
     class Meta:
@@ -28,5 +34,6 @@ class SpellFilter(django_filters.FilterSet):
             'name',
             'spell_class',
             'level',
-            'description'
+            'description',
+            'source'
         ]

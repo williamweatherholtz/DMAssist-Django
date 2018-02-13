@@ -9,6 +9,12 @@ CLASS_CHOICES = (
     ('I', 'Illusionist'),
 )
 
+SOURCE_CHOICES = (
+    ('', 'All'),
+    ('Advanced Dungeons & Dragons', 'Advanced Dungeons & Dragons'),
+    ('Unearthed Arcana', 'Unearthed Arcana'),
+)
+
 class SpellInfo(models.Model):
     slug = models.SlugField(max_length=75, unique=True)
     name = models.CharField(max_length=75)
