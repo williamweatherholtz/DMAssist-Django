@@ -1392,7 +1392,7 @@ druid_spells = [
         aoe='1" path, 4" long',
         save='None',
         sourcebook=V,
-        desc="Except as noted above, this spell is the same as the <a href=\"/spells/detect-evil-cleric-lvl-1/\">first level cleric spell</a> of the same name."
+        desc="Except as noted above, this spell is the same as the <a href=\"/spells/detect-magic-cleric-lvl-1/\">first level cleric spell</a> of the same name."
     ),
     Spell('Detect Poison','D',1,
         cast=tp(1,R),
