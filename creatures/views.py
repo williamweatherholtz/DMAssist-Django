@@ -1,9 +1,12 @@
+from sys import stderr
+from random import randint
+
 from django.shortcuts import get_object_or_404, render, redirect
 from django.views import generic
 
 from .models import CreatureInfo
 from .filters import CreatureFilter
-from .forms import StandardEncounterForm
+from .forms import StandardEncounterForm, QuantityEncounterForm
 
 from dma.dnd.creature import roll_standard_encounter 
 
@@ -20,15 +23,33 @@ def creature_detail(request, slug):
     template = 'creatures/detail.html'
     
     creature = get_object_or_404(CreatureInfo, slug=slug)
-    context = {'creature':creature}
+    context = {
+        'creature':creature,
+        'standard_form':None,
+        'quantity_form':None,
+    }
     
     if request.method == 'POST':
         redirect_pattern = 'encounter/'
-        form = StandardEncounterForm(request.POST)
-        if form.is_valid():
+        
+        quantity_form = QuantityEncounterForm(request.POST)
+        if quantity_form.is_valid():
+            quantity = quantity_form.cleaned_data['quantity']
+            request.session['quantity'] = quantity
             return redirect(redirect_pattern)
+        
+        standard_form = StandardEncounterForm(request.POST)
+        if standard_form.is_valid():
+            quantity = randint(creature.min_appearing, creature.max_appearing)
+            request.session['quantity'] = quantity
+            return redirect(redirect_pattern)
+            
     else:
-        form = StandardEncounterForm()
+        standard_form = StandardEncounterForm()
+        quantity_form = QuantityEncounterForm()
+        
+        context['standard_form'] = standard_form
+        context['quantity_form'] = quantity_form
         
     return render(request, template, context)
     
@@ -36,7 +57,7 @@ def creature_encounter(request, slug):
     template = 'creatures/encounter.html'
     #TODO: pass this in instead of doing another DB lookup
     creature_info = get_object_or_404(CreatureInfo, slug=slug)
-    creature_list = sorted(creature_info.roll_standard_encounter(), reverse=True)
+    creature_list = sorted(creature_info.roll_quantity(request.session['quantity']), reverse=True)
     xp_total = 0
     for c in creature_list:
         xp_total += c.xp

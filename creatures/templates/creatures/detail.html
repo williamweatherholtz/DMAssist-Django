@@ -48,10 +48,18 @@
         {{ creature.lair_chance }}
     </p>
     
-    <form action="{% url 'creatures:detail' creature.slug %}" method="POST">
+    <form class="w3-container" action="{% url 'creatures:detail' creature.slug %}" method="POST">
         {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit" value="Roll Standard Encounter" />
+        {{ standard_form.as_p }}
+        <button class="w3-btn">Roll Standard Encounter</button>
+    </form>
+    
+    <form class="w3-container" action="{% url 'creatures:detail' creature.slug %}" method="POST">
+        {% csrf_token %}
+        <p>
+            {{ quantity_form }}
+            <button class="w3-btn">Roll Creatures</button>
+        </p>
     </form>
 
 {% endblock %}

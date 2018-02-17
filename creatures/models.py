@@ -20,8 +20,7 @@ class Creature(models.Model):
 
     def __gt__(self, other):
         return self.xp > other.xp
-        
-            
+
 """
 CreatureInfo represents attributes for a type of creature
 """
@@ -54,6 +53,12 @@ class CreatureInfo(models.Model):
     def roll_standard_encounter(self):
         creatures = []
         n = randint(self.min_appearing, self.max_appearing)
+        
+        return self.roll_quantity(n)
+
+        
+    def roll_quantity(self, n):
+        creatures = []
         
         for i in range(n):
             hd = randint(self.min_hd, self.max_hd)
