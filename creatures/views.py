@@ -8,7 +8,7 @@ from .models import CreatureInfo
 from .filters import CreatureFilter
 from .forms import StandardEncounterForm, QuantityEncounterForm
 
-from dma.dnd.creature import roll_standard_encounter 
+from dma.dnd.creature import roll_standard_encounter
 
 def creature_list(request):
     template = 'creatures/index.html'
@@ -40,8 +40,7 @@ def creature_detail(request, slug):
         
         standard_form = StandardEncounterForm(request.POST)
         if standard_form.is_valid():
-            quantity = randint(creature.min_appearing, creature.max_appearing)
-            request.session['quantity'] = quantity
+            request.session['quantity'] = None
             return redirect(redirect_pattern)
             
     else:
@@ -57,7 +56,13 @@ def creature_encounter(request, slug):
     template = 'creatures/encounter.html'
     #TODO: pass this in instead of doing another DB lookup
     creature_info = get_object_or_404(CreatureInfo, slug=slug)
-    creature_list = sorted(creature_info.roll_quantity(request.session['quantity']), reverse=True)
+    
+    num_creatures = request.session['quantity']
+    if not num_creatures:
+        num_creatures = randint(creature_info.min_appearing, creature_info.max_appearing)
+    
+    creature_list = sorted(creature_info.roll_quantity(num_creatures), reverse=True)
+    
     xp_total = 0
     for c in creature_list:
         xp_total += c.xp
