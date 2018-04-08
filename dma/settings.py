@@ -53,8 +53,10 @@ INSTALLED_APPS = [
     'treasure.apps.TreasureConfig',
     'random_encounters.apps.RandomEncountersConfig',
     'spells.apps.SpellsConfig',
+    'characters.apps.CharactersConfig',
 
     'django_filters',
+    'twitter_bootstrap',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -149,3 +151,4 @@ LOGIN_REDIRECT_URL = '/'
 
 # Logs sent emails to console
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+

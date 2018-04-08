@@ -1,0 +1,34 @@
+{% extends 'home/base.html' %}
+{% load js %}
+
+{% block title_suffix %}
+ - Characters
+{% endblock %}
+
+{% block head_extras %}
+<script>
+function activateCreateForm(){
+    document.getElementById('char_form').innerHTML = {{form.as_p | js}}
+}
+</script>
+{% endblock %}
+
+{% block content %}
+    <p> 
+        Welcome to the character creator!
+        <p>
+            <button 
+                class="w3-btn"
+                onclick="activateCreateForm()">
+            Create Character
+            </button>
+        </p>
+        
+        <p id="char_form"></p>
+        
+        <table>
+        {{attr_form}}
+        </table>
+        
+    </p>
+{% endblock %}

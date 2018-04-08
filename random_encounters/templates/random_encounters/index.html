@@ -9,7 +9,9 @@
     
     <form class="w3-container" action="{% url 'random_encounters:index' %}" method="POST">
         {% csrf_token %}
-        {{ form.as_p }}
+        <table>
+        {{ form }}
+        </table>
         <button class="w3-btn">Travel!</button> 
     </form>
 {% endblock %}
