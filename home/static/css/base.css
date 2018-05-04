@@ -1,3 +1,15 @@
+/* container styling currently just to see how bootstrap is laying things out */
+.container{
+    border: 2px solid indigo;
+}
+
+.container-fluid{
+    border: 1px solid indigo;
+    background-color: black;
+}
+
+/* end debug stylings */
+
 .w3-button{
     border-style:solid;
     border-color:white;
@@ -36,6 +48,7 @@ select{
     background-color: indigo;
 }
 
+/*
 table{
     border-spacing: 5px;
 }
@@ -44,6 +57,7 @@ table, th, td{
     border: 2px solid indigo;
     padding: 5px;
 }
+*/
 
 p a:link{
     color: turquoise;

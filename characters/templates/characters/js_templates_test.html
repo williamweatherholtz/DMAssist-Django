@@ -1,0 +1,45 @@
+{% extends 'home/base.html' %}
+{% load js %}
+
+{% block title_suffix %}
+ - Characters
+{% endblock %}
+
+{% block head_extras %}
+<script>
+function activateImportForm(){
+    document.getElementById('char_form').innerHTML = {{import_form.as_p | js}}
+}
+
+function activateCreateForm(){
+    document.getElementById('char_form').innerHTML = {{create_form.as_p | js}}
+}
+
+</script>
+{% endblock %}
+
+{% block content %}
+    <p> 
+        What do you want, punk?
+        <p>
+            <button 
+                class="w3-btn"
+                onclick="activateImportForm()">
+            Import Character
+            </button>
+            <button
+                class="w3-btn"
+                onclick="activateCreateForm()">
+            Create Character
+            </button>
+            <button
+                class="w3-btn"
+                onclick="window.alert('Go fuck yourself.')">
+            Oh geez, I don't know man.
+            </button>
+        </p>
+        
+        <p id="char_form"></p>
+        
+    </p>
+{% endblock %}

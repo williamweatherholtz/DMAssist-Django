@@ -1,0 +1,69 @@
+{% extends 'home/base.html' %}
+{% load bootstrap4 %}
+
+{% block title_suffix %}
+ - Characters
+{% endblock %}
+
+{% block head_extras %}
+{% endblock %}
+
+{% block content %}
+Import a character
+
+<form role="form" method="post">
+    {% csrf_token %}
+
+    <div class="row">
+        <div class="fieldWrapper col">
+        {% bootstrap_field form.name %}
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="fieldWrapper col">
+        {% bootstrap_field form.hp %}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="fieldWrapper col">
+            {% bootstrap_field form.str %}
+        </div>
+        <div class="fieldWrapper col">
+            {% bootstrap_field form.con %}
+        </div>
+        <div class="fieldWrapper col">
+            {% bootstrap_field form.dex %}
+        </div>
+        <div class="fieldWrapper col">
+            {% bootstrap_field form.int %}
+        </div>
+        <div class="fieldWrapper col">
+            {% bootstrap_field form.wis %}
+        </div>
+        <div class="fieldWrapper col">
+            {% bootstrap_field form.chr %}
+        </div>
+        <div class="fieldWrapper col">
+            {% bootstrap_field form.com %}
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="fieldWrapper col">
+            {% bootstrap_field form.level %}
+        </div>
+        <div class="fieldWrapper col">
+            {% bootstrap_field form.class_role %}
+        </div>
+    </div>
+
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">
+        Submit</button>
+    {% endbuttons %}
+</form>
+    
+{% endblock %}

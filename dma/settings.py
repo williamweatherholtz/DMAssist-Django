@@ -57,6 +57,7 @@ INSTALLED_APPS = [
 
     'django_filters',
     'twitter_bootstrap',
+    'bootstrap4',
 
     'django.contrib.admin',
     'django.contrib.auth',

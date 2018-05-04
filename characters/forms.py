@@ -1,94 +1,43 @@
 from django import forms
 
+from .models import ClassRole
+
 class ImportForm(forms.Form):
-    name = forms.CharField()
+    name = forms.CharField(required=True)
+    
+    hp = forms.IntegerField(required=True,min_value=1, max_value=32767)
+    
+    str = forms.IntegerField(required=True,min_value=1,max_value=30)
+    dex = forms.IntegerField(required=True,min_value=1,max_value=30)
+    con = forms.IntegerField(required=True,min_value=1,max_value=30)
+    int = forms.IntegerField(required=True,min_value=1,max_value=30)
+    wis = forms.IntegerField(required=True,min_value=1,max_value=30)
+    chr = forms.IntegerField(required=True,min_value=1,max_value=30)
+    com = forms.IntegerField(required=True,min_value=1,max_value=30)
+    
+    level = forms.IntegerField(
+        min_value = 0, max_value = 500
+    )
     
     class_role = forms.ChoiceField(
         required = True,
         choices = [
-            ('F', 'Fighter'),
-            ('R', 'Ranger'),
-            ('P', 'Paladin'),
-            ('C', 'Cleric'),
-            ('D', 'Druid'),
-            ('T', 'Thief'),
-            ('A', 'Assassin'),
-            ('MU', 'Magic-User'),
-            ('I', 'Illusionist'),
-            ('MO', 'Monk'),
-            ('B', 'Bard'),
-            ('CF', 'Cleric/Fighter'),
-            ('CFM','Cleric/Fighter/Magic-User'),
-            ('CR','Cleric/Ranger'),
-            ('CM','Cleric/Magic-User'),
-            ('CT','Cleric/Thief'),
-            ('CA','Cleric/Assassin'),
-            ('FM','Fighter/Magic-User'),
-            ('FI','Fighter/Illusionist'),
-            ('FT','Fighter/Thief'),
-            ('FA','Fighter/Assassin'),
-            ('FMT','Fighter/Magic-User/Thief'),
-            ('MT','Magic-User/Thief'),
-            ('IT','Illusionist/Thief'),
+            (ClassRole.FIGHTER.value, 'Fighter'),
+            (ClassRole.RANGER.value, 'Ranger'),
+            (ClassRole.PALADIN.value, 'Paladin'),
+            (ClassRole.CLERIC.value, 'Cleric'),
+            (ClassRole.DRUID.value, 'Druid'),
+            (ClassRole.THIEF.value, 'Thief'),
+            (ClassRole.ASSASSIN.value, 'Assassin'),
+            (ClassRole.MAGIC_USER.value, 'Magic-User'),
+            (ClassRole.ILLUSIONIST.value, 'Illusionist'),
+            (ClassRole.MONK.value, 'Monk'),
+            (ClassRole.BARD.value, 'Bard'),
+            (ClassRole.ACROBAT.value, 'Acrobat'),
+            (ClassRole.CAVALIER.value, 'Cavalier'),
+            (ClassRole.BARBARIAN.value, 'Barbarian'),
         ]
-    )
-    
-    level = forms.IntegerField(
-        required=True,
-        min_value = 0,
-        max_value = 50
-    )
-    
-    hit_points = forms.IntegerField(
-        required = True,
-        min_value = 1,
-        max_value = 5000
-    )
-    
-    strength = forms.IntegerField(
-        required=True,
-        min_value = 1,
-        max_value = 30
-    )
-    
-    dexterity = forms.IntegerField(
-        required=True,
-        min_value = 1,
-        max_value = 30
-    )
-    
-    constitution = forms.IntegerField(
-        required=True,
-        min_value = 1,
-        max_value = 30
-    )
-    
-    intelligence = forms.IntegerField(
-        required=True,
-        min_value = 1,
-        max_value = 30
-    )
-    
-    wisdom =  forms.IntegerField(
-        required=True,
-        min_value = 1,
-        max_value = 30
-    )
-    
-    charisma = forms.IntegerField(
-        required=True,
-        min_value = 1,
-        max_value = 30
     )
     
 class CreateForm(forms.Form):
     name = forms.CharField()
-    
-class AttributesForm(forms.Form):
-    str = forms.IntegerField()
-    dex = forms.IntegerField()
-    con = forms.IntegerField()
-    int = forms.IntegerField()
-    wis = forms.IntegerField()
-    chr = forms.IntegerField()
-    com = forms.IntegerField()
