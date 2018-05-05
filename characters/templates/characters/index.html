@@ -1,0 +1,20 @@
+{% extends 'home/base.html' %}
+
+{% block title_suffix %}
+ - Characters
+{% endblock %}
+
+{% block content %}
+<a href="{% url 'characters:import' %}">Import</a>
+
+<p>
+    Your characters here.
+    <ul>
+        {% for character in object_list %}
+        <li> {{character.name}} </li>
+        {% empty %}
+        You don't have any characters.
+        {% endfor %}
+    </ul>
+</p>
+{% endblock %}

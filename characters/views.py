@@ -1,10 +1,13 @@
 from django.views import generic
 from django.shortcuts import render, redirect, render_to_response
 from django.db import IntegrityError
+from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
 
 from .forms import ImportForm, CreateForm
 from .models import CharacterInfo
 
+@login_required
 def importer_view(request):
     if request.method == 'POST':
         form = ImportForm(request.POST)
@@ -29,6 +32,8 @@ def importer_view(request):
                 char_entry.save()
             except IntegrityError as e:
                 print(e.__cause__)
+                
+            return HttpResponseRedirect('/characters')
             
     else:
         form = ImportForm()
@@ -37,7 +42,8 @@ def importer_view(request):
         request, 'characters/import.html',
         {'form':form}
     )
-    
+
+@login_required
 def creator_view(request):
     if request.method == 'POST':
         form = CreateForm(request.POST)
@@ -50,5 +56,14 @@ def creator_view(request):
         {'form':form}
     )
 
-class IndexView(generic.TemplateView):
+class IndexView(generic.ListView):
+    model = CharacterInfo
     template_name = 'characters/index.html'
+    
+    def get_queryset(self):
+        try:
+            queryset = CharacterInfo.objects.filter(user=self.request.user)
+        except CharacterInfo.DoesNotExist:
+            queryset = None
+        return queryset
+
