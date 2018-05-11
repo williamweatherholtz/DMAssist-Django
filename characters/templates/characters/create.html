@@ -1,0 +1,15 @@
+{% extends 'home/base.html' %}
+{% load bootstrap4 %}
+
+{% block title_suffix %}
+ - Character Creator
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="fieldWrapper col">
+    {% bootstrap_field form.name %}
+    </div>
+</div>
+
+{% endblock %}

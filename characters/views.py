@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect, render_to_response
 from django.db import IntegrityError
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
+from django.template.defaultfilters import slugify
 
 from .forms import ImportForm, CreateForm
 from .models import CharacterInfo
@@ -17,6 +18,7 @@ def importer_view(request):
             char_entry = CharacterInfo()
             char_entry.user = request.user.get_username()
             char_entry.name = form.cleaned_data['name']
+            char_entry.slug = slugify(char_entry.user + '-' + char_entry.name)
             char_entry.str = form.cleaned_data['str']
             char_entry.dex = form.cleaned_data['dex']
             char_entry.con = form.cleaned_data['con']
@@ -27,6 +29,7 @@ def importer_view(request):
             char_entry.class_role = form.cleaned_data['class_role']
             char_entry.class_level = form.cleaned_data['level']
             char_entry.max_hp = form.cleaned_data['hp']
+            char_entry.race = form.cleaned_data['race']
             
             try:
                 char_entry.save()
@@ -67,3 +70,7 @@ class IndexView(generic.ListView):
             queryset = None
         return queryset
 
+class DetailView(generic.DetailView):
+    model = CharacterInfo
+    template_name = 'characters/detail.html'
+    context_object_name = 'character'

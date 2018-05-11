@@ -5,13 +5,16 @@
 {% endblock %}
 
 {% block content %}
-<a href="{% url 'characters:import' %}">Import</a>
+<a class="btn btn-primary" href="{% url 'characters:import' %}"
+    role="button">Import</a>
+<a class="btn btn-primary" href="{% url 'characters:create' %}"
+    role="button">Create</a>
 
 <p>
-    Your characters here.
+    <h1>Characters:</h1>
     <ul>
         {% for character in object_list %}
-        <li> {{character.name}} </li>
+        <li><a href="{% url 'characters:detail' character.slug %}">{{character}}</a></li>
         {% empty %}
         You don't have any characters.
         {% endfor %}

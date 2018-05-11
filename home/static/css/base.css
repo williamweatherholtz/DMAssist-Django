@@ -26,38 +26,36 @@
     color: white;
 }
 
+.navbar-dungie{
+    background-color: indigo;
+    color: white;
+}
+
+/* change the color of active or hovered links */
+.navbar-dungie .nav-item:hover .nav-link {
+    background-color: midnightblue;
+}
+
+.btn{
+    background-color: indigo;
+    border-color: white;
+}
+
+.btn:hover{
+    background-color: white;
+    border-color: indigo;
+    color: indigo;
+}
+
 body{
     background-color: black;
     color:white;
-}
-
-input{
-    background-color: indigo;
 }
 
 pre{
     background-color: black;
     color:white;
 }
-
-option{
-    background-color: indigo;
-}
-
-select{
-    background-color: indigo;
-}
-
-/*
-table{
-    border-spacing: 5px;
-}
-
-table, th, td{
-    border: 2px solid indigo;
-    padding: 5px;
-}
-*/
 
 p a:link{
     color: turquoise;

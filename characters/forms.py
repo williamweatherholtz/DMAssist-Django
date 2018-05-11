@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import ClassRole
+from .models import ClassRole, Race
 
 class ImportForm(forms.Form):
     name = forms.CharField(required=True)
@@ -37,6 +37,12 @@ class ImportForm(forms.Form):
             (ClassRole.CAVALIER.value, 'Cavalier'),
             (ClassRole.BARBARIAN.value, 'Barbarian'),
         ]
+    )
+
+    race = forms.ChoiceField(
+        required = True,
+        choices = [(r.value, r.pretty_name) for r in Race]
+        
     )
     
 class CreateForm(forms.Form):

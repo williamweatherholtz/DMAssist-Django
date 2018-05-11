@@ -19,10 +19,16 @@ Import a character
         {% bootstrap_field form.name %}
         </div>
     </div>
-    
+
     <div class="row">
         <div class="fieldWrapper col">
         {% bootstrap_field form.hp %}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="fieldWrapper col">
+            {% bootstrap_field form.race %}
         </div>
     </div>
 
@@ -65,5 +71,5 @@ Import a character
         Submit</button>
     {% endbuttons %}
 </form>
-    
+
 {% endblock %}

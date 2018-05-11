@@ -1,0 +1,35 @@
+{% extends "home/base.html" %}
+
+{% block title_suffix %}
+ - Characters - {{character.slug}}
+{% endblock %}
+
+{% block content %}
+    <p>{{character.name}}</p>
+    <p>Level {{character.class_level}} {{character.class_name}}</p>
+    <p>Hit Points: {{character.max_hp}}</p>
+    <table class="table table-sm">
+        <thead>
+            <tr>
+                <th>Strength</th>
+                <th>Dexterity</th>
+                <th>Constitution</th>
+                <th>Wisdom</th>
+                <th>Intelligence</th>
+                <th>Charisma</th>
+                <th>Comeliness</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{character.str}}</td>
+                <td>{{character.dex}}</td>
+                <td>{{character.con}}</td>
+                <td>{{character.wis}}</td>
+                <td>{{character.int}}</td>
+                <td>{{character.chr}}</td>
+                <td>{{character.com}}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
