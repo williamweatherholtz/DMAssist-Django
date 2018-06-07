@@ -1,0 +1,61 @@
+""" Contains full information on creatures
+"""
+from decimal import Decimal, getcontext
+from enum import IntEnum
+
+class Intelligence(IntEnum):
+    NON = 0
+    ANIMAL = 1
+    SEMI = 2
+    LOW = 3
+    AVERAGE = 4
+    VERY = 5
+    HIGH = 6
+    EXCEPTIONAL = 7
+    GENIUS = 8
+    SUPRA = 9
+    GODLIKE = 10
+    LENGTH = 11
+    
+class CreatureInfo():
+    def __init__(
+        self, name, source, hd, hp, iq,
+        speed, ac, attacks,
+        align, size, description,
+        fly=0, swim=0, web=0, burrow=0,
+        m_resist=0,
+        num = (1,1), lair=0.0, treasure='',
+        base_xp = 0, lvl=None, xp_hp = 0,
+        parent_creature=None,
+        sub_creatures=[],
+        aliases = []
+     ):
+        
+        getcontext().prec = 4
+        
+        self.name = name
+        self.hit_dice = hd
+        self.hit_point_mod = hp
+        self.num_appearing = num
+        self.lair_chance = Decimal(lair).normalize()
+        self.base_xp = base_xp
+        self.xp_per_hp = xp_hp
+        self.level = lvl
+
+        self.parent_creature = parent_creature
+        self.sub_creatures = sub_creatures
+        self.treasure = treasure
+        self.source = source
+        self.iq = iq
+        self.speed = speed
+        self.fly_speed = fly
+        self.swim_speed = swim
+        self.web_speed = web
+        self.burrow_speed = burrow
+        self.ac = ac
+        self.attacks = attacks
+        self.magic_resist = m_resist
+        self.alignment = align
+        self.size_class = size
+        self.description = description
+        self.alternate_names = aliases

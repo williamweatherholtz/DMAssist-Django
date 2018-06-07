@@ -1,0 +1,10 @@
+,
+	treasure = '',
+	iq = Intelligence.,
+	speed = ,
+	ac = ,
+	attacks = [(,,)],
+	m_resist = 0.0,
+	align = ,
+	size = 'S',
+	description = ''
