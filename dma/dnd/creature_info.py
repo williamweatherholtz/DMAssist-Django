@@ -17,6 +17,12 @@ class Intelligence(IntEnum):
     GODLIKE = 10
     LENGTH = 11
     
+class SourceBook(IntEnum):
+    UNKNOWN = 0
+    MONSTER_MANUAL = 1
+    FIEND_FOLIO = 2
+    MONSTER_MANUAL_2 = 3
+    
 class CreatureInfo():
     def __init__(
         self, name, source, hd, hp, iq,
@@ -28,7 +34,8 @@ class CreatureInfo():
         base_xp = 0, lvl=None, xp_hp = 0,
         parent_creature=None,
         sub_creatures=[],
-        aliases = []
+        aliases = [],
+        source = SourceBook.UNKNOWN
      ):
         
         getcontext().prec = 4
