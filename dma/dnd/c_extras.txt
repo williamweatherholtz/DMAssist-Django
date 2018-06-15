@@ -8,3 +8,4 @@
 	align = ,
 	size = 'S',
 	description = '',
+    source = Sourcebook.FIEND_FOLIO

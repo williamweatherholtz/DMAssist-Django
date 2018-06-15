@@ -15,7 +15,8 @@ class Intelligence(IntEnum):
     GENIUS = 8
     SUPRA = 9
     GODLIKE = 10
-    LENGTH = 11
+    VARIABLE = 11
+    LENGTH = 12
     
 class SourceBook(IntEnum):
     UNKNOWN = 0
