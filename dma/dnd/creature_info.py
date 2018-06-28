@@ -26,10 +26,12 @@ class SourceBook(IntEnum):
     
 class CreatureInfo():
     def __init__(
-        self, name, source, hd, hp, iq,
-        speed, ac, attacks,
-        align, size, description,
-        fly=0, swim=0, web=0, burrow=0,
+        self, name, iq,
+        ac, attacks,
+        align, size,
+        description="",
+        hd=(0,0), hp=(0,0),
+        speed=0, fly=0, swim=0, web=0, burrow=0, climb=0,
         m_resist=0,
         num = (1,1), lair=0.0, treasure='',
         base_xp = 0, lvl=None, xp_hp = 0,
