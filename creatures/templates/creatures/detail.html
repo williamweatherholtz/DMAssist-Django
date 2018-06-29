@@ -36,7 +36,8 @@
         {% if creature.web_speed %}
             <br/>Web Speed: {{creature.web_speed|floatformat}}"</p>
         {% endif %}  
-
+        
+        <br/>
         {% if creature.max_hd > 0 %}
             {% if creature.min_hd != creature.max_hd %}
                 {{creature.min_hd}} - {{creature.max_hd}}

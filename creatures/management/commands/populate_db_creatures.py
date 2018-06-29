@@ -25,7 +25,7 @@ class Command(BaseCommand):
             else: _attacks = None
             
             if creature.parent_creature:
-                _parent_creature = creature.parent_creature,
+                _parent_creature = creature.parent_creature
             else: _parent_creature = None
             
             if len(creature.sub_creatures):
@@ -73,24 +73,25 @@ class Command(BaseCommand):
             try:
                 c.save()
             except IntegrityError:
+                fields_changed = 0
                 conflict = CreatureInfo.objects.get(name=creature.name)
 
                 if conflict != c:
                     fields = {key: val for key, val in vars(c).items() if key not in ['_state', 'id']}
 
-                    print(fields)
-                    print()
-                    print(vars(conflict))
-
                     for field in fields.keys():
                         new_val = getattr(c, field)
-                        if new_val != getattr(conflict, field):
+                        existing_val = getattr(conflict, field)
+                        if new_val != existing_val:
+                            print('conflict in {}, {} set to {} from {}'.format(
+                                c.name, field, new_val, existing_val))
+                            fields_changed += 1                        
                             setattr(conflict, field, new_val)
 
-                    conflict.save()
-
+                if fields_changed:
                     num_modified += 1
-
+                    conflict.save()
+                    
             else:
                 num_added += 1
                 print('added {} to database'.format(creature.name))

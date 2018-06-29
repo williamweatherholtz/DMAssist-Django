@@ -65,7 +65,7 @@ class CreatureInfo():
         self.climb_speed = climb
         self.ac = ac
         self.attacks = attacks
-        self.magic_resist = m_resist
+        self.magic_resist = Decimal(m_resist).normalize()
         self.alignment = align
         self.size_class = size
         self.description = description

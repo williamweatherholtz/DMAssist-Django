@@ -61,7 +61,7 @@ class CreatureInfo(models.Model):
     #a json representation of a list of attacks
     #each attack is a length 3 list: ([die_type],[num_rolled],[damage_added])
     attacks = models.CharField(max_length=300, null=True)
-    magic_resist = models.DecimalField(max_digits=4, decimal_places=2)
+    magic_resist = models.DecimalField(max_digits=5, decimal_places=2)
     
     #Int representing Intelligence IntEnum
     iq_class = models.SmallIntegerField()
