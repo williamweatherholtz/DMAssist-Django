@@ -5,15 +5,38 @@
 {% endblock %}
 
 {% block content %}
-    <p>{{creature.name}}</p>
-    <p>Level {{ creature.level }}</p>
-    <p>XP: {{creature.base_xp}}
-        {% if creature.xp_per_hp %}
-            + {{creature.xp_per_hp}}/HP
-        {% endif %}
+    <p> <b>{{creature.name}}</b>
+    {% if creature.alt_names %}
+        a.k.a.
+        {% for name in creature.aliases %}
+            "{{name}}"
+        {% endfor %}
+    {% endif %}
     </p>
-
     <p>
+        Number Appearing:
+        {% if creature.min_appearing != creature.max_appearing %}
+            {{ creature.min_appearing }} -
+        {% endif %}
+        {{ creature.max_appearing }}
+        <br/>AC: {{creature.ac}}
+        <br/>Move Speed: {{creature.ground_speed|floatformat}}"
+        {% if creature.air_speed %}
+            <br/>Air Speed: {{creature.air_speed|floatformat}}"
+        {% endif %}
+        {% if creature.water_speed %}
+            <br/>Water Speed: {{creature.water_speed|floatformat}}"
+        {% endif %}
+        {% if creature.climb_speed %}
+            <br/>Climbing Speed: {{creature.climb_speed|floatformat}}"
+        {% endif %}
+        {% if creature.burrow_speed %}
+            <br/>Burrowing Speed: {{creature.burrow_speed|floatformat}}"
+        {% endif %}    
+        {% if creature.web_speed %}
+            <br/>Web Speed: {{creature.web_speed|floatformat}}"</p>
+        {% endif %}  
+
         {% if creature.max_hd > 0 %}
             {% if creature.min_hd != creature.max_hd %}
                 {{creature.min_hd}} - {{creature.max_hd}}
@@ -33,21 +56,24 @@
             {% endif %}
             HP
         {% endif %}
-    </p>
-
-    <p>
-        Number Appearing:
-        {% if creature.min_appearing != creature.max_appearing %}
-            {{ creature.min_appearing }} -
+        <br/>Lair Chance: {{creature.lair_percentage|floatformat:-2}}%
+        <br/>Treasure Type: 
+        {% if creature.treasure_types %} {{creature.treasure_types}}
+        {% else %} None
         {% endif %}
-        {{ creature.max_appearing }}
+        <br/>Number of Attacks: {{creature.num_attacks}}
+        <br/>Attack Damage:{{creature.attacks_str}}
+        <br/>Magic Resistance: {{creature.m_resist_percentage|floatformat}}%
+        <br/>Intelligence: {{creature.intelligence_str}}
+        <br/>Alignment: {{creature.alignment_str}}
+        <br/>Size: {{creature.size_class}}
+        <br/>Level {{ creature.level }}
+        <br/>XP: {{creature.base_xp}}
+        {% if creature.xp_per_hp %}
+            + {{creature.xp_per_hp}}/HP
+        {% endif %}
     </p>
 
-    <p>
-        Lair Chance:
-        {{ creature.lair_chance }}
-    </p>
-    
     <form class="w3-container" action="{% url 'creatures:detail' creature.slug %}" method="POST">
         {% csrf_token %}
         {{ standard_form.as_p }}

@@ -62,6 +62,7 @@ class CreatureInfo():
         self.swim_speed = swim
         self.web_speed = web
         self.burrow_speed = burrow
+        self.climb_speed = climb
         self.ac = ac
         self.attacks = attacks
         self.magic_resist = m_resist
@@ -69,3 +70,6 @@ class CreatureInfo():
         self.size_class = size
         self.description = description
         self.alternate_names = aliases
+        
+    def __str__(self):
+        return self.name
