@@ -30,24 +30,25 @@ class CreatureInfo(models.Model):
     slug = models.SlugField(max_length=75)
     name = models.CharField(max_length=75, unique=True)
     #json representation of a list of strings
-    alt_names = models.CharField(max_length=500, null=True)
+    alt_names = models.CharField(max_length=500)
     #int representing SourceBook IntEnum
     source = models.SmallIntegerField()
     
-    parent_creature = models.CharField(max_length=100, null=True)
+    parent_creature = models.CharField(max_length=100)
     #json list of creature names
-    sub_creatures = models.CharField(max_length=500, null=True)
+    sub_creatures = models.CharField(max_length=500)
     
     min_appearing = models.PositiveSmallIntegerField()
     max_appearing = models.PositiveSmallIntegerField()
     lair_chance = models.DecimalField(max_digits=6, decimal_places=4, default = 0.0)
-    treasure_types = models.CharField(max_length=100, null=True)
+    treasure_types = models.CharField(max_length=100)
     
     ac = models.SmallIntegerField()
     
     #Most movement is given as integers, but some are fractional
     ground_speed = models.DecimalField(max_digits=5, decimal_places=2)
     air_speed = models.DecimalField(max_digits=5, decimal_places=2)
+    flight_class = models.CharField(max_length=1)
     water_speed = models.DecimalField(max_digits=5, decimal_places=2)
     burrow_speed = models.DecimalField(max_digits=5, decimal_places=2)
     climb_speed = models.DecimalField(max_digits=5, decimal_places=2)
@@ -60,7 +61,7 @@ class CreatureInfo(models.Model):
     
     #a json representation of a list of attacks
     #each attack is a length 3 list: ([die_type],[num_rolled],[damage_added])
-    attacks = models.CharField(max_length=300, null=True)
+    attacks = models.CharField(max_length=300)
     magic_resist = models.DecimalField(max_digits=5, decimal_places=2)
     
     #Int representing Intelligence IntEnum

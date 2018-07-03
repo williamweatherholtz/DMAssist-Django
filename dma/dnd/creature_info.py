@@ -32,10 +32,11 @@ class CreatureInfo():
         description="",
         hd=(0,0), hp=(0,0),
         speed=0, fly=0, swim=0, web=0, burrow=0, climb=0,
+        flight_class ='',
         m_resist=0,
-        num = (1,1), lair=0.0, treasure='',
-        base_xp = 0, lvl=None, xp_hp = 0,
-        parent_creature=None,
+        num=(1,1), lair=0.0, treasure='',
+        base_xp=0, lvl=None, xp_hp = 0,
+        parent_creature='',
         sub_creatures=[],
         aliases = [],
         source = SourceBook.UNKNOWN
@@ -59,6 +60,7 @@ class CreatureInfo():
         self.iq = iq
         self.speed = speed
         self.fly_speed = fly
+        self.flight_class = flight_class
         self.swim_speed = swim
         self.web_speed = web
         self.burrow_speed = burrow

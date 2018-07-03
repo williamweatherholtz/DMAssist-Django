@@ -13,7 +13,7 @@ from dma.dnd.creature import roll_standard_encounter
 def creature_list(request):
     template = 'creatures/index.html'
     
-    creatures = CreatureInfo.objects.all()
+    creatures = CreatureInfo.objects.all().filter(parent_creature__exact='')
     filter = CreatureFilter(request.GET, queryset = creatures)
     context = {'filter':filter}
     

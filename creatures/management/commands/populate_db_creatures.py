@@ -22,19 +22,19 @@ class Command(BaseCommand):
         for creature in creature_list:
             if len(creature.attacks):
                 _attacks = json.dumps(creature.attacks)
-            else: _attacks = None
+            else: _attacks = ''
             
             if creature.parent_creature:
                 _parent_creature = creature.parent_creature
-            else: _parent_creature = None
+            else: _parent_creature = ''
             
             if len(creature.sub_creatures):
                 _sub_creatures = json.dumps(creature.sub_creatures)
-            else: _sub_creatures = None
+            else: _sub_creatures = ''
             
             if len(creature.alternate_names):
                 _alt_names = json.dumps(creature.alternate_names)
-            else: _alt_names = None
+            else: _alt_names = ''
 
             c = CreatureInfo(
                 slug = slugify(creature.name),
@@ -54,6 +54,7 @@ class Command(BaseCommand):
                 iq_class = creature.iq.value,
                 ground_speed = creature.speed,
                 air_speed = creature.fly_speed,
+                flight_class = creature.flight_class,
                 water_speed = creature.swim_speed,
                 burrow_speed = creature.burrow_speed,
                 climb_speed = creature.climb_speed,
