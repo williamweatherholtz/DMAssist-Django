@@ -13,6 +13,13 @@
         {% endfor %}
     {% endif %}
     </p>
+    
+    {% load static %}
+    
+    {% with 'creatures/images/'|add:creature.slug|add:'.png' as image_path %}
+    <img src ="{% static image_path %}"/>
+    {% endwith %}
+    
     <p>
         Number Appearing:
         {% if creature.min_appearing != creature.max_appearing %}

@@ -3,7 +3,6 @@ Creature class represents an individual creature
 """
 from random import randint
 
-from .basic_creature_info import BasicCreatureInfo
 from .roll import roll
 
 class Creature():

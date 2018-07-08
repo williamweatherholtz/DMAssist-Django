@@ -2,6 +2,7 @@ from random import randint
 import json
 
 from django.db import models
+from django.contrib.staticfiles.templatetags.staticfiles import static
 
 from dma.dnd.roll import roll
 from dma.dnd.creature_info import Intelligence, SourceBook
@@ -74,7 +75,7 @@ class CreatureInfo(models.Model):
     level = models.IntegerField(null=True)
     base_xp = models.IntegerField(default=0)
     xp_per_hp = models.IntegerField(default=0)
-
+ 
     def __str__(self):
         return self.name
     
@@ -157,6 +158,9 @@ class CreatureInfo(models.Model):
         
     def alignment_str(self):
         return align_expand[self.alignment]
+        
+    def img_path(self):
+        return static('creatures/images/ + self.slug' + '.png')
     
 align_expand = {
     'LG': 'Lawful Good', 

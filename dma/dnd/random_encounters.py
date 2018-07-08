@@ -1,44 +1,7 @@
-
-from .roll import roll
-from .util import findNameInList
-from .basic_creature import creatureInfoFromName, BasicCreature
-from .fortress import Fortress
-from .region_tables import region_populations, region_names 
-
-
 from random import choice, randint
 
-def __main__():
-    while True:
-        region_name = input('Enter region: ')
-        region = findNameInList(region_name, region_names)
-        print(region)
-        
-        if type(region) is list:
-            print('Found multiple matches:')
-            for r in region:
-                print(r)
-        elif type(region) is str:
-            encountered_name = pickEncounterInRegion(region)
-            print(encountered_name)
-            
-            #Is it a non-creature encounter?
-            if encountered_name == 'Fortress':
-                print(Fortress())
-                
-            
-            c_info = creatureInfoFromName(encountered_name)
-            if c_info:
-                num_encountered = randint(
-                    c_info.num_appearing[0],
-                    c_info.num_appearing[1])
-                    
-                if num_encountered < 15:
-                    for i in range(num_encountered):
-                        c = BasicCreature(c_info)
-                        print(c)
-                else:
-                    print('{} {}'.format(num_encountered, c_info.name))
+from .roll import roll
+from .region_tables import region_populations, region_names 
 
 def rollMultipleDays(num_days, region, density):
     days = []
@@ -118,6 +81,3 @@ def classicRandomEncounter(region):
     r -= 2
     encounter_list = regions[region]
     return encounter_list[r]
-
-if __name__ == '__main__':
-    __main__()
