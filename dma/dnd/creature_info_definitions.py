@@ -5624,7 +5624,7 @@ CreatureInfo( name = 'Giant Porcupine',
     description = '',
     source = SourceBook.MONSTER_MANUAL
 ),
-CreatureInfo( name = 'Giant Portugese Man-O-War',
+CreatureInfo( name = 'Giant Portuguese Man-O-War',
     hd = (1,4),
     hp = (0,0),
     num = (1,10),
