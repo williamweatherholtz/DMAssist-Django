@@ -173,6 +173,3 @@ align_expand = {
     'NE': 'Neutral Evil',
     'CE': 'Chaotic Evil'
 }
-        
-        
-            

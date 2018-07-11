@@ -13,7 +13,6 @@ def rollMultipleDays(num_days, region, density):
     return days
                     
 def rollDay(region, density):
-    encounters = []
     if density == 'Dense':
         die = 20
     elif density == 'Sparse':

@@ -23,10 +23,11 @@ def index_view(request):
     )
         
 def result_view(request):
-    encounters = TravelResult(
+    travel_encounters = TravelResult(
         request.session['days'],
         request.session['temperature'],
         request.session['population'],
-        request.session['terrain']).encounters
+        request.session['terrain'])
     
-    return render(request, 'random_encounters/result.html', {'encounters': encounters})
+    return render(request, 'random_encounters/result.html',
+        {'travel_encounters': travel_encounters})

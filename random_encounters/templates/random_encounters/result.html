@@ -2,9 +2,11 @@
 
 {% block content %}
 
-    {% if encounters %}
-        {% for encounter in encounters %}
-            <p> {{ encounter }} </p>
+    {% if travel_encounters.encounters %}
+        {% for day in travel_encounters.encounters %}
+            {% for encounter in day.1 %}
+                <p>{{encounter.0}} of {{day.0}}: {{encounter.1}}</p>
+            {% endfor %}
         {% endfor %}
     {% else %}
         <p> No encounters </p>
