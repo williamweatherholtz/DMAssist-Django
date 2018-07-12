@@ -14,73 +14,86 @@
     {% endif %}
     </p>
     
-    {% load static %}
-    
-    {% with 'creatures/images/'|add:creature.slug|add:'.png' as image_path %}
-    <img src ="{% static image_path %}"/>
-    {% endwith %}
-    
-    <p>
-        Number Appearing:
-        {% if creature.min_appearing != creature.max_appearing %}
-            {{ creature.min_appearing }} -
-        {% endif %}
-        {{ creature.max_appearing }}
-        <br/>AC: {{creature.ac}}
-        <br/>Move Speed: {{creature.ground_speed|floatformat}}"
-        {% if creature.air_speed %}
-            <br/>Air Speed: {{creature.air_speed|floatformat}}"
-             (MC: {{creature.flight_class}}) 
-        {% endif %}
-        {% if creature.water_speed %}
-            <br/>Water Speed: {{creature.water_speed|floatformat}}"
-        {% endif %}
-        {% if creature.climb_speed %}
-            <br/>Climbing Speed: {{creature.climb_speed|floatformat}}"
-        {% endif %}
-        {% if creature.burrow_speed %}
-            <br/>Burrowing Speed: {{creature.burrow_speed|floatformat}}"
-        {% endif %}    
-        {% if creature.web_speed %}
-            <br/>Web Speed: {{creature.web_speed|floatformat}}"</p>
-        {% endif %}  
-        
-        <br/>
-        {% if creature.max_hd > 0 %}
-            {% if creature.min_hd != creature.max_hd %}
-                {{creature.min_hd}} - {{creature.max_hd}}
-            {% else %}
-                {{creature.min_hd}}
-            {% endif %} HD
-            {% if creature.max_hp_mod > 0 %}
-                +
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-3">
+        {% load static %}
+        {% with 'creatures/images/'|add:creature.slug|add:'.png' as image_path %}
+        <img src ="{% static image_path %}" class="img-fluid" alt="{{creature.name}}"/>
+        {% endwith %}
+        </div>
+        <div class="col-9">
+            Number Appearing:
+            {% if creature.min_appearing != creature.max_appearing %}
+                {{ creature.min_appearing }} -
             {% endif %}
-        {% endif %}
+            {{ creature.max_appearing }}
+            <br/>AC: {{creature.ac}}
+            <br/>Move Speed: {{creature.ground_speed|floatformat}}"
+            {% if creature.air_speed %}
+                <br/>Air Speed: {{creature.air_speed|floatformat}}"
+                 (MC: {{creature.flight_class}}) 
+            {% endif %}
+            {% if creature.water_speed %}
+                <br/>Water Speed: {{creature.water_speed|floatformat}}"
+            {% endif %}
+            {% if creature.climb_speed %}
+                <br/>Climbing Speed: {{creature.climb_speed|floatformat}}"
+            {% endif %}
+            {% if creature.burrow_speed %}
+                <br/>Burrowing Speed: {{creature.burrow_speed|floatformat}}"
+            {% endif %}    
+            {% if creature.web_speed %}
+                <br/>Web Speed: {{creature.web_speed|floatformat}}"</p>
+            {% endif %}  
+            
+            <br/>
+            {% if creature.max_hd > 0 %}
+                {% if creature.min_hd != creature.max_hd %}
+                    {{creature.min_hd}} - {{creature.max_hd}}
+                {% else %}
+                    {{creature.min_hd}}
+                {% endif %} HD
+                {% if creature.max_hp_mod > 0 %}
+                    +
+                {% endif %}
+            {% endif %}
 
-        {% if creature.max_hp_mod > 0 %}
-            {% if creature.min_hp_mod != creature.max_hp_mod %}
-                {{creature.min_hp_mod}} - {{creature.max_hp_mod}}
-            {% else %}
-                {{creature.min_hp_mod}}
+            {% if creature.max_hp_mod > 0 %}
+                {% if creature.min_hp_mod != creature.max_hp_mod %}
+                    {{creature.min_hp_mod}} - {{creature.max_hp_mod}}
+                {% else %}
+                    {{creature.min_hp_mod}}
+                {% endif %}
+                HP
             {% endif %}
-            HP
-        {% endif %}
-        <br/>Lair Chance: {{creature.lair_percentage|floatformat:-2}}%
-        <br/>Treasure Type: 
-        {% if creature.treasure_types %} {{creature.treasure_types}}
-        {% else %} None
-        {% endif %}
-        <br/>Number of Attacks: {{creature.num_attacks}}
-        <br/>Attack Damage:{{creature.attacks_str}}
-        <br/>Magic Resistance: {{creature.m_resist_percentage|floatformat}}%
-        <br/>Intelligence: {{creature.intelligence_str}}
-        <br/>Alignment: {{creature.alignment_str}}
-        <br/>Size: {{creature.size_class}}
-        <br/>Level {{ creature.level }}
-        <br/>XP: {{creature.base_xp}}
-        {% if creature.xp_per_hp %}
-            + {{creature.xp_per_hp}}/HP
-        {% endif %}
+            <br/>Lair Chance: {{creature.lair_percentage|floatformat:-2}}%
+            <br/>Treasure Type: 
+            {% if creature.treasure_types %} {{creature.treasure_types}}
+            {% else %} None
+            {% endif %}
+            <br/>Number of Attacks: {{creature.num_attacks}}
+            <br/>Attack Damage:{{creature.attacks_str}}
+            <br/>Magic Resistance: {{creature.m_resist_percentage|floatformat}}%
+            <br/>Intelligence: {{creature.intelligence_str}}
+            <br/>Alignment: {{creature.alignment_str}}
+            <br/>Size: {{creature.size_class}}
+            <br/>Level: {{ creature.level }}
+            <br/>XP: {{creature.base_xp}}
+            {% if creature.xp_per_hp %}
+                + {{creature.xp_per_hp}}/HP
+            {% endif %}
+            </div>
+    </div>
+    </div>
+
+    <!-- Possible Wide Creature Image -->
+    {% with 'creatures/images/'|add:creature.slug|add:'-wide'|add:'.png' as image_path %}
+    <img src ="{% static image_path %}" class="img-fluid" alt=""/>
+    {% endwith %}
+
+    <p>
+        Description:{% autoescape off %} {{ creature.description |linebreaks}} {% endautoescape %}
     </p>
 
     <form class="w3-container" action="{% url 'creatures:detail' creature.slug %}" method="POST">
@@ -96,5 +109,11 @@
             <button class="w3-btn">Roll Creatures</button>
         </p>
     </form>
+    
+    <!-- Possible Large Creature Image -->
+    {% load static %}
+    {% with 'creatures/images/'|add:creature.slug|add:'-large'|add:'.png' as image_path %}
+    <img src ="{% static image_path %}" class="img-fluid" alt=""/>
+    {% endwith %}  
 
 {% endblock %}

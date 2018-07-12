@@ -68,7 +68,9 @@ class Command(BaseCommand):
                 source = creature.source.value,
                 parent_creature = _parent_creature,
                 sub_creatures = _sub_creatures,
-                alt_names = _alt_names
+                alt_names = _alt_names,
+                
+                description = creature.description
             )
 
             try:

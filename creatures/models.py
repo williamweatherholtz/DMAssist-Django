@@ -35,6 +35,8 @@ class CreatureInfo(models.Model):
     #int representing SourceBook IntEnum
     source = models.SmallIntegerField()
     
+    description = models.CharField(max_length=4000, default = '')
+    
     parent_creature = models.CharField(max_length=100)
     #json list of creature names
     sub_creatures = models.CharField(max_length=500)
