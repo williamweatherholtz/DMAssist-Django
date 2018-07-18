@@ -6,6 +6,7 @@ from .time import TimePeriod, TimeUnit
 from .sourcebook import SourceBook
 
 #aliases for the lazy
+DS = TimeUnit.decisegment
 S = TimeUnit.segment
 R = TimeUnit.round
 T = TimeUnit.turn
@@ -2443,7 +2444,7 @@ mu_spells = [
         desc="The <i>erase</i> spell removes writings of either magical or mundane nature from a scroll or one or two pages or sheets of paper, parchment or similar surfaces. It will not remove <a href=\"/spells/explosive-runes-magic-user-lvl-3/\"><i>explosive runes</i></a> or a <a href=\"/spells/symbol-cleric-lvl-7/\"><i>symbol</i></a> (see these spells hereafter), however. There is a basic chance of 50%, plus 2% per level of experience of the spell caster with respect to magical writings, plus 4% per level for mundane writing, that the spell will take effect. This represents the saving throw, and any percentile dice score in excess of the adjusted percentage chance means the spell fails."
     ),
     Spell('Feather Fall','M',1,
-        cast=tp(Decimal(0.1),S),
+        cast=tp(1,DS),
         duration_lvl=tp(1,S),
         range='1"/level',
         aoe='Special',

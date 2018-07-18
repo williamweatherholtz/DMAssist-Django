@@ -1144,7 +1144,7 @@ CreatureInfo( name = 'Type 2 Demon',
     size = 'L',
     aliases = ['Hezrou', 'Type II Demon'],
     source = SourceBook.MONSTER_MANUAL,
-    description = 'The next most common type of demon, these foul creatures are a foot short than the tall <a href="/creatures/type-1-demon">type I</a> sort, looking somewhat like a gross toad with arms in place of forelegs. These demons can be struck by normal weapons or missiles. The <a href="/spells/darkness-15-radius-magic-user-lvl-2/"><i>darkness</i></a> they cause at will is of the variety which covers a 15\' radius. These sorts of additional abilities can be performed by these demons, one at a time, at will: <a href="/spells/fear-magic-user-lvl-4/"><i>Cause fear</i></a> (as a fear wand), <a href="/spells/levitate-magic-user-lvl-2/"><i>levitate</i></a> (as an 8th level magic-user), <a href="/spells/detect-invisibility-magic-user-lvl-2/"><i>detect invisible objects</i></a>, <a href="/spells/telekinesis-magic-user-lvl-5/"><i>telekinese</i></a> 3,000 gold piece weight, <a href="/spells/gate-cleric-lvl-7/><i>gate</i></a> in another <a href="/creatures/type-2-demon">type II demon</a> (20% chance of success).\n\n'
+    description = ('The next most common type of demon, these foul creatures are a foot short than the tall <a href="/creatures/type-1-demon">type I</a> sort, looking somewhat like a gross toad with arms in place of forelegs. These demons can be struck by normal weapons or missiles. The <a href="/spells/darkness-15-radius-magic-user-lvl-2/"><i>darkness</i></a> they cause at will is of the variety which covers a 15\' radius. These sorts of additional abilities can be performed by these demons, one at a time, at will: <a href="/spells/fear-magic-user-lvl-4/"><i>Cause fear</i></a> (as a fear wand), <a href="/spells/levitate-magic-user-lvl-2/"><i>levitate</i></a> (as an 8th level magic-user), <a href="/spells/detect-invisibility-magic-user-lvl-2/"><i>detect invisible objects</i></a>, <a href="/spells/telekinesis-magic-user-lvl-5/"><i>telekinese</i></a> 3,000 gold piece weight, <a href="/spells/gate-cleric-lvl-7/><i>gate</i></a> in another <a href="/creatures/type-2-demon">type II demon</a> (20% chance of success).\n\n'
         'Type II demons are like <a href="/creatures/type-1-demon">type I</a> with regard to their appetites. Note that either sort will gladly fight the other for any reason whatsoever.'
     )
 ),
@@ -1278,7 +1278,7 @@ CreatureInfo( name = 'Asmodeus',
         '<i>Description</i>: There can be no question that Asmodeus is the most handsome of devils as well as being the strongest and most cunning. The ultimate evil he represents can be seen in his beauty only when he so wills or if he forgets himself and flies into a rage.'
     )
 ),
-CreatureInfo( name = 'Baalzebub',
+CreatureInfo( name = 'Baalzebul',
     hd = (0,0),
     hp = (166,166),
     lair = 0.8,
@@ -1294,7 +1294,10 @@ CreatureInfo( name = 'Baalzebub',
     align = 'LE',
     size = 'L',
     aliases = ['Arch-Devil'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('The sixth and seventh planes of Hell, <i>Malbolge</i> and <i>Maladomini</i> respectively, are ruled by Baalzebul, "Lord of the Flies" ("lies"?) He is an arch-devil of great power, second only to Asmodeus. Malbolge is a black stone plane, filled with stinking vapors, smokes, fire pits, and huge caves and caverns. Maladomini is similar, but there will be found the moated castles of the <a href="/creatures/horned-devil">malebranche</a> and the great fortress of Baalzebul.\n\n'
+        'This arch-devil can employ any of the following powers, one at a time, as desired, during a melee round as applicable: <a href="/spells/pyrotechnics-magic-user-lvl-2/"><i>pyrotechnics</i></a>, <a href="/spells/produce-flame-druid-lvl-2/"><i>produce flame</i></a>, <a href="/spells/wall-of-fire-magic-user-lvl-4/"><i>wall of fire</i></a>, <a href="/spells/continual-light-cleric-lvl-3/"><i>continual light</i></a>, <a href="/spells/comprehend-languages-magic-user-lvl-1/"><i>read languages</i></a>, <a href="/spells/read-magic-magic-user-lvl-1/"><i>read magic</i></a>, <a href="/spells/detect-invisibility-magic-user-lvl-2/"><i>detect invisible</i></a>, <a href="/spells/locate-object-magic-user-lvl-2/"><i>locate object</i></a>, <a href="/spells/invisibility-magic-user-lvl-2/"><i>invisibility</i></a>, <a href="/spells/dispel-magic-magic-user-lvl-3/"><i>dispel magic</i></a>, <a href="/spells/shape-change-magic-user-lvl-9/"><i>shape change</i></a>, <i>beguile</i>, <i>rulership</i> (as a rod of rulership), <a href="/spells/hold-person-magic-user-lvl-3/"><i>hold person</i></a>, <a href="/spells/charm-monster-magic-user-lvl-4/"><i>charm monster</i></a>, <a href="/spells/geas-magic-user-lvl-6/"><i>geas</i></a>, <a href="/spells/restoration-cleric-lvl-7/"><i>restoration</i></a>, <a href="/spells/raise-dead-cleric-lvl-5/"><i>raise dead fully</i></a>, (fulfill another\'s) <a href="/spells/wish-magic-user-lvl-9/"><i>wish</i></a>. Once per day Baalzebul can use: <a href="/spells/symbol-magic-user-lvl-8/"><i>symbol</i></a> of pain, <i>symbol</i> of insanity, <a href="/spells/holy-unholy-word-cleric-lvl-7/"><i>(un) holy word</i></a>. He can always summon 1-4 <a href="/creatures/horned-devil">horned devils</a>. His glance causes <i>fear</i> and <i>weakness</i> (saving throw versus magic or collapse in trembling until 1-4 melee rounds after the gaze is lifted) whenever he directly stares at any person.'
+    )
 ),
 CreatureInfo( name = 'Barbed Devil',
     hd = (8,8),
@@ -1312,7 +1315,10 @@ CreatureInfo( name = 'Barbed Devil',
     align = 'LE',
     size = 'M',
     aliases = ['Lesser Devil'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Barbed devils populate the third and fourth planes of Hell. They are excellent guards and alert at all times (never surprised). Unauthorized creatures are immediately cast into one of the many cells to be tormented.\n\n'
+        'While these monsters carry no weapons, they have sufficient weaponry with their horny, barbed hands and horrid tails. They are able to generate <a href="/spells/fear-magic-user-lvl-4/">fear</a> (saving throw versus wand is applicable) upon striking an opponent. Barbed devils can perform any of the following, one at a time per melee round: <a href="/spells/pyrotechnics-magic-user-lvl-2/"><i>pyrotechnics</i></a>, <a href="/spells/produce-flame-druid-lvl-2/"><i>produce flame</i></a>, <a href="/spells/hold-person-magic-user-lvl-3/"><i>hold person</i></a>, or <a href="/spells/monster-summoning-vii-magic-user-lvl-9/"><i>summon</i></a> another barbed devil (30% chance of success).'
+    )
 ),
 CreatureInfo( name = 'Bone Devil',
     hd = (9,9),
@@ -1330,7 +1336,11 @@ CreatureInfo( name = 'Bone Devil',
     align = 'LE',
     size = 'L',
     aliases = ['Lesser Devil'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Bone devils populate the lower planes of Hell, particularly the fifth. They are particularly malicious and delight in making less powerful creatures suffer. As they prefer cold to heat, these monsters also have ultravision, seeing light in the ultra-violet spectrum at 60\' range.\n\n'
+        'Bone devils have a great bone hook they employ to snare and wound opponents. Any creature caught (hit) by it has a 50% chance of being stuck fast. The bone devil will then strike such victims with its tail doing 2-8 hit points of damage, plus causing a loss of strength (1-4 points) unless a save versus poison is made; strength loss lasts for 10 melee rounds.\n\n'
+        'At will, once per melee round, bone devils can: generate <a href="/spells/fear-magic-user-lvl-4/"><i>fear</i></a> in a 5\' radius sphere, <i>create illusion</i>, <a href="/spells/fly-magic-user-lvl-3/"><i>fly</i></a>, <a href="/spells/invisibility-magic-user-lvl-2/"><i>become invisible</i></a>, <a href="/spells/detect-invisibility-magic-user-lvl-2/"><i>detect invisible</i></a>, <a href="/spells/fear-magic-user-lvl-4/"><i>fear</i></a> (spell), or <a href="/spells/monster-summoning-vii-magic-user-lvl-9/"><i>summon</i></a> another bone devil (40% chance of success). Once per day it is able to create a <a href="/spells/wall-of-ice-magic-user-lvl-4/"><i>wall of ice</i></a>.'
+    )
 ),
 CreatureInfo( name = 'Dispater',
     hd = (0,0),
@@ -1346,7 +1356,11 @@ CreatureInfo( name = 'Dispater',
     align = 'LE',
     size = 'M',
     aliases = ['Arch-devil'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Dispater is the ruler of Hell\'s second plane. His capital is the iron city of Dis, named after the whole of the plane. Dispater\'s palace there is infernally grand. The city is filled with <a href="/creatures/zombie">zombies</a>, <a href="/creatures/erinyes">erinyes</a>, and a sprinkling of <a href="/creatures/barbed-devil">barbed devils</a> and <a href="/creatures/horned-devil">malebranche</a>.\n\n'
+        'The following powers are possible at will for Dispater, one at a time per melee round: <a href="/spells/pyrotechnics-magic-user-lvl-2/"><i>pyrotechnics</i></a>, <a href="/spells/produce-flame-druid-lvl-2/"><i>produce flame</i></a>, <a href="/spells/wall-of-fire-magic-user-lvl-4/"><i>wall of fire</i></a>, <a href="/spells/light-cleric-lvl-1/"><i>light</i></a>, <a href="/spells/read-magic-magic-user-lvl-1/"><i>read magic</i></a>, <a href="/spells/comprehend-languages-magic-user-lvl-1/"><i>read languages</i></a>, <a href="/spells/detect-invisibility-magic-user-lvl-2/"><i>detect invisible</i></a>, <a href="/spells/shape-change-magic-user-lvl-9/"><i>shape change</i></a>, <i>beguile</i>, <a href="/spells/geas-magic-user-lvl-6/"><i>geas</i></a>, <a href="/spells/restoration-cleric-lvl-7/"><i>restoration</i></a>, <a href="/spells/raise-dead-cleric-lvl-5/"><i>raise dead fully</i></a>, (fulfill another\'s) <a href="/spells/wish-magic-user-lvl-9/"><i>wish</i></a>. He can <a href="/spells/monster-summoning-vii-magic-user-lvl-9/"><i>summon</i></a> 1-3 <a href="/creatres/erinyes">erinyes</a> (75%) or (25%) a <a href="/creatures/pit-fiend">pit fiend</a> (90% chance of success). Once per day Dispayer can employ a <a href="/spells/symbol-magic-user-lvl-8/"><i>symbol</i></a> of pain; he can also pronounce an <a href="/spells/holy-unholy-word-cleric-lvl-7/"><i>(un)holy word</i></a> once per day. His stare causes <a href="/spells/fear-magic-user-lvl-4/"><i>fear</i></a> or <i>chill</i> (slows 50% and -5 on all dice rolls) in all persons who fail their saving throws versus magic.\n\n'
+        '<i>Description</i>: Dispater is evilly handsome, and only his small horns, tail, and cloven left hook distinguish him from humanity. He has a rod which has the powers of a rod of rulership and a double strength staff of striking (4-24 hit points of damage).'
+    )
 ),
 CreatureInfo( name = 'Erinyes',
     hd = (6,6),
@@ -1366,7 +1380,10 @@ CreatureInfo( name = 'Erinyes',
     align = 'LE',
     size = 'M',
     aliases = ['Lesser Devil'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('The erinyes are the devils common to Hell\'s second plane as well as the kind most commonly sent forth to garner more souls. They are female but can appear as male. They are armed with a magical dagger which drips a caustic venom and causes terribly painful wounds (save versus poison or faint for 1-6 melee rounds). They also carry a rope of entanglement with which to bind their victims. Erinyes can be struck with normal weapons. They can, at will, cause <a href="/spells/fear-magic-user-lvl-4/"><i>fear</i></a> in all who look at them (saving throw versus wand is applicable). In addition, they have the power to do any one of the following during any melee round: <a href="/spells/detect-invisibility-magic-user-lvl-2/"><i>detect invisible</i></a>, <a href="/spells/locate-object-cleric-lvl-3/"><i>locate object</i></a>, <a href="/spells/invisibility-magic-user-lvl-2/"><i>invisibility</i></a>, <a href="/spells/polymorph-self-magic-user-lvl-4/"><i>polymorph self</i></a>, <a href="/spells/produce-flame-druid-lvl-2/"><i>produce flame</i></a>, or <a href="/spells/monster-summoning-vii-magic-user-lvl-9/"><i>summon</i></a> another erinyes (25% chance of success).\n\n'
+        'Erinyes are strong - 18/01, but no hit/damage bonuses are applicable. They will pursue evil persons unceasingly in order to take them alive into Hell. They will sometimes bargain with others, hoping to tempt them into evil doing.'
+    )
 ),
 CreatureInfo( name = 'Geryon',
     hd = (0,0),
@@ -1384,7 +1401,12 @@ CreatureInfo( name = 'Geryon',
     align = 'LE',
     size = 'L',
     aliases = ['Arch-devil'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Sometimes referred to as the "Wild Beast", Geryon is the gigantic ruler of the fifth plane of Hell. This arch-devil is as powerful as a <a href="/creatures/storm-giant">storm giant</a>, and he loves to grab his opponents and rend them with his claws while stabbing them with his terrible poisonous tail (save versus poison at -4 on die). Geryon dwells in a huge castle in the very middle of the plane, and seldom ventures forth.\n\n'
+        'Geryon is able to use the following powers at will, once per melee round: <a href="/spells/ice-storm-magic-user-lvl-4/"><i>ice storm</i></a>, <a href="/spells/wall-of-ice-magic-user-lvl-4/"><i>wall of ice</i></a>, <a href="/spells/light-cleric-lvl-1/"><i>light</i></a>, <a href="/spells/comprehend-languages-magic-user-lvl-1/"><i>read languages</i></a>, <a href="/spells/read-magic-magic-user-lvl-1/"><i>read magic</i></a>, <a href="/spells/detect-invisibility-magic-user-lvl-2/"><i>detect invisible</i></a>, <a href="/spells/locate-object-cleric-lvl-3/"><i>locate object</i></a>, <a href="/spells/dispel-magic-cleric-lvl-3/"><i>dispel magic</i></a>, <a href="/spells/invisibility-magic-user-lvl-2/"><i>invisibility</i></a>, <a href="/spells/shape-change-magic-user-lvl-9/"><i>shape change</i></a>, <i>beguile</i>, <a href="/spells/geas-magic-user-lvl-6/"><i>geas</i></a>, <a href="/spells/raise-dead-cleric-lvl-5/"><i>raise dead fully</i></a>, (fulfill another\'s <a href="/spells/wish-magic-user-lvl-9/"><i>wish</i></a>. Once per day Geryon can use a <a href="/spells/symbol-magic-user-lvl-8/"><i>symbol</i></a> of pain; he is likewise able to pronounce an <a href="/spells/holy-unholy-word-cleric-lvl-7/"><i>(un)holy word</i></a>. He can <a href="/spells/monster-summoning-vii-magic-user-lvl-9/"><i>summon</i></a> 1-2 <a href="/creatures/bone-devil">bone devils</a> (60%) or (40%) an <a href="/creatures/ice-devil">ice devil</a> (95% chance of success). Geryon\'s glare will cause <a href="/spells/fear-magic-user-lvl-4/"><i>fear</i></a> in all those who he directs it upon (saving throw versus magic applicable).\n\n'
+        'Geryon has a great bull\'s horn which he can wind. It brings forth 5-20 <a href="/creatures/minotaur">minotaurs</a>. These monsters will obey to the death. The horn can be blown but once per week.\n\n'
+        '<i>Description</i>: A handsome head and torso sit atop Geryon\'s snakey trunk. This arch-devil has no legs, but travels in a snakelike mode along the ground. He has huge bat wings. His tail is barbed and drips poison. Geryon\'s arms are strong and hairy, ending in paw-like hands.'
+    )
 ),
 CreatureInfo( name = 'Horned Devil',
     hd = (5,5),
@@ -1404,7 +1426,11 @@ CreatureInfo( name = 'Horned Devil',
     align = 'LE',
     size = 'L',
     aliases = ['Malebranche', 'Greater Devil'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('The "evil horns" (<i>male branche</i>) are primarily from Hell\'s sixth and seventh planes. These are the least of the greater devils, and have such names as "Dogretch", "Evil Tail", and "Bent Wing". They hate anything stronger than themselves and fear stronger devils accordingly.\n\n'
+        'If armed, they will carry a two-tined fork (75%) which causes 2-12 points of damage, or a barbed whip (25%) which will cause 1-4 points of damage plus a stunning effect for the same number of melee rounds unless a saving throw versus magic is made. An unarmed horned devil attacks with a claw/claw/bite. Armed or unarmed these devils are also able to attack with their tails, causing 1-3 hit points of damage and a wound which will bleed thereafter unless bound up (lose 1 hit point/round until bound or cured). They exude <a href="/spells/fear-magic-user-lvl-4/"><i>fear</i></a> in a 5\' radius (saving throw versus wand applies).\n\n'
+        'Horned devils can do any one of the following at will, once per melee round: <a href="/spells/pyrotechnics-magic-user-lvl-2/"><i>pyrotechnics</i></a>, <a href="/spells/produce-flame-druid-lvl-2/"><i>produce flame</i></a>, <a href="/spells/esp-magic-user-lvl-2/"><i>ESP</i></a>, <a href="/spells/detect-magic-magic-user-lvl-1/"><i>detect magic</i></a>, <i>illusion</i>, or <a href="/spells/monster-summoning-vii-magic-user-lvl-9/"><i>summon</i></a> another horned devil (50% chance of success). Once per day they can create a <a href="/spells/wall-of-fire-magic-user-lvl-4/"><i>wall of fire</i></a> causing 3-24 hit points of damage.'
+    )
 ),
 CreatureInfo( name = 'Ice Devil',
     hd = (11,11),
@@ -1422,7 +1448,11 @@ CreatureInfo( name = 'Ice Devil',
     align = 'LE',
     size = 'L',
     aliases = ['Greater Devil'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('The frigid eighth plane of Hell is populated in the main with ice devils. They are greater devils in every sense of the word, preferring to attack and torment victims by means of their claws, mandibles, and tails. A few (25%) carry great spears which inflict 2-12 hit points damage and numb with cold the creature thus struck (slow 50% unless save versus paralyzation is made). Being greater devils, they have personal names.\n\n'
+        'Ice devils can do any one of the following at will, once per melee round: <a href="/spells/fly-magic-user-lvl-3/"><i>fly</i>, <a href="/spells/wall-of-ice-magic-user-lvl-4/"><i>wall of ice</i></a>, <a href="/spells/detect-magic-magic-user-lvl-1/"><i>detect magic</i></a>, <a href="/spells/detect-invisibility-magic-user-lvl-2/"><i>detect invisible</i></a>, <a href="/spells/polymorph-self-magic-user-lvl-4/"><i>polymorph self</i></a>, or <a href="/spells/monster-summoning-vii-magic-user-lvl-9/"><i>summon</i></a> in two <a href="/creatures/bone-devil">bone devils</a> (70%) or another ice devil (30%) (60% chance of success). Once per day an ice devil can cause an <a href="/spells/ice-storm-magic-user-lvl-4/"><i>ice storm</i></a> (as per that spell).\n\n'
+        'These creatures have ultravision (60\'), are able to regenerate 1 hit point per melee round, and a grasping strength of 18/76. They radiate <a href="/spells/fear-magic-user-lvl-4/"><i>fear</i></a> in a 10\' radius (saving throw vs. wand applies).'
+    )
 ),
 CreatureInfo( name = 'Lemure',
     hd = (3,3),
@@ -1439,7 +1469,10 @@ CreatureInfo( name = 'Lemure',
     m_resist = 0.0,
     align = 'LE',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('The lemures are the form which the dead whom inhabit the Nine Hells are put in. These vaguely human blobs are then tormented by devils. Their minds are quite gone, and they will attack anything non-devilish which they see. Lemures regenerate at a rate of 1 hit point per melee round, so they are not usually destroyed by the wounds inflicted on them by their environment or by the devils filling it. These wretched things can be destroyed permanently only by blessed things (holy water, holy swords, etc.). They are not subject to any form of sleep, charm, or the like.\n\n'
+        'After being in hell for a time certain lemures will be chosen to form <a href="/creatures/wraith/">wraiths</a> or <a href="/creatures/spectre/">spectres</a>.'
+    )
 ),
 CreatureInfo( name = 'Pit Fiend',
     hd = (13,13),
@@ -1459,7 +1492,11 @@ CreatureInfo( name = 'Pit Fiend',
     align = 'LE',
     size = 'L',
     aliases = ['Greater Devil'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('The lowest plane of Hell is the home of the dreaded pit fiend, a devil of great power. They possess a terrible strength and the most evil nature. All pit fiends have personal names. They are the personal servants of <a href="/creatures/asmodeus">Asmodeus</a>. Each typically carries an ancus-like weapon and a jagged-toothed club, and all can strike with both in a melee round.\n\n'
+        'Pit fiends are able to perform any of the following at will, once per melee round: <a href="/spells/pyrotechnics-magic-user-lvl-2/"><i>pyrotechnics</i></a>, <a href="/spells/produce-flame-druid-lvl-2/"><i>produce flame</i></a>, <a href="/spells/wall-of-fire-magic-user-lvl-4/"><i>wall of fire</i></a>, <a href="/spells/detect-magic-magic-user-lvl-1/"><i>detect magic</i></a>, <a href="/spells/detect-invisibility-magic-user-lvl-2/"><i>detect invisible</i></a>, <a href="/spells/polymorph-self-magic-user-lvl-4/"><i>polymorph self</i></a>, <a href="/spells/hold-person-magic-user-lvl-3/"><i>hold person</i></a>, or <a href="/spells/monster-summoning-vii-magic-user-lvl-9/"><i>summon</i></a> in 1-3 <a href="/creatures/barbed-devil">barbed devils</a> (60%) or another pit fiend (70% chance of success). Once per day a pit fiend can use a <a href="/spells/symbol-magic-user-lvl-8/"><i>symbol</i></a> of pain -  (save versus magic or suffer -4 on attack dice rolls to hit and a -2 on dexterity for 2-20 melee rounds). They shed <a href="/spells/fear-magic-user-lvl-4/"><i>fear</i></a> in a 20\' radius (save versus magic is applicable).\n\n'
+        'All pit fiends have a strength of 18/00. They regenerate at 2 hit points per melee round. If they strike with their tail and a score a hit the opponent is held with 2-8 hit points of constriction damage per turn.'
+    )
 ),
 CreatureInfo( name = 'Anatosaurus',
     hd = (12,12),
@@ -1476,7 +1513,8 @@ CreatureInfo( name = 'Anatosaurus',
     align = 'NN',
     size = 'L',
     aliases = ['Trachodon'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'These are duck-billed dinosaurs of the plant eating sort. They run from attack; their only defense is by a lashing tail.'
 ),
 CreatureInfo( name = 'Ankylosaurus',
     hd = (9,9),
@@ -1492,7 +1530,8 @@ CreatureInfo( name = 'Ankylosaurus',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'This armadillo-like ornithischian weight four or five tons - most of this weight being his armor plating, side spines, and great knobbed tail. If attacked (or threatened) this creature will lash its tail delivering blows of considerable force. They are herbivores of the same family as <a href="/creatures/paleoscincus"">paleoscincus</a>.'
 ),
 CreatureInfo( name = 'Antrodemus',
     hd = (15,15),
@@ -1509,7 +1548,8 @@ CreatureInfo( name = 'Antrodemus',
     align = 'NN',
     size = 'L',
     aliases = ['Allosaurus'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'One of the most vicious of predators, this monster can run across hard ground at great speed.'
 ),
 CreatureInfo( name = 'Apatosaurus',
     hd = (30,30),
@@ -1526,7 +1566,8 @@ CreatureInfo( name = 'Apatosaurus',
     align = 'NN',
     size = 'L',
     aliases = ['Brontosaurus'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'The thunder-lizard is a 40 ton plant-eater found near marshes and lakes. The creature spends much of his time in shallow water to support his bulk. It moves to deep water to avoid carnivores. Apatosaurus ignores small things, but it is prone to step on anything in its way (doing 4-40 points of damage).'
 ),
 CreatureInfo( name = 'Archelon Ischyros',
     hd = (7,7),
@@ -1543,7 +1584,8 @@ CreatureInfo( name = 'Archelon Ischyros',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'These are reptiles but not dinosaurs. These marine turtles seldom venture onto dry land. Archelon\'s shell is not solid, but it is nevertheless very strong.'
 ),
 CreatureInfo( name = 'Brachiosaurus',
     hd = (36,36),
@@ -1559,7 +1601,8 @@ CreatureInfo( name = 'Brachiosaurus',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'The heaviest of all dinosaurs, these 85 ton monsters dwell in warm swamps and lakes. Similar to <a href="/creatures/apatosaurus">apatosaurs</a>, they might step on something small, causing 8-80 points of damage.'
 ),
 CreatureInfo( name = 'Camarasaurus',
     hd = (20,20),
@@ -1575,7 +1618,8 @@ CreatureInfo( name = 'Camarasaurus',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'These marsh or swamp dwelling herbivores are smallish for their type. They panic more easily than do <a href="/creatures/apatosaurus">apatosaurs</a>, for example. Stepping or trampling damage is 3-30 points.'
 ),
 CreatureInfo( name = 'Ceratosaurus',
     hd = (8,8),
@@ -1591,7 +1635,8 @@ CreatureInfo( name = 'Ceratosaurus',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'These smallish semi-bipedal monsters are both heavy and fast. This carnivore is unusual in that it has a horn on its nose, but it does not use it for attacking.'
 ),
 CreatureInfo( name = 'Cetiosaurus',
     hd = (24,24),
@@ -1607,7 +1652,8 @@ CreatureInfo( name = 'Cetiosaurus',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'These huge plant-eaters dwell in lakes and marshes. Their heads are somewhat larger than similar reptiles (<a href="/creatures/apatosaurus">apatosaurus</a>, etc.). If they step on some small things - such as a human for example - they do 4-40 points of damage.'
 ),
 CreatureInfo( name = 'Dinichtys',
     hd = (10,10),
@@ -1624,7 +1670,8 @@ CreatureInfo( name = 'Dinichtys',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'Dinichtys are not actually dinosaurs but huge prehistoric fish ("terrible fish"). Its huge mouth can swallow man-sized prey (on a score of 20).'
 ),
 CreatureInfo( name = 'Diplodocus',
     hd = (24,24),
@@ -1641,7 +1688,8 @@ CreatureInfo( name = 'Diplodocus',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'This dinosaur is another semi-aquatic type which eats water plants. It is able to submerge its body to a bottom depth of 30\' or so and still breathe easily. If it steps on any small object it causes 3-30 points of damage.'
 ),
 CreatureInfo( name = 'Elasmosaurus',
     hd = (15,15),
@@ -1651,13 +1699,15 @@ CreatureInfo( name = 'Elasmosaurus',
     xp_hp = 20,
     treasure = '',
     iq = Intelligence.NON,
-    speed = 15,
+    speed = 0,
+    swim = 15,
     ac = 7,
     attacks = [(6,4,0)],
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'These long-necked reptiles are rather fish-like in appearance. They are carnivorous and highly aggressive.'
 ),
 CreatureInfo( name = 'Gorgosaurus',
     hd = (13,13),
@@ -1673,7 +1723,8 @@ CreatureInfo( name = 'Gorgosaurus',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'These horrid creatures are probably ancestors of <a href="/creatures/tyrannosaurus-rex">tyrannosaurus rex</a>. The gorgosaurus is a fleet carnivorous dinosaur of very aggressive instincts.'
 ),
 CreatureInfo( name = 'Iguanadon',
     hd = (6,6),
@@ -1689,7 +1740,8 @@ CreatureInfo( name = 'Iguanadon',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'These typically bipedal plant-eaters typically travel in herds. They run from carnivores, but if cornered they will employ their "thumb" spikes and lashing tail to defend themselves.'
 ),
 CreatureInfo( name = 'Lambeosaurus',
     hd = (12,12),
@@ -1705,7 +1757,8 @@ CreatureInfo( name = 'Lambeosaurus',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'One of the family of crested herbivorous dinosaurs, this creature is able to see, hear, and smell exceptionally well. They are thus able to detect enemies frequently and flee to safety - either outdistancing the predator or hiding in a swampy area. Other crested dinosaurs include corythosaurus, parasaurolophus, prosaurolophus, and saurolophus.'
 ),
 CreatureInfo( name = 'Megalosaurus',
     hd = (12,12),
@@ -1721,7 +1774,8 @@ CreatureInfo( name = 'Megalosaurus',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'Megalosaurus often travels on all fours, although they are able to function bipedally. They have very large jaws and teeth, using them to bring down any unsuspecting victim.'
 ),
 CreatureInfo( name = 'Monoclonius',
     hd = (8,8),
@@ -1737,7 +1791,8 @@ CreatureInfo( name = 'Monoclonius',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'These reptiles somewhat resemble a single-horned <a href="/creatures/rhinoceros">rhinoceros</a>. Their head and neck is protected by a bone shield (armor class 3) while their skins are very thick - almost plated. They are herbivorous, but they tend to be somewhat aggressive. They will trample smaller creatures in a charge, inflicting 2-16 hit points of damage.'
 ),
 CreatureInfo( name = 'Mosasaurus',
     hd = (12,12),
@@ -1754,7 +1809,8 @@ CreatureInfo( name = 'Mosasaurus',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'These typical marine dinosaurs travel on land only very slowly, but their flippers move them with ease and grace in water. They prey on all forms of marine animals.'
 ),
 CreatureInfo( name = 'Paleoscincus',
     hd = (9,9),
@@ -1770,7 +1826,8 @@ CreatureInfo( name = 'Paleoscincus',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'These reptiles are veritable "walking dreadnoughts", for their heavy plated skin, sharp side spines, and spiked tail make them nearly invulnerable to attack. A predator trying to bite one is likely to inflict 3-12 hit points of damage upon itself if it scores a hit! Of course, the paleoscincus will be lashing its thorny tail to drive off its attacker. These creatures are sometimes aggressive if intruded upon.'
 ),
 CreatureInfo( name = 'Pentaceratops',
     hd = (12,12),
@@ -1786,7 +1843,8 @@ CreatureInfo( name = 'Pentaceratops',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'This is another of the quadrapedal dinosaurs of the ornithischian order; it is a relative of <a href="/creatures/monoclonius">monoclonius</a>, <a href="/creatures/styracosaurus">styracosaurus</a>, and <a href="/creatures/triceratops">triceratops</a>. It is an aggressive but plant-eating creature. Its shield and horns give its head armor class 2, while its body is armor class 6. If it charges it will trample smaller creatures for 2-20 hit points.'
 ),
 CreatureInfo( name = 'Plateosaurus',
     hd = (8,8),
@@ -1802,7 +1860,8 @@ CreatureInfo( name = 'Plateosaurus',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'These dinosaurs travel slowly in a bipedal manner, using their tail as a balance in order to watch for enemies as well as reach the leafy crowns of ferns, palms, etc. They can move fairly fast on all fours. These plant-eaters are fairly heavy (about 8-10 tons on the average) and panicky.'
 ),
 CreatureInfo( name = 'Plesiosaurus',
     hd = (20,20),
@@ -1819,7 +1878,8 @@ CreatureInfo( name = 'Plesiosaurus',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'The plesiosaurus strongly resembles a snake wearing a turtle\'s body (sans shell). They tend to be very aggressive and attack anything. The creature\'s neck is about one-third of its total length, and it is strong and fast. In a marine battle it can strike with its powerful fore flippers for 2-12 points of damage with each.'
 ),
 CreatureInfo( name = 'Pteranodon',
     hd = (3,3),
@@ -1837,7 +1897,8 @@ CreatureInfo( name = 'Pteranodon',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'Although these flying reptiles typically dive for marine prey, they will attack any creature which appears to be vulnerable. They have no teeth but spear victims with their beaks if they are too large to swallow at a gulp. The beak of a typical pteranodon is about 4\' long. The creature weighs only 40 or 50 pounds, but they can carry off prey four times their own weight.'
 ),
 CreatureInfo( name = 'Stegosaurus',
     hd = (18,18),
@@ -1853,7 +1914,8 @@ CreatureInfo( name = 'Stegosaurus',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'Another of the ornithischians, the stegosaurus, or "plated lizard", is a large, very stupid herbivorous dinosaur with aggressive defenses. It thrives nearly anywhere and is often found in Jurassic-like plains or jungles. Its great plates allow the creature to defend 90% of the time at armor class 2. Its spiked tail, with four or more boney spikes of one to over two feet in length, has its own brain; and the stegosaurus turns its rear continually towards an enemy, while tucking its head low. If anything near it seems threatening, it will react in this manner.'
 ),
 CreatureInfo( name = 'Styracosaurus',
     hd = (10,10),
@@ -1869,7 +1931,8 @@ CreatureInfo( name = 'Styracosaurus',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'An aggressive plant-eater, styracosaurus tends to charge at anything which appears threatening. The boney plate gives the head area an armor class of 2, and there is a 50% chance that anything attempting to bite its rear portions will be stabbed by one or more of the sharp frills of the head plate, each frill inflicting 1-6 hit points of damage, 1-3 frills possible striking. If it charges it will trample smaller creatures and do 2-16 hit points of damage.'
 ),
 CreatureInfo( name = 'Teratosaurus',
     hd = (10,10),
@@ -1885,7 +1948,8 @@ CreatureInfo( name = 'Teratosaurus',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'A fierce carnivore found mainly on triassic plains, the teratosaurus runs nimbly after any creature which appears to be eatable. They will hunt only on dry land - plains or forest.'
 ),
 CreatureInfo( name = 'Triceratops',
     hd = (16,16),
@@ -1901,7 +1965,8 @@ CreatureInfo( name = 'Triceratops',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'The largest of the ceratopsians, and by far the most aggressive, this beaked herbivore is a plains dweller. It has a huge front plate of bone from which project two great horns (3\'+ long), while a somewhat shorter horn juts from its nose. Its body is not armored, thus armor class 6. Any creature which infringes on the territory of these reptiles is likely to be charged and speared. Smaller creatures will simply be trampled for 2-24 hit points of damage.'
 ),
 CreatureInfo( name = 'Tyrannosaurus Rex',
     hd = (18,18),
@@ -1918,7 +1983,8 @@ CreatureInfo( name = 'Tyrannosaurus Rex',
     align = 'NN',
     size = 'L',
     aliases = ['T-Rex'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'There can no no question that this reptile is the most fearsome and terrible of all carnivorous dinosaurs. Despite its huge size the monster is swift afoot. Its huge head is nearly six feet long, and its teeth are from three to six inches in length. It is a plains dweller, and so stupidly fierce that it will attack a small <a href="/creatures/triceratops">triceratops</a>, kill it, and swallow its head in one gulp - thus killing itself in a matter of hours as the horns of the victim pierce the stomach of the victor. Of course, this monster will pursue and eat nearly anything, engulfing man-sized creatures whole on a roll of 18 or better.'
 ),
 CreatureInfo( name = 'Displacer Beast',
     hd = (6,6),
@@ -1935,7 +2001,10 @@ CreatureInfo( name = 'Displacer Beast',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('A pack of these monsters always contains only full-grown beasts. The molecular vibrations of the displacer beast are such that it always appears to be 3\' (left, right, ahead, or behind) its actual position. Thus, these monsters always cause opponents to subtract 2 from attack dice rolls and add 2 to their dice rolls for saving throws. These fierce creatures hate all life, but they particularly hate <a href="/creatures/blink-dog">blink dogs</a>. In combat the displacer beast lashes out with its two tentacles, inflicting horrible wounds with the rough, horney edges of these appendages.\n\n'
+        '<i>Description</i>: This vaguely puma-like creature is bluish black, its tentacles are dead black, the horney edges of the tentacles are brownish yellow, and its eyes glow to a hellish green.'
+    )
 ),
 CreatureInfo( name = 'Djinni',
     hd = (7,7),
@@ -1943,7 +2012,7 @@ CreatureInfo( name = 'Djinni',
     base_xp = 725,
     xp_hp = 5,
     treasure = '',
-    iq = Intelligence.HIGH,
+    iq = Intelligence.AVERAGE,
     speed = 9,
     fly = 24,
     flight_class = 'A',
@@ -1952,7 +2021,32 @@ CreatureInfo( name = 'Djinni',
     m_resist = 0.0,
     align = 'CG',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    sub_creatures = ['Noble Djinni'],
+    description = ('The djinn are creatures from the aerial plane. Their magical properties enable them to do any of the following once per day: <i>create nutritious food</i> for 2-12 persons, <i>create water or wine</i> for 2-12 persons, <a href="/spells/minor-creation-illusionist-lvl-4/"><i>create soft goods or wooden items</i></a> (up to about 16 cubic feet of the former, 9 cubic feet of the latter) with permanence, create metal items of short life span (the harder the metal the shorter the time it lasts, i.e. gold has about a 24 hour existence, djinni steel lasts only 1 hour) of up to about 1,000 gold pieces weight, <i>create an illusion</i> with both visual and audial components which will last without concentration until magically dispelled or touched, <a href="/spells/invisibility-magic-user-lvl-2/"><i>become invisible</i></a>, <i>assume gaseous form</i>, <a href="/spells/wind-walk-cleric-lvl-7/"><i>wind walk</i></a>, or <i>form a whirlwind</i>. A djinni whirlwind is cone-shaped, 1" across the base, 3" across the top, and up to 7" high (according to the desire of the djinni). It requires one full turn to form the whirlwind and one full turn for it to dissolve. The whirlwind lasts 1 melee round and causes from 2-12 hit points damage to any non-aerial creature it encounters and sweeps away and kills all creatures of under two hit dice which it encounters. Djinn subjected to attacks from creatures based on the element of air take -1 on damage caused thusly, and "to hit" dice are also at a -1 penalty.\n\n'
+        'Djinn are able to carry up to 6,000 gold pieces weight, afoot or flying without tiring. They can carry double that weight for a short time - three turns afoot, but if flying with that weight the djinni can remain aloft for only one turn (for each 1,000 gold piece weight less than maximum add one turn to walking or flying time). Thereafter it must rest for six turns.\n\n'
+        'The capture and enslavement of djinn is better left to the device of the referee. It is worth noting, however, that a good master will typically <i>encourage</i> a djinni to additional effort and higher performance, while a demanding and cruel master encourages the opposite. A noble djinni (1% chance) is able to grant three wishes to his master, but he will do no other services, and upon granting the third wish he is freed of servitude. Noble djinni are as strong as the <a href="/creatures/efreeti">efreet</a>, have 10 hit dice, strike for 3-24 points of damage, and their whirlwind causes 3-18 hit points of damage.\n\n'
+        'Djinn can speak their own tongue and that of any person or beast with intelligence they meet through a limited form of telepathy which enables them to speak appropriately.\n\n'
+        'Djinn can travel the elemental planes and the astral as well as the material planes. The social structure of Djinn society is based on rule by a Caliph served by various nobles and officials (vizers, beys, emirs, sheiks, sherrifs, and maliks).'
+    )
+),
+CreatureInfo( name = 'Noble Djinni',
+    hd = (10,10),
+    hp = (0,0),
+    base_xp = 1600,
+    xp_hp = 14,
+    treasure = '',
+    iq = Intelligence.HIGH,
+    speed = 9,
+    fly = 24,
+    flight_class = 'A',
+    ac = 4,
+    attacks = [(8,3,0)],
+    m_resist = 0.0,
+    align = 'CG',
+    size = 'L',
+    source = SourceBook.MONSTER_MANUAL,
+    parent_creature = 'Djinni'
 ),
 CreatureInfo( name = 'War Dog',
     hd = (2,2),
@@ -1967,7 +2061,8 @@ CreatureInfo( name = 'War Dog',
     m_resist = 0.0,
     align = 'NN',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'These are simply large dogs which are trained to fight. They are loyal to their masters and ferocious in attack. They are typically protected by light studded leather armor and a spiked collar. The number appearing depends on their masters.'
 ),
 CreatureInfo( name = 'Wild Dog',
     hd = (1,1),
@@ -1983,7 +2078,8 @@ CreatureInfo( name = 'Wild Dog',
     m_resist = 0.0,
     align = 'NN',
     size = 'S',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'Packs of wild dogs inhabit most regions, and their ranges will sometimes overlap those of <a href="/creatures/wolf">wolves</a>. If well-fed they will simply avoid contact. They can be tamed only if separated from their pack.'
 ),
 CreatureInfo( name = 'Dolphin',
     hd = (2,2),
@@ -2000,7 +2096,10 @@ CreatureInfo( name = 'Dolphin',
     m_resist = 0.0,
     align = 'LG',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Most dolphins simply roam the oceans in nomadic schools. A small number (10%), however, have formed underwater communities, and if one is located it is 75% probable that there will be from 1-4 additional communities of dolphins within a 5 mile radius. Communal dolphins will have from 2-5 <a href="/creatures/swordfish">swordfish</a> or 1-3 <a href="/creatures/narwhale>narwhales</a>, depending on the climatic region, as guards.\n\n'
+        'Dolphins will attack any creature which threatens them, although they will help humans in distress. They particularly hate <a href="/creatures/shark">sharks</a> of all sorts and will attack unless outnumbered by 2 or more to 1.'
+    )
 ),
 CreatureInfo( name = 'Doppleganger',
     hd = (4,4),
@@ -2017,7 +2116,10 @@ CreatureInfo( name = 'Doppleganger',
     m_resist = 0.0,
     align = 'NN',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('These bipedal creatures are of mutable form so that they are able to shape themselves into the likeness of any humanoid creature of from 4\' to 8\' tall which they observe. Having become the double for a person they attempt to do away with that victim and assume its place. If unable to do this, the doppleganger will simply attack, counting on the confusion engendered to make it indistinguishable from the creature it is mimicking (surprise means this works). Dopplegangers are able to <a href="/spells/esp-magic-user-lvl-2/"><i>ESP</i></a> and imitate with 90% accuracy. They are subject to neither <a href="/spells/sleep-magic-user-lvl-1/"><i>sleep</i></a> nor <i>charm</i> spells. Despite having only 4 hit dice they make saving throws as if they were 10th level fighting men.\n\n'
+        '<i>Note</i>: A doppleganger actually forms itself into the likeness of the clothing and equipment of the imitated creature as well as the physical features thereof.'
+    )
 ),
 CreatureInfo( name = 'Black Dragon',
     hd = (6,8),
@@ -2036,7 +2138,10 @@ CreatureInfo( name = 'Black Dragon',
     align = 'NE',
     size = 'L',
     aliases = ['Draco Causticus Spetum'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('The black dragon is typically found in miasmal swamps or marshes, although they also inhabit subterranean lairs as well, for black dragons always seek to lair in deep, dark caves. They tend towards the mid point between law and chaos in their evil.\n\n'
+        'The black dragon attacks with a claw/claw/bite or breathes - in this case spitting acid in a ½" wide stream which extends 6" in a straight line beginning at the height of the dragon\'s head and traveling in the direction and at the angle which the monster\'s head was facing at the time of discharging the acid. Black dragons which can speak and are capable of using magic can employ one first level spell for each stage of their maturity, i.e. 1-8 spells. Roll randomly to determine which spells they know. The spells known are a special form of the ordinary spells which require only a spoken component, but each can be employed but once per day. Repeat spells are possible if random rolls so indicate.'
+    )
 ),
 CreatureInfo( name = 'Blue Dragon',
     hd = (8,10),
@@ -2055,7 +2160,11 @@ CreatureInfo( name = 'Blue Dragon',
     align = 'LE',
     size = 'L',
     aliases = ['Draco Electricus'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Blue dragons typically prefer deserts and arid lands; like others of their kind their lair is always some vast cave or underground cavern.\n\n'
+        'The attack of a blue dragon is a claw/claw/bite or use of its breath weapon. A blue dragon is capable of discharging a bolt of electricity (lightning) in a straight line ½" wide by 10" long. This discharge is always of the stated proportion.\n\n'
+        'Speaking blue dragons which are able to use spells do so as follows: For each stage of maturity from 1st through 3rd they gain a 1st level spell. From the 4th through 6th stages they gain a second level. At the 7th and 8th brackets they gain a 3rd level spell. Thus, an <i>ancient</i> blue dragon would have 3 1st level, 3 2nd level, and 2 3rd level spells. Determine all such spells randomly; if the same spell is rolled twice the dragon is able to use the spell twice per day.'
+    )
 ),
 CreatureInfo( name = 'Brass Dragon',
     hd = (6,8),
@@ -2074,7 +2183,11 @@ CreatureInfo( name = 'Brass Dragon',
     align = 'CG',
     size = 'L',
     aliases = ['Draco Impudentus Gallus'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Sandy desert regions are the typical habitat of brass dragons, whose cavernous lairs are often found therein. Brass dragons are quite forward and officious, and they love to converse. They are rather selfish and tend towards neutrality because of this.\n\n'
+        'The brass dragon attacks with a claw/claw/bite routine or by breathing either of two weapons - a cone of <i>sleep</i> gas which extends 7" from the creature\'s mouth to a terminating diameter of 2", or a billowing cloud of <i>fear</i> gas 4" wide by 5" across by 2" deep (ground upwards). Creatures in these gaseous clouds must save versus dragon breath regardless of their level or fall asleep/flee in fear. If the dragon is small sized, saves are at +2, and if the dragon is of huge size saving throws are at -2, from the number rolled.\n\n'
+        'If a brass dragon can speak and employ spells, it will gain a first level spell at each odd numbered stage of maturity it attains, and a second level spell at each even numbered age. As is usual with dragons, determine spells known by random selection.'
+    )
 ),
 CreatureInfo( name = 'Bronze Dragon',
     hd = (8,10),
@@ -2093,7 +2206,11 @@ CreatureInfo( name = 'Bronze Dragon',
     align = 'LG',
     size = 'L',
     aliases = ['Draco Gerus Bronzo'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Bronze dragons prefer to dwell in subterranean lairs near substantial bodies of water such as lakes or seas. Despite their love of wealth, bronze dragons are basically of beneficent nature. They often assume the form of some animal in order to observe the affairs of humans.\n\n'
+        'The attack of a bronze dragon is either a claw/claw/bite or either of two breath weapons - a bolt of lightning 10" long and ½" wide, or a <i>repulsion</i> gas cloud 2" long by 3" wide by 3" high which affects those within it just as a <a href="/spells/repulsion-magic-user-lvl-6/"><i>repulsion</i></a> spell (move away from the dragon for 6 melee rounds unless a saving throw versus dragon breath is made).\n\n'
+        'Magic-using bronze dragons gain a first level spell at their 1st and 2nd growth stages, an additional second level spell at their 3rd and 4th growth stages, third level spells at the 5th and 6th growth stages, and <i>very old</i> and <i>ancient</i> dragons gain additional spells of the 4th level; thus an <i>ancient</i> bronze dragon would know two each of 1st through 4th level spells. These spells should be determined randomly.'
+    )
 ),
 CreatureInfo( name = 'Chromatic Dragon',
     hd = (0,0),
@@ -2112,7 +2229,13 @@ CreatureInfo( name = 'Chromatic Dragon',
     align = 'LE',
     size = 'L',
     aliases = ['Tiamat'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Tiamat rules the first plane of the Nine Hells where she spawns all of evil dragonkind. She hates all good as fiercely as she loves cruelty and hoards wealth. She is seldom (10%) outside her lair, but occasionally she comes to earth to place a new dragon or to seek more treasure. She can travel astrally or ethereally.\n\n'
+        'Although her sheer size prevents claw attacks, Tiamat can bite with all five of her heads and sting her tail at the same time, breathe with one or more of these heads or cast spells with one or more heads at the same time. Tiamat\'s heads are white, black, green, blue, and red. Her breath weapons correspond to the color of each head, exactly duplicating the size and shape of the appropriate dragon\'s breath weapon and doing damage equal to a huge, ancient dragon of the species applicable, i.e. 56 hit points frost (cold) damage, 64 hit points acid damage, 72 hit points gas (chlorine) damage, 80 hit points electrical (lightning) damage, and 88 hit points fire damage. She can use each breath weapon but once per day. Note that each of her heads is also capable of employing two spells. Tiamat\'s white head is able to cast two 1st level spells, her black head two 2nd level spells, her green head two 3rd level spells, her blue head two 4th level spells, and her red head two 5th level spells.\n\n'
+        'Each of Tiamat\'s heads can withstand 16 hit points damage before going out of commission until regeneration replaces it the following day. If her body takes more than 48 hit points damage she is dispelled to her own plane of Hell (or slain if fought in Hell) just as any other devil.\n\n'
+        'When encountered in her lair, Tiamat will always have five consort/guards with her - one <i>huge</i>, <i>adult</i> male dragon of the white, black, green, blue, and red types respectively. They are all able to speak and use spells, if applicable.\n\n'
+        '<i>Description</i>: Tiamat\'s heads have already been noted. These colors run the length of each neck and into the forepart of the body as stripes, gradually blending to three stripes of gray, blue-green, and purple over her back and hind quarters, and merging into a muddy dark brown tail. Her underbelly and legs are greenish white fading into her upper body colors.'
+    )
 ),
 CreatureInfo( name = 'Copper Dragon',
     hd = (7,9),
@@ -2131,7 +2254,11 @@ CreatureInfo( name = 'Copper Dragon',
     align = 'CG',
     size = 'L',
     aliases = ['Draco Comes Stabuli'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Copper dragons prefer to inhabit arid rocky regions, liking warmer climes in which to locate their cavern or cave lairs. They tend to be rather selfish, and thus many copper dragons are somewhat neutral in their outlook if gain is concerned.\n\n'
+        'The normal attack of this kind of dragon is either a claw/claw/bite or the use of one or the other of its breath weapons - a discharge of acid exactly similar to that of a <a href="/creatures/black-dragon">black dragon</a> (7" x ½") or a cloud of gas 3" long by 2" wide by 2" deep which will <i>slow</i> any creatures therein unless they make their saving throw vs. dragon breath. The slowing effect causes creatures to move/attack at one-half normal, and it lasts for 6 melee rounds.\n\n'
+        'Those copper dragons able to use magic gain a 1st level spell for each of their first three age brackets, a 2nd level spell in addition at each bracket of the next three ages, and at the last two an additional 3rd level at each. Thus, a magic-using <i>ancient</i> copper dragon would know three 1st level spells, three 2nd level spells, and two 3rd level spells.'
+    )
 ),
 CreatureInfo( name = 'Gold Dragon',
     hd = (10,12),
@@ -2150,7 +2277,10 @@ CreatureInfo( name = 'Gold Dragon',
     align = 'LG',
     size = 'L',
     aliases = ['Draco Orientalus Sino Dux'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Gold dragons are able to dwell in any clime, but their lairs are always of solid stone - whether a cave or a castle. Although they love precious metals and gems and use jewels and pearls as nourishment, all gold dragons are lawful, just and good. They are able to assume the form of animals or the guise of humanity, for they can <i>polymorph</i> themselves without harm. It is in some other form that they are typically encountered.\n\n'
+        'The attack of a gold dragon can be a claw/claw/bite routine or one of two breath weapons - fire in a 9" x 3" cone, or chlorine gas in a 5" x 4" x 3" cloud. Also, a gold dragon is able to cast spells of 1st through 6th level. At the <i>very young</i> age the creature has but a single 1st level spell, as a <i>young</i> dragon it has two such spells. Thereafter it gains two spells of progressively higher level at each new age bracket through <i>old</i>. At <i>very old</i> and <i>ancient</i> age they gain use of a 6th level spell. Thus, at <i>ancient</i> age a gold dragon knows two of 1st through 6th level spells in addition to being able to <a href="/spells/polymorph-self-magic-user-lvl-4/"><i>polymorph self</i></a> three times per day. As gold dragons are so intelligent their spells are always of the better sort, and at least half of them actually have regular spell books.'
+    )
 ),
 CreatureInfo( name = 'Green Dragon',
     hd = (7,9),
@@ -2169,7 +2299,11 @@ CreatureInfo( name = 'Green Dragon',
     align = 'LE',
     size = 'L',
     aliases = ['Draco Chlorinous Nauseous Respiratorus'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('The race of green dragons prefer to locate their underground lairs in or near woods or forests of the bleaker wilder sort if possible. They are very nasty tempered and thoroughly evil.\n\n'
+        'A green dragon can attack by a claw/claw/bite routine or by breathing a cloud of poisonous chlorine gas. The gas cloud is 5" long, 4" wide, and 3" high.\n\n'
+        'Those talking green dragons able to use magic gain a 1st level spell for each of their first four ages, and a 2nd level spell for each of the successive ages, until a maximum of four 1st level and four 2nd level spells are known. Select these spells by random determination.'
+    )
 ),
 CreatureInfo( name = 'Platinum Dragon',
     hd = (0,0),
@@ -2187,7 +2321,12 @@ CreatureInfo( name = 'Platinum Dragon',
     align = 'LG',
     size = 'L',
     aliases = ['Bahamut'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('The King of Good dragons, Bahamut the platinum dragon, dwells in a great fortified palace behind the east wind. (No one knows for certain if this place is on the elemental plane of air or some plane betwixt it and the Seven Heavens or Tri-Paradises, save Bahamut and his court.) About one-quarter of the time he roams the earth in the guise of human or nearly any other form he chooses, for Bahamut is able to change shape freely. He can travel astrally or ethereally.\n\n'
+        'In attacking, the platinum dragon can opt to fight with a pair of clawing attacks and a bite, or he can breathe any one of three forms of breath weapon - <i>cold</i> in a cone 8" long, with a base diameter of 3", a cloud of vapor which causes persons therein to save versus dragon breath or lose their substance and assume <i>gaseous form</i> for 12 full turns, or a <i>sonic vibration</i> which will <a href="/spells/disintegrate-magic-user-lvl-6/"><i>disintegrate</i></a> up to 150 hit points. He is capable of using each breath weapon twice per day. All saving throws against his breath are at a -3 due to the powerful nature of their originator.\n\n'
+        'Bahamut is able to employ any spells of 1st through 7th level; two each of magical and 1 each of clerical spells per day, or a maximum of 21 spells. He possesses books listing all known magic spells of these levels.\n\n'
+        'There are seven <i>huge ancient</i> <a href="/creatures/gold-dragon">gold dragons</a> of highest abilities and loyalty who serve as guards, companions, and advisors to Bahamut. He seldom (10%) is without them. (A sage tells of encountering Bahamut in the guise of an old hermit, with seven canaries singing sweetly as they flitted nearby. The sage relates that he would never have known he was anything other than what he appeared to be except that a group of ogres and trolls happened by much to their sorrow...)'
+    )
 ),
 CreatureInfo( name = 'Red Dragon',
     hd = (9,11),
@@ -2206,7 +2345,11 @@ CreatureInfo( name = 'Red Dragon',
     align = 'CE',
     size = 'L',
     aliases = ['Draco Conflagratio Horriblis'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('The red dragon is usually found dwelling in great hills or mountainous regions. As with most others of this species, they make their lairs in subterranean caves and similar places. They are very greedy and avaricious. Of all evil dragons, this sort is the worst, save for <a href="/creatures/chromatic-dragon">Tiamat</a> herself.\n\n'
+        'A red dragon is able to attack by means of a claw/claw/bite routine or by breathing a cone of fire, 9" long by 3" base diameter. Speaking red dragons are 40% likely to be able to employ spells.\n\n'
+        'For each age bracket the dragon has attained it is able to use an additional spell. At the first two ages the red dragon gains a 1st level spell, at the next two a 2nd level spell is gained, at the fifth and sixth ages a 3rd level spell is gained, and at the last two ages a 4th level spell is gained. Thus an <i>ancient</i> red dragon would be able to employ two spells each of spell levels 1 through 4.'
+    )
 ),
 CreatureInfo( name = 'Silver Dragon',
     hd = (9,11),
@@ -2225,7 +2368,11 @@ CreatureInfo( name = 'Silver Dragon',
     align = 'LG',
     size = 'L',
     aliases = ['Draco Nobilis Argentum'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Silver dragons select mountain peaks, clouds, and similar locales in which to establish their abode. It is claimed that this dragon can be found in the home of the King of Good Dragons as well as behind other winds as well. Much as a gold dragon, these creatures are able to <a href="/spells/polymorph-self-magic-user-lvl-4/"><i>polymorph</i></a> themselves in order to appear as an animal or human (typically a kindly old man or fair damsel if the latter).\n\n'
+        'When in combat a silver dragon is able to attack with claw and fang or use either of its two breath weapons - a cone of frost (cold) 8" long with a 3" base, or a cloud of paralyzing gas 5" long by 4" wide by 2" high which will take immediate effect upon all within it unless they save versus dragon breath.\n\n'
+        'Silver dragons who are able to use magic are able to employ a maximum of ten spells. At each of the first two ages they gain two 1st and 2nd level spells respectively. At each age thereafter they gain an additional spell - 3rd level at <i>subadult</i> and <i>young adult</i>, 4th level at <i>adult</i> and <i>old</i>, and 5th level if <i>very old</i> and <i>ancient</i>. Thus, a <i>very young</i> silver dragon of this ability would know two 1st level spells, a <i>young</i> one would know two 1st and 2nd level spells, etc. Furthermore, 25% of magic-using silver dragons have books of spells, so they may select spells for use rather than knowing only a limited number per level.'
+    )
 ),
 CreatureInfo( name = 'White Dragon',
     hd = (5,7),
@@ -2244,7 +2391,11 @@ CreatureInfo( name = 'White Dragon',
     align = 'CE',
     size = 'L',
     aliases = ['Draco Rigidus Frigidus'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('White dragons favor chilly or cold regions in which to dwell. They lair in icy caves or deep subterranean places. Although not as intelligent as most other dragons, they are as evil and greedy as any.\n\n'
+        'The white dragon is able to attack with claw/claw/bite or with its breath weapon - a cone of cold (frost) 7" long with a base diameter of 2½".\n\n'
+        'Rare magic-using white dragons are able to employ a maximum of four 1st level spells, gaining one at each even-numbered (2nd, 4th, 6th, 8th) age bracket, i.e. one spell at <i>young</i> age, a second at <i>young adult</i> stage, a third at <i>old</i> age, and the fourth at <i>ancient</i> status. To determine spells usable, select randomly from the 1st level spell list. Duplication is possible, merely indicating that the dragon can use the same spell twice, thrice, or even four times.'
+    )
 ),
 CreatureInfo( name = 'Dragonne',
     hd = (9,9),
@@ -2262,7 +2413,8 @@ CreatureInfo( name = 'Dragonne',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'A weird cross between a <a href="/creatures/brass-dragon">brass dragon</a> and a giant <a href="/creatures/lion/">lion</a>, the dragonne is both very rare and mostly solitary. The beast fights with its huge claws and great fangs; but its most dreaded weapon is its horrible roar. This sound causes <i>weakness</i> to all within 12" of the monster unless they save against paralyzation. Furthermore, any creatures within 3" or less of the dragonne will be deafened. Both effects of the dragonne\'s roar last for from 2-12 melee rounds. Those weak from fear from the sound lose 50% of their strength; deafened creatures cannot hear any sound and will strike at -1 on their attack dice due to disorientation. Dragonnes are able to fly only short distances (1-3 turns) with their small wings. They speak the language of brass dragons and sphinxes.'
 ),
 CreatureInfo( name = 'Dragon Turtle',
     hd = (12,14),
@@ -2279,7 +2431,10 @@ CreatureInfo( name = 'Dragon Turtle',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Perhaps the most feared of water creatures is the dragon turtle. They are found in very large rivers and lakes as well as in the sea. Its thick shell makes it nearly impossible to harm, while its powerful claws and jaws easily rip opponents to shreds. Worse still, they can belch forth a cloud of scalding steam which covers an area 6" long, 4" wide, and 4" high. This steam causes damage equal to the number of hit points the dragon turtle has, reduced by one-half if the victim makes its saving throw. Dragon turtles vary in size, age and hit points per die in the same manner as dragons. If a dragon turtle comes up under even a large ship they are likely to capsize the vessel (chances are 95% for a small ship to 50% for a large one). They speak their own tongue.\n\n'
+        '<i>Description</i>: The shell of the dragon turtle is deep green with silver highlights, its legs and tail lighter green with golden highlights, its neck is green/gold, with golden highlights, and its head and crest are green/gold.'
+    )
 ),
 CreatureInfo( name = 'Dryad',
     hd = (2,2),
@@ -2296,7 +2451,8 @@ CreatureInfo( name = 'Dryad',
     m_resist = 0.0,
     align = 'NN',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'These beautiful and alluring tree sprites are found only in the most secluded places. They are found only near oak trees and never more than 36" from their individual tree of which they are actually a part. A dryad is shy and non-violent. Unless surprised, a dryad can disappear by stepping into a tree, slipping out on a side unseen by the intruder(s), and <a href="/spells/dimension-door-magic-user-lvl-4/"><i>dimension door</i></a> to her own tree. Dryad trees are distinguished only by their large size; they do not radiate any magic. If seriously threatened, or if near a male with a 16 or greater charisma, the dryad will use her powerful <a href="/spells/charm-person-magic-user-lvl-1/"><i>charm person</i></a> spell which may be cast up to three times per day, once per melee round, with a minus 3 on the victim\'s saving throw. If a person is taken away by a dryad, there is a 50% chance they will never return, and if they do return it will be from 1-4 years later. Dryads can speak their own tongue, elven, pixieish, sprite, and also speak with plants. If carefully approached they might be persuaded to aid a person or party. Dryads have exact knowledge of the wood or forest in which they dwell.'
 ),
 CreatureInfo( name = 'Dwarf',
     hd = (1,1),
@@ -2312,7 +2468,28 @@ CreatureInfo( name = 'Dwarf',
     align = 'LG',
     size = 'S',
     aliases = ['Hill Dwarf', 'Mountain Dwarf'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Rocky hills are the favorite abode of these sturdy creatures. Dwarves typically band together in clans which are not mutually exclusive or hostile but are competitive. These creatures are able to operate in two or more classes simultaneously, so fight/clerics, for example, are possible. Note also that the level of proficiency may vary between the two or more classes one of these creatures is capable of performing in.\n\n'
+        'For every 40 dwarves in a group there will be a fighter of 2nd through 6th level (to determine level roll a 6-sided die, 1 equalling 2 and the other numbers indicating the level). If 160 or more dwarves are in a group there will be in addition one 6th, and one 4th level fighter as chief, and lieutenant, of the group. If 200 or more are encountered there will be a fighter/cleric of 3rd to 6th level fighting ability and 4th to 7th level clerical ability in addition to the others. If 320 or more dwarves are encountered there will be the following additional dwarves with the group: an 8th level fighter, a 7th level fighter, a 6th level fighter/7th level cleric, and two 4th level fighter/clerics. If encountered in thier lair (home) there will be in addition from 2-12 fighters of from 2nd to 5th level, from 2-8 fighter/clerics of from 2nd to 4th level (each category), and females and young equal to 50% and 25% respectively of the number of adult males. A dwarven lair is always an underground complex in solid rock.\n\n'
+        'Dwarves typically are armored with chainmail and shield. They have the following typical weaponing:\n\n'
+        '<table>'
+        '<tr><th>Weaponry</th><th>Chance</th></tr>'
+        '<tr><td>Sword & light crossbow</td><td>15%</td></tr>'
+        '<tr><td>Sword & pole arm</td><td>10%</td></tr>'
+        '<tr><td>Sword & spear</td><td>20%</td></tr>'
+        '<tr><td>Axe & heavy crossbow</td><td>10%</td></tr>'
+        '<tr><td>Axe & hammer</td><td>25%</td></tr>'
+        '<tr><td>Axe & mace</td><td>10%</td></tr>'
+        '<tr><td>Hammer & pick</td><td>10%</td></tr>'
+        '</table>\n\n'
+        'Higher level fighters and fighter/clerics have a 10% chance per level of having magic armor and/or weapons. For fighter/clerics also check at 10% per clerical level for 1-4 additional items (potion, clerical scroll, ring, wand/staff/rod, misc. magic) usable by clerics. All dwarves above normal level will have plate armor and shield.\n\n'
+        'Dwarves are 60% likely to have tamed animals to serve as guards in their lair: 5-20 <a href="/creatures/wolf">wolves</a> (25%) or 2-8 <a href="/creatures/bear">brown bears</a> (75%).\n\n'
+        'Due to their great hatred of goblins, orcs, and hobgoblins, all dwarves gain a bonus of +1 on their dice rolls to hit these opponents. When dwarves are in melee with <a href="/creatures/ogre">ogres</a>, <a href="/creatures/troll">trolls</a> and giants, these monsters must deduct 4 from their dice roll to hit their dwarven opponents due to the size and skill of the latter in combatting these huge creatures.\n\n'
+        'All dwarves are resistant to both magic and poison; they therefore make saving throws at 4 levels above their actual level. Dwarves can see in the dark (infravision) noting monsters at a distance of 60\'. Because of their mining skills, dwarves are good (50% to 75% likely) at detecting passages which slope upwards or downwards, sliding or shifting walls or rooms, new construction, approximate depth, or unusual stonework.\n\n'
+        'Dwarves speak their own tongue and those of <a href="/creature/gnome">gnomes</a>, <a href="/creature/goblin">goblins</a>, <a href="/creatures/kobold">kobolds</a>, and <a href="/creatures/orc">orcs</a>. It is 75% likely that dwarves will also speak the common language.\n\n'
+        '<i>Description</i>: Dwarves are typically deep tan to light brown of skin, with ruddy cheeks and bright eyes (almost never blue). Their hair is brown, black or gray. They favor earth tones with small bits of bright color in their clothing. Although only 4 or so feet tall, they weigh no less than 150 pounds due to their stocky muscular build. They live for no less than 350 years on the average.\n\n'
+        '<i>Mountain Dwarves</i>: These creatures are similar to their cousins, the hill dwarves, detailed above. The only differences are size (4½\'+ tall), hit dice (1+1), and coloration (typically lighter with brown hair). They employ fewer crossbows (20% maximum) and more spears (30%). Mountain dwarves with 16 strength can work up to 7th level, with 17 strength to 8th level, and with 18 strength to 9th level. Mountain dwarves have a life span of 400 or more years.'
+    )
 ),
 CreatureInfo( name = 'Giant Eagle',
     hd = (4,4),
