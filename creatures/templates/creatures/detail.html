@@ -1,5 +1,6 @@
 {% extends "home/base.html" %}
-
+{% load static %}
+        
 {% block title_suffix %}
  - {{creature.name}} Detail
 {% endblock %}
@@ -16,13 +17,7 @@
     
     <div class="container-fluid">
     <div class="row">
-        <div class="col-3">
-        {% load static %}
-        {% with 'creatures/images/'|add:creature.slug|add:'.png' as image_path %}
-        <img src ="{% static image_path %}" class="img-fluid" alt="{{creature.name}}"/>
-        {% endwith %}
-        </div>
-        <div class="col-9">
+        <div class="col-6">
             Number Appearing:
             {% if creature.min_appearing != creature.max_appearing %}
                 {{ creature.min_appearing }} -
@@ -83,7 +78,12 @@
             {% if creature.xp_per_hp %}
                 + {{creature.xp_per_hp}}/HP
             {% endif %}
-            </div>
+        </div>
+        <div class="col-6">
+        {% with 'creatures/images/'|add:creature.slug|add:'.png' as image_path %}
+        <img src ="{% static image_path %}" class="img-fluid h-100" alt=""/>
+        {% endwith %}
+        </div>
     </div>
     </div>
 
