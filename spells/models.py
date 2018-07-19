@@ -28,6 +28,7 @@ class SpellInfo(models.Model):
     saving_throw = models.CharField(max_length=75)
     source = models.CharField(max_length=50)
     description = models.TextField(default="Missing description")
+    commentary = models.TextField(default='')
 
     class Meta:
         ordering = ['spell_class','level','name']

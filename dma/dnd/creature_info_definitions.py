@@ -234,7 +234,7 @@ CreatureInfo( name = 'Baluchitherium',
     align = 'NN',
     size = 'L',
     source = SourceBook.MONSTER_MANUAL,
-    description = 'This creature is a prehistoric ancestor of the <a href="/creatures/rhinoceros>rhinoceros</a>. It is a huge herbivorous mammal with a tendency to charge at anything nearby in order to trample it. If two are encountered they will be a mated pair, if three are encountered the third will be a young baluchitherium (roll percentile dice to determine size).'
+    description = 'This creature is a prehistoric ancestor of the <a href="/creatures/rhinoceros">rhinoceros</a>. It is a huge herbivorous mammal with a tendency to charge at anything nearby in order to trample it. If two are encountered they will be a mated pair, if three are encountered the third will be a young baluchitherium (roll percentile dice to determine size).'
 ),
 CreatureInfo( name = 'Barracuda',
     hd = (1,3),

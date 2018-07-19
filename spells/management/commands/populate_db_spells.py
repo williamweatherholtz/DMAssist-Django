@@ -31,6 +31,7 @@ class Command(BaseCommand):
                 duration_per_level = spell.duration_per_level.decisegments,
                 source = spell.sourcebook.value,
                 description = spell.description,
+                commentary = spell.special_description,
                 saving_throw = spell.save,
                 aoe = spell.aoe,
                 range = spell.range
