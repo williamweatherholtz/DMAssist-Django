@@ -7,7 +7,7 @@
 {% block content %}
 
     
-    <form class="w3-container" action="{% url 'random_encounters:index' %}" method="POST">
+    <form class="w3-container" action="{% url 'random_encounters:travel' %}" method="POST">
         {% csrf_token %}
         <table>
         {{ form }}

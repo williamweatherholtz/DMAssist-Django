@@ -4,12 +4,17 @@ from dma.dnd.random_encounters import rollMultipleDays
 
 class TravelResult():
     def __init__(self, days, temp, pop, terrain):
+        self.travel_time = days 
+        
         if pop == 'Wilderness':
-            self.encounters = rollMultipleDays(days, '{} Wilderness {}'.format(temp, terrain), 'Wilderness')
-        elif pop == 'Rural':
-            self.encounters = rollMultipleDays(days, '{} Civilized {}'.format(temp, terrain), 'Sparse')
+            self.region = '{} Wilderness {}'.format(temp, terrain)
+            self.encounters = rollMultipleDays(days, self.region, 'Wilderness')
+        elif pop == 'Sparse':
+            self.region = '{} Civilized {}'.format(temp, terrain)
+            self.encounters = rollMultipleDays(days, self.region, 'Sparse')
         else:
-            self.encounters = rollMultipleDays(days, '{} Civilized {}'.format(temp, terrain), 'Dense')
+            self.region = '{} Civilized {}'.format(temp, terrain)
+            self.encounters = rollMultipleDays(days, self.region, 'Dense')
 
     def num_days_with_encounters(self):
         return len(self.encounters)

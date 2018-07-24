@@ -2508,7 +2508,10 @@ CreatureInfo( name = 'Giant Eagle',
     m_resist = 0.0,
     align = 'NN',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Giant eagles are found only in places where there are great bluffs, cliffs, mesas, or mountain crags to nest on. Their eyesight is such that they are never surprised unless encountered in their lair or at night. If they attack by diving 50 or more feet they add +4 to hit probability, do double claw damage (2-12/2-12), but get no beak attack. They can carry up to 2000 gold pieces at half speed.\n\n'
+        'If encountered outside their lair, giant eagles will typically ignore any good creatures but attack evil creatures which seem to be threatening. They are fairly friendly towards certain dwarves and elves. They have their own language and can also communicate through a limited from of telepathy. If encountered in their lair they will always be hostile. If there are young (50%) or eggs there they will attack any creature within 50\'. There will be 1-4 young per nest, 1 nest per 2 giant eagles. They can be tamed. Eggs sell on the open market for 500 to 800 gold pieces each.'
+    )
 ),
 CreatureInfo( name = 'Ear Seeker',
     hd = (0,0),
@@ -2524,7 +2527,8 @@ CreatureInfo( name = 'Ear Seeker',
     m_resist = 0.0,
     align = 'NN',
     size = 'S',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'Ear seekers are small insectoids which are found in wood. They live by eating dead cellulose, but they need warm places in which to lay their eggs, and they favor places like ears. If this creature enters a warm place, it will always lay 9-16 tiny eggs and then crawl out to die. When the eggs hatch (4-24 hours) the larvae eat the surrounding flesh, generally burrowing inwards to where the most food and body heat is, killing their host 90% of the time. A <a href="/spells/cure-disease-cleric-lvl-3/"><i>cure disease</i></a> spell will destroy the eggs.'
 ),
 CreatureInfo( name = 'Electric Eel',
     hd = (2,2),
@@ -2541,7 +2545,8 @@ CreatureInfo( name = 'Electric Eel',
     m_resist = 0.0,
     align = 'NN',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'Electric eels are found in warm fresh water. They will give off a jolt of electricity in a radius of 15\'. They are immune to electrical effects. Any creature within 5\' of the eel takes 3-24 hit points damage; within 5\' to 10\' the jolt delivers 2-16 hit points damage, and between 10\' to 15\' the jolt delivers 1-8 hit points. The eel can do this but once per hour (six turns). Marine species are reported to be twice the size and do twice the damage. They are typically aggressive only when approached too closely.'
 ),
 CreatureInfo( name = 'Giant Eel',
     hd = (5,5),
@@ -2558,7 +2563,8 @@ CreatureInfo( name = 'Giant Eel',
     m_resist = 0.0,
     align = 'NN',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'Giant eels are typically of the moray type. They have a nasty temper and teeth to match. Few (10%) are found in fresh water. Like other eels, they are water-dwellers, and are typically aggressive only when approached too closely.'
 ),
 CreatureInfo( name = 'Weed Eel',
     hd = (1,1),
@@ -2576,7 +2582,8 @@ CreatureInfo( name = 'Weed Eel',
     m_resist = 0.0,
     align = 'NN',
     size = 'S',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'Weed eels are masters of camoflauge, appearing as a patch of normal seaweed to any but a highly trained observer. They live in colonies, sharing food and home alike. Their bite is poisonous, and unless a saving throw is made the creature bitten will die. Weed eel colonies consist of a network of small (six to eight inch diameter) holes which all lead to several 6\' diameter tunnels, and the latter lead to a communal cave about 30\' long, 20\' wide, and 20\' high. The eels use small stones, coins, gems, metal, etc. to floor this cave with. Colonies are found in both fresh and salt water, typically in water depths of 25\' to 40\'. If an attempt is made to enter any hole, the eel to whom it belongs will always strike with incredible speed. If eels note the entrance of foreign creatures, they will leave their holes to protect the cave where young are raised. They are typically aggressive only when approached too closely.'
 ),
 CreatureInfo( name = 'Efreeti',
     hd = (10,10),
@@ -2593,7 +2600,14 @@ CreatureInfo( name = 'Efreeti',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('The efreet are creatures from the Elemental Plane of Fire, just as <a href="/creatures/djinni/">djinn</a> come from the Plane of Air. They are enemies of the djinn and will always attack when they encounter them. An efreeti can be forced to serve for a maximum of 1,001 days or by causing it to fulfil three wishes. They are not willing servants, and they will seek to pervert the intent of their masters by adhering to the letter of commands.\n\n'
+        'An efreeti is able to do the following once per day: <i>grant up to three <a href="/spells/wish-magic-user-lvl-9/">wishes</a></i> (and go free), <a href="/spells/invisibility-magic-user-lvl-2/"><i>become invisible</i></a>, <i>assume gaseous form</i>, <a href="/spells/detect-magic-magic-user-lvl-1/"><i>detect magic</i></a>, <a href="/spells/enlarge-magic-user-lvl-1/"><i>enlarge</i></a> (as a 10th level magic-user), <a href="/spells/polymorph-self-magic-user-lvl-4/"><i>polymorph self</i></a>, <i>create an illusion</i> with both visual and audial components which will last without concentration until magically dispelled or touched, or create a <a href="/spells/wall-of-fire-druid-lvl-5/"><i>wall of fire</i></a>. An efreeti can also <a href="/spells/produce-flame-druid-lvl-2/"><i>produce flame</i></a> or cause <a href="/spells/pyrotechnics-druid-lvl-3/"><i>pyrotechnics</i></a> as often as desired. Attacks based on fire do no harm to efreeti if the fire is of the "normal" sort; magical fire attack are at -1 on both "to hit" and damage dice.\n\n'
+        'Efreet can carry up to 7,500 gold pieces weight, afoot or flying, without tiring. They can carry double weight for only a limited time - three turns afoot or but one turn aloft. For each 1,500 gold pieces of weight under 15,000 add one turn to either walking or flying time permitted. After carrying excess weight the efreeto must rest for six full turns.\n\n'
+        'The fabled City of Brass, citadel of the Efreet, is on the plane from whence they come. Capture of an efreeti is possible there, but tens or even hundreds of efreet would possibly have to be faced also. Efreet are infamous for their dislike of servitude, their desire for revenge, their cruel nature, and their ability to mislead. A powerful Sultan rules the Efreet. He is served by many different sorts of nobles and officials (pashas, deys, amirs, valis, and maliks).\n\n'
+        'The efreet are able to communicate with any intelligent creature they encounter by means of a limited from of telepathy which enables them to understand and speak appropriately.\n\n'
+        'Efreet are able to travel the material, elemental, and astral planes.'
+    )
 ),
 CreatureInfo( name = 'Air Elemental',
     hd = (16,16),
@@ -12044,7 +12058,8 @@ CreatureInfo( name = 'Agathion',
     m_resist = 0.0,
     align = 'NG',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL_2
+    source = SourceBook.MONSTER_MANUAL_2,
+    aliases = ['Agathinon']
 ),
 CreatureInfo( name = 'Annis',
     hd = (7,7),
@@ -13867,7 +13882,7 @@ CreatureInfo( name = "Graz'zt",
     source = SourceBook.MONSTER_MANUAL_2,
     aliases = ['Demon Prince']
 ),
-CreatureInfo( name = 'Kostchtchie Demon Lord',
+CreatureInfo( name = 'Kostchtchie',
     hd = (0,0),
     hp = (96,96),
     lair = 0.25,
@@ -14040,7 +14055,7 @@ CreatureInfo( name = 'Movanic Deva',
     size = 'M',
     source = SourceBook.MONSTER_MANUAL_2
 ),
-CreatureInfo( name = 'Black Abishai',
+CreatureInfo( name = 'Abishai',
     hd = (8,8),
     hp = (0,0),
     num = (1,3),
@@ -14059,7 +14074,8 @@ CreatureInfo( name = 'Black Abishai',
     align = 'LE',
     size = 'L',
     source = SourceBook.MONSTER_MANUAL_2,
-    aliases = ['Lesser Devil']
+    aliases = ['Black Abishai','Lesser Devil'],
+    sub_creatures = ['Blue Abishai', 'Green Abishai', 'Red Abishai', 'White Abishai']
 ),
 CreatureInfo( name = 'Blue Abishai',
     hd = (5,5),
@@ -14080,7 +14096,8 @@ CreatureInfo( name = 'Blue Abishai',
     align = 'LE',
     size = 'M',
     source = SourceBook.MONSTER_MANUAL_2,
-    aliases = ['Lesser Devil']
+    aliases = ['Lesser Devil'],
+    parent_creature = 'Abishai'
 ),
 CreatureInfo( name = 'Green Abishai',
     hd = (6,6),
@@ -14101,7 +14118,8 @@ CreatureInfo( name = 'Green Abishai',
     align = 'LE',
     size = 'M',
     source = SourceBook.MONSTER_MANUAL_2,
-    aliases = ['Lesser Devil']
+    aliases = ['Lesser Devil'],
+    parent_creature = 'Abishai'
 ),
 CreatureInfo( name = 'Red Abishai',
     hd = (4,4),
@@ -14122,7 +14140,8 @@ CreatureInfo( name = 'Red Abishai',
     align = 'LE',
     size = 'S',
     source = SourceBook.MONSTER_MANUAL_2,
-    aliases = ['Lesser Devil']
+    aliases = ['Lesser Devil'],
+    parent_creature = 'Abishai'
 ),
 CreatureInfo( name = 'White Abishai',
     hd = (7,7),
@@ -14143,7 +14162,8 @@ CreatureInfo( name = 'White Abishai',
     align = 'LE',
     size = 'M',
     source = SourceBook.MONSTER_MANUAL_2,
-    aliases = ['Lesser Devil']
+    aliases = ['Lesser Devil'],
+    parent_creature = 'Abishai'
 ),
 CreatureInfo( name = 'Amon',
     hd = (0,0),
@@ -14943,7 +14963,7 @@ CreatureInfo( name = 'Drider',
     size = 'L',
     source = SourceBook.MONSTER_MANUAL_2
 ),
-CreatureInfo( name = 'Duergar (Gray Dwarf)',
+CreatureInfo( name = 'Duergar',
     hd = (1,1),
     hp = (2,2),
     num = (2,8),
@@ -14957,7 +14977,8 @@ CreatureInfo( name = 'Duergar (Gray Dwarf)',
     m_resist = 0.0,
     align = 'LE',
     size = 'S',
-    source = SourceBook.MONSTER_MANUAL_2
+    source = SourceBook.MONSTER_MANUAL_2,
+    aliases = ['Gray Dwarf']
 ),
 CreatureInfo( name = 'Dustdigger',
     hd = (4,4),
@@ -15190,7 +15211,7 @@ CreatureInfo( name = "Deadly Executioner's Hood",
     source = SourceBook.MONSTER_MANUAL_2,
     parent_creature = "Executioner's Hood"
 ),
-CreatureInfo( name = 'Small Falcon',
+CreatureInfo( name = 'Falcon',
     hd = (1,1),
     hp = (-1,-1),
     num = (1,2),
@@ -15208,7 +15229,9 @@ CreatureInfo( name = 'Small Falcon',
     m_resist = 0.0,
     align = 'NN',
     size = 'S',
-    source = SourceBook.MONSTER_MANUAL_2
+    source = SourceBook.MONSTER_MANUAL_2,
+    aliases = ['Small Falcon', 'Small Hawk'],
+    sub_creatures = ['Large Falcon']
 ),
 CreatureInfo( name = 'Large Falcon',
     hd = (1,1),
@@ -15228,7 +15251,9 @@ CreatureInfo( name = 'Large Falcon',
     m_resist = 0.0,
     align = 'NN',
     size = 'S',
-    source = SourceBook.MONSTER_MANUAL_2
+    source = SourceBook.MONSTER_MANUAL_2,
+    aliases = ['Large Hawk'],
+    parent_creature = 'Falcon'
 ),
 CreatureInfo( name = 'Firefriend',
     hd = (1,1),
@@ -18864,7 +18889,8 @@ CreatureInfo( name = 'Squealer',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL_2
+    source = SourceBook.MONSTER_MANUAL_2,
+    sub_creatures = ['Young Squealer']
 ),
 CreatureInfo( name = 'Young Squealer',
     hd = (0,0),
@@ -18879,7 +18905,8 @@ CreatureInfo( name = 'Young Squealer',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL_2
+    source = SourceBook.MONSTER_MANUAL_2,
+    parent_creature = 'Squealer'
 ),
 CreatureInfo( name = 'Giant Black Squirrel',
     hd = (1,1),
@@ -19750,7 +19777,8 @@ CreatureInfo( name = 'Giant Vulture',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL_2
+    source = SourceBook.MONSTER_MANUAL_2,
+    parent_creature = 'Vulture'
 ),
 CreatureInfo( name = 'Vulture',
     hd = (1,1),
@@ -19769,7 +19797,8 @@ CreatureInfo( name = 'Vulture',
     m_resist = 0.0,
     align = 'NN',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL_2
+    source = SourceBook.MONSTER_MANUAL_2,
+    sub_creatures = ['Giant Vulture']
 ),
 CreatureInfo( name = 'Weasel',
     hd = (0,0),

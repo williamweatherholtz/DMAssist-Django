@@ -1,6 +1,9 @@
 {% extends 'home/base.html' %}
 
 {% block content %}
+    <b>{{travel_encounters.travel_time}} days of travel in {{travel_encounters.region}}:</b>
+    <br/>
+    <br/>
 
     {% if travel_encounters.encounters %}
         {% for day in travel_encounters.encounters %}

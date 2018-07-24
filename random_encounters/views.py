@@ -5,7 +5,7 @@ from django.shortcuts import render, redirect
 from .forms import TravelForm
 from .models import TravelResult
 
-def index_view(request):
+def travel_view(request):
     if request.method == 'POST':
         form = TravelForm(request.POST)
         if form.is_valid():
@@ -18,7 +18,7 @@ def index_view(request):
         form = TravelForm()
         
     return render(
-        request, 'random_encounters/index.html',
+        request, 'random_encounters/travel.html',
         {'form': form}
     )
         

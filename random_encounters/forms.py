@@ -21,8 +21,8 @@ class TravelForm(forms.Form):
         required = True,
         choices = [
             ('Wilderness', 'Wilderness'),
-            ('Rural', 'Rural'),
-            ('Urban', 'Urban')
+            ('Sparse', 'Sparse'),
+            ('Dense', 'Dense')
         ]
     )
     
