@@ -2097,7 +2097,7 @@ CreatureInfo( name = 'Dolphin',
     align = 'LG',
     size = 'M',
     source = SourceBook.MONSTER_MANUAL,
-    description = ('Most dolphins simply roam the oceans in nomadic schools. A small number (10%), however, have formed underwater communities, and if one is located it is 75% probable that there will be from 1-4 additional communities of dolphins within a 5 mile radius. Communal dolphins will have from 2-5 <a href="/creatures/swordfish">swordfish</a> or 1-3 <a href="/creatures/narwhale>narwhales</a>, depending on the climatic region, as guards.\n\n'
+    description = ('Most dolphins simply roam the oceans in nomadic schools. A small number (10%), however, have formed underwater communities, and if one is located it is 75% probable that there will be from 1-4 additional communities of dolphins within a 5 mile radius. Communal dolphins will have from 2-5 <a href="/creatures/swordfish">swordfish</a> or 1-3 <a href="/creatures/narwhale">narwhales</a>, depending on the climatic region, as guards.\n\n'
         'Dolphins will attack any creature which threatens them, although they will help humans in distress. They particularly hate <a href="/creatures/shark">sharks</a> of all sorts and will attack unless outnumbered by 2 or more to 1.'
     )
 ),
@@ -2624,7 +2624,10 @@ CreatureInfo( name = 'Air Elemental',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Air elemental\'s only mode of locomotion is by "flying". They can, of course, move at slower than the speed listed. If in combat in the air, they gain a +1 on hit probability and a +2 on each die of damage they cause. Upon command an air elemental can form a whirlwind - a truncated reverse cone, with a 2" bottom diameter, a 6" top diameter, and a height in inches equal to the elemental\'s number of hit dice, i.e. 8", 12" or 16". If the full height of the whirlwind can\'t be attained due to some overhead obstruction, the whirlwind is only half strength. A full strength air elemental whirlwind lasts for 1 melee round, sweeps away and kills all creatures under three hit dice, and causes 2-16 hit points of damage on all non-aerial creatures which it fails to kill outright. Formation of this whirlwind or dissipation of it requires one full turn.\n\n'
+        'On the elemental plane of air can be found certain intelligent air elementals which have special abilities beyond the above. Some are stronger than the most powerful of conjured elementals. Their queen is both powerful and has certain magical abilities.'
+    )
 ),
 CreatureInfo( name = 'Earth Elemental',
     hd = (16,16),
@@ -2639,7 +2642,10 @@ CreatureInfo( name = 'Earth Elemental',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('These powerful creatures travel rather slowly, and in order to cross water they must travel through the ground and go under the bed of the body of water (possibly a long trip). They score full damage against any creature which rests on the earth, -2 on each die of damage against other opponents (flying, levitating, etc.). Against constructions built on stone or earth they act as a super battering ram, causing 2-8 points of structural damage (a typical cottage having about 7 structural points). They can be summoned from earth or stone.\n\n'
+        'On the elemental plane of earth there exists a boss rumored to be of astounding size.'
+    )
 ),
 CreatureInfo( name = 'Fire Elemental',
     hd = (8,8),
@@ -2654,7 +2660,10 @@ CreatureInfo( name = 'Fire Elemental',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Fire elementals are terrible to behold and fierce opponents. They set fire to any inflammable material they touch. Against fire-using opponents they score -1 on their damage dice. Fire elementals are checked by water, being unable to pass over non-inflammable liquids.\n\n'
+        'On the elemental plane of fire exist many sorts of different fire elementals and similar beings. The ruler of fire elementals is reported to be known as the tyrant.'
+    )
 ),
 CreatureInfo( name = 'Water Elemental',
     hd = (8,8),
@@ -2670,9 +2679,12 @@ CreatureInfo( name = 'Water Elemental',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Water elementals are, for all practical purposes, limited to water operations, for they can stray only 6" from their element. It normally requires a considerable volume of water (or watery liquid) to create a water elemental - a pool of water of at least 1,000 cubic feet in volume, but several large barrels of ale or wine would suffice. Outside their element water elementals are less effective, and they lose 1 point from each die of damage they inflict. In a body of water they attack at full effect, move more swiftly, can upset small craft (1 ton of craft per hit die of elemental), or slow or stop craft (1 ton of vessel can be stopped per hit point of elemental; if greater tonnage, simply ratio the tons to hit points to find the rate the vessel is slowed).\n\n'
+        'There are many other elemental forms on the plane of water. Free-willed, intelligent beings are common as well as much more powerful elementals of the sort dealt with here. It is possible they are ruled by a god-like king.'
+    )
 ),
-CreatureInfo( name = 'Asiatic Elephant',
+CreatureInfo( name = 'Elephant',
     hd = (10,10),
     hp = (0,0),
     num = (1,20),
@@ -2686,8 +2698,14 @@ CreatureInfo( name = 'Asiatic Elephant',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    aliases = ['Asian Elephant'],
-    source = SourceBook.MONSTER_MANUAL
+    aliases = ['Asiatic Elephant'],
+    source = SourceBook.MONSTER_MANUAL,
+    sub_creatures = ['African Elephant'],
+    description = ('The elephant is found only in warm climates. They attack by means of a stab with two tusks, a grab and a squeeze with their trunk, and then two tramplings with their front feet. One opponent can be subject to no more than two of these attacks at the same time, but several opponents can be fought simultaneously - 6 or more man-sized opponents for example. <a href="/creatures/ogre">Ogre</a>-sized opponents will not be affected by trunk attacks. Elephants are relatively intelligent, and will not trunk-attack creatures which will harm their trunk, i.e. spikey, hot, etc. They fear fire. An elephant can easily break open a great gate by pushing unless the gate is spiked to prevent this. They can be trained to carry equipment and/or men.\n\n'
+        'Elephant tusks have a value of 100 to 600 gold piece value each. Each gold piece of value equals one-quarter pound of weight.\n\n'
+        'If more than one-half the possible number is encountered, there will be young animal in the herd - from 1 to 4, 20% to 70% mature. If a single animal is encountered it will be a rogue bull, with no fewer than 6 hit points per die, and a very nasty and aggressive temper. Rogues will attack 90% of the time.\n\n'
+        '(<i>See also <a href="/creatures/mammoth"><b>Mammoth</b></a> and <a href="/creatures/mastodon"><b>Mastodon</b></a> for information on elephants</i>).'
+    )
 ),
 CreatureInfo( name = 'African Elephant',
     hd = (11,11),
@@ -2704,7 +2722,8 @@ CreatureInfo( name = 'African Elephant',
     align = 'NN',
     size = 'L',
     aliases = ['Loxodont'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    parent_creature = 'Elephant'
 ),
 CreatureInfo( name = 'Elf',
     hd = (1,1),
@@ -2719,7 +2738,31 @@ CreatureInfo( name = 'Elf',
     m_resist = 0.0,
     align = 'CG',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Elves are of various sorts, including a marine race, most of which are detailed here. These creatures are able to operate in two or more classes simultaneously, so fighter/clerics, for example, are possible. Note also that the level of proficiency may vary between the two or more classes one of these creatures is capable of performed in. They have only a loose social structure based on independent bands which owe allegiance to an overlord (duke, princess, king or queen).\n\n'
+        'For every 20 elves in a band there will be one with above average fighting ability (2nd, or 3rd level). For every 40 elves encountered there will be one with this fighting ability plus 1st or 2nd level magic-user ability. If 100 or more elves are encountered there will be the following additional figures: a 4th level fighter/8th level magic-user, two 4th level fighter/5th level magic-user elves, and a 4th level fighter/4th level magic-user/4th level cleric. If over 160 elves are encountered their leaders will be a 6th level fighter/9th level magic-user, and a 6th level fighter/6th level magic-user/6th level cleric; and these leaders will have two special retainers each - 4th level fighter/5th level magic-user, 3rd level fighter/3rd level magic-user/3rd level cleric. These are also in addition to the group indicated. If encountered in their lair there will also be these extra figures: a 4th level fighter/7th level magic-user, a 4th level fighter for every 40 elves in the group, a 2nd level fighter/2nd level magic-user/2nd level cleric for every 40 elves in the group, a 5th level fighter, a 6th level fighter, and females and young equal to 100% and 5% respectively.\n\n'
+        'Elves of all sorts seek to make their home secure by locating it in secluded copse, wood, or forest. They typically (65%) have from 2-12 <a href="/creatures/giant-eagle">giant eagles</a> as guards for their lair.\n\n'
+        'The companions of a band of elves by weaponing is given below: (They are usually in scale, ring, or chain mail, and most carry shields).\n\n'
+        '10% sword and bow\n'
+        '20% sword and spear\n'
+        '20% sword\n'
+        '5% two-handed sword\n'
+        '30% spear\n'
+        '15% bow\n\n'
+        'Higher level fighters, fighter/magic-users, and fighter/magic-user/clerics have a 10% chance per level per class of magical items of usable sort. Thus, a 4th level fighter/5th level magic-user/5th level cleric would have a 40% chance for magic armor (including shield, possibly, or possibly shield only) and/or weapon (sword or miscellaneous weapon); a 40% chance for any other item not covered by the first class, i.e. armor and weapons; and a 50% chance for any sort of magical item usable by a cleric. Furthermore, if above 4th level of magical ability the elf will have 2-5 magic items for magic-user use if the required score is rolled on the percentile dice.\n\n'
+        'Although elves do not favor horses, certain bands of elves will have female fighters who will be mounted on <a href="/creatures/unicorn">unicorns</a>, although this is rare (5%) and only from 10-30 of such warrior elfmaids are typically encountered.\n\n'
+        'When in natural surroundings such as wood or meadow, elves can move silently (surprise on a 1-4) and blend into the vegetation so as to be invisible (requiring the ability to see invisible objects to locate them) as long as they are not attacking. Note the +1 "to hit" bonus elves gain with bow or sword. Elves are also very quick and agile, so they can move, fire their bows, and move back all in the same round.\n\n'
+        'Elves are 90% resistant to charm and sleep spells of all sorts. They have infravision to 60\'. They note secret or hidden doors and the like from one-third to half of the time, depending on the care or magic which they are hidden.\n\n'
+        'Elves are able to speak the tongue of <a href="/creatures/goblin">goblins</a>, <a href="/creatures/orc">orcs</a>, <a href="/creatures/hobgoblin">hobgoblins</a>, and <a href="/creatures/gnoll">gnolls</a>, in addition to common, alignment, elvish, <a href="/creatures/halfling>halflingish</a>, and <a href="/creatures/gnome">gnomish</a>.\n\n'
+        '<i>Description</i>: Elves are slim of build and pale complected. Their hair is dark, and their eyes are green. Their garb is typically pastel and of blue or green or violet (but often covered by a greenish gray cloak). The life span of these creatures is a dozen centuries long.\n\n'
+        '<b>Aquatic Elf:</b> Also called sea elves, they are akin to <a href="/creatures/merman">mermen</a> as land elves are to men. Found almost exclusively among heavy weed beds in quiet sheltered salty waters, they are great friends of the <a href="/creatures/dolphin">dolphins</a>. They fashion caverns in lagoon bottoms and reefs where they live and work. They trade with land elves - metal goods (they are unable to forge underwater) for rare items found in the sea. For every 20 sea elves, there is a 50% chance that they are accompanied by 1-3 friendly dolphins.\n\n'
+        'Aquatic elves use spears and tridents as weapons, usually in combination with nets. They do not use magic. They speak only elvish.'
+        'They are humanoid in appearance, with gill slits on the throat and greenish-silver skin and green or blue-green hair. Seaweed affords little or no hindrance to their movement. They are invisible in weeds or on reefs. They are mortal enemies of <a href="/creatures/shark">sharks</a> or <a href="/creatures/sahuagin">sahuagin</a>, and will attack either if the elves outnumber them. They are friends to dolphins and land eleves, and neutral to all others, except for fisherman, whom they dislike due to the number of sea elves snared in nets and killed mistakenly as sahuagin by these ignorant hunters.\n\n'
+        '<b>Drow:</b> The "Black Elves", or <a href="/creatures/drow">drow</a>, are only legend. They purportedly dwell deep beneath the surface in a strange subterranean realm. The drow are said to be as dark as faeries are bright and as evil as the latter are good. Tales picture them as weak fighters but strong magic-users.\n\n'
+        '<b>Gray Elf (<i>Faerie</i>):</b> These noble elves are the rarest and most powerful of their kind. They are more intelligent than other sorts (+1 on dice roll for intelligence), and those few with supra-genius abilities can become wizards. They are very reclusive, live in isolated meadowlands, and never associate with any other humanoids, other than elves, for long - or with frequency. They usually are armored with chain mail and shield, and all carry swords. Gray elves often (50%) have <a href="/creatures/hippogriff">hippogriffs</a> as steeds (70%) or actually use <a href="/creatures/griffon">griffons</a> (3-12) as guards/mounts (30%). They speak the same languages as do high elves. Gray elves have either silver hair and amber eyes or pale golden hair and violet eyes. The latter sort are generally called faeries. They favor white, yellow, silver, or gold garments. Their cloaks are often deep blue or purple. They live beyond the age of 1,500 years.\n\n'
+        '<b>Half-Elf:</b> All half-elves are of human stock. They are handsome folk, with the good features of each of their races. They mingle freely with either race, being only slightly taller than the average (5½\') and weighing about 150 pounds. They are able to detect secret entrances and the like as elves do (one-third to one-half the time). Half-elves have normal infravision. They do not gain the sword and bow advantages of their elven stock, but half-elves are able to progress simultaneously in two or three categories, i.e. fighter/magic-user or fighter/magic-user/cleric (if wisdom is 13 or greater). Half-elves normally may attain maximum levels of 6/6/4; if strength is 17 or 18, the level of fighting ability can go to 7th or 8th. Similarly, if intelligence is 17 or 18, half-elves can attain 7th or 8th level magic-user. Thus a half-elf can be a superhero/warlock/vicar (8/8/4). Half-elves are able to speak the same languages as elves - goblin, orcish, gnoll, halflingish, gnomish, and elvish (plus alignment and common). Half-elves live 250 years.\n\n'
+        '<b>Wood Elf:</b> Sometimes called sylvan elves, these creatures are very reclusive and generally (75%) avoid all contact. Wood elves are more neutral than other elves. They are unusually strong for elves (add +1 to all die rolls, treating 19 as 18), but they are not quite as intelligent (treat 18 intelligence as 17). They usually wear studded leather or ring mail (armor class 6) and fully 50% of any band is equipped with bows. Only 20% carry swords. 40% of wood elves use spears. The lair of a band of wood elves is usually (70%) guarded by 2-8 <a href="/creatures/giant-owl">giant owls</a> (80%) or by 1-6 <a href="/creatures/giant-lynx">giant lynx</a> (20%). They live in primaeval forests and distant woodlands. Wood elves speak only elvish and the languages of certain woods animals and <a href="/creatures/treant">treants</a>. Their complexions are fair, their hair is yellow to coppery red and their eyes are light brown, light green, or hazel. They wear russets, reds, browns, and tans. Their cloaks are usually green or greenish brown. Wood elves have a life span of centuries.'
+    )
 ),
 CreatureInfo( name = 'Ettin',
     hd = (10,10),
@@ -2736,7 +2779,11 @@ CreatureInfo( name = 'Ettin',
     m_resist = 0.0,
     align = 'CE',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Ettins are giant-like creatures which dwell only in remote areas. Their lairs are always underground, for they prefer darkness and are nocturnal.\n\n'
+        'An ettin attacks with both arms, its left head directing the left arm and the right head the right. Blows from the former arm cause 2-16 points of damage; the right inflicting 3-18. One of the ettin\'s heads is always likely to be alert, so they are difficult to surprise.\n\n'
+        '<i>Description</i>: It is evident from their appearance that ettins are closely related to <a href="/creatures/orc">orcs</a>. Their animal skin dress is typically moth eaten and filthy. Ettins use spiked clubs and similar weapons.'
+    )
 ),
 CreatureInfo( name = 'Floating Eye',
     hd = (0,0),
@@ -2753,7 +2800,8 @@ CreatureInfo( name = 'Floating Eye',
     m_resist = 0.0,
     align = 'NN',
     size = 'S',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'Floating eyes are salt water fish of very unusual nature. They have transparent bodies and a single large eye of about three inch diameter. The latter is all that is readily visible of this fish, and when it is gazed at the creature so doing must save versus paralyzation or become <i>hypnotized</i> and remain stationary. Predatory fish (always near floating eyes) then eat the helpless prey, while the floating eyes feed upon the scraps. Naturally, these creatures also eat any small marine creatures they come upon and hypnotize.'
 ),
 CreatureInfo( name = 'Eye of the Deep',
     hd = (10,12),
@@ -2771,7 +2819,11 @@ CreatureInfo( name = 'Eye of the Deep',
     m_resist = 0.0,
     align = 'LE',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('It is possible that this monster is a relative of the <a href="/creatures/beholder">beholder</a>, for there are remarkable similarities between the two species. The eye of the deep dwells only at great depths of the ocean, floating slowly about, stalking prey. It has two huge crab-like pincers to seize its victims and a mouth full of small sharp teeth. Its primary weapons, however, are its eyes. The creature has a large central eye which emits a blinding flash of light to dazzle and stun those in its ray (cone ½" at eye extending 3" to a 2" diameter base) for 2-8 melee rounds unless a saving throw versus death ray/poison is made. The eye of the deep also has two smaller eyes on long stalks with which it is able to <i>create an illusion</i>; or, acting independently, the small eyes are able to cast <a href="/spells/hold-person-magic-user-lvl-3/"><i>hold person</i></a> and <a href="/spells/hold-monster-magic-user-lvl-5/"><i>hold monster</i></a> spells respectively.\n\n'
+        'Because it inhabits the deeps, this monster has an armor class of 5 everywhere, including eyes and eye stalks. It can withstand 10 to 12 dice of damage before being killed. If its eyestalks are severed they will, as with those of a beholder, grow back in about a week of time.\n\n'
+        '<i>Nature</i>: The eye of the deep is hateful and aggressive, generally conforming to its land-dwelling cousin, the beholder, as regards temperament.'
+    )
 ),
 CreatureInfo( name = 'Flightless Bird',
     hd = (1,3),
@@ -2787,7 +2839,8 @@ CreatureInfo( name = 'Flightless Bird',
     align = 'NN',
     size = 'S',
     aliases = ['Ostrich','Emu','Rhea'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'These large avian creatures are typified by the ostrich, emu, and rhea. They live in warm climates in open grasslands. The ostrich-sized have 3 hit dice, emu-like birds have 2, and rhea-sized types 1 hit die. All flightless birds are non-aggressive and run from danger. If cornered they can peck (1-4 hit points) or kick (2-8 hit points).'
 ),
 CreatureInfo( name = 'Giant Frog',
     hd = (1,3),
@@ -2804,7 +2857,12 @@ CreatureInfo( name = 'Giant Frog',
     m_resist = 0.0,
     align = 'NN',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Giant frogs are found in marshes, swamps, large ponds, river banks, and lake shores. The smallest are only about 2\' long (body), medium-sized frogs (2 hit dice) are about 4\' long, and the largest are some 6\' long. Because of their coloration the surprise on a 1-4. These creatures can leap up to 18" to attack. A giant frog has a tongue which is equal to three times its body length. This sticky member strikes at +4 to hit but does no damage. The tongue is used to draw prey to the frog\'s mouth. Any creature hit by the tongue gets the opportunity to hit it, and if it does, the frog will withdraw it and not use it against that creature again. If the tongue is not struck, the creature contacted by this member is drawn to the frog next round and automatically takes maximum damage.\n\n'
+        '<i>Exception</i>: Creatures weighing more than the frog have a second opportunity to strike the tongue and will not be dragged to the frog\'s mouth until the third melee round. Furthermore, creatures weighing more than twice the weight of the frog will not be dragged at all, and the frog will release its hold on the third melee round.\n\n'
+        'Frogs weight from 50 to 250 pounds, (figure 50 pounds additional weight for every foot of body length over 2\'). For each 50 pounds of weight over 50, subtract 2" from leaping distance maximum (18%). A giant frog can jump to a maximum of 30\' high, regarless of weight. The direction of a jump can be up to 45° to either side of their direct facing.\n\n'
+        'Giant frogs eat large insects, birds, rats, or just about any other creature small enough to swallow. A giant frog can swallow a small human, elf, halfling, etc. This is indicated by a score of 20. If a giant frog swallows an opponent whole, there is a chance for it to cut its way out if it has a sharp edged weapon and can score an 18 or better (this also kills the frog). The victim has three chances to so escape. Hits upon a giant frog with whole prey inside have a one-third probability of hitting the creature inside, thus inflicting whatever damage scored on the giant frog on that creature also. They aggressively hunt, but fear such predators as giant fish, giant turtles, giant snakes, etc. If severely wounded they will retreat. They fear fire.'
+    )
 ),
 CreatureInfo( name = 'Killer Frog',
     hd = (1,1),
@@ -2821,7 +2879,8 @@ CreatureInfo( name = 'Killer Frog',
     m_resist = 0.0,
     align = 'NN',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'These smallish <a href="/creatures/giant-frog">giant frogs</a> employ talons and teeth in attack. They are man-eating, specially bred mutants. Only their cannibalistic habits keep them from becoming common and thus a real threat.'
 ),
 CreatureInfo( name = 'Poisonous Frog',
     hd = (1,1),
@@ -2838,7 +2897,8 @@ CreatureInfo( name = 'Poisonous Frog',
     m_resist = 0.0,
     align = 'NN',
     size = 'S',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'This is a rare variety of the normal frog. It secretes a poison from its skin, so that its touch was well as bite can prove fatal. However, as the poison is weak, all creatures gain a +4 on their saving throws.'
 ),
 CreatureInfo( name = 'Violet Fungi',
     hd = (3,3),
@@ -2854,7 +2914,8 @@ CreatureInfo( name = 'Violet Fungi',
     m_resist = 0.0,
     align = 'NN',
     size = 'S',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'Violet fungus growths resemble <a href="/creatures/shrieker">shriekers</a>, and are usually (75%) encountered with them. The latter are immune to the touch of violet fungi, and the two types of creatures complement each other\'s existence. Violet fungi favors rotted animal matter to grow upon. Each fungus has 1 to 4 branches which it will flail out with if any animal comes within their 1\' to 4\' range. The excretion from these branches <i>rots</a> flesh in but one melee round unless a saving throw versus poison is made or a <a href="/spells/cure-disease-cleric-lvl-3/"><i>cure disease</i></a> is used. The branch length of this growth depends upon size. Violet fungi range from 4\' to 7\' tall, the smallest having 1\' branches, the 5\' sort having 2\' branches, etc. Any sized growth can have 1 to 4 branches.'
 ),
 CreatureInfo( name = 'Giant Gar',
     hd = (8,8),
@@ -2871,7 +2932,8 @@ CreatureInfo( name = 'Giant Gar',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'Unlike their smaller relatives, giant gar tend to be aggressive hunters. They inhabit only large, deep lakes and rivers. They are capable of swallowing prey whole, and any hit of 20 indicates they have done so. Note that a small giant gar can swallow an elf or dwarf whole. If a creature is swallowed whole there is a 5% chance/melee round that it will die. A creature so swallowed must have a sharp-edged weapon in hand to have any chance of cutting its way out. The swallowed creature must be able to inflict damage equal to 25% of the fish\'s total hit points to get free. Attacks which pierce the gar can hit the creature swallowed whole (assmume 20% chance), and this will cause appropriate damage to both the gar and the creature swallowed.'
 ),
 CreatureInfo( name = 'Gargoyle',
     hd = (4,4),
@@ -2890,7 +2952,8 @@ CreatureInfo( name = 'Gargoyle',
     m_resist = 0.0,
     align = 'CE',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'These monsters are ferocious predators of a magical nature. They are typically found amidst ruins or dwelling in underground caverns. They will attack anything they detect, regardless of whether it is good or evil, 90% of the time. They love best to torture prey to death when it is helpless. Because they are fairly intelligent and evil they will sometimes serve an evil master of some sort.'
 ),
 CreatureInfo( name = 'Kopoacinth',
     hd = (4,4),
@@ -2909,7 +2972,8 @@ CreatureInfo( name = 'Kopoacinth',
     align = 'CE',
     size = 'M',
     source = SourceBook.MONSTER_MANUAL,
-    aliases = ['Marine Gargoyle']
+    aliases = ['Marine Gargoyle'],
+    description = 'This creature is a marine variety of <a href="/creatures/gargoyle">gargoyle</a> which uses its wings to swim. They conform in all respects to a normal gargoyle. They dwell in relatively shallow waters, lairing in undersea caves.'
 ),
 CreatureInfo( name = 'Gas Spore',
     hd = (0,0),
@@ -2926,7 +2990,8 @@ CreatureInfo( name = 'Gas Spore',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'At any distance greater than 10\' a gas spore is 90% likely to be mistaken for a <a href="/creatures/beholder">beholder</a>. Even at close ranges there is a 25% possibility that the creature will be viewed as the eye tyrant, for a gas spore has a false central eye and rhizome growths atop it which strongly resemble the eye stalks of a beholder. If the spore is struck for even one point of damage it will explode, its gaseous contents react violently to air, and every creature within a 20\' radius takes 6-36 hit points of damage (3-18 if saving throw versus wands is made). If a gas spore makes contact with exposed flesh the spore shoots tiny rhizomes into the living matter and grows throughout the victim\'s system in but one melee round. The gas spore dies immediately. The victim must get a <a href="/spells/cure-disease-cleric-lvl-3/"><i>cure disease</i></a> within 24 hours or die, sprouting 2-8 gas spores.'
 ),
 CreatureInfo( name = 'Gelatinous Cube',
     hd = (4,4),
@@ -2941,7 +3006,12 @@ CreatureInfo( name = 'Gelatinous Cube',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('The gelatinous cube is one of the scavengers not uncommon in dungeons. Its cubic form is ideal for cleaning all living organisms, as well as carrion, from the floor and walls of underground passageways. Certain very large cubes are taller so as to be able to garner mosses and the like from ceilings as well.\n\n'
+        'Gelatinous cubes are nearly transparent and are difficult to see (thus surprise on 1-3). As these monsters travel about they sweep up metallic and other items which are "indigestible" to them. This includes treasure types J, K, L, M, N, Q as well as a potion, dagger, or similar items. Such material will remain in the body of a gelatinous cube for several weeks before being cast out (thus deposited somewhere on the floor).\n\n'
+        'If a gelatinous cube touches (hits) an opponent, a saving throw versus paralyzation must be made, or the creature touched is anesthetized for 5-20 melee rounds. The cube then surrounds the victim, secretes digestive fluids, and digests a meal. Damage caused to opponents is due to the digestive secretions.\n\n'
+        'Gelatinous cubes can be hit by all forms of weapons, and attacks by fire have normal effects. Cold will have no effect on these monsters unless they fail their saving throw, in which case they are slowed 50% and do only 1-4 hit points of damage. Electricity, fear, holds, paralyzation, polymorph, and sleep based attacks have no effect on gelatinous cubes.'
+    )
 ),
 CreatureInfo( name = 'Ghast',
     hd = (4,4),
@@ -2958,7 +3028,11 @@ CreatureInfo( name = 'Ghast',
     m_resist = 0.0,
     align = 'CE',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('These creatures are so like <a href="/creatures/ghoul">ghouls</a> as to be completely indistinguishable from them, and they are usually found only with a pack of ghouls. When the pack attacks it will quickly become evident that ghasts are present, however, for they exude a carrion stench in a 10\' radius which causes retching and nausea unless a saving throw versus poison is made. Those failing to make this save will attack at a penalty of -2 on "to hit" dice rolls. Worse, the ghast attacks as a ghoul with regard to paralyzation, and this attack will affect elves as well.\n\n'
+        'Ghasts are of the "undead" class so <a href="/spells/sleep-magic-user-lvl-1/"><i>sleep</i></a> and <a href="/spells/charm-monster-magic-user-lvl-4/"><i>charm</i></a> spells do not affect them. They are struck by any sort of weapon; cold iron causes double damage, and clerics can turn them. The circle of <a href="/protection-from-evil-cleric-lvl-1/><i>protection from evil</i></a> does not keep them at bay unless it is used in conjunction with cold iron (such as a circle of powdered iron, an iron ring, etc.)\n\n'
+        'These creatures are often used as slaves by powerful demons.'
+    )
 ),
 CreatureInfo( name = 'Ghost',
     hd = (10,10),
@@ -2974,7 +3048,10 @@ CreatureInfo( name = 'Ghost',
     m_resist = 0.0,
     align = 'LE',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Ghosts are the spirits of evil humans who were so awful in their badness that they have been rewarded (or perhaps cursed) by being given undead status. Thus they roam about at night or in places of darkness. These spirits hate goodness and life, hungering to draw the living essences from humans. As ghosts are non-corporeal (ethereal), they are usually encountered by creatures in a like state, although they can be seen by non-ethereal creatures. The supernatural power of a ghost is such, however that the mere sight of one causes any humanoid being to age 10 years and flee in panic for 2-12 turns unless a saving throw versus magic is made. Clerics above 6th level are immune to this effect, and all other humanoids above 8th level add +2 to their saving throws.\n\n'
+        'Ghosts attack by two means: Any creature within 6" of one is subject to attack by <a href="/spells/magic-jar-magic-user-lvl-5/"><i>magic jar</i></a> spell from the ghost. Unless the ghost becomes semi-material to attack by other means, it can otherwise only be combatted by another in the ethereal plane (in which case the ghost has an armor class of 8) or by telepathic means. If the ghost fails to <i>magic jar</i> its chosen victim, it will then semi-materialize in order to attack by touch (in which case the ghost is armor class 0). Semi-materialized ghosts can only be struck by silver (doing 50% of normal damage) or magical weapons. If they strike an opponent it ages him 10-40 years. Note that ghosts can be attacked with spells only from creatures who are in an ethereal state. Any human - including dwarves, elves, gnomes, and halflings - killed by a ghost is forever dead.'
+    )
 ),
 CreatureInfo( name = 'Ghoul',
     hd = (2,2),
@@ -2991,7 +3068,10 @@ CreatureInfo( name = 'Ghoul',
     m_resist = 0.0,
     align = 'CE',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Ghouls are "undead", once human creatures which feed on human and other corpses. Although their change from human to ghoul has deranged and destroyed their minds, ghouls have a terrible cunning which enables them to hunt their prey most effectively. Ghouls attack by clawing with their filthy nails and with fangs. Their touch causes humans - including dwarves, gnomes, half-elves, half-orcs, and halflings, but excluding elves - to become rigid (<i>paralysis</i>) for 2d6 turns unless a saving throw versus paralyzation is successful. Any human killed by a ghoulish attack will become a ghoul unless <a href="/spells/bless-cleric-lvl-1/">blessed</a> (or blessed and then <a href="/spells/resurrection-cleric-lvl-7/">resurrected</a>). Ghoul packs always attack without fear.\n\n'
+        'These creatures are subject to all attack forms except <a href="/spells/sleep-magic-user-lvl-1/"><i>sleep</i></a> and <a href="/spells/charm-monster-magic-user-lvl-4/"><i>charm</i></a> spells. They can be turned by clerics. The magic circle of <a href="/spells/protection-from-evil-cleric-lvl-1/">protection from evil</a> actually keeps these monsters completely at bay.'
+    )
 ),
 CreatureInfo( name = 'Lacedon',
     hd = (2,2),
@@ -3009,7 +3089,8 @@ CreatureInfo( name = 'Lacedon',
     m_resist = 0.0,
     align = 'CE',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'The lacedon is a marine form of the <a href="/creatures/ghoul">ghoul</a>. It conforms in all other respects to ghouls.'
 ),
 CreatureInfo( name = 'Cloud Giant',
     hd = (12,12),
@@ -3026,7 +3107,12 @@ CreatureInfo( name = 'Cloud Giant',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Unlike the commoner sorts of giants, cloud giants usually reside in crude castles built atop mountains or on magical cloud islands. When found in their lair it is 60% likely that cloud giants will have 1-4 <a href="/creatures/spotted-lion">spotted lions</a> as pets/guards. If more than 1 cloud giant is encountered in their lair it is 75% likely that the second will be a giantess (treat as <a href="/creatures/fire-giant">fire giant</a> for hit dice and damage/attack) and the others young giants (roll percentile dice to determine state of maturity). If 6 giants are thus encountered, one of the young will be a full-grown male, one a full-grown female, and the other two sub-adults of either sex (1-3 male, 4-6 female).\n\n'
+        'Adult cloud giants can hurl rocks from 1" to 24" distance, inflicting from 2-24 hit points of damage when they hit. They have a 60% chance of catching like missiles. All cloud giants have a keen sense of smell, thus they are surprised only on a roll of 1 on a 6-sided die. 10% of cloud giants are very intelligent. These will be the ones found dwelling on cloud islands. All such cloud giants are able to <a href="/spells/levitate-magic-user-lvl-2/"><i>levitate</i></a> themselves and additional weight of up to 20,000 gold pieces twice per day.\n\n'
+        'There is a 50% chance that evil cloud giants will have 1-3 captives as slaves in their lair.\n\n'
+        '<i>Description</i>: Cloud giants have pale blue white to light blue skin, silver white or brass colored hair, and wear various items of clothing and jewelry. They are armed with great clubs.'
+    )
 ),
 CreatureInfo( name = 'Fire Giant',
     hd = (11,11),
@@ -3043,7 +3129,11 @@ CreatureInfo( name = 'Fire Giant',
     m_resist = 0.0,
     align = 'LE',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Fire giants are as often found in castles as in caverns. If found in their lair it is 25% likely that they will have 1-4 <a href="/creatures/hell-hound">hell hounds</a> of the largest size as watch dogs. If more than 4 fire giants are encountered in their lair the additional ones will be females (corresponding to <a href="/creature/frost-giant">frost giants</a> for hit dice and damage/attack), except that if 7 or 8 are encountered the last one or two will be young (roll percentile dice for size).\n\n'
+        'Adult fire giants are able to hurl rocks from 1" to 20" distances, inflicting 2-20 hit points of damage. They can catch like missiles 50% of the time. Fire giants are impervious to fire, even <a href="/creatures/red-dragon">red dragon</a> breath.\n\n'
+        '<i>Description</i>: Fire giants are very broad (about 6\' at the shoulders), looking almost like <a href="/creatures/dwarf">dwarves</a>. Their skins are coal black, hair is flaming red or bright orange, and eyes are deep red. Their teeth are usually yellow orange. They wear armor or dragon hides. They favor huge swords.'
+    )
 ),
 CreatureInfo( name = 'Frost Giant',
     hd = (10,10),
@@ -3060,7 +3150,11 @@ CreatureInfo( name = 'Frost Giant',
     m_resist = 0.0,
     align = 'CE',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Frost giants more commonly inhabit castles, although they often lair in large frigid caverns. There is a 50% probability that they will have from 1-6 <a href="/creatures/winter-wolf">winter wolves</a> as watchdogs. If more than 4 frost giants are encountered in their lair numbers 5 and 6 will be females (treat as <a href="/creatures/stone-giant">stone giants</a> with respect to hit dice and damage/attack), and 7 and 8 will be young giants (roll percentile dice to determine size).\n\n'
+        'Adult frost giants are able to hurl rocks from 1" to 20" distances, inflicting 2-20 hit points of damage. They can catch like missiles 40% of the time. Frost giants are impervious to cold, even <a href="/creatures/white-dragon">white dragon</a> breath.'
+        '<i>Description</i>: Frost giants have dead white or ivory skin color, blue-white or yellow hair, and pale blue or yellow eyes. Their build is basically similar to a muscular human, with appropriate size differences. Frost giants wear armor and bear arms similar to those of humans of the northern barbarian sort.'
+    )
 ),
 CreatureInfo( name = 'Hill Giant',
     hd = (8,8),
@@ -3077,7 +3171,11 @@ CreatureInfo( name = 'Hill Giant',
     m_resist = 0.0,
     align = 'CE',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Hill giants always dwell in caves or similar underground habitations. These lairs are typically in foresaken areas. Hill giants sometimes have other creatures in their lairs to act as guards; this is 50% likely, and the guarding creatures will be 2-8 <a href="/creatures/dire-wolf">dire wolves</a> (50%), 1-3 <a href="/creatures/giant-lizard">giant lizards</a> (30%) or a group of 2-8 <a href="/creatures/ogre">ogres</a> (20%). If more than 4 hill giants are encountered in their lair numbers 5, 7 and 9 will be giantesses (6 hit dice, and treat as ogres for damage/attack) and 6, 8, 10 will be young hill giants (roll percentile dice for size).\n\n'
+        'Adult hill giants are able to hurl rocks from 1" to 20" distances, inflicting 2-16 hit points of damage. They are able to catch similar missiles 30% of the time. 50% of hill giants also speak ogre.\n\n'
+        '<i>Description</i>: Hill giants have tan to reddish brown skins, brown to black hair, and red-rimmed eyes. They typically dress in rough hides or skins. They use any form of weapon available but favor clubs.'
+    )
 ),
 CreatureInfo( name = 'Stone Giant',
     hd = (9,9),
@@ -3094,7 +3192,11 @@ CreatureInfo( name = 'Stone Giant',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Stone giants inhabit mountainous regions in most cases, dwelling in caves or caverns. They are fond of <a href="/creatures/bear">cave bears</a> and are 75% likely to have 1-4 guarding their lair. If more than 4 stone giants are encountered in their lair numbers 5 and 6 will be females (treat as <a href="/creatures/hill-giant">hill giants</a> with regard to hit dice and damage/attack), and numbers 7 and 8 will be young (roll percentile dice to determine size).\n\n'
+        'Stone giants are playful at times - especially at night. The adults find great sport hurling rocks from 1" to 30" distances, causing 3-30 hit points of damage when striking a creature, and stone giants are 90% likely to catch similar types of missiles hurled at them.\n\n'
+        '<i>Description</i>: With their gray to gray-brown skins, dark gray to blue-gray hair, and metallic-looking eyes (silver to steel), stone giants are both striking in appearance and able to blend easily into stoney settings. The latter effect is enhanced by their choice of rock-colored garments. Stone giants are typically armed with stone weapons.'
+    )
 ),
 CreatureInfo( name = 'Storm Giant',
     hd = (15,15),
@@ -3111,7 +3213,12 @@ CreatureInfo( name = 'Storm Giant',
     m_resist = 0.0,
     align = 'CG',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('The most powerful and respected true giant is the storm giant. These great, generally reclusive creatures inhabit only out-of-the-way places. Their abodes are typically cloud islands (60%), mountain peaks (30%) or underwater (10%), and there the storm giants build their spacious castles. It is 30% probable that the lairs of storm giants will have animals or guards and/or pets. Storm giants dwelling on cloud islands or mountain peaks will have 1 or 2 <a href="/creatures/roc">rocs</a> (70%) which they will also employ as a riding animal or 1-4 <a href="/creatures/griffon">griffons</a> (30%). Those storm giants who dwell underwater will have 2-8 <a href="/creatures/sea-lion">sea lions</a>.\n\n'
+        'Unlike other sorts of giants, storm giants do not hurl rocks, for they have magical properties and spells which they employ instead. A storm giant is able to hurl a <a href="/spells/lightning-bolt-magic-user-lvl-3/">lightning bolt</a> of 8 (8-sided) dice effect once per day. All storm giants are able to <a href="/spells/levitate-magic-user-lvl-2/">levitate</a> twice per day, lifting weights up to 30,000 gold pieces equivalent in addition to their own body weight. They are able to breathe normally underwater as desired. Note that storm giants dwelling underwater are able to cast lightning bolts and move at normal speed. When they desire to do so, storm giants are able to perform any of the following spells, one at a time, once each per day: <a href="/spells/predict-weather-druid-lvl-1/"><i>predict weather</i></a>, <a href="/spells/call-lightning-druid-lvl-3/"><i>call lightning</i></a> (3 bolts of 10-15 6-sided dice each), <a href="/spells/control-winds-druid-lvl-5/"><i>control winds</i></a>, <a href="/spells/weather-summoning-druid-lvl-6/"><i>weather summoning</i></a>. When aroused for combat, it is probable that a storm giant will summon a storm and call lightning, for this weather is most favored by an angry storm giant in battle.\n\n'
+        'Storm giants are not harmed by electrical energy, even including such discharges as blue dragon breath.\n\n'
+        '<i>Description</i>: The skin coloration of storm giants ranges from pale light green to violet, the former being typical of those specimens which are marine. Green colored storm giants have dark green hair and emerald green eyes, while other storm giants tend towards deep violet or blue-black hair coloration with silvery gray or purple eyes.'
+    )
 ),
 CreatureInfo( name = 'Gnoll',
     hd = (2,2),
@@ -3128,7 +3235,20 @@ CreatureInfo( name = 'Gnoll',
     m_resist = 0.0,
     align = 'CE',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Gnolls travel and live in rapacious bands of loose organization, with the largest dominating the rest. These bands recognize no other gnoll as supreme, but they do not necessarily dislike other bands, and on occasion two or more such groups will join together briefly in order to fight, raid, loot, or similarly have greater chance of success against some common foe or potential victim. They are adaptable and inhabit nearly any area save those which are arctic and/or arid. They have a so-called king, very powerful personally and with a double normal-sized following, but his authority extends only as far as his reach.\n\n'
+        'For every 20 gnolls encountered there will be a leader-type with 16 hit points (attacks as a 3 hit dice creature). If 100 or more of these creatures are encountered there will be the following additional gnolls with the band: a chieftan (armor class 3, 22 hit points, attack as a 4 hit dice creature and does 4-10 hit points damage/attack) and 2-12 guards (armor class 4, 20 hit points, attack as 3 hit dice monsters, and do 3-9 hit points damage). If the gnolls are encountered in their lair there will always be a chieftan there, and there will be from 5-20 guards with him. The lair will also contain females and young equal to 50% and 200% respectively of the number of males present.\n\n'
+        'Gnolls are subterranean 85% of the time, but occasionally (15%) they will take up residence in an abandoned (or cleared) village or building of some sort. In the former case they are 30% likely to have 1-3 <a href="/creatures/troll">trolls</a> living with them and acting as guards. In the case where gnolls are found above ground, they are quite likely (65%) to have 4-16 <a href="/creatures/hyena">hyenas</a> (80%) or 2-12 <a href="/creatures/giant-hyena/">hyaenodons</a> (20%) as pets and guards. They always have a number of captives for food or slave labor (1 per 10 gnolls is minimum).\n\n'
+        'Gnolls employ a great variety of weapons, all carry swords, and a typical force will have the following percentages:\n'
+        '15% great bow\n'
+        '35% pole arm\n'
+        '15% two-handed sword\n'
+        '20% battle axe\n'
+        '15% morning star\n\n'
+        'Gnolls will generally be on friendly terms with <a href="/creatures/orc">orcs</a>, <a href="/creatures/hobgoblin">hobgoblins</a>, <a href="/creatures/bugbear">bugbears</a>, <a href="/creatures/ogre">ogres</a>, and even trolls - providing the weaker types are not very much weaker in numbers and the gnolls are relatively equal in strength to the stronger monsters.\n\n'
+        'Gnolls are strong, but they dislike work and are not good miners. They have infravision. They speak their racial tongue, chaotic evil, troll, and often (60%) orcish and/or hobgoblin.\n\n'
+        '<i>Description</i>: There is a great resemblance between gnolls and hyenas. Gnolls have greenish gray skins, darker near the muzzle, with reddish gray to dull yellow mane. Eyes are dull black and nails are amber colored. Their armor is of horn, metal plates, and leather; like their fur capes and vests, it is shabby, and the latter are moth-eaten and dingy, being brown, black or grayish pelts. Gnolls have short life spans - 35 years being average.'
+    )
 ),
 CreatureInfo( name = 'Gnome',
     hd = (1,1),
@@ -3143,7 +3263,21 @@ CreatureInfo( name = 'Gnome',
     m_resist = 0.0,
     align = 'NG',
     size = 'S',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Similar to their larger cousins, <a href="/creatures/dwarf">dwarves</a>, the social organization of gnomes is based on clans, and these groups are likewise neither exclusive nor hostile to each other, although there does exist a rivalry wherein each tries to outdo the other groups. For every 40 gnomes encountered there will be a fighter of a 2nd, 3rd, or 4th level (die roll 1-2, 3-4, or 5-6). If 160 or more gnomes are in a group there will be in addition one 5th level and one 3rd level fighter as chief and lieutenant of the band. If 200 or more are encountered they will have a gnomish cleric of 4th, 5th, or 6th level in addition to the others. If 320 or more gnomes are encountered there will be the following additional gnomes in the group: a 6th level fighter, two 5th level fighters, a 7th level cleric, and four 3rd level clerics. If encountered in their lair (home) there will be the following additional gnomes: from 2-8 fighters of 2nd or 3rd level, 1-4 clerics of 2nd level, and females and young equal to 50% and 25% respectively of the number of adult males. A gnomish lair is sometimes based upon earthen burrows, although 75% of the time it will be made in rocky hill formations.\n\n'
+        'Gnomes are typically armored with leather armor which is ringed or well studded with metal and shield (armor class 5). They have the following typical weaponing:\n\n'
+        '10% short sword and short bow\n'
+        '20% short sword and spear\n'
+        '15% club and sling\n'
+        '40% club and spear\n'
+        '15% club and short sword\n\n'
+        'All gnomes above normal level will have chainmail and shield. Those above 5th level will have plate armor and shield. Higher level fighters will have a 10% chance per level of having magic armor and/or weapons. Gnomish clerics will likewise have a 10% chance per level for 1-3 additional items (potion, clerical scroll, ring, wand/staff/rod, misc. magic) usable by clerics.\n\n'
+        'Gnomes are 80% likely to have tamed animals to serve as guards in their lair: 5-30 <a href="/creatures/badger">badgers</a> (70%) or 3-12 giant badgers (20%) or 2-8 <a href="/creatures/wolverine">wolverines</a> (10%).\n\n'
+        'Due to their great hatred of <a href="/creatures/kobold">kobolds</a> and <a href="/creatures/goblin">goblins</a>, all gnomes gain a bonus of +1 on their dice rolls to hit these opponents. When gnomes are in melee with <a href="/creatures/gnoll">gnolls</a>, <a href="/creatures/bugbear">bugbears</a>, <a href="/creatures/ogre">ogres</a>, <a href="/creatures/troll">trolls</a>, or giants their opponents must deduct 4 from their dice rolls to hit the gnomes because of their small size and their combat skill against these much bigger creatures.\n\n'
+        'All gnomes are highly resistant to magic and poison, so they make saving throws at 4 levels above their actual level. Gnomes can see in the dark (infravision), noting monsters at 60\'. Because of their mining skills gnomes are excellent (50% to 80% likely) in detection of passages which slope upwards or downwards, unsafe walls, floors, and ceilings, and approximate depth and direction. It is rumored that there exist gnomes with magical abilities up to 4th level, but this has not been proved.\n\n'
+        'Besides their alignment and racial tongues, gnomes speak kobold, goblin, halflingish, dwarvish, and can speak with burrowing mammals as well.\n\n'
+        '<i>Description</i>: Most gnomes are wood brown, a few range to gray brown, of skin. Their hair is medium to pure white, and their eyes are gray-blue to bright blue. They wear leather and earth tones of cloth and like jewelry. The average gnome will live for 600 years.'
+    )
 ),
 CreatureInfo( name = 'Giant Goat',
     hd = (3,3),
@@ -3159,7 +3293,10 @@ CreatureInfo( name = 'Giant Goat',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('These reclusive herbivores dwell in hilly country. They will aggressively defend themselves from any threat. If giant goats charge, they add +4 to damage inflicted when they hit (6-20 hit points). Their weapons are two long, sharp horns. They attack by butting with them. In rare cases these creatures have been tamed to serve as steeds.\n\n'
+        'If more than 7 of these creatures are encountered the remainder will be young (roll percentile dice to determine size, halving the number rolled and adding it to 50%).'
+    )
 ),
 CreatureInfo( name = 'Goblin',
     hd = (1,1),
@@ -3176,7 +3313,22 @@ CreatureInfo( name = 'Goblin',
     m_resist = 0.0,
     align = 'LE',
     size = 'S',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Goblins have a tribal society, the strongest ruling the rest, allowing fealty to the goblin king. It is possible that goblins are distantly related to <a href="/creatures/kobold">kobolds</a>. Like the latter, goblins enjoy dwelling in dismal surroundings, although they tend to inhabit caves and similar underground places in preference to any habitation above ground. They too hate full daylight and attack at a -1 when in sunlight. Goblins have normal infravision (60\' range).\n\n'
+        'For every 40 goblins encountered there will be a leader and 4 assistants who are equal to <a href="/creatures/orc">orcs</a>, each having 7 hit points and attacking as monsters with a full hit die. If 200 or more goblins are encountered there will be the following additional figures: a sub-chief and 2-8 guards, each fighting as <a href="/creatures/hobgoblin">hobgoblins</a> and having 8 hit points, armor class 5, and doing 1-8 hit points damage. There is a 25% chance that any force of goblins encountered will have 10% of its strength mounted on huge <a href="/creatures/wolf">wolves</a> and if this is the case there will also be from 10-40 of these creatures without riders. In their lair there will be the following additional figures: a goblin chief and 2-8 bodyguards (9-14 hit points, armor class 4, fight as <a href="/creatures/gnoll">gnolls</a> doing 2-8 hit points of damage), females and young equal to 60% and 100% respectively of the number of male goblins encountered. As is usual with creatures of this sort, the females and young do not fight. A goblin lair will be protected by from 5-30 huge wolves not less than 60% of the time. There is a 20% chance that 2-12 <a href="/creatures/bugbear">bugbears</a> will be in a goblin lair.\n\n'
+        'Goblins are typically armed with:\n\n'
+        '10% short sword and military pick\n'
+        '10% short sword and sling\n'
+        '10% short sword and spear\n'
+        '10% sling\n'
+        '20% morning star\n'
+        '10% military pick\n'
+        '30% spear\n\n'
+        'Leaders and guards will typically have the best weapons, bearing two each.\n\n'
+        'Goblins are fair miners, and they are able to note new or unusual construction 25% of the time. They hate <a href="/creatures/gnome">gnomes</a> and <a href="/creatures/dwarf">dwarves</a> and will attack them in preference to any other creature. All goblins are slave takers and fond of torture.\n\n'
+        'The language spoken by goblins are: their own, lawful evil, kobold, orcish, and hobgoblin.\n\n'
+        '<i>Description</i>: Goblins range from yellow through dull orange to brick red in skin color. Their eyes are reddish to lemon yellow. They dress in dark leather gear, and their garments tend towards dull, soiled-looking colors (brown drab, dirty gray, stained maroon). Goblins reach the age of 50 years or so.'
+    )
 ),
 CreatureInfo( name = 'Clay Golem',
     hd = (0,0),
@@ -3190,7 +3342,13 @@ CreatureInfo( name = 'Clay Golem',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('A clay golem can be created by a lawful good cleric of 17th or higher level (unless a magical tome is used, in which case a lower level cleric can create one). It requires a <a href="/spells/resurrection-cleric-lvl-7/"><i>resurrection</i></a> spell, an <a href="/spells/animate-object-cleric-lvl-6/"><i>animate objects</i></a> spell, a <a href="/spells/commune-cleric-lvl-5/"><i>commune</i></a> spell, a <a href="/spells/prayer-cleric-lvl-3/"><i>prayer</i></a> spell, and a <a href="/spells/bless-cleric-lvl-1/"><i>bless</i></a> spell. The cleric must first fashion a man-shaped clay statue, and once this is sculpted the cleric must go through an uninterrupted ritual using the spells delineated. Materials to do the spell require an outlay of 20,000 gold pieces. Vestments for the ritual cost another 30,000 gold pieces, minimum.\n\n'
+        'Once created the clay golem is under the command of the cleric who created it. Each melee round the clay golem is in combat there is a 1% cumulative chance that it will be imbued with a chaotic evil spirit. If this happens, the clay golem immediately passes from the control of the cleric and attacks any living thing, moving to the closest one to attack, and proceeding on to the next after killing it. This behavior will continue until the golem is destroyed, for control can never be regained.\n\n'
+        'Damage inflicted upon living matter by a clay golem is only repairable by means of a <a href="/spells/heal-cleric-lvl-6/"><i>healing</i></a> spell from a cleric of 17th or greater level.\n\n'
+        'Attacks by a clay golem are based on 11 hit dice. Once per day the golem can be <i>hasted</i> for three melee rounds after engaging in at least one round of combat. During this period it strikes twice per round. (If out of control, the golem will immediately <i>haste</i> itself if it has not previously done so.)\n\n'
+        'Clay golems can be struck only by blunt magical weapons such as hammers or maces. Other weapons do not affect it. Spells do not affect it, except as follows: <a href="/spells/move-earth-magic-user-lvl-6/"><i>move earth</i></a> will drive the golem back 12" and inflicts 3-36 hit points of damage, <a href="/spells/disintegrate-magic-user-lvl-6/"><i>disintegrate</i></a> will slow the golem 50% and inflicts 1-12 hit points of damage, and an <a href="/spells/earthquake-cleric-lvl-7/"><i>earthquake</i></a> cast directly at a clay golem will stop it from moving that turn and inflict 5-50 hit points of damage.'
+    )
 ),
 CreatureInfo( name = 'Flesh Golem',
     hd = (0,0),
@@ -3204,7 +3362,13 @@ CreatureInfo( name = 'Flesh Golem',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('A flesh golem can be created by means of a magical tome or by a high-level magic-user employing a <a href="/spells/wish-magic-user-lvl-9/"><i>wish</i></a> spell, a <a href="/spells/polymorph-any-object-magic-user-lvl-8/"><i>polymorph any object</i></a>, a <a href="/spells/geas-magic-user-lvl-6/"><i>geas</i></a>, a <a href="/spells/protection-from-normal-missiles-magic-user-lvl-3/"><i>protection from normal missiles</i></a> and a <a href="/spells/strength-magic-user-lvl-2/"><i>strength</i></a> spell. The latter case demands a level of magic-use of at least the 14th. The cost in materials is 1,000 gold pieces per hit point of the golem. It requires 1 month to fashion the creature.\n\n'
+        'The creator of the flesh golem controls the monster, being able to have it follow simple commands (go ahead, stop, kill, etc.). The master of the golem can have it suspend its functioning until a set event takes place (such as someone entering its room).\n\n'
+        'However, for each turn of melee a flesh golem engages in there is a 1% per melee round cumulative chance it will go berserk, attacking at random anything in sight. The monster\'s master has a 10% per melee round chance of regaining control of the golem.\n\n'
+        'The flesh golem is very powerful and able to smash through doors and wooden structures of normal construction. For example, a flesh golem would break through an oaken door with iron reinforcing bands and hinges, in 5-8 melee rounds. It does 1 point of structural damage to wooden constructions only every 3 melee rounds.\n\n'
+        'Normal weapons do not harm flesh golems, but magical weapons have normal effect. Spells of most sorts have no effect on such monsters, but fire or cold based spells (such as <a href="/spells/wall-of-fire-druid-lvl-5/"><i>wall of fire</i></a>, <a href="/spells/fireball-magic-user-lvl-3/"><i>fireball</i></a>, <a href="/spells/ice-storm-magic-user-lvl-4/"><i>ice storm</i></a>, etc.) slow the golem by 50% for 2-12 melee rounds. Electrical attacks restore damage to the golem in direct relation to the number of dice of damage normally done, i.e. a 6 die <a href="/spells/lightning-bolt-magic-user-lvl-3/">lightning bolt</a> restores 6 hit points of damage which the golem might have sustained.'
+    )
 ),
 CreatureInfo( name = 'Iron Golem',
     hd = (0,0),
@@ -3218,7 +3382,13 @@ CreatureInfo( name = 'Iron Golem',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Construction of an iron golem, bipedal and manlike, requires a magical tome or a magic-user of 18th or higher level employing the following spells: <a href="/spells/wish-magic-user-lvl-9/"><i>wish</i></a>, <a href="/spells/polymorph-any-object-magic-user-lvl-8/"><i>polymorph any object</i></a>, <a href="/spells/geas-magic-user-lvl-6/"><i>geas</i></a>, and <a href="/spells/cloudkill-magic-user-lvl-5/"><i>cloudkill</i></a>. The cost in materials is 1,000 gold pieces per hit point, and it requires 3 months construction time.\n\n'
+        'The golem created always remains under the control of the magic-user who created it. It can obey any simple commands. It will stand, non-functioning, as a guard until some event takes place, i.e. until a door is opened, a book read, etc.\n\n'
+        'In addition to striking, an iron golem will breathe out a cloud of poisonous gas, 1" x 1" x 1", directly before it, once every 7 melee rounds.\n\n'
+        'The strength of an iron golem is three times greater than that of a <a href="/creatures/flesh-golem">flesh golem</a>. An iron golem can do 1 point of structural damage per melee round.\n\n'
+        'An iron golem can be struck only by magical weapons of +3 or greater enchantment. Normal and magical weapons under +3 do no damage. The only magical attacks which affect the iron golem are electrical, such as a <a href="/spells/lightning-bolt-magic-user-lvl-3/">lightning bolt</a>, which slows the monster 50% for 3 melee rounds. Magical fire attacks repair damage on a 1 hit point for 1 hit point basis. Iron golems are subject to attack from the <a href="/creatures/rust-monster">rust monsters</a>.'
+    )
 ),
 CreatureInfo( name = 'Stone Golem',
     hd = (0,0),
@@ -3232,7 +3402,13 @@ CreatureInfo( name = 'Stone Golem',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Stone golems of man-like shape are constructed by means of a magical tome or a magic-user of 16th or higher level employing the following spells: <a href="/spells/wish-magic-user-lvl-9/"><i>wish</i></a>, <a href="/spells/polymorph-any-object-magic-user-lvl-8/"><i>polymorph any object</i></a>, <a href="/spells/geas-magic-user-lvl-6/"><i>geas</i></a>, and <a href="/spells/slow-magic-user-lvl-3/"><i>slow</i></a>. The cost in materials is 1,000 gold pieces per hit point, and it requires 2 months construction time.\n\n'
+        'Once created the stone golem can by controlled by its creator, and it will understand and obey simple commands, i.e. attack, stop, wait, go, etc. The golem can be made to stand and wait to attack until someone does something to trigger the golem.\n\n'
+        'In addition to its normal attack, the stone golem is able to cast a <i>slow</i> spell on any opponent within 1" of its front facing every other melee round.\n\n'
+        'The strength of a stone golem is twice that of a <a href="/creatures/flesh-golem">flesh golem</a>. It does 1 point of structural damage every other melee round.\n\n'
+        'Normal weapons do not harm stone golems. In fact, it requires weapons of +2 or greater enchantment to damage them. The only spells which affect a stone golem are: <a href="/spells/transmute-rock-to-mud-druid-lvl-5/"><i>rock to mud</i></a> slows the golem 50% for 2-12 melee rounds, <i>mud to rock</i> restores all damage suffered by the golem, and <a href="/spells/stone-to-flesh-magic-user-lvl-6/"><i>stone to flesh</i></a> makes the golem vulnerable to normal attacks on the following melee round.'
+    )
 ),
 CreatureInfo( name = 'Gorgon',
     hd = (8,8),
@@ -3249,7 +3425,10 @@ CreatureInfo( name = 'Gorgon',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Gorgons are bull-like creatures covered with thick metal scales. They prefer the fastness of a wilderness or dreary caverns for habitation. A gorgon is able to breathe out a cloud of noxious vapors which will turn any creature to stone unless they make the appropriate saving throw. The breath shoots forth in truncated cone-shape, ½" diameter at the beasts\' mouth, 6" in length, to an end diameter of 2". A gorgon is able to use such breath up to 4 times per day. Gorgons will always use this attack form in preference to other sorts of attack.\n\n'
+        'The awareness of gorgons extends into the astral and ethereal planes. So do the effects of their breath weapon.'
+    )
 ),
 CreatureInfo( name = 'Gray Ooze',
     hd = (3,3),
@@ -3265,7 +3444,12 @@ CreatureInfo( name = 'Gray Ooze',
     m_resist = 0.0,
     align = 'NN',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Gray ooze is a slimy horror which inhabits subterranean places. It closely resembles wet stone or sedimentary cave formations.\n\n'
+        'This creature corrodes metal at the same rate a <a href="/creatures/black-pudding">black pudding</a> does, i.e. chainmail is eaten through in a single melee round. Its acids do no harm to stone or wood. Spells do not harm this creature, and it is impervious to heat or cold. Lightning, however, causes full damage to gray ooze, as do blows from weapons. Note, however, that in the latter case the weapons striking the creature may corrode and break. They strike like snakes when attacking.\n\n'
+        'Large specimens (over 18 hit points) are larger than a full grown man, some (those over 21 hit points) are fully 3\' wide and 12\' long, although only about 6 or 8 inches thick.\n\n'
+        'In exceptionally large individuals intelligence of a sort is well developed. Furthermore, these exceptional individuals have a latent psionic ability, and if psionic powers are used within 6" of them they will prepare a psychic crush of from 21 to 121 psionic strength attack points and direct it at any individual within range who uses psionic abilities. After loosing its psionic attack the gray ooze can be psionically attacked.'
+    )
 ),
 CreatureInfo( name = 'Green Slime',
     hd = (2,2),
