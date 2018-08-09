@@ -1,4 +1,4 @@
-from random import randint
+from random import randint, random
 import json
 
 from django.db import models
@@ -6,6 +6,7 @@ from django.contrib.staticfiles.templatetags.staticfiles import static
 
 from dma.dnd.roll import roll
 from dma.dnd.creature_info import Intelligence, SourceBook
+from dma.dnd.treasure import Treasure
 
 """
 Creature class represents an individual creature
@@ -116,8 +117,17 @@ class CreatureInfo(models.Model):
             creatures.append(Creature(self.name, hp, xp, combat_hd))
         
         return creatures
+    
+    def roll_in_lair(self):
+        return (random() > self.lair_chance)
         
-            
+    def roll_treasure(self):
+        t = Treasure()
+        t.rollLoot(self.treasure_types)
+        
+        return str(t)
+         
+    @property
     def lair_percentage(self):
         return self.lair_chance * 100
         
@@ -127,12 +137,20 @@ class CreatureInfo(models.Model):
         
         return None
     
+    def sub_creature_list(self):
+        if self.sub_creatures:
+            return json.loads(self.sub_creatures)
+        else:
+            return None
+    
+    @property
     def num_attacks(self):
         if not self.attacks:
             return 0
         else:
             return len(json.loads(self.attacks))
     
+    @property
     def attacks_str(self):
         if not self.attacks:
             return 'None'
@@ -154,16 +172,131 @@ class CreatureInfo(models.Model):
     
     def m_resist_percentage(self):
         return self.magic_resist * 100
-        
+   
+    @property
     def intelligence_str(self):
         return Intelligence(self.iq_class).name
-        
+    
+    @property
     def alignment_str(self):
         return align_expand[self.alignment]
         
     def img_path(self):
         return static('creatures/images/ + self.slug' + '.png')
-    
+
+
+    def stats_html(self):
+        table_creatures = [self]
+        if self.sub_creature_list():
+            for c_name in self.sub_creature_list():
+                creature = CreatureInfo.objects.get(name = c_name)
+                table_creatures.append(creature)
+
+        #Create top row with creature name(s)
+        html = '<table><tr><th></th>'
+        for c in table_creatures:
+            html += '<th>{}</th>'.format(c.name)
+        html += '</tr>'
+        
+        #Num Appearing Row
+        html += '<tr><th>Number Appearing</th>'
+        for c in table_creatures:
+            if c.min_appearing != c.max_appearing:
+                html += '<td>{} - {}</td>'.format(c.min_appearing, c.max_appearing)
+            else:
+                html += '<td>{}</td>'.format(c.max_appearing) 
+        html += '</tr>'
+        
+        #AC Row
+        html += table_row('Armor Class', 'ac', table_creatures)
+            
+        #Move Speeds
+        html += table_row('Move Speed', 'ground_speed', table_creatures,
+            data_suffix = '"', make_int = True)
+
+        html += table_row_if_present('Air Speed', 'air_speed',
+            table_creatures, data_suffix = '"', make_int = True)
+            
+        html += table_row_if_present('Flight Class', 'flight_class',
+            table_creatures)
+       
+        html += table_row_if_present('Water Speed', 'water_speed',
+            table_creatures, data_suffix = '"', make_int = True)
+            
+        html += table_row_if_present('Climb Speed', 'climb_speed',
+            table_creatures, data_suffix = '"', make_int = True)
+            
+        html += table_row_if_present('Burrow Speed', 'burrow_speed',
+            table_creatures, data_suffix = '"', make_int = True)
+            
+        html += table_row_if_present('Web Speed', 'web_speed',
+            table_creatures, data_suffix = '"', make_int = True)
+
+        #HD/HP
+        html +=  '<tr><th>Hit Dice</th>'
+        for c in table_creatures:
+            html += '<td>'
+            if c.max_hd > 0:
+                if c.min_hd != c.min_hd:
+                    html += '{} - {} HD'.format(c.min_hd, c.max_hd)
+                else:
+                    html += '{} HD'.format(c.min_hd)
+                
+                if c.max_hp_mod > 0:
+                    html += ' + '
+                    
+            if c.max_hp_mod > 0:
+                if c.min_hp_mod != c.max_hp_mod:
+                    html += '{} - {} HP'.format(c.min_hp_mod, c.max_hp_mod)
+                else:
+                    html += '{} HP'.format(c.min_hp_mod)
+            html += '</td>'
+        
+        html += '<tr><th>% In Lair</th>'
+        for c in table_creatures:
+            if c.lair_chance >= 0.01 or c.lair_chance == 0.00:
+                html += '<td>{:.0%}</td>'.format(c.lair_chance)
+            else:
+                html += '<td>{:.2%}</td>'.format(c.lair_chance)
+        html += '</tr>'
+        
+        html += table_row('Treasure Type', 'treasure_types',
+            table_creatures, show_none = True)
+            
+        html += table_row('Number of Attacks', 'num_attacks',
+            table_creatures)
+        
+        html += table_row('Attack Damage', 'attacks_str',
+            table_creatures)
+            
+        html += '<tr><th>Magic Resistance</th>'
+        for c in table_creatures:
+            html += '<td>{:%}</td>'.format(c.magic_resist)
+        html += '</tr>'
+        
+        html += table_row('Intelligence', 'intelligence_str',
+            table_creatures)
+            
+        html += table_row('Alignment', 'alignment_str',
+            table_creatures)
+            
+        html += table_row('Size', 'size_class', table_creatures)
+        
+        html += table_row('Level', 'level', table_creatures)
+        
+        #XP
+        html += '<tr><th>XP</th>'
+        for c in table_creatures:
+            html += '<td>{:,}'.format(c.base_xp)
+            if c.xp_per_hp:
+                html += ' + {}/HP'.format(c.xp_per_hp)
+            html += '</td>'
+        html += '</tr>'
+
+        html += '</table>'
+                
+        return html
+ 
 align_expand = {
     'LG': 'Lawful Good', 
     'NG': 'Neutral Good',
@@ -175,3 +308,24 @@ align_expand = {
     'NE': 'Neutral Evil',
     'CE': 'Chaotic Evil'
 }
+
+def table_row(title, field, creatures, data_suffix='',
+    make_int = False, show_none=False):
+    ret = '<tr><th>{}</th>'.format(title)
+    for c in creatures:
+        data = getattr(c,field)
+        if make_int:
+            data = int(data)
+        
+        if not show_none or data:                
+            ret += '<td>{}{}</td>'.format(data, data_suffix)
+        else: #Show None active, data is null
+            ret += '<td>None</td>'
+    ret += '</tr>'
+    
+    return ret
+
+def table_row_if_present(title, field, creatures, data_suffix='', make_int = False):
+    if any( getattr(x, field) for x in creatures):
+        return table_row(title, field, creatures, data_suffix, make_int)  
+    return ''

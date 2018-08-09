@@ -287,6 +287,7 @@ CreatureInfo( name = 'Bear',
     size = 'M',
     source = SourceBook.MONSTER_MANUAL,
     aliases = ['Black Bear'],
+    sub_creatures = ['Brown Bear', 'Cave Bear'],
     description = 'All of these ursoids are omnivorous, although the gigantic cave bear tends towards a diet of meat. All have excellent hearing and smell but rather poor eyesight. Size shown is average for the variety, and larger individuals will be correspondingly more powerful. The grizzly bear is a brown bear of very aggressive disposition. Black bears are usually not aggressive, brown bears are, and cave bears are quite aggressive. If a bear scores a paw hit with at 18 or better it also hugs for additional damage as indicated. The brown and cave bears will continue to fight for 1-4 melee rounds after reaching 0 to -8 hit points. At -9 or greater damage, they are killed immediately.'
 ),
 CreatureInfo( name = 'Brown Bear',
@@ -2486,7 +2487,7 @@ CreatureInfo( name = 'Dwarf',
         'Dwarves are 60% likely to have tamed animals to serve as guards in their lair: 5-20 <a href="/creatures/wolf">wolves</a> (25%) or 2-8 <a href="/creatures/bear">brown bears</a> (75%).\n\n'
         'Due to their great hatred of goblins, orcs, and hobgoblins, all dwarves gain a bonus of +1 on their dice rolls to hit these opponents. When dwarves are in melee with <a href="/creatures/ogre">ogres</a>, <a href="/creatures/troll">trolls</a> and giants, these monsters must deduct 4 from their dice roll to hit their dwarven opponents due to the size and skill of the latter in combatting these huge creatures.\n\n'
         'All dwarves are resistant to both magic and poison; they therefore make saving throws at 4 levels above their actual level. Dwarves can see in the dark (infravision) noting monsters at a distance of 60\'. Because of their mining skills, dwarves are good (50% to 75% likely) at detecting passages which slope upwards or downwards, sliding or shifting walls or rooms, new construction, approximate depth, or unusual stonework.\n\n'
-        'Dwarves speak their own tongue and those of <a href="/creature/gnome">gnomes</a>, <a href="/creature/goblin">goblins</a>, <a href="/creatures/kobold">kobolds</a>, and <a href="/creatures/orc">orcs</a>. It is 75% likely that dwarves will also speak the common language.\n\n'
+        'Dwarves speak their own tongue and those of <a href="/creatures/gnome">gnomes</a>, <a href="/creatures/goblin">goblins</a>, <a href="/creatures/kobold">kobolds</a>, and <a href="/creatures/orc">orcs</a>. It is 75% likely that dwarves will also speak the common language.\n\n'
         '<i>Description</i>: Dwarves are typically deep tan to light brown of skin, with ruddy cheeks and bright eyes (almost never blue). Their hair is brown, black or gray. They favor earth tones with small bits of bright color in their clothing. Although only 4 or so feet tall, they weigh no less than 150 pounds due to their stocky muscular build. They live for no less than 350 years on the average.\n\n'
         '<i>Mountain Dwarves</i>: These creatures are similar to their cousins, the hill dwarves, detailed above. The only differences are size (4½\'+ tall), hit dice (1+1), and coloration (typically lighter with brown hair). They employ fewer crossbows (20% maximum) and more spears (30%). Mountain dwarves with 16 strength can work up to 7th level, with 17 strength to 8th level, and with 18 strength to 9th level. Mountain dwarves have a life span of 400 or more years.'
     )
@@ -3130,7 +3131,7 @@ CreatureInfo( name = 'Fire Giant',
     align = 'LE',
     size = 'L',
     source = SourceBook.MONSTER_MANUAL,
-    description = ('Fire giants are as often found in castles as in caverns. If found in their lair it is 25% likely that they will have 1-4 <a href="/creatures/hell-hound">hell hounds</a> of the largest size as watch dogs. If more than 4 fire giants are encountered in their lair the additional ones will be females (corresponding to <a href="/creature/frost-giant">frost giants</a> for hit dice and damage/attack), except that if 7 or 8 are encountered the last one or two will be young (roll percentile dice for size).\n\n'
+    description = ('Fire giants are as often found in castles as in caverns. If found in their lair it is 25% likely that they will have 1-4 <a href="/creatures/hell-hound">hell hounds</a> of the largest size as watch dogs. If more than 4 fire giants are encountered in their lair the additional ones will be females (corresponding to <a href="/creatures/frost-giant">frost giants</a> for hit dice and damage/attack), except that if 7 or 8 are encountered the last one or two will be young (roll percentile dice for size).\n\n'
         'Adult fire giants are able to hurl rocks from 1" to 20" distances, inflicting 2-20 hit points of damage. They can catch like missiles 50% of the time. Fire giants are impervious to fire, even <a href="/creatures/red-dragon">red dragon</a> breath.\n\n'
         '<i>Description</i>: Fire giants are very broad (about 6\' at the shoulders), looking almost like <a href="/creatures/dwarf">dwarves</a>. Their skins are coal black, hair is flaming red or bright orange, and eyes are deep red. Their teeth are usually yellow orange. They wear armor or dragon hides. They favor huge swords.'
     )
@@ -3465,7 +3466,12 @@ CreatureInfo( name = 'Green Slime',
     m_resist = 0.0,
     align = 'NN',
     size = 'S',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Green slimes are strange plant growths found in subterranean places. Although they cannot move, they slowly grow, feeding on animal, vegetable and metallic substances. They are sensitive to vibrations and will often drop upon passing creatures from above.\n\n'
+        'Green slime will attach itself to living flesh, and in 1-4 melee rounds thereafter turn the creature into green slime (no resurrection possible). It eats away wood slowly, consuming but one inch thickness in an hour. Green slime eats metal quickly, going through plate armor in 3 melee rounds.\n\n'
+        'It can be scraped off quickly (if the scraper is then discarded), excised, frozen, or burned. A <a href="/spells/cure-disease-cleric-lvl-3/"><i>cure disease</i></a> spell kills green slime. Other forms of attack - including weapons or spell -  do it no harm.\n\n'
+        'Occasionally huge slimes or colonies of dozens have been reported.'
+    )
 ),
 CreatureInfo( name = 'Griffon',
     hd = (7,7),
@@ -3484,7 +3490,8 @@ CreatureInfo( name = 'Griffon',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'Griffons seek cliffs and rocky habitats in which to build their nests. If conditions permit they will lair in a cave. They are aggressive carnivores, and their favorite prey are <a href="/creatures/wild-horse">horses</a>. If they come within sighting or smelling distance (36" as a general rule) of horseflesh, the griffons will wing to the hunt. They are much sought after in their fledgling state, for they can be tamed for use as fierce, loyal, steeds if obtained before maturity. If encountered in their lair, there is a 75% chance that there will be 1 or 2 eggs or young for every 2 griffons. The young are non-combative, but the adults will attack until killed. Fledglings sell for 5,000 gold pieces, eggs for 2,000, on the open market.'
 ),
 CreatureInfo( name = 'Groaning Spirit',
     hd = (7,7),
@@ -3501,7 +3508,8 @@ CreatureInfo( name = 'Groaning Spirit',
     align = 'CE',
     size = 'M',
     aliases = ['Banshee'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'The groaning spirit, or banshee, is the spirit of an evil female elf - a very rare thing indeed. The spirit returns to harm the living. It is found only in desolate countrysides, moors, etc. The groaning spirit can attack by its chilling touch, causing 1-8 hit points damage/attack when it strikes. Its more fearsome mode of attack, however, is its wail, or keening, which will cause the hearers within 3" to save versus magic or die on the spot. The sight of a groaning spirit causes fear unless an appropriate saving throw is made. It can wail but once per day, and only during darkness. Groaning spirits cannot be affected by <a href="/spells/charm-monster-magic-user-lvl-4/"><i>charm</i></a>, <a href="/spells/sleep-magic-user-lvl-1/"><i>sleep</i></a>, or <a href="/spells/hold-monster-magic-user-lvl-5/"><i>hold</i></a> spells. They are impervious to attack by cold or electricity. <a href="/spells/exorcise-cleric-lvl-4/">Exorcism</a> kills them.'
 ),
 CreatureInfo( name = 'Halfling',
     hd = (0,0),
@@ -3516,7 +3524,24 @@ CreatureInfo( name = 'Halfling',
     m_resist = 0.0,
     align = 'LG',
     size = 'S',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Halflings are basically hard-working, orderly and peaceful citizens of communities similar to humans - although their villages usually contain many burrow homes as well as surface cottages. For every 30 halflings encountered there will be two 2nd level fighters. If more than 90 are encountered there will be an additional leader of 3rd level fighting ability. If more than 150 are encountered there will also be the following additional halflings in the group: one 4th level fighter, two 3rd level fighters and three 2nd level fighters. If encountered in their lair there will be females and children equal to 100% and 60% respectively of the adult males indicated. A typical halfling lair will be in pastoral countryside.\n\n'
+        'The usual protection worn by halflings consists of padded or leather armor. Halflings are typically weaponed as follow:\n\n'
+        '10% small sword and short bow\n'
+        '10% small sword and spear\n'
+        '10% short bow\n'
+        '20% sling\n'
+        '10% small sword\n'
+        '20% spear\n'
+        '20% hand axe\n\n'
+        'All halflings above normal level will have armor class 6, while those of 3rd or 4th level will have armor class 5 and 4 respectively. All such higher levels will have a 10% chance per level of having magic armor and/or miscellaneous weapons.\n\n'
+        'Halflings encountered in their lair will have from 1-4 dogs (treat them as <a href="/creatures/wild-dog">wild dogs</a> for statistical purposes) per halfling.\n\n'
+        'The magic and poison resistance of halflings causes them to save at four level above their actual. They are exceedingly clever at both quiet movement and hiding. They will surprise on a die roll of 1-4 on a 6-sided die. In natural terrain they must be treated as invisible if they have any form of vegetation in which to conceal themselves. They have no infravision. They shun water.\n\n'
+        'Halflings speak their own language, their alignment tongue, and the common speech. In addition they speak the language of <a href="/creatures/gnome">gnomes</a>, <a href="/creatures/goblin">goblins</a>, and <a href="/creatures/orc">orcs</a>.\n\n'
+        '<i>Description</i>: Of ruddy complexion, halflings tend toward brown or sandy brown hair coloration, and have brown or hazel eyes. Their dress is usually colorful, but their trousers and coats are likely to be serviceable gray, tan, or brown material. Halflings have a life expectancy of 150 or more years.\n\n'
+        '<b>Tallfellow</b>: A taller (4+\'), slimmer halfling, with fairer skin and hair. Tallfellows are very rare. They use more armor (AC 6), ride ponies and carry more spears. It is possible for exceptionally strong (17, 18) tallfellows to work to 5th or 6th level of fighting ability. They can speak <a href="/creatures/elf">elvish</a> and are very friendly with elves. They live for about 180 years on the average.\n\n'
+        '<b>Stout</b>: This kind of halfling is a bit smaller (3½+\') and stockier than the typical (hairfeet). They use more armor also (AC 6), and employ morning stars in addition to the usual halflingish arms. Very strong stouts (18) are able to work up to 5th level fighting ability. Stouts have infravision and can detect sloping passageways. They have no fear of water and can swim. These halflings are able to speak <a href="/creatures/dwarf">dwarvish</a> and enjoy dwarven company. Stouts reach the age of 200 or more years.'
+    )
 ),
 CreatureInfo( name = 'Harpy',
     hd = (3,3),
@@ -3535,7 +3560,8 @@ CreatureInfo( name = 'Harpy',
     m_resist = 0.0,
     align = 'CE',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'Harpies have the bodies of vultures but the upper torsos and heads of women. They are voracious carnivores and foul creatures. Those that dwell along seacoasts are generally known as sirens. All harpies are able to emit sweet-sounding calls. Any creature hearing these calls will proceed towards the harpies unless they save versus magic. Similarly, the touch of a harpy <a href="/spells/charm-person-or-mammal-druid-lvl-2/"><i>charms</i></a> those creatures which fail to make their saving throw versus magic. The harpies attack, torture, and devour their charmed prey. What they do not want they foul with excrement. A harpy attacks with her vulture claws and some form of weapon - often a bone club or some weapon left from one of her former victims. They speak their own language and none other.'
 ),
 CreatureInfo( name = 'Hell Hound',
     hd = (4,7),
@@ -3552,7 +3578,12 @@ CreatureInfo( name = 'Hell Hound',
     m_resist = 0.0,
     align = 'LE',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Hell hounds are not normally from the material plane, but some few now dwell on it, having been brought along by various creatures who wished their evil service.\n\n'
+        'In addition to a normal attack (simply biting with thier great black teeth), hell hounds breathe out a scorching fire on an opponent up to a 1" distance, causing 1 hit point of damage for each hit die they possess, unless the opponent is able to save versus dragon breath, in which case only one-half damage is inflicted, i.e. a 7 hit dice hell hound breathes for 7 or 4 points of damage/attack.\n\n'
+        'Hell hounds move with great stealth, so they surprise opponents on a die roll of 1-4 (out of 6). They have keen hearing, and they are surprised on a die roll of 1 only (out of 6). Their exceptional sight allows them to <i>locate hidden or invisible creatures</i> 50% of the time. For these reasons they are favored as watchdogs by monsters and <a href="/creatures/fire-giant">fire giants</a>.\n\n'
+        '<i>Description</i>: Hell hounds are rusty red to red brown in color. Their eyes are glowing red. Teeth and tongues are sooty black.'
+    )
 ),
 CreatureInfo( name = 'Herd Animal',
     hd = (1,5),
@@ -3566,7 +3597,8 @@ CreatureInfo( name = 'Herd Animal',
     m_resist = 0.0,
     align = 'NN',
     size = 'S',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'Herd animals live in all climes - musk oxen and reindeer at the North Pole, giraffe and antelopes at the equator. The smallest will have but 1 hit die, the largest will have 5. Attacks are simply a matter of the animals\' in question modes of defense (horns, butting, hooves, flight). Damage is a factor of defense (attack) mode and size/strength. As herd animals are not aggressive, they will stampede away from what they perceive to be the greatest threat to their safety. Humans or humanoids of about man-size or less, will be trampled to death if caught in the path of a stampede.'
 ),
 CreatureInfo( name = 'Hippocampus',
     hd = (4,4),
@@ -3583,7 +3615,8 @@ CreatureInfo( name = 'Hippocampus',
     m_resist = 0.0,
     align = 'CG',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'The hippocampus is the most prized of marine steeds, for they are strong, swift, and intelligent. They differ from the normal <a href="/creatures/giant-sea-horse">seahorse</a> in that they have a long rear body similar to that of a great fish, and the hippocampus has forelegs ending in powerful fins. Their bodies are covered with fine scales in the fore parts, large scales elsewhere. They speak their own language and can learn another if properly trained. <a href="/creatures/triton">Tritons</a> are often found in possession of these creatures.'
 ),
 CreatureInfo( name = 'Hippogriff',
     hd = (3,3),
@@ -3602,7 +3635,8 @@ CreatureInfo( name = 'Hippogriff',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'Hippogriffs dwell only in places uninhabited by men, generally nesting on rocky crags and similar places. They are fierce fighters and will defend themselves resolutely. As the hippogriff is an omnivore, it will never be found with <a href="/creatures/pegasus">pegasi</a>. <a href="/creatures/griffon">Griffons</a> will attack and eat hippogriffs on occasion. The hippogriff is able to fight well with its two great fore claws and powerful beak, however, and they are not easy prey. If encountered in their lair (nesting area) they will attack immediately. There will be one nest for every 2 creatures, each nest containing 1 or 2 eggs or fledglings. Hippogriff eggs are valued at 1,000 gold pieces each on the open market, fledglings at 2,000 to 3,000 gold pieces.'
 ),
 CreatureInfo( name = 'Hippopotamus',
     hd = (8,8),
@@ -3620,7 +3654,8 @@ CreatureInfo( name = 'Hippopotamus',
     align = 'NN',
     size = 'L',
     sub_creatures = ['Hippopotamus Bull'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'As their name implies, hippopotami are found in rivers and lakes of tropical regions. They are herbivores, but they aggressively defend their own territory. A hippo bites with exceedingly strong jaws, and a bull will do 3-18 hit points of damage/attack. There will be 1-3 bulls in a herd, 1 for every 4 animals. If a boat or canoe passes over submerged hippopotami there is a 50% chance that a bull will emerge under it and tip the craft over. Hippopotami travel underwater by running along the bottom. They can stay submerged for 15 minutes.'
 ),
 CreatureInfo( name = 'Hippopotamus Bull',
     hd = (8,8),
@@ -3655,7 +3690,25 @@ CreatureInfo( name = 'Hobgoblin',
     m_resist = 0.0,
     align = 'LE',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Tribal bands of hobgoblins are likely to be encountered nearly anywhere as these creatures are equally at home in sunlight or subterranean setting. They fight well in full daylight and have infravision (60\') so as to be able to fight in total darkness as well. Each tribe is jealous of its status, and if two tribal bands of hobgoblins meet there will be at least catcalls and derision (85%) and open fighting might break out (15%) unless a strong leader such as a powerful monster or fighter or evil high priest, etc. is on hand to control them. Similarly, the hobgoblins will bully nearby <a href="/creatures/orc">orcs</a> or <a href="/creatures/goblin">goblins</a> given the opportunity, and hobgoblin leaders are sometimes used in bodies of goblins or orcish troops to keep them in order and drive them into battle.\n\n'
+        'The better known (more infamous) hobgoblin tribes include: rippers, leg breakers, skull smashers, flesh renders, marrow suckers, flayers, and slow killers.\n\n'
+        'For every 20 hobgoblins in a group there is a leader (sergeant) and 2 assistants. These hobgoblins will have 9 hit points each. If 100 or more hobgoblins are encountered there will be the following additional figures with the group: a subchief (armor class 3, 16 hit points, and 1d8 +2 damage (3-10 hit points)). These additional hobgoblins fight as 3 hit dice monsters. If hobgoblins are encountered in their lair there will also be, in addition, a chief and 5-20 bodyguards. Hobgoblin chiefs are armor class 2, 22 hit points, do 2-11 hit points of damage, and fight as 4 hit dice monsters. Their bodyguards are the same as those of sub-chiefs. There are females and young in the lair equal to 150% and 300% respectively of the number of males.\n\n'
+        'Hobgoblin lairs are underground 80% of the time and above ground 20% of the time. In the latter case the lair will be a village with a ditch, rampart, and palisade of stones, earth and logs. There will be two gates and 3-6 guards towers. The dwellings inside are usually a mixture of wood and stone. As they seek to build on the ruins of human or other more sophisticated creatures, a hobgoblin village may be of better construction than indicated, possibly having solid stone works, buildings or a keep. In any event, hobgoblins will have 2 heavy catapults, 2 light catapults, and 1 ballista per 50 warriors. If the lair is underground, there is a 60% chance that there will be from 2-12 <a href="/creatures/carnivorous-ape">carnivorous apes</a> as guards.\n\n'
+        'Hobgoblins have the following typical weapon distribution:\n\n'
+        '20% sword and composite bow\n'
+        '10% sword and spear\n'
+        ' 5% sword and morning star\n'
+        ' 5% sword and whip\n'
+        '30% polearm\n'
+        '10% spear\n'
+        '20% morning star\n\n'
+        'Leaders will always bear two weapons. The tribal standard will be with a sub-chief 20% of the time. It is always present with the chief. The tribal standard causes hobgoblin warriors within 6" to fight harder, thus giving them +1 on their attack dice rolls and +1 on morale (reaction) dice rolls.\n\n'
+        'If <a href="/creatures/elf">elves</a> are nearby, hobgoblins will attack them in preference to any other troops because of the great hatred they bear.\n\n'
+        'Hobgoblins are highly adept at mining, and they can detect new construction, sloping passages, and even shifting walls 40% of the time.\n\n'
+        'Most hobgoblins speak goblin, orcish, and the rudimentary tongue of carnivorous apes in addition to their racial and alignment languages. 20% of hobgoblins can speak the common tongue as well.\n\n'
+        '<i>Description</i>: The hairy hides of hobgoblins range from dark reddish-brown to gray black. Their faces are bright red-orange to red. Large males will have blue-red noses. Eyes are either yellowish or dark brown. Teeth are yellowed white to dirty yellow. Hobgoblins favor bright, bloody colors and black leather. They keep weapons well polished. Hobgoblins live for 60 years.'
+    )
 ),
 CreatureInfo( name = 'Koalinth',
     hd = (1,1),
@@ -3673,7 +3726,8 @@ CreatureInfo( name = 'Koalinth',
     m_resist = 0.0,
     align = 'LE',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'A marine species of <a href="/creatures/hobgoblin">hobgoblin</a> with gills. They are similar to their land-dwelling cousins in most respects. They dwell in shallow water in caverns and sea caves. They use spears and pole arms adapted to their marine environment. Koalinth speak only their racial language (hobgoblin) and lawful evil. They prey on any available creatures. Koalinth are of lighter coloration, having green faces, and have webbed hands and feet.'
 ),
 CreatureInfo( name = 'Homonculous',
     hd = (2,2),
@@ -3690,9 +3744,13 @@ CreatureInfo( name = 'Homonculous',
     m_resist = 0.0,
     align = 'NN',
     size = 'S',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('This creature is created and animated through a special process by a magic-user and an alchemist (described hereafter). The homonculous travels on its hind legs or by flying. Its bite causes 1-3 points of damage, and forces the victim to save versus magic or fall into comatose sleep which lasts for 5-30 minutes. The creature makes all of its saving throws at the same level as its creator. Although the homonculous cannot speak, it knows what the magic-user knows, and the latter is able to see and hear through the creature\'s eyes and ears. There is a telepathic link between the magic-user and his creature, and the homonculous can be controlled up to 48" away from its master. It will never willingly pass from this maximum range. If the homonculous is killed the magic-user immediately suffers 2-20 points of damage.\n\n'
+        'When a homonculous is desired the magic-user must hire an alchemist, and the latter will require from 1-4 weeks to create fluids for forming the creature. This will cost 1 pint of the magic-user\'s blood and 500-2,000 gold pieces. The magic-user must then cast a <a href="/spells/mending-magic-user-lvl-1/"><i>mending</i></a> spell, a <a href="/spells/mirror-image-magic-user-lvl-2/"><i>mirror image</i></a>, and a <a href="/spells/wizard-eye-magic-user-lvl-4/"><i>wizard eye</i></a> upon the fluid to form the homonculous.\n\n'
+        '<i>Description</i>: When the homonculous is finished it will be man-like in form, about 18" tall, have a greenish, reptillian skin, leathery wings, and a bat-like mouth with teeth passing on a venom which causes sleep unless the party bitten saves vs. magic.'
+    )
 ),
-CreatureInfo( name = 'Draft Horse',
+CreatureInfo( name = 'Horse',
     hd = (3,3),
     hp = (0,0),
     num = (1,1),
@@ -3704,7 +3762,22 @@ CreatureInfo( name = 'Draft Horse',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    aliases = ['Draft Horse'],
+    sub_creatures = ['Heavy Warhorse', 'Light Warhorse', 'Medium Warhorse',
+        'Pony', 'Wild Horse'],
+    description = ('Various forms of horses are found nearly everywhere. They are panicked by raging fire, sudden movement, loud noises, or strange smells 90% of the time. Note, however, that warhorses are only 10% likely to panic, rear, and run away. Ponies and wild horses can be trained for war, about 10% of these animals being fit for such training. A pony will never fight well, but it will be less likely to panic.\n\n'
+        'Warhorses fight on the second and succeeding rounds of melee, as long as their rider remains mounted. Their attack consists of two hoof thrusts and a bite.\n\n'
+        'The various types of horses can carry the following maximum loads, indicated in gold pieces of weight. The number before the slash is normal movement, the number after is encumbered movement maximum load. Encumbrance slows speed one-half.\n\n'
+        '<table><tr><th>Horse Type</th><th>Max Unencumbered Load</th><th>Max Encumbered Load</th>'
+        '<tr><td>Draft horse</td><td>4,000</td><td>8,000</td></tr>'
+        '<tr><td>Heavy warhorse</td><td>5,000</td><td>7,500</td></tr>'
+        '<tr><td>Light Warhorse</td><td>3,000</td><td>5,000</td></tr>'
+        '<tr><td>Medium Warhorse</td><td>4,000</td><td>6,500</td></tr>'
+        '<tr><td>Pony</td><td>2,000</td><td>3,000</td></tr>'
+        '<tr><td>Wild Horse</td><td>3,000</td><td>6,000</td></tr></table>\n\n'
+        'Horses (and ponies) are not sufficiently agile to take into dungeons.'
+    )
 ),
 CreatureInfo( name = 'Heavy Warhorse',
     hd = (3,3),
@@ -3718,7 +3791,8 @@ CreatureInfo( name = 'Heavy Warhorse',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    parent_creature = 'Horse'
 ),
 CreatureInfo( name = 'Light Warhorse',
     hd = (2,2),
@@ -3732,7 +3806,8 @@ CreatureInfo( name = 'Light Warhorse',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    parent_creature = 'Horse'
 ),
 CreatureInfo( name = 'Medium Warhorse',
     hd = (2,2),
@@ -3746,7 +3821,8 @@ CreatureInfo( name = 'Medium Warhorse',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    parent_creature = 'Horse'
 ),
 CreatureInfo( name = 'Pony',
     hd = (1,1),
@@ -3760,7 +3836,8 @@ CreatureInfo( name = 'Pony',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    parent_creature = 'Horse'
 ),
 CreatureInfo( name = 'Wild Horse',
     hd = (2,2),
@@ -3774,7 +3851,8 @@ CreatureInfo( name = 'Wild Horse',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    parent_creature = 'Horse'
 ),
 CreatureInfo( name = 'Hydra',
     hd = (5,12),
@@ -3794,7 +3872,11 @@ CreatureInfo( name = 'Hydra',
         'Hydra 7 Headed', 'Hydra 8 Headed', 'Hydra 9 Headed',
         'Hydra 10 Headed', 'Hydra 11 Headed', 'Hydra 12 Headed',
         'Hydra 13 Headed', 'Hydra 14 Headed',
-        'Hydra 15 Headed', 'Hydra 16 Headed')
+        'Hydra 15 Headed', 'Hydra 16 Headed'),
+    description = ('Hydrae are reptilian monsters found in marshes, swamps, and similar places, as well as in subterranean lairs. Their large, four-legged bodies are surmounted by from 5 to 12 heads (roll an 8-sided die to determine number). Each head has 1 hit die of a full 8 hit points. When all of a hydra\'s heads are killed, the body dies, but not until each and every head is killed. The hydra attacks according to the number of heads it has, each head being considered as a hit die. Thus, a hydra of 7 heads attacks as a monster of 7 hit dice. It is possible for the hydra to attack several opponents at once, and up to 4 heads are able to attack the same target simultaneously. Damage scored is based on the number of heads the hydra has: hydrae of 5 or 6 heads do 1-6 hit points of damage/attack, those with 7 to 10 heads score 1-8 points of damage, and hydrae with 11 or 12 heads do 1-10 hit points of damage.\n\n'
+        '<i>Description</i>: Hydrae are gray brown to blackish brown with lighter underbellies tinged towards yellow or tan. Their eyes are amber to orange. The teeth are yellowish white.\n\n'
+        '<i>Lernaean Hydra<i>: These creatures are very rare. The lernaean hydra is indistinguishable from a normal hydra until it is attacked. Every time one of the heads of these creatures is cut off or killed, it grows two new ones in 1-4 melee rounds unless fire is applied to the dead member of neck stump. Thus, a 5-headed lernaean hydra could grow to a 12-headed monster in a single combat, gaining the appropriate hit dice and attack potential in the process.'
+    )
 ),
 CreatureInfo( name = 'Hydra 5 Headed',
     hd = (5,5),
@@ -4029,7 +4111,8 @@ CreatureInfo( name = 'Pyro-Hydra',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'Pyrohydrae appear quite similar to normal <a href="/creatures/hydra">hydrae</a>, although their coloration may be tinged with more red. They seldom exceed 7 heads, 10% having 8, and no 9-headed pyrohydra has ever been recorded. Each head of a pyrohydra is able to breathe fire twice per day, the breath shooting out in a cone ½" diameter at the mouth, 1" diameter at the end, and 2" long. This fire causes 8 hit points of damage (4 if saving throw versus dragon breath is made). They can, of course, strike normally as well.'
 ),
 CreatureInfo( name = 'Pyro-Hydra 5 Headed',
     hd = (5,5),
@@ -4187,7 +4270,11 @@ CreatureInfo( name = 'Hyena',
     m_resist = 0.0,
     align = 'NN',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    sub_creatures = 'Giant Hyena',
+    description = ('Hyenas are pack animals dwelling on warm plains. They are hunter/scavengers with very strong jaws and aggressive if hungry.\n\n'
+        'Hyaenodons are simply huge (prehistoric) hyenas.'
+    )
 ),
 CreatureInfo( name = 'Giant Hyena',
     hd = (5,5),
@@ -4203,8 +4290,9 @@ CreatureInfo( name = 'Giant Hyena',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    aliases = ['Hyaenadon'],
-    source = SourceBook.MONSTER_MANUAL
+    aliases = ['Hyaenodon'],
+    source = SourceBook.MONSTER_MANUAL,
+    parent_creature = 'Hyena'
 ),
 CreatureInfo( name = 'Imp',
     hd = (2,2),
@@ -4221,7 +4309,13 @@ CreatureInfo( name = 'Imp',
     m_resist = 0.25,
     align = 'LE',
     size = 'S',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Imps are very rare on the material plane, but on the planes of Archeron and Hell they are not uncommon. An imp is created from a <a href="/creatures/larva">larva</a>. It is a very minor devil created to spread evil in the form of a familiar to a lawful evil magic-user or cleric. The imp is given the power to <a href="/spells/polymorph-self-magic-user-lvl-4/"><i>polymorph self</i></a> into animal form at will. The shape it can assume is limited to two of the following: <a href="/creatures/large-spider/">large spider</a>, <a href="/creatures/raven/">raven</a>, <a href="/creatures/giant-rat/">giant rat</a>, or <a href="/creatures/goat/">goat</a>.\n\n'
+        'In an unpolymorphed state the imp attacks with its tail, and any creature struck by it must save versus poison or die. For hit determination the tail is considered a dagger. In animal form the imp attacks accordingly, the raven and goat having no effective attacks.\n\n'
+        'All magical powers of an imp are usable whatever form it is in. Imps are able to <a href="/spells/detect-evil-cleric-lvl-1/"><i>detect good</i></a> and <a href="/spells/detect-magic-cleric-lvl-1/"><i>detect magic</i></a>. They <i>regenerate</i> at 1 hit point per melee round. Imps can <a href="/spells/invisibility-magic-user-lvl-2/"><i>become invisible</i></a> at will. Once per day they are able to use a <a href="/spells/suggestion-magic-user-lvl-3/"><i>suggestion</i></a>. Only silver or magical weapons are effective against imps. Magical attacks employing cold, fire, or electricity do not harm imps, and for purposes of spell attacks upon them imps are considered 7 hit dice creatures.\n\n'
+        'Imps have average intelligence plus devilish cunning. As familiars they are also able to call upon the intelligence of arch-devils\n\n.'
+        'When an imp assumes the role of a familiar, its "master" gains the following benefits: A telepathic link is established between the pair, and the "master" is able to receive all sensory impressions of the imp, including visual images of infrared spectrum, up to a mile distance. The presence of an imp within 1" allows its "master" to gain a 25% magic resistance and regenerate at 1 hit point per melee round. If the imp is within 1 mile its "master" gains an additional level of ability, but if the imp is over a mile distant the character loses 1 level, and if the familiar is killed the character drops 4 ability levels. Also, in addition to its normal aid and advice, the imp familiar is able to contact a lower plane once per week in order to help its "master" decide some course of action. This contact is like a <a href="/spells/commune-cleric-lvl-5/"><i>commune</i></a> spell, but 6 questions are allowed.'
+    )
 ),
 CreatureInfo( name = 'Intellect Devourer',
     hd = (6,6),
@@ -4238,7 +4332,11 @@ CreatureInfo( name = 'Intellect Devourer',
     m_resist = 0.0,
     align = 'CE',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('The intellect devourer is one of the most feared of monsters. They are found dwelling deep beneath the ground or in dark and dismal lairs in the wilderness. Although they are able to attack with their great claws, their primary offenseive means is psionic, for they subsist on the psychic energy of their prey - whether gained from the dying shriek or by more subtle means. If psionic energy (from abilities or magical means) is in use nearby (6") they will stalk the user, seeking a time to attack him alone and by surprise. The monster then leaps upon his victim, tearing with his claws and psionically attacking with ego whip or id insinuation. If psionically successful the devourer will then house itself within the mindless body, seeking to deceive others by assuming the character of the person it has slain. The intellect devourer will then seek opportunities to attack and devour others.\n\n'
+        'They are able to hide in shadow as well as a 10th level thief. Normal weapons and most spells have no effect upon these monsters. Magical weapons +3 or more cause 1 point of damage upon them when they hit. Bright light will drive them off, and a <a href="/spells/protection-from-evil-cleric-lvl-1/"><i>protection from evil</i></a> will keep them at a distance. <a href="/spells/fireball-magic-user-lvl-3/"><i>Fireballs</i></a> serve only as bright light, but <a href="/spells/lightning-bolt-magic-user-lvl-3/"><i>lightning bolts</i></a> will cause them pain and some small damage (1 point per die of lightning bolt strength). A <a href="/spells/death-spell-magic-user-lvl-6/"><i>death spell</i></a> has a 25% chance of success, and a <a href="/spells/power-word-kill-magic-user-lvl-9/"><i>power word: kill</i></a> will slay them. Of course, they can be psionically attacked, and their psionic strength of 200 total makes this not too difficult. However, if seriously threatened they will seek to flee and save themselves.\n\n'
+        'Their awareness extends to the astral and ethereal planes, and intellect devourers often roam the astral and ethereal planes. They are able to speak any human language.'
+    )
 ),
 CreatureInfo( name = 'Invisible Stalker',
     hd = (8,8),
@@ -4253,7 +4351,12 @@ CreatureInfo( name = 'Invisible Stalker',
     m_resist = 0.3,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('The invisible stalker is a creature from the elemental plane of air, normally encountered on the material plane only due to the conjuration of some magic-user. This conjuration causes the creature to serve for a period on this plane. Invisible stalkers roam the astral and ethereal planes, and if they are encountered there on the elemental planes, they can be dimly seen. Otherwise or unless their opponents are able to <a href="/spells/detect-invisibility-magic-user-lvl-2/"><i>detect/see invisible objects</i></a>, their invisibility causes opponents to subtract 2 from "to hit" dice rolls. Unless slain on their own plane, invisible stalkers are simply sent back to the elemental plane when damage accrued exceeds their total hit points.\n\n'
+        'The conjuring party retains full command of the invisible stalker summoned until it fulfills its duties or is killed. Once set upon a mission, an invisible stalker will follow through unceasingly until it is accomplished. They are faultless trackers within one day of a quarry\'s passing. They must be destroyed to make them cease an ordered attack. Once a mission is finished, the creature is freed to return to its own plane. The invisible stalker is at best an unwilling servant but will not resent a brief, uncomplicated task. Service involving a period of a week tries the creature severely, and anything longer is certain to make it attempt to fulfill the letter of command by perverting the spirit of it. This is not to say that impelling the invisible stalker to serve for extended periods is impossible, but the compulsion to cause it to do so fully and properly must be great, i.e. a carefully worded command from a very powerful magic-user. A simple command such as "Follow me, and guard me from any attack," could be interpreted to follow at 100\' distance if the invisible stalker had been on duty over a week - or perhaps even if it hadn\'t been that long, for dealing with such creatures is always a hazard. Similarly, a command to: "Keep me safe from all harm," can be construed by the invisible stalker that it is to carry the conjuring party to its own plane and place them in suspended animation in a secret room in its own abode, thus carrying out its duties to the letter.\n\n'
+        'Each day of duty which an invisible stalker serves will see a 1% cumulative chance of the creature seeking to pervert the intent of its commands in order to be free of servitude. If no option remains open, the stalker must continue to serve.\n\n'
+        'Invisible stalkers understand the common speech, but they do not talk any language but their own.'
+    )
 ),
 CreatureInfo( name = 'Irish Deer',
     hd = (4,4),
@@ -4269,7 +4372,8 @@ CreatureInfo( name = 'Irish Deer',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'These moose-sized creatures of the Pleistocene epoch dwell in temperate climes. Their antlers spread to 10\' width, and they can actually gore two opponents within this span if they are directly before the deer. They are not generally aggressive, but are very dangerous during rutting season (early spring).'
 ),
 CreatureInfo( name = 'Ixitxachitl',
     hd = (1,1),
@@ -4287,7 +4391,11 @@ CreatureInfo( name = 'Ixitxachitl',
     m_resist = 0.0,
     align = 'CE',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    sub_creatures = ['Vampire Ixitxachitl'],
+    description = ('Ixitxachitl are a race of intelligent rays which dwell in shallow tropical seas. They are of evil disposition, and clerical in nature. For every 10 encountered there will be one which is equivalent of a 2nd level human cleric with regard to spell use; for every 20 encountered there will be a 3rd level equivalent; and for every 50 encountered there will be a 5th level equivalent. If more than 50 are encountered there will be the following additional ixitxachitl with the group: a leader with 8th level clerical spell ability and quadruple normal hit dice, two guards with 6th level clerical spell ability and triple normal hit dice. Also, some of these monsters are vampiric. For every 20 ixitxachitl encountered there is a 50% chance that there will be a vampiric form in the group. Vampiric ixitxachitl are similar to their fellows, but they regenerate 3 hit points per melee round and drain an energy level each time they strike an opponent, and they have double hit dice.\n\n'
+        'Discovering an ixitxachitl lair is difficult, for they are typically made in coral reefs and hidden by a secret entrance. Inside the lair will be various items as shown for treasure types P, R, and S. If a leader is encountered there is the possibility that it guards will possess type U magic items which can be worn, or used without hands if the creatures are in their lair.'
+    )
 ),
 CreatureInfo( name = 'Vampire Ixitxachitl',
     hd = (2,2),
@@ -4304,7 +4412,8 @@ CreatureInfo( name = 'Vampire Ixitxachitl',
     m_resist = 0.0,
     align = 'CE',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    parent_creature = 'Ixitxachitl'
 ),
 CreatureInfo( name = 'Jackal',
     hd = (0,0),
@@ -4320,7 +4429,8 @@ CreatureInfo( name = 'Jackal',
     m_resist = 0.0,
     align = 'NN',
     size = 'S',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'Jackals are small, dog-like scavengers found in warm regions. They are not particularly fierce nor are they brave. They appear here because of the magical <i>bag of tricks</i>.'
 ),
 CreatureInfo( name = 'Jackalwere',
     hd = (4,4),
@@ -4338,7 +4448,8 @@ CreatureInfo( name = 'Jackalwere',
     align = 'CE',
     size = 'S',
     aliases = ['Werejackal'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'The jackalwere is a malign foe of humankind, a <a href="/creatures/jackal">jackal</a> able to assume the form of a man. In this guise they roam about seeking to waylay and murder humans. They can steal their riches and eat the slain victims. The jackalwere can use human weapons. Its gaze will have the effect of a <a href="/spells/sleep-magic-user-lvl-1/"><i>sleep</i></a> spell on any unsuspecting creature which fails its saving throw versus magic. Note: a hostile creature is not unsuspecting! Jackalwere will sometimes (20%) be found with normal jackals.'
 ),
 CreatureInfo( name = 'Jaguar',
     hd = (4,4),
@@ -4354,7 +4465,8 @@ CreatureInfo( name = 'Jaguar',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'These jungle predators are very ferocious. They will attack any creature which they believe threatens them. If found in their lair, there is a 75% chance that there will be 1-3 young (10% to 40% grown). The cubs will not fight effectively. When hungry they will hunt prey much larger than themselves, including snakes and <a href="/creatures/crocodile">crocodiles</a>. They climb well, swim well, and can leap 30\' to attack. If in close combat the jaguar will grasp its opponent with both forepaws (two paw hits in the same melee round) and rake with its rear claws (2 additional attacks at 2-5 hit points each that round).'
 ),
 CreatureInfo( name = 'Ki-rin',
     hd = (12,12),
@@ -4372,7 +4484,14 @@ CreatureInfo( name = 'Ki-rin',
     m_resist = 0.9,
     align = 'LG',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('The ki-rin are a race of aerial creatures whose hooves rarely touch the earth, for they dwell amongst the clouds and behind the winds. Females are never encountered, and ki-rin are always solitary. They sometimes aid humans if properly abjured or the need to combat evil is great. They sometimes travel the astral and ethereal planes.\n\n'
+        'The attack of a ki-rin can take the form of two powerful hoof-blows and a thrust with a magically sharp (+3) horn much resembling that of a <a href="/creatures/unicorn">unicorn</a>. The ki-rin can also attack in other ways.\n\n'
+        'Ki-rin are able to employ spells of all levels at 18th level quality, 9 of the 1st, 8 of the 2nd, 7 of the 3rd, 6 of the 4th, 5 of the 5th, 4 of the 6th, 3 of the 7th, 2 of the 8th, and 1 of the 9th during any given day. They also command 4 major and 6 minor psionic disciplines, operating at ninth level of mastery in all. Ki-rin can, once per day, do each of the following: create nutritious food for 2-24 persons, create drinkable beverages for 2-24 persons, create soft goods or wooden items (up to 32 cubic feet of the former, 18 cubic feet of the latter) which are permanent, create metal items of relatively short life span (gold which lasts 2-5 days to admantite which lasts but 1 hour) of up to 2,000 gold pieces weight, create an <i>illusion</i> with audial, visual, and olfactory components which lasts without concentration until magically dispelled or touched in disbelief, <i>assume gaseous form</i>, <a href="/spells/wind-walk-cleric-lvl-7/"><i>wind walk</i></a>, <a href="/spells/call-lightning-druid-lvl-3/"><i>call lightning</i></a>, and <a href="/spells/weather-summoning-druid-lvl-6/"><i>summon weather</i></a>.\n\n'
+        'When a ki-rin conjures things of the sky or which involve air, the creature or magic is at twice normal strength, including hit points and damage inflicted.\n\n'
+        'Ki-rin speak their own tongue, but with their special telepathic speaking ability they are able to converse with virtually any living thing.\n\n'
+        '<i>Description</i>: The coat of the ki-rin is luminous gold, much as a sunrise on a clear day. Its mane and tail are darker gold. Its horns and hooves are golden pink. Its eyes are violet. (The skin of this creature is worth 25,000 gold pieces if it is perfectly intact.)'
+    )
 ),
 CreatureInfo( name = 'Kobold',
     hd = (0,0),
@@ -4389,7 +4508,22 @@ CreatureInfo( name = 'Kobold',
     m_resist = 0.0,
     align = 'LE',
     size = 'S',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('The society of these creatures is tribal with war bands based on gens. The stronger tribes rule weaker ones. Kobolds are usually found in dank, dark places such as dismal overgrown forests or subterranean settings. They hate bright sunlight, not being able to see well in it, but their night vision is excellent, and they have infra-red vision which operates well up to 60\'. If they are in bright sunlight they have a lesser chance to fight well (-1 from dice rolls to hit opponents).\n\n'
+        'For every 40 kobolds encountered there will be a leader and two guards who are equal to <a href="/creatures/goblin">goblins</a>, each having 4 hit points, armor class 6, and doing 1-6 points of damage. If 200 or more kobolds are encountered in their lair there will be the following additional creatures there: 5-20 guards (as bodyguards above), females equal to 50% of the total number, young equal to 10% of the total number, and 30-300 eggs. There will always be a chief and his bodyguard in the kobold lair. It is also probable (65) that there will be from 2-5 <a href="/creatures/wild-boar">wild boars</a> (70%) or 1-4 <a href="/creatures/giant-weasel">giant weasels</a> (30%) in a kobold lair; the animals will serve as guards.\n\n'
+        'A force of kobolds is typically equipped as follows:\n\n'
+        ' 5% short sword and javelin\n'
+        '10% short sword and spear\n'
+        '10% short sword\n'
+        '20% axe\n'
+        '30% spiked wooden club\n'
+        '15% javelins (2-3)\n'
+        '10% spear\n\n'
+        'Chief and guard types always have the best available weapons. All kobold shields are of wood or wickerwork.\n\n'
+        'Kobolds hate most other life, delighting in killing and torture. They particularly hate such creatures as <a href="/creatures/brownie">brownies</a>, <a href="/creatures/pixie">pixies</a>, <a href="/creatures/sprite">sprites</a> and <a href="/creatures/gnome">gnomes</a>. They war continually with the latter, and will attack them on sight.\n\n'
+        'In addition to the tongues of lawful evil and kobolds, these monsters can usually (75%) speak <a href="/creatures/goblin">goblin</a> and <a href="/creatures/orc">orcish</a>.\n\n'
+        '<i>Description</i>: The hide of kobolds runs from very dark rusty brown to a rusty black. They have no hair. Their eyes are reddish and their small horns are tan to white. They favor red or orange garb. Kobolds live for up to 135 years.'
+    )
 ),
 CreatureInfo( name = 'Lamia',
     hd = (9,9),
@@ -4405,7 +4539,10 @@ CreatureInfo( name = 'Lamia',
     m_resist = 0.0,
     align = 'CE',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Lamias prefer to dwell in deserts - in ruined cities, caves, or the like. Their upper torso, arms, and head resemble a human female, while their lower body is that of a beast. Lamias are very fast and powerful. They usually are armed with daggers.\n\n'
+        'A lamia is able to use the following spells once per day: <a href="/spells/charm-person-magic-user-lvl-1/"><i>charm person</i></a>, <a href="/spells/mirror-image-magic-user-lvl-2/"><i>mirror image</i></a>, <a href="/spells/suggestion-magic-user-lvl-3/"><i>suggestion</i></a>, and <i>illusion<i/> (as a wand). These spells are typically used to lure persons to the lamia and then hold them there for the creature to devour. The lamia\'s touch permanently drains 1 point of wisdom from a victim, and when wisdom drops below 3 they willingly do whatever the lamia tells them to do. Lamias first drain their prey of blood and then feast upon the flesh. They can speak their alignment language and the common tongue.'
+    )
 ),
 CreatureInfo( name = 'Lammasu',
     hd = (7,7),
@@ -4424,7 +4561,10 @@ CreatureInfo( name = 'Lammasu',
     m_resist = 0.3,
     align = 'LG',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Lammasu dwell in warm regions, but they occasionally visit every clime. It is the nature of these creatures to aid and protect lawful good persons and they are of generally kind and friendly disposition to all good creatures.\n\n'
+        'A lammasu is able to become <a href="/spells/invisibility-magic-user-lvl-2/"><i>invisible</i></a> and/or <a href="/spells/dimension-door-magic-user-lvl-4/"><i>dimension door</i></a> at will. They radiate a <a href="/spells/protection-from-evil-cleric-lvl-1/"><i>protection from evil</i></a> in a 10\' radius which has double strength (-2 on evil attacks, +2 on saving throws against evil attacks). Additionally, they are able to use clerical spells up to 4th level, doing so at a 6th level proficiency. A lammasu can employ 4 spells of the 1st level, 3 of the 2nd, 2 of the 3rd, and 1 of the 4th. They have <i>cure wounds</i> spells of double effect (4-14 and 8-28). 10% of these creatures can speak a <a href="/spells/holy-unholy-word-cleric-lvl-7/"><i>holy word</i></a> as well. Lammasu communicate in their own tongue, the language of lawful good, and through a limited form of telepathy.'
+    )
 ),
 CreatureInfo( name = 'Lamprey',
     hd = (1,1),
@@ -4441,7 +4581,9 @@ CreatureInfo( name = 'Lamprey',
     m_resist = 0.0,
     align = 'NN',
     size = 'S',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    sub_creatures = ['Giant Lamprey'],
+    description = 'Lampreys are leech-like eels which inhabit both fresh and salt water. They do not inhabit shallow bodies of water. They feed by biting their victims, fastening themselves to the hapless creatures with sphincter-like mouths ringed with cruel teeth. Once attached the lamprey will begin to drain blood on the next and each successive melee round. The rate of blood drain is equivalent to 2 hit points of damage per hit die the lamprey has. Thus, a giant specimen will drain blood causing 10 hit points of damage per melee round.'
 ),
 CreatureInfo( name = 'Giant Lamprey',
     hd = (5,5),
@@ -4458,7 +4600,8 @@ CreatureInfo( name = 'Giant Lamprey',
     m_resist = 0.0,
     align = 'NN',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    parent_creature = 'Lamprey'
 ),
 CreatureInfo( name = 'Larva',
     hd = (1,1),
@@ -4475,7 +4618,10 @@ CreatureInfo( name = 'Larva',
     m_resist = 0.0,
     align = 'NE',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('The larvae are the most selfishly evil of all souls who sink to lower planes after death. They abide in the gloom of Hades, controlled by the night hags. These creatures are desired by demons and devils alike, as they are used to form <a href="/creatures/quasit">quasits</a> or <a href="/creatures/imp">imps</a> respectively. <a href="/creatures/lich">Liches</a> employ their essence in order to retain their un-dead status and powers. Because of the value of larva the <a href="/creatures/night-hag">night hags</a> use them to trade off and thus maintain the freedom of their planes.\n\n'
+        'Larvae appear as sickly yellow worms with distorted human faces.'
+    )
 ),
 CreatureInfo( name = 'Giant Leech',
     hd = (1,4),
@@ -4492,7 +4638,8 @@ CreatureInfo( name = 'Giant Leech',
     m_resist = 0.0,
     align = 'NN',
     size = 'S',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'Found only in the fetid waters of swamps and marshes, giant leeches are a threat to any warm-blooded creature which passes within their movement range of 3". These horrors wait in the mud and slime for prey, and as it passes they strike. Giant leeches range from 1 to 4 hit dice in size; various sized creatures usually are found in the same group. The initial attack also attaches the sucker mouth of the giant leech, and on the next melee round, and on each round thereafter, it will drain blood the equivalent of 1 hit point damage per hit die it possesses. There is only a 1% chance that the victim will be aware of the attack unless it comes out of the water, for the leech has anesthetizing saliva, and its bite and blood drain are not usually felt until <i>weakeness</i> (loss of 50% of hit points) makes the victim aware that something is amiss. Giant leeches will come out of water at night to attack prey within 3". They can be killed by attack or with quantities of salt sprinkled on their bodies. There is a 50% chance that the bite of one of these creatures will <a href="/spells/cure-disease-cleric-lvl-3/"><i>cause disease</i></a> which will be fatal in 2-5 weeks unless cured.'
 ),
 CreatureInfo( name = 'Leopard',
     hd = (3,3),
@@ -4508,7 +4655,10 @@ CreatureInfo( name = 'Leopard',
     m_resist = 0.0,
     align = 'NN',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('These carnivores live in tropical woodlands and jungles. They hunt by laying in wait and leaping upon their prey, surprising on a 1-3. Leopards can spring 20\' upwards or ahead 25\'. If they score hits with both forepaws during a melee round, the leopard gains 2 additional attacks that round, each attack at 1-4 hit points damage.\n\n'
+        'If found in their lair, there is a 25% chance that there will be 1-3 cubs there. These young have no effective attack.'
+    )
 ),
 CreatureInfo( name = 'Leprechaun',
     hd = (0,0),
@@ -4525,7 +4675,12 @@ CreatureInfo( name = 'Leprechaun',
     m_resist = 0.8,
     align = 'NN',
     size = 'S',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Leprechauns normally dwell only in fair, green lands with lush hills and dales for them to frolic through. Occasionally a party of adventurous ones will reside elsewhere for a time. These small creatures of magical talent and mischievous nature can <a href="/spells/invisibility-magic-user-lvl-2/"><i>become invisible</i></a> at will, <a href="/spells/polymorph-any-object-magic-user-lvl-8/"><i>polymorph non-living objects</i></a>, <i>create illusions</i>, and use <a href="/spells/ventriloquism-magic-user-lvl-1/"><i>ventriloquism</i></a> spells as often as they like. Their keen ears prevent them from being surprised. Being full of mischief they will often (75%) snatch valuable objects from persons, turn invisible and dash away. The object stolen will be valuable, and there is 75% chance of such theft being successful. If pursued closely there is a 25% chance per turn of pursuit that the leprechaun will drop the stolen goods.\n\n'
+        'If caught or discovered in its lair the leprechaun will attempt to mislead its captor into believing he is giving over his treasure while he actually is duping the captor. It will require great care to actually obtain the leprechaun\'s treasure.\n\n'
+        'Note: Leprechauns have a great fondness for wine, and this weakness may be used to outwit them.\n\n'
+        'Rumor has it leprechauns are a species of <a href="/creatures/halfling">halfling</a> with a strong strain of <a href="/creatures/pixie">pixie</a>.'
+    )
 ),
 CreatureInfo( name = 'Leucrotta',
     hd = (6,6),
@@ -4542,7 +4697,8 @@ CreatureInfo( name = 'Leucrotta',
     m_resist = 0.0,
     align = 'CE',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'This weird creature haunts deserted and desolated places, for it is so ugly most other creatures cannot bear the sight of it. The body of a leucrotta resembles that of a <a href="/creatures/stag">stag</a>, its tail being rather <a href="/creatures/lion">lion</a>-like, and its legs end in cloven hooves. Its head is that of a huge <a href="/creatures/badger">badger</a>, but instead of teeth it has sharp, jagged boney ridges. This monster is very sly and can imitate the voice of a man or woman. They will do this to trick prey to approach within attack distance. When retreating the leucrotta can kick backwards with both hooves, causing 1-6 hit points damage with each that hits. The monster speaks the language of its alignment as well as the common tongue.'
 ),
 CreatureInfo( name = 'Lich',
     hd = (11,11),
@@ -4558,7 +4714,12 @@ CreatureInfo( name = 'Lich',
     m_resist = 0.0,
     align = 'NE',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('A lich exists because of its own desires and the use of powerful and arcane magic. The lich passes from a state of humanity to a non-human, non-living existence through force of will. It retains this status by certain conjurations, enchantments, and a phylactery. A lich is most often encountered within its hidden chambers, this lair typically being in some wilderness area or vast underground labyrinth, and in any case both solidly constructed of stone and very dark. Through the power which changes this creature from human to lich, the armor class become the equivalent of +1 plate armor and +1 shield (armor class 0). Similarly, hit dice are 8-sided, and the lich can be affected only by magical attack forms or by monsters with magical properties or 6 or more hit dice.\n\n'
+        'Liches were formerly ultra powerful magic-users or magic-user/clerics of not less than 18th level of magic-use. Their touch is so cold as to cause 1-10 points of damage and <i>paralyze</i> opponents who fail to make their saving throw. The mere sight of a lich will cause any creature below 5th level (or 5 hit dice) to flee in panic from <a href="/spells/fear-magic-user-lvl-4/"><i>fear</i></a>. All liches are able to use magic appropriate to the level they had attained prior to becoming non-human.\n\n'
+        'The following spells or attack forms have no effect on liches: <a href="/spells/charm-monster-magic-user-lvl-4/"><i>charm</i></a>, <a href="/spells/sleep-magic-user-lvl-1/"><i>sleep</i></a>, <a href="/spells/polymorph-other-magic-user-lvl-4/"><i>polymorph</i></a>, <i>cold</i>, <i>electricity</i>, <i>insanity</i> or <a href="/spells/death-spell-magic-user-lvl-6/"><i>death spells</i></a>/<a href="/spells/symbol-magic-user-lvl-8/"><i>death symbols</i></a>.\n\n'
+        '<i>Description</i>: A lich appears very much as does a <a href="/creatures/wight">wight</a> or <a href="/creatures/mummy">mummy</a>, being of skeletal form, eyesockets mere black holes with glowing points of light, and garments most often rotting (but most rich).'
+    )
 ),
 CreatureInfo( name = 'Lion',
     hd = (5,5),
@@ -4575,7 +4736,11 @@ CreatureInfo( name = 'Lion',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Lions generally inhabit warmer climates - warm temperate to tropical. They will thrive in any region, from desert to jungle, swamp to savannah. Lions hunt in packs (prides), the males seldom doing any actual stalking/killing of prey. The lioness is the real huntress. All these creatures can spring up to 30\'. Males, however, are ferocious fighters, and will actively defend their group territory. Male lions have armor class 5 forequarters and armor class 6 hindquarters, lionesses have the latter armor class. A typical pride consists of 1-3 males and 1-9 females. If found in their lair there will be 1-10 cubs from 30% to 60% grown which will not fight. There will be 1-4 lionesses with these cubs which will immediately attack.\n\n'
+        'Lions do not climb trees well and they dislike swimming.\n\n'
+        'If a lion scores two paw hits during melee it gains the advantage of raking with its two rear claws that turn, each rake causing 2-7 points of damage.'
+    )
 ),
 CreatureInfo( name = 'Mountain Lion',
     hd = (3,3),
@@ -4593,7 +4758,8 @@ CreatureInfo( name = 'Mountain Lion',
     align = 'NN',
     size = 'M',
     aliases = ['Cougar'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'This creature is not actually a true <a href="/creatures/lion">lion</a>, but a species of great cat. They inhabit forests and deserts as well as mountains. They are somewhat cautious, but they are fierce fighters if threatened or cornered. They can spring upwards 15\' or ahead at least 20\' to attack. Their rear claws each rake for 1-4 hit points damage.'
 ),
 CreatureInfo( name = 'Spotted Lion',
     hd = (6,6),
@@ -4611,7 +4777,8 @@ CreatureInfo( name = 'Spotted Lion',
     align = 'NN',
     size = 'L',
     aliases = ['Cave Lion'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'Also known as cave lions, spotted lions are larger, spotted specimens of the <a href="/creatures/lion">common lion</a>. They roam the plains of the pleistocene epoch, with but few being found elsewhere. Their hunting traits and group closely resemble those of their smaller, more modern kin.'
 ),
 CreatureInfo( name = 'Fire Lizard',
     hd = (10,10),
@@ -4629,7 +4796,11 @@ CreatureInfo( name = 'Fire Lizard',
     align = 'NN',
     size = 'L',
     aliases = ['False Dragon'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('These reptiles may be an ancestral dragon or an offshoot of a common ancestor. In any case these creatures resemble <a href="/creatures/red-dragon">red dragons</a>, are sometimes called "false dragons," and the latter seem to avoid confrontation with fire lizards. They are slow-moving creatures and often (50%) sleep for long periods. They are found in subterranean lairs, coming forth every fortnight or so to hunt. As shiny things attract them, fire lizards collect metals and gems in their den. There is a 10% chance that the lair will contain 1-4 eggs (market value 5,000 gold pieces each), but the fire lizard does not otherwise care for its young which depart after hatching.\n\n'
+        'While the fire lizard usually attacks with a combination of two raking claws and a bite, it can also breathe forth a puff of flame from its mouth, a truncated cone ½" diameter at the mouth by 1" diameter, by 1½" long, which causes 2-12 hit points damage (1-6 if saving throw is made). Fire-based attacks do not harm a fire lizard.\n\n'
+        'Fire lizards are typically a neutral gray in color, with mottlings of red brown on the back and reddish undersides. Younger ones are lighter, old (50 to 100 years) specimens are darker.'
+    )
 ),
 CreatureInfo( name = 'Giant Lizard',
     hd = (3,3),
@@ -4645,7 +4816,8 @@ CreatureInfo( name = 'Giant Lizard',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'The giant lizard is remarkable only for its size. They dwell in marshes and swamps by preference. Because of their large maws, they are able to engulf prey. Any "to hit" score of 20 indicates the creature has snapped both jaws onto its opponent, thus causing double damage (2-16 hit points).'
 ),
 CreatureInfo( name = 'Minotaur Lizard',
     hd = (8,8),
@@ -4662,7 +4834,8 @@ CreatureInfo( name = 'Minotaur Lizard',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'These huge reptiles are very aggressive carnivores, usually inhabiting only warm regions. While moving slowly, they hide and quickly snatch at prey, surprising it on a 1-4. They have long sharp talons and teeth which inflict terrible wounds. Subdued prey is dragged into the lizards\' den to be devoured at leisure. Because of the mouth-size of these creatures, a roll of 20 indicates a minotaur lizard attack has picked up any creature of man-size and weight or less (7\' or less, 300 pounds or less) and has it fast in its mouth where it will be helpless to attack next round, but where the lizard is certain to be able to bite the creature again.'
 ),
 CreatureInfo( name = 'Subterranean Lizard',
     hd = (6,6),
@@ -4679,7 +4852,8 @@ CreatureInfo( name = 'Subterranean Lizard',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'A variety of <a href="/creatures/giant-lizard">giant lizard</a> which is found only underground, the subterranean lizard is most aggressive and dreaded, for it is able to run along ceilings or walls as easily as floors because of its suction cupped toes. Worse still, its horrible teeth inflict great wounds, and it can cause double damage on hits where it clamps both jaws firmly on its victim (indicated by as die roll of 20). As with most other lizards, it typically drags its prey to its lair before devouring it.'
 ),
 CreatureInfo( name = 'Lizard Man',
     hd = (2,2),
@@ -4697,25 +4871,8 @@ CreatureInfo( name = 'Lizard Man',
     m_resist = 0.0,
     align = 'NN',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
-),
-CreatureInfo( name = 'Evolved Lizard Man',
-    hd = (2,2),
-    hp = (1,1),
-    num = (10,40),
-    lair = 0.3,
-    base_xp = 50,
-    xp_hp = 3,
-    treasure = 'd',
-    iq = Intelligence.AVERAGE,
-    speed = 6,
-    swim = 12,
-    ac = 5,
-    attacks = [(2,1,0),(2,1,0),(8,1,0)],
-    m_resist = 0.0,
-    align = 'NN',
-    size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'Lizard men are semi-aquatic, breathing air but often (35%) dwelling totally underwater and having caves which are not water filled in which they lair. They are typically found in swamps, marshes, and similar places. They band together in rough tribal form. They are omnivorous, but lizard men are likely to prefer human flesh to other foods. In this regard they have been known to ambush humans, gather up the corpses and survivors as captives, and take the lot back to their lair for a rude and horrid feast. About 1 tribe in 10 has evolved to a higher state. These lizard men will dwell in crude huts, use shields (thus armor class 4) and hurl barbed darts (3" range, 1-4 points damage) or javelins (1-6 hit points damage) before closing with enemies. In combat these advanced lizard men employ clubs (treat as morning stars). They can speak their own language.'
 ),
 CreatureInfo( name = 'Locathah',
     hd = (2,2),
@@ -4733,7 +4890,17 @@ CreatureInfo( name = 'Locathah',
     m_resist = 0.0,
     align = 'NN',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('The locathah are a humanoid race of aquatic nomads. They roam shallow sea waters, hunting and gathering food from bountiful warm waters.\n\n'
+        'For every 40 locathah encountered there will be a leader with 18 hit points (treat as a 4th level fighter) and 4 assistants with 14 hit points (treat as 3rd level fighters). If more than 120 are encountered there will be in addition a chief with 22 points (treat as a 5th level fighter) and 12 guards (12-14 hit points, 3rd level fighters).\n\n'
+        'Locathah are always mounted upon <a href="/creatures/giant-eel">giant eels</a>, their steeds. These creatures also fight. A typical force of locathah will be armed as follows:\n\n'
+        '20% lance\n'
+        '30% crossbow\n'
+        '30% trident\n'
+        '20% net & dagger\n\n'
+        'The lair of these aquatic nomads is typically some castle-like undersea rock which the locathah have hollowed out into rooms, passages, etc. It will be guarded by stout doors and have the additional protection of <a href="/creatures/giant-eel">moray eels</a> (4-16) as warders and it is 50% likely that there will be a <a href="/creatures/giant-portuguese-man-o-war/">Potugese man o\' war</a> trap as well.\n\n'
+        '<i>Description</i>: Locathah are scaled in hues of pale yellow. Their ears are fanned with fins to increase hearing, and their eyes are large in order to see better in their watery domain. Their back scales and fins are darker than those in front.'
+    )
 ),
 CreatureInfo( name = 'Lurker Above',
     hd = (10,10),
@@ -4751,7 +4918,11 @@ CreatureInfo( name = 'Lurker Above',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('The lurker above is a carnivorous creature found only in subterranean places. If the chamber or cave is large there might be as many as 4 of them, but normally only 1 is encountered. A lurker can creep along surfaces but slowly (1") or by using gas which it generates and excretes into sacs about its body. This gives the lurker above a neutral buoyancy, and it then flaps its wing-like appendages and flies about.\n\n'
+        'They surprise prey on a 1-4 (on a 6-sided die). When disturbed the lurker drops from the ceiling, smothering all creatures beneath in the tough folds of its "wings". This constriction causes 1-6 points of damage per round, and the victims will smother in 2-5 rounds in any event unless they kill the lurker and thus break free. Unintelligent, the lurker will fight until dead. Prey caught in its grip cannot fight unless the weapons used are both short and in hand at the time the creature falls upon them.\n\n'
+        '<i>Description</i>: This terrible beast somewhat resembles a large <a href="/creatures/manta-ray">manta ray</a>. Its grayish belly is so textured as to appear to be stone, and the lurker typically attaches itself to a ceiling where it is almost impossible to detect (90%) unless actually prodded.'
+    )
 ),
 CreatureInfo( name = 'Werebear',
     hd = (7,7),
@@ -4768,7 +4939,8 @@ CreatureInfo( name = 'Werebear',
     m_resist = 0.0,
     align = 'CG',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'Great werebears are the most powerful of all lycanthropes. They never are found in other than full-grown state. Werebears alone are 50% likely to be in company with 1-6 <a href="/creatures/bear">brown bears</a>. They are able to <i>summon</i> 1-6 brown bears in 2-12 turns if any such creatures are within one mile of the werebear. Their human form is typically large, hirsute, and of solitary temperament. These creatures heal their wounds at three times the normal rate and are not subject to disease. They can <i>cure disease</i> in another creature in 1-4 weeks if they so desire.'
 ),
 CreatureInfo( name = 'Wereboar',
     hd = (5,5),
@@ -4785,7 +4957,8 @@ CreatureInfo( name = 'Wereboar',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'Found in dense woodlands and similar areas, wereboars are of ugly temper and likely to attack. In their human shape they are usually hot tempered and irascible - typical berserker nature. Wereboards seldom mingle with <a href="/creatures/wild-boar">normal boarkind</a> (15% chance).'
 ),
 CreatureInfo( name = 'Wererat',
     hd = (3,3),
@@ -4802,7 +4975,8 @@ CreatureInfo( name = 'Wererat',
     m_resist = 0.0,
     align = 'LE',
     size = 'S',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'Sometimes known as ratmen, these sly and evil creatures inhabit subterranean tunnel complexes beneath cities. Wererats are able to take three forms - human, human-sized ratman, and <a href="/creatures/giant-rat">giant rat</a>. They are typically sword-armed. They use their human form to dupe humans, luring them to a place where they can be captured to be held for ransom or possibly eaten. Wererats prefer to move about in a rat-like shape, smaller than a man but much larger than a normal rat. They are capable of <i>summoning</i> and controlling giant rats, each wererat doing so with 2-12 of the creatures.'
 ),
 CreatureInfo( name = 'Weretiger',
     hd = (6,6),
@@ -4819,7 +4993,8 @@ CreatureInfo( name = 'Weretiger',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'Weretigers are quite similar to <a href="/creatures/tiger">normal tigers</a> in their habitat. They are most often female. It is only 5% likely that weretigers will mingle with the normal sort of cat. They have the power to speak with all sorts of cats, however, and cats are 75% likely to be friendly with the weretiger because of this.'
 ),
 CreatureInfo( name = 'Werewolf',
     hd = (4,4),
@@ -4836,7 +5011,8 @@ CreatureInfo( name = 'Werewolf',
     m_resist = 0.0,
     align = 'CE',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'In their human form, werewolves are very difficult to detect, for they can be of nearly any build and of either sex. Werewolves are prone to retain bipedal form in their <a href="/creatures/wolf">wolf</a> state, but wolweres (wolves which can become men) always take normal wolf form. Both sorts are likely to be found in a pack. Werewolf packs can be family groups if they number 5 to 8. Family packs consist of a male, female and 3 to 6 young of 60% to 90% growth. The male will fight at +2 to hit and full damage each time he hits if the female is attacked. If the cubs are attacked the female will attack at +3 to hit and do full damage possible each time she hits. The young fight at -4 to -1 to hit, according to their maturity, and inflict 2-5 points of damage/attack.'
 ),
 CreatureInfo( name = 'Giant Lynx',
     hd = (2,2),
@@ -4853,7 +5029,10 @@ CreatureInfo( name = 'Giant Lynx',
     m_resist = 0.0,
     align = 'NN',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('These forest cats prefer cold regions. They are aggressive and compete well with other predators because of their intelligence. If found in their lair there is a 25% chance that there will be 1-4 kittens there, 10% to 30% grown, with no effective attack. Giant lynx climb very well, swim reasonably well, and they can leap 15\'. If the lynx strikes with both forepaws, it will then get two additional attacks, raking with the rear claws, each causing 1-3 hit points of damage.\n\n'
+        'Giant lynx speak their own language. They have also learned to hide themselves in order to avoid detection (90% unlikely in normal circumstances) or surprise prey (surprise on 1-5). They are 75% accurate in detecting traps.'
+    )
 ),
 CreatureInfo( name = 'Mammoth',
     hd = (13,13),
@@ -4869,7 +5048,11 @@ CreatureInfo( name = 'Mammoth',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('There are several varieties of mammoth, including the woolly and imperial - the latter sort being the largest. They inhabit climes ranging from subarctic to subtropical of the Pleistocene epoch. These massive herbivores are quite aggressive if threatened.\n\n'
+        'As with <a href="/creatures/elephant">elephants</a> and <a href="/creatures/mastodon">mastodons</a>, the mammoth has 5 attack forms, but in general can apply no more than 2 versus a single opponent.\n\n'
+        'The tusks of the mammoths are 50% heavier than those of the elephant, and their value is proportionally higher.'
+    )
 ),
 CreatureInfo( name = 'Manticore',
     hd = (6,6),
@@ -4888,7 +5071,11 @@ CreatureInfo( name = 'Manticore',
     m_resist = 0.0,
     align = 'LE',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Manticores prefer dismal lairs, so they are typically found in caves or underground. They range in all climes, although they enjoy warm places more than cold. The favorite prey of manticores is man, and they are usually encountered outside their lairs hunting for human victims.\n\n'
+        'A manticore attacks first by loosing a volley of 6 of its tail spikes (18\' range as a light crossbow, 1-6 hit points damage per hit). They can fire four such volleys.\n\n'
+        '<i>Description</i>: The coloration of the manticore is that of its various parts - lion-colored body, bat-brown wings, human flesh head.'
+    )
 ),
 CreatureInfo( name = 'Masher',
     hd = (8,8),
@@ -4905,7 +5092,10 @@ CreatureInfo( name = 'Masher',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('These worm-like fish move slowly along coral reefs, crushing and eating the coral growth. If surprised or threatened they are prone to attack in "self defense".\n\n'
+        'Mashers have a number of dorsal spines, 4\' long, with poisonous secretions. An individual will have 4, 6, or 8. Unless fought from directly ahead or underneath, the masher is able to jut these spines so as to prevent attack or be stuck with a spine (save versus poison or be killed).'
+    )
 ),
 CreatureInfo( name = 'Mastodon',
     hd = (12,12),
@@ -4921,7 +5111,11 @@ CreatureInfo( name = 'Mastodon',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Mastodons dwell in nearly any climate, from near arctic to tropical. These huge herbivores are distantly related to <a href="/creatures/elephant">elephants</a>, but their body is somewhat lower and longer. They are common on Pleistocene plains.\n\n'
+        'Although the mastodon has 5 attack modes (2 tusks, 1 trunk, 2 forefeet), they cannot employ more than 2 of them at one time against a single opponenet. For details of attack limitations and other data see <a href="/creatures/elephant"><b>Elephant</b></a>.\n\n'
+        'Their tusks are the same weight and value as those of elephants.'
+    )
 ),
 CreatureInfo( name = 'Medusa',
     hd = (6,6),
@@ -4938,7 +5132,11 @@ CreatureInfo( name = 'Medusa',
     m_resist = 0.0,
     align = 'LE',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Medusae are hateful humanoid creatures which dwell in dark caves or caverns, venturing forth on occassion to seek prey. They try to beguile humans to look into their eyes.\n\n'
+        'The gaze of medusa\'s eyes will turn creatures within 3" to stone unless they make their saving throw versus petrification. If an opponent averts his eyes, the medusa rushes up so that its asp-like head growth can bite at the victim. The range of such attacks is 1\', and the victim bitten must save versus poison or die. If the medusa\'s gaze is reflected back, the creature will turn itself to stone! Medusae speak both their tongue and the common one. Medusae are able to see astral and ethereal creatures, and their petrifying gaze is as effective on those planes as it is on the material.\n\n'
+        '<i>Description</i>: The body of medusa appears quite shapely and human. They typically wear human clothing. However, the face is of horrid visage, and its snakey hair writhes, so at close distance (20\') this gives the creature away. The glaring red-rimmed eyes of a medusa are visible clearly at 30\'.'
+    )
 ),
 CreatureInfo( name = 'Bandit',
     hd = (0,0),

@@ -6,7 +6,15 @@
 
 {% block content %}
     <p>
-    Encounter contains {{creature_count}} creatures with total XP of {{xp_total}}. 
+    Encounter contains {{creature_count}} creatures with total XP of {{xp_total}}.<br/> 
+    {% if creature_info.roll_in_lair %}
+        Encounter is taking place <b>in</b> the lair
+    {% else %}
+        Encounter is <b>not</b> at the creature's lair.
+    {% endif %}
+    </p>
+    <p>
+        <pre>{{creature_info.roll_treasure}}</pre>
     </p>
     <ul>
     {% for c in creatures %}
