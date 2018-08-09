@@ -38,6 +38,7 @@ class CreatureInfo():
         base_xp=0, lvl=None, xp_hp = 0,
         parent_creature='',
         sub_creatures=[],
+        is_abstract = False, #abstract CI represent a category, not an actual creature
         aliases = [],
         source = SourceBook.UNKNOWN
      ):
@@ -55,6 +56,7 @@ class CreatureInfo():
 
         self.parent_creature = parent_creature
         self.sub_creatures = sub_creatures
+        self.is_abstract = is_abstract
         self.treasure = treasure
         self.source = source
         self.iq = iq

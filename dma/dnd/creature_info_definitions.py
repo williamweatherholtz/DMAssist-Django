@@ -5151,7 +5151,41 @@ CreatureInfo( name = 'Bandit',
     m_resist = 0.0,
     align = 'NN',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    sub_creatures = ['Brigand'],
+    description = ('Bandits roam every clime from temperate to subtropical. They travel in groups, generally led by high level fighters, magic-users and clerics. Those encountered in dungeons will be far fewer in number and often cooperating with thieves. For every 20 bandits encountered there will be an additional 3rd level fighter, for every 30 there will be an additional 4th level fighter, for every 40 there will be an additional 5th level fighter, and for every 50 there will be an additional 6th level fighter.\n\n'
+        '<b>Bandits</b> will always be led by an 8th, 9th, or 10th level fighter, with 6 guards of the 2nd level fighting ability and a lieutenant of 7th level. These 8 bandits are also in addition to the number indicated by the dice. To determine the level of the bandit leader use the following guide: if under 100 bandits are encountered the leader will be 8th level, if 100 to 150 the leader will be 9th level, and if 150 or more the leader will be 10th level.\n\n'
+        'For every 50 bandits there is a 25% chance that there will be a magic-user of 7th, 8th, 9th, or 10th level (roll a 4-sided die for level if one is with the group) in addition, i.e. if there are 200 bandits there will always be a magic-user.\n\n'
+        'For every 50 bandits there is a 15% chance that there will be a cleric of 5th or 6th level, with an assistant of 3rd or 4th level (dice only for the former) in addition.\n\n'
+        'Bandit lairs will be informal camps 80% of the time, but 10% will be cave complexes with a secret entrance, and 10% will be regular castles with 1-4 light catapults for defense. Bandits will have from 2-20 important prisoners in their lair, as well as 5-30 camp followers/slaves.\n\n'
+        'The mounting, armor, and arms of a force of bandits are:\n\n'
+        '10% medium horse, chainmail & shield, sword\n'
+        '10% light horse, leather armor & shield, spear\n'
+        '10% light horse, leather armor, light crossbow\n'
+        '40% leather armor & shield, sword\n'
+        '10% leather armor, pole arm\n'
+        '10% leather armor, light crossbow\n'
+        '10% leather armor, short bow\n\n'
+        'Terrain will vary the percentage of mounted bandits. In hilly and mountainous terrain no more than 10% of the total would be horsed, while in open country 90% of the force would be horsed. They have normal chances for having psionically endowed leader-types with a party.\n\n'
+        '<b>Brigands</b> are chaotic evil bandits. They conform to the characteristics of bandits in general. The brigands will have a cave complex lair 20% of the time and a castle 30% of the time. They will have only 1-10 important prisoners, but there will be 20-50 camp followers/slaves. They have high morale in combat, so they get a +1 on reaction morale dice.\n\n'
+        'Example of Bandits (or Brigands):\n'
+        '<table>'
+        '<tr><th colspan="2">Number Encountered</th><td>110</td></tr>'
+        '<tr><td></td><td>horsed</td><td>33</td></tr>'
+        '<tr><td></td><td>afoot</td><td>77</td></tr>'
+        '<tr><th colspan="3">Additional high level fighters</th></tr>'
+        '<tr><td></td><td>3rd level</td><td>5</td></tr>'
+        '<tr><td></td><td>4th level</td><td>3</td></tr>'
+        '<tr><td></td><td>5th level</td><td>2</td></tr>'
+        '<tr><td></td><td>6th level</td><td>1</td></tr>'
+        '<tr><td></td><td>leader, 9th level</td><td>1</td></tr>'
+        '<tr><td></td><td>lieutenant, 7th level</td><td>1</td></tr>'
+        '<tr><td></td><td>guards, 2nd level</td><td>6</td></tr>'
+        '<tr><th colspan="3">Total</td></tr>'
+        '<tr><td></td><td>chance for a magic-user</td><td>50%</td></tr>'
+        '<tr><td></td><td>chance for 2 clerics</td><td>30%</td></tr>'
+        '</table>'
+    )
 ),
 CreatureInfo( name = 'Brigand',
     hd = (0,0),
@@ -5166,7 +5200,8 @@ CreatureInfo( name = 'Brigand',
     m_resist = 0.0,
     align = 'CE',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    parent_creature = 'Bandit'
 ),
 CreatureInfo( name = 'Berserker',
     hd = (0,0),
@@ -5181,7 +5216,13 @@ CreatureInfo( name = 'Berserker',
     m_resist = 0.0,
     align = 'NN',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Berserkers are bands of fighters who gather together to go out and seek battle. They scorn armor and engage in combat mad with battle lust. This lust enables them to strike twice, or once with a +2 to hit.\n\n'
+        'For every 10 berserkers encountered there will be a 1st level fighter in addition, for every 20 there will be a 2nd level, for every 30 there will be a 3rd, for every 40 there will be a 4th, and for every 50 there will be a 5th - all in addition to the number indicated by the dice.\n\n'
+        'Berserkers will be led by a war chief of 9th or 10th level and two subchieftans of 6th or 7th level - if 60 or less berserkers, the lower levels, if more than 60, the higher levels.\n\n'
+        'For every 10 berserkers encountered there is a 50% chance that there will be a berserk cleric of 7th level and 1-4 of his assistants of 3rd or 4th level.\n\n'
+        'Berserkers never check morale. If they decide that a fight would bring them honor (and possibly loot) they will attack.'
+    )
 ),
 CreatureInfo( name = 'Buccaneer',
     hd = (0,0),
@@ -5196,7 +5237,24 @@ CreatureInfo( name = 'Buccaneer',
     m_resist = 0.0,
     align = 'NN',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    sub_creatures = ['Pirate'],
+    description = ('<b>Buccaneers</b> are found on the oceans, seas, large lakes, and broad rivers of the world. Their armor depends upon where they are located. Usually the encounter will be in the buccaneer\'s lair, which is their vessel(s). Only 20% of the time will they be encountered off of their ship(s) along some coast or shore.\n\n'
+        'For every 50 buccaneers encountered there will be a 3rd level fighter and for every 100 a 5th level fighter, all in addition to the number indicated by the dice.\n\n'
+        'They will have 2-5 prisoners in their lair, these unfortunates being held for ransom.\n\n'
+        'Buccaneers will always be led by a captain of 8th or 10th level - 8th if fewer than 200 buccaneers. He will have a 6th or 7th level lieutenant and 4 mates of 4th level. These are all in addition to the regular buccaneers.\n\n'
+        'For every 50 buccaneers there is a 15% chance for a cleric of 12th, 13th, 14th, or 15th level and a 10% chance for a magic-user of 6th, 7th, or 8th level.\n\n'
+        'The armor and arms of a force of buccaneers are:\n\n'
+        ' 5% chainmail & shield, sword, hand axe\n'
+        ' 5% chainmail & sword\n'
+        '10% leather armor & shield, sword\n'
+        '30% leather armor & spear\n'
+        '20% leather armor & axe\n'
+        '10% leather armor & heavy crossbow\n'
+        '20% leather armor & light crossbow\n\n'
+        '<i>Note</i>: All leaders and high level types in a force will wear chainmail rather than plate armor, and if magical armor is indicated it will be of the chain variety.\n\n'
+        '<b>Pirate</b>: Pirates are chaotic evil buccaneers who in all other respects conform the the characteristics of the latter type of men.'
+    )
 ),
 CreatureInfo( name = 'Pirate',
     hd = (0,0),
@@ -5211,7 +5269,8 @@ CreatureInfo( name = 'Pirate',
     m_resist = 0.0,
     align = 'CE',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    parent_creature = 'Buccaneer'
 ),
 CreatureInfo( name = 'Caveman',
     hd = (2,2),
@@ -5226,8 +5285,45 @@ CreatureInfo( name = 'Caveman',
     m_resist = 0.0,
     align = 'NN',
     size = 'M',
-    aliases = ['Tribesman'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Cavemen are primitive, very fierce humans found in areas which are otherwise uninhabited by humans.\n\n'
+        'For every 10 cavemen there will be an additional 3rd level fighter. Cavemen will always be led by a 5th level fighter (chief) with 1-4 4th level subchiefs - all in addition to the number indicated by the dice. For every 10 cavemen encountered there is a 10% chance that they will have a 3rd level cleric with them (also a caveman but possessing normal cleric spells).\n\n'
+        'Cavemen always lair in caves or caverns. There will be females and young equal to 100% and 50% respectively of the number of males encountered. There might be a chance that they will have ivory tusks, gold nuggets, or uncut gems - allow 5% chance for each per 10 cavemen, but if any one is indicated there will be no other treasures. Ivory is valued at 1,000 gold pieces per tusk (2 men to carry each), and there can be 2-12 tusks. Gold nuggets are the size of 5 gold pieces, and there can be 20-80 of them. Uncut gems are base 10 gold piece value, and there can be 1-100 of them.\n\n'
+        'Cavemen are armed as follows:\n\n'
+        '10% spear & stone axe\n'
+        '20% stone axe\n'
+        '50% club\n'
+        '20% spear\n\n'
+        'Treat stone axes as battle axes, clubs as morning stars. Note that due to their strength cavemen add +1 to damage rolls.\n\n'
+        'They tend to be frightened by the unknown, so subtract 1 from reaction dice in such morale checks.'
+    )
+),
+CreatureInfo( name = 'Tribesman',
+    hd = (1,1),
+    hp = (0,0),
+    lair = 0.4,
+    num = (10,120),
+    treasure = '',
+    iq = Intelligence.AVERAGE,
+    speed = 12,
+    ac = 7,
+    attacks = [(4,1,0)],
+    m_resist = 0.0,
+    align = 'NN',
+    size = 'M',
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Primitive tribesmen are typically found in tropical jungles or on islands. They use large shields. Their leaders conform to those of <a href="/creatures/caveman">cavemen</a>, but they have the following additional figures:\n\n'
+        '1 - 4th level cleric for every 10 tribesmen\n'
+        '1 - 6th level cleric for every 30 tribesmen\n'
+        '1 - 8th level head cleric (witchdoctor)\n\n'
+        'Tribesman clerics will be druidical in nature.\n\n'
+        'These men dwell in villages of grass, bamboo or mud huts. There is a 50% chance that the village lair will be protected by a large palisade. The village will contain females and young equal to 100% of the males encountered. There is a 75% chance that there will be 20-50 slaves. There is a 50% chance that there will be 2-12 captives (food!) held in a pen. Their treasure is exactly that of cavemen, but the tribesmen can possess all three types.\n\n'
+        'Tribesmen are armed as follows:\n\n'
+        '30% shield, spear & club\n'
+        '40% shield & 2 spears\n'
+        '30% shortbow & club\n\n'
+        'Treat tribesmen\'s clubs as maces.'
+    )
 ),
 CreatureInfo( name = 'Dervish',
     hd = (0,0),
@@ -5242,7 +5338,21 @@ CreatureInfo( name = 'Dervish',
     m_resist = 0.0,
     align = 'LG',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Dervishes are highly religious <a href="/creatures/nomad">nomads</a>. They are encountered only in desert or steppes/plains areas.\n\n'
+        'For every 30 dervishes encountered there will be an additional 3rd level fighter, for every 40 there will be a 4th level, for every 50 there will be a 5th level, and for every 60 there will be a 6th level.\n\n'
+        'Dervishes will be led by a cleric of 10th, 11th, or 12th level - 10th if under 125 in the party, 11th if under 250, 12 if 250 or more. The leader will have 2 assistant clerics of 4th, 5th, or 6th, 7th, or 8th level as his personal bodyguard. All these characters are in addition to the number of dervishes indicated by the dice.\n\n'
+        'For every 50 dervishes encountered there is a 15% chance that there will be a magic-user of 7th or 8th level and two assistants of 3rd or 4th level in addition to the other members of the group. If more than 200 dervishes are encountered the magic-users will be of the higher possible level.\n\n'
+        'Dervishes will have a walled fortress as a lair. There will be 200 to 300 dervishes there. The fortress will contain 1-4 each ballistae and light catapults and 1-2 heavy catapults as defenses.\n\n'
+        'The mounting, armor, and arms of a force of dervishes are:\n\n'
+        '25% medium warhorse, chainmail & shield, lance, sword\n'
+        ' 5% medium warhorse, chainmail & shield, composite bow, sword\n'
+        '50% light warhorse, leather armor & shield, lance, sword\n'
+        '10% light warhorse, leather armor & shield, composite bow, sword\n'
+        '10% light warhorse, leather armor & shield, light crossbow, mace\n\n'
+        'Due to their fanatical nature, dervishes add 1 to their hit probability and damage dice. They never check morale in combat. Their leaders wear chainmail, so if magic armor is indicated, it will be of that variety.\n\n'
+        'Dervish leaders have normal chances for possession of psionic abilities.'
+    )
 ),
 CreatureInfo( name = 'Nomad',
     hd = (0,0),
@@ -5257,7 +5367,26 @@ CreatureInfo( name = 'Nomad',
     m_resist = 0.0,
     align = 'NN',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Nomads are bands of desert or steppes/plains dwellers who roam freely about herding and hunting. They surprise on a 1-4 due to their ability to use terrain to conceal themselves.\n\n'
+        'Nomads will have higher level fighters in addition to their indicated numbers as do <a href="/creatures/dervish">dervishes</a>. They have normal possibilities for psionic abilities.\n\n'
+        'The leader of a band of nomads will be a fighter of 8th, 9th, or 10th level - 8th level if under 150 nomads are in the group, 9th if 150-250, and 10th if 250 or more. The leader will have a subcommander of 6th, 7th, or 8th level, and 12 guards of 2nd level. All these characters are in addition to the number of nomads indicated by the dice.\n\n'
+        'For every 50 nomads encountered there is a 15% chance that there will be a cleric of 4th-7th level with the group. There is a like chance for a 5th-8th level magic-user. Regardless of the results of the above, there will always be 2 clerics of 3rd level and a 4th level magic-user with a band of nomads.\n\n'
+        'If nomads are encountered in their lair it is 90% likely to be an encampment of tents (or yurts and carts) at an oasis or stream. There will be females there equal in number to 200% of the males, and children equal to 100% of their number. There will be from 10-100 slaves. There will be 100-400 horses and double that number of herd animals (sheep, goats, camels, cattle and/or yaks). 10% of the time the lair will be a small walled city, with an additional 20-80 footmen armored with chain and shield and armed with spear and sword (50%) and composite bow and sword (50%). Other people and animals in the lair are commensurate with the number of men.\n\n'
+        'The mounting, armor, and arms of a force of nomads depends upon where they are encountered:\n\n'
+        'Desert Nomads:\n'
+        '10% medium warhorse, chainmail & shield, lance & sword\n'
+        '10% medium warhorse, chainmail, light crossbow, sword\n'
+        '50% light warhorse, leather armor & shield, lance, sword\n'
+        '20% light warhorse, leather armor & shield, sword, 2 javelins\n'
+        '10% light warhorse, leather armor, light crossbow, sword\n\n'
+        'Steppes/Plains Nomads:\n'
+        '20% medium warhorse, chainmail & shield, lance, sword\n'
+        '10% medium warhorse, chainmail, composite bow, sword\n'
+        '20% light warhorse, leather armor & shield, lance, sword\n'
+        '50% light warhorse, leather armor, composite bow, sword\n\n'
+        'Nomads will typically withdraw from a force which inflicts over 25% casualties upon them if the enemy appears to be able to continue stout resistance. Nomads will also feign retreat in order to lure an enemy into ambush. They are 75% likely to capture weaker groups, but they are 90% likely to parley with parties of near equal strength.'
+    )
 ),
 CreatureInfo( name = 'Merchant',
     hd = (0,0),
@@ -5271,7 +5400,25 @@ CreatureInfo( name = 'Merchant',
     m_resist = 0.0,
     align = 'NN',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Merchants are, as the name implies, traders in goods and like merchandise. These traders travel in caravans - pack animals and/or wagons - from city to city in order to do business, so they are found nearly everywhere.\n\n'
+        'Only 10% of any band of merchants will actually be tradesmen. 10% will be drovers. The balance (80%) of the party will be mercenary guards.\n\n'
+        'The guards will be led by a fighter of 6th-11th level, with a lieutenant 1 level lower (5th-10th). These leaders will have 12 guards of 2nd level.\n\n'
+        'For every 50 persons in the merchant caravan there is a 10% chance for a magic-user of 6th-8th level. There is a 5% chance per 50 for a cleric of 5th-7th level. There is a 15% chance per 50 that there will be a thief of 8th-10th level with 1-4 lesser thieves (roll for the level of each, 3rd-7th).\n\n'
+        'All the leaders, guards, and special characters will be in addition to the numbers indicated by the dice.\n\n'
+        'The mercenaries guarding a caravan will be mounted, armored, and armed as follows:\n\n'
+        '10% heavy warhorse, plate armor & shield, lance, sword*\n'
+        '20% medium warhorse, chainmail & shield, lance, sword\n'
+        '10% medium warhorse, chainmail & shield, flail, mace\n'
+        '10% light warhorse, scale mail, light crossbow, sword\n'
+        '10% chainmail, pole arm, mace\n'
+        '10% chainmail, heavy crossbow, mace\n'
+        '30% ringmail & shield, spear, morning star\n\n'
+        '*All 1st level fighters\n\n'
+        'All higher level fighters and clerics will have plate armor and shield.\n\n'
+        'A caravan of merchants will have various sorts of treasure. Merchants will individually have J, K, L, M, N, and Q treasures with them. The mercenaries will individually have type K, leaders type M. Somewhere in the caravan will be hidden the pay chest containing (100% certain) 2,000-4,000 gold pieces, 100-400 platinum pieces, and 4-16 base 100 gold piece gems. The merchandise will be worth from 10,000 to 60,000 gold pieces, being carried on the pack animals, and/or wagons. It requires 10 pack beasts or 1 wagon for each 5,000 gold pieces worth of goods.\n\n'
+        'The merchants will always be mounted on very swift, light horses.'
+    )
 ),
 CreatureInfo( name = 'Pilgrim',
     hd = (0,0),
@@ -5285,7 +5432,24 @@ CreatureInfo( name = 'Pilgrim',
     m_resist = 0.0,
     align = 'NN',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Pilgrims are simply group of individuals on their way to visit some place which is holy (or unholy) to them. They are thus found nearly everywhere.\n\n'
+        'A group of pilgrims will always have the following additional characters:\n\n'
+        '1-6 2nd level clerics\n'
+        '1-4 4th level clerics\n'
+        '1-2 6th level clerics\n'
+        '1 - 8th level cleric with a 3rd and 5th level assistant\n\n'
+        'There is a 25% chance that a 5th or 6th level monk will be with the party. For every 10 pilgrims there is a 10% chance that there will be 1-10 fighters of 1st-8th level. There is a like chance that there will be 1-6 thieves of 2nd-7th level. There is a 5% chance per 10 pilgrims that a magic-user of 6th-9th level is with the group. If the pilgrims are lawful good, fighters will be paladins. If the party is chaotic good the fighters will be rangers. If the party is neutral the clerics will be druids. If the pilgrims are lawful evil, all of the pilgrims will fight as <a href="/creatures/berserker">berserkers</a>, although they will be armed only with daggers. If the party is chaotic evil the thieves will be assassins of the level indicated.\n\n'
+        'A group of pilgrims is likely to be aligned as follows:\n\n'
+        '35% lawful good\n'
+        '20% chaotic good\n'
+        '10% neutral\n'
+        '15% chaotic evil\n'
+        '20% lawful evil\n\n'
+        'All above average characters have normal chances for possession of psionic abilities.\n\n'
+        'Pilgrims are 75% likely to be afoot, 25% probability of being mounted - all will be either one or the other.\n\n'
+        'Pilgrims and monks will carry type J treasure. Fighters will carry types L and M, while clerics have types J, K, and M. Magic-users will have treasure types L, N, and Q, thieves types J, N, and Q. There is a 5% chance that some high level member of the band of pilgrims is carrying a religious artifact. Any such artifact will be carefully hidden and well guarded by traps and/or magic devices.'
+    )
 ),
 CreatureInfo( name = 'Merman',
     hd = (1,1),
@@ -5303,7 +5467,17 @@ CreatureInfo( name = 'Merman',
     m_resist = 0.0,
     align = 'NN',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Mermen are found in the seas and oceans in the warm temperate and tropical areas. They range over areas harvesting the vegetation and hunting the fish the seas provide. Additionally, mermen actually herd certain fishes. They venture out of water only to sun themselves or to visit some coastal spot.\n\n'
+        'Mermen have regular undersea communities, generally a reef or cliff honeycombed with passages and rooms. Only 10% of the time will they construct a village of shells, rocks, and coral. This community will have areas where the merwomen and their young (100% and 100% of the total merman population respectively) live, netted pens where food fishes are kept, workshops, and so on. These communities will be guarded by from 3-18 of the larger-sized <a href="/creatures/barracuda">barracuda</a>, for mermen have learned to tame and use these fish.\n\n'
+        'The arms used by mermen are:\n\n'
+        '50% trident, dagger*\n'
+        '30% crossbow, dagger\n'
+        '20% net, javelin, dagger\n\n'
+        '*20% of these mermen will have grapples and 50\' lines also.\n\n'
+        'On occasion mermen will attack surface vessels; to do so they must surface and grapple it. They are very accurate with these hooks and are 90% likely to hit. 10 mermen will then hold the line, and the ship will be slowed 1" for every such grappling. Meanwhile, the other mermen will fire their crossbows and darts at exposed crewmen. Grappling hooks can be thrown up to 3". If grappling hooks are loosened or cut, the mermen pulling on the line are not able to attack during the next melee round. A motionless ship will be held by the mermen in 4-16 melee rounds. The ship will then slowly sink and eventually be looted by the victors. During such an attempt the attacking mermen are exposed to missile fire from the vessel, and if flame is used against them the mermen take double damage.\n\n'
+        'Mermen speak their own language and 50% also speak <a href="/creatures/locathah">locathah</a>.'
+    )
 ),
 CreatureInfo( name = 'Mimic',
     hd = (7,8),
@@ -5319,7 +5493,11 @@ CreatureInfo( name = 'Mimic',
     align = 'NN',
     size = 'L',
     sub_creatures = ['Killer Mimic'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Mimics are subterranean creatures which cannot stand the light of the sun. They are able to perfectly mimic stone or wood. There are two varieties of this creature, the large (9-10 dice), semi-intelligent carnivorous "killer mimic" and the slightly smaller, intelligent sort. While the former will attack anything which is nearby, the latter are generally friendly if offered food. All mimics move about constantly in their search of prey.\n\n'
+        'Mimics pose as stonework, door, chests, or any other substance or item they can imitate. When a creature touches the mimic, the latter lashes out with a pseudopod, delivering 3-12 points of damage per hit. Meanwhile, the mimic excretes a glue which holds fast whatever member the creature touched the mimic with.\n\n'
+        'The killer mimics do not speak, but the other breeds have their own language and can usually speak several other tongues such as common, orcish, etc. For consideration they will usually tell a party about what they have seen nearby.'
+    )
 ),
 CreatureInfo( name = 'Killer Mimic',
     hd = (9,10),
@@ -5334,7 +5512,8 @@ CreatureInfo( name = 'Killer Mimic',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    parent_creature = 'Mimic'
 ),
 CreatureInfo( name = 'Mind Flayer',
     hd = (8,8),
@@ -5351,7 +5530,14 @@ CreatureInfo( name = 'Mind Flayer',
     m_resist = 0.9,
     align = 'LE',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Mind flayers are found only in subterranean places, as they detest sunlight. They are greatly evil and consider the bulk of humanity (and its kin) as cattle to feed upon.\n\n'
+        'The mind flayer\'s physical attack is by striking a victim with its four tentacles. If a tentacle hits it will reach the opponent\'s brain in 1-4 melee rounds and draw it forth, immediately killing the creature. The mind flayer then devours the brain. Its more feared attack mode, however, is the <i>mind blast</i> of psionic power. All within a 6" directional cone of ½" diameter at the point of emanation and 2" diameter at extreme range are affected (psionic attack on non-psionic).\n\n'
+        'Mind flayers have the following psionic abilities: <i>levitation</i>, <i>domination</i>, <i>ESP</i>, <i>body equilibruim</i>, <i>astral projection</i>, <i>probability travel</i>. They perform at 7th level mastery.\n\n'
+        'If an encounter is going against a mind flayer it will immediately flee, seeking to save itself regardless of its fellows or its treasure.\n\n'
+        'These monsters speak only their own arcane language and several other weird tongues - purportedly those of terrible races of things which dwell in regions of the subterranean world far deeper than mankind has ever ventured. It is also rumored that these monsters have a city somewhere deep beneath the earth.\n\n'
+        '<i>Description</i>: The mind flayer\'s skin glistens with slime. Its skin color is a nauseous mauve, its tentacles being purplish black. A mind flayer\'s eyes are dead white, no pupil being evident. The three long fingers of each hand are reddish, but the hands are mauve.'
+    )
 ),
 CreatureInfo( name = 'Minotaur',
     hd = (6,6),
@@ -5368,7 +5554,11 @@ CreatureInfo( name = 'Minotaur',
     m_resist = 0.0,
     align = 'CE',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Minotaurs are typically found only in labyrinthine places in the wilderness or underground. They are cruel, man-eaters, and although not particularly intelligent, they are cunning and have excellent senses. They are able to track prey by scent with 50% accuracy, and they will always pursue if it is in sight. They attack anything without fear, unless it is obviously beyond their ability to defeat.\n\n'
+        'In combat the minotaur can butt an opponent of 6\' or more in height, or bite a shorter one, the former attack doing 2-8, the latter 1-4, points of damage. The creature also uses some form of weapon - usually a huge axe (treat as a halberd) or a flail (+2 on damage).\n\n'
+        'Minotaurs have their own language and are 25% likely to speak common as well.'
+    )
 ),
 CreatureInfo( name = 'Brown Mold',
     hd = (0,0),
@@ -5382,7 +5572,10 @@ CreatureInfo( name = 'Brown Mold',
     m_resist = 0.0,
     align = 'NN',
     size = 'S',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Brown mold grows anywhere beneath the surface of the ground. It is light tan to golden brown in color. It cannot stand high concentrations of ultraviolet light, but it feeds on radiant energy of most other sorts. Where a patch of brown mold grows, the temperature will be below average. If a creature walks within 5\' of the patch, the mold will begin absorbing its body heat - even from a basically cold blooded creature. Each melee round that a creature is within 5\' of brown mold, the mold will drain heat equal to 1-8 hit points frost damage for every 10 degrees of body heat over 55 degrees the creature has. Worse still, this mold grows instantaneously from heat, so if a torch, flaming oil, or a <a href="/spells/fireball-magic-user-lvl-3/">fire ball</a> is near the patch, it will be able to grow 2, 4, or 8 times its area from the heat fed to it. This growth will be so rapid that on the next melee round it will have spread and be draining any further heat in its new area of growth.\n\n'
+        'Brown mold is not fed by <a href="/spells/light-cleric-lvl-1/">light</a> spells or <a href="/spells/faerie-fire-druid-lvl-1">faerie fire</a>. It is affected only by magical cold, and no other magical or non-magical attacks. <a href="/spells/ice-storm-magic-user-lvl-4/">Ice storms</a> or <a href="/spells/wall-of-ice-magic-user-lvl-4/">walls of ice</a> cause it to go dormant for 5-30 turns. A cold wand or <a href="/creatures/white-dragon">white dragon</a> breath will kill it. The growth does not harm creatures which use cold (white dragons, <a href="/creatures/ice-toad">ice toads</a>, or <a href="/creatures/winter-wolf">winter wolves</a>.)'
+    )
 ),
 CreatureInfo( name = 'Yellow Mold',
     hd = (0,0),
@@ -5396,7 +5589,11 @@ CreatureInfo( name = 'Yellow Mold',
     m_resist = 0.0,
     align = 'NN',
     size = 'S',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('A more common underground fungus is yellow mold, which is pale yellow to a golden orange in color. Any creature which touches this mold is attacked by its enzymes. It also affects wood, albeit more slowly. It does no harm to metals or stone. If the substance is contacted roughly, there is a 50% chance per contact that the colony will release spores. These deadly spores shoot out in an asphyxiating cloud, 1" by 1" by 1", originating from the center of impact. Any creature which is within this cloud will die, its lungs filled with yellow mold growth, unless it makes a saving throw versus poison. A <a href="/spell/cure-disease-cleric-lvl-3/"><i>cure disease</i></a> and a <a href="/spells/resurrection-cleric-lvl-7/"><i>resurrection</i></a> are necessary within 24 hours to save such victims.\n\n'
+        'Yellow mold is affected only by fire based attacks - flaming oil, a <a href="/creatures/fire-elemental">fire elemental</a>, etc. Continual light will cause it to become dormant for 2-12 turns, but thereafter the mold will grow over the light and obliterate it.\n\n'
+        'When formed into great colonies of at least 300 square feet in area this growth will form a collective intelligence about 1 time in 6. If this should happen the yellow mold will be aware mentally and psionically. It will attack by spore cloud if it senses the presence of other life forms (range of sensing will vary from 10\' to 60\') or psionically if such abilities are used within 20\' to 120\' (random determination of sensing range). If it attacks psionically, it will await the approach of the life form and then loose an attack which is equal to the most powerful form of id insinuation. It cannot be counter-attacked psionically unless a cleric who has the power to telepathically communicate with plants is on hand, for he will be needed to channel such attacks into a form which will affect the vegetable intelligence of the mold colony. Otherwise, the yellow mold must be physically attacked and destroyed. The colony has sufficient power to make from 1 to 10 psionic attacks within as many turns, and after resting for 1-4 days it will thereafter by able to again attack in this manner.'
+    )
 ),
 CreatureInfo( name = 'Morkoth',
     hd = (7,7),
@@ -5414,7 +5611,11 @@ CreatureInfo( name = 'Morkoth',
     align = 'CE',
     size = 'M',
     aliases = ['Wraith of the Deep'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('The morkoth, or morlock, is a dim, shadowy monster often referred to as the "wraith of the deep". It is possibly humanoid, but reports vary. It inhabits dark, deep waters.\n\n'
+        'The lair of a morkoth is a series of spiraling tunnels, and at the nexus of these passages lurks the morkoth. Any creature passing over one of these tunnels is drawn towards is hypnotically, for the tunnels form a pattern which is <i>hypnotic</i>. When a victim is within the passages he approaches the morkoth without realizing it and will be <a href="/spells/charm-person-magic-user-lvl-1/"><i>charmed</i></a> by a spell from the monster unless a saving throw at -4 on the die is made. The charmed victim will then be devoured at the morkoth\'s leisure. The tunnels of a morkoth are constructed so as to prevent large creatures from entering. There are typically 6 tunnels in a lair. Note that should any victim come closer than 6", the hypnotic effect is broken.\n\n'
+        'The morkoth attacks by biting. A charmed creature will suffer this attack without knowledge, and thus enable the monster to consume it. Spell attacks of any sort are reflected by the morkoth, affecting the caster and possibly affecting others nearby also, if the spell is one with an area effect. However, if a <a href="/spells/dispel-magic-cleric-lvl-3/"><i>dispel magic</i></a> is cast simultaneously, the morkoth will be unable to reflect the spell and there is a 50% chance that the magic will affect the creature, although even then the morkoth is allowed a saving throw.'
+    )
 ),
 CreatureInfo( name = 'Mule',
     hd = (3,3),
@@ -5427,7 +5628,8 @@ CreatureInfo( name = 'Mule',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'Mules are generally sterile hybrids between <a href="/creatures/horse">horses</a> and donkeys. They are strong and agile, thus able to negotiate dungeons well in most cases. Mules can be very stubborn and uncooperative at times, and they are likely to bite or kick their own handler if in a contrary mood. They are not panicked by fire, but strange smells may cause them to bolt away, or begin to bray loudly. A mule can carry 2000 gold pieces in weight at normal speed, 6000 at one-half speed.'
 ),
 CreatureInfo( name = 'Mummy',
     hd = (6,6),
@@ -5444,7 +5646,13 @@ CreatureInfo( name = 'Mummy',
     m_resist = 0.0,
     align = 'LE',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Mummies are undead humans with existence on both the normal and the negative<sub>1</sub> material planes (). They are found near their tomb or in like burial places or ruins. They retain a semblance of life due to their evil, and they seek to destroy any living thing they encounter. Their unholy hatred of life and their weird un-life state gives them tremendous power, so that a blow from their arm smashes opponents for 1-12 hit points of damage. The scabrous touch of a mummy inflicts a rotting disease on any hit. The disease will be fatal in 1-6 months, and each month it progresses the diseased creature loses 2 points of charisma, permanently. It can be cured only by a magic spell, <a href="/spells/cure-disease-cleric-lvl-3/"><i>cure disease</i></a>. The disease negates all <i>cure wound</i> spells. Infected creatures heal wounds at 10% of the normal rate.\n\n'
+        'The mere sight of a mummy within 6" will cause such <i>fear</i> and <i>revulsion</i> in any creature, that unless a saving throw versus magic is successful, the victim will be <i>paralyzed</i> with fright for 1-4 melee rounds. Note that numbers will give courage, and for each creature above 6 to 1 mummy, the creatures add +1 to their saving throw. If humans confront a mummy, each will save at +2 on his dice.\n\n'
+        'Mummies can be harmed only by magical weapons, and even those do only one-half normal damage, dropping all fractions (5 becomes 2, 3 becomes 1, and 1 becomes 0 hit points of damage.) <a href="/spells/sleep-magic-user-lvl-1/"><i>Sleep</i></a>, <a href="/spells/charm-monster-magic-user-lvl-4/"><i>charm</i></a>, <a href="/spells/hold-monster-magic-user-lvl-5/"><i>hold</i></a>, and <i>cold</i>-based spells have no effect upon them. Poison or paralysis do not harm them. A <a href="/spells/raise-dead-cleric-lvl-5/"><i>raise dead</i></a> spell will turn the creature into a normal human (of 7th level fighting ability, naturally) unless the mummy saves versus magic. Mummies will suffer certain damage from fire, even flame of normal sort. A blow with a torch will cause 1-3 hit points of damage. A flask of burning oil will cause 1-8 hit points of damage on the first round it covers the mummy and twice that amount on the second melee round. Magical fires are at +1 per die of damage. If holy water is splashed upon them they suffer 2-8 hit points of damage for every vial-full which strikes.\n\n'
+        'Any creature killed by a mummy rots and cannot be raised from death unless a <a href="/spells/cure-disease-cleric-lvl-3/"><i>cure disease</i></a> and <a href="/spells/raise-dead-cleric-lvl-5/"><i>raise dead</i></a> spell are used within 6 turns.\n\n'
+        '<sub>1</sub>: In the printed manuals, the mummy is purported to exist on the normal and <b>positive</b> planes. Gygax admitted years later that this was a typo, but for many the typo has become canon.'
+    )
 ),
 CreatureInfo( name = 'Guardian Naga',
     hd = (11,12),
@@ -5461,7 +5669,11 @@ CreatureInfo( name = 'Guardian Naga',
     m_resist = 0.0,
     align = 'LG',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Wise and good, guardian naga are found principally in sacred places, guarding treasure of lawful good minions, or as watchers over some evil. In addition to poisonous biting for 1-6 points of damage, and constricting for 2-8 points, a guardian naga can spit poison at an individual creature at up to 3" range; and if the victim fails to make its saving throw versus poison the spittle will kill. Guardian naga also have the ability to use clerical spells as if they were 6th level clerics, i.e. 2 - 1st, 2 - 2nd, 1 - 3rd, and 1 - 4th level clerical spells per day.\n\n'
+        'Guardian naga are covered in green-gold scales with silvery triangles along the back. Their eyes are golden.\n\n'
+        'Naga are snake-like creatures with good brains and magical abilities. They are encountered in warm climes in most cases.'
+    )
 ),
 CreatureInfo( name = 'Spirit Naga',
     hd = (9,10),
@@ -5478,7 +5690,11 @@ CreatureInfo( name = 'Spirit Naga',
     m_resist = 0.0,
     align = 'CE',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Totally evil, spirit naga seek to do harm whenever and wherever possible. They prefer dwelling in ruined, dismal, or subterranean places. In addition to a poisonous bite for 1-3 hit points damage, these monsters can permanently <i>charm</i> (as a <a href="/spells/charm-person-magic-user-lvl-1/"><i>charm</i></a> spell) any humanoid creature that meets a gaze of these monsters unless a saving throw versus paralyzation is made. Finally, spirit naga are able to use magical and clerical spells at 5th ability level of magic use and 4th level clerical ability, i.e. 4 - 1st, 2 - 2nd, and 1 - 3rd level magic-user and 2 - 1st, and 1 - 2nd level cleric spells per day.\n\n'
+        'Spirit naga are black scaled with crimson bands. Their heads are bulbous and have a very human appearance, even to coloration and hair.\n\n'
+        'Naga are snake-like creatures with good brains and magical abilities. They are encountered in warm climes in most cases.'
+    )
 ),
 CreatureInfo( name = 'Water Naga',
     hd = (7,8),
@@ -5496,7 +5712,11 @@ CreatureInfo( name = 'Water Naga',
     m_resist = 0.0,
     align = 'NN',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Found only in clear, fresh water, these creatures are curious but quite neutral in attitude. They seldom attack unless threatened or attacked first. As they generally inhabit places many feet beneath the surface of a pool, lake, or river, they are seldom disturbed in their lair. In addition to their poisonous bite for 1-4 points of damage, water naga are able to employ magic spells (excluding those which deal with fire) or 5th level ability, i.e. 4 - 1st, 2 - 2nd, and 2 - 3rd level magic-user spells per day.\n\n'
+        'Water naga are emerald green to turquoise in reticulated pattern with chocolate brown and pale jade green or dark gray and olive. Their eyes are pale green to bright amber.\n\n'
+        'Naga are snake-like creatures with good brains and magical abilities. They are encountered in warm climes in most cases.'
+    )
 ),
 CreatureInfo( name = 'Neo-Otyugh',
     hd = (9,12),
@@ -5511,7 +5731,8 @@ CreatureInfo( name = 'Neo-Otyugh',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = 'Neo-otyugh are a larger, more intelligent species of <a href="/creatures/otyugh">otyugh</a>. They conform to the general characteristics of otyugh, and are even more aggressive in their hunting of prey. Also, the neo-otyugh are slightly better at telepathic communication. Some specimens of these creatures reach 8\' diameter and a height of 3\' or more. The hide of a neo-otyugh is even tougher than that of an otyugh, although the appearance is similar.'
 ),
 CreatureInfo( name = 'Night Hag',
     hd = (8,8),
@@ -5526,7 +5747,13 @@ CreatureInfo( name = 'Night Hag',
     m_resist = 0.65,
     align = 'NE',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('The race of night hags rules the convoluted planes of Hades, and they are seldom encountered elsewhere. In their own region they are numerous, but they appear but singly on the material plane, and always in search of very evil persons to slay and bring to Hades to form another <a href="/creatures/larva">larvae</a> - a valuable commodity to both demons and devils alike.\n\n'
+        'If a night hag finds a very selfishly evil person, she will cast a powerful <a href="/spells/sleep-magic-user-lvl-1/"><i>sleep</i></a> spell which affects even up to 12th level humans, unless a saving throw versus magic is successful. The night hag then strangles the sleeping victim. If the <i>sleep</i> spell fails, the hag will visit the victim nightly in ethereal state, intrude on the victim\'s dreams in order to cause him (or her) to become ethereal also, and then ride the victim until dawn. The night hag cannot be removed from the back by the victim, and each nightly ride permanently drains one point from the victim\'s constitution. When a 0 constitution is reached the victim is dead, and the night hag returns to Hades with the larval soul.\n\n'
+        'Night hags hate goodness, and they will attack any creature which is of good alignment as long as the possibilities of success appear favorable. Night hags are able to employ a <a href="/spells/magic-missile-magic-user-lvl-1/"><i>magic missile</i></a> spell 3 times per day, the missile causing 2-16 hit points of damage when it strikes. They can likewise use a <a href="/spells/ray-of-enfeeblement-magic-user-lvl-2">ray of <i>enfeeblement</i></a> 3 times per day. They can become ethereal at will, as mentioned previously. Night hags also have the power to <a href="/spells/know-alignment-magic-user-lvl-2/"><i>know a creature\'s alignment</i></a> and <a href="/spells/polymorph-self-magic-user-lvl-4/"><i>polymorph</i></a> themselves</i></a> at will. If hard pressed, a night hag can attempt to <a href="/spells/gate-cleric-lvl-7/"><i>gate</i></a> in a demon of <a href=/creatures/type-1-demon">type 1</a> or a <a href="/creatures/barbed-devil">barbed devil</a> (50%/50%). There is a 50% chance of the gate opening. The hag dislikes doing this, as she must then reward the demon or devil with a larva. They are totally invulnerable to <a href="/spells/sleep-magic-user-lvl-1/"><i>sleep</i></a>, <a href="/spells/charm-monster-magic-user-lvl-4/"><i>charm</i></a>, <a href="/spells/fear-magic-user-lvl-4/"><i>fear</i></a>, <i>fire</i>, and <i>cold</i> based spells. It requires a silver, iron, or +3 or better weapon to harm a night hag.\n\n'
+        'Night hags are able to astrally project their bodies, but in order to do so they must be in possession of a special periapt which each forges in Hades. If taken from a hag she can leave the plane she is in at the time of the loss. This periapt will cure diseases which the possessor contracts, and it gives a +2 on all saving throws. However, in the hands of a good creature, the periapt decays 10% with each usage, eventually vanishing.\n\n'
+        '<i>Description</i>: The night hag is a hideous dark blue-violet color, with black hair and glowing red eyes. Her taloned hands and feet have nails of jet black.'
+    )
 ),
 CreatureInfo( name = 'Nightmare',
     hd = (6,6),
@@ -5544,7 +5771,12 @@ CreatureInfo( name = 'Nightmare',
     align = 'NE',
     size = 'L',
     aliases = ['Demon Horse', 'Hell Horse'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Also known as "demon horses" and "hell horses," nightmares are creatures from the lower planes. They are ridden primarily by the more powerful demons and devils as well as by <a href="/creatures/night-hag">night hags</a>. On occasion they serve as steeds for undead such as <a href="/creatures/spectre">spectres</a>, <a href="/creatures/vampire">vampires</a> and <a href="/creatures/lich">liches</a>.\n\n'
+        'The nightmare attacks with its great fangs as well as its burning hooves. These creatures breathe out a smoking, hot cloud during combat, and it obscures vision by blinding the eyes and choking its opponent. Unless a saving throw is made the opponent attacks at -2 "to hit" and damage dice.\n\n'
+        'Nightmares can fly, become ethereal, and roam the astral plane. They hate material life and attack viciously, even without a rider to command them.\n\n'
+        '<i>Description</i>: The hell horse is gaunt and skeletal with a huge head, glowing red eyes, flaming orange nostrils, and hooves which burn like embers. The coat is dead black, and the creature\'s mane and tail are wild and rugged.'
+    )
 ),
 CreatureInfo( name = 'Nixie',
     hd = (0,0),
@@ -5562,7 +5794,13 @@ CreatureInfo( name = 'Nixie',
     m_resist = 0.25,
     align = 'NN',
     size = 'S',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Nixies are water sprites which inhabit lakes. They can, but seldom do, venture onto land. The nixies weave dwellings of living seaweed, so it is 95% unlikely that their lair will be noticed at any distance under 2". Furthermore, nixies will have giant fish to guard their lair - 1-2 <a href="/creatures/giant-gar">gar</a> (20%) or 2-5 <a href="/creatures/giant-pike">pike</a> (80%) - which obey simple commands given by the nixies. They can also summon 10-100 small fish.\n\n'
+        'Nixies delight in enslaving humans, and if one or more approach within 30\' of a group of nixies, the latter will generate a powerful <a href="/spells/charm-person-magic-user-lvl-1/"><i>charm</i></a> spell, one such spell for each 10 nixies, which requires the victim to save versus magic at -2 on the die roll. If a charmed person has a <a href="/spells/dispel-magic-cleric-lvl-3/"><i>dispel magic</i></a> spell cast upon him before entering the water, there is a 75% chance the charm will be broken, but once in the water the chance is only 10%. If a human is charmed by the nixies they will take the victim to their lair for 1 full year, but thereafter the charm wears off and the victim is allowed to go free. During any period of such enslavement, the nixies will keep a <a href="/spells/water-breathing-druid-lvl-3/"><i>water breathing</i></a> spell on the human captive. Each nixie has the power to cast a <i>water breathing</i> spell on any creature, or dispel it, once per day. It lasts 1 day. Nixies are armed with long daggers and darts (javelins). The latter are used as spears under water, as missiles above. Each nixie carries one of each weapon. The javelins can be thrown 6" maximum (1" short range, 3" medium, etc.).\n\n'
+        'Although nixies are 25% magic resistant, they fear fire and bright light. A flaming sword or a <a href="/spells/light-cleric-lvl-1/"><i>light</i></a> spell will keep back the nixies. A <a href="/spells/continual-light-cleric-lvl-3/"><i>continual light</i></a> spell will keep them at bay until they can negate it by summoning small fish to crowd around the light and dim it.\n\n'
+        'Nixies speak their own language and the common tongue.\n\n'
+        '<i>Description</i>: Nixies appear to be very comely humanoids, with greenish skin, dark green hair and silver eyes. Their skin is lightly scaled and hands and feet are webbed.'
+    )
 ),
 CreatureInfo( name = 'Nymph',
     hd = (3,3),
@@ -5579,7 +5817,10 @@ CreatureInfo( name = 'Nymph',
     m_resist = 0.5,
     align = 'NG',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('These beautiful, ever-young appearing women inhabit the loveliest of wilderness places, grottos in the sea, clear lakes and streams, and crystalline caverns. They dislike any form of intrusion, and they have means to prevent it. Nymphs are able to <a href="/spells/dimension-door-magic-user-lvl-4"><i>dimension door</i></a> once per day. A nymph is able to use druidical cleric spells at 7th ability level, i.e. 4 - lst, 2 - 2nd, 2- 3rd, and 1 - 4th level spell once per day. Looking at one will cause permanent blindness unless the onlookers save versus magic. If the nymph is nude or disrobes, an onlooker will die unless a saving throw versus magic is successful. There is a 10% chance that the nymph will be friendly if approached by a good creature without the latter first glimpsing the nymph, i.e. by calling or other prior notice. Similarly, if a nymph sees a human male with 18 charisma and good alignment before he sees her, it is 90% probable that the nymph will be favorable inclined towards the person.\n\n'
+        'Nymphs speak their own language and the common tongue.'
+    )
 ),
 CreatureInfo( name = 'Ochre Jelly',
     hd = (6,6),
@@ -5590,12 +5831,16 @@ CreatureInfo( name = 'Ochre Jelly',
     treasure = '',
     iq = Intelligence.NON,
     speed = 3,
+    climb = 3,
     ac = 8,
     attacks = [(4,3,0)],
     m_resist = 0.0,
     align = 'NN',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Ochre jelly are a form of giant amoeba. They seep about in dungeons, hunting for any form of flesh or cellulose to devour - they far prefer the former. Their amorphous form allows them to flow through small spaces. They can travel along walls or ceilings with ease. The fluids excreted by these creatures dissolve flesh (3-12 hit points per round of exposure).\n\n'
+        'Striking the ochre jelly with <a href="/spells/lightning-bolt-magic-user-lvl-3">lightning bolts</a> simply divides the creature into one or smaller creatures, each doing one-half normal damage. Cold and fire based attacks have normal effect.'
+    )
 ),
 CreatureInfo( name = 'Giant Octopus',
     hd = (8,8),
@@ -5615,7 +5860,12 @@ CreatureInfo( name = 'Giant Octopus',
     m_resist = 0.0,
     align = 'NE',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Giant octopi inhabit warm waters of medial to shallow depth. They lair in wrecked ships and undersea caves. They hunt at night, snatching and dining on any form of life which is vulnerable. They will readily attack swimmers or seize small vessels in order to eat the crew. These creatures are malicious and have a cunning bent. Several will cooperate to overwhelm a larger ship if opportunity presents itself. Vessels grabbed by giant octopi will lose way and come to a full stop in 3 turns.\n\n'
+        'A giant octopus will generally attack with 6 of its 8 tentacles, using 2 to anchor itself. Each tentacle striking does only 1-4 hit points of damage, but unless the member is loosened or severed, it will do twice initial damage (2-8 points) each melee round thereafter. The octopus also has a vicious beak which can bite nearby prey for 2-12 hit points.\n\n'
+        'Any creature will be struck only by 1 tentacle at a time unless it is larger than 8\' or so tall/long. There is a 25% chance that a creature struck by a tentacle will have its upper limbs pinned, and a 25% chance that neither upper limb will be held. If both limbs are held the creature has no attack with them, if only 1 is pinned the creature attacks at -3 on "to hit" dice rolls, and if both are free the creature attacks only at -1. A tentacle grasps with a grip equal to 18/20, and any creature with a strength equal to or greater than 18/20 can grasp the tentacle and negate its constriction; but this does not free it, and the octopus will immediately seek to drag the victim to its mouth to eat it. To break free, a tentacle must be severed. Each tentacle takes 8 hit points. This is in addition to the 8 dice the octopus itself has.\n\n'
+        'If 3 or more tentacles are severed it is 90% probable the octopus will retreat, blowing forth a cloud of black ink 4" high by 6" wide, by 6" long. The octopus will then run to its lair or hide in some other nearby place, changing its color to blend with its surroundings. The ink cloud completely obscures the vision of any creature within it.'
+    )
 ),
 CreatureInfo( name = 'Ogre',
     hd = (4,4),
@@ -5633,7 +5883,14 @@ CreatureInfo( name = 'Ogre',
     align = 'CE',
     size = 'L',
     source = SourceBook.MONSTER_MANUAL,
-    sub_creatures = ['Ogre Leader', 'Ogre Chieftan']
+    sub_creatures = ['Ogre Leader', 'Ogre Chieftan'],
+    description = ('Ogres can be found in virtually any terrain, including subterranean places. They are ugly-tempered and voracious. Ogres are also fond of treasure, and they will sometimes be found serving as mercenaries in the ranks of <a href="/creatures/orc">orc</a> tribes or evil clerics or joining with <a href="/creatures/gnoll">gnolls</a> for a profitable raid. Ogres mingle freely with <a href="/creatures/troll">trolls</a> and some giants, and they are at times enslaved by certain demons.\n\n'
+        'If 11 or more ogres are encountered, there will be one who is a leader (armor class 3, 30-33 hit points, attacking as a 7 hit dice creature and doing from 2-12 hit points damagae/attack). If 16 or more are encountered there will be 2 such leaders plus 1 additional ogre, a chieftan with armor class 4, 34-37 hit points, and attacking as a 7 hit dice monster and doing 4-14 hit points damage/attack.\n\n'
+        '(If weapon type is used to determine damage/attack, give a standard bonus of +2 hit points to ogres and leaders/chieftains gain an additional +1/+2 bonus.)\n\n'
+        'If ogres are found in their lair there will be from 2-12 females who fight as normal ogres but do only 2-8 points of damage and take a maximum of 6 hit points per hit die. There will also be from 2-8 young who will fight as <a href="/creatures/goblin">goblins</a>. Ogres will take prisoners in order to use them as slaves (25%) or food (75%), so there is a 30% chance that an ogre lair will contain 2-8 slaves/prisoners. As they are very fond of halfling, dwarf, or elf flesh, there is only a 10% chance that such creatures will be found alive in an ogre lair.\n\n'
+        'Ogres speak their own language as well as that of chaotic evil, orcs, trolls, and <a href="/creatures/stone-giant">stone giants</a>.\n\n'
+        '<i>Description</i>: The hide of ogres varies from dull blackish-brown to dead yellow. Rare specimens are a sickly violet in color. Their warty bumps are often of different color - or at least darker than their hides. Hair is blackish-blue to dull dark green. Eyes are purple with white pupils. Teeth are black or orange, as are talons. Ogres wear any sort of skins or furs. They care for their arms and armor reasonably well. The life span of an ogre is not less than 90 years.'
+    )
 ),
 CreatureInfo( name = 'Ogre Leader',
     hd = (0,0),
@@ -5686,7 +5943,13 @@ CreatureInfo( name = 'Ogre Mage',
     size = 'L',
     aliases = ['Japanese Ogre'],
     source = SourceBook.MONSTER_MANUAL,
-    sub_creatures = ['Ogre Mage Chieftan']
+    sub_creatures = ['Ogre Mage Chieftan'],
+    description = ('Japanese ogres, ogre magi, are not as rare elsewhere as they are in this part of the world. They normally seek uninhabited places in which to lair - typically in a fortified dwelling or some secure cavern complex below ground. From this location, the ogre magi will foray to capture treasure and humans for slaves and food.\n\n'
+        'If encountered in their lair, the ogre magi will always have a chief of great strength (+2 on each hit die, attacking and saving as a 9 hit dice monster) in addition to the others of his kind indicated by the die roll. There will be 2-12 slaves/prisoners in the lair.\n\n'
+        'Ogre magi are able to perform the following feats of magic: <a href="/spells/fly-magic-user-lvl-3/"><i>fly</i></a> (for 12 turns), <a href="/spells/invisibility-magic-user-lvl-2/"><i>become invisible</i></a>, <a href="/spells/darkness-15-radius-magic-user-lvl-2/"><i>cause darkness</i></a> in a 1" radius, <a href="/spells/polymorph-self-magic-user-lvl-4/"><i>polymorph</i></a> to human (or similar bipedal humanoid form from 4\' to 12\' size) form, and <i>regenerate</i> 1 hit point per melee round (lost members must be reattached to regenerate). Once per day they can also do any of the following: <a href="/spells/charm-person-magic-user-lvl-1/"><i>charm person</i></a>, <a href="/spells/sleep-magic-user-lvl-1/"><i>sleep</i></a>, <i>assume gaseous form</i>, and create a ray of cold the same dimensions as that of a cold wand which does eight 8-sided dice of damage (unless the appropriate saving throw is made).\n\n'
+        'Japanese ogres speak their own language, that of normal <a href="/creatures/ogre">ogres</a>, the common tongue, and their alignment tongue.\n\n'
+        '<i>Description</i>: Ogre magi have light blue, light green, or pale brown skins. Their hair is typically of an opposite and darker color (blue-green, green-blue), except that brown skinned ogre magi have dark yellow hair. Their nails are black, and their teeth and tusks are very white. Horns are ivory colored. Their eyes are dark pupiled white white centers. Their apparel is typically colored in patterns familiar to their homeland.'
+    )
 ),
 CreatureInfo( name = 'Ogre Mage Chieftan',
     hd = (5,5),
@@ -5722,7 +5985,29 @@ CreatureInfo( name = 'Orc',
     align = 'LE',
     size = 'M',
     sub_creatures = ['Orc Leader', 'Orc Subchief', 'Orc Chief'],
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Orc tribes are fiercely competitive, and when they meet it is 75% likely that they will fight each other, unless a strong leader (such as a wizard, evil priest, evil lord) with sufficient force behind him is on hand to control the orcs. Being bullies, the stronger will always intimidate and dominate the weaker. (If <a href="/creatures/goblin">goblins</a> are near, for example, and the orcs are strong enough, they will happily bully them.) Orcs dwell in places where sunlight is dim or non-existent, for they hate the light. In full daylight they must deduct 1 from their dice rolls to hit opponents, but they see well even in total darkness (infravision).\n\n'
+        'Known orc tribes include the following: Vile Rune, Bloody Head, Death Moon, Broken Bone, Evil Eye, Leprous Hand, Rotting Eye, Dripping Blade. If orcs from one of those tribes are encountered in an area, it is likely that all other orcs nearby will also be from this tribe.\n\n'
+        'For every 30 orcs encountered there will be a leader and 3 assistants. These orcs will have 8 hit points each (being the biggest/strongest/meanest in their group). If 150 or more orcs are encountered there will be the following additional figures with the band: a subchief and 3-18 guards, each having armor class 4, 11 hit points, and fighting as monsters with 2 hit dice (doing 2-7 hit points damage). If the orcs are not in their lair there is a 20% chance they will be escorting a train of 1-6 carts and 10-60 slave bearers bringing supplies and loot to their chief or to a stronger orc tribe. The carts will hold goods worth from 10 to 1,000 gold pieces, and each slave will bear goods worth from 5 to 30 gold pieces. If such a train is indicated, double the number of leaders and assistants, add 10 normal orcs for each cart in the train, and a subchief with 5-30 guards will always be in charge.\n\n'
+        'Orc lairs are underground 75% of the time, in an above ground village 25% of the time. There will always be the following additional orcs when the encounter is in the creature\'s lair: a chief and 5-30 bodyguards (AC 4, 13-16 hit points, attack as monsters with 3 hit dice and do 2-8 hit points damage), females equal to 50% of the number of males, young equal to 100% of the number of males. If the lair is underground, there is a 50% chance that there will be from 2-5 <a href="/creatures/ogre">ogres</a> living with the orcs. If the lair is above ground it will be a rude village of wooden huts protected by a ditch, rampart, and log palisade. The village will have from 1-4 watch towers and single gate. There will be 1 catapult and 1 ballista for each 100 male orcs (round to the nearest hundred).\n\n'
+        'The weaponry of orcs is shown typically below:\n\n'
+        ' 5% sword & flail\n'
+        '10% sword & spear\n'
+        '10% axe & spear\n'
+        '10% axe & pole arm\n'
+        '10% axe & crossbow\n'
+        '10% axe & bow\n'
+        ' 5% sword & battleaxe\n'
+        '10% spear\n'
+        '10% axe\n'
+        '20% polearm\n\n'
+        'Leaders and above will always have two weapons. If a subchief is with a group the tribal standard will be present 40% of the time. The standard is always present when the tribal chief is. The standard will cause all orcs within 6" to fight more fiercely (+1 on hit dice and morale check dice).\n\n'
+        'Orcs are cruel and hate living things in general, but they particularly hate <a href="/creatures/elf">elves</a> and will always attack them in preference to other creatures. They take slaves for work, food, and entertainment (torture, etc.) but not elves whom they kill immediately.\n\n'
+        'Orcs are accomplished tunnelers and miners. They note new or unusual constructions underground 35% of the time and spot sloping passages 25% of the time.\n\n'
+        'The majority of orcs speak <a href="/creatures/goblin">goblin</a>, <a href="/creatures/hobgoblin">hobgoblin</a>, and ogre in addition to the languages of orcs and lawful evil.\n\n'
+        '<i>Description</i>: Orcs appear particularly disgusting because their coloration - brown or brownish green with a bluish sheen - highlights their pinkish snouts and ears. Their bristly hair is dark brown or black, sometimes with tan patches. Even their armor tends to be unattractive - dirty and often a bit rusty. Orcs favor unpleasant colors in general. Their garments are in tribal colors, as are shield devices or trim. Typical colors are blood red, rust red, mustard yellow, yellow green, moss green, greenish purple, and blackish brown. They live for 40 years.\n\n'
+        '<b>Half-Orcs</b>: As orcs will breed with anything, there are any number of unsavory mongrels with orcish blood, particularly orc-goblins, orc-hobgoblins, and orc-humans. Orcs cannot cross-breed with elves. Half-orcs tend to favor the orcish strain heavily, so such sorts are basically orcs although they can sometimes (10%) pass themselves off as true creatures of their other stock (goblins, hobgoblins, humans, etc.).'
+    )
 ),
 CreatureInfo( name = 'Orc Leader',
     hd = (0,0),
@@ -5791,7 +6076,11 @@ CreatureInfo( name = 'Giant Otter',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Giant otters dwell in lakes and rivers. These creatures are basically non-aggressive, but if threatened or cornered they can fight fiercely. These creatures love to play - sliding and tag are favorite pastimes. If such play is in progress when the otters are encountered, the creatures might panic horses, overturn wagons, accidentally break carts, etc. Even in the water similar danger exists with regard to boats and other small craft, for the otters may accidentally overturn them in playfulness.\n\n'
+        'If discovered in their lair, there will always be 5 giant otters - 2 adults and 3 young (40%-70% grown). The parent animals will always attack in this circumstance. The young will defend themselves.\n\n'
+        'The pelts of giant otter sell for from 1,000 to 4,000 gold pieces.'
+    )
 ),
 CreatureInfo( name = 'Otyugh',
     hd = (6,8),
@@ -5806,7 +6095,12 @@ CreatureInfo( name = 'Otyugh',
     m_resist = 0.0,
     align = 'NN',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('These weird monsters are omnivorous scavengers, not at all hesitant about adding a bit of fresh meat to their diet of dung, offal, and carrion. They hate direct sunlight or bright light, so they are found underground in most cases. Usually (90%) only a single individual is encountered, for otyugh typically live in partnership with other subterranean monsters. The otyugh will dwell in a truce state with other powerful monsters in order to scavenge droppings and other leavings. In most cases otyugh live in piles of dung and rubbish, and thrive there.\n\n'
+        'The otyugh has a sensory organ stalk and two tentacle arms which protrude from its hideous body. The eyes are always thrust above the offal the creature lairs under, and this prevents surprise. Its tentacles have sharp ridges and are used to deliver smashing blows to prey. The creature\'s mouth is sucker-like and filled with many teeth. If it bites any victim it is 90% likely to be infected by <i>disease</i> (typhus).\n\n'
+        'These monster have no interest whatsoever in treasure as humans know it, but their partners may, occasionally making the guarding of treasure they value a condition of allowing otyugh to dwell in semi-symbiosis with them. Otyugh speak their own language and are semi-telepathic, thus often able to communicate with other life forms when the otyugh so desire.\n\n'
+        '(See also <a href="/creatures/neo-otyugh"><b>Neo-Otyugh</b></a>.)'
+    )
 ),
 CreatureInfo( name = 'Giant Owl',
     hd = (4,4),
@@ -5825,7 +6119,11 @@ CreatureInfo( name = 'Giant Owl',
     m_resist = 0.0,
     align = 'NN',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Giant owls are rarely encountered as they inhabit only very wild areas. They are nocturnal predators and effective hunters. Giant owls speak their own language.\n\n'
+        'A giant owl strikes with its two sets of sharp talons and its strong beak. Its feathers allow it to fly with nearly absolute silence, thus it surprises on 1-5 (on a 6-sided die).\n\n'
+        'These creatures are intelligent and will sometimes befriend other creatures. If encountered in their lair there is a 20% chance that there will be 1-3 eggs (25%) or 1-3 hatchling owls, 20% to 70% grown. The parents will always attack any creature threatening the eggs/owlettes. Eggs sell for 1,000 gold pieces, young for 2,000 on the open market.'
+    )
 ),
 CreatureInfo( name = 'Owlbear',
     hd = (5,5),
@@ -5842,7 +6140,12 @@ CreatureInfo( name = 'Owlbear',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('The horrible owlbear is probably the result of genetic experimentation by some insane wizard. These creatures inhabit the tangled forest regions of every temperate clime, as well as subterranean labyrinths. They are ravenous eaters, aggressive hunters, and evil tempered at all times. They attack prey on sight and will fight to the death.\n\n'
+        'The owlbear attacks with its great claws (two inches long on large males), its snapping beak, and then grasps a victim and squeezes and bites it to death. If it scores a paw hit of 18 or better with either of its forelimbs, the owlbear has dragged the victim to itself; and the opponent will take an additional 2-16 hit points damage from the hug, that melee round and every melee round thereafter until the owlbear is killed. (Note that if the armor class of the opponent is such that an 18 is insufficient to hit, the hug is not effective, and no damage is taken.)\n\n'
+        'If encountered in their lair there is a 25% chance that there will be 1-6 eggs (20%) or young (80%) in addition to the adults. Young owlbears will be 40% to 70% grown, and they will fight accordingly. Eggs are worth 2,000 gold pieces, young under 50% grown are worth 5,000 on the open market.\n\n'
+        '<i>Description</i>: Owlbears have brownish-black to yellow brown fur and feathers. The 1,300 to 1,500 pound males will be the darker colored. The beaks of these creatures are yellow to ivory. The eyes are red-rimmed and exceedingly terrible to behold.'
+    )
 ),
 CreatureInfo( name = 'Pegasus',
     hd = (4,4),
@@ -5861,7 +6164,11 @@ CreatureInfo( name = 'Pegasus',
     m_resist = 0.0,
     align = 'CG',
     size = 'L',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Pegasi are found in remote places, for they are typically very shy and wild. These intelligent winged <a href="/creatures/horse">horses</a> make the swiftest of steeds, and they are often sought for that reason. Pegasi will serve only good characters, but if they do so, they always serve unto death.\n\n'
+        'A pegasus fights with its two forehooves and its powerful teeth. A male specimen can carry weight equal to a medium warhorse, a female equal to a light warhorse.\n\n'
+        'If encountered in their lair there will be 1 nest for every pair of pegasi. There is a 20% chance per nest that there will be 1-2 eggs (30%) or young animals (70%) of 20% to 50% maturity. The eggs are worth 3,000 gold pieces, the young 5,000, on the open market.'
+    )
 ),
 CreatureInfo( name = 'Peryton',
     hd = (4,4),
@@ -5880,7 +6187,14 @@ CreatureInfo( name = 'Peryton',
     m_resist = 0.0,
     align = 'CE',
     size = 'M',
-    source = SourceBook.MONSTER_MANUAL
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Perytons dwell in rocky hills or mountainous regions. They are omnivorous creatures of the weirdest appearance, likely the result of the same type of experimentation as brought about the <a href="/creatures/owlbear">owlbear</a>.\n\n'
+        'The creature attacks with its sharp horns, having a +2 on "to hit" dice. Its claws are too weak to use. Each peryton attacks but a single creature, and when it is dead the peryton tears out the victim\'s heart with its teeth. The organ is necessary to the peryton to reproduce, and the creature immediately flies away in order to do so. Human hearts are the type most sought by perytons.\n\n'
+        'Normal weapons do no harm these creatures.\n\n'
+        'Perytons lair in caves high upon cliffs or in mountain peaks. They will sometimes take humans and similar creatures alive in order to hold them prisoner until needed as food and for reproduction needs.\n\n'
+        'Perytons speak their own language.\n\n'
+        '<i>Description</i>: The upper body and head of the peryton is blue-black, the creature\'s horns being jet black. The wing and back feathers are dark green, and the chest of the male peryton is light blue to medium blue, the females being drab.'
+    )
 ),
 CreatureInfo( name = 'Piercer',
     hd = (1,4),
@@ -5896,7 +6210,11 @@ CreatureInfo( name = 'Piercer',
     size = 'M',
     sub_creatures = ['Massive Piercer','Large Piercer',
         'Average Piercer', 'Small Piercer'],
-    source = SourceBook.MONSTER_MANUAL
+    is_abstract =  True,
+    source = SourceBook.MONSTER_MANUAL,
+    description = ('Piercers inhabit caves, caverns, and similar subterranean places. With their stoney outer casing these monsters are indistinguishable from stalactites found on cave roofs. They are attracted by noise and heat, and when a living creature passes beneath their position above they will drop upon it in order to kill and devour it. Larger varieties will be found with smaller ones.\n\n'
+        'The size of a piercer is equal to its hit dice, and there is an equal probability of a piercer being 1, 2, 3, or 4 dice in size. The largest piercer is about 6\' long, 1\' base diameter, and weighs 500 pounds.'
+    )
 ),
 CreatureInfo( name = 'Massive Piercer',
     hd = (4,4),
@@ -19114,7 +19432,7 @@ CreatureInfo( name = 'Solar',
     fly = 40,
     flight_class = 'A',
     swim = 18,
-    ac = 9,
+    ac = -9,
     attacks = [(4,1,12),(4,1,12),(4,1,12),(4,1,12)],
     m_resist = 0.85,
     align = 'NG',

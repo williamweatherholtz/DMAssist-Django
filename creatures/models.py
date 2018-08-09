@@ -41,6 +41,7 @@ class CreatureInfo(models.Model):
     parent_creature = models.CharField(max_length=100)
     #json list of creature names
     sub_creatures = models.CharField(max_length=500)
+    is_abstract = models.BooleanField(default=False)
     
     min_appearing = models.PositiveSmallIntegerField()
     max_appearing = models.PositiveSmallIntegerField()
@@ -186,7 +187,11 @@ class CreatureInfo(models.Model):
 
 
     def stats_html(self):
-        table_creatures = [self]
+        if not self.is_abstract:
+            table_creatures = [self]
+        else:
+            table_creatures = []
+            
         if self.sub_creature_list():
             for c_name in self.sub_creature_list():
                 creature = CreatureInfo.objects.get(name = c_name)

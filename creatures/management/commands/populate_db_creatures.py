@@ -66,6 +66,7 @@ class Command(BaseCommand):
                 size_class = creature.size_class,
                 
                 source = creature.source.value,
+                is_abstract = creature.is_abstract,
                 parent_creature = _parent_creature,
                 sub_creatures = _sub_creatures,
                 alt_names = _alt_names,

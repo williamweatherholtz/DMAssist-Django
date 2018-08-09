@@ -5,6 +5,10 @@
  - {{creature.name}} Detail
 {% endblock %}
 
+{% block head_extras %}
+    <link rel="stylesheet" href="{% static 'css/compact_table.css' %}">
+{% endblock %}
+
 {% block content %}
     <p> <b>{{creature.name}}</b>
     {% if creature.alt_names %}
