@@ -2278,7 +2278,7 @@ druid_spells = [
         sourcebook=V,
         desc=("A spell which is solely for employment against those persons or creatures who use magic spells, <i>feeblemind</i> causes the victim's brain to become that of a moronic child. The victim remains in this state until a <i>heal</i>, <i>restoration</i> or <i>wish</i> spell is used to do away with the effects. The spell is of such a nature that the probability of it affecting the target creature is generally enhanced, i.e. saving throws are lowered.\n\n"
             "<table>"
-            "<tr><th>Type of Spells Used by Target Creature</th><th>Saving Throw Adjustment</th></tr"
+            "<tr><th>Type of Spells Used by Target Creature</th><th>Saving Throw Adjustment</th></tr>"
             "<tr><td>Cleric</td><td>+1</td></tr>"
             "<tr><td>Druid</td><td>-1</td></tr>"
             "<tr><td>Magic-user (human)</td><td>-4</td></tr>"

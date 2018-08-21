@@ -12415,7 +12415,13 @@ CreatureInfo( name = 'Necrophidius',
     align = 'NN',
     size = 'L',
     source = SourceBook.FIEND_FOLIO,
-    aliases = ['Death Worm']
+    aliases = ['Death Worm'],
+    description = ('This creature appears to be the skeleton of a giant snake with a fanged human skull as a head. It is totally silent, immune to <a href="/spells/sleep-magic-user-lvl-1"><i>sleep</i></a>, <a href="/spells/charm-monster-magic-user-lvl-4"><i>charm</i></a> and mind-affecting spells, immune to poison and will never need to check morale. Its bite (1-8 hit points of damage) causes paralyzation unless the victim makes his saving throw (against magic - this is not a venom). The paralyzation lasts 1-4 turns.\n\n'
+        'The necrophidius achieves surprise 50% of the time (1-3 on d6) and if it is not itself surprised it will execute the <i>Dance of Death</i> - a hypnotic, semi-magical swaying which rivets the attention of any victim observing the worm who fails to make his saving throw against magic. Failure means inability to act; treat as <a href="/spells/hypnotism-illusionist-lvl-1"><i>hypnotism</i></a>. This allows the worm to advance and attack without opposition.\n\n'
+        'A necrophidius is created for one specific purpose and is therefore generally met in the role of assassin or guard - never as a wandering monster.\n\n'
+        'There are three ways of creating a necrophidius. The first is by means of a special magical <i>tome</i>, similar to a <i>Manual of Golems</i>. The second method is for a high-level magic-user to employ a <a href="/spells/limited-wish-magic-user-lvl-7"><i>limited wish</i></a>, a <a href="/spells/geas-magic-user-lvl-6"><i>geas</i></a> and a <a href="/spells/charm-person-magic-user-lvl-1"><i>charm person</i></a>. The third method is for a high-level cleric to employ <a href="/spells/quest-cleric-lvl-5"><i>quest</i></a>, <a href="/spells/neutralize-poison-cleric-lvl-4"><i>neutralize poison</i></a>, <a href="/spells/prayer-cleric-lvl-3"><i>prayer</i></a>, <a href="/spells/silence-15-radius-cleric-lvl-2"><i>silence</i></a> and <a href="/spells/snake-charm-cleric-lvl-2"><i>snake charm</i></a>. The material include the complete articulated skeleton of a giant snake (<a href="/creatures/giant-poisonous-snake">poisonous</a> or <a href="/creatures/giant-constrictor-snake">constrictor</a>) and the skull of a cold-blooded murderer killed within the previous 24 hours. The cost is 500 gold pieces per hit point of the creature and it requires 10 days construction time.\n\n'
+        'Despite a number of characteristics to the contrary, the necrophidius is not a member of the undead class and cannot, for example, be turned by a cleric.'
+    )
 ),
 CreatureInfo( name = 'Needleman',
     hd = (3,3),
@@ -12433,7 +12439,12 @@ CreatureInfo( name = 'Needleman',
     m_resist = 0.0,
     align = 'NN',
     size = 'S',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('This wood-dwelling, intelligent form of plant life looks like a <a href="/creatures/zombie">zombie</a> but in fact is neither animal nor of the undead class. Embedded in its "flesh" all over its body are masses of small sharp needles, like pine needles. Each round it may "fire" 1-6 of these needles, each of which inflicts 1-2 hit points of damage on a victim, up to a range of 20\' with the accuracy of a short-range arrow. For practical purposes, its supply of needles is infinite.\n\n'
+        'The creature is particularly vulnerable to magic. Attacks on it by magical means will inflict triple normal damage on it, though it has a saving throw as normal. Other spells of a non-offensive nature (such as <a href="/spells/charm-plants-magic-user-lvl-7"><i>charm plants</i></a>) will be triply effective against it, as appropriate. Of course, the fact that it is a plant makes it immune to certain spells.\n\n'
+        'Needlemen appear to hate <a href="/creatures/elf">elves</a> and will attack them on sight.\n\n'
+        'When amidst conifers or heavy undergrowth, needlemen are nearly (75%) undetectable and will achieve surprise 75% of the time. It is very rare to encounter the creature outside this sort of natural habitat.'
+    )
 ),
 CreatureInfo( name = 'Nilbog',
     hd = (1,1),
@@ -12451,7 +12462,13 @@ CreatureInfo( name = 'Nilbog',
     m_resist = 0.0,
     align = 'LE',
     size = 'S',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('This creature looks exactly like a normal <a href="/creatures/goblin">goblin</a> and has all characteristics of that race with one important exception - it suffers from a curious spatio-temporal reversal. It remains a mystery why only goblins are susceptible to this strange disorder. Nilbogism (the name given to the disorder) appears to occur when overly heavy use of magic strains the fabric of the space-time continuum, and leads to some very strange localized events. The coincidence of conditions which lead to nilbogism is extremely rare and is only imperfectly understood. Although the creature itself does not in any sense transmit the disorder to those around it, some of the effects are transmitted.\n\n'
+        'Many and varied accounts have been received about the nature of the space-time disturbances which take place in the presence of nilbogs. Only one factor appears to be common - the adventurers will have no control over their own actions and will generally pursue courses of action contrary to their normal intent; for example they may feel an overwhelming compulsion to load all their treasure into an empty treasure chest in the nilbog lair and leave empty-handed. There are no saving throws against these effects, nor is there any known defense (though a powerful spell such as a <a href="/spells/wish-magic-user-lvl-9"><i>wish</i></a>, will, if used properly, have a good chance of rendering local immunity against the effects).\n\n'
+        'Another curious feature of nilbog power is that the creature gains hit points when it is struck, the addition being equal to the intended damage rolled. It can only lose hit points by such means as casting <i>cure wounds</i> spells on it, forcibly feeding it <i>healing</i> potions and so on.\n\n'
+        'For obvious reasons, encounters with these strange creatures are dreaded and, as a result, normal goblins tend to be treated with extreme caution lest they turn out to be nilbogs. There appears to be no way of distinguishing between the two apart from use of such spells as <a href="/spells/commune-cleric-lvl-5"><i>commune</i></a> or by trial and error.\n\n'
+        'So far as is known, no other creature has been afflicted with nilbogism.'
+    )
 ),
 CreatureInfo( name = 'Nonafel',
     hd = (9,9),
@@ -12470,7 +12487,16 @@ CreatureInfo( name = 'Nonafel',
     size = 'L',
     source = SourceBook.FIEND_FOLIO,
     aliases = ['Cat O\' Nine Tails'],
-    sub_creatures = ['Nonafel Child']
+    sub_creatures = ['Nonafel Child'],
+    description = ('On first sight this creature appears to be a large black panther with yellow, bloodshot eyes. It is usually found in caves in warm zones of the underworld. It is carnivorous and its skin has been known to fetch as much as 1,500 gold pieces.\n\n'
+        'The creature displays a most unusual dissociative power which enables it to divide into nine individual black panthers. This transformation takes place in one segment of time and appears to be instinctive, requiring no concentration on the part of the "parent" beast. The creature will always attack a party of adventurers or any other monster it encounters, usually (90%) transforming itself as soon as its enemies are sighted and then attempting to surround the party, all nine "children" acting in co-operative fashion as though there exists some telepathic bonds between them which gives them the effective power of a corporate brain. There is only a small chance (10%) that the creature will remain in parent form before attacking, and even if this is the case the dissociation will take place after 1-2 melee rounds of combat.\n\n'
+        'If one or more of the "children" are damaged during melee there is a 25% chance (check each melee round, but the chance is not cumulative) that the children will be re-associated to form the parent. This takes place by means of a <a href="/spells/blink-magic-user-lvl-3"><i>blink</i></a> operation and all the children can be re-associated so long as they are within a 50\' radius (the re-association will not take place if all children are not within a 50\' radius); the children can still engage in combat during the round of their re-association.\n\n'
+        'When re-associated, the parent can <i>regenerate</i> 9 hit points each round, one for each of the offspring (if one or more of the offspring were unharmed before re-association, the hit points due to them from the <i>regeneration</i> are lost and cannot be transferred to one of their damaged brethren). Once one round of <i>regeneration</i> has taken place, the parent will again dissociate into nine (or perhaps fewer, if one has been killed) offspring; again the parent can partake in combat during the melee round of dissociation. If an offspring is killed, the body will <i>blink</i> to the parent-body when re-association takes place, but the <i>regeneration</i> has no effect on that particular individual beast, and when dissociation next takes place, there will be one fewer offspring.\n\n'
+        'After the second dissociation, the whole process begins again, with a 25% chance each round that the parent will re-form if one or more of the children have been damaged.\n\n'
+        'The parent beast has 9 hit dice, each child 1 die. When the creature dissociates, the parent\'s hits will be divided as equally as possible between the children (so a parent of 49 hits will divide into five children with 5 hits each and four with 6 hits each).\n\n'
+        'The parent attacks as a 9HD monster using its flail-like tail to hit for 2-20 hit points of damage. The tail is swung over the head in a manner similar to the tail attack of a <a href="/creatures/wyvern">wyvern</a>.\n\n'
+        'Each child fights as a 2HD monster, using its tail in a similar manner to inflict 1-8 hit points of damage.'
+    )
 ),
 CreatureInfo( name = 'Nonafel Child',
     hd = (1,1),
@@ -12503,7 +12529,11 @@ CreatureInfo( name = 'Norker',
     m_resist = 0.0,
     align = 'CE',
     size = 'S',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('Far-distant relative of <a href="/creatures/hobgoblin">hobgoblins</a>, norkers are similar in appearance to their hobgoblin cousins but have developed 3" fangs which they use in melee to inflict 1-3 hit points of damage. In the same round they can also attack the same opponent with a club for 1-6 points of damage, but if they are disarmed they have no effective claw attack.\n\n'
+        'The norker also has a very tough skin - a form of exoskeleton - which gives it armor class 3.\n\n'
+        'In all other respects they are similar to <a href="/creatures/hobgoblin">hobgoblins</a>.'
+    )
 ),
 CreatureInfo( name = 'Nycadaemon',
     hd = (12,12),
@@ -12521,7 +12551,17 @@ CreatureInfo( name = 'Nycadaemon',
     m_resist = 0.6,
     align = 'NE',
     size = 'L',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('The race of nycadaemons are among the most powerful of the creatures native to the <i>Middle Lower Planes</i>. Like their cousins the <a href="/creatures/mezzodaemon">mezzodaemons</a>, nycadaemons are common the planes of <i>Tarterus, Hades</i> and <i>Gehenna</i>. Unlike their related creatures, they are also able to enter the <i>666 Layers of the Abyss</i> and the <i>9 Hells</i> as they will. Nycadaemons are avoided by all lesser creatures - <a href="/creatures/night-hag">night hags</a>, mezzodaemons, lesser and greater devils, and most demons for the race is totally wicked and domineering, caring not who or what they enslave or exploit, but always acting in an intelligent and carefully calculated manner aimed at maximizing personal power and safety. Thus, these creatures will co-operate with other evil being and races whenever mutual actions are likely to prove beneficial to themselves.\n\n'
+        'Nycadaemons are very strong (comparable in strength to <a href="/creatures/stone-giant">stone giants</a>) and gain +8 on damage, so blows from their huge horny fists inflict terrible punishment (9-16 hit points of damage each). However, nycadaemons will employ suitably large magic weapons in conjunction with a shield (c.f. <a href="/creatures/mezzodaemon>mezzodaemon</a>) whenever such weapons are available. When using a weapon, these creatures have a +4 "to hit" bonus due to their strength.\n\n'
+        'As nycadaemons are clever and capable, they can use all sorts of magic items appropriate to their size and nature. These creatures have a graduated magic resistance which prevents low level magic from functioning except rarely, and even higher level spell devices are likely to malfunction with distressing regularity, so nycadaemons typically shun all but the most powerful dweomered objects, - some few miscellaneous objects, artifacts, relics and the like - and enchanted weapons which have no magical projections to be affected by their multi-planed structure.\n\n'
+        'The following powers can be used by nycadaemons: <a href="/spells/command-cleric-lvl-1"><i>command</i></a> three times per day, <a href="/spells/dispel-magic-cleric-lvl-3"><i>dispel magic</i></a> twice per day, <a href="/spells/dimension-door-magic-user-lvl-4"><i>dimension door</i></a> three times per day, <i>gaseous form</i> once per day, <a href="/spells/mirror-image-magic-user-lvl-2"><i>mirror image</i></a> (4 images) twice per day, <a href="/spells/reverse-gravity-magic-user-lvl-7"><i>reverse gravity</i></a> twice per day, <a href="/spells/wind-walk-cleric-lvl-7"><i>wind walk</i></a> three times per day and <a href="/spells/word-of-recall-cleric-lvl-6"><i>word of recall</i></a> once per day. They may also employ any one of the following powers once per round: <a href="/spells/comprehend-languages-magic-user-lvl-1"><i>comprehend languages</i></a>, <a href="/spells/detect-invisibility-magic-user-lvl-2"><i>detect invisibility</i></a>, <a href="/spells/detect-magic-magic-user-lvl-1/"><i>detect magic</i></a>, <a href="/spells/enlarge-magic-user-lvl-1"><i>enlarge</i></a> (and reverse), <a href="/spells/remove-fear-cleric-lvl-1"><i>fear</i></a> (by touch), <a href="/spells/invisibility-10-radius-magic-user-lvl-3"><i>invisibility</i></a> (up to 10\' radius), <a href="/spells/polymorph-self-magic-user-lvl-4"><i>polymorph self</i></a>, <a href="/spells/project-image-magic-user-lvl-6"><i>project image</i></a>, <a href="/spells/read-magic-magic-user-lvl-1"><i>read magic</i></a>, <i>telepathy</i>.\n\n'
+        'Only weapons of +2 or greater enchantment will cause damage to nycadaemons. Iron weapons and silver weapons do not harm these creatures, unless the weapons are enchanted as noted. Paralysis and poisons (including all gases) have no effect on them, and acid, cold and fire cause them only half normal damage. They <i>regenerate</i> 3 hit points of damage per <i>turn</i> (i.e. 0.3 hit points per melee round).\n\n'
+        'Nycadaemons are 100% resistant to magic of the first level, and this resistance decreases in 5% increments (c.f. <a href="/creatures/mezzodaemon">) to 60% at ninth level. This is based upon 11th level of ability; it decreases in 5% steps if the spell-caster is of 12th or greater level and increases by the same amount if the spell-caster is 10th level or lower. <i>Beguiling</i>, <a href="/spells/charm-monster-magic-user-lvl-4"><i>charm</i></a> and <a href="/spells/suggestion-magic-user-lvl-3"><i>suggestion</i></a> never affect the nycadaemon.\n\n'
+        '<i>Examples</i>: If a nycadaemon faces a 5th level spell from a 13th level magic-user, its resistance is 80%-10% or 70%. If a 10th level magic-user casts a 4th level spell at a nycadaemon, its resistance is 85%+5% = 90%.\n\n'
+        'The entire spectrum of radiation can be seen by nycadaemons (i.e. infrared, ultra-violet, X-rays, gamma rays etc.) The telepathic ability of these creatures allows them to communicate on the telepathic level with creatures of intelligence <i>low</i> or better.\n\n'
+        'Each nycadaemon has a personal name which they guard most carefully to avoid entrapment or servitude to some demon lord, arch devil or the like.'
+    )
 ),
 CreatureInfo( name = 'Ogrillon',
     hd = (2,2),
@@ -12539,7 +12579,11 @@ CreatureInfo( name = 'Ogrillon',
     m_resist = 0.0,
     align = 'CE',
     size = 'M',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('The ogrillon is a smaller species of <a href="/creatures/ogre">ogre</a> being an <a href="/creatures/orc">orc</a>-ogre crossbreed and displays the same general behavior as its larger cousin with one exception - it never wields a weapon and fights with its horny fists. Because of the creature\'s strength of 18(01) each fist deliver 2-7 hit points of damage if it hits.\n\n'
+        'In appearance these creatures usually resemble orcs and will often associate with them for short periods. It is 90% unlikely that an ogrillon can be distinguished from an orc, even when the two types of creature are in the same group. However, some (10%) are ogrish in appearance though smaller. These also associate with orcs though they are easily distinguishable.\n\n'
+        'Ogrillons speak the orchish tongue and their alignment language only.'
+    )
 ),
 CreatureInfo( name = 'Osquip',
     hd = (3,3),
@@ -12558,7 +12602,12 @@ CreatureInfo( name = 'Osquip',
     m_resist = 0.0,
     align = 'NN',
     size = 'S',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('The osquip is a multi-legged hairless rodent-like creature the size of a small dog. Most specimens have 6 legs but some (25%) have eight and there are a few rare creatures (5%) with ten legs. The creature\'s hide is a very light yellow - almost colorless - and resembles very pliable leather. The eyes are small and set close together, each being heavily protected by surrounding ridges of hide-covered bone. The jaws are unusually large, the entire bony structure projecting several inches forward of the flesh; in each jaw there are large spade like teeth.\n\n'
+        'The creature will have its lair in the midst of a complex of tunnels beneath the basements of buildings in a town, or in a dungeon. The tunnel system will be quite extensive and the entrances to it, which are too small to permit the comfortable passage of a human or other man-sized creature, will be carefully hidden (the chance of finding them is the same as the chance of finding a secret door).\n\n'
+        'The creature feeds on <a href="/creatures/rat">rats</a>, mice and other small vermin, though it is a ferocious beast and will always attack without fear, sometimes emerging to surprise a victim from one of the hidden entrances to its tunnel-system. It attacks with its powerful jaws and these can inflict a nasty bite for 2-12 hit points of damage. It has high dexterity (its natural armor class is 9).\n\n'
+        'By using its powerful jaws, it can burrow through rock at ½" movement rate. Its behavior regarding other tunnel-dwelling creatures, such as <a href="/creatures/jermlaine">jermlaine</a>, <a href="/creatures/mite">mites</a> and <a href="/creatures/snyad">snyads</a>, is unpredictable. Sometimes it will be encountered acting in co-operation with one or more of these types of creature; at other times the osquip will invade jermlaine, mite or snyad tunnel-systems on predatory missions.'
+    )
 ),
 CreatureInfo( name = 'Penanggalan',
     hd = (1,1),
@@ -12575,7 +12624,27 @@ CreatureInfo( name = 'Penanggalan',
     align = 'LE',
     size = 'M',
     source = SourceBook.FIEND_FOLIO,
-    sub_creatures = ['Penanggalan (Undead Form)']
+    sub_creatures = ['Penanggalan (Undead Form)'],
+    description = ('A female <a href="/creatures/vampire">vampire</a>-type undead of fearsome power and nauseating appearance, this vile creature appears during the day as an attractive human female who may be of any character class. This is the female human which the penanggalan was before death. She will fight with the same combat abilities as she had when alive, will have spell-use if formerly a spell-caster, thieving abilities if formerly a thief and so on. She will use the weapon (or at least the weapon-type) favored by her in life. Her body will take the same amount of damage as it could before death (when fully rested) and will fight as though of that experience level. The head, however, will take 4HD of damage and a separate account of hits needs to be kept in case the head itself is struck in this form.\n\n'
+        '<i>Exception</i>: If the penanggalan was a cleric before death, of whatever alignment, she will be unable to use "good" spells in her new form and must restrict her spells to those of baneful effect.\n\n'
+        'A <a href="/spells/know-alignment-magic-user-lvl-2"><i>know alignment</i></a> spell cast on the creature in this form will reveal the alignment the penanggalan pursued while alive; as undead, however, the creature will act in accordance with the lawful evil alignment.\n\n'
+        'In this form the penanggalan is impervious to <i>holy/unholy symbols</i> and cannot be turned or dispelled. It is also immune (in either form) to all spells which attempt to control the mind or body, like other undead.\n\n'
+        'In such a guise, the penanggalan will seek to befriend any unwary party of travellers and attempt to join with them. It will prove extremely useful - over its years of undeath it will have acquired an extensive knowledge of the dungeon which it now roams; it will be able to guide parties to treasure and to warn them of possible dangers. Naturally, it will find some plausible reason for this knowledge and may sometimes make "deliberate mistakes" or feign ignorance of areas of which it has knowledge, in order not to arouse the suspicion of the party (whose members would naturally become suspicious if their new companion displayed near-omniscience). Having joined a party of adventurers, the penanggalan will remain with that party, even to accompanying them out of the dungeon. It will never, however, encamp for the night with the party in the dungeon, nor will it accompany them to spend the night in the supposed safety of the upper world, making some excuse for being elsewhere.\n\n'
+        'At night, the penanggalan assumes its real undead form. Its head and internal organs detach themselves from the body, rising vertically from the abdomen, and fly in search of human prey, to feast on their living blood. For this reason, it will always return to one of its secret lairs hidden in various parts of the dungeon). It is particularly fond of the blood of young children or of pregnant females, but lacking such a victim it will select the party member who appears to be most susceiptible to hypnosis, preferring a female to a male. It will always attack humans and will ignore even near-humans.\n\n'
+        'Any unfortunate witness of the scene when the penanggalan head and gut detach from the body must make his saving throw against magic or die immediately. If he makes the saving throw, he is treated as if the <a href="/spells/feeblemind-druid-lvl-6"><i>feeblemind</i></a> spell had been cast on him.\n\n'
+        'The head and gut will "fly" in search of a victim and, when one is discovered, the head will attempt to hypnotize the victim who must save against magic at -3 or fall completely under the control of the creature for as long as it takes to feed. It will make to small lacerations in the victim\'s throat and feast on the blood throughout the night. For each night\'s feeding, the victim will lose 1-6 hit points and 1 point each of strength and constitution. The penanggalan will select the same victim each night, if possible, and will continue to visit and feed night after night until the victim is dead.\n\n'
+        'If the victim survives the night, he will remember none of the events except in snatches, as if from a faintly-remembered dream. If for some reason he avoids the subsequent attentions of the penanggalan, he will continue to lose hit points at the rate of 1 hit points per night either until dead or until <a href="/spells/dispel-evil-cleric-lvl-5"><i>dispel evil</i></a> is cast on him. Note that hit points drained by the penanggalan cannot be restored by magical means such as <i>cure wounds</i> spells - in effect, the victim\'s maximum hits are being drained. Such spells will only take effect in respect of the lost points after <i>dispel evil</i> is cast on him. Note that hit points drained by the penanggalan cannot be restored by magical means such as a <i>cure wounds</i> spells - in effect, the victim\'s maximum hits are being drained. Such spells will only take effect in respect of the lost points after <i>dispel evil</i> has been cast, and even powerful spells such as <a href="/spells/restoration-cleric-lvl-7"><i>restoration</i></a> will have no effect. Similarly the victim\'s lost strength and constitution points cannot be recovered until after <i>dispel evil</i> has been cast. Once <i>dispel evil</i> has been cast, however, the hit points are restored at the rate of 1 point per day and the strength and constitution points at the rate of 1 point of each per week.\n\n'
+        'If the victim succumbs on the first occasion to the penanggalan, the creature must again hypnotize him the next night before feeding is possible. However the victim\'s saving throw is progressively more difficult; the throw is made at -4 on the second occasion, -5 on the third and so on. A break in the sequence of one or more nights will halt this progression; the saving throw will again be at -3 if a renewed attempt is made by a penanggalan after a break of one or more nights.\n\n'
+        'If an intended victim makes his save against the creature\'s attempt at hypnosis, the penanggalan will be able to exert no further influence over him and will flee from him in fear before searching for another prey. Furthermore, that person will be immune to further attempts by that penanggalan and will be able to recognize one - any one - for what it is, no matter in what guise it appears. He will still, however, be losing hit points at the rate of 1 point per night, as described above, if the creature has fed at least once on his blood.\n\n'
+        'Note that the victim is "asleep" throughout the visitations of the penanggalan. He will never actually see the creature, even if he makes his saving throw against hypnosis. The creature will never attack a victim who is awake. If any person happens to see the head and gut when detached from the body (for example if the intended victim awakens before the creature has had time to commence hypnosis) he must save against <i>fear</i> or flee in abject terror. When in this form, however, the creature can be turned or dispelled by a cleric; treat as a <a href="/creatures/wraith">wraith</a> on the cleric/undead matrix. If the head and gut are thus turned, they must return to the lair and not venture forth again that night; if they are dispelled (a D result on the matrix) they are destroyed and the body will decay (see below). The head and gut will recoil before a strongly-presented <i>holy symbol</i> though it will not be harmed.\n\n'
+        'Should a penanggalan kill a male victim, he remains lifeless, and if an attempt is made to <a href="/spells/raise-dead-cleric-lvl-5"><i>raise</i></a> him, his chances of surviving the <i>system shock</i> will be half normal. If the attempt fails, no further attempts can possibly succeed. If it kills a female victim, she will rise from the grave after three days as a penanggalan (not under control of the original creature). If an attempt is made to <i>raise</i> her during that three-day period, her chances of surviving the <i>system shock</i> are half normal, and failure of that attempt means that no further attempt can possibly succeed - the process by which she becomes a penanggalan is then inexorable.\n\n'
+        'If an attempt to <a href="/spells/raise-dead-cleric-lvl-5"><i>raise</i></a> any victim succeeds, however, the victim will return to normal (all hit points restored, strength and constitution back to normal) after two months of rest and recuperation; furthermore that victim will be immune to further attacks by a penanggalan and will recognize one for what it is.\n\n'
+        'After the penanggalan head and gut have left the body in the lair, the internal organs swell up, whether feeding takes place or not, and cannot return to the abdomen until they have been soaked in vinegar for an hour, during which time they return to normal size. For this reason, the creature will always keep a large vessel filled with vinegar concealed in each of its lairs, and a penanggalan lair may often be detected by the distinctive odor of vinegar which permeates it.\n\n'
+        'If a ray of sunlight strikes the creature\'s head and gut when they are detached from the body, the head will be paralyzed and will fall helpless to the ground until nightfall. Thus, the creature will always attempt to reunite head and body before cock-crow. In any event, if the head and body are not reunited within seven hours after initial separation, both will start to decay and the evil life-force which animates the creature will be forced to return to <i>Hell</i>. Thus, to destroy the body or the head is a sure way of destroying the creature itself.\n\n'
+        'When separated from the body, the head takes 4HD of damage.\n\n'
+        'In either form, the creature takes normal damage from all weapons. If it is weaponless and in human form, it can bite for 1-6 hit points of damage, but it will try to avoid using this mode of attack for fear of revealing its true nature.\n\n'
+        'When detached from the body, the internal organs constantly drip a highly volatile and foul mixture of blood and digestive juices which cause 1-4 hit points of damage on bare flesh (which breaks out in sores and boils in a painful eruption). This horrid liquid evaporates after one round in contact with air.'
+    )
 ),
 CreatureInfo( name = 'Penanggalan (Undead Form)',
     hd = (4,4),
@@ -12612,7 +12681,11 @@ CreatureInfo( name = 'Pernicon',
     m_resist = 0.0,
     align = 'NN',
     size = 'S',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('A brightly-colored insect rather like a grasshopper about 2" long - red, yellow, orchre and light blue - the pernicon inhabits the outer regions of deserts and is much prized by the nomads of these regions because the antennae on its head are water-diviners, vibrating and giving off a low hum when within 120\' of a large quantity of water.\n\n'
+        'The pernicon is usually inoffensive but will attack in large numbers if disturbed, accidentally or otherwise. It leaps on its victim and grips exposed flesh with the pincers at the rear of its abdomen. If it hits, the pernicon will inflict 1-3 hit points of damage and will also drain water and other body fluids from the victim, causing the loss of 1 point of constitution. Each round thereafter, this process will continue automatically, without the need of a "to hit" roll.\n\n'
+        'Even when the pernicon is killed its pincers continue to grip fast, and removing it from the victim\'s body will inflict a further 1-4 hit points of damage. If a victim\'s constitution falls below 3 he collapses unconscious. If it drops below zero he dies. If a victim is not killed he will recover lost constitution points at the same rate as lost hit points. However, if he is killed, a <a href="/spells/raise-dead-cleric-lvl-5"><i>raise dead</i></a> will only restore half of his original constitution, a <a href="/spells/resurrection-cleric-lvl-7"><i>raise dead fully</i></a> only 75% of it.'
+    )
 ),
 CreatureInfo( name = 'Phantom Stalker',
     hd = (6,6),
@@ -12631,7 +12704,12 @@ CreatureInfo( name = 'Phantom Stalker',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('Phantom stalkers are creatures from the <i>Elemental Plane of Fire</i>, and are usually found on the <i>Prime Material Plane</i> only in the capacity of servitors to high-level magic-users. They are conjured by the use of a spell similar to the one for summoning an <a href="/creatures/invisible-stalker">invisible stalker</i>. Phantom stalkers serve as bodyguards, fighting to protect their masters. A wizard must exercise great care in instructing one, for it will follow orders to the letter, perverting the intent if possible, anxious for release back to its native plane.\n\n'
+        'There is one explicit instruction inherent in their conjuration. If the summoner is killed, his phantom stalker(s) will instantly vanish, reappearing 1-4 hours later, intent on vengeance, having unerringly tracked the summoner\'s slayer from the <i>Ethereal Plane</i>. Phantom stalkers only gain this ethereal tracking ability upon the expiration of their masters, and it disappears as soon as the summoner\'s slayer has been tracked.\n\n'
+        'Phantom stalkers have the ability to <a href="/spells/polymorph-self-magic-user-lvl-4"><i>polymorph</i></a> themselves and have been known to appear in various forms, but the most common is that of a reddish, 8\' tall humanoid with huge fiery eyes. They can <i>fly</i>, and this ability is apparently unimpaired by whatever shape they assume (though their maneuverability class will vary according to the shape).\n\n'
+        'Phantom stalkers normally attack with their sharp claws, each of which can inflict 1-4 hit points of damage. They are invulnerable to damage from fire, and magical <i>fire</i> attacks actually heal them 1 hit point for each attack die. However, they save against <i>cold</i> at -2 and such attacks add 1 hit point of damage for each die. If a melee is going against a phantom stalker and its death is imminent, it can cast forth its life essence in one 6-dice <a href="/spells/fireball-magic-user-lvl-3"><i>fireball</i></a>, after which it dematerializes and dies. They will sometimes simply explode the <i>fireball</i> on themselves in order to harm as many foes as possible. This is only done as a last resort and is never done if it would harm the phantom stalker\'s summoner, unless the summoner is directly and immediately responsible for the phantom stalker\'s demise (for example having ordered it to engage in a hopelessly futile and suicidal battle).'
+    )
 ),
 CreatureInfo( name = 'Poltergeist',
     hd = (0,0),
@@ -12649,7 +12727,14 @@ CreatureInfo( name = 'Poltergeist',
     m_resist = 0.0,
     align = 'LE',
     size = 'M',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('Though a wandering poltergeist is infrequently encountered (in which case it can be turned or destroyed by a cleric as if it were a <a href="/creatures/skeleton">skeleton</a>) this undead creature usually remains in the room or corridor in which it was orginally "killed" (and such is the strong bond between the poltergeist and its surroundings that it is in this case treated as a <a href="/creatures/ghoul">ghoul</a> on the cleric/undead matrix).\n\n'
+        'The poltergeist is invisible (-4 to hit unless the attacker can <i>see invisible</i>) and non-corporeal; only silver and magical weapons can harm it.\n\n'
+        'The poltergeist attacks physically by throwing an object - any nearby object light enough to be thrown by a man will suffice - with a chance of hitting its target equal to that of a 5HD monster. If the victim is struck he takes no damage but must save against <i>fear</i> (spells) or flee the area and run in random directions for 2-24 melee rounds before recovering.\n\n'
+        'There is a 50% chance that the victim will drop whatever he is holding during his flight, but not necessarily at the beginning (roll to determine for how many rounds he must flee, roll again to determine whether he drops whatever he is holding, and if so roll a third time to determine in which of the melee rounds of flight he does so).\n\n'
+        'Once a person has made his saving throw, he is immune to further <i>fear</i> effects from the poltergeist while in that area.\n\n'
+        'Sprinkled holy water or a strongly-presented <i>holy symbol</i> drives back the poltergeist but does not harm it.'
+    )
 ),
 CreatureInfo( name = 'Protein Polymorph',
     hd = (6,8),
@@ -12666,8 +12751,15 @@ CreatureInfo( name = 'Protein Polymorph',
     align = 'CN',
     size = 'L',
     source = SourceBook.FIEND_FOLIO,
+    is_abstract = True,
     sub_creatures = ['Lesser Protein Polymorph',
-        'Average Protein Polymorph', 'Greater Protein Polymorph']
+        'Average Protein Polymorph', 'Greater Protein Polymorph'],
+    description = ('Protein polymorphs are intelligent cellular colonies with the ability to assume any form they choose. They may take the form of inanimate objects or animate creatures of 8 or fewer hit dice (depending on the size of the protein polymorph - 6, 7 or 8 hit dice). The form assumed may actually be that of several forms connected by a near-invisible (10% chance of detection) cord or film of protoplasm. The cells of the protein polymorph may specialize or de-specialize at will, taking on different textures and colors, changing completely in only one round.\n\n'
+        'These "creatures" are extremely versatile. They may imitate anything from a pile of treasure to a small-sized room, to a party of half a dozen humans or a dozen kobolds. They will, in general, assume any form likely to draw prey, for they feed on humans and animals with little regard for type and size. They may even mix inanimate objects within their structure to add authenticity - a room or a corridor may, for instance, be part-stone and part protein polymorph. Imitated creatures may wear real clothing and wield real weapons (often acquired from previous victims).\n\n'
+        'There are limits to the protein polymorph\'s degree of cellular control - it cannot accurately copy facial expressions, nor can it effectively duplicate the sound of speech. These limitations may lead to the exposure of the imposture as animate creatures. Similarly, if a protein polymorph disguises itself as an inanimate object, there is a base chance of detecting the imposture from a distance of 10\' away, but upon touch the animate nature of the cells is instantly revealed.\n\n'
+        'The normal attack of a protein polymorph is to bludgeon its prey and then enfold and crush it, inflicting 6-36 hit points of damage per round. When in the form of weapon-wielding creatures, multiple or single, it will attack as the creatures themselves would normally attack, doing damage by weapon-type as appropriate.\n\n'
+        'Protein polymorphs possess the normal strengths of imitated creatures but not those creatures\' special abilities.'
+    )
 ),
 CreatureInfo( name = 'Lesser Protein Polymorph',
     hd = (6,6),
@@ -12740,7 +12832,14 @@ CreatureInfo( name = 'Quaggoth',
     align = 'NN',
     size = 'L',
     source = SourceBook.FIEND_FOLIO,
-    sub_creatures = ['Quaggoth Leader']
+    sub_creatures = ['Quaggoth Leader'],
+    description = ('Little is known of these great white shaggy bipeds. Some say they once formed a warlike cannibal race - their aggressiveness is unquestionable. Any fleeing or threatening party invites certain attack, and even a party which remains motionless within the quaggoths\' field of view is 75% likely to be attacked by the creatures.\n\n'
+        'Quaggoths are usually (70%) unarmed, in which case they fight with two claws for 1-4 hit points of damage each. 30% of quaggoth groups encountered will be armed with either battle-axes or two-handed swords. A particular quaggoth group will always either be unarmed, except for the leader-type, or armed - there will never be a mixture of unarmed and armed creatures in the same group.\n\n'
+        'With every 12 quaggoths encountered there will be one leader-type with 15 hit points, 3HD and armor class 4. The leader-type will always be armed with a battle-axe or two-handed sword.\n\n'
+        'Quaggoths are totally immune to poison.\n\n'
+        'If a quaggoth is reduced to a number of hit points between zero and -5, it will continue to fight in a berserk fashion at +2 hit probability and +2 damage. When it reaches -6 hit points it dies.\n\n'
+        'Quaggoths have a particular hatred of surface-dwelling <a href="/creatures/elf">elves</a> and have been known to become slaves of the <a href="/creatures/drow">drow</a> in order to assist the latter in their warfare against elves. They speak a halting, primitive form of the common tongue and can only grasp very simple concepts.'
+    )
 ),
 CreatureInfo( name = 'Quaggoth Leader',
     hd = (0,0),
@@ -12775,7 +12874,11 @@ CreatureInfo( name = 'Quipper',
     m_resist = 0.0,
     align = 'NN',
     size = 'S',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('Quippers are small, vicious fish which usually swim in large shoals. They are dark green in color and inhabit fresh-water lakes and streams.\n\n'
+        'The quipper is a rare species of cold-water piranha. If anyone is swimming or wading near a shoal the quippers may (25%) not attack. However if they do attack and score a hit, drawing blood with their sharp teeth and inflicting 1-2 hit points of damage, the entire shoal will go berserk and will inflict double the normal number of attacks per round.\n\n'
+        'Up to 20 quippers can attack a human-sized victim simultaneously. When determining initial attack, roll first to determine whether or not the attack is made. Then roll percentage dice again, if there is to be an attack, to determine the percentage of the shoal which actually attempts to hit in the first round. Roll attacks for that number of quippers, and if at least one hits, all the shoal will attack in the next round (no more than 20 can actually attempt to hit). If all the quippers attacking in the first round fail to hit, it is only 40% likely that they will pursue their attack the next round.'
+    )
 ),
 CreatureInfo( name = 'Qullan',
     hd = (2,2),
@@ -12793,7 +12896,14 @@ CreatureInfo( name = 'Qullan',
     m_resist = 0.0,
     align = 'CE',
     size = 'L',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('Qullans are strong, large, seemingly insane humanoids which wear warpaint in a wild variety of clashing colors and sport their battle-scars proudly, often emphasizing them with cosmetic paint. They never wear armor, either wandering naked or clad in tiger-skins.\n\n'
+        'They attack with broadswords which they have honed to an incredible sharpness - a technique so far not emulated by man. These swords hit at +3 hit probability and have +3 damage bonus (so they inflict 5-11 damage). However, the swords blunt easily - there is a cumulative 20% chance per hit that the sword will be blunted and will revert to normal broadsword properties. They wield these broadswords two-handed (though this confers no advantage).\n\n'
+        'All members of the qullan race continually radiate <i>confusion</i> in a 5\' radius. Anyone in melee with them must make a saving throw or be confused, either standing still, attacking the nearest qullan without regard for personal safety or attacking the nearest friend - equal probability. (Roll d6 for effect; 1-2 means stand still; 3-4 means attack qullan; 5-6 means attack friend. Repeat this roll to determine action each round until the victim saves). A victim of <i>confusion</i> may attempt to save each melee round he is within the radius of effect, and the effect disappears if he moves outside that radius of effect.\n\n'
+        'Qullans have never been befriended by human or near-human races; without exception, every encounter has seen the qullans attacking, irrespective of the alignment or size of the party.\n\n'
+        'Qullans are so totally chaotic that any attempt to force one to do anything it would not normally do causes its inherent powers of <i>confusion</i> to "feed back", resulting in the instant death of the creature (this same reaction occurs whenever a qullan fails to save against any <a href="/spells/charm-person-magic-user-lvl-1"><i>charm</i></a> or <i>control</i> type of spell). Thus, no-one has ever been able to learn the methods they use to forge the sharp edges on their swords, nor has anyone been able to induce a qullan to restore the edge to one of their fine broadswords for a non-qullan.\n\n'
+        'A human or near-human may use a qullan sword in melee, since the swords are not in any way magical. However, the sword has the normal chance of blunting if it scores a hit, and a captured sword will thus only display its exceptional qualities for 5 hits at most.'
+    )
 ),
 CreatureInfo( name = 'Retriever',
     hd = (10,10),
@@ -12810,7 +12920,14 @@ CreatureInfo( name = 'Retriever',
     m_resist = 0.0,
     align = 'CE',
     size = 'L',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('Retrievers are constructed by <a href="/creatures/demogorgon">Demogorgon</a> in his laboratories in the <i>Abyss</i>; in doing so, Demogorgon deliberately constructs the creatures so as to strike maximum terror into their victims. They will rarely be found on the <i>Prime Material Plane</i> except when engaged on a specific mission to retrieve (usually dead or alive) one who has offended Demogorgon or one of the more powerful denizens of the <i>Abyss</i>.\n\n'
+        'Retrievers are giant spider-like creatures whose front four limbs end in huge cleavers. Though they are large - approximately the size of a <a href="/creatures/mammoth">mammoth</a> - they are very fast and nimble in the open, where they have room to maneuver. They each have six eyes, two for vision and four which project rays (up to 2 of the latter may function each round - determine which at random). These rays are, respectively, <i>fire, cold, lightning</i> and <i>transmutation</i>. Once used, a particular eye cannot be used again for 6 rounds, at which time it will have re-charged. These rays can only hit one target within a range of 60\'.\n\n'
+        'The rays of <i>fire</i>, <i>cold</i> and <i>lightning</i> each do damage equal to the current hit points of the retriever, a save (against dragon breath) indicating half damage. Magic items must also save against these attacks if their owner fails to save. The <i>transmutation</i> ray transmutes the victim into mud, stone, gold or lead (determine which of the four at random). A successful save against petrification indicates no effect. A <a href="/spells/stone-to-flesh-magic-user-lvl-6"><i>stone to flesh</i></a> spell will restore a petrified character to normal but only a <i>philosopher\'s stone</i> can restore a lead or gold figure. Characters turned to mud can only be revived by the use of <a href="/spells/transmute-rock-to-mud-druid-lvl-5"><i>mud to rock</i></a> followed by <i>stone to flesh</i>, both spells being cast within one turn of the transmutation.\n\n'
+        'Retrievers can attack with all four cleavers simultaneously on the same victim, each inflicting 3-18 hit points of damage. However they cannot use the eye rays when attacking with their cleavers. Generally speaking, they will use their eye rays first then, when the eyes are recharging, use the cleavers.\n\n'
+        'Demons sometimes mount howdahs on the back of a retriever and ride on the creature to the hunt.\n\n'
+        'Creatures of lower order will flee in panic on sight of a retriever, and even an adventurer of 5th experience level or lower (or a monster of less than 6 hit dice) will do so unless he saves against magic when a retriever comes within 30\' of him.'
+    )
 ),
 CreatureInfo( name = 'Revenant',
     hd = (8,8),
@@ -12826,7 +12943,21 @@ CreatureInfo( name = 'Revenant',
     m_resist = 0.0,
     align = 'NN',
     size = 'M',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('Under exceptional circumstances, those who have died a violent death may return from beyond the grave to wreak vengeance on their killer - as a revenant. There are few who can make this journey - to do so, a dead character must have wisdom or intelligence greater than 16 and a constitution of 18; all their characteristics must sum to 90 or more; and if both these criteria are met, the chance of the character becoming a revenant after death is 5%.\n\n'
+        'Although undead, the revenant is motivated by sheer self-will. Therefore, as it is not inherently evil, it cannot be turned or destroyed by clerics, nor are <i>holy/unholy symbols</i>, holy water or other religious paraphernalia able to affect it. Weapons - normal and magical alike - do not affect the creature, and the surest way to kill it is to reduce it to ashes. Like other undead it is immune to all spells attempting to control or influence its mind or body.\n\n'
+        'Even if a revenant is dismembered, its limbs will continue to function independently, as though guided by the same mind. Like a <a href="/creatures/troll">troll</a>, it has <i>regenerative</i> properties which cause the limbs to slither together, re-unite and re-create the revenant. It can also <i>regenerate</i> 3 hit points of damage per round even after "death", except by burning. It is immune to acid and to gas.\n\n'
+        'The process of decay of the corpse which now houses the revenant has only slightly been attenuated, after 3-6 months of rebirth, the corpse will decompose rapidly and the spirit of the revenant will be forced to return to the plane from whence it came.\n\n'
+        'The sole purpose of the revenant\'s existence is to wreak vengeance on its killer, together with any person or persons who aided his killer in the act. Though it will never attack any one else, except in self-defense, it will stop at nothing to achieve its purpose, being able to locate its intended prime victim wherever he may be. (Those who aided the killer will also be tracked if they happen still to be in the company of the killer, but if they are elsewhere they will be ignored by the revenant which will concentrate on the killer only.)\n\n'
+        'Its mode of attack is to lock its claw-like hands around its victim\'s throat and then strangle him, doing 2-16 hit points of damage each round and not releasing its grip until the victim or the revenant is dead. If necessary it will adopt other means to try to kill its victim, using extreme cunning and guile, but it will never, under any circumstances, resort to the use of weapons.\n\n'
+        'The revenant can also stare into his killer\'s eyes and that person must make his saving throw against magic or be paralyzed with terror for 2-8 rounds. This power works against none but the revenant\'s killer.\n\n'
+        'The revenant will retain all the abilities it had before death, though it will be a creature with 8 hit dice, whatever experience level was previously attained, and will always be of neutral alignment, no matter what alignment it followed in life. It can converse fluently in the neutral and common tongues, though stiffness of its vocal chords deters it from using speech except under extreme circumstances (e.g. to cast a spell, if it was formerly a spell-caster, on its killer). Note that a revenant may never cast a spell at a person other than its killer, whatever the spell-type.\n\n'
+        'If the associates of the killer are with him in a party, they will be dealt with after the killer has been destroyed, and in that respect they, too, will be regarded as "killers". They cannot escape, for if they attempt to do so while the revenant is occupied with the killer, the revenant will track all of them down subsequently.\n\n'
+        'Immunity to certain spells apart (see above) the revenant has the same resistance to magic as it had before death as a character.\n\n'
+        'The creature presents a pale, corpse-like appearance, with pallid skin drawn tightly over hollow cheekbones; its flesh is unusually cold and clammy. Its eyes - sunken in the face - are at times dull and heavy-lidded but, particularly when nearing its intended victim, they will blaze up with unnatural intensity. Animals will shy away from it, and about the revenant hangs an unmistakable aura of tragic anger, sadness and determination.\n\n'
+        'If the character who became the revenant died a particularly violent death, it may be unable to re-occupy its former body when it becomes a revenant. In such a case, the spirit will occupy any available, freshly-dead corpse. The revenant\'s new body may even be of opposite sex to the original character. However its killer and his active associates, if present, will always "see" the revenant in its former body, while others around him will see it as it is, if they had not been involved in the killing.\n\n'
+        'When the revenant has completed its mission by killing all its intended victims, it will immediately disintegrate and will never return again. Its spirit rests in peace.'
+    )
 ),
 CreatureInfo( name = 'Rothe',
     hd = (2,2),
@@ -12844,7 +12975,10 @@ CreatureInfo( name = 'Rothe',
     m_resist = 0.0,
     align = 'NN',
     size = 'M',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('Rothe are small ox-like creatures with a mass of long black hair. They attack with two horns (1-3 hit points of damage each) and a bite (1-8 hit points of damage).\n\n'
+        'They are shy creatures with an aversion to bright light; they will generally make their lairs underground, near a lake or river where there is a good supply of lichen and moss to eat.'
+    )
 ),
 CreatureInfo( name = 'Sandman',
     hd = (4,4),
@@ -12862,7 +12996,14 @@ CreatureInfo( name = 'Sandman',
     m_resist = 0.2,
     align = 'NE',
     size = 'M',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('The sandman\'s name describes it exactly - a man-like biped made entirely of sand, held together by some form of magical cohesion. Clearly, these are creatures from another plane, but what their purposes are on the <i>Prime Material Plane</i>, none can say.\n\n'
+        'Any character or monster coming within 20\' of the sandman must save against magic or go to <i>sleep</i>, irrespective of experience level. Those who manage to stay awake must attempt to save again each time they touch the sandman or are touched by it (a hit on the sandman with a weapon does not constitute a "touch").\n\n'
+        'Once the sandman has put a victim to sleep it will take no further action against him, leaving him to doze, though if the encounter took place in its lair it will eject the sleeper first.\n\n'
+        'Sandmen automatically attack humans and need never check morale.\n\n'
+        'Sleepers will remain asleep for 3 full turns whatever happens. Thereafter, there is a cumulative 10% chance per turn of a sleeper waking of his own accord, and a 95% chance per round of him waking if violently disturbed.\n\n'
+        'Sandmen have the natural ability of <a href="/spells/protection-from-normal-missiles-magic-user-lvl-3"><i>protection from normal missiles</i></a>.'
+    )
 ),
 CreatureInfo( name = 'Scarecrow',
     hd = (5,5),
@@ -12879,7 +13020,11 @@ CreatureInfo( name = 'Scarecrow',
     m_resist = 0.0,
     align = 'NE',
     size = 'M',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('Enchanted versions of regular scarecrows, these creatures are created from a variety of materials - wooden bodies and limbs, turnip heads for instance - and will vary in appearance. They will always, however, appear evil and of malign intent. To create a scarecrow, either a special <i>manual</i> must be used or a high-level evil cleric must employ <a href="/spells/animate-object-cleric-lvl-6"><i>animate object</i></a>, <a href="/spells/quest-cleric-lvl-5"><i>quest</i></a>, <a href="/spells/prayer-cleric-lvl-3"><i>prayer</i></a> and <a href="/spells/command-cleric-lvl-1"><i>command</i></a>. Construction of a scarecrow requires 3 weeks but the cost of materials is only 1 gold piece per hit point. The scarecrow will obey its creator\'s simple instructions, following orders literally so long as they require no interpretation on its part.\n\n'
+        'Meeting the glance of the scarecrow causes any intelligent creature to become <a href="/spells/charm-person-magic-user-lvl-1"><i>charmed</i></a> unless they make their saving throw against magic. The touch of the scarecrow, which requires a successful "to hit" roll and also does 1-6 hit points of damage, has the identical effect.\n\n'
+        'The effect of the <i>charm</i> is one of fascination, rather than the obeyance of instructions. The victim will stand and gape, rooted to the spot - as if under influence of a <a href="/spells/hold-person-cleric-lvl-2"><i>hold person</i></a> spell - allowing the monster to strike freely at him, again and again. If the scarecrow is killed, or leaves the area, all victims recover immediately from their <i>charm</i>.'
+    )
 ),
 CreatureInfo( name = 'Screaming Devilkin',
     hd = (3,3),
@@ -12899,7 +13044,12 @@ CreatureInfo( name = 'Screaming Devilkin',
     m_resist = 0.0,
     align = 'LE',
     size = 'S',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('This small creature resembles the mephits in physical appearance, though as far as is known it is solely a resident of the <i>Prime Material Plane</i> and has no allegiance to demons or (beyond its alignment) to devils. It is 3\' tall - rather smaller than the mephits - and has a muscular barbed tail about 2½\' long. Its leathery wings have 5\' span and provide its only means of movement, its legs and arms being disproportionately small and useless for movement or combat.\n\n'
+        'It always attacks and never willingly breaks off a fight, striking with its tail, with its cruel barbs, for 1-6 hit points of damage. It also has a painful howling scream which it sets up continuously in the presence of other beings. Nothing can stop this screaming other than the slaying of the beast or magically-induced <a href="/spells/silence-15-radius-cleric-lvl-2"><i>silence</i></a>. Conversation - even shouting - is inaudible through it, and those who do not have their ears well plugged must attempt a saving throw each melee round they are within 60\' of the creature. If the throw is not successful, the victim cannot attack or cast or control spells, though he may defend. Only one saving throw is required each round, no matter how many of these screaming devilkins are within range.\n\n'
+        'Note that, even if a person makes his save in one round, he must attempt it again in the next if he is to take any action.\n\n'
+        'If a magic-user or cleric or other spell-caster makes his save, he may cast a spell containing a verbal component in that round, even though the words may be inaudible because of the screaming.'
+    )
 ),
 CreatureInfo( name = 'Shadow Demon',
     hd = (7,7),
@@ -12915,7 +13065,15 @@ CreatureInfo( name = 'Shadow Demon',
     m_resist = 0.0,
     align = 'CE',
     size = 'M',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('This foul creature of dark evil from the <i>Lower Planes</i> is the essence of a demon imprisoned in the form of a <a href="/creatures/shadow">shadow</a>, which it exactly resembles. Like the shadow, the creature cannot be detected 90% of the time, since it appears as a vague shape and can easily be confused, in the guttering light conditions of a dungeon, with the shadows of dungeon features or of adventurers themselves. It is not, however, from the <i>Negative Material Plane</i> and so its attacks do not drain the strength of a victim, as do those of the shadow. Instead, it attacks normally with two claws (1-6 hit points of damage each) and a vicious bite for 1-8 hit points of damage.\n\n'
+        'The body structure of the creature is most peculiar and leads to the creature being more powerful in darkness and more vulnerable in conditions of bright light.\n\n'
+        'Thus, in daylight or its equivalent, the shadow demon is AC9 and sustains double damage from all attacks. In torchlight it is AC5 and suffers normal damage from attacks; in these conditions it attacks at +1 hit probability. In darkness or near-darkness it is AC1, attacks at +2 hit probability and suffers only half normal damage from attacks.\n\n'
+        'The creature is totally immune to fire, cold and lightning, of the ordinary or magical kinds. However if a <a href="/spells/light-cleric-lvl-1"><i>light</i></a> spell is cast upon it, the shadow demon is affected as if by a <a href="/spells/fireball-magic-user-lvl-3"><i>fireball</i></a> (so a <i>light</i> spell cast by a 5th level magic-user would do 5-30 hit points of damage to it, whatever the illumination conditions at the time).\n\n'
+        'Though in normal circumstances (only 50% chance even if the creature is seen) they will not be discerned, the creature has small wings - too small to give it flying abilities, but large enough to boost the creature\'s leap in its initial attack to a distance up to 30\'. Following this initial leap, it will attack with all four of its claws (for 1-6 hit points of damage each), though not with its bite. It will always leap to the attack if it has not been detected by its potential victims. The wings also give it the ability to half-fly, half-run, at 18" movement rate one melee round in every ten - it will usually use this maneuver as a prelude to escape if necessary.\n\n'
+        'Once every day the shadow demon can cast <a href="/spells/darkness-15-radius-magic-user-lvl-2"><i>darkness</a> 10\' radius</i> and <a href="/spells/fear-magic-user-lvl-4"><i>fear</i></a> over a 30\' radius. Once every week it may execute a <a href="/spells/magic-jar-magic-user-lvl-5"><i>magic jar</i></a> attack on a victim, though if the victim makes his save against this attack, the shadow demon will be stunned for 1-3 rounds. A suitable receptacle must be at hand.\n\n'
+        'Shadow demons are treated as "special" on the cleric/undead matrix. It is thought they are formed from <a href="/creatures/manes">manes</a> though the high intelligence of the shadow demon, which is evident when it engages in conflict, seems to put this theory in doubt.'
+    )
 ),
 CreatureInfo( name = 'Sheet Ghoul',
     hd = (4,4),
@@ -12931,7 +13089,11 @@ CreatureInfo( name = 'Sheet Ghoul',
     m_resist = 0.0,
     align = 'CE',
     size = 'M',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('A sheet ghoul is created when a <a href="/creatures/sheet-phantom">sheet phantom</a> kills a victim. It is treated as a <a href="/creatures/spectre">spectre</a> on the cleric/undead matrix.\n\n'
+        'The sheet ghoul attacks with its two claws (1-3 hit points of damage each) and its filthy fangs (1-6 hit points of damage). Its touch does not cause the paralyzation for which the <a href="/creatures/ghoul">ghoul</a> is feared, but each round it can also attack by squirting a fine jet of corrosive acid from its nose (automatic hit on the opponent it is attacking within 10\') which inflicts 2-7 hit points of damage.\n\n'
+        'These creatures are subject to all attack forms except <a href="/spells/sleep-magic-user-lvl-1"><i>sleep</i></a>, <a href="/spells/charm-monster-magic-user-lvl-4"><i>charm</i></a> and similar spells.'
+    )
 ),
 CreatureInfo( name = 'Sheet Phantom',
     hd = (0,0),
@@ -12947,7 +13109,12 @@ CreatureInfo( name = 'Sheet Phantom',
     m_resist = 0.0,
     align = 'CE',
     size = 'M',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('This greatly feared undead creature is a form of <a href="/creatures/wraith">wraith</a>, but is unusual as a member of the undead class in that it in no way resembles a human. It appears as a near-transparent rectangle with varying dimensions - 11\' to 16\' broad, 7\' to 12\' long and ¼" thick. It moves along ceilings and attacks by dropping on a potential victim; if it hits the intended target, it envelops him, causing suffocation for 1-4 hit points of damage each round subsequent to the initial attack (no damage even if the initial attack succeeds). A victim enveloped by a sheet phantom cannot move, and any damage inflicted on the sheet phantom while it is enveloping a captive will also accrue to that victim. Only one man-sized victim may be enveloped at a time, since the creature wraps its whole form around the victim in a tight cylinder, and he cannot fight back unless the weapon he uses is short (e.g. a dagger) and was actually in his hand when the creature fell on him.\n\n'
+        'If the victim of a sheet phantom\'s enveloping dies from suffocation (or as a result of damage inflicted, unwittingly, by his comrades), the sheet phantom merges with his body and the whole becomes a <a href="/creatures/sheet-ghoul">sheet ghoul</a>.\n\n'
+        'There are sufficient similarities between this creature and the <a href="/creatures/lurker-above">lurker above</a> to lend credence to the speculation that the one is some kind of undead form of the other.\n\n'
+        'These creatures are vulnerable to all attack forms except <a href="/spells/sleep-magic-user-lvl-1"><i>sleep</i></a>, <a href="/spells/charm-monster-magic-user-lvl-4"><i>charm</i></a> and other similar spells and are treated as <a href="/creatures/wraith">wraiths</a> on the cleric/undead matrix.'
+    )
 ),
 CreatureInfo( name = 'Shocker',
     hd = (1,1),
@@ -12964,7 +13131,13 @@ CreatureInfo( name = 'Shocker',
     m_resist = 0.0,
     align = 'CN',
     size = 'M',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('Little is known of the origin and purpose of this unusual creature in form, when on the <i>Prime Material Plane</i>, it is approximately man-sized and bipedal; its body is clothed in faint, light blue sparks and even some distance away, anyone with good hearing will hear a very faint crackling which increases in intensity as the shocker approaches. It is quite clear that this creature does not have its origin on the <i>Prime Material Plane</i>, though its purpose in visiting that plane has not been divined; some say it is from the <i>Negative Material Plane</i> while others postulate the existence of an <i>Electromagnetic Plane</i>, conterminous with all three <i>Material Planes</i> and the <i>Elemental Plane</i>. Whatever the case, its existence on the <i>Prime Material Plane</i> is rarely prolonged and this has led to speculation that its form while on the <i>Prime Material Plane</i> is merely a projection - that the shocker\'s actual body never leaves its plane of origin.\n\n'
+        'The shocker attacks by discharging 10 points of electrical damage on a successful hit (save against <i>death magic</i> indicates half damage). Metal armor is treated as AC10 against their attack (though appropriate magical and dexterity bonuses still apply) and shockers gain a bonus of +2 on the "to hit" roll when attacking plate mail.\n\n'
+        'Only magical weapons affect a shocker and if it is struck by a handheld metal weapon, the effect is as though the shocker had attacked, the discharge being conducted by the metal to the body of the attacker. The shocker has AC10 against such attacks, but against missile fire and non-metal weaponry, it is treated as AC0. When a shocker discharges, it collapses to fine, inert dust - so a shocker only has one successful attack.\n\n'
+        '1-4 gems will sometimes (15% chance) be discovered in the body structure of each shocker and these will be revealed when the creature has discharged.\n\n'
+        'A shocker is immune to electrical attacks, to poison and to paralyzation; it is not affected by spells (such as <a href="/spells/sleep"><i>sleep</i></a> and <a href="/spells/charm-monster-magic-user-lvl-4"><i>charm</i></a>) which affect the mind. Against other magical attacks it has 50% resistance.'
+    )
 ),
 CreatureInfo( name = 'Skeleton Warrior',
     hd = (9,9),
@@ -12980,7 +13153,15 @@ CreatureInfo( name = 'Skeleton Warrior',
     m_resist = 0.9,
     align = 'NE',
     size = 'M',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('These are undead lords of the 10th-15th level, formerly powerful fighters (and will have psionic abilities if possessed in life). They are only affected by magical weapons and have 90% magical resistance. Their appearance is similar to that of a <a href="/creatures/lich">lich</a> - skeletal creatures clad in the rich, but faded and rotting trappings of a powerful fighter.\n\n'
+        'It is said that the skeleton warriors were forced into their lich-like state ages ago by a powerful and evil demi-god who trapped each of their souls in a golden circlet. A skeleton warrior\'s sole reason for remaining on this plane is to search for and regain the circlet which contains its soul.\n\n'
+        'Anyone possessing one of these circlets may control the skeleton warrior whose soul is stored therein within a 240\' range. The controller can see through the warrior\'s "eyes" when controlling a warrior in this way, but he may not himself move nor may he cast spells - he is literally unable to do so. Thus, while in "active control" the controller may cause the skeleton warrior to fight, to search for treasure and so forth. The controller may also control the creature in a "passive mode"; the skeleton warrior will be inert while under passive control and the controller cannot see through its "eyes", but the controller can move, fight and cast spells.\n\n'
+        'In either case, control is lost if the skeleton warrior moves more than 240\' from the controller, or vice versa, or if the circlet is removed from the controller\'s head. If the circlet remains in his possession, the controller can resume control at a later time, but if it leaves his possession, whether by accident or deliberate act, the skeleton warrior will immediately stop what it is doing and destroy the former controller, never resting until this task is accomplished or control is re-established. If the circlet falls into possession of the skeleton warrior, it will "die" and vanish, never to reappear, and the circlet will turn to fine, valueless dust.\n\n'
+        'When a circlet first comes in to the possession of a character, particularly if he does not recognize its significance, he may be unaware that the skeleton warrior whose soul is imprisoned therein will be tracking him. To establish control, he must not only put the circlet on his head but must also be able to see the skeleton warrior and concentrate on the establishment of control over the creature. If he does not do this, the skeleton warrior will attack him in an attempt to destroy him and gain possession of the circlet. Once control has been established in the first instance, however, it will only be broken as indicated above. The circlet cannot be worn with any other headgear to be effective; the wearing of a helm, for instance, will nullify its powers, though the skeleton warrior will still be aware of its presence.\n\n'
+        'The mere sight of a skeleton warrior will cause any creature below 5 hit dice to flee in panic. Clerics have no chance of turning them.\n\n'
+        'Skeleton warriors usually fight with two-handed swords, but other types of weapon have been known to be used. Whatever weapon is used, the skeleton warrior attacks with a +3 "to hit" bonus, though the weapon itself does not become magical.'
+    )
 ),
 CreatureInfo( name = 'Skulk',
     hd = (2,2),
@@ -12998,7 +13179,12 @@ CreatureInfo( name = 'Skulk',
     m_resist = 0.0,
     align = 'CE',
     size = 'M',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('Skulks were once members of the human race with tendencies to extreme cowardice. As years passed and the race grew more and more resentful of "normal" humans, they developed a progressively improving ability of camouflage and now are able to blend into any background. There is only a 10% chance of sighting an immobile skulk.\n\n'
+        'Skulks live by theft and murder on the edges of civilization. They keep to small bands, moving often and camping in deep dark forests or underground lairs. Their usual tactics of attacking unsuspecting victims from behind or murdering entire sleeping families make them universally despised, and if a skulk is captured it is unusually the recipient of an unpleasant death at the hands of the community. However, they are rarely seen, and even more rarely captured, because of their camouflage ability, and their cunning is such that they are nearly impossible to track (one-fifth normal chance, even for a ranger, so if a skulk passes through a secret door, for instance, a ranger tracking it would only have a 5% chance of following the trail).\n\n'
+        'A skulk moves quickly and quietly, freezing into immobility and near-invisibility at the first hint of danger. Their favorite tactic is to attack from behind at +4 "to hit", doing triple damage if successful (as a 5th level thief). They will never openly attack a party which looks powerful, though they may set an ambush in an attempt to pick off a straggler or sentry, or (even better) attack when the party members are sleeping. They much prefer weak or helpless victims. Skulks still exhibit extreme cowardice and will flee at the slightest wounding or setback, taking whatever treasure they can.\n\n'
+        'They speak the common tongue and their alignment tongue. 20% of skulks will also speak another language - usually a near-human tongue such as <a href="/creatures/elf">elvish</a>.'
+    )
 ),
 CreatureInfo( name = 'Blue Slaad',
     hd = (8,8),
@@ -13016,7 +13202,12 @@ CreatureInfo( name = 'Blue Slaad',
     m_resist = 0.4,
     align = 'CN',
     size = 'L',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('Though the blue variety is stronger than the <a href="/creatures/red-slaad">red</a>, the blue slaad is still a relatively weak member of the slaad race, more often used to run errands and carry out missions for the masters than for anything else. Its main color is light electric blue, broken by streaks of gray.\n\n'
+        'There is a great sense of rivalry between blue and red slaadi, and neither type will help the other except in direst emergency.\n\n'
+        'On each of the blue slaad\'s claws are two scimitar-like blades. Thus the creature has effectively, four claw attacks (2-12 points of damage each) as well as its bite (2-16 hit points of damage).\n\n'
+        'Blue slaadi have only defensive psionics. Their magical abilities (usable at will) are: <a href="/spells/telekinesis-magic-user-lvl-5"><i>telekinese</i></a> 1,000 gold pieces weight, <a href="/spells/passwall-magic-user-lvl-5"><i>passwall</i></a>, <a href="/spells/hold-person-cleric-lvl-2"><i>hold</i></a> one person (normal saving throw). Four times per day they can attempt to <a href="/spells/gate-cleric-lvl-7"><i>gate</i></a> in other slaadi. There is a 40% chance of the gate opening, and if it does the creature gated in will be a <a href="/creatures/green-slaad">green slaad</a> (35%), another blue slaad (50%) or a <a href="/creatures/red-slaad">red slaad</a> (15%).'
+    )
 ),
 CreatureInfo( name = 'Death Slaadi',
     hd = (15,15),
@@ -13035,7 +13226,11 @@ CreatureInfo( name = 'Death Slaadi',
     align = 'CN',
     size = 'M',
     source = SourceBook.FIEND_FOLIO,
-    aliases = ['The Lesser Masters']
+    aliases = ['The Lesser Masters'],
+    description = ('Only four of these fearsome monsters are known to exist. They have rarely been seen in slaad form since they use human form exclusively on the <i>Prime Material Plane</i>, wearing no armor but using deadly swords of great magical power (such as <i>swords of sharpness</i>, for example).\n\n'
+        'In human form they attack with their sword twice in a single melee round. In slaad form they attack with two claws (3-18 hit points of damage each) and a bite for 2-20 hit points of damage; a successful bite drains 1-3 experience levels of the victim (saving throw permitted - if successful it negates the effect).\n\n'
+        'They may travel the planes at will and also have the following powers at will: <a href="/spells/astral-spell-cleric-lvl-7"><i>astral projection</i></a>, <a href="/spells/esp-magic-user-lvl-2"><i>ESP</i></a>, <a href="/spells/fear-magic-user-lvl-4"><i>fear</i></a>, <a href="/spells/darkness-15-radius-magic-user-lvl-2"><i>darkness 15\' radius</i></a>, <a href="/spells/detect-invisibility-magic-user-lvl-2"><i>detect invisibility</i></a>, <a href="/spells/detect-magic-cleric-lvl-1"><i>detect magic</i></a>, <a href="/spells/invisibility-magic-user-lvl-2"><i>invisibility</i></a>, <i>advanced illusion</i>, <a href="/spells/cloudkill-magic-user-lvl-5"><i>cloudkill</i></a>, <a href="/spells/wind-walk-cleric-lvl-7"><i>wind walk</i></a>, <a href="/spells/locate-object-cleric-lvl-3"><i>locate object</i></a>, <a href="/spells/shape-change-magic-user-lvl-9"><i>shape change</i></a> (slaad/man), <a href="/spells/flame-strike-cleric-lvl-5"><i>flame strike</i></a>, <a href="/spells/ray-of-enfeeblement-magic-user-lvl-2"><i>weakness</i></a>. Once per round they may attempt to <a href="/spells/gate-cleric-lvl-7"><i>gate</i></a> in another slaad with a 90% chance of the gate opening (equal chance of <a href="/creatures/red-slaad">red</a>, <a href="/creatures/blue-slaad">blue</a>, <a href="/creatures/green-slaad">green</a> or <a href="/creatures/gray-slaadi">gray slaad</a> appearing). Once per day they can use any <a href="/spells/symbol-magic-user-lvl-8"><i>symbol</i></a>, <a href="/spells/power-word-stun-magic-user-lvl-7"><i>power word: stun</i></a>, <a href="/spells/holy-unholy-word-cleric-lvl-7"><i>unholy word</i></a>, generate an 8d6 <a href="/spells/fireball-magic-user-lvl-3"><i>fireball</i></a>, create a <a href="/spells/phantasmal-killer-illusionist-lvl-4"><i>phantasmal killer</i></a>.'
+    )
 ),
 CreatureInfo( name = 'Green Slaad',
     hd = (9,9),
@@ -13053,7 +13248,12 @@ CreatureInfo( name = 'Green Slaad',
     m_resist = 0.5,
     align = 'CN',
     size = 'L',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('This creature is pale green in color with streaks of gray. Though it normally appears as a bipedal <a href="/creatures/giant-toad">giant toad</a>, it can change shape with its innate power of <a href="/spells/polymorph-self-magic-user-lvl-4"><i>polymorph self</i></a>.\n\n'
+        'A magical weapon with at least a +1 bonus is needed to damage this creature which attacks with its bite (2-16 hit points of damage) and its relatively small claws (3-8 hit points of damage each).\n\n'
+        'Its magical powers, which it can use at will, are: <a href="/spells/telekinesis-magic-user-lvl-5"><i>telekinese</i></a> 1,250 gold pieces weight, <a href="/spells/polymorph-self-magic-user-lvl-4"><i>polymorph self</i></a>, cause <a href="/spells/fear-magic-user-lvl-4"><i>fear</i></a>, cause <a href="/spells/continual-light-cleric-lvl-3"><i>continual darkness</a> 15\' radius</i>, <a href="/spells/esp-magic-user-lvl-2"><i>ESP</i></a>, <a href="/spells/detect-invisibility-magic-user-lvl-2"><i>detect invisibility</i></a>, <a href="/spells/detect-magic-cleric-lvl-1"><i>detect magic</i></a>, <a href="/spells/locate-object-cleric-lvl-3"><i>locate object</i></a>, <a href="/spells/produce-flame-druid-lvl-2"><i>produce flame</i></a>. Once per day a green slaad can generate a 12d6 <a href="/spells/delayed-blast-fireball-magic-user-lvl-7"><i>delayed blast fireball</i></a>. Once per hour a green slaad may attempt to <a href="/spells/gate-cleric-lvl-7"><i>gate</i></a> in other slaadi with a 50% chance of the gate opening. If successful, the slaad which appears will be <a href="/creatures/red-slaad">red</a> (35%), <a href="/creatures/blue-slaad">blue</a> (35%) or green (30%). These creatures have 18(76) strength and may travel the planes at will.\n\n'
+        'If a green slaad has its mortal form destroyed but its symbol remains intact, it will reincarnate after 24 hours as a <a href="/creatures/blue-slaad">blue slaad</a>, remaining in that form for a year and a day before turning green once again and resuming its former powers.'
+    )
 ),
 CreatureInfo( name = 'Gray Slaadi',
     hd = (10,10),
@@ -13072,7 +13272,12 @@ CreatureInfo( name = 'Gray Slaadi',
     align = 'CN',
     size = 'M',
     source = SourceBook.FIEND_FOLIO,
-    aliases = ['The Executioners', 'Grey Slaadi']
+    aliases = ['The Executioners', 'Grey Slaadi'],
+    description = ('These creatures are the most feared non-master slaadi, being the ones most often sent to the <i>Prime Material Plane</i> as Executioners of their masters\' will. They appear in normal form as relatively small slaadi, a uniform light gray in color. They will more normally visit the <i>Prime Material Plane</i>, however, as humans (with charisma at least 12). They have 18(00) strength.\n\n'
+        'When fighting in slaad form, the executioners use their two claws for 4-10 hit points of damage each and a bite for 2-16 hit points of damage. In human form they attack twice per round with a sword - usually (75%) a +2 magical sword but sometimes (25%) a more powerful magical weapon such as a <i>sword of sharpness</i>. When on the <i>Prime Material Plane</i>, the executioners usually wear no armor, preferring instead light clothing. They will usually carry treasure - one or two powerful magical items with a pouch of gold or platinum.\n\n'
+        'Once per melee round they may use one of the following powers: cause <a href="/spells/fear-magic-user-lvl-4"><i>fear</i></a>, cause <a href="/spells/darkness-15-radius-magic-user-lvl-2"><i>darkness</i></a> (15\' radius or less, at will), <a href="/spells/know-alignment-magic-user-lvl-2"><i>know alignment</i></a>, <a href="/spells/infravision-magic-user-lvl-3"><i>infravision 60\'</i></a>, create an <i>illusion</i>, <a href="/spells/flame-strike-cleric-lvl-5"><i>flame strike</i></a>, <a href="/spells/wind-walk-cleric-lvl-7"><i>wind walk</i></a>, <a href="/spells/shape-change-magic-user-lvl-9"><i>shape change</i></a> (slaad/man), <a href="/spells/invisibility-magic-user-lvl-2"><i>invisibility</i></a>, generate a ball of <i>lightning</i> (8d6+6 damage per ball). Once per day they can use a <a href="/spells/symbol-magic-user-lvl-8"><i>symbol/i></a> of <i>pain</i> or <i>fear</i> and <a href="/spells/power-word-blind-magic-user-lvl-8"><i>power word: blind</i></a>. Given the time and the equipment, they can <a href="/spells/enchant-an-item-magic-user-lvl-6"><i>enchant an item</i></a>. They may also, once per day, attempt to <a href="/spells/gate-cleric-lvl-7"><i>gate</i></a> in 1-3 more gray slaad with a 60% chance of the gate opening.\n\n'
+        'Gray slaadi may travel the planes at will and are unaffected by <i>cold</i> or <a href="/spells/disintegrate-magic-user-lvl-6"><i>disintegration</i></a> spells.'
+    )
 ),
 CreatureInfo( name = 'Red Slaad',
     hd = (7,7),
@@ -13090,7 +13295,12 @@ CreatureInfo( name = 'Red Slaad',
     m_resist = 0.35,
     align = 'CN',
     size = 'L',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('The commonest of the slaadi, the red slaad is regularly sent on missions by the masters to the <i>Prime Material Plane</i>, usually in search of human slaves. It has a dull red skin flecked with gray.\n\n'
+        'The red slaad attacks with its two claws (1-4 hit points of damage each) and its bite (2-16 hit points of damage). It may <i>regenerate</i> while still alive at the rate of 3 hit points per melee round. It may <a href="/spells/gate-cleric-lvl-7"><i>gate</i></a> in 1-2 other red slaadi (35% chance of the gate opening) twice per day. Once per day it may use <a href="/spells/power-word-stun-magic-user-lvl-7"><i>power word: stun</i></a> which stuns all victims for 1-4 rounds.\n\n'
+        'Embedded in the skin under each of its claws there is a gland which produces small pellets. Each time it hits with a claw attack, there is a 40% chance that a pellet will be transferred into the flesh of its victim. A pellet thus lost is renewed immediately in the slaad\'s skin. If a victim has a pellet implanted, he must make his saving throw against poison, failure means death in 3-36 hours.\n\n'
+        'Once embedded, the pellet can only be affected by certain magical spells which must be cast in the period before death occurs. The pellet is neutralized by <a href="/spells/alter-reality-illusionist-lvl-7"><i>alter reality</i></a>, <a href="/spells/cure-disease-cleric-lvl-3"><i>cure disease</i></a>, <a href="/spells/neutralize-poison-cleric-lvl-4"><i>neutralize poison</i></a> or <a href="/spells/barkskin-druid-lvl-2"><i>barkskin</i></a>, while it can be removed from the victim by <a href="/creatures/limited-wish-magic-user-lvl-7"><i>limited wish</i></a> or <a href="/spells/wish-magic-user-lvl-9"><i>wish</i></a>. In the case of <i>limited wish</i> the pellet is removed in a neutral state and is useless. However if a full <i>wish</i> is used to extract the pellet from the victim, it can be incorporated into a charm against the slaad which secreted it, forcing it into obedience as would possession of its symbol but for double the number of tasks (six). However to create the charm requires <a href="/spells/enchant-an-item-magic-user-lvl-6"><i>enchant an item</i></a>, <a href="/spells/limited-wish-magic-user-lvl-7"><i>limited wish</i></a> and <a href="/spells/spiritwrack-magic-user-lvl-6"><i>spiritwrack</i></a>, costs 6,000 gold pieces and takes three months to prepare.'
+    )
 ),
 CreatureInfo( name = 'Ssendam - Lord of the Insane',
     hd = (0,0),
@@ -13109,7 +13319,15 @@ CreatureInfo( name = 'Ssendam - Lord of the Insane',
     align = 'CN',
     size = 'M',
     source = SourceBook.FIEND_FOLIO,
-    aliases = ['Slaad Lord']
+    aliases = ['Slaad Lord'],
+    description = ('This weird creature is claimed by some to be the most powerful of the slaadi. He either wanders the <i>Prime Material Plane</i> as a man, wearing no armor but using the <i>Black Sword</i> as a weapon (acts as a <a href="/spells/power-word-stun-magic-user-lvl-7"><i>power word: stun</i></a> on any victim struck), or as a golden amoeba with a man\'s brain in place of a nucleus. In either case he attacks as a monster of 16+ hit dice. In amoebic form he fights by extruding three corrosive pseudopods each 10\' long, each inflicting 2-16 hit points of damage on its victim and each draining 1-4 experience levels (saving throw permitted but a successful save merely halves the number of experience levels drained, with fractions rounded down).\n\n'
+        'He may <a href="/spells/gate-cleric-lvl-7"><i>gate</i></a> in another slaad of any type (except <a href="/creatures/ygorl-lord-of-entropy">Ygorl</a>) at will, the gate opening automatically.\n\n'
+        'He may use the following powers at will: <a href="/spells/fear-magic-user-lvl-4"><i>fear</i></a>, <a href="/spells/darkness-15-radius-magic-user-lvl-2"><i>darkness 15\' radius</i></a>, <a href="/spells/blink-magic-user-lvl-3"><i>blink</i></a>, <a href="/spells/esp-magic-user-lvl-2"><i>ESP</i></a>, <a href="/spells/know-alignment-magic-user-lvl-2"><i>know alignment</i></a>, <a href="/spells/dispel-magic-magic-user-lvl-3"><i>dispel magic</i></a> (at 32nd level), <a href="/spells/detect-invisibility-magic-user-lvl-2"><i>detect invisibility</i></a>, <a href="/spells/detect-magic-cleric-lvl-1"><i>detect magic</i></a>, <a href="/spells/locate-object-cleric-lvl-3"><i>locate object</i></a>, <a href="/spells/flame-strike-cleric-lvl-5"><i>flame strike</i></a> (at double power), <a href="/spells/ultravision-magic-user-lvl-4"><i>ultravision 60\'</i></a>, <a href="/spells/mass-charm-magic-user-lvl-8"><i>mass charm</i></a>, <a href="/spells/astral-spell-cleric-lvl-7"><i>astral projection</i></a>, <a href="/spells/symbol-magic-user-lvl-8"><i>symbol of insanity</i></a>, <a href="/spells/death-spell-magic-user-lvl-6"><i>death</i></a>. Once per day he can use <a href="/spells/holy-unholy-word-cleric-lvl-7"><i>unholy word</i></a> and <a href="/spells/power-word-blind-magic-user-lvl-8">any</a> <a href="/spells/power-word-stun-magic-user-lvl-7"><i>power</i></a> <a href="/spells/power-word-kill-magic-user-lvl-9/"><i>word</i></a>. Once per day he may also <i>fulfill another\'s <a href="/spells/wish-magic-user-lvl-9">wish</a></i>, though this takes a melee round during which he can do nothing else, so it is rarely used.\n\n'
+        'While alive, he <i>regenerates</i> 3 hit points per melee round. He may <a href="/spells/shape-change-magic-user-lvl-9">shape change</a> at will and travel the planes instantaneously. He has 18(00) strength.\n\n'
+        'When encountered, Ssendam always gives his true name, though woe betide he who tries to use it.\n\n'
+        'Like gods and demi-gods, Ssendam always leaves his true form behind when he travels the planes. In <i>Limbo</i>, his form is that of a large, golden slaad.\n\n'
+        'Ssendam can only be damaged by a weapon with a +3 bonus or better.'
+    )
 ),
 CreatureInfo( name = 'Ygorl - Lord of Entropy',
     hd = (0,0),
