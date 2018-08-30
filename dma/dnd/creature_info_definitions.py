@@ -8450,7 +8450,7 @@ CreatureInfo( name = 'Wolf',
     align = 'NN',
     size = 'S',
     source = SourceBook.MONSTER_MANUAL,
-    description = 'These carnivores are found in wild forests from the arctic to the temperate zones. They always hunt in packs and if hungry (75%) they will not hesitate to follow and attack prey, always seeking to strike at an unguarded moment. Their howling is 50% likely to panic herbivores which are not being held by humans and calmed. They love <a href=/creatures/horse">horsemeat</a>. If encountered in their lair there is a 30% chance that there will be 1-4 cubs per pair of adult wolves. Cubs do not fight and can be trained as war dogs or hunting beasts.'
+    description = 'These carnivores are found in wild forests from the arctic to the temperate zones. They always hunt in packs and if hungry (75%) they will not hesitate to follow and attack prey, always seeking to strike at an unguarded moment. Their howling is 50% likely to panic herbivores which are not being held by humans and calmed. They love <a href="/creatures/horse">horsemeat</a>. If encountered in their lair there is a 30% chance that there will be 1-4 cubs per pair of adult wolves. Cubs do not fight and can be trained as war dogs or hunting beasts.'
 ),
 CreatureInfo( name = 'Dire Wolf',
     hd = (3,3),
@@ -13136,7 +13136,7 @@ CreatureInfo( name = 'Shocker',
         'The shocker attacks by discharging 10 points of electrical damage on a successful hit (save against <i>death magic</i> indicates half damage). Metal armor is treated as AC10 against their attack (though appropriate magical and dexterity bonuses still apply) and shockers gain a bonus of +2 on the "to hit" roll when attacking plate mail.\n\n'
         'Only magical weapons affect a shocker and if it is struck by a handheld metal weapon, the effect is as though the shocker had attacked, the discharge being conducted by the metal to the body of the attacker. The shocker has AC10 against such attacks, but against missile fire and non-metal weaponry, it is treated as AC0. When a shocker discharges, it collapses to fine, inert dust - so a shocker only has one successful attack.\n\n'
         '1-4 gems will sometimes (15% chance) be discovered in the body structure of each shocker and these will be revealed when the creature has discharged.\n\n'
-        'A shocker is immune to electrical attacks, to poison and to paralyzation; it is not affected by spells (such as <a href="/spells/sleep"><i>sleep</i></a> and <a href="/spells/charm-monster-magic-user-lvl-4"><i>charm</i></a>) which affect the mind. Against other magical attacks it has 50% resistance.'
+        'A shocker is immune to electrical attacks, to poison and to paralyzation; it is not affected by spells (such as <a href="/spells/sleep-magic-user-lvl-1"><i>sleep</i></a> and <a href="/spells/charm-monster-magic-user-lvl-4"><i>charm</i></a>) which affect the mind. Against other magical attacks it has 50% resistance.'
     )
 ),
 CreatureInfo( name = 'Skeleton Warrior',
@@ -13344,7 +13344,13 @@ CreatureInfo( name = 'Ygorl - Lord of Entropy',
     align = 'CN',
     size = 'L',
     source = SourceBook.FIEND_FOLIO,
-    aliases = ['Slaad Lord']
+    aliases = ['Slaad Lord'],
+    description = ('This fearsome slaad lord always appears as a skeletal, black, flightless, bat-winged man 12" tall wielding a sickle which measures 8\' from tip to handle. He is always in shadow. The sickle is made of adamantite and has the word "death" inscribed on its blade in the slaad tongue. It has a magical bonus of +5 and on a strike its victim receives instant death unless he saves against poison, in which case the victim escapes with only 6-36 hit points of damage. Ygorl strikes twice each round with his sickle. Only the two slaadi lords, and others of similar status, are immune to the effects of the sickle, the results on others being normal and permanent.\n\n'
+        'Ygorl may use the following abilities at will <a href="/spells/esp-magic-user-lvl-2"><i>ESP</i></a>, <a href="/spells/darkness-15-radius-magic-user-lvl-2"><i>darkness 15\' radius</i></a>, <a href="/spells/symbol-magic-user-lvl-8"><i>symbol</i></a> of <i>fear</i>, <a href="/spells/detect-magic-cleric-lvl-1"><i>detect magic</i></a>, <a href="/spells/know-alignment-magic-user-lvl-2"><i>know alignment</i></a>, <a href="/spells/detect-invisibility-magic-user-lvl-2"><i>detect invisibility</i></a>, <a href="/spells/blink-magic-user-lvl-3"><i>blink</i></a>, <a href="/spells/sleep-magic-user-lvl-1"><i>sleep</i></a>, <a href="/spells/phantasmal-killer-illusionist-lvl-4"><i>phantasmal killer</i></a>, <i>advanced illusion</i>, <a href="/spells/symbol-magic-user-lvl-8"><i>symbol</i></a> of <i>hopelessness</i>, <a href="/spells/flame-strike-cleric-lvl-5"><i>flame strike</i></a>. Once per round he may <a href="/spells/gate-cleric-lvl-7"><i>gate</i></a> in another slaad (except <a href="/creatures/ssendam-lord-of-the-insane">Ssendam</a>) at will, the gate opening automatically.\n\n'
+        'Once per day Ygorl may use <a href="/spells/power-word-kill-magic-user-lvl-9/"><i>power word: kill</i></a>, any <a href="/spells/symbol-magic-user-lvl-8"><i>symbol</i></a>, <a href="/spells/holy-unholy-word-cleric-lvl-7"><i>unholy word</i></a>. He may travel by <a href="/spells/astral-spell-cleric-lvl-7"><i>astral projection</i></a> whenever he wishes.\n\n'
+        'Ygori does not appear to have the <a href="/spells/shape-change-magic-user-lvl-9"><i>shape change</i></a> power of other high-level slaadi; however it is clear that the form he assumes on the <i>Prime Material Plane</i> is not the same as his form in <i>Limbo</i>. Though no-one has seen him on his own plane, it is said that his form there is of a large slaad, 15\' high and totally black.\n\n'
+        'When on the <i>Prime Material Plane</i>, Ygorl rides a neutral huge ancient <a href="/creatures/brass-dragon">brass dragon</a> called Shkiv and can command undead as a 13th level cleric of the chaotic neutral alignment.'
+    )
 ),
 CreatureInfo( name = 'Snyad',
     hd = (1,1),
@@ -13363,7 +13369,12 @@ CreatureInfo( name = 'Snyad',
     align = 'NN',
     size = 'S',
     source = SourceBook.FIEND_FOLIO,
-    aliases = ['Pestie']
+    aliases = ['Pestie'],
+    description = ('Small bipeds, light brown in color and with particularly high dexterity, pesties live in small passages adjoining dungeon corridors. The entrances to these tunnels are small and usually concealed behind piles of loose stone, making them difficult to detect even by <a href="/creatures/elf">elves</a> (1 chance in 4 even if a search is being made, or 1 chance in 3 for an elf). They are totally silent and move with great speed, achieving surprise 90% of the time.\n\n'
+        'Their sole objective in leaving their tunnels and approaching a party of adventurers is to steal small items of treasure - gems, coins, pieces of jewelry, small weapons and the like. They will never attack and will avoid physical combat if they possibly can. Their high dexterity gives them a +3 bonus on all saving throws against magical spells which can be dodged.\n\n'
+        'The snyad is a cousin of the <a href="/creatures/mite">mite</a> and these two types of creatures will often act in co-operation, the mite\'s skill with traps complementing the high speed of the pestie.\n\n'
+        'They have no language, so far as can be ascertained, yet a group will work co-operatively together, and they and the mites appear to be able to gain speedy mutual understanding in their common task.'
+    )
 ),
 CreatureInfo( name = 'Son of Kyuss',
     hd = (4,4),
@@ -13380,7 +13391,14 @@ CreatureInfo( name = 'Son of Kyuss',
     m_resist = 0.0,
     align = 'CE',
     size = 'M',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('Truly horrible creatures in appearance, these ghastly undead appear as animated putrid corpses with fat green worms crawling in and out of all their skull orifices. Kyuss was an evil high priest, creating the first of these creatures under instruction from an evil deity. Since then the "sons" have increased considerably in numbers.\n\n'
+        'Each son is surrounded by a spherical zone of <a href="/spells/fear-magic-user-lvl-4"><i>fear</i></a> 30\' in diameter; a victim who fails to save against magic when entering this zone will flee in terror.\n\n'
+        'Each son <i>regenerates</i> 2 hit points per round; its limbs will <i>regenerate</i> even if severed, like those of a <a href="/creatures/troll">troll</a>. Even after "death" this process will continue, so the only way of destroying these creatures is by fire, lightning, acid or the application of holy water (or holy objects such as religious <i>symbols</i>, <i>holy swords</i> etc.) to their wounds.\n\n'
+        'The sons attack with a double-handed flailing of fists, causing 1-8 hit points of damage. Each successful hit has a 25% chance of inflicting advanced leprosy on the victim. This disease will be fatal in 1-6 months, and each month it progresses the diseased victim loses 2 points of charisma, permanently. It can be cured only by a magic spell, <a href="/spells/cure-disease-cleric-lvl-3"><i>cure disease</i></a>. The disease negate all <i>cure wounds</i> spells. Infected creatures heal wounds at 10% of the normal rate.\n\n'
+        'In addition, one worm per melee round will jump from a son\'s head to an adjacent character in melee with a son. It needs the normal "to hit" roll to land on the victim and will then burrow into him, taking one melee round to penetrate the skin, during which time it may be destroyed by the touch of cold steel, holy water or a blessed object. If it is not destroyed, the worm heads for the victim\'s brain, taking 1-4 melee rounds to reach it; during this time <a href="/spells/remove-curse-cleric-lvl-3"><i>remove curse</i></a> or <a href="/spells/cure-disease-cleric-lvl-3"><i>cure disease</i></a> will destroy it and <a href="/spells/neutralize-poison-cleric-lvl-4"><i>neutralize poison</i></a> or <a href="/spells/dispel-evil-cleric-lvl-5"><i>dispel evil</i></a> will delay it by 1-6 full turns. If the worm reaches the brain, the victim becomes a son of Kyuss, the process of putrefaction setting in without further delay.\n\n'
+        'Sons of Kyuss are treated as <a href="/creatures/mummy">mummies</a> on the cleric/undead table. Like other undead, they are immune to mind-influencing spells.'
+    )
 ),
 CreatureInfo( name = 'Stunjelly',
     hd = (4,4),
@@ -13396,7 +13414,10 @@ CreatureInfo( name = 'Stunjelly',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('This relative of the <a href="/creatures/gelatinous-cube">gelatinous cube</a> looks just like a section of ordinary stone wall; it is usually 10\' square and of thickness varying between 2½\'-5\'. Its attack has a paralyzing effect - the victim must save versus paralyzation or by paralyzed for 5-20 melee rounds, during which the stunjelly will attempt to surround the victim and digest him. Like the gelatinous cube, it may have treasure of various types inside it.\n\n'
+        'The stunjelly does not have the transparency of the gelatinous cube; it is very slightly translucent, but any treasure inside it can only be seen in very rough outline in conditions of good illumination, while in normal torchlight the creature looks like solid wall without any inclusions.'
+    )
 ),
 CreatureInfo( name = 'Sussurus',
     hd = (8,8),
@@ -13413,7 +13434,14 @@ CreatureInfo( name = 'Sussurus',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('The size of a large <a href="/creatures/gorilla">gorilla</a>, the sussurus appears at first sight like a headless ape which moves on all four limbs. In fact the 7\' tall beast has no external organs, nor anything resembling a head. It "sees" and "hears" through vibrations and disturbances in the air and is therefore immune to all forms of magic which have their effects through such normal senses. It can thus detect the presence of invisible objects and beings.\n\n'
+        'The exoskeleton of the sussurus is honeycombed with small ducts and tiny passages through which the beast continually draws in the air on which it feeds. This constant inhalation causes the characteristic "dronesong" associated with the beast which only ceases when the beast dies. This weird sound is like a gentle wind blowing through trees; it can be heard up to ¼ of a mile away in still air through unobstructed airways, and one closed door in the path will not attenuate the sound sufficiently to render it inaudible at such distances. Underground, the sound reverberates around corridors and rooms, making location of its source difficult.\n\n'
+        'The dronesong has a curious effect on undead creatures, causing them to feel "at peace" and to be rendered inert - an effect known as the "sleep of the dead". Any number may be slept by these means, but otherwise the dronesong acts as though it were an attempt by a second level cleric to turn away undead (so <a href="/creatures/skeleton">skeletons</a> are affected on a roll of 7-20, <a href="/creatures/zombie">zombies</a> on a roll of 10-20, <a href="/creatures/ghoul">ghouls</a> on a roll of 13-20, <a href="/creatures/shadow">shadows</a> on a roll of 16-20, <a href="/creatures/wight">wights</a> on a roll of 19-20, <a href="/creatures/ghast">ghasts</a> on a roll of 20 and <a href="/creatures/wraith">wraiths</a> and more powerful undead are not affected). While "asleep" the undead cannot be turned or destroyed, but if they are attacked physically they will awaken to defend themselves.\n\n'
+        'It windy locations it will often be immobile, taking in the air, and in such conditions it is 10% easier to surprise than normal (15% instead of the normal 5%). It is fast-moving, aggressive and dangerous when encountered, fighting with the claws on its two "forepaws", each of which can inflict 1-8 hit points of damage. Additionally, if either claw hits on a roll of 18 or more (or a 20 in any event) the victim is crushed onto the exoskeletal spikes and suffers an additional 3-24 hit points of damage from this "hug".\n\n'
+        'The sussurus loathes fire and will immediately attack anyone carrying a torch or a lantern in an attempt to destroy the oxygen-consuming flames.\n\n'
+        'The sussurus is believed to have a lifespan of over 1,000 years. Though it has no language as such, a sussurus communicates with others of its kind by slight and subtle variation in the dronesong; however it is only very rarely that two sussuri are close enough together to communicate in this way.'
+    )
 ),
 CreatureInfo( name = 'Svirfneblin',
     hd = (3,3),
@@ -13430,7 +13458,32 @@ CreatureInfo( name = 'Svirfneblin',
     align = 'NG',
     size = 'S',
     source = SourceBook.FIEND_FOLIO,
-    aliases = ['Deep Gnome']
+    aliases = ['Deep Gnome'],
+    description = ('Far beneath the surface of the earth dwell the svirfnebli - the deep gnomes - a race related to the <a href="/creatures/gnome">gnomes</a> of the bright world. Small parties of these demi-humans roam here and there in the underworld mazes of small passageways, always in search of gem minerals. Their realm is in a region unknown, but thought to consist of a closely-connected series of vast caverns in which thousands of these diminutive creatures labor for their king. Only males have ever been seen, and those only in very deep places beneath the ground.\n\n'
+        'All males of the race are doughty fighters. For every four svirfnebli encountered, there will be an additional leader-type with hit dice 4+7. If more than twenty deep gnomes are encountered there will be an additional 6th level fighter (hit dice 6+9) - a <i>burrow warden</i> - with two 5th level assistants (hit dice 5+8). It is 25% probable that a 6th level deep gnome will have illusionist abilities of 5th, 6th or 7th level.\n\n'
+        'Note that a deep gnome of 6th level, if not an illusionist, is 50% likely to be able to summon an <a href="/creatures/earth-elemental">earth elemental</a>. The type of earth elemental which can be summoned is found on this table:\n\n'
+        '<table>'
+        '<tr><th>Die Roll</th><th>Elemental</th></tr>'
+        '<tr><td>1</td><td>24 hit dice earth elemental</td></tr>'
+        '<tr><td>2-6</td><td>16 hit dice earth elemental</td></tr>'
+        '<tr><td>7-10</td><td>12 hit dice earth elemental</td></tr>'
+        '<tr><td>11-15</td><td>8 hit dice earth elemental</td></tr>'
+        '<tr><td>16-18</td><td><a href="/creatures/xorn">xorn</a></td></tr>'
+        '<tr><td>19-20</td><td>summoning fails</td></tr>'
+        '</table>\n\n'
+        'Elemental summoning can be attempted once per day by a deep gnome with the necessary power.\n\n'
+        'In addition to the abilities given above, all the svirfnebli have the following magical powers of illusionist nature: <a href="/spells/blindness-illusionist-lvl-2"><i>blindness</i></a>, <a href="/spells/blur-illusionst-lvl-2"><i>blur</i></a>, <a href="/spells/change-self-illusionist-lvl-1"><i>change self</i></a>. Each of these spell-like abilities can be used once per day by any deep gnome. All these creatures radiate <a href="/spells/non-detection-illusionist-lvl-3"><i>non-detection</i></a> identical to the spell of the same name.\n\n'
+        'The deep gnomes wear leathern jacks sewn with rings of mithral-steel alloy over fine chainmail shirts. They do not usually carry shield, as these devices would tend to hinder movement through the narrow corridors favored by the svirfnebli. For every level above 3rd, a svirfneblin\'s armor class improves by 1 point - i.e. a 4th level deep gnome has AC1, 5th level AC0 and 6th level AC-1.\n\n'
+        'These gnomes are typically armed with a non-magical +1 dagger and a non-magical +1 pick (horseman\'s pick, for purposes of damage assessment). Each individual also carries a pouch of special darts, 7-10 hand-hurled missiles of about nine inches in length, with a 40\' range and which inflicts 1-3 hit points of damage. When one of these darts strikes it is constructed so as to compact and break a small glass bead containing a gas. Any creature struck on its front parts must save against poison; if it fails, the puff of gas has reached the creature\'s system and the creature will be <i>stunned</i> on the next round and <a href="/spells/slow-magic-user-lvl-3"><i>slowed</i></a> for the four rounds following that. Deep gnomes above 3rd leve also carry 3-6 darts which contain an acid which eats a three-inch hole in armor protection in 1 round, or inflicts an additional 2-8 hit points of damage on non-protected targets (such as armor with holes, ring mail, chain mail etc.) A svirfneblin can hurl two darts in a single melee round.\n\n'
+        'Deep gnomes fight as fighters of the same level, but when hurling darts they add +2 to hit probability.\n\n'
+        'Despite their metal armor and arms, these small and fast-moving creatures are able to move very quietly. They are 60% likely to be unseen by any observer, even a <a href="/creatures/kuo-toa">kuo-toan</a>, as deep gnomes are able to "freeze" in place for long periods without any hint of movement. They are surprised only 1 in 12 due to their keen hearing and smelling abilities. They are likely to surprise opponents 90% of the time.\n\n'
+        'All deep gnomes are 20% magic resistant, gaining an extra 5% magic resistance for each level they attain above 3rd. No illusion, phantasm, or hallucination is able to affect a sverfneblin\'s mind. Because of this and their high widom, speed and agility, they make all saving throws at +3 except against poison when their bonus is +2.\n\n'
+        'The svirfnebli communicate with each other by a form of racial empathy when outside their own domains. They have their own language, a dialect of gnomish which a normal gnome is 60% likely to understand. Most deep gnomes are also able to converse in the underworld cant (the trade language) and speak and understand a fair amount of <a href="/creatures/kuo-toa">kuo-toan</a> and <a href="/creatures/drow">drow</a> (tongues of their hated and feared enemies who, along with the <a href="/creatures/mind-flayer">mind flayers</a>, are the worst threat to any deep gnome gem-gathering expedition). All these small creatures can converse with speaking creatures from the <i>Elemental Plane of Earth</i> and it is 90% unlikely that any such creature will harm a svirfneblin, though the deep gnome might have to pay a heavy bribe in precious metal and gems so to escape.\n\n'
+        'Deep gnomes have infravision to 120\' and can also see into the ultraviolet spectrum to a limited extent. They have normal gnomish power with respect to determination of direction, distance beneath the surface, and detection of slopes and unsafe walls, ceilings or floors (see <b>Players Handbook - <i>Character Races</i></b>).\n\n'
+        'When being pursued by enemies, the svirfnebli will typically dash into a secret escape passage tunnelled to their size. Larger escape routes used by the deep gnomes will be filled with covered pit traps and rock deadfalls. A gnome leader is 75% likely to carry 3-12 small rock-like containers, and these will be strewn in the path of pursuing foes if no handy escape route is nearby. These crystals are crushed when stepped on by any creature weighing more than 100 pounds, and each releases a cloud of poison gas of about 10\' diameter and 15\' height. Any creature passing through such a gas cloud must save versus poison or lose consciousness for 1-12 turns. The gas cloud dissipates in 2 rounds.\n\n'
+        'Deep gnomes will usually aid any non-enemy for a fee, and they will certainly help in fighting drow, kuo-toans or mind flayers, providing there is a reasonable chance of defeating these mortal enemies. They love gems and will take great risks in order to gain them.\n\n'
+        '<i>Description</i>: A svirfneblin is gnarled and very muscular. Skin color is medium brown to brownish gray. Deep gnomes have gray eyes and tend to be bald.'
+    )
 ),
 CreatureInfo( name = 'Symbiotic Jelly',
     hd = (2,2),
@@ -13447,7 +13500,11 @@ CreatureInfo( name = 'Symbiotic Jelly',
     m_resist = 0.0,
     align = 'NN',
     size = 'S',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('This curious freak mutation takes the form of a globule of yellow jelly about 2½" in diameter. To obtain sustenance it must drain energy (which it can do remotely in a fashion whose means defy investigation) from a carnivorous creature - any monster which rends flesh except those which dwell on planes other than the <i>Prime Material</i> and those of undead class - at the same time as the monster is itself eating. This peculiar requirement is the reason for the creature\'s unique behavior.\n\n'
+        'It selects as its lair an unoccupied cave and sticks to the ceiling where it is virtually impossible to detect. When a monster - hopefully a powerful monster - ventures in, the jelly will use one of its magical powers - <a href="/spells/charm-monster-magic-user-lvl-4"><i>charm monster</i></a> - to persuade the beast telepathically to remain in the cave and attack any creature or person entering. (The monster must be one which would normally, or at least occasionally, feed on flesh, otherwise the jelly will let it pass undisturbed). The jelly then uses its other magical power - and advanced form of <i>illusion</i> - to create two illusions. The first illusion makes the charmed monster appear to be a much weaker beast, the second creates illusory treasure in the cave. Those observing the illusions will fail to recognize them as such unless they save against magic at a penalty of -7.\n\n'
+        'If the intruder is killed by the creature the jelly has charmed, the jelly will drain power through the creature as it eats. If the charmed creature loses the battle, the jelly will attempt to <i>charm</i> the victor and persuade it to replace the former occupant.'
+    )
 ),
 CreatureInfo( name = 'Tabaxi',
     hd = (2,2),
@@ -13466,7 +13523,15 @@ CreatureInfo( name = 'Tabaxi',
     align = 'CN',
     size = 'M',
     source = SourceBook.FIEND_FOLIO,
-    aliases = ['Cat-Man']
+    aliases = ['Cat-Man'],
+    description = ('The tabaxi (or cat-men, as they are known to most humans) are a race of intelligent feline humanoids which inhabit the far reaches of tropical jungles, avoiding both humans and sapient non-humans. They live in small prides of 2-8 members, each pride roaming a large territory and rarely having anything to do with other prides.\n\n'
+        'The tabaxi are extraordinary hunters, taking their prey through surprise and quick ambush. Two of them will often chase an animal directly onto the claws of a third. They have learned how to avoid detection by disguising their scent with aromatic herbs. This, combined with their natural camouflage and ability to move quickly and silently, makes them deadly opponents in the tropical forest. Like other cats, they will sometimes "play" with their wounded prey until it expires. They are also very adept at recognizing a trap for what it is - there is only a 10% chance of trapping a cat-man even if the trap is very carefully hidden and cunningly constructed.\n\n'
+        'They are tool-users when they find it convenient to be so. Their tools usually consist of bone or wooden weapons, with nothing more intricate than a bola or atlatl. However, tabaxi have an amazing aptitude for weaponry, and can discover the use of a weapon, and become adept in its use, in a remarkably short time so long as the weapon is not a complex one.\n\n'
+        'Tabaxi will generally avoid human intruders in their forests, unless they see an easy opportunity for the acquisition of weaponry.\n\n'
+        'The cat-men are tall and lithe and move with the smooth-easy grace of cats. Their fine fur is tawny and striped with black, in a pattern similar to that of a <a href="/creatures/tiger">tiger</a>. They wear no clothing. Their eyes are green-yellow and slit-pupilled. They have retractable claws. A pride will generally be 1-3 young (1 hit die, 50% chance of fighting if attacked, 50% chance of fleeing) 1-3 males and 1-3 females. The females are at least the equal of the males in fighting ability.\n\n'
+        'Tabaxi speak a small amount of the common tongue in addition to their own language. They will not engage in trade, as they consider it demeaning.\n\n'
+        'Unless armed with a weapon, a cat-man will fight with its two foreclaws (1-3 hit points of damage each) and its bite (1-3 hit points of damage).'
+    )
 ),
 CreatureInfo( name = 'Tentamort',
     hd = (8,8),
@@ -13484,11 +13549,19 @@ CreatureInfo( name = 'Tentamort',
     m_resist = 0.0,
     align = 'NN',
     size = 'S',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('There are a number of names by which this creature is known, but "tentamort" is now in most common usage. The head/body of the creature is quite small, in shape approximating to a sphere 2\' in diameter. From it grow a number of small tentacles, each of which carries a row of suckers; using these, the creature can attach itself firmly to almost any surface and can move slowly across that surface. From the side of the body opposite the small tentacles grow two longer (10\' long) and thicker (up to 5" diameter) tentacles. Each of these longer tentacles has 2 hit dice and operates independently of the other, attacking as a monster with 2 hit dice. The head/body has 4 hit dice but does not itself attack.\n\n'
+        'One of the long tentacles is a powerful constrictor. If it hits a victim it will lash for 1-6 hit points of damage. A natural roll of 20, or a roll 2 or more greater than that required to hit, means that it has wrapped itself round a victim, pinning his arms to his sides, and will automatically (no "to hit" roll needed) constrict for 1-6 hit points of damage each round thereafter until the tentacle or its victim is dead.\n\n'
+        'The other long tentacle has a hollow needle of bone, 6" long, at its end. That tentacle will also flail a victim for 1-6 hit points of damage and will also wrap itself round a victim on the required roll (20 or 2 or more greater than normal). This tentacle does not constrict; instead, the melee round following the one in which the victim was trapped, the needle will be inserted into the victim\'s flesh and he will be paralyzed instantly unless he makes a successful saving throw. Through the needle, the creature will then inject a saliva-like fluid into the victim, taking two melee rounds to inject a full dose if the victim is man-sized. (This takes but one round if the victim is smaller than man-sized, three or four rounds if larger than man-sized). When the necessary dose has been administered, the victim\'s internal organs will begin to soften and the creature will suck them out of the victim\'s body through the needle. A man will die after two melee rounds of this treatment (adjust this figure as above for creatures smaller or larger than man-sized). If the tentacle is "killed" during the time in which the saliva is being injected, it will detach from the victim and <a href="/spells/cure-disease-cleric-lvl-3"><i>cure disease</i></a> must be administered within an hour or the victim will die. Once the dose of saliva has been administered, however, only more powerful curative magic will save the victim from death within an hour even if the tentacle is detached immediately. The <a href="/spells/heal-cleric-lvl-6"><i>heal</i></a> spell will be effective, as will <a href="/spells/regenerate-cleric-lvl-7"><i>regenerate</i></a> followed by <i>cure wounds</i>.\n\n'
+        'If the head/body is killed both tentacles cease to function, but killing one long tentacle does not affect the other.\n\n'
+        'If two victims are within reach, the tentacles will attack different targets, but if only one victim is available in range, both tentacles will concentrate on him.\n\n'
+        'The creature is dark gray-green in color; the needle is the color of bone.'
+    )
 ),
 CreatureInfo( name = 'Terithran',
     hd = (5,5),
     hp = (1,1),
+    lair = 0.0,
     base_xp = 575,
     xp_hp = 6,
     lvl = 6,
@@ -13500,7 +13573,41 @@ CreatureInfo( name = 'Terithran',
     m_resist = 0.5,
     align = 'NN',
     size = 'S',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    sub_creatures = ['Terithran (Ethereal Plane)'],
+    description = ('The Terithran is a creature of the <i>Ethereal Plane</i> - a short (4\' tall) biped with long sinewy arms and an unusually large mis-shapen head. When on the <i>Prime Material Plane</i> it has a faint, shadowy appearance (though not so faint as a non-corporeal monster) which gives it AC3, though its actual AC is 6.\n\n'
+        'In normal melee the creature fights with two claws for 2-5 hit points of damage each, but it will try to avoid this type of fighting if possible so as to make full use of its unique magical powers.\n\n'
+        'The terithran has come to dislike the swirls, eddies and warps which the use of large amounts of magic on the <i>Prime Material Plane</i> causes on the <i>Ethereal Plane</i>, its homeland (where it is never found out of its lair). If it notices such disturbances, it will materialize in the area of the magic-user responsible on the <i>Prime Material Plane</i> (1\' - 10\' away from him) and attempt to drain his power and take him back to the <i>Ethereal Plane</i> for punishment. It will only appear when magic is being used, and then only if the magic is powerful enough. Clerical or druidical magic will not attract it, but magic cast by a magic-user or illusionist will (as could magic-user spells cast by a high level ranger).\n\n'
+        'Generally speaking, the use of a single spell will not attract the attention of a terithran unless the spell is of high level. Use of an 8th level magic-user spell has a 20% chance of attracting its attention, a 9th level spell 30% (a 6th level illusionist spell has a 10% chance, a 7th level spell 20%). Continual use of lower-level magic may attract it, however; if a total of 16 or more spell-levels of magic-user spells (or 13 of illusionist spells) have been used in successive melee rounds, even if no high-level spells have been involved, there is a 65% chance that a terithran has been attracted. Similarly, three consecutive uses of a magic item (such as a <i>wand of cold</i>) has the same chance of attracting it. Note that the spells need not have been cast by the same person; the requirement is fulfilled if all the spells have effect in the same 60\'x60\' area, though if more than one person has been involved in the magic-use, the terithran will appear half-way between them.\n\n'
+        'Note that spell-use by monsters will attract the terithran in the same way, and with the same chance, as spell-use by characters.\n\n'
+        'The terithran is 50% magic resistant on either <i>Plane</i> and also has a number of innate magical powers and one innate magical ability. The ability is <a href="/spells/detect-magic-magic-user-lvl-1"><i>detect magic</i></a> and it has unlimited use of this. Its magical powers are:\n\n'
+        '<i>Stunning blast</i>: a charge of ethereal waves with the effect of a <a href="/spells/power-word-stun-magic-user-lvl-7"><i>power word stun</i></a> on all creatures within a 10\' radius; a saving throw against magic negates the effect.\n\n'
+        '<i>Drain power</i>: this power removes all magic ability from a magic-user (or illusionist or ranger) until an appropriate regenerative time has passed - treat as though the spell-caster had used up all his spells; a successful save as against breath weapons will negate this effect.\n\n'
+        '<i>Cause serious wounds</i>: as the <a href="/spells/cure-serious-wounds-cleric-lvl-4"><i>clerical spell</i></a>, activated by touch (a normal attack roll is required); there is no saving throw.\n\n'
+        '<i>Transportation</i>: this permits the terithran to transport itself and one other person (the offending spell-user) back to the <i>Ethereal Plane</i>; the victim must first be grasped (treat as a normal hit with two claws - if one or both scores a "hit" the victim has been grasped) but there is no saving throw.\n\n'
+        'While on the <i>Prime Material Plane</i> the terithran is limited to 6 power-uses per day. While in an encounter, therefore, it will have as its prime objective the grasping of the target spell-user and his transportation back to the <i>Ethereal Plane</i>; it will thus reserve one power-use for <i>transportation</i>, either with a victim or, if it fails to grasp and the melee is going against it, alone in escape. However it will use other powers (up to a maximum of 5 usages) to defend itself, to get to its intended victim and so forth.\n\n'
+        'Note that the touch of the terithran does not automatically <i>cause serious wounds</i>; this is only the case if the creature is using that particular power in that melee round (though if it is, the claw damage also applies).\n\n'
+        'If the creature is encountered (in its lair) on the <i>Ethereal Plane</i>, its claws do 2-9 hit points of damage each, it can have 16 power-uses per day and the power of <i>stunning blast</i> inflicts 2-7 8-sided dice of damage.\n\n'
+        'On the <i>Prime Material Plane</i> the terithran can only be hit by silver or magical weapons.'
+    )
+),
+CreatureInfo( name = 'Terithran (Ethereal Plane)',
+    hd = (5,5),
+    hp = (1,1),
+    lair = 1.0,
+    base_xp = 575,
+    xp_hp = 6,
+    lvl = 6,
+    treasure = '',
+    iq = Intelligence.LOW,
+    speed = 18,
+    ac = 6,
+    attacks = [(4,1,1),(4,1,1)],
+    m_resist = 0.5,
+    align = 'NN',
+    size = 'S',
+    source = SourceBook.FIEND_FOLIO,
+    parent_creature = 'Terithran'
 ),
 CreatureInfo( name = 'Thoqqua',
     hd = (3,3),
@@ -13520,7 +13627,12 @@ CreatureInfo( name = 'Thoqqua',
     align = 'NN',
     size = 'S',
     source = SourceBook.FIEND_FOLIO,
-    aliases = ['Rockworm']
+    aliases = ['Rockworm'],
+    description = ('It is suspected that this beast is a larval form of some creature of the <i>Elemental Plane of Earth</i> or <i>Elemental Plane of Fire</i>, though some postulate that its origin is an <i>Elemental Plane</i> so far undefined. It is shaped like a small purple worm 2\' in diameter and 4\'-5\' long. In color it is a reddish-silver. The creature lives on the <i>Prime Material Plane</i> in rock through which it can burrow at the rate of 30\' per turn, creating a red-hot tunnel about 3\' in diameter. The tunnel remains hot for two turns after construction; in the first turn the rock is a red color and inflicts 4-14 hit points of damage on anyone touching it with bare skin, but in the second turn the rock returns to normal color and a touch inflicts 2-7 hit points of damage. No saving throw is permitted in either case, though particularly in the first turn discernable heat will be radiated from the rock.\n\n'
+        'In melee the creature will initially charge at an opponent, being able to move at 48" rate for this short burst over a distance no greater than 30\'. If the charge hits a victim, he will suffer 4-32 hit points of damage from the heat and the momentum of the charge. Thereafter its mode of attack is simply to touch a victim for 2-12 hit points of heat damage, reverting to normal speed after the initial charge.\n\n'
+        'When a victim is struck by an attack by a thoqqua, whether as a result of charge or normal attack, the prominent items he is wearing or carrying on the side of his body at which the attack is directed must save against normal fire or be rendered useless. If the attack is a charging attack, these saving throws are made at -4.\n\n'
+        'If a thoqqua is struck by a fire attack it temporarily (1-4 turns) adds the damage to its hit points. However cold attacks inflict double damage.'
+    )
 ),
 CreatureInfo( name = 'Thork',
     hd = (3,3),
@@ -13540,7 +13652,13 @@ CreatureInfo( name = 'Thork',
     align = 'NN',
     size = 'L',
     source = SourceBook.FIEND_FOLIO,
-    aliases = ['Boiler Bird']
+    aliases = ['Boiler Bird'],
+    description = ('These stork-like birds live exclusively in or near water. Although they are similar to the stork in appearance and shape, closer inspection will reveal that the feathers are metallic - they are in fact pure copper - and for this reason a bird is worth up to 200 gold pieces. An observer will also notice that wisps of steam will normally be seen rising from the bird\'s beak, though no discernable heat is radiated by the body.\n\n'
+        'The "boiler bird" is a benign creature and will only attack in self-defense - if an obviously hostile party approaches within 30\', for example.\n\n'
+        'To attack, the thork squirts a jet of boiling water at its opponent. The jet takes the form of a cone with a 10\' base diameter at the extreme range of 40\'. If a victim is struck by the water jet, he will suffer 4-32 hit points of damage (a successful saving throw halves the damage). All opponents are treated as AC10 for the purposes of this attack.\n\n'
+        'The bird is capable of sucking in the necessary quantity of water and heating it in one melee round, so its breath weapon attack will take place one round after the creature decides on this course of action. However it is capable of delivering only three such attacks each day, after which it will attempt to elude its enemies by swimming away (or, if it cannot escape, it will defend itself by striking with its beak for 1-6 hit points of damage).\n\n'
+        'The thork collects only platinum pieces or other small objects made of that metal; it normally conceals them under a boulder or in a chink in a rock face near the water\'s edge.'
+    )
 ),
 CreatureInfo( name = 'Throat Leech',
     hd = (0,0),
@@ -13557,7 +13675,12 @@ CreatureInfo( name = 'Throat Leech',
     m_resist = 0.0,
     align = 'NN',
     size = 'S',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('This leech is about 1" long and resembles an inconspicuous twig. It is always found in fresh water (streams, pool etc.)\n\n'
+        'Anyone drinking water containing a leech may (10% chance) take it into his mouth unless the water is carefully filtered before drinking. The leech will fasten itself onto the soft flesh at the back of the victim\'s throat, sucking blood at the rate of 1-3 hit points of damage each melee round, until it becomes completely distended; after ten melee rounds of sucking, the leech will be bloated and will not suck any more blood.\n\n'
+        'Each melee round the leech is in the victim\'s throat, there is a 50% chance that the victim will choke, causing an additional 1-4 hit points of damage. A victim who chokes in three successive rounds will die at the third choking.\n\n'
+        'Apart from magical means which may suggest themselves, the only way to kill a throat leech in a victim\'s throat is to place a thin, heated metal object such as a wire into the bloated leech; the hot metal will cause the leech to burst and no further damage is inflicted on the victim. However the person administering the "cure" by this method runs a risk of burning the victim\'s throat for 1-4 hit points rather than the leech - the chance of a successful probe is 5% for each dexterity point of the person making the attempt.'
+    )
 ),
 CreatureInfo( name = 'Tiger Fly',
     hd = (6,6),
@@ -13578,7 +13701,12 @@ CreatureInfo( name = 'Tiger Fly',
     align = 'NN',
     size = 'M',
     source = SourceBook.FIEND_FOLIO,
-    sub_creatures = ['Tiger Fly Female', 'Tiger Fly Larva']
+    sub_creatures = ['Tiger Fly Female', 'Tiger Fly Larva'],
+    description = ('The adult tiger fly is a large - almost man-sized - wasp with a human head and four "arms". The female\'s coloration is the same as that of a wasp, while the male is a uniform dull red.\n\n'
+        'Male tiger flies attack with two sickle-like forelimbs with which they can strike at the same opponent, even when flying. Each such successful attack inflicts 1-8 hit points of damage on the victim. The creature may also attempt to grasp its victim with its other two "arms" - a normal "to hit" roll is required, though these attacks inflict no damage - and if both these arms achieve hits the sting (which does 4-24 hit points of damage plus poison) is administered in the next melee round, requiring no "to hit" roll. Once it has grasped a victim, the male tiger fly will not release him until the victim is dead or the tiger fly itself dies. Victims are permitted a saving throw against poison. The male tiger fly can use its sting 8 times per day.\n\n'
+        'The female will always attempt to attack with its sting and all four "arms" will attempt to grasp a victim. A normal "to hit" roll is required for each "arm" and if two or more hit, the victim is grasped. The sting is administered in the next melee round, requiring no "to hit" roll, and can be used up to 6 times per day. The sting inflicts 4-16 hit points of damage and paralyzes the victim (who is allowed a saving throw). Once the female tiger fly succeeds in paralyzing a victim it will lay its eggs in the victim\'s body and the larvae (1-3 per victim) will hatch in 13-24 hours whether the victim is killed or not. During the period following the injection of the eggs and the hatching of the larvae, only a very powerful spell such as <a href="/spells/heal-cleric-lvl-6"><i>heal</i></a> will destroy the eggs. The victim will die from a massive internal hemorrhage when the hatching takes place and the larvae burrow out of his body.\n\n'
+        'Tiger fly larvae are white grubs which grow quickly to a length of 3½\'-4\'; they have horned black heads and large mandibles. The larvae will attack anything which moves, including each other, their mandibles inflicting 2-8 hit points of damage. Each larva has 1 -1 hit dice, AC9 and moves at 6" rate; it cannot fly until it later develops into an adult tiger fly.'
+    )
 ),
 CreatureInfo( name = 'Tiger Fly Female',
     hd = (4,4),
@@ -13631,7 +13759,15 @@ CreatureInfo( name = 'Tirapheg',
     m_resist = 0.0,
     align = 'NN',
     size = 'M',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('This tripedal hermaphrodite is 7\' tall, naked and hairless. Its shape is human-like, but there are significant deviations from human form. The creature has three heads of which the outer two are featureless. The middle head has three large, deeply-inset eyes, two to the front, (above the nose as a human) and one to the rear; it has ear-like organs on each side, but no mouth.\n\n'
+        'From the body of the creature spring three arms; the two at the shoulders are jointed in such a way that they can attack to the rear with equal facility as to the front of the body - these are prehensile limbs with a 6" long spike at the end of each. The third arm, emerging centrally from the chest, is like a human arm except that the hand has three strong fingers. Of the creature\'s three legs, the outer two are stumps and the central one has three unusually long and strong toes.\n\n'
+        'The tirapheg\'s mouth is located in its belly below the central arm; this is for the sole purpose of eating, the creature\'s favorite diet being decayed flesh. Above the mouth are three 3" long tentacles which writhe continuously - the function of these organs is unknown.\n\n'
+        'When this curious creature attacks to its rear the spikes will strike a victim at -2 on the "to hit" roll because the single eye gives poor depth of vision. A spike causes 1-4 hit points of damage if it hits.\n\n'
+        'When attacking to its front, the creature strikes with the spikes, though with no "to hit" penalty; if both spikes hit a victim, the central arm will hit the same victim automatically, requiring no "to hit" roll, grasping the victim\'s neck and strangling him for an additional 1-4 hit points of damage.\n\n'
+        'Normally the tirapheg will shy away from other creatures, but its behavior can be unpredictable and it has been known for a tirapheg to attack a party of adventurers for no apparent reason.\n\n'
+        'If the creature is cornered in melee, with the fight going against it but a retreat impossible (it moves very slowly) it will project two <i>illusions</i> - replicas of itself - which it controls telepathically. These illusions will fight as the original creature and will take no damage themselves, though they will do damage to opponents if they are not recognized for what they are (treat as <a href="/spells/phantasmal-force-magic-user-lvl-3"><i>phantasmal force</i></a> except that the illusions disappear only when the creature is killed or when its opponents retreat out of sight). At the instant the illusions are created by the creature, it has the ability to generate a split-second blinding flash of light (to cover the appearance of illusions) which causes all creatures and persons within a 30\' range to stand <i>confused</i> for one melee round. The tirapheg and its illusions can attack in the melee round in which the illusions are created.'
+    )
 ),
 CreatureInfo( name = 'Trilloch',
     hd = (0,0),
@@ -13646,7 +13782,13 @@ CreatureInfo( name = 'Trilloch',
     m_resist = 0.0,
     align = 'NN',
     size = 'S',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('The trilloch is an energy being from the <i>Negative Material Plane</i> which lives on the waning life-force of dying creatures and uses its unique powers to accelerate the process which releases its "food". So far as is known, the creature has no fixed definite form. It cannot be detected by normal means, though a <a href="/spells/detect-magic-cleric-lvl-1"><i>detect magic</i></a> spell cast within 60\' of the creature will reveal its distinctive aura and <a href="/spells/dispel-magic-cleric-lvl-3"><i>dispel magic</i></a> within the same range will drive it away.\n\n'
+        'So far as is known, no other magic has any effect on a trilloch.\n\n'
+        'If melee occurs in the presence of a trilloch, detected or otherwise, all attacks will be at +1 hit probability and successful hits will inflict +1 damage. The creature can also influence the behavior of unintelligent monsters, making them twice as likely to attack a party encountered.\n\n'
+        'A trilloch will often stay with a large, powerful monster, thriving on the huge amounts of life-force released by its victims. If this "host" is killed, the trilloch will attach itself to the victor and stay with him either until driven off or until another, even more powerful creature, kills its new host, whereupon it will transfer to that creature.\n\n'
+        'Experience of trilloch behavior is so limited that it may have yet other powers, as yet undetected. Certainly no means have yet been discovered whereby the creature can be harmed, so far as can be detected.'
+    )
 ),
 CreatureInfo( name = 'Giant Troll',
     hd = (8,8),
@@ -13664,7 +13806,14 @@ CreatureInfo( name = 'Giant Troll',
     m_resist = 0.0,
     align = 'CE',
     size = 'L',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('Giant trolls are hideous <a href="/creatures/hill-giant">hill giant</a>/<a href="/creatures/troll">troll</a> crossbreeds (resembling the latter in all but size). They are greatly feared. Their skin is red-brown and they have red rimmed eyes.\n\n'
+        'Despite their pot-bellied appearance they are immensely strong and inflict terrible damage (2-16 hit points of damage) with their favorite weapon - a large spiked club. It is rare (10% chance) for a giant troll to be encountered without such a weapon, but if so it can fight with its two claws, each of which inflicts 2-7 hit points of damage and can be directed at different opponents.\n\n'
+        'They <i>regenerate</i> as trolls but at a rate of 2 hit points per melee round, but cannot re-bond severed limbs.\n\n'
+        'They are able to catch missiles 25% of the time, if in reach.\n\n'
+        'Before a giant troll can be killed, at least 10 hit points of damage must be inflicted on it by fire. If this condition is not met and the giant troll is reduced to a single hit point, any further damage on it has no effect save to negate <i>regeneration</i>.\n\n'
+        'Giant trolls are found in nearly every clime. They have a very acute sense of smell and 90\' infravision.'
+    )
 ),
 CreatureInfo( name = 'Giant Two-Headed Troll',
     hd = (10,10),
@@ -13682,7 +13831,12 @@ CreatureInfo( name = 'Giant Two-Headed Troll',
     m_resist = 0.0,
     align = 'CE',
     size = 'L',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('These ferocious <a href="/creatures/ettin">ettin</a>/<a href="/creatures/troll">troll</a> crossbreeds are two-headed and stand at least 10\' tall. They regenerate as do trolls but at the rate of 1 hit point every melee round, though they cannot re-bond severed limbs.\n\n'
+        'They attack with two claws (1-6 hit points of damage each) and two bites (1-10 hit points of damage each). Both bites are directed at one opponent.\n\n'
+        'These creatures prefer darkness; they are basically nocturnal and usually dwell in underground caverns. Their infravision is normal.\n\n'
+        'Like the ettin, the giant two-headed troll can only be surprised 1 chance in 6. They have adopted the ettin mode of dress - moth-eaten and filthy animal skins.'
+    )
 ),
 CreatureInfo( name = 'Ice Troll',
     hd = (2,2),
@@ -13700,7 +13854,12 @@ CreatureInfo( name = 'Ice Troll',
     m_resist = 0.0,
     align = 'CE',
     size = 'L',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('This relative of the normal <a href="/creatures/troll">troll</a> closely resembles its stronger cousin except that it has a very cold, semi-transparent body. These creatures dwell in moist areas of dungeons, usually near running water, and have the <i>regenerative</i> powers of a normal troll but at a rate of 2 hit points per melee round, so long as the regenerating members can immerse themselves in water. A severed limb can move a distance of 30\' in search of water and will always move towards water if there is some in range.\n\n'
+        'The ice troll attacks with two claws for 1-8 hit points of damage each. They may be directed against different opponents.\n\n'
+        'Ice trolls are unaffected by cold and can only be hit by magical weapons or missiles. Fire inflicts double damage on them.\n\n'
+        'They have superior (90\') infravision and an acute sense of smell.'
+    )
 ),
 CreatureInfo( name = 'Spirit Troll',
     hd = (5,5),
@@ -13717,7 +13876,12 @@ CreatureInfo( name = 'Spirit Troll',
     m_resist = 0.3,
     align = 'CE',
     size = 'L',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('This odious creature is the product of perverted magical interbreeding of <a href="/creatures/troll">trolls</a> and <a href="/creatures/invisible-stalker">invisible stalkers</a>, though the secret of its creation is believed to be lost and only thirty or so of these creatures are known to exist. The spirit troll is invisible; characters able to <i>see invisible</i> will observe it to be very similar to a troll, slightly shorter and with diffused features.\n\n'
+        'The creature can only be hit by magical weapons. Fire inflicts full damage on it but it is invulnerable to cold. It <i>regenerates</i> as does a troll, and at the same rate (3 hit points per round).\n\n'
+        'It attacks with its fangs and two sharp claws, against 3 different opponents if it so desires. The damage inflicted by its fangs (1-6 hit points) is normal except that the spirit troll adds to its own hit points the number of hit points of damage inflicted on its victim. Damage inflicted by the creature\'s claws (1-3 hit points each) is taken not only from the hit points of the victim but also from his strength points. Strength points lost in this way are recovered in 2-8 turns. If a character\'s strength is reduced to zero, he dies, and if it is reduced to 1 or 2 points, he will be rendered comatose, only recovering when (and if) sufficient points are recovered to raise his strength to 3 points or more.\n\n'
+        'The spirit troll has an acute sense of smell and superior (120\') infravision.'
+    )
 ),
 CreatureInfo( name = 'Tween',
     hd = (1,1),
@@ -13733,7 +13897,14 @@ CreatureInfo( name = 'Tween',
     m_resist = 0.0,
     align = 'NN',
     size = 'M',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('The tween is a being existing on the <i>Ethereal Plane</i> but visible to observers on the <i>Prime Material Plane</i> as a smoky, human-like outline. Commonly they assume a squat human shape, but have limited <a href="/spells/shape-change-magic-user-lvl-9"><i>shape change</i></a>.\n\n'
+        'They can be attacked only by a character with the power to enter the <i>Ethereal Plane</i> or by such means as using <i>oil of etherealness</i>. If such a melee is joined, the tween will fight with a weapon, usually a sword.\n\n'
+        'The tween\'s contact with humans on the <i>Prime Material Plane</i> is its adoption of a host - each tween will usually have a host, though occasionally one is without a host temporarily (after the death of its host, for instance). After several hours with a new host, a tween will gradually assume the general shape and characteristics of that host, who will appear to have a "shadow" nearby. Once a host has been selected, a tween will remain permanently with him until he or the tween dies. In selecting a host, a tween will prefer an intelligent being, human or near-human, though they have no particular preference for player-characters. A tween will communicate telepathically with its host.\n\n'
+        'The tween has the ability to see a few seconds into the future and is able to increase its host\'s luck. It is also able to move material things short distances, reacting with such speed that it can affect the movement of a weapon in melee. For example, it can move a sword so that it hits rather than misses. As a result, any character or creature with a tween "partner" has two die rolls instead of one, whenever a die roll is called for, and may select the more advantageous of these rolls. (This applies to "to hit" rolls, saving throws and the like).\n\n'
+        'In contrast, while a tween has a beneficial effect on the actions of its host, it has the reverse effect on any other creature - friend or foe, human or otherwise, player-character or otherwise - within 50\' of the host. Again, two die rolls are made in respect of the persons or creatures affected whenever a die roll is called for; however the less advantageous is selected.\n\n'
+        'A character with a tween partner is therefore something of a mixed blessing to any companions.'
+    )
 ),
 CreatureInfo( name = 'Umpleby',
     hd = (6,6),
@@ -13749,7 +13920,15 @@ CreatureInfo( name = 'Umpleby',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('The umpleby is a biped, about 8\' tall and weighing about 400 pounds. It is covered in wild, straggly hair of varying shades of brown.\n\n'
+        'It is apparently rather a stupid creature; on meeting a party of adventurers it will simply shamble along with them, neither helping their endeavors nor willing to be left behind, constantly getting in their way and being apparently incapable of moving in silence. It will fight if attacked but will not normally fight in aid of a party, or against them. If it must, it strikes for 1-4 hit points of damage with its hands.\n\n'
+        'Its appearance, however, is deceptive. It has a great love of treasure and can detect precious metal and gems (more than 1,000 coins and/or 50 gems) up to 100\' away, even through solid rock. In its lair it keeps a huge treasure trove of these items but it will never reveal the location of its lair, even if threatened with death (though <a href="/creatures/charm-monster-magic-user-lvl-4"><i>charm monster</i></a> may overcome this reluctance).\n\n'
+        'The umpleby can speak the common tongue in a halting fashion but will rarely do so and is in general an uncommunicative creature. However an offer of food and water (it is incessantly hungry and thirsty) will cause it to assume instant and total loyalty to its benefactor; it will help and advise him (though not to extent of telling him the location of its lair). This loyalty will only be broken if the benefactor does not reward the umpleby with a reasonable proportion of any coins or gems discovered as a result of its advice; if such an event occurs, the umpleby will leave the party and, if the party pursues the creature, will refuse to co-operate in any way with any members of it.\n\n'
+        'Within the creature\'s body it can generate and store large quantities of static electricity. Each day it can deliver a total of 50 hit points of damage by "discharging" wholly or partially - it does this simply by touching its victim, and a normal "to hit" roll is required unless the victim is unsuspecting. Any metal armor of whatever type is treated as AC10 with regard to this attack, though appropriate magical and dexterity bonuses still apply. It does not have to deliver all 50 hits in one strike and can regulate the amount of damage it inflicts, usually selecting the range 9-16 hit points of damage. When it delivers the 50th hit point of damage the umpleby immediately goes to sleep for one hour during which it "recharges" up to 50% of its full potential, if left undisturbed. It requires at least four hours of sleep to recharge 75% and fully 8 hours to return to a full charge (potential 50 hit points of damage). If awakened prior to having completed a single hour of sleep, the umpleby will have recharged 4-16 points, and similar partial charging will have occurred if the creature is awakened after one hour but before four hours sleep, or after four hours but before eight hours.\n\n'
+        'The umpleby often makes nets out of its hair and stores them by wrapping them around its waist. It can throw such a net 30\' with the accuracy of a short-range arrow. The hair is very tough and is 50% more difficult to cut, break or burn than a magical <a href="/spells/web-magic-user-lvl-2"><i>web</i></a>, though there is no danger of suffocation.\n\n'
+        'It will only use its nets and electrical attacks if threatened. The creature is immune to attacks of an electrical nature.'
+    )
 ),
 CreatureInfo( name = 'Black Urchin',
     hd = (1,1),
@@ -13768,7 +13947,11 @@ CreatureInfo( name = 'Black Urchin',
     m_resist = 0.0,
     align = 'NN',
     size = 'S',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('The most common of the urchins, the black urchin is more dark gray in color than black.\n\n'
+        'Each melee round the black urchin can fire 1 spine with the accuracy of a +1 light crossbow. A successful hit inflicts 1-6 hit points of damage on its victim.\n\n'
+        'The gem contained within the creature is worth 10-100 gold pieces.'
+    )
 ),
 CreatureInfo( name = 'Green Urchin',
     hd = (2,2),
@@ -13787,7 +13970,11 @@ CreatureInfo( name = 'Green Urchin',
     m_resist = 0.0,
     align = 'NN',
     size = 'S',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('This urchin is a pale green color and is very difficult to detect by sight in water (5% chance).\n\n'
+        'Each melee round the creature can fire two spines with the accuracy of a +2 light crossbow. If a spine hits, it inflicts 2-7 hit points of damage on the victim.\n\n'
+        'The gem contained within the creature is worth 40-400 gold pieces.'
+    )
 ),
 CreatureInfo( name = 'Red Urchin',
     hd = (3,3),
@@ -13806,7 +13993,11 @@ CreatureInfo( name = 'Red Urchin',
     m_resist = 0.0,
     align = 'NN',
     size = 'S',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('This creature is a dull red color though its spines have black tips.\n\n'
+        'Each melee round the red urchin can fire 3 spines with the accuracy of a +3 light crossbow. If a spine hits, it inflicts 2-5 hit points of damage on a victim; the tips of the spines also carry a venom which will put the victim to sleep for 1-4 melee rounds unless he makes a saving throw against poison.\n\n'
+        'The gem contained within the creature is worth 90-900 gold pieces.'
+    )
 ),
 CreatureInfo( name = 'Silver Urchin',
     hd = (5,5),
@@ -13825,7 +14016,11 @@ CreatureInfo( name = 'Silver Urchin',
     m_resist = 0.0,
     align = 'NN',
     size = 'S',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('This, the rarest of the urchins, is a dull silver in color with black tips on the spines.\n\n'
+        'Each melee round the silver urchin can fire 5 spines with the accuracy of a +5 light crossbow. If a spine hits, it inflicts 2-5 hit points of damage on a victim; the tips of the spines carry a venom which acts on the victim\'s nervous system and puts him into a catatonic trance for 1-3 days unless he makes his saving throw against poison.\n\n'
+        'The gem contained within the creature is worth 250-2,500 gold pieces.'
+    )
 ),
 CreatureInfo( name = 'Yellow Urchin',
     hd = (4,4),
@@ -13844,7 +14039,11 @@ CreatureInfo( name = 'Yellow Urchin',
     m_resist = 0.0,
     align = 'NN',
     size = 'S',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('This creature is colored a very pale yellow and like the <a href="/creatures/green-urchin">green urchin</a> is very difficult to see when in water (5% chance). Its spines have light green tips.\n\n'
+        'Each melee round the yellow urchin can fire 4 spines with the accuracy of a +4 light crossbow. If a spine hits, it inflicts 1-6 hit points of damage on a victim; the tips of the spines carry a venom which will paralyze the victim for 1-4 turns unless he makes his saving throw against poison.\n\n'
+        'The gem contained within the creature is worth 160-1,600 gold pieces.'
+    )
 ),
 CreatureInfo( name = 'Vision',
     hd = (8,8),
@@ -13860,7 +14059,13 @@ CreatureInfo( name = 'Vision',
     m_resist = 0.75,
     align = 'LE',
     size = 'M',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('Misguided research by a high-level illusionist (which led quickly to his death) created the visions - summoned beings which appear as shadows. The visions are unable to return to their own plane until their physical manifestations are destroyed on the <i>Ethereal/Prime Material Plane</i>; thus they roam the underworld in perpetual frustration and attack all they meet.\n\n'
+        'A vision exists partially on the <i>Prime Material Plane</i> and partially on the <i>Ethereal Plane</i>; if attacked from the material plane they are treated as AC0, but if attacked ethereally they are AC10.\n\n'
+        'A vision attacks by suggestion, not by physical means. Anyone seeing a vision within 30\' must roll 3d6, add 3, and compare the result with his intelligence. If the character\'s intelligence is the greater, he has saved and can no longer be threatened by that particular vision. Any previous "aging" he has suffered is seen to be unreal. A character failing to save will believe that he has aged ten years (the effects of aging are covered in the <b>Dungeon Master\'s Guide</b>). Each character seeing a vision is "attacked" in the same way and must attempt the special saving throw, repeating this process each round.\n\n'
+        'If a character kills a vision, he must make a normal saving throw against magic, if this is successful, the apparent aging vanishes, but if not it is real and permanent.\n\n'
+        'A vision can only be attacked by magical or silver weapons on either plane of existence. The clerical <a href="/spells/bless-cleric-lvl-1"><i>bless</i></a> spell inflicts 3-18 hit points of damage on it, while <a href="/spells/dispel-illusion-illusionist-lvl-3"><i>dispel illusion</i></a> cast on a vision causes 0-5 (d6 minus 1) hit points of damage on it per level of the caster (so a 7th level illusionist casting this spell on a vision would roll d6 seven times, subtracting 1 from each roll and adding the results).'
+    )
 ),
 CreatureInfo( name = 'Vodyanoi',
     hd = (8,8),
@@ -13879,7 +14084,12 @@ CreatureInfo( name = 'Vodyanoi',
     m_resist = 0.0,
     align = 'CE',
     size = 'L',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('These predators are close aquatic relatives of the <a href="/creatures/umber-hulk">umber hulk</a> which live in deep bodies of fresh water. They are similar in appearance to their cousins but have only two eyes (and thus lack the <i>confusion</i> ability of the umber hulk); their skin is green and slimy and they have webbed claws. They prey on large freshwater creatures but view humans as particular delicacies. They are extremely territorial creatures and will ferociously defend the area around their lairs.\n\n'
+        'Their powerful claws are capable of rending the hull of any passing boat, while their strength and bulk allow them to overturn smaller vessels.\n\n'
+        'In melee they attack with thier two claws (3-12 hit points of damage each) and their mandibles (1-10 hit points of damage). Once per day a vodyanoi can summon (with a 50% chance of success) 1-20 <a href="/creatures/electric-eel">electric eels</a> to its aid.\n\n'
+        'It is believed that a saltwater species also exists which is twice as large and much more ferocious than the vodyanoi or the umber hulk, but little firm information is available.'
+    )
 ),
 CreatureInfo( name = 'Volt',
     hd = (2,2),
@@ -13899,7 +14109,11 @@ CreatureInfo( name = 'Volt',
     m_resist = 0.0,
     align = 'NN',
     size = 'S',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('This curious but dangerous little creature appears as a near-spherical bundle of bristly gray hair with two bulbous eyes, two small curved horns and a 3\' long tail. It floats as if by <a href="/spells/levitate-magic-user-lvl-2"><i>levitation</i></a> with mobility added.\n\n'
+        'It first attacks by propelling itself towards its victim\'s neck and biting - 1-4 hit points of damage if the bite succeeds. A successful bite means that it has locked onto its victim\'s neck and cannot be detached until it (or its victim) is dead. During the time it is attached it will continue to drain blood from the victim\'s neck for 1-4 hit points of damage each round and will also lash the victim with its tail. The tail produces a jolt of electrical energy each time it strikes, for 2-12 additional hit points of damage per round. After the volt has attached itself to a victim\'s neck, it requires no "to hit" roll either for its bite or for its tail attack.\n\n'
+        'These are bad-tempered creatures and will usually attack even if they are not themselves attacked or threatened.'
+    )
 ),
 CreatureInfo( name = 'Vortex',
     hd = (2,2),
@@ -13916,7 +14130,11 @@ CreatureInfo( name = 'Vortex',
     m_resist = 0.0,
     align = 'CN',
     size = 'S',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('The vortex appears as a whirlwind - 4" high, 1" base diameter and 3" diameter top (though larger ones are believed to exist on the <i>Elemental Plane of Air</i>). It appears to be free willed and cannot be summoned. The physical form of the vortex is a small sphere about the size of a grapefruit which bobs and dodges about it in the center of the whirlwind. Its small size and its speed of movement make it difficult to hit; thus its high AC value.\n\n'
+        'If a character is "hit" by the vortex, he suffers no immediate damage, but is caught in the whirling cone of air and starts to spin. Thereafter he can only be released when the vortex is killed and he will take 1-3 hit points of damage per round as a result of the spin. Additionally there is a 5% cumulative chance per melee round of a spinning victim being killed by a particularly violet air-current.\n\n'
+        'A single vortex is only large enough to accommodate one victim of human size, though it could contain two smaller creatures simultaneously. A victim trapped inside the vortex cannot hit th being\'s sphere - only those who are not trapped may do so.'
+    )
 ),
 CreatureInfo( name = 'Whipweed',
     hd = (1,1),
@@ -13935,7 +14153,13 @@ CreatureInfo( name = 'Whipweed',
     align = 'NN',
     size = 'S',
     source = SourceBook.FIEND_FOLIO,
-    sub_creatures = ['Whipweed Stalk']
+    sub_creatures = ['Whipweed Stalk'],
+    description = ('This strange creature was originally named in the belief that it was a plant; though it displays behavior which supports that theory, it also has many qualities which are not plant-like (though the druidic spells relating to plants affect it, curiously enough).\n\n'
+        'The whipweed has two stalks, thin and whip-like with a few appendages which look like small leaves. When fully grown, the stalks are up to 15\' long, though smaller specimens are just as common. The stalks are connected to a spheroidal base or "body" which contains a small brain and is equipped with eight small legs; the creature is thus capable of limited movement and can withdraw the root-like appendages below its body from the earth to permit locomotion. The whipweed hates sunlight so is usually found underground or in the heart of a deep forest. It draws its sustenance from the remains of its animal prey, though it has no mouth and its food appears to be absorbed by the stalks and transferred internally to the body.\n\n'
+        'Its need to embed its "roots" into the earth is not fully understood; certainly the creature can survive apparently without limit in rocky areas containing virtually no soil, and a small crevice in a rock appears to be quite sufficient to cater for its need to root from time to time.\n\n'
+        'It attacks anything which moves within range of its stalks, each stalk hitting as a monster with 3 hit dice and capable of inflicting 1-10 hit points of damage. The stalks will attack different victims if two are in range. If a stalk is "killed", the body is not affected, and to kill the creature the body must be destroyed. If the body is destroyed (reduced to zero hit points or below) the whipweed dies but the stalks go into a mad frenzy for one melee round before they become inert; during this time they attack three times each and each attack inflicts double the normal damage on the victim if successful.\n\n'
+        'If both stalks are destroyed the base/body will attempt to escape.'
+    )
 ),
 CreatureInfo( name = 'Whipweed Stalk',
     hd = (2,2),
@@ -13970,7 +14194,10 @@ CreatureInfo( name = 'Witherstench',
     align = 'NN',
     size = 'S',
     source = SourceBook.FIEND_FOLIO,
-    aliases = ['Skunk Beast']
+    aliases = ['Skunk Beast'],
+    description = ('A bizarre relative of the <a href="/creatures/skunk">skunk</a>, this beast has little fur - and what little there is sprawls in dirty patches over the skin, which itself is blotchy yellow and covered in tiny purple spots. It lives mainly in dank and filthy areas where carrion - its food - can be found.\n\n'
+        'In melee it attacks with two claws for 1-6 hit points of damage each. Its spots constantly emit a powerful and nauseating odor. All within 30\' of the creature must save against poison or be nauseated, retching uncontrollably. Victims who fail to make their saving throw will be helpless and unable to defend against the creature\'s attack. However the effects wear off after the skunk beast moves out of a 30\' range.'
+    )
 ),
 CreatureInfo( name = 'Witherweed',
     hd = (3,3),
@@ -13989,7 +14216,12 @@ CreatureInfo( name = 'Witherweed',
     size = 'L',
     source = SourceBook.FIEND_FOLIO,
     sub_creatures = ['Large Witherweed', 'Huge Witherweed',
-        'Colossal Witherweed']
+        'Colossal Witherweed'],
+    description = ('This weed is usually found amongst ruined masonry, across doors or smothering a long-forgotten treasure chest in the underworld. It is typically quite extensive; an average specimen will cover an area approximately 20\' square, though weeds up to twice this size have been known and even larger ones are theoretically possible. The average specimen has 3 hit dice, but larger weeds have 4, 5 or even 6 hit dice.\n\n'
+        'The weed is dry and is therefore easily burned, but, when burning, it produces toxic smoke; anyone inhaling the smoke must save against poison or die instantly. The fire will burn and the smoke will stream forth for 1 round per square foot of vegetation. Only a strong wind will blow the heavy, oily smoke away - otherwise it forms a cloud of volume equal to 9 times the area of the witherweed and will take at least four hours to dissipate.\n\n'
+        'The weed attacks with its many, equally spaced frond; an average specimen will have 13-24 so positioned that at least one front can attack each person confronting it. A frond hit drains 1-4 dexterity points from its victim (a successful saving throw against poison will halve the number of points drained). If a victim has the maximum of 4 dexterity points drained from a single hit he also suffers a nervous seizure - total collapse for 2 melee rounds, followed by a further 5 melee rounds during which he attacks at -2 hit probability and moves at 75% of his normal rate; dexterity bonuses (if any) do not apply during this 7 round period.\n\n'
+        'A victim becomes incapacitated if his dexterity is reduced below 3, and dies if it is reduced to zero or below. Half the dexterity points lost are recovered by living victims naturally at the rate of 1 point per day, but the remainder can only be regained by the casting of <a href="/spells/cure-disease-cleric-lvl-3"><i>cure disease</i></a> on the victim.'
+    )
 ),
 CreatureInfo( name = 'Large Witherweed',
     hd = (4,4),
@@ -14061,7 +14293,20 @@ CreatureInfo( name = 'Xill',
     m_resist = 0.7,
     align = 'LE',
     size = 'M',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('Xill are bipedal, flame-red creatures, with short, powerful bodies and four arms, all of which can wield weapons simultaneously. If unarmed, they fight with four claws for 1-4 hit points of damage each. The high dexterity of the xil not only accounts for its low armor class (its natural AC is 4) but also gives the creature a hit probability bonus of +3 when attacking (+5 with missiles).\n\n'
+        'The xill has apparently only one aim in life - to produce young; the creatures are asexual and reproduce by producing eggs which must gain sustenance prior to hatching in the stomach of a living human or near-human. Thus they will try to snatch victims alive.\n\n'
+        'Xill have the innate power of <i>etherealness</i>. They may transfer from the <i>Ethereal</i> to the <i>Prime Material Plane</i> in one segment (6 seconds), but the reverse process takes two melee rounds. A xill will usually initiate an attack by emerging suddenly from the <i>Ethereal Plane</i> near to a chosen victim, achieving surprise 90% of the time. In attacking, it will use two of its arms in an attempt to grapple its victim, while using the other two (which might carry weapons) to subdue. The subduing attacks are resolved in the same way as attacks to subdue a dragon. Upon announcement of intent to <i>strike to subdue</i>, all hit points of damage scored by attacks on the victim (from the two subduing arms) are considered non-fatal battering/bruising damage. Each melee round the following fraction is calculated:\n\n'
+        'Total number of "subdual" hit points scored\n'
+        'divided by\n'
+        'Total number of hit points of the victim\n\n'
+        'The result is converted into a percentage, and that is the percentage chance of the victim being subdued in that round. Percentile dice are rolled to determine the result and if the score is less than or equal to the percentage derived, the victim is subdued.\n\n'
+        'The grappling attacks are normal; both grappling arms must score a hit for the grapple to be successful, otherwise it is assumed that the victim has been able to avoid being grappled. However if the victim has previously been subdued, the grappling attack will always succeed in the next melee round. If the xill succeeds in grappling a victim, it will then inject a paralyzing fluid into his bloodstream through its claws, (normal saving throw applicable) in the next melee round. Victims grappled thus have one melee round to break free before the fluid is injected, and they may attempt to do so by "saving against strength" - a d20 is rolled, and if the result is lower than the victim\'s strength, he has escaped from the clutches of the xill.\n\n'
+        'In summary, the xill attempts to grapple and paralyze the victim, or to subdue and grapple him. Once either of these results has been achieved, it will attempt to become <i>Ethereal</i> (and its power to do so will extend to its paralyzed/subdued victim) and carry the victim to its lair on the <i>Ethereal Plane</i> to inject the eggs. During this two-melee-round transitory period when the xill and its victim are turning <i>ethereal</i>, the xill cannot move, it is vulnerable to magic (i.e. its magic resistance is reduced to zero) and can be hit by weapons at -3 hit probability. When the transition is complete, however, the creature can only be attacked ethereally and its normal magic resistance is restored.\n\n'
+        'If attacked in its lair on the <i>Ethereal Plane</i>, the first priority of the xill will be to save and protect its young and to remove any egg-bound prisoners to a safe place, only then attacking invaders.\n\n'
+        'The xill eggs hatch after 1-4 days in the victim\'s stomach; for the next 2-8 days the larvae collectively inflict 11-20 hit points of damage on the victim per day as they mature, and they then emerge from the victim, killing him instantly, as 2-16 small xill which grow rapidly (1-4 hours) into full-sized creatures.\n\n'
+        '<a href="/spells/protection-from-evil-cleric-lvl-1"><i>Protection from evil</i></a> will always succeed, on either plane, in warding off a xill.'
+    )
 ),
 CreatureInfo( name = 'Xvart',
     hd = (1,1),
@@ -14080,7 +14325,14 @@ CreatureInfo( name = 'Xvart',
     align = 'CE',
     size = 'S',
     source = SourceBook.FIEND_FOLIO,
-    sub_creatures = ['Xvart Leader']
+    sub_creatures = ['Xvart Leader'],
+    description = ('These small humanoid creatures have bright blue skin and orange eyes. They usually wear loose cloth doublets.\n\n'
+        'Xvarts are mediary between <a href="/creatures/goblin">goblins</a> and <a href="/creatures/kobold">kobolds</a> and will generally attack the latter. They fear humans and will only attack a human party if the xvarts are greatly in the majority.\n\n'
+        'In every group of 20 xvarts there will be one carrying a net, used to entangle and hinder opponents in melee. If 100 xvarts are encountered, one will be a strong leader-type, from 3½\' to 4½\' tall with 8-11 hit points and attacking as a monster with 2 hit dice.\n\n'
+        'Ordinary xvarts fight with small swords for 2-5 hit points of damage; leaders use a hand axe, mace, flail or morning star with damage by weapon type. Though most xvarts are of the fighter class, a few (5% of a group encountered) will have magic use at 1st or 2nd experience level. One or more tribal shamans will be found in a xvart lair.\n\n'
+        'Xvarts speak their own language and are fluent in the <a href="/creatures/goblin">goblin</a> and <a href="/creatures/kobold">kobold</a> tongues. If encountered in their lair, they will always be a leader of 11 hit points and two lieutenants of 8 hit points each, 3-30 <a href="/creatures/giant-rat">giant rats</a> used as guardians and females and young equal to 120% and 200% of the number of males, respectively. Shamans and xvarts with magical abilities will be present in the appropriate proportions.\n\n'
+        'Xvarts delight in taking prisoners for torture or ransom (or both). They have been known to assist or be assisted by <a href="/creatures/wererat">wererats</a> in these endeavors. Their lair is usually in an underground cavern or deep in the heart of a forest.'
+    )
 ),
 CreatureInfo( name = 'Xvart Leader',
     hd = (0,0),
@@ -14114,7 +14366,14 @@ CreatureInfo( name = 'Yellow Musk Creeper',
     m_resist = 0.0,
     align = 'NN',
     size = 'L',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('The yellow musk creeper is a large light green climbing plant with leaves like ivy, dark green buds, and flowers like those of an orchid, bright yellow in color with splashes of purple. Each plant will have 2-12 flowers and 1-4 buds; it extends over an area up to 20\' square. Typically, the plant is found in soily areas underground, though specimens have been identified in the heart of thick forests. The creeper can climb up trees and rock faces with equal facility. It is sometimes planted deliberately in locations where it will "guard" treasure.\n\n'
+        'When approached within 10\', the creeper will "attack", the flowers swaying in a hypnotic way before the face of the victim. A successful "hit" indicates that one of the flowers has puffed a dust, smelling of musk, into the victim\'s face. The victim must then make a saving throw against magic or be entranced and walk into the mass of the plant, resisting any attempt to restrain him and taking the remainder of the melee round to do so.\n\n'
+        'Once the victim is in the heart of the plant, aerial roots attach to his skull (no "to hit" roll required) and his brain is devoured at the rate of 1-4 intelligence points per round.\n\n'
+        'Any hit on a root will cause it to release, but so many roots will be attached simultaneously that the intelligence drain cannot be prevented by such means. The only way to kill the creeper is to stab at its bulbous root which will be found buried in the earth 1\' below the surface. The root will have various personal belongings of previous victims buried near it, since the creeper appears capable of scraping together enough soil from the area nearby to cover evidence of its previous "successes".\n\n'
+        'The effects of the intelligence drain varies. If the drain in a given round reduces the victim\'s intelligence to zero or below, the victim dies, a bud flowers and a new bud appears. If the victim\'s intelligence is reduced to one or two points, the victim immediately becomes a <a href="/creatures/yellow-musk-zombie">yellow musk zombie</a>.\n\n'
+        'Each creeper will have one yellow musk zombie for every two flowers. Intelligence loss in those not killed or transformed into yellow musk zombies is temporary and will be regained at the rate of one point per day of rest. A <a href="/spells/heal-cleric-lvl-6"><i>heal</i></a> spell cast on the victim will restore all lost intelligence points immediately.'
+    )
 ),
 CreatureInfo( name = 'Yellow Musk Zombie',
     hd = (2,2),
@@ -14131,7 +14390,13 @@ CreatureInfo( name = 'Yellow Musk Zombie',
     m_resist = 0.0,
     align = 'NE',
     size = 'M',
-    source = SourceBook.FIEND_FOLIO
+    source = SourceBook.FIEND_FOLIO,
+    description = ('Yellow musk zombies are victims of the <a href="/creatures/yellow-musk-creeper">yellow musk creeper</a> whose intelligence has been reduced to 1 or 2 points. When this takes place, the victim becomes mindless, his skin turns yellow and his eyes become fixed and glazed. The draining process stops and the plant injects a seed into the victim\'s skull, where it is to germinate. The victim is now a yellow musk zombie under the control of the plant; the zombie will fight on the plant\'s behalf, attempting to find new victims for it and drag them or tempt them into its clutches.\n\n'
+        'Yellow musk zombies retain the same hit points, armor, weapons and belongings as they had prior to their "capture"; however in melee they attack as monsters with 2 hit dice. They will not be able to use any of the spells or psionic abilities they controlled when "alive" and will receive no dexterity or wisdom bonuses, though strength bonuses and penalties still apply.\n\n'
+        'They serve the parent plant for two months before wandering off to drop lifeless in some quiet corner, unless they are killed beforehand. In either case, the implanted seedling sprouts from the decaying corpse, growing quickly (within an hour after "death") into a new <a href="/creatures/yellow-musk-creeper">yellow musk creeper</a>.\n\n'
+        'A yellow musk zombie is not true undead and thus cannot be turned or destroyed/controlled by a cleric. However, like undead, it is immune to the effects of all mind-influencing spells such as <a href="/spells/charm-monster-magic-user-lvl-4"><i>charm</i></a>, <a href="/spells/hold-monster-magic-user-lvl-5"><i>hold</i></a>, <i>illusion</i>, <a href="/spells/sleep-magic-user-lvl-1"><i>sleep</i></a> and so forth.\n\n'
+        'A yellow musk zombie can be cured of its affliction by the death of its master plant and the use of <a href="/spells/neutralize-poison-cleric-lvl-4"><i>neutralize poison</i></a> and <a href="/spells/heal-cleric-lvl-6"><i>heal</i></a> cast on the creature in either order, one spell immediately after the other. The victim will thus be restored to his former self, though he will need four weeks rest before his original characteristics are restored.'
+    )
 ),
 #Monster Manual 2 (MM2) creatures start here
 CreatureInfo( name = 'Aboleth',
