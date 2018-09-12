@@ -16,7 +16,7 @@ class Intelligence(IntEnum):
     SUPRA = 9
     GODLIKE = 10
     VARIABLE = 11
-    LENGTH = 12
+    UNDEFINED = 12
     
 class SourceBook(IntEnum):
     UNKNOWN = 0
@@ -26,9 +26,11 @@ class SourceBook(IntEnum):
     
 class CreatureInfo():
     def __init__(
-        self, name, iq,
-        ac, attacks,
-        align, size,
+        self, name,
+        ac,
+        align = 'NN', size = 'M',
+        iq = Intelligence.UNDEFINED,
+        attacks=[],
         description="",
         hd=(0,0), hp=(0,0),
         speed=0, fly=0, swim=0, web=0, burrow=0, climb=0,
