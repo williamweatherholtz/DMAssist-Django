@@ -27,7 +27,7 @@ class SourceBook(IntEnum):
 class CreatureInfo():
     def __init__(
         self, name,
-        ac,
+        ac = 10,
         align = 'NN', size = 'M',
         iq = Intelligence.UNDEFINED,
         attacks=[],
