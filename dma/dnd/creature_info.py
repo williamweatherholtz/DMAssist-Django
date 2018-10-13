@@ -31,6 +31,8 @@ class CreatureInfo():
         align = 'NN', size = 'M',
         iq = Intelligence.UNDEFINED,
         attacks=[],
+        psi_str = [(0,0),(0,0)],
+        psi_modes = '',
         description="",
         hd=(0,0), hp=(0,0),
         speed=0, fly=0, swim=0, web=0, burrow=0, climb=0,
@@ -71,6 +73,8 @@ class CreatureInfo():
         self.climb_speed = climb
         self.ac = ac
         self.attacks = attacks
+        self.psi_str = psi_str
+        self.psi_modes = psi_modes
         self.magic_resist = Decimal(m_resist).normalize()
         self.alignment = align
         self.size_class = size
