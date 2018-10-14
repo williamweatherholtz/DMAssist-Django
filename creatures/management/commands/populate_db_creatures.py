@@ -23,15 +23,15 @@ class Command(BaseCommand):
             if len(creature.attacks):
                 _attacks = json.dumps(creature.attacks)
             else: _attacks = ''
-            
+
             if creature.parent_creature:
                 _parent_creature = creature.parent_creature
             else: _parent_creature = ''
-            
+
             if len(creature.sub_creatures):
                 _sub_creatures = json.dumps(creature.sub_creatures)
             else: _sub_creatures = ''
-            
+
             if len(creature.alternate_names):
                 _alt_names = json.dumps(creature.alternate_names)
             else: _alt_names = ''
@@ -49,7 +49,7 @@ class Command(BaseCommand):
                 base_xp = creature.base_xp,
                 xp_per_hp = creature.xp_per_hp,
                 level = creature.level,
-                
+
                 treasure_types = creature.treasure,
                 iq_class = creature.iq.value,
                 ground_speed = creature.speed,
@@ -61,16 +61,21 @@ class Command(BaseCommand):
                 web_speed = creature.web_speed,
                 ac = creature.ac,
                 attacks = _attacks,
+                psi_attack_min = creature.psi_str[0][0],
+                psi_attack_max = creature.psi_str[0][1],
+                psi_defense_min = creature.psi_str[1][0],
+                psi_defense_max = creature.psi_str[1][1],
+                psi_modes = creature.psi_modes,
                 magic_resist = creature.magic_resist,
                 alignment = creature.alignment,
                 size_class = creature.size_class,
-                
+
                 source = creature.source.value,
                 is_abstract = creature.is_abstract,
                 parent_creature = _parent_creature,
                 sub_creatures = _sub_creatures,
                 alt_names = _alt_names,
-                
+
                 description = creature.description
             )
 
@@ -89,13 +94,13 @@ class Command(BaseCommand):
                         if new_val != existing_val:
                             print('conflict in {}, {} set to {} from {}'.format(
                                 c.name, field, new_val, existing_val))
-                            fields_changed += 1                        
+                            fields_changed += 1
                             setattr(conflict, field, new_val)
 
                 if fields_changed:
                     num_modified += 1
                     conflict.save()
-                    
+
             else:
                 num_added += 1
                 print('added {} to database'.format(creature.name))

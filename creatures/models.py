@@ -69,6 +69,12 @@ class CreatureInfo(models.Model):
     attacks = models.CharField(max_length=300)
     magic_resist = models.DecimalField(max_digits=5, decimal_places=2)
     
+    psi_attack_min = models.PositiveSmallIntegerField(default=0)
+    psi_attack_max = models.PositiveSmallIntegerField(default=0)
+    psi_defense_min = models.PositiveSmallIntegerField(default=0)
+    psi_defense_max = models.PositiveSmallIntegerField(default=0)
+    psi_modes = models.CharField(max_length=10)
+    
     #Int representing Intelligence IntEnum
     iq_class = models.SmallIntegerField()
     #One of 'LG','NG','CG','LN','NN','CN','LE','NE','CE'
@@ -298,6 +304,60 @@ class CreatureInfo(models.Model):
             html += '</td>'
         html += '</tr>'
 
+        #Psionic Ability Points
+        html += '<tr><th>Psionic Ability</th>'
+        for c in table_creatures:
+            if (not c.psi_attack_min) and (not c.psi_defense_min):
+            #no psionics
+                html += '<td>Nil</td>'
+            else:
+                psi_min = c.psi_attack_min + c.psi_defense_min
+                psi_max = c.psi_attack_max + c.psi_defense_max
+                html += '<td>{}'.format(psi_min)
+                if (psi_min != psi_max):
+                    html += '-{}'.format(psi_max)
+                
+                if not c.psi_defense_min:
+                #only attack points
+                    html += ' attack'
+                if not c.psi_attack_min:
+                #only defense points
+                    html += ' defense'
+                    
+                html += '</td>'
+        html += '</tr>'
+        
+        #Psionic Modes
+        html += '<tr><th>Psionic Attack/Defense Modes</th>'
+        for c in table_creatures:
+            if not c.psi_modes:
+                html += '<td>Nil</td>'
+            elif c.psi_modes == '?':
+                html += '<td>Varying</td>'
+            else:
+                html += '<td>'
+                
+                att_modes = ''.join(c for c in c.psi_modes if c in 'abcde')
+                if not att_modes:
+                    html += 'Nil'
+                elif att_modes == 'abcde':
+                    html += 'All'
+                else:
+                    html += att_modes.upper()
+                    
+                html += '/'
+                
+                def_modes = ''.join(c for c in c.psi_modes if c in 'fghij')
+                if not def_modes:
+                    html += 'Nil'
+                elif def_modes == 'fghij':
+                    html += 'All'
+                else:
+                    html += def_modes.upper()
+                    
+                html += '</td>'
+        html += '</tr>'
+                
         html += '</table>'
                 
         return html
