@@ -1,7 +1,7 @@
 from .sourcebook import SourceBook
 
 class Potion():
-    def __init__(self, name, desc):
+    def __init__(self, name, desc, source):
         self.name = name
         self.description = desc
         self.source = source
@@ -233,7 +233,7 @@ Potion(name = 'Potion of Treasure Finding',
 ),
 Potion(name = 'Potion of Undead Control',
     desc = ('This potion in effect gives the imbiber the ability to <i>charm</i> certain undead (ghasts, ghosts, ghouls, shadows, skeletons, spectres, wights, wraiths, vampires, and zombies). The <i>charming</i> ability is similar to the magic-user spell, <a href="/spells/charm-person-magic-user-lvl-1"><i>charm person</i></a>. It affects a maximum of 16 hit dice of undead, rounding down any hit point additions to hit dice to the lowest die, i.e. 4 + 1 equals 4 hit dice. The undead are entitled to saving throws versus magic only if they have intelligence. Saving throws are made at -2 due to the power of the potion, but the effect wears off in from 5-20 rounds. To determine type of undead affected by a particular potion, roll d10 and consult the following table:\n\n'
-        '<table><tr><th>Die Roll</th><th>Undead Type</th></tr>'
+        '<table><tr><th>D10 Roll</th><th>Undead Type</th></tr>'
         '<tr><td>1</td><td><a href="/creatures/ghast">Ghasts</a></td></tr>'
         '<tr><td>2</td><td><a href="/creatures/ghost">Ghosts</a></td></tr>'
         '<tr><td>3</td><td><a href="/creatures/ghoul">Ghouls</a></td></tr>'
