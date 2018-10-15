@@ -44,16 +44,11 @@ class Command(BaseCommand):
                 if conflict != s:
                     fields = {key: val for key, val in vars(s).items() if key not in ['_state', 'id']}
 
-                    """
-                    print(fields)
-                    print()
-                    print()
-                    print(vars(conflict))
-                    """
                     any_change = False
                     for field in fields.keys():
                         new_val = getattr(s, field)
-                        if new_val != getattr(conflict, field):
+                        existing_val = getattr(conflict, field)
+                        if new_val != existing_val:
                             #print('s: {}'.format(new_val))
                             #print('conf: {}'.format(getattr(conflict, field)))
 
@@ -62,7 +57,6 @@ class Command(BaseCommand):
 
                     if any_change:
                         print('Modified {}...'.format(slugify(str(spell))))
-                        conflict.full_clean()
                         conflict.save()
                         num_modified += 1
                     else:

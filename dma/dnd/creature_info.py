@@ -1,5 +1,7 @@
 """ Contains full information on creatures
 """
+from .sourcebook import SourceBook
+
 from decimal import Decimal, getcontext
 from enum import IntEnum
 
@@ -17,13 +19,7 @@ class Intelligence(IntEnum):
     GODLIKE = 10
     VARIABLE = 11
     UNDEFINED = 12
-    
-class SourceBook(IntEnum):
-    UNKNOWN = 0
-    MONSTER_MANUAL = 1
-    FIEND_FOLIO = 2
-    MONSTER_MANUAL_2 = 3
-    
+
 class CreatureInfo():
     def __init__(
         self, name,
@@ -42,7 +38,7 @@ class CreatureInfo():
         base_xp=0, lvl=None, xp_hp = 0,
         parent_creature='',
         sub_creatures=[],
-        is_abstract = False, #abstract CI represent a category, not an actual creature
+        is_abstract = False, #represent a category, not a specific creature
         aliases = [],
         source = SourceBook.UNKNOWN
      ):

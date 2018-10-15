@@ -1,3 +1,4 @@
+from .sourcebook import SourceBook
 
 class Potion():
     def __init__(self, name, desc):

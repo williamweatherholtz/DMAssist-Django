@@ -1,9 +1,10 @@
-from random import sample,choice
-from decimal import Decimal
-
 from .roll import roll
 from .time import TimePeriod, TimeUnit
 from .sourcebook import SourceBook
+
+from random import sample,choice
+from decimal import Decimal
+from enum import Enum
 
 #aliases for the lazy
 DS = TimeUnit.decisegment
@@ -17,8 +18,8 @@ VA = TimeUnit.variable
 P = TimeUnit.permanent
 tp = TimePeriod
 
-V = SourceBook.v
-U = SourceBook.ua
+V = SourceBook.PLAYERS_HANDBOOK
+U = SourceBook.UNEARTHED_ARCANA
 
 #contains minimal info on spells (name, class and level)
 class Spell():
@@ -1363,7 +1364,7 @@ cleric_spells = [
         save='None',
         sourcebook=V,
         desc="The casting of a <i>gate</i> spell has two effects: first, it causes an ultra-dimensional connection between the plane of existence the cleric is an and that plane on which dwells a specific being of great power, the result enabling the being to merely step through the gate or portal, from its plane to that of the cleric; second, the utterance of the spell attracts the attention of the dweller on the other plane. When casting the spell, the cleric must name the demon, devil, demi-god, god, or similar being he or she desires to make use of the <i>gate</i> and come to the cleric's aid. There is a 100% certainty that something will step through the gate. The actions of the being which comes through will depend on many factors, including the alignment of the cleric, the nature of those in company with him or her, and who or what opposes or threatens the cleric. Your Dungeon Master will have a sure method of dealing with the variables of the situation. The being gated in will either return immediately (very unlikely) or remain to take action.",
-        s_desc = 'Unless you have some facts regarding the minions serving the being called forth by the casting of the <i>gate</i> spell, it is necessary to have the being called come. Then, if it is a trifle, it can leave or attack; if it is of middling importance, it can take some positive action to set matters aright, and then demand appropriate repayment; and if the matter is urgent, it can act accordingly and ask whatever is its wont thereafter, if appropriate. However, <a href="/creatures/asmodeus">Asmodeus</a> might send a pit fiend to see what the problem was, and some deity of lawful good might send a <a href="/creatures/ki-rin">ki-rin</a> on the same mission. As to the likelihood of the <i>gated</i> being returning without doing something, use a factor of 20% for a trifling matter, 15% of return if the affair is of medial importance, and from 1% to 50% if the matter is very important - 1% indicating that the being finds itself well able to handle the situation and everything pleases or displeases it greatly, 50% if the situation would be risky and it is displeased. Thus, Asmodeus summoned by a party of chaotic good characters to save them from a <a href="/creatures/type-6-demon">type VI demon</a> could be a trifle to an important act, depending on what was involved - such as a relic of lawful evil. Asmodeus would certainly do away with the summoners as well as the demon if at all possible. On the other hand, Asmodeus summoned to pit himself against Bahamut would be very likely to turn and do a speedy exit unless the matter was of critical importance to Hell.'
+        s_desc = 'Unless you have some facts regarding the minions serving the being called forth by the casting of the <i>gate</i> spell, it is necessary to have the being called come. Then, if it is a trifle, it can leave or attack; if it is of middling importance, it can take some positive action to set matters aright, and then demand appropriate repayment; and if the matter is urgent, it can act accordingly and ask whatever is its wont thereafter, if appropriate. However, <a href="/creatures/asmodeus">Asmodeus</a> might send a pit fiend to see what the problem was, and some deity of lawful good might send a <a href="/creatures/ki-rin">ki-rin</a> on the same mission. As to the likelihood of the <i>gated</i> being returning without doing something, use a factor of 20% for a trifling matter, 15% of return if the affair is of medial importance, and from 1% to 50% if the matter is very important - 1% indicating that the being finds itself well able to handle the situation and everything pleases or displeases it greatly, 50% if the situation would be risky and it is displeased. Thus, Asmodeus summoned by a party of chaotic good characters to save them from a <a href="/creatures/type-6-demon">type VI demon</a> could be a trifle to an important act, depending on what was involved - such as a relic of lawful evil. Asmodeus would certainly do away with the summoners as well as the demon if at all possible. On the other hand, Asmodeus summoned to pit himself against <a href="/creatures/platinum-dragon">Bahamut</a> would be very likely to turn and do a speedy exit unless the matter was of critical importance to Hell.'
     ),
     Spell('Holy (Unholy) Word','C',7,
         cast=tp(1,S),

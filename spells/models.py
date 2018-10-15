@@ -1,5 +1,8 @@
-from django.db import models
 from dma.dnd.time import simplify
+from dma.dnd.sourcebook import SourceBook
+
+from django.db import models
+
 
 CLASS_CHOICES = (
     ('', 'All'),
@@ -11,8 +14,8 @@ CLASS_CHOICES = (
 
 SOURCE_CHOICES = (
     ('', 'All'),
-    ('Advanced Dungeons & Dragons', 'Advanced Dungeons & Dragons'),
-    ('Unearthed Arcana', 'Unearthed Arcana'),
+    (SourceBook.PLAYERS_HANDBOOK.value, 'Players Handbook'),
+    (SourceBook.UNEARTHED_ARCANA.value, 'Unearthed Arcana'),
 )
 
 class SpellInfo(models.Model):
@@ -26,13 +29,13 @@ class SpellInfo(models.Model):
     range = models.CharField(max_length=75)
     aoe = models.CharField(max_length=150, blank=True, default='')
     saving_throw = models.CharField(max_length=75)
-    source = models.CharField(max_length=50)
+    source = models.SmallIntegerField()
     description = models.TextField(default="Missing description")
     commentary = models.TextField(default='')
 
     class Meta:
         ordering = ['spell_class','level','name']
-    
+
     def __str__(self):
         role = 'Unknown'
         if self.spell_class == 'C':
@@ -74,3 +77,12 @@ class SpellInfo(models.Model):
                 return '{}/level'.format(str(lvl_dur))
 
         return 'N/A'
+
+    @property
+    def source_str(self):
+        if self.source == SourceBook.PLAYERS_HANDBOOK:
+            return 'Players Handbook'
+        if self.source == SourceBook.UNEARTHED_ARCANA:
+            return 'Unearthed Arcana'
+
+        return 'Unknown'
