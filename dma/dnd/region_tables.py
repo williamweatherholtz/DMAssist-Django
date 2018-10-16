@@ -9,7 +9,7 @@ Region = namedtuple('Region',['C','UC','R','VR'])
 [],
 []
 ),
-""" 
+"""
 
 region_populations = {
 'Cold Civilized Mountains':Region(
@@ -1557,13 +1557,13 @@ region_populations = {
 }
 region_names = [x for x in region_populations]
 
-   
 
-#STANDARD ENCOUNTER TABLES BY REGION   
+
+#STANDARD ENCOUNTER TABLES BY REGION
 sample_frequencies = ['Very rare','Very rare','Rare','Rare','Rare',
 'Uncommon','Uncommon','Common','Common','Common','Common','Common',
 'Uncommon','Uncommon','Rare','Rare','Rare','Very rare','Very rare']
-    
+
 regions = {
 'Dungeon 1':
 ["Al-mi'raj","Webbird","Bullywug","Large Pedipalp","Bowler","Giant Bat",

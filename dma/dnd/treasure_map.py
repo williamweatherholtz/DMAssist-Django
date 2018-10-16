@@ -13,14 +13,14 @@ class Map():
         self.description = generateMap()
         [self.m_type,self.wealth,self.maps,
             self.items,self.gems,self.jewelry] = generateTreasure()
-        
+
         if not known_rwd:
             [self.m_type,self.wealth,self.maps,
             self.items,self.gems,self.jewelry] = generateTreasure()
         else:
             [self.m_type,self.wealth,self.maps,
             self.items,self.gems,self.jewelry] = generateTreasure(known_rwd[0],known_rwd[1],known_rwd[2])
-            
+
         if known_rwd2:
             t,w,m,i,g,j =  generateTreasure(known_rwd2[0],known_rwd2[1],known_rwd2[2])
             if w:
@@ -28,21 +28,21 @@ class Map():
             self.items.extend(i)
             self.gems += g
             self.jewelry += j
-        
+
     def __str__(self):
         output = '{}, {}'.format(self.description,self.m_type)
 
         output += ('\n  {}\n  {} gems, {} jewelry'.format(self.wealth,
             self.gems,self.jewelry))
-            
+
         for item in self.items:
             output += '\n  '+str(item)
-        
+
         for map in self.maps:
             output += '\n  '+str(map)
 
-        return output  
-        
+        return output
+
         return self.description
 
 def generateTreasure(m_type=None,low=1,high=20):
@@ -60,23 +60,23 @@ def generateTreasure(m_type=None,low=1,high=20):
         elif r < 71:
             m_type = 'Monetary'
         elif r < 91:
-            m_type = 'Magic' 
+            m_type = 'Magic'
         else:
             m_type = 'Combined Hoard'
-       
+
     if m_type == 'Monetary':
         wealth,gems,jewelry = monetaryTreasure(low,high)
     elif m_type == 'Magic':
         items = magicTreasure(low,high)
     elif m_type == 'Combined Hoard':
         wealth,maps,items,gems,jewelry = combinedHoard()
-        
+
     return [m_type,wealth,maps,items,gems,jewelry]
-    
-  
+
+
 #maps should never list treasure to the player
 def generateMap(m_type=None):
-        
+
     #determine treasure location
     r = roll(100)
     if r < 21:
@@ -102,10 +102,10 @@ def generateMap(m_type=None):
             loc = 'In a burial crypt ' + loc
         else:
             loc = 'Secreted in a town ' + loc
-            
+
     output = 'Map: {}'.format(loc)
     return output
-    
+
 def monetaryTreasure(low=1,high=20):
     wealth = None
     gems = 0
@@ -117,7 +117,7 @@ def monetaryTreasure(low=1,high=20):
     while (rolls_left > 0):
         r = randint(min_roll,max_roll)
         rolls_left -= 1
-        
+
         if r < 3:
             wealth = Wealth(cp=(roll(4,2)*10000),sp=(roll(4,1,1)*10000))
         elif r < 6:
@@ -143,12 +143,12 @@ def monetaryTreasure(low=1,high=20):
                 ep=(roll(6,5)*1000),gp=(roll(6,3)*1000),pp=(roll(4,5)*100))
             gems = (roll(10)*10)
             jewelry = (roll(10,5))
-            
+
     return [wealth,gems,jewelry]
 
 def magicTreasure(min_roll=1, max_roll=20):
     items = []
-    
+
 
     r = randint(min_roll, max_roll)
     if r < 6:
@@ -181,18 +181,18 @@ def magicTreasure(min_roll=1, max_roll=20):
         items.append(generateMiscMagic())
         for i in range(3):
             items.append(generateMagicItem())
-            
+
     return items
-            
-def combinedHoard():  
+
+def combinedHoard():
     w = Wealth()
     maps = []
     items = []
     g=0; j=0
-    
+
     t = [None,None,None]
-    
-    
+
+
     r = roll(100)
     if r < 21:
         w,g,j = monetaryTreasure(1,2)
@@ -206,7 +206,7 @@ def combinedHoard():
         w += t[0]
         g += t[1]
         j += t[2]
-        
+
         items = magicTreasure(1,5)
         items.extend(magicTreasure(15,18))
     elif r < 66:
@@ -227,12 +227,12 @@ def combinedHoard():
         t = monetaryTreasure(11,12)
         w += t[0]
         g += t[1]
-        j += t[2]        
+        j += t[2]
         items = magicTreasure(6,8)
         items.extend(magicTreasure(15,18))
     elif r < 86:
         w,g,j = monetaryTreasure(20,20)
-        
+
         maps.append(Map(('Magic',1,5)))
     elif r < 91:
         w,g,j = monetaryTreasure(20,20)
@@ -245,6 +245,5 @@ def combinedHoard():
         items = magicTreasure(20,20)
         maps.append(Map(('Monetary',11,12),('Monetary',13,15)))
         maps.append(Map(('Magic',15,18)))
-        
+
     return [w,maps,items,g,j]
-    

@@ -18,23 +18,23 @@ class Gem():
         base_idx, value_mod = modifyBaseValue(base_idx)
 
         self.value = copy(BASE_VALUES[base_idx])
-        
+
         #determine type of gem
         self.name, self.group = gemType(self.value)
-        
+
         #modified value
         self.value.quantity = roundDownToNearest(self.value.quantity * value_mod, 1)
-        
+
     def __str__(self):
         return '{} {} ({})'.format(self.value,self.name,self.group)
-        
+
     def __lt__(self,other):
         return self.value < other.value
-    
+
 def gemType(base_value):
     name = None
     group = None
-    
+
     if (base_value.coin == 's' or
         base_value.quantity < 50):
         group = 'Ornamental Stone'
@@ -63,9 +63,9 @@ def gemType(base_value):
         group = 'Gem Stone'
         name = choice(['Black Sapphire','Diamond','Jacinth',
             'Oriental Emerald','Ruby'])
-            
+
     return [name,group]
-    
+
 def generateBaseValueIdx():
     r = roll(100)
     if r < 26:
@@ -80,16 +80,16 @@ def generateBaseValueIdx():
         val_idx = 9
     else:
         val_idx = 10
-        
+
     return int(val_idx)
-    
+
 def modifyBaseValue(bv):
     value_mod = 1.0
     value_idx = bv
     max_idx = min(value_idx+7, BV_MAX_IDX)
     min_idx = max(value_idx-5, 0)
-    
-    
+
+
     min_roll = 1
     max_roll = 10
     rolls_left = 1
@@ -110,18 +110,5 @@ def modifyBaseValue(bv):
             value_idx = max(0,value_idx -1)
             rolls_left += 1
             min_roll = 2
-    
+
     return int(value_idx), float(value_mod)
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        

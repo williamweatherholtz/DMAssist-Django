@@ -205,7 +205,7 @@ cleric_spells = [
         sourcebook=V,
         desc="When the <i>detect magic</i> spell is cast, the cleric detects magical radiations in a path 1\" wide, and up to 3\", long, in the direction he or she is facing. The caster can turn 60° per round. Note that stone walls of 1' or more thickness, solid metal of but 1/12' thickness, or 3' or more of solid wood will block the spell. The spell requires the use of the cleric's holy (or unholy) symbol.",
         s_desc='Only the fact that a dim or strong magic exists can be found by clerics. (cf. magic-user <a href="/spells/detect-magic-magic-user-lvl-1/">spell</a> of the same name).'
-    
+
     ),
     Spell('Endure Cold/Endure Heat','C',1,
         cast=tp(1,R),
@@ -5951,7 +5951,7 @@ mu_spells = [
             '<tr><td>16-70</td><td><a href="/creatures/manta-ray">Ray, manta</a></td></tr>'
             '<tr><td>71-00</td><td><a href="/creatures/giant-squid">Squid, giant</a></td></tr>'
             '</table>'
-            
+
         )
     ),
     Spell('Mordenkainen\'s Disjunction','M',9,
@@ -7090,3 +7090,4 @@ def test_module():
 
 if __name__ == '__main__':
     test_module()
+

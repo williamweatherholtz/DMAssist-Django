@@ -8,7 +8,7 @@ class MagicWeapon():
     def __init__(self, name, bonus):
         self.name = name
         self.bonus = bonus
-        
+
     def __str__(self):
         return self.name
 
@@ -78,7 +78,7 @@ def generateSword():
     if r > 75:
         int_sword = IntelligentSword(sword,r)
         return int_sword
-        
+
     return sword
 
 

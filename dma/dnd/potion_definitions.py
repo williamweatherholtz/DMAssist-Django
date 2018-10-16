@@ -5,7 +5,7 @@ class Potion():
         self.name = name
         self.description = desc
         self.source = source
-        
+
 potions = [
 Potion(name = 'Potion of Animal Control',
     desc = ('This potion enables the imbiber to empathize with and control the emotions of animals of 1 type, i.e. cats, dogs, horses, etc. The number of animals so controlled depends upon size: 5-20 animals of the size of <a href="/creatures/giant-rat">giant rats</a>, 3-12 animals of about man-size, or 1-4 animals of about ½ ton or more in weight. The sort of animal which can be controlled depends upon the particular potion as indicated by die roll (d20):\n\n'
@@ -341,8 +341,3 @@ Potion( name = 'Potion of Vitality',
     source = SourceBook.UNEARTHED_ARCANA
 )
 ]
-'''
-Potion(name = '',
-    desc = ''
-),
-'''

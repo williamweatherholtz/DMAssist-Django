@@ -42,9 +42,9 @@ class CreatureInfo():
         aliases = [],
         source = SourceBook.UNKNOWN
      ):
-        
+
         getcontext().prec = 4
-        
+
         self.name = name
         self.hit_dice = hd
         self.hit_point_mod = hp
@@ -76,6 +76,6 @@ class CreatureInfo():
         self.size_class = size
         self.description = description
         self.alternate_names = aliases
-        
+
     def __str__(self):
         return self.name

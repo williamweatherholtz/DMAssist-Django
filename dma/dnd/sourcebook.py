@@ -1,5 +1,5 @@
 from enum import IntEnum
-    
+
 class SourceBook(IntEnum):
     UNKNOWN = 0
     MONSTER_MANUAL = 1

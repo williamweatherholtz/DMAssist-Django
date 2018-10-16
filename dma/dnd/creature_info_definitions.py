@@ -200,7 +200,7 @@ CreatureInfo( name = 'Badger',
     source = SourceBook.MONSTER_MANUAL,
     aliases = ['Common Badger'],
     sub_creatures = ['Giant Badger'],
-    description = 'These burrowing animals are typically solitary. Their speed accounts for their high armor class rating. They are fierce fighters and will staunchly defend their territory. If more than 1 is encountered it will be a mated pair (and young). The pelt of the badger is typically sold for from 10-30 gold pieces.\n\nGiant Badger: There is a very rare variety of badger which grow to twice the size of the normal sort. They are otherwise identical.' 
+    description = 'These burrowing animals are typically solitary. Their speed accounts for their high armor class rating. They are fierce fighters and will staunchly defend their territory. If more than 1 is encountered it will be a mated pair (and young). The pelt of the badger is typically sold for from 10-30 gold pieces.\n\nGiant Badger: There is a very rare variety of badger which grow to twice the size of the normal sort. They are otherwise identical.'
 ),
 CreatureInfo( name = 'Giant Badger',
     hd = (3,3),
@@ -7362,7 +7362,7 @@ CreatureInfo( name = 'Giant Constrictor Snake',
     source = SourceBook.MONSTER_MANUAL,
     description = ('These snakes usually drop coils from above, grab prey within their coils, deliver a bite, and then constrict causing 2-8 points of damage per melee round. If several strong creatures (such as 4 humans of 16 or greater strength) can grasp the creature at head and tail ends, they can uncoil it in 2-5 melee rounds. After eating, the snake sleeps for a period of several days.'
         'Giant snakes are likely to be found in any clime save the coldest. All are carnivorous.'
-    )     
+    )
 ),
 CreatureInfo( name = 'Giant Poisonous Snake',
     hd = (4,4),
@@ -7380,7 +7380,7 @@ CreatureInfo( name = 'Giant Poisonous Snake',
     source = SourceBook.MONSTER_MANUAL,
     description = ('Giant poisonous snakes need no lengthy explanation or description. Some varieties, however, are worth noting, as their poison is so strong that even if a saving throw is made the victim takes up to 3-18 hit points damage.'
         'Giant snakes are likely to be found in any clime save the coldest. All are carnivorous.'
-    )     
+    )
 ),
 CreatureInfo( name = 'Giant Sea Snake',
     hd = (8,10),
@@ -7415,7 +7415,7 @@ CreatureInfo( name = 'Giant Spitting Snake',
     source = SourceBook.MONSTER_MANUAL,
     description = ('The spitting snake is a variety of the <a href="/creatures/giant-poisonous-snake">poisonous type</a> which can emit a poisonous spittle, spraying it up to 3" at any single creature. The victim must save versus poison. Naturally, the bite of these snakes is likewise poisonous. Giant spitting cobras are a typical example of the monster.'
         'Giant snakes are likely to be found in any clime save the coldest. All are carnivorous.'
-    )     
+    )
 ),
 CreatureInfo( name = 'Spectre',
     hd = (7,7),
@@ -14803,7 +14803,7 @@ CreatureInfo( name = 'Azer',
         'The people of Amaimon dwell in small groups, their typical abode being a tower worked from the natural basalt of their realm, using the plentiful supply of flame nearby. When 20 or more are encountered in their habitation, there will be 2 of the largest normal size, a noble, and 40-70 non-combatant females and young there also. It is likely that the defenses of the place will include air projectors (bellows-like devices) and even special containers to haul water and pour it upon attackers.\n\n'
         'In general, azer are unfriendly, taciturn, and lack compassion. They are greedy, and for clear purple or red gems they may agree to reasonable requests. Once given, the word of an azer is a solid bond.'
     )
-        
+
 ),
 CreatureInfo( name = 'Large Azer',
     hd = (4,4),
@@ -21947,7 +21947,7 @@ CreatureInfo( name = 'Pseudo-Undead',
     is_abstract = True,
     sub_creatures = ['Pseudo-Undead Ghoul', 'Pseudo-Undead Ghast',
         'Pseudo-Undead Wight', 'Pseudo-Undead Wraith',
-        'Pseudo-Undead Spectre', 'Pseudo-Undead Vampire'], 
+        'Pseudo-Undead Spectre', 'Pseudo-Undead Vampire'],
     description = ('The pseudo-undead are humanoid creatures who prosper due to their physical similarity to certain undead monsters, such as <a href="/creatures/ghoul">ghouls</a>, <a href="/creatures/ghast">ghasts</a>, <a href="/creatures/wight">wights</a>, <a href="/creatures/wraith">wraiths</a>, <a href="/creatures/spectre">spectres</a>, and <a href="/creatures/vampire">vampires</a>. Each pseudo-undead looks and smells exactly like its parallel. The same number appear. The armor class, movement rate, hit dice, number of attacks, and damage are the same. Thus, they can be moderately dangerous. However, they lack the special attack forms (<i>paralysis, level drain</i>, etc.) of the undead, though they have normal (6") infravision. Note that the stench of pseudoghasts has the same effect as that of ghasts. Pseudowraiths and pseudospectres cannot fly but walk so lightly as to leave no trace, and are often though (unless closely observed) to be floating above the surface, although this is an illusion. Pseudovampires have red eyes and behave menacingly but have no special abilities.\n\n'
         'Pseudovampires are more nearly human than others of the genre and have been known to interbreed. Several clans of <a href="/creatures/bandit">bandits</a> are known to have been thereby engendered, their members ranging in power from that of normal bandits (though of pale and menacing visage) to leaders and spell casters of full pseudovampire status is addition to their bandit abilities. Other man/pseudovampire combinations may be possible.\n\n'
         'The pseudo-undead cannot be turned by a cleric and have no connection to the Negative Material Plane. They avoid sunlight but are not harmed by it. They are never found with or near true undead. Normal attacks affect them.'

@@ -1,7 +1,7 @@
 from random import choice, randint
 
 from .roll import roll
-from .region_tables import region_populations, region_names 
+from .region_tables import region_populations, region_names
 
 def rollMultipleDays(num_days, region, density):
     days = []
@@ -9,9 +9,9 @@ def rollMultipleDays(num_days, region, density):
         daily_encounters = rollDay(region, density)
         if len(daily_encounters):
             days.append( ('Day {}'.format(i), daily_encounters))
-    
+
     return days
-                    
+
 def rollDay(region, density):
     if density == 'Dense':
         die = 20
@@ -19,7 +19,7 @@ def rollDay(region, density):
         die = 12
     else:
         die = 10
-        
+
     if 'Plains' in region:
         enc = checkDailyEncounters(region, die,
             ('Morning','Evening','Midnight'))
@@ -44,7 +44,7 @@ def rollDay(region, density):
             ('Morning','Noon','Evening','Night','Midnight','Pre-Dawn'))
     else:
         raise ValueError
-        
+
     return enc
 
 def checkDailyEncounters(region, die, time_list):
@@ -55,11 +55,11 @@ def checkDailyEncounters(region, die, time_list):
             e = pickEncounterInRegion(region)
             encounters.append( (t,e) )
     return encounters
-           
+
 def pickEncounterInRegion(region):
     r = roll(12) + roll(8)
     encounter_list = []
-    
+
     if (8 < r < 14):
         encounter_list = region_populations[region].C
     elif (r == 7 or r == 8 or r == 14 or r == 15):
@@ -69,10 +69,10 @@ def pickEncounterInRegion(region):
     elif (r == 4) or (r == 18):
         r = roll(2)
         if r == 1: encounter_list = region_populations[region].VR
-        else: encounter_list = region_populations[region].R     
+        else: encounter_list = region_populations[region].R
     elif (r < 4) or (r > 18):
         encounter_list = region_populations[region].VR
-        
+
     return choice(encounter_list)
 
 def classicRandomEncounter(region):

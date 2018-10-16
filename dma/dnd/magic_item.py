@@ -35,13 +35,13 @@ def generateMagicItem(min_roll=1, restrict_weapons=False, restrict_sword=False,
         else:
             if restrict_weapons: valid = False
             else: item = generateMiscWeapon()
-        
+
     return item
-    
+
 def generatePotion():
     pot = None
     table_roll = roll(100)
-    
+
     if table_roll < 66:
         r = roll(100)
         if r < 4: pot = 'Animal Control'
@@ -105,20 +105,20 @@ def generatePotion():
         ('Elixir' not in pot) and
         ('Oil' not in pot)):
         pot = 'Potion of ' + pot
-    
+
     return pot
-    
+
 class Scroll():
     def __init__(self, spell_list):
         self.spells = spell_list
-    
+
     def __str__(self):
         ret = 'Magical Scroll'
         for spell in self.spells:
             ret += "\n  " + spell
-        
+
         return ret
-    
+
 def generateScroll():
     spells = []
     r = roll(100)
@@ -188,9 +188,9 @@ def generateScroll():
         elif r < 89: spells.append('Protection - Weapons, Non-Magic Blunt')
         elif r < 95: spells.append('Protection - Weapons, Non-Magic Edged')
         else: spells.append('Protection - Weapons, Non-Magic Missile')
-    
+
     return Scroll(spells)
-        
+
 def generateRing():
     ring = None
     r = roll(100)
@@ -235,12 +235,12 @@ def generateRing():
         elif r < 80: ring = 'Shocking Grasp'
         elif r < 93: ring = 'Sustenance'
         else: ring = 'Truth'
-            
+
     return 'Ring of ' + ring
 
 def generateRod():
     return generateRodStaffWand(pick_rod=True)
-    
+
 def generateRodStaffWand(pick_rod=False):
     item = None
     r = 0
@@ -248,7 +248,7 @@ def generateRodStaffWand(pick_rod=False):
         r = 1
     else:
         r = roll(100)
-        
+
     if r < 41:
         if pick_rod:
             r = roll(40)
@@ -325,11 +325,11 @@ def generateRodStaffWand(pick_rod=False):
         elif r < 91: item = 'Size Alteration'
         elif r < 93: item = 'Steam & Vapor'
         else: item = 'Wonder'
-        
+
         item += ' Wand'
-    
+
     return item
-    
+
 def generateMiscMagic():
     item = None
     r = roll(100)
@@ -572,12 +572,12 @@ def generateMiscMagic():
         elif r < 89: item = 'Wind Fan'
         elif r < 93: item = 'Zagyg\'s Flowing Flagon'
         else: item = 'Zagyg\'s Spell Component Case'
-    
+
     return item
-    
+
 def generateArmorShield():
     item = ''
-    
+
     if roll(100) < 51:
         r = roll(100)
         if r < 6: item = 'Chain Mail +1'
@@ -634,7 +634,7 @@ def generateArmorShield():
         elif r < 94: item = 'Ring Mail +2'
         elif r < 96: item = 'Scale Mail +3'
         else: item = 'Studded Leather +2'
-    
+
     if 'Elfin' in item:
         r = roll(100)
         if r < 6:
@@ -643,7 +643,7 @@ def generateArmorShield():
             item = 'Dwarf-Sized ' + item
         elif r < 38:
             item = 'Human-Sized ' + item
-    elif (('Shield' not in item) and 
+    elif (('Shield' not in item) and
         ('Buckler' not in item)):
         r = roll(100)
         if r < 6:
@@ -652,5 +652,5 @@ def generateArmorShield():
             item = 'Dwarf-Sized ' + item
         elif r < 38:
             item = 'Elf-Sized ' + item
-        
+
     return item

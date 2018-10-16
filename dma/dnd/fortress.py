@@ -4,13 +4,13 @@ class Fortress():
     def __init__(self):
         f_size, self.f_type = determineFortressSizeAndType()
         self.population = determineFortressPopulation(f_size)
-        
+
     def __str__(self):
         return '{} populated by {}'.format(self.f_type, self.population)
-        
+
 def determineFortressSizeAndType():
     r = randint(1,100)
-    
+
     if r < 36:
         f_size = 'Small'
         if r < 11:
@@ -39,9 +39,9 @@ def determineFortressSizeAndType():
             f_type = 'Large Walled Castle with Keep'
         else:
             f_type = 'Fortress Complex'
-    
+
     return [f_size, f_type]
-    
+
 def determineFortressPopulation(f_size):
     r = randint(1,100)
     if f_size == 'Small':
@@ -53,13 +53,13 @@ def determineFortressPopulation(f_size):
         if r < 31: population = 'Deserted'
         elif r < 51: population = 'Monsters'
         elif r < 66: population = 'Humans'
-        else: population = 'Characters'    
+        else: population = 'Characters'
     else:
         if r < 16: population = 'Deserted'
         elif r < 41: population = 'Monsters'
         elif r < 61: population = 'Humans'
         else: population = 'Characters'
-        
+
     if population == 'Humans':
         r = randint(1,100)
         if r < 26: population = 'Bandits'

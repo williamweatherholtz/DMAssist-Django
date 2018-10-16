@@ -17,7 +17,7 @@ class IntelligentSword():
         self.alignment = None
         self.abilities = None
         self.purpose = None
-        
+
         abilities = None
         iq = 0
         ego = 0
@@ -43,33 +43,33 @@ class IntelligentSword():
         elif r == 100:
             iq = 17
             abilities,a_ego,self.purpose,self.purpose_power = generateAbilities(3,1)
-        
+
         #Languages, communication
         if iq == 12:
             self.communication = 'Semi-Empathy'
         elif iq == 13:
-            self.communication = 'Empathy'  
+            self.communication = 'Empathy'
         elif iq > 13:
             self.communication = 'Speech'
             self.languages = determineLanguageCount()
-            
+
             if iq > 15:
                 self.read = True
             if iq > 16:
                 self.telepathy = True
                 self.communication += ' & Telepathy'
                 self.read_magic = True
-            
-                
+
+
         self.determineEgo(a_ego)
         self.intellect = iq
         self.abilities = abilities
         self.determineAlignment(self.sword.name)
-        
-        
+
+
     def __str__(self):
         ret = self.alignment +' ' + str(self.sword)
-       
+
         ret += '\n  INT: {}  Ego: {}\n  Communication: {}'.format(self.intellect,self.ego, self.communication)
         if self.languages > 0:
             ret +=', speaks alignment tongue and {} other languages'.format(self.languages)
@@ -85,7 +85,7 @@ class IntelligentSword():
         ret += '\n  Abilities:'
         for abil in self.abilities:
             ret += '\n  ' + abil
-  
+
         return ret
 
     def determineEgo(self, abil_ego=None):
@@ -97,14 +97,14 @@ class IntelligentSword():
             if self.telepathy: ego += 2
             if self.read: ego += 1
             if self.read_magic: ego += 2
-                
+
             self.ego = ego
-            
+
         return self.ego
-        
+
     def determineAlignment(self, name):
         align = None
-        
+
         if 'Cursed' in name:
             align = 'True Neutral'
         elif 'Sharpness' in name:
@@ -153,7 +153,7 @@ class IntelligentSword():
                 align = 'True Neutral'
             else:
                 align = 'Neutral Good'
-                
+
         self.alignment = align
 
 def determineLanguageCount():
@@ -161,7 +161,7 @@ def determineLanguageCount():
     max_roll = 100
     bonus = False
     num_languages = 0
-    
+
     while rolls > 0:
         rolls -= 1
         r = roll(max_roll)
@@ -180,12 +180,12 @@ def determineLanguageCount():
         num_languages = max(6,num_languages)
 
     return num_languages
-    
+
 #returns a tuple [abilities_strings, ego]
 def generateAbilities(num_primary, num_exceptional=0):
     total_primary = num_primary
     total_exceptional = num_exceptional
-    
+
     abilities = {}
     abilities_strings = []
     purpose = None
@@ -194,10 +194,10 @@ def generateAbilities(num_primary, num_exceptional=0):
     bonus_roll = False
     while num_primary > 0:
         num_primary -= 1
-    
+
         abil = ''
         range = 0
-        
+
         #Don't allow more bonus rolls or exceptional abilities
         #after bonus rolls are granted once
         if not (bonus_roll and num_primary < 3):
@@ -242,24 +242,24 @@ def generateAbilities(num_primary, num_exceptional=0):
         else:
             num_exceptional += 1
             total_exceptional += 1
-            
+
         if abil in abilities:
             abilities[abil] += range
         elif abil != '':
             abilities[abil] = range
-    
+
     for abil in abilities.items():
         abilities_strings.append(abil[0]+' in a {}" radius'.format(abil[1]))
-    
+
     #Determine exceptional abilities
     abilities = {}
     bonus_roll = False
     while num_exceptional > 0:
         num_exceptional -= 1
-        
+
         abil = ''
         uses = 0
-        
+
         r = roll(100)
 
         if r < 8:
@@ -312,10 +312,10 @@ def generateAbilities(num_primary, num_exceptional=0):
                 bonus_roll = True
                 num_exceptional = 2
                 total_exceptional += 1
-        else: 
+        else:
             abil = 'Player choice'
             uses = 1
-            
+
             #It is theoretically possible for 2 purposes to be rolled
             #by getting a bonus roll and then two 100s.
             #The wording of special purposes seem to not allow for this,
@@ -340,7 +340,7 @@ def generateAbilities(num_primary, num_exceptional=0):
                     purpose = 'slay good and/or evil'
                 else:
                     purpose = 'slay non-human monsters'
-                    
+
                 r = roll(100)
                 if r < 11:
                     purpose_power = 'blindness for 2d6 rounds on hit'
@@ -356,12 +356,12 @@ def generateAbilities(num_primary, num_exceptional=0):
                     purpose_power = 'paralysis for 1d4 rounds on hit'
                 else:
                     purpose_power = '+2 on all saving throws, -1 on each damage die sustained for it\'s wielder'
-                
+
         if abil in abilities:
             abilities[abil] += uses
         elif abil != '':
             abilities[abil] = uses
-                
+
     for abil in abilities.items():
         if abil[0] == 'Player choice':
             suffix = ' - {} pick'.format(abil[1])
@@ -372,13 +372,9 @@ def generateAbilities(num_primary, num_exceptional=0):
             abilities_strings.append(abil[0] + ' - {} hours/day'.format(abil[1]))
         else:
             abilities_strings.append(abil[0]+' - {} times/day'.format(abil[1]))
-    
+
     ability_ego = total_primary + (2*total_exceptional)
     if purpose:
         ability_ego += 5
-        
+
     return [abilities_strings, ability_ego, purpose, purpose_power]
-            
-            
-    
-            

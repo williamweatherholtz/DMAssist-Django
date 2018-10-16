@@ -3,7 +3,7 @@ from dnd.currency import Coin
 class RangedWeapon():
     def __init__(self
         name,damage,damage_lg,fire_rate,ranges,ac_adjust):
-        
+
         self.name = name
         self.die = damage[0]
         self.num = damage[1]

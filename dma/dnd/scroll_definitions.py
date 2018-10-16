@@ -6,7 +6,7 @@ class Scroll():
         self.name = name
         self.description = desc
         self.source = source
-        
+
 scrolls = [
 Scroll( name = 'Protection from Demons',
     read_time = TimePeriod(1, TimeUnit.round),
@@ -81,7 +81,7 @@ Scroll( name = 'Protection from Undead',
     ),
     source = SourceBook.DUNGEON_MASTERS_GUIDE
 ),
-#Unearthed scrolls 
+#Unearthed scrolls
 Scroll( name = 'Protection from Acid',
     read_time = TimePeriod(5, TimeUnit.segment),
     desc = 'The reader of the scroll is protected from all forms of acid, up to a damage limit of 20 hit dice or a time limit of 9-12 turns (d4 +8), whichever comes first. Thus, the scroll would provide safety from three separate breath-weapon attacks be a <a href="/creatures/black dragon</a> of smallest size (normally 6 HD of damage per attack), with a small amount of protection yet unused - assuming that the attacks all take place before the time limit expires.',

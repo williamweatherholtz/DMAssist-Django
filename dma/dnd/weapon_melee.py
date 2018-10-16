@@ -6,7 +6,7 @@ class MeleeWeapon():
         space,speed,value,ac_adjust,
         recieve_bonus=False,L_recieve_bonus=False,
         mount_charge_bonus=False):
-        
+
         self.name = name
         self.value = value
         self.weight = weight
@@ -19,7 +19,7 @@ class MeleeWeapon():
         self.space = space
         self.speed = speed
         self.ac_adjust = ac_adjustments
-    
+
     def __str__(self):
         return self.name
 melee_weapons = [
@@ -175,7 +175,7 @@ MeleeWeapon('Guisarme-Voulge',
     speed = 10,
     value = Coin(7,'g'),
     ac_adjust = [-1,-1,0,1,1,1,0,0,0]
-)  
+)
 MeleeWeapon('Halberd',
     weight = 175,
     damage = (10,1,0),
@@ -414,25 +414,25 @@ MeleeWeapon('Voulge',
 
 def avg_dmg(die,num,mod):
     avg_die = die/2 + 0.5
-    
+
     return ((avg_die * num) + mod)
-    
+
 def avg_weapon_dmg(weapon):
     vs_reg = avg_dmg(weapon.die, weapon.num, weapon.mod)
     vs_lg = avg_dmg(weapon.die_lg, weapon.num_lg, weapon.mod_lg)
-    
+
     return [vs_reg, vs_lg]
-    
+
 def dmg_sorted(weapon_list=None):
     if weapon_list:
         weapons = weapon_list
     else:
         weapons = all_melee
-        
+
     s = sorted(weapons, key=lambda weapon: avg_weapon_dmg(weapon)[0], reverse=True)
     for w in s:
         print(str(avg_weapon_dmg(w)[0]) + ' ' + str(w))
-        
+
     return s
 
 def dmg_lg_sorted(weapon_list=None):
@@ -440,19 +440,19 @@ def dmg_lg_sorted(weapon_list=None):
         weapons = weapon_list
     else:
         weapons = all_melee
-        
+
     s = sorted(weapons, key=lambda weapon: avg_weapon_dmg(weapon)[1], reverse=True)
     for w in s:
         print(str(avg_weapon_dmg(w)[1]) + ' ' + str(w))
-    
+
 def speed_sorted(weapon_list=None):
     if weapon_list:
         weapons = weapon_list
     else:
         weapons = all_melee
-        
+
     s = sorted(weapons, key=lambda weapon: weapon.speed)
     for w in s:
         print(str(w.speed) + ' ' + str(w))
-        
+
     return s

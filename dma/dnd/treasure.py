@@ -387,7 +387,3 @@ def generateLoot(t_type, num_enemies=1):
 
 if __name__ == '__main__':
     __main__()
-
-
-
-

@@ -15,13 +15,13 @@ class Jewelry():
     def __init__(self):
         self.base_value, self.name = generateJewelry()
         self.base_value = Coin(self.base_value, 'g')
-        
+
     def __str__(self):
         return '{} - {}'.format(self.base_value, self.name)
-    
+
     def __lt__(self,other):
         return self.base_value < other.base_value
-        
+
 def generateJewelry():
     value = 0 #always in g.p.
     name = None
@@ -42,7 +42,7 @@ def generateJewelry():
         val_idx = 5
     else:
         val_idx = 6
-            
+
     #possible higher range
     to_roll = True
     while to_roll:
@@ -50,14 +50,14 @@ def generateJewelry():
         if isExceptional():
             to_roll = True
             val_idx = min(val_idx+1, max_val_idx)
-            
+
     #determine value within jewlery class
     value = randint(base_values[val_idx][0], base_values[val_idx][1])
     value = roundDownToNearest(value,100)
-    
+
     #determine type
     materials = determineMaterials(val_idx)
-    
+
     #if it has gems, are they exceptional?
     if val_idx > 4:
         r = roll(8)
@@ -75,11 +75,11 @@ def generateJewelry():
                     exceptional = True
             if exceptional:
                 materials = 'exceptionally ' + materials
-                
+
             materials = 'masterwork ' + materials
-            
+
     return [value, '{} {}'.format(materials, choice(jewelry_types))]
-       
+
 def determineMaterials(value_idx):
     materials = None
     if value_idx == 0:
@@ -96,9 +96,9 @@ def determineMaterials(value_idx):
         materials = 'bejeweled gold'
     elif value_idx == 6:
         materials = 'bejeweled platinum'
-        
+
     return materials
-        
+
 def isExceptional():
     r = roll(10)
     return  r == 1
