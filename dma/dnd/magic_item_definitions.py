@@ -1314,3 +1314,448 @@ MagicItem( name = 'Rod of Splendor',
     )
 )
 ]
+
+staves = [
+MagicItem( name = 'Staff of Command',
+    category = MagicItemCategory.STAVE,
+    xp_value = [5000,5000],
+    gold_value = [25000,25000],
+    source = SourceBook.DUNGEON_MASTERS_GUIDE,
+    desc = ('This device has 3 functions, only 2 of which will be effective if the wielder is a magic-user, but all 3 work when the staff is in a cleric\'s hands. The 3 functions are:\n\n'
+        '1. <i>Human influence</i>: This power duplicates that of the ring of the same name. Each <i>suggestion</i> or <i>charm</i> draws 1 charge from the staff.\n\n'
+        '2. <i>Mammal control/animal control</i>: This power functions only as <i>mammal control</i> (as the ring of the same name) when the staff is used by a magic-user, but in the hands of a cleric it is <i>animal control</i> (as the potion of that name, all types of animals listed). Either use drains 1 charge per turn or fraction thereof.\n\n'
+        '3. <i>Plant control</i>: This function duplicates that of the potion of the same name, but for each 1" square area of plants controlled for 1 turn or less than 1 charge is used. A magic-user cannot control plants at all.'
+        'The staff can be recharged.'
+    )
+),
+MagicItem( name = 'Staff of Curing',
+    category = MagicItemCategory.STAVE,
+    xp_value = [6000,6000],
+    gold_value = [25000,25000],
+    source = SourceBook.DUNGEON_MASTERS_GUIDE,
+    desc = 'This device can <i>cure disease</i>, <i>cure blindness</i>, <i>cure wounds</i> (6-21 hit points, 3d6 +3), or <i>cure insanity</i>. Each function drains 1 charge. The device can be used but once per day on any person (dwarf, elf, gnome, half-elf, halfling, half-orc included), and no function may be employed more than twice per day, i.e. the staff can only function 8 times during a 24 hour period. It can be recharged.'
+),
+MagicItem( name = 'Staff of the Magi',
+    category = MagicItemCategory.STAVE,
+    xp_value = [15000,15000],
+    gold_value = [75000,75000],
+    source = SourceBook.DUNGEON_MASTERS_GUIDE,
+    desc = ('This potent staff contains many spell powers and other functions as well so as to be a walking arsenal in one device. The staff has the following powers which do not drain charges:\n\n'
+        '<a href="/spells/detect-magic-magic-user-lvl-1"><i>detect magic</i></a>\n'
+        '<a href="/spells/enlarge-magic-user-lvl-1"><i>enlarge</i></a>\n'
+        '<a href="/spells/hold-portal-magic-user-lvl-1"><i>hold portal</i></a>\n'
+        '<a href="/spells/light-magic-user-lvl-1"><i>light</i></a>\n'
+        '<a href="/spells/protection-from-evil-magic-user-lvl-1"><i>protection from evil/good</i></a>\n\n'
+        'The following powers drain 1 charge per usage:\n\n'
+        '<a href="/spells/invisibility-magic-user-lvl-2"><i>invisibility</i></a>\n'
+        '<a href="/spells/knock-magic-user-lvl-2"><i>knock</i></a>\n'
+        '<a href="/spells/pyrotechnics-magic-user-lvl-2"><i>pyrotechnics</i></a>\n'
+        '<a href="/spells/web-magic-user-lvl-2"><i>web</i></a>\n'
+        '<a href="/spells/dispel-magic-magic-user-lvl-3"><i>dispel magic</i></a>\n'
+        '<a href="/spells/fireball-magic-user-lvl-3"><i>fireball</i></a>\n'
+        '<a href="/spells/lightning-bolt-magic-use-lvl-3"><i>lightning bolt</i></a>\n'
+        '<a href="/spells/ice-storm-magic-user-lvl-4"><i>ice storm</i></a>\n'
+        '<a href="/spells/wall-of-fire-magic-user-lvl-4"><i>wall of fire</i></a>\n'
+        '<a href="/spells/passwall-magic-user-lvl-5"><i>passwall</i></a>\n\n'
+        'These powers drain 2 charges per usage:\n\n'
+        '<i>whirlwind</i>\n'
+        '<i>plane travel</i>\n'
+        '<a href="/spells/conjure-elemental-magic-user-lvl-5"><i>conjure elemental</i></a>\n'
+        '<a href="/spells/telekinesis-magic-user-lvl-5"><i>telekinesis</i></a>\n\n'
+        'The <i>whirlwind</i> is identical to that caused by a <a href="/creatures/djinni">djinni</a>. <i>Plane travel</i> is similar to the psionic ability of <i>probability travel</i> (q.v.), but travel is possible only to the various planes. The staff can be used to conjure 1 <i>elemental</i> of each type per day, each having 8 hit dice. <i>Telekinesis</i> is at 8th level also, i.e. 200 pounds maximum weight.\n\n'
+        'The <i>staff of the magi</i> adds +2 to all saving throws versus magic. The staff can be used to <i>absorb</i> magic-user spell energy directed at its wielder, but if the staff absorbs energy beyond its charge limit it will explode just as if a "retributive strike" (see below) had been made. The spell levels of energy absorbed count only as recharging the staff, but they cannot be redirected immediately, so if <i>absorption</i> is desired, that is the only application possible by the staff wielder that round. Note also that the wielder has no idea of how many spell levels are cast at him, for the staff does not communicate this knowledge as does a <i>rod of absorption</i>. Therefore, absorbing spells can be risky. Absorption is the only way this staff can be recharged.\n\n'
+        '<i>Retributive strike</i> is a breaking of the staff. It must be purposeful and declared by the magic-user wielding it. When this is done all levels of spell energy in the staff take hit points of damage equal to 8 times the number of spell levels of energy (1 to 25), those between 1"-2" take 6 x levels, and those 2"-3" distant take 4 x levels. Successful saving throws versus magic indicate only one-half damage is sustained. The magic-user breaking the staff has a 50% chance of <i>plane travelling</i> to another plane of existence, but if he or she does not, the explosive release of spell energy totally destroys him or her. This, and the <i>staff of power</i>, are the only magic items capable of a retributive strike.'
+    )
+),
+MagicItem( name = 'Staff of Power',
+    category = MagicItemCategory.STAVE,
+    xp_value = [12000,12000],
+    gold_value = [60000,60000],
+    source = SourceBook.DUNGEON_MASTERS_GUIDE,
+    desc = ('The <i>staff of power</i> is also a very potent magic item, with offensive and defensive abilities. It has these powers:\n\n'
+        '<a href="/spells/continual-light-magic-user-lvl-2"><i>continual light</i></a>\n'
+        '<a href="/spells/darkness-15-radius-magic-user-lvl-2"><i>darkness, 5\' radius</i></a>\n'
+        '<a href="/spells/levitate-magic-user-lvl-2"><i>levitation</i></a>\n'
+        '<a href="/spells/magic-missile-magic-user-lvl-1"><i>magic missile</i></a> or <a href="/spells/lightning-bolt-magic-use-lvl-3"><i>lightning bolt</i></a>\n'
+        '<a href="/spells/ray-of-enfeeblement-magic-user-lvl-2"><i>ray of enfeeblement</i></a>\n'
+        '<a href="/spells/cone-of-cold-magic-user-lvl-5"><i>cone of cold</i></a> or <a href="/spells/fireball-magic-user-lvl-3"><i>fireball</i></a>\n\n'
+        'These functions cost 1 charge each. The following powers drain 2 charges each:\n\n'
+        '<a href="/spells/shield-magic-user-lvl-1"><i>shield</a>, 5\' radius</i>\n'
+        '<a href="/spells/globe-of-invulnerability-magic-user-lvl-6"><i>globe of invulnerability</i></a>\n'
+        '<i>paralyzation</i>\n\n'
+        '<i>Paralyzation</i> is a ray from the end of the staff which extends in a cone 4" long and 2" wide at its base.\n\n'
+        'The wielder of this staff gains +2 on armor class and saving throws. He or she may use the staff to smite opponents. It strikes as a +2 magic weapon and does 3-8 hit points of damage; if 1 charge is expended, the staff does double damage, but 2 charges do not triple damage.\n\n'
+        'You may determine alternate powers shown by random die roll.'
+    )
+),
+MagicItem( name = 'Staff of the Serpent',
+    category = MagicItemCategory.STAVE,
+    xp_value = [7000,7000],
+    gold_value = [35000,35000],
+    source = SourceBook.DUNGEON_MASTERS_GUIDE,
+    desc = ('There are 2 varieties of this staff, the "Python" and the "Adder".\n\n'
+        'The <i>python</i> strikes as a +2 magic weapon and does 3-8 hit points of damage when it hits. If the cleric throws the staff to the ground, its 6\' lengthens and thickens to become a constrictor snake, 25\' long (AC 3, 49 hit points, 9" movement). This happens in 1 round. The snake will <i>entwine</i> if it scores a hit, the opponent being constricted for 4-10 hit points of damage per round, and the victim will be so engaged until it or the <i>python</i> is destroyed. Note that the <i>python</i> will return to its owner upon command. If it is destroyed while in snake form the staff is destroyed.\n\n'
+        'The <i>adder</i> strikes as a +1 magic weapon and does 2-4 hit points of damage when it hits. Upon command the head of the staff becomes that of an actual serpent (AC 5, 20 hit points). This head remains for 1 full turn. When a hit is scored, damage is not incresed, but the victim must save versus poison or be slain. Only evil clerics will employ an <i>adder</i> staff. If the snake head is killed, the staff is destroyed.\n\n'
+        'Neither staff has or requires charges. 60% of these staves are <i>pythons</i>.'
+    )
+),
+MagicItem( name = 'Staff of Striking',
+    category = MagicItemCategory.STAVE,
+    xp_value = [6000,6000],
+    gold_value = [15000,15000],
+    source = SourceBook.DUNGEON_MASTERS_GUIDE,
+    desc = 'This oaken staff is the equivalent of a +3 magic weapon. (If weapon vs. armor type adjustment is made, the <i>staff of striking</i> is always treated as the most favorable weapon type vs. any armor.) It causes 4-9 (d6 +3) points of damage when a hit is scored. This expends a charge. If 2 charges are expended, bonus damage is doubled (d6 +6); if 3 charges are expended, bonus damage is tripled (d6 +9). No more than 3 charges can be expended per strike. The staff can be recharged.'
+),
+MagicItem( name = 'Staff of Withering',
+    category = MagicItemCategory.STAVE,
+    xp_value = [8000,8000],
+    gold_value = [35000,35000],
+    source = SourceBook.DUNGEON_MASTERS_GUIDE,
+    desc = 'The <i>staff of withering</i> is a +1 magic weapon. A hit from it causes 2-5 points of damage. If 2 charges are expended when a hit is scored, the creature struck will also age 10 years, its abilities and life span adjusted for the resulting age increase. If 3 charges are expended when a hit is made, 1 of the opponent creature\'s limbs can be made to shrivel and become useless unless it saves versus magic (check by random number generation for which member is struck). Note that ageless creatures (undead, demons, devils, etc.) cannot be aged or withered. Each effect of the staff is cumulative, so that 3 charges will score damage, age, <i>and</i> wither. Aging a dwarf is of little effect, while aging a dragon could actually aid the creature.'
+),
+MagicItem( name = 'Staff-Mace',
+    category = MagicItemCategory.STAVE,
+    xp_value = [1500,1500],
+    gold_value = [12500,12500],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = ('This clerical weapon appears as nothing more than a normal wooden staff of the type used when trekking in the wilderness. It gives off a very feint dweomer of the <i>alteration</i> sort. Upon command, it will take on one of these three forms, whichever is desired by the possessor:\n\n'
+        'Quarterstaff: <i>quarterstaff +3</i>, iron-shod\n'
+        'Great Mace: <i>footman\'s mace +1</i>, iron\n'
+        'Mace: <i>horseman\'s mace +2</i>, iron\n\n'
+        'This item is typically made of bronzewood, reinforced by heavy bands and tips of iron.'
+    )
+),
+MagicItem( name = 'Staff of Slinging',
+    category = MagicItemCategory.STAVE,
+    xp_value = [2000,2000],
+    gold_value = [10000,10000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = ('This magical quarterstaff appears to be nothing more than a +1 weapon - unless grasped by a druid, whereupon its power of slinging becomes evident. This power, which can only be employed by a druid, is activated when one end of the staff is touched to a heavy object of roughly spherical shape (a stone, metal ball, pottery crock, etc.) of up to nine inches in diameter, and five pounds in weight. The object adheres to the end of the staff, and the wielder need then only swing the staff in an overhand arc to release the missile toward a desired target. The missile leaves the staff on the down-stroke of the overhand swing and travels in a low, rising trajectory, with the missile going 1 foot upwards for every 1" traveled. Of course, the arc may be higher, or the missile aimed so as to travel nearly vertically - in the latter case, reverse the arcing ratio so that 1 foot of distance laterally is covered for every 1" of vertical rise. The maximum range of such a missile is 18", with limits of 6" and 12" on short and medium range, respectively.\n\n'
+        'This staff also carries charges, and a druid wielding the item can expend 1 charge and thereby use the staff to hurl a missile of large size, just as if the wielder were a <a href="/creatures/stone-giant">stone giant</a>: range out to 30", 3-30 points of damage per hit. Whether used as a magical quarterstaff or by employing one of its slinging powers, the staff bestows +1 to the wielder\'s chance to hit and +1 per die to damage dealt out. The weapon may be recharged by a druid of 12th or higher level.'
+    )
+),
+MagicItem( name = 'Staff-Spear',
+    category = MagicItemCategory.STAVE,
+    xp_value = [1000,3500],
+    gold_value = [5000,25000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = ('When this seemingly ordinary quarterstaff is examined magically, it will have an aura of <i>alteration</i>. Upon proper command, it will shoot forth from its upper end a long and sharp spear blade which makes the weapon into a spear rather than a staff. Upon a second command, the length of the weapon will elongate to a full 12 feet, and the third command will recall it to its original form of a regular staff. The powers and value of each staff-spear are determined randomly when the item is first employed:\n\n'
+        '<table>'
+        '<tr><th>Die Roll</th><th>To hit & damage</th><th>X.P. value</th><th>G.P. sale value</th></tr>'
+        '<tr><td>1-6</td><td>+1</td><td>1000</td><td>1000</td><td>5000</td></tr>'
+        '<tr><td>7-10</td><td>+2</td><td>1500</td><td>1500</td><td>7500</td></tr>'
+        '<tr><td>11-13</td><td>+3</td><td>2000</td><td>2000</td><td>10000</td></tr>'
+        '<tr><td>14-16</td><td>+4</td><td>2500</td><td>2500</td><td>15000</td></tr>'
+        '<tr><td>17-19</td><td>+5</td><td>3000</td><td>3000</td><td>20000</td></tr>'
+        '<tr><td>20</td><td>+3*</td><td>3500</td><td>3500</td><td>25000</td></tr>'
+        '</table>'
+        '* does damage as ranseur (2-8), but still acts as spear if used to thrust or when set to receive a charge'
+    )
+),
+MagicItem( name = 'Staff of Swarming Insects',
+    category = MagicItemCategory.STAVE,
+    xp_value = [100,5000],
+    gold_value = [500,25000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'A staff of this sort is typically shortish and quite stout. When initially obtained or encountered, much of its length is covered with finely done carvings depicting all sorts of winged biting and stinging flying insects (bees, deerflies, horseflies, wasps, and the like). Any cleric-type character (cleric, druid, shaman, witch doctor, etc.) holding it can command the staff to create a swarm of such insects, at the same time expending one of the staff\'s charges. Range is 6" +1" per clerical level of the user. The number of insects produced is 60 plus 10 per level. Every 10 insects will inflict 1 point of damage upon the target victim, regardless of armor class, unless the victim is protected by a force field, engulfed in flames, etc. Note, however, that the insects will not affect creatures larger than man-sized with a natural armor class of 5 or better. When a vulnerable target is attacked by the swarm of flying insects, the creature will be unable to do anything other than attempt to dislodge/kill the things. The insect attack lasts for 1 round. Each time the staff is employed, one of the insect-shapes carved into its wooden surface will disappear, so it is easy to determine how many charges are left in the staff. Unlike others of its ilk, a staff of this sort can have as many as 50 charges initially. However, it cannot be recharged.'
+),
+MagicItem( name = 'Staff of Thunder & Lightning',
+    category = MagicItemCategory.STAVE,
+    xp_value = [8000,8000],
+    gold_value = [20000,20000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = ('Casual examination of this stout quarterstaff will show it to be exceptional, and if it is magically examined, it will radiate a dweomer of the <i>alteration</i> sort. Constructed of very stout wood (ash, oak, bronzewood, of the like) and bound with iron set with silver rivets, it has the properties of a +2 magic weapon without any expenditure of its magical charges. Its other magical properties are as follows:\n\n'
+        'THUNDER: The staff strikes as a +3 weapon, and unless the opponent struck saves versus <i>rods, staves, and wands</i>, he, she, or it will be <i>stunned</i> from the noise of the staff\'s impact - unable to take any further action in the round struck, and automatically having last initiative in the following round. This power requires the expenditure of 1 charge.\n\n'
+        'LIGHTNING: A short spark of electricity leaps forth when the opponent is struck, and in addition to staff damage, from 2-12 additional points of damage from shock are bestowed (cf. <i>wand of lightning</i>). Note that the staff might not score a hit, but the electrical discharge discounts any form of metal armor (making the target effectively AC 10 for this purpose), so only such damage might apply. This power requires the expenditure of 1 charge.\n\n'
+        'THUNDERCLAP: The staff sends forth a cone of deafening noise, ½" wide at the apex, 4" long, and 2" wide at its furthest point from the source. All creatures within this cone, wholly or partially, must save versus <i>rods, staves, and wands</i> or be <i>stunned</i> for 1-2 rounds (unable to attack during this time) and unable to hear for 1-2 additional rounds. Those who save are unable to hear for 1-4 rounds, but suffer no loss of attacks. This function requires the expenditure of 2 charges.\n\n'
+        'LIGHTNING STROKE: A bolt similar to that from a <i>wand of lightning</i> is generated, but it is of eight dice (8d6) strength, causing 16-48 points of damage (rolls of 1 are counted as 2) to those who fail a saving throw. The stroke can be single or forked. This function of the rod uses 2 charges.\n\n'
+        'THUNDER & LIGHTNING: This power combines the <i>thunderclap</i>, described above, with a forked lightning bolt as in the <i>lightning stroke</i>. Damage from the lightning is a total of 8d6 with rolls of 1 or 2 counted as rolls of 3, for a range of 24-48 points. A saving throw applies, with deafness and half damage suffered by those who are successful. This power requires the expenditure of 4 charges.\n\n'
+        'The time required to activate any function is a number of segments equal to the number of charges expended; thus, the <i>thunder & lightning</i> function costs 4 charges and requires 4 segments to operate.'
+    )
+),
+MagicItem( name = 'Staff of the Woodlands',
+    category = MagicItemCategory.STAVE,
+    xp_value = [8000,8000],
+    gold_value = [40000,40000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = ('This sort of staff is always made from oak, ask, or yew, finely grained, beautifully carved, and bound and shod with bronze. It is effective only in the hands of a druid. Each such staff has the following powers, which each expend one charge per use:\n\n'
+        '<a href="/spells/wall-of-thorns-druid-lvl-6"><i>Wall of thorns</i></a>\n'
+        '<a href="/spells/animal-friendship-druid-lvl-1"><i>Animal friendship</i></a> and <a href="/spells/speak-with-animals-druid-lvl-1"><i>speak with animals</i></a>\n'
+        '<i>Animate tree</i>: This function duplicates the ability of a <a href="/creatures/treant">treant</a> to cause a large tree to move at a 3" rate and attack as if it were a largest-sized treant, and in all other respects become a virtual treant for eight rounds per charge expended. Note that one round is required for the tree to animate, and it will return to rooting on the eighth, so only six of the initial eight rounds are effectively available for attack function.\n\n'
+        'In addition to these powers, each such staff has a magical weapon value, and those with a lesser value also have additional magical powers, which do not require charges and can be employed once per day. The <i>staff of the woodlands +4</i> has no additional powers. The <i>staff +3</i> also confers upon the user the power of a <a href="/spells/pass-without-trace-druid-lvl-1"><i>pass without trace</i></a> spell. The <i>staff +2</i> has the powers of <i>pass without trace</i> and <a href="/spells/barkskin-druid-lvl-2"><i>barkskin</i></a>. The <i>staff +1</i> confers the powers of the <i>staff +2</i> plus the power of the <a href="/spells/tree-druid-lvl-3"><i>tree</i></a> spell. To determine which sort of staff has been discovered, assign even chances for each of the four types.'
+    )
+)
+]
+
+wands = [
+MagicItem( name = 'Wand of Conjuration'
+    category = MagicItemCategory.WAND,
+    xp_value = [7000,7000],
+    gp_value = [35000,35000],
+    source = SourceBook.DUNGEON_MASTERS_GUIDE,
+    desc = ('Grasping of this device enables a magic-user to immediately recognize any cast or written magic-user conjuration/summoning spell (<a href="/spells/unseen-servant-magic-user-lvl-1"><i>unseen servant</i></a>, <i>monster summoning</i>, <a href="/spells/conjure-elemental-magic-user-lvl-5"><i>conjure elemental</i></a>, <a href="/spells/death-spell-magic-user-lvl-6"><i>death spell</i></a>, <a href="/spells/invisible-stalker-magic-user-lvl-6"><i>invisible stalker</i></a>, <a href="/spells/limited-wish-magic-user-lvl-7"><i>limited wish</i></a>, <a href="/spells/symbol-magic-user-lvl-8"><i>symbol</i></a>, <a href="/spells/maze-illusionist-lvl-5"><i>maze</i></a>, <a href="/spells/gate-magic-user-lvl-9"><i>gate</i></a>, <a href="/spells/prismatic-sphere-magic-user-lvl-9"><i>prismatic sphere</i></a>, <a href="/spells/wish-magic-user-lvl-9"><i>wish</i></a>). The wand has the following powers which require expenditure of 1 charge:\n\n'
+        '<i>unseen servant</i>\n'
+        '<i>monster summoning</i>*\n\n'
+        '* A maximum of 6 charges may be expended, 1 per level of the <i>monster summoning</i>, or 6 <a href="/spells/monster-summoning-i-magic-user-lvl-3"><i>monster summoning I</i></a>, 3 <a href="/spells/monster-summoning-ii-magic-user-lvl-4"><i>monster summoning II</i></a>, 2 <a href="/spells/monster-summoning-iii-magic-user-lvl-5"><i>monster summoning III</i></a>, or any combination totalling 6. The magic-user must be of a sufficient experience level to cast the appropriate <i>summoning</i> spell. The <i>monster summoning</i> takes 5 segments.\n\n'
+        'The wand can also conjure up a <i>curtain of blackness</i> - a veil of total black which absorbs all light. The <i>curtain of blackness</i> can cover a maximum area of 600 square feet (60\' x 10\', 40\' x 15\', 30\' x 20\'), but it must stretch from ceiling to floor, wall to wall. The <i>curtain</i> costs 2 charges to conjure. The veil of total lightlessness can be penetrated only by physical means or magic. The wand also enables its wielder to construct a <a href="/spells/prismatic-sphere-magic-user-lvl-9"><i>prismatic sphere</i></a> (or <a href="/spells/prismatic-wall-illusionist-lvl-7"><i>wall</i></a>), once color at a time, red to violet, at a 1 charge per color cost. Each function of the wand takes 5 segments of time, and only 1 function per round is possible. The wand may be recharged.'
+    )
+),
+MagicItem( name = 'Wand of Enemy Detection'
+    category = MagicItemCategory.WAND,
+    xp_value = [2000,2000],
+    gp_value = [10000,10000],
+    source = SourceBook.DUNGEON_MASTERS_GUIDE,
+    desc = 'This wand gives off a pulse and points in the direction of any hostile creature(s) intent upon the bearer of the device. The creature(s) can be invisible, ethereal, astral, out of phase, hidden, disguised, or in plain sight. Detection range is a 6" sphere. The function requires 1 charge to operate for 1 turn. The wand can be recharged.'
+),
+MagicItem( name = 'Wand of Fear'
+    category = MagicItemCategory.WAND,
+    xp_value = [3000,3000],
+    gp_value = [15000,15000],
+    source = SourceBook.DUNGEON_MASTERS_GUIDE,
+    desc = 'When the <i>fear</i> wand is activated a pale amber ray springs from the tip of the wand, a cone 6" long by 2" in base diameter, which flashes on in 1 segment and instantly disappears. Each creature touched by the ray must save versus a <i>wand</i> or react as per the <a href="/spells/remove-fear-cleric-lvl-1"><i>fear</i></a> spell (first level cleric spell, <i>remove fear</i> reversal), i.e. turn and move at fastest possible speed away from the wand user for 6 rounds. Each usage costs 1 charge. It can operate but once per round. The wand can be recharged.'
+),
+MagicItem( name = 'Wand of Fire'
+    category = MagicItemCategory.WAND,
+    xp_value = [4500,4500],
+    gp_value = [25000,25000],
+    source = SourceBook.DUNGEON_MASTERS_GUIDE,
+    desc = ('This wand can be employed in 4 separate functions which duplicate the following magic-user spells:\n\n'
+        '1. <a href="/spells/burning-hands-magic-user-lvl-1"><i>Burning hands</i></a>: The wand emits a plane of fire, a fan-shaped sheet 10\' wide at its terminus and 12\' long. Each creature touched takes 6 hit points of damage. The plane appears in 1 segment, shoots forth its dark red flames, and snuffs out in less than 1 second. It expends 1 charge.\n\n'
+        '2. <a href="/spells/pyrotechnics-magic-user-lvl-2"><i>Pyrotechnics</i></a>: This function exactly duplicates the spell of the same name. It requires 2 segments to activate. It expends 1 charge.\n\n'
+        '3. <a href="/spells/fireball-magic-user-lvl-3"><i>Fireball</i></a>: The wand coughs forth a pea-sized sphere which streaks out to the desired range (or to a maximum of 16") and bursts in a fiery violet-red blast, exactly as a <i>fireball</i> cast by a spell of that name would. The function takes 2 segments. It expends 2 charges. The <i>fireball</i> does 6 hit dice of damage, but all 1\'s are counted as 2\'s, i.e. the burst does 12-36 hit points. A saving throw versus <i>wand</i> is applicable.\n\n'
+        '4. <a href="/spells/wall-of-fire-magic-user-lvl-4"><i>Wall of fire</i></a>: The wand can be used to draw a fiery curtain of purplish-red flames which exactly duplicates the <i>wall of fire</i> spell cast by a magic-user, i.e. a sheet of flame 12 square " (1" x 12", 2" x 6", 3" x 4", etc.) which lasts for 6 rounds, causes 8-18 hit points damage (2d6 +6) if touched (2-8 hit points if within 1" of the fire, 1-4 if within 2"), and can also be made as a ring-shape around the wand user (but the circle is only 2¼" in diameter). This function requires 3 segments. It expends 2 charges.\n\n'
+        'The <i>wand of fire</i> can operate but once per round. It can be recharged.'
+    )
+),
+MagicItem( name = 'Wand of Frost'
+    category = MagicItemCategory.WAND,
+    xp_value = [6000,6000],
+    gp_value = [50000,50000],
+    source = SourceBook.DUNGEON_MASTERS_GUIDE,
+    desc = ('A <i>frost</i> wand can perform 3 functions which duplicate magic-user spells:\n\n'
+        '1. <a href="/spells/ice-storm-magic-user-lvl-4"><i>Ice storm</i></a>: A silvery ray springs forth from the wand and in 1 segment an <i>ice</i> (or <i>sleet</i>) <i>storm</i> occurs up to 6" distant from the wand holder. This function requires 1 charge.\n\n'
+        '2. <a href="/spells/wall-of-ice-magic-user-lvl-4"><i>Wall of Ice</i></a>: The silvery ray will form a <i>wall of ice</i>, 6 inches thick, and a square area equal to 6" (1" x 6", 2" x 3", etc.) in 2 segments at a cost of 1 charge.\n\n'
+        '3. <a href="/spells/cone-of-cold-magic-user-lvl-5"><i>Cone of cold</i></a>: Dancing white crytalline motes spray forth from the wand in a cone with a 6" length and a terminal diameter of 2". The cold comes forth in 2 segments but lasts but 1 second. The temperature is c. -100°F., and damage is 6 hit dice, treating all 1\'s rolled as 2\'s (6d6, (12-36). The cost is 2 charges per use. Saving throw versus a <i>wand</i> is applicable.\n\n'
+        'The wand can function but once per round, and may be recharged.'
+    )
+),
+MagicItem( name = 'Wand of Illumination'
+    category = MagicItemCategory.WAND,
+    xp_value = [2000,2000],
+    gp_value = [10000,10000],
+    source = SourceBook.DUNGEON_MASTERS_GUIDE,
+    desc = ('This wand has 4 separate functions, 3 of which approximate magic-user spells, and 1 of which is singular:\n\n'
+        '1. <a href="/spells/dancing-lights-magic-user-lvl-1"><i>Dancing lights</i></a>: In 1 segment the wand will produce this effect at a cost of 1 charge.\n\n'
+        '2. <a href="/spells/light-magic-user-lvl-1"><i>Light</i></a>: The <i>illumination</i> wand sends forth <i>light</i> in 2 segments time at an expenditure of 1 charge.\n\n'
+        '3. <a href="/spells/continual-light-magic-user-lvl-2"><i>Continual light</i></a>: This function requires only 2 segments to perform, but the cost is 2 charges.\n\n'
+        '4. <i>Sunburst</i>: When this effect is called forth the wand delivers a sudden flash of brilliant greenish-white light, with blazing golden rays. The range of this <i>sunburst</i> is 12" maximum, and its duration is but 1/10 of a second. Its area of effect is a globe of 4" diameter. Any undead within this globe take 6-36 hit points of damage, with no saving throw. Creatures within or facing the burst must save versus a <i>wand</i> or be blinded for 2-12 segments and unable to do anything during that period. (Of course, the creatures in question must have ocular organs sensitive to the visible light spectrum). The function requires 3 segments and expends 3 charges.\n\n'
+        'The wand can be recharged.'
+    )
+),
+MagicItem( name = 'Wand of Illusion'
+    category = MagicItemCategory.WAND,
+    xp_value = [3000,3000],
+    gp_value = [20000,20000],
+    source = SourceBook.DUNGEON_MASTERS_GUIDE,
+    desc = 'The <i>illusion</i> wand creates both audible and visual illusions (cf. <a href="/spells/audible-glamer-magic-user-lvl-2"><i>audible glamer</i></a>, <a href="/spells/phantasmal-force-magic-user-lvl-3"><i>phantasmal force</i></a>). The wand emits an invisible ray, with a 14" maximum range. The effect takes 3 segments to commence. The wand wielder must concentrate on the <i>illusion</i> in order to maintain it, but he or she may move normally (not melee) and still do so. Each portion - audible and visual - costs 1 charge to effect and 1 per round to continue. The wand may be recharged.'
+),
+MagicItem( name = 'Wand of Lightning'
+    category = MagicItemCategory.WAND,
+    xp_value = [4000,4000],
+    gp_value = [30000,30000],
+    source = SourceBook.DUNGEON_MASTERS_GUIDE,
+    desc = ('This wand has 2 functions which closely resemble magic-user spells:\n\n'
+        '1. <i>Shock</i>: This function causes the recipient to take 1-10 hit points of damage, with no saving throw, when struck in melee combat. Any "to hit" score discounts metallic armor and shield (giving opponents armor class 10) but not plain leather or wood. Magic bonuses on metallic armor do not affect armor class, but such items as a <i>ring of protection</i> do. The shock uses 1 charge.\n\n'
+        '2. <a href="/spells/lightning-bolt-magic-use-lvl-3"><i>Lightning bolt</i></a>: The possessor of the wood can discharge a bolt of <i>lightning</i>. The stroke can be either the forked or straight bolt (cf. magic-user spell, <i>lightning bolt</i>). Damage is 12-36 (6d6, treating 1\'s as 2\'s), but a saving throw is applicable. This function uses 2 charges. It requires 2 segments to discharge.\n\n'
+        'The wand may be recharged. It can perform but 1 function per round.'
+    )
+),
+MagicItem( name = 'Wand of Magic Detection'
+    category = MagicItemCategory.WAND,
+    xp_value = [2500,2500],
+    gp_value = [25000,25000],
+    source = SourceBook.DUNGEON_MASTERS_GUIDE,
+    desc = 'This wand is similar in operation to the <i>enemy detection</i> wand. If any form of magic is in operation, or a magic item exists, within a 3" radius, the <i>magic detection</i> wand will pulse and point to the strongest source. Note that the wand will point to a person upon whom a spell has been cast. Operation requires 1 round, and successive rounds will point out successively less powerful magic radiation. The category of magic (abjuration, alteration, etc.) can be determined if one round is spent concentrating on the subject emanation. 1 charge is expended per turn (or fraction thereof) of use. Starting with the second round of continuous use, there is a 2% cumulative chance per round that the wand will temporarily malfunction and indicate non-magical items as magical, or vice-versa. The wand may be recharged.'
+),
+MagicItem( name = 'Wand of Metal and Mineral Detection'
+    category = MagicItemCategory.WAND,
+    xp_value = [1500,1500],
+    gp_value = [7500,7500],
+    source = SourceBook.DUNGEON_MASTERS_GUIDE,
+    desc = 'This wand also has a 3" radius range and pulses and points to the largest mass of metal within its effective area of operation. However, the wielder can concentrate on a specific metal or mineral type (gold, platinum, quartz, beryl, diamond, corundum, etc.); if the specific type is within range the wand will point to any and all places it is located, and the wand possessor will know the approximate quantity as well. Each operation requires 1 round. Each charge powers the wand for 1 full turn. The wand may be recharged.'
+),
+MagicItem( name = 'Wand of Magic Missiles'
+    category = MagicItemCategory.WAND,
+    xp_value = [4000,4000],
+    gp_value = [35000,35000],
+    source = SourceBook.DUNGEON_MASTERS_GUIDE,
+    desc = 'The <i>missiles</i> wand discharges <i>magic missiles</i> which are similar to those of the first level magic-user spell, <a href="/spells/magic-missile-magic-user-lvl-1"><i>magic missile</i></a>. The device fires a <i>magic missile</i> which causes 2-5 hit points of damage. It operates as the spell of the same name, always hitting its target when wielded by a magic-user, otherwise requiring a "to hit" die roll. Each missile takes 3 segments to discharge, and costs 1 charge. A maximum of 2 may be expended in 1 round. The wand may be recharged.'
+),
+MagicItem( name = 'Wand of Negation'
+    category = MagicItemCategory.WAND,
+    xp_value = [3500,3500],
+    gp_value = [15000,15000],
+    source = SourceBook.DUNGEON_MASTERS_GUIDE,
+    desc = 'This device operates to negate the spell or spell-like function(s) of rods, staves, wands and other magical items. The individual with the <i>negation</i> wand points the device, and a pale gray beam shoots forth to touch the target - device or individual. This will totally negate any wand function, and make any other spell or spell-like function from a device 75% likely to be negated, whether it is a low-level spell, or even if it is an ultra-powerful spell. Operation of the wand requires but 1 segment of a round. It can function but once per round, and each negation drains 1 charge. The wand cannot be recharged.'
+),
+MagicItem( name = 'Wand of Paralyzation'
+    category = MagicItemCategory.WAND,
+    xp_value = [3500,3500],
+    gp_value = [25000,25000],
+    source = SourceBook.DUNGEON_MASTERS_GUIDE,
+    desc = 'This wand shoots forth a thin ray of bluish color to a maximum range of 6". If the ray touches any creature it must save versus <i>wands</i> or be rigidly immobile for from 5-20 rounds. A save indicates the ray missed, and there was no effect. Each operation takes 3 segments and costs 1 charge. The wand may operate once per round. It may be recharged. (Note that as soon as the ray touches 1 creature it <i>stops</i>; the wand can attack only 1 target per round.)'
+),
+MagicItem( name = 'Wand of Polymorphing'
+    category = MagicItemCategory.WAND,
+    xp_value = [3500,3500],
+    gp_value = [25000,25000],
+    source = SourceBook.DUNGEON_MASTERS_GUIDE,
+    desc = 'The <i>polymorphing</i> wand emits a green beam, a thin ray which darts forth to a maximum distance of 6". If this beam touches any creature, it must make its saving throw versus <i>wands</i> (success indicating a miss) or be <a href="/spells/polymorph-other-magic-user-lvl-4"><i>polymorphed (others)</i></a> as the spell of the same name. The wand wielder may opt to form the victim into a snail, frog, insect, etc. as long as the result is a small and inoffensive creature. The possessor of the want may elect to <i>touch</i> a creature with the device instead. When this is done (unwilling creatures must be <i>hit</i> and they are also entitled to a saving throw) the recipient is surrounded by dancing motes of sparkling emerald light, and then transforms into whatever creature-shape the wand wielder has stated. This is the same magical effect as the <a href="/spells/polymorph-self-magic-user-lvl-4"><i>polymorph (self)</i></a> spell. Either function requires 3 segments. Each draws 1 charge. Only 1 function per round is possible. The wand may be recharged.'
+),
+MagicItem( name = 'Wand of Secret Door and Trap Location'
+    category = MagicItemCategory.WAND,
+    xp_value = [5000,5000],
+    gp_value = [40000,40000],
+    source = SourceBook.DUNGEON_MASTERS_GUIDE,
+    desc = 'This wand has an effective radius of 1½" for secret door location, 3" for trap location. When the wand is energized it will pulse and point to whichever thing it is to locate if a secret door/trap is within location range. Note that it locates either one or the other, not both during one operation. It requires 1 round to function and draws 1 charge. The wand may be recharged.'
+),
+MagicItem( name = 'Wand of Wonder'
+    category = MagicItemCategory.WAND,
+    xp_value = [6000,6000],
+    gp_value = [10000,10000],
+    source = SourceBook.DUNGEON_MASTERS_GUIDE,
+    desc = ('The <i>wand of wonder</i> is a strange and unpredictable device which will generate any number of strange effects, randomly, each time it is used. The usual effects are shown on the table below, but you may alter those for any or all of these wands in your campaign as you see fit, although it is recommended that you follow the <i>pattern</i> shown. The functions of the wand are:\n\n'
+        '01-10: <a href="/spells/slow-magic-user-lvl-3"><i>slow</i></a> creature pointed at for 1 turn\n'
+        '11-18: <i>deludes</i> wielder for 1 round into believing the wand functions as indicated by a second die roll\n'
+        '19-25: <a href="/spells/gust-of-wind-magic-user-lvl-3"><i>gust of wind</i></a>, double force of spell\n'
+        '26-30: <a href="/spells/stinking-cloud-magic-user-lvl-2"><i>stinking cloud</i></a> at 3" range\n'
+        '31-33: <i>heavy rain</i> falls for 1 round in 6" radius of wand wielder\n'
+        '34-36: <a href="/spells/monster-summoning-i-magic-user-lvl-3"><i>summon</i></a> <a href="/creatures/rhinoceros">rhino</a> (1-25), <a href="/creatures/elephant">elephant</a> (26-50) or mouse (51-00)\n'
+        '37-46: <a href="/spells/lightning-bolt-magic-use-lvl-3"><i>lightning bolt</i></a> (7" x ½") as wand\n'
+        '47-49: <i>stream of 600 large butterflies</i> pour forth and flutter around for 2 rounds, blinding everyone (including wielder)\n'
+        '50-53: <a href="/spells/enlarge-magic-user-lvl-1"><i>enlarge</i></a> target if in 6" of wand\n'
+        '54-58: <a href="/spells/darkness-15-radius-magic-user-lvl-2"><i>darkness</i></a> in a 3" diameter hemisphere at 3" center distance from wand\n'
+        '59-62: <i>grass</i> grows in area of 16" square before wand, or grass existing there grows to 10 times normal size\n'
+        '63-65: <i>vanish</i> any non-living object of up to 1,000 pounds mass and up to 30 cubic feet in size (object is ethereal)\n'
+        '66-69: <i>diminish</i> wand wielder to 1/12\' height\n'
+        '70-79: <a href="/spells/fireball-magic-user-lvl-3"><i>fireball</i></a> as wand\n'
+        '80-84: <a href="/spells/invisibility-magic-user-lvl-2"><i>invisibility</i></a> covers wand wielder\n'
+        '85-87: <i>leaves grow from target</i> if in 6" of wand\n'
+        '88-90: <i>10-40 gems</i> of 1 g.p. base value shoot forth in a 3" long stream, each causing 1 h.p. or damage to any creature in path - roll 5d4 for number of hits\n'
+        '91-97: <i>shimmering colors</i> dance and play over a 4" x 3" area in front of wand - creatures therein blinded for 1-6 rounds\n'
+        '98-00: <a href="/spells/stone-to-flesh-magic-user-lvl-6"><i>flesh to stone</i></a> (or reverse if target is stone) if target is within 6"\n\n'
+        'The wand uses 1 charge per function. It may not be recharged. Where applicable, saving throws should be made.'
+    )
+),
+MagicItem( name = 'Anything Wand'
+    category = MagicItemCategory.WAND,
+    xp_value = [2500,2500],
+    gp_value = [12500,12500],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'This device will perform as if it were an ordinary <i>wand of wonder</i>, although it will have no more than 50 usages before being totally expended. In addition, it has three other special uses: Upon command, it will perform as if it were any other sort of known wand, but it can only duplicate the effects of any given wand once. If it is commanded to duplicate a single kind of wand more than once, the second or third such command will have no effect - and after three such demands, successful or not, the wand will be totally drained and useless. The item cannot be recharged.'
+),
+MagicItem( name = 'Buckler Wand'
+    category = MagicItemCategory.WAND,
+    xp_value = [500,500],
+    gp_value = [5000,5000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'This is a shortish, thick wand about 1½ feet in length with an exceptionally sharp point on one end and a trigger mechanism built into the opposite end, which is blunt. The wand is usable by any character except one of the cleric class, and can be activated in a single segment. When the thick end is grasped firmly and the trigger pressed, the tip of the wand becomes the equivalent of a <i>dagger +1</i> and the rest of the shaft blossoms into a round shield of buckler size having a +1 magic value. The whole becomes equal to a <i>spiked buckler +1</i>. Because of its dweomer, it can be employed by magic-users, but no spells can be cast when it is in buckler form unless the possessor is a multi-classed character with fighter abilities in addition to magic-user abilities. A thief who employs the wand\'s powers cannot <i>climb walls</i> or perform other abilities requiring the use of his or her hands while holding the device.'
+),
+MagicItem( name = 'Wand of Defoliation'
+    category = MagicItemCategory.WAND,
+    xp_value = [1000,1000],
+    gp_value = [6000,6000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = ('This wand is never constructed of any sort of wood; instead, ivory or bone is typically the major component. It has the following functions:\n\n'
+        'When 1 charge is expended, all chlorophyll in a 3" radius from the wand is destroyed. Thus, leaves turn to autumnal colors and drop off, grass becomes brown and dry, and so forth.\n\n'
+        'When 2 charges are expended, all normal plant life within the 3" radius area of effect withers and dies. Sentient plant creatures and other non-normal sorts of plants will not necessarily be killed, but they will each suffer 1-6 (1d6) points of damage. If so desired, the possessor of the wand can direct the force of this power into a cone-shaped area of 3" length, widening to 1" diameter at the farthest point from the wand. Effects are the same as for the spherical area of effect, except that sentient and non-normal plant life within the cone will suffer 6-36 points of damage (6d6) instead of only 1-6. Any plant-creature or other non-normal plant that lies partially within the conical area of effect is entitled to a saving throw (versus <i>rods, staves, and wands</i>), and if successful takes only one-half damage (3d6).'
+    )
+),
+MagicItem( name = 'Wand of Earth and Stone'
+    category = MagicItemCategory.WAND,
+    xp_value = [1000,1500],
+    gp_value = [10000,15000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = ('A wand of this sort is typically of shortish length and tipped with some form of mineral. It is imbued with the following dweomers:\n\n'
+        '<a href="/spells/dig-magic-user-lvl-4"><i>Dig</i></a> ½ charge per use\n'
+        '<a href="/spells/passwall-magic-user-lvl-5"><i>Passwall</i></a> 1 charge per use\n'
+        '<a href="/spells/move-earth-magic-user-lvl-6"><i>Move earth</i></a> 2 charges per use\n\n'
+        'In addition, 50% of all such wands (the higher-valued ones) have the following two powers:\n\n'
+        '<a href="/spells/transmute-rock-to-mud-magic-user-lvl-5"><i>Transmute mud to rock</i></a> 1 charge per use\n'
+        '<i>Transmute rock to mud</i> 1 charge per use'
+    )
+),
+MagicItem( name = 'Wand of Fireballs'
+    category = MagicItemCategory.WAND,
+    xp_value = [2000,2000],
+    gp_value = [16000,16000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'This wand simply enables the wielder to cast a <a href="/spells/fireball-magic-user-lvl-3"><i>fireball</i></a> spell as if he or she were a magic-user of 6th level. The wand takes only 1 segment to activate and 1 segment to activate the <i>fireball</i>. Damage is 6-36 points (6d6), with saving throw applicable for half damage. The wand can be recharged by any magic-user of 8th or higher level.'
+),
+MagicItem( name = 'Wand of Flame Extinguishing'
+    category = MagicItemCategory.WAND,
+    xp_value = [1250,1250],
+    gp_value = [10000,10000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = ('This sort of wand has three separate functions:\n\n'
+        'When applied to fires of normal sort and size, no charges are expended in extinguishing such fires. Normal size includes anything up to the size of a bonfire or a fire in a regular fireplace - equal to four to six billets of wood burning hotly.\n\n'
+        'When applied to large normal fires, flaming oil in quantity equal to a gallon or more, the fire produced by a demon or devil, a <i>flame tongue</i> sword, or a <a href="/spells/burning-hands-magic-user-lvl-1"><i>burning hands</i></a> spell, 1 charge is expended from the wand. Continual magic flames, such as those of a sword or a creature able to ignite, will be extinguished for 6 rounds and will flare up again after that time.\n\n'
+        'When applied to large magical fires such as a <a href="/spells/fireball-magic-user-lvl-3"><i>fireball</i></a>, <a href="/spells/flame-strike-cleric-lvl-5"><i>flame strike</i></a>, or <a href="/spells/wall-of-fire-druid-lvl-5"><i>wall of fire</i></a>, 2 charges are expended from the wand as the flames are extinguished.\n\n'
+        'If one charge of the device is used upon a creature which is composed of flame (a <a href="/creatures/fire-elemental">fire elemental</a>, for instance), the wand inflicts 6-36 (6d6) points of damage upon the creature.'
+    )
+),
+MagicItem( name = 'Wand of Force'
+    category = MagicItemCategory.WAND,
+    xp_value = [3000,3000],
+    gp_value = [30000,30000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = ('Although it is rumored that the concept of such a wand has taken many forms, the one which has been standardized, so to speak, is a tri-function device which requires considerable operator knowledge only in the application of its third function.\n\n'
+        'Firstly, a <i>wand of force</i> enables the wielder to cause a shaft of nearly invisible, blue-white energy to spring forth from its tip. This shaft of energy extends 4 feet and is equal to a +5 bastard sword with respect to hit probability and damage. This usage expends 1 charge per turn.\n\n'
+        'Secondly, a <i>wand of force</i> can be employed to create a <a href="/spells/wall-of-force-magic-user-lvl-5"><i>wall of force</i></a> duplicating the fifth-level magic-user spell of the same name as if cast by a 10th-level magic-user. This function expends 1 charge per <i>wall</i> created, and a single usage per round is possible.\n\n'
+        'Thirdly, a <i>wand of force</i> can be employed to create a nearly invisible plane of energy which performs as if it had been created by the casting of a <a href="/spells/bigbys-forceful-hand-magic-user-lvl-6"><i>Bigby\'s Forceful Hand</i></a> spell. The wand user must actually be a magic-user in order to activate this function, and regardless of his or her level, one of the various <i>Bigby\'s Hand/Fist</i> spells must be recorded for study (not necessarily for casting) in the spell books of the wand wielder. Use of this function expends ½ charge per round.\n\n'
+        'Fighters of all types are able to use the first and second functions of the wand. The device can be recharged by a magic-user of 16th or higher level, and in addition it can draw sufficient energy to regain a single charge by being touched to any of the following: a manifestation of one of the <i>Bigby\'s Hand/Fist</i> spells, a manifestation of the <a href="/spells/mordenkainens-sword-magic-user-lvl-7"><i>Mordenkainen\'s Sword</i></a> spell, or a manifestation of a <i>wall of force</i>. Touching any of these things with the wand causes the effect of a <a href="/spells/disintegrate-magic-user-lvl-6"><i>disintegrate</i></a> spell, destroying the spell/manifestation instantly, and enabling the wand to absorb power equivalent to a single charge.'
+    )
+),
+MagicItem( name = 'Wand of Ice Storms'
+    category = MagicItemCategory.WAND,
+    xp_value = [2500,2500],
+    gp_value = [20000,20000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'This device enables the wielder to cause an <a href="/spells/ice-storm-magic-user-lvl-4"><i>ice storm</i></a> just as if he or she were a magic-user of 7th level. Either damaging hail or sleet and slippery conditions are possible (see the <i>ice storm</i> spell explanation). Activation time is 1 segment, and causing the dweomer to emerge from the wand likewise requires 1 segment. The wand can be recharged by a magic-user of 9th or higher level.'
+),
+MagicItem( name = 'Wand of Lightning Bolts'
+    category = MagicItemCategory.WAND,
+    xp_value = [2000,2000],
+    gp_value = [16000,16000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'A wand of this nature enables the possessor to cast a <a href="/spells/lightning-bolt-magic-use-lvl-3"><i>lightning bolt</i></a> as if he or she were a magic-user of 6th level. Damage is 6-36 (6d6) points, with saving throw applicable for half damage. Either form of bolt (forked or single stroke) is possible. The wand takes 1 segment to activate, and another 1 segment is required to discharge the lightning. The device can be recharged by a magic-user of 8th or higher level.'
+),
+MagicItem( name = 'Wand of Metal Command'
+    category = MagicItemCategory.WAND,
+    xp_value = [2500,2500],
+    gp_value = [10000,10000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = ('This wand appears to be nothing more useful than a <i>wand of metal and mineral detection</i>, but in the hands of a <a href="/creatures/dwarf">dwarf</a> or <a href="/spells/gnome">gnome</a>, its exceptional powers become operational:\n\n'
+        'If 1 charge is expended, the wand can transmute gold to lead, or lead to gold. The range of this power is 3", and the amount of metal so converted will be 1 to 6 pounds (10 to 60 gp weight).\n\n'
+        'If 2 charges are expended, the user can <a href="/spells/heat-metal-druid-lvl-2"><i>heat metal</i></a> in the same fashion as the druid spell of the same name. Range is 3", and only a single target area of 3-foot diameter can be affected, causing up to 600 gp weight of metal within this area to become heated.\n\n'
+        'If 3 charges are expended, the possessor of the wand can cast any one of the following spells just as if he or she were an 18th-level magic-user: <a href="/spells/crystalbrittle-magic-user-lvl-9"><i>crystalbrittle</i></a>, <a href="/spells/glassee-magic-user-lvl-6"><i>glassee</i></a>, or <a href="/spells/glassteel-magic-user-lvl-8"><i>glassteel</i></a>.'
+    )
+)
+MagicItem( name = 'Wand of Size Alteration'
+    category = MagicItemCategory.WAND,
+    xp_value = [3000,3000],
+    gp_value = [20000,20000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'A wand of this sort enables the wielder to cause any single creature of virtually and size to <i>enlarge</i> or <i>diminish</i> in size. Either effect will cause a 50% change in size. Relative strength and power also increases or decreases proportionally, providing the weaponry employed is proportionate - or usable. For humanoid creatures enlarged, strength is roughly proportionate to that of a giant of corresponding size; for example, 9 feet tall equals a <a href="/creature/hill-giant">hill giant</a> and 19 strength, 13 feet tall equals a <a href="/creatures/fire-giant">fire giant</a> and 22 strength. The wand\'s power has a range of 1". The target creature and all it is wearing or carrying is affected unless a saving throw succeeds - but note that a willing target need not make a saving throw. The effect of the wand can be removed by a <a href="/spells/dispel-magic-cleric-lvl-3"><i>dispel magic</i></a> spell, but if this is done the target must make a system shock roll. It can also be countered if the possessor of the wand wills the effect to be cancelled before the duration of the effect expires. Each usage of the wand (but not the cancellation of an effect) expends 1 charge. It can be recharged by a magic-user of 12th or higher level.'
+)
+MagicItem( name = 'Wand of Steam and Vapor'
+    category = MagicItemCategory.WAND,
+    xp_value = [4500,4500],
+    gp_value = [25000,25000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = ('A wand of this sort has two separate functions, each of which requires the expenditure of 1 charge:\n\n'
+        'STEAM: In one segment the wand will spout forth a jet of super-heated steam in a cone 1" x 3" x 5". Any creature within this area takes 6-36 (6d6) points of damage. The cloud persists, slowly cooling, so that on the second round it inflicts 4d6 damage, and on the third and last round it causes 2d6 damage. Saving throws apply for half damage in all cases. Naturally, fire-dwelling or fire-using creatures will not be harmed by the steam - unless they are harmed by dampness.\n\n'
+        'VAPOR: In one segment the wand will gout forth billows of warm, steamy vapors. These vapors are equal to a <a href="/spells/fog-cloud-illusionist-lvl-2"><i>fog cloud</i></a> of 4" depth, 6" height, and 8" breadth. This vaporous cloud persists for 6 rounds, remaining stationary unless moved about by magical or non-magical breezes or winds. Cold-using creatures will suffer 1 point of damage per round while inside the vapor cloud, and cold-dwelling creatures will take twice that amount of damage.'
+    )
+)
+]
