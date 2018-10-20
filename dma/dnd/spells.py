@@ -2115,7 +2115,7 @@ druid_spells = [
         aoe='Up to 8 animals in a 2" square area',
         save='None',
         sourcebook=V,
-        desc="When this spell is cast, the druid causes all animals, up to a maximum of 8, within a 2\" square area to grow to twice their normal size. The effects of this growth are doubled hit dice (with resultant improvement in attack potential) and doubled damage in combat. The spell lasts for 2 melee rounds for each level of experience of the druid casting the spell. Note that the spell is particularly useful in conjunction with a <a href=\"/spells/charm-person-or-mammal-druid-lvl-2/\"><i>charm person or mammal</i></a> or a <a href=\"/spells/speak-with-animals-cleric-lvl-2/\"><i>speak with animals</i> spell. The reverse reduces animal size by one half, and likewise reduces hit dice, attack damage, etc."
+        desc="When this spell is cast, the druid causes all animals, up to a maximum of 8, within a 2\" square area to grow to twice their normal size. The effects of this growth are doubled hit dice (with resultant improvement in attack potential) and doubled damage in combat. The spell lasts for 2 melee rounds for each level of experience of the druid casting the spell. Note that the spell is particularly useful in conjunction with a <a href=\"/spells/charm-person-or-mammal-druid-lvl-2/\"><i>charm person or mammal</i></a> or a <a href=\"/spells/speak-with-animals-cleric-lvl-2/\"><i>speak with animals</i></a> spell. The reverse reduces animal size by one half, and likewise reduces hit dice, attack damage, etc."
     ),
     Spell('Animal Summoning II','D',5,
         cast=tp(7,S),
