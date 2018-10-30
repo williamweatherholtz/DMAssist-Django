@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink_to_fit=no">
-    
+
     <title>DMA {% block title_suffix %}{% endblock %}</title>
 {% block header %}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -32,13 +32,16 @@
         aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             {% if user.is_authenticated %}
             <li class="nav-item active">
                 <a class="nav-link"
                     href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
+            <li class="nav-item active">
+                <a class="nav-link"
+                    href="/game_tools/">Game Tools</a></li>
             <li class="nav-item active">
                 <a class="nav-link"
                     href="/characters/">Characters</a></li>
@@ -53,9 +56,6 @@
             <li class="nav-item active">
                 <a class="nav-link"
                     href="/creatures/">Creatures</a></li>
-            <li class="nav-item active">
-                <a class="nav-link"
-                    href="/treasure/">Treasure</a></li>
             <li class="nav-item active">
                 <a class="nav-link"
                     href="/random_encounters/">Random Encounters</a></li>

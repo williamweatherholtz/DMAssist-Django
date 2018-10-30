@@ -21,7 +21,7 @@ from home.views import IndexView
 
 urlpatterns = [
     url(r'', include('home.urls')),
-    url(r'^treasure/', include('treasure.urls')),
+    url(r'^game_tools/', include('game_tools.urls')),
     url(r'^creatures/', include('creatures.urls')),
     url(r'^random_encounters/', include('random_encounters.urls')),
     url(r'^spells/', include('spells.urls')),

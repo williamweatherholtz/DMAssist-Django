@@ -50,7 +50,7 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1','192.168.0.12', 'dma.herokuapp.com', '
 INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'creatures.apps.CreaturesConfig',
-    'treasure.apps.TreasureConfig',
+    'game_tools.apps.GameToolsConfig',
     'random_encounters.apps.RandomEncountersConfig',
     'spells.apps.SpellsConfig',
     'characters.apps.CharactersConfig',
