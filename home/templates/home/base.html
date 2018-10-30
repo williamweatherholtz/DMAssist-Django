@@ -41,9 +41,6 @@
                     href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
             <li class="nav-item active">
                 <a class="nav-link"
-                    href="/game_tools/">Game Tools</a></li>
-            <li class="nav-item active">
-                <a class="nav-link"
                     href="/characters/">Characters</a></li>
             {% else %}
             <li class="nav-item active">
@@ -53,6 +50,9 @@
                 <a class="nav-link"
                     href="{% url 'login'%}?next={{request.path}}">Characters</a></li>
             {% endif %}
+            <li class="nav-item active">
+                <a class="nav-link"
+                    href="/game_tools/">Game Tools</a></li>
             <li class="nav-item active">
                 <a class="nav-link"
                     href="/creatures/">Creatures</a></li>
