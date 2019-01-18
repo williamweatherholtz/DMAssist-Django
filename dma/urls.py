@@ -23,7 +23,6 @@ urlpatterns = [
     url(r'', include('home.urls')),
     url(r'^game_tools/', include('game_tools.urls')),
     url(r'^creatures/', include('creatures.urls')),
-    url(r'^random_encounters/', include('random_encounters.urls')),
     url(r'^spells/', include('spells.urls')),
     url(r'^characters/', include('characters.urls')),
     url(r'^items/', include('items.urls')),

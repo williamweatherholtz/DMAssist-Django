@@ -51,7 +51,6 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'creatures.apps.CreaturesConfig',
     'game_tools.apps.GameToolsConfig',
-    'random_encounters.apps.RandomEncountersConfig',
     'spells.apps.SpellsConfig',
     'characters.apps.CharactersConfig',
     'items.apps.ItemsConfig',

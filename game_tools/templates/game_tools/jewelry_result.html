@@ -1,13 +1,13 @@
 {% extends 'game_tools/base.html' %}
 {% load app_filters %}
 
-{% block treasure_content %}
+{% block tool_content %}
     <form action="{% url 'game_tools:jewelry' %}" method="GET">
         <input type="submit" value="Reset" />
     </form>
 {% endblock %}
 
-{% block treasure_results %}
+{% block tool_results %}
     <p> There are {{ jewelry_count }} pieces of jewelry with a total value of {{jewelry_list|jewelry_total_value}}</p>
     <ul>
         {% for item in jewelry_list %}

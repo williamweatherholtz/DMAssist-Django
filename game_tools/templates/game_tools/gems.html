@@ -1,7 +1,7 @@
 {% extends "game_tools/base.html" %}
 {% load bootstrap4 %}
 
-{% block treasure_content %}
+{% block tool_content %}
     <form action="{% url 'game_tools:gems' %}" method="POST">
         {% csrf_token %}
         {{ form.as_p }}

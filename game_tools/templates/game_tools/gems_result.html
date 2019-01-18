@@ -1,13 +1,13 @@
 {% extends 'game_tools/base.html' %}
 {% load app_filters %}
 
-{% block treasure_content %}
+{% block tool_content %}
     <form action="{% url 'game_tools:gems' %}" method="GET">
         <input type="submit" value="Reset" />
     </form>
 {% endblock %}
 
-{% block treasure_results %}
+{% block tool_results %}
     <p> There are {{ gem_count }} gems with a total value of {{ gem_list | gems_total_value }}</p>
     <ul>
         {% for gem in gem_list %}

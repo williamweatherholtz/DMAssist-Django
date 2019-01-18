@@ -1,6 +1,6 @@
 {% extends "game_tools/base.html" %}
 
-{% block treasure_content %}
+{% block tool_content %}
     <form action="{% url 'game_tools:jewelry' %}" method="POST">
         {% csrf_token %}
         {{ form.as_p }}

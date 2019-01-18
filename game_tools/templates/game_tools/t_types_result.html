@@ -1,11 +1,11 @@
 {% extends 'game_tools/base.html' %}
 
-{% block treasure_content %}
+{% block tool_content %}
     <form action="{% url 'game_tools:t_types' %}" method="GET">
         <input type="submit" value="Reset" />
     </form>
 {% endblock %}
 
-{% block treasure_results %}
+{% block tool_results %}
     <pre> {{ treasure }} </pre>
 {% endblock %}

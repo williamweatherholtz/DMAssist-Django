@@ -1,13 +1,13 @@
-{% extends 'home/base.html' %}
+{% extends "game_tools/base.html" %}
 
 {% block title_suffix %}
  - Random Encounters
 {% endblock %}
 
-{% block content %}
+{% block tool_content %}
 
     
-    <form class="w3-container" action="{% url 'random_encounters:travel' %}" method="POST">
+    <form class="w3-container" action="{% url 'game_tools:travel' %}" method="POST">
         {% csrf_token %}
         <table>
         {{ form }}
