@@ -1,0 +1,10 @@
+{% extends "home/base.html" %}
+
+{% block title_suffix %}
+ - {{item.name}} Detail
+{% endblock %}
+
+{% block content %}
+    <p>{{item}}</p>
+    <p> Description: {% autoescape off %} {{item.description | linebreaks}} {% endautoescape %} </p>
+{% endblock %}

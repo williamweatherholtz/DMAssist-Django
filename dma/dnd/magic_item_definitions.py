@@ -15,7 +15,7 @@ class MagicItemCategory(Enum):
 
 class MagicItem():
     def __init__(self, name, category, source, desc,
-        activation_time=None,
+        activation_time = TimePeriod(0, TimeUnit.round),
         xp_value = [0,0],
         gold_value = [0,0]
     ):
@@ -25,7 +25,7 @@ class MagicItem():
         self.gold_value = gold_value
         self.activation_time = activation_time
         self.source = source
-        self.desc = desc
+        self.description = desc
 
 potions = [
 MagicItem(name = 'Potion of Animal Control',
@@ -459,7 +459,7 @@ MagicItem( name = 'Oil of Sharpness',
     category = MagicItemCategory.POTION,
     xp_value = [300,500],
     gold_value = [3000,5000],
-    desc = ('This magical substance resembles the fine oil used to clean and protect metal armor and weapons. If it is carefully rubbed on the blade of any edged or pointed weapon, the oil will have the effect of making it equivalent to a magic weapon. One such application will last for 9-12 rounds. A flask of the substance will contain from 3-5 applications. The dweomer of the <i>oil of sharpness</i> is determined by die roll:\n\n',
+    desc = ('This magical substance resembles the fine oil used to clean and protect metal armor and weapons. If it is carefully rubbed on the blade of any edged or pointed weapon, the oil will have the effect of making it equivalent to a magic weapon. One such application will last for 9-12 rounds. A flask of the substance will contain from 3-5 applications. The dweomer of the <i>oil of sharpness</i> is determined by die roll:\n\n'
         '<table>'
         '<tr><th>d20 Result</th><th>+ To Hit and Damage</th></tr>'
         '<tr><td>1-2</td><td>1</td></tr>'
@@ -544,7 +544,7 @@ MagicItem( name = 'Protection from Devils',
 MagicItem( name = 'Protection from Elementals',
     category = MagicItemCategory.SCROLL,
     xp_value = [1500,1500],
-    activation_time = (6, TimeUnit.segment),
+    activation_time = TimePeriod(6, TimeUnit.segment),
     desc = ('There are 5 varieties of this scroll:\n\n'
         '01-15: <i>Protection from Air Elementals</i> (including <a href="/creatures/aerial-servant">aerial servants</a>, <a href="/creatures/djinni">djinn</a>, <a href="creatures/invisible-stalker">invisible stalkers</a>, and <a href="/creatures/wind-walker">wind walkers</a>)\n'
         '16-30: <i>Protection from Earth Elementals</i> (including <a href="/creatures/xorn">xorn</a>)\n'
@@ -818,7 +818,7 @@ MagicItem( name = 'Ring of Free Action',
     xp_value = [1000,1000],
     gold_value = [5000,5000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
-    desc = 'This ring enables the wearer to move and attack freely and normally whether attacked by a <a href="/spells/web-magic-user-lvl-2"><i>web</i></a>, <a href="/spells/hold-monster-magic-user-lvl-5"><i>hold</i></a>, or <a href="/spells/slow-magic-user-lvl-3"><i>slow</i></a> spell, or even while under water. In the former case the spells have no effect, while in the latter the individual moves at normal (surface) speed and does full damage even with such cutting weapons as axes and scimitars and with such smashing weapons as flails, hammers, and maces, insofar as the weapon used is held rather than hurled. Thus will not, however, enables <i>water breathing</i> without the further appropriate magic.'
+    desc = 'This ring enables the wearer to move and attack freely and normally whether attacked by a <a href="/spells/web-magic-user-lvl-2"><i>web</i></a>, <a href="/spells/hold-monster-magic-user-lvl-5"><i>hold</i></a>, or <a href="/spells/slow-magic-user-lvl-3"><i>slow</i></a> spell, or even while under water. In the former case the spells have no effect, while in the latter the individual moves at normal (surface) speed and does full damage even with such cutting weapons as axes and scimitars and with such smashing weapons as flails, hammers, and maces, insofar as the weapon used is held rather than hurled. This will not, however, enable <i>water breathing</i> without the further appropriate magic.'
 ),
 MagicItem( name = 'Ring of Human Influence',
     category = MagicItemCategory.RING,
@@ -1488,10 +1488,10 @@ MagicItem( name = 'Staff of the Woodlands',
 ]
 
 wands = [
-MagicItem( name = 'Wand of Conjuration'
+MagicItem( name = 'Wand of Conjuration',
     category = MagicItemCategory.WAND,
     xp_value = [7000,7000],
-    gp_value = [35000,35000],
+    gold_value = [35000,35000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('Grasping of this device enables a magic-user to immediately recognize any cast or written magic-user conjuration/summoning spell (<a href="/spells/unseen-servant-magic-user-lvl-1"><i>unseen servant</i></a>, <i>monster summoning</i>, <a href="/spells/conjure-elemental-magic-user-lvl-5"><i>conjure elemental</i></a>, <a href="/spells/death-spell-magic-user-lvl-6"><i>death spell</i></a>, <a href="/spells/invisible-stalker-magic-user-lvl-6"><i>invisible stalker</i></a>, <a href="/spells/limited-wish-magic-user-lvl-7"><i>limited wish</i></a>, <a href="/spells/symbol-magic-user-lvl-8"><i>symbol</i></a>, <a href="/spells/maze-illusionist-lvl-5"><i>maze</i></a>, <a href="/spells/gate-magic-user-lvl-9"><i>gate</i></a>, <a href="/spells/prismatic-sphere-magic-user-lvl-9"><i>prismatic sphere</i></a>, <a href="/spells/wish-magic-user-lvl-9"><i>wish</i></a>). The wand has the following powers which require expenditure of 1 charge:\n\n'
         '<i>unseen servant</i>\n'
@@ -1500,24 +1500,24 @@ MagicItem( name = 'Wand of Conjuration'
         'The wand can also conjure up a <i>curtain of blackness</i> - a veil of total black which absorbs all light. The <i>curtain of blackness</i> can cover a maximum area of 600 square feet (60\' x 10\', 40\' x 15\', 30\' x 20\'), but it must stretch from ceiling to floor, wall to wall. The <i>curtain</i> costs 2 charges to conjure. The veil of total lightlessness can be penetrated only by physical means or magic. The wand also enables its wielder to construct a <a href="/spells/prismatic-sphere-magic-user-lvl-9"><i>prismatic sphere</i></a> (or <a href="/spells/prismatic-wall-illusionist-lvl-7"><i>wall</i></a>), once color at a time, red to violet, at a 1 charge per color cost. Each function of the wand takes 5 segments of time, and only 1 function per round is possible. The wand may be recharged.'
     )
 ),
-MagicItem( name = 'Wand of Enemy Detection'
+MagicItem( name = 'Wand of Enemy Detection',
     category = MagicItemCategory.WAND,
     xp_value = [2000,2000],
-    gp_value = [10000,10000],
+    gold_value = [10000,10000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This wand gives off a pulse and points in the direction of any hostile creature(s) intent upon the bearer of the device. The creature(s) can be invisible, ethereal, astral, out of phase, hidden, disguised, or in plain sight. Detection range is a 6" sphere. The function requires 1 charge to operate for 1 turn. The wand can be recharged.'
 ),
-MagicItem( name = 'Wand of Fear'
+MagicItem( name = 'Wand of Fear',
     category = MagicItemCategory.WAND,
     xp_value = [3000,3000],
-    gp_value = [15000,15000],
+    gold_value = [15000,15000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'When the <i>fear</i> wand is activated a pale amber ray springs from the tip of the wand, a cone 6" long by 2" in base diameter, which flashes on in 1 segment and instantly disappears. Each creature touched by the ray must save versus a <i>wand</i> or react as per the <a href="/spells/remove-fear-cleric-lvl-1"><i>fear</i></a> spell (first level cleric spell, <i>remove fear</i> reversal), i.e. turn and move at fastest possible speed away from the wand user for 6 rounds. Each usage costs 1 charge. It can operate but once per round. The wand can be recharged.'
 ),
-MagicItem( name = 'Wand of Fire'
+MagicItem( name = 'Wand of Fire',
     category = MagicItemCategory.WAND,
     xp_value = [4500,4500],
-    gp_value = [25000,25000],
+    gold_value = [25000,25000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('This wand can be employed in 4 separate functions which duplicate the following magic-user spells:\n\n'
         '1. <a href="/spells/burning-hands-magic-user-lvl-1"><i>Burning hands</i></a>: The wand emits a plane of fire, a fan-shaped sheet 10\' wide at its terminus and 12\' long. Each creature touched takes 6 hit points of damage. The plane appears in 1 segment, shoots forth its dark red flames, and snuffs out in less than 1 second. It expends 1 charge.\n\n'
@@ -1527,10 +1527,10 @@ MagicItem( name = 'Wand of Fire'
         'The <i>wand of fire</i> can operate but once per round. It can be recharged.'
     )
 ),
-MagicItem( name = 'Wand of Frost'
+MagicItem( name = 'Wand of Frost',
     category = MagicItemCategory.WAND,
     xp_value = [6000,6000],
-    gp_value = [50000,50000],
+    gold_value = [50000,50000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('A <i>frost</i> wand can perform 3 functions which duplicate magic-user spells:\n\n'
         '1. <a href="/spells/ice-storm-magic-user-lvl-4"><i>Ice storm</i></a>: A silvery ray springs forth from the wand and in 1 segment an <i>ice</i> (or <i>sleet</i>) <i>storm</i> occurs up to 6" distant from the wand holder. This function requires 1 charge.\n\n'
@@ -1539,10 +1539,10 @@ MagicItem( name = 'Wand of Frost'
         'The wand can function but once per round, and may be recharged.'
     )
 ),
-MagicItem( name = 'Wand of Illumination'
+MagicItem( name = 'Wand of Illumination',
     category = MagicItemCategory.WAND,
     xp_value = [2000,2000],
-    gp_value = [10000,10000],
+    gold_value = [10000,10000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('This wand has 4 separate functions, 3 of which approximate magic-user spells, and 1 of which is singular:\n\n'
         '1. <a href="/spells/dancing-lights-magic-user-lvl-1"><i>Dancing lights</i></a>: In 1 segment the wand will produce this effect at a cost of 1 charge.\n\n'
@@ -1552,17 +1552,17 @@ MagicItem( name = 'Wand of Illumination'
         'The wand can be recharged.'
     )
 ),
-MagicItem( name = 'Wand of Illusion'
+MagicItem( name = 'Wand of Illusion',
     category = MagicItemCategory.WAND,
     xp_value = [3000,3000],
-    gp_value = [20000,20000],
+    gold_value = [20000,20000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'The <i>illusion</i> wand creates both audible and visual illusions (cf. <a href="/spells/audible-glamer-magic-user-lvl-2"><i>audible glamer</i></a>, <a href="/spells/phantasmal-force-magic-user-lvl-3"><i>phantasmal force</i></a>). The wand emits an invisible ray, with a 14" maximum range. The effect takes 3 segments to commence. The wand wielder must concentrate on the <i>illusion</i> in order to maintain it, but he or she may move normally (not melee) and still do so. Each portion - audible and visual - costs 1 charge to effect and 1 per round to continue. The wand may be recharged.'
 ),
-MagicItem( name = 'Wand of Lightning'
+MagicItem( name = 'Wand of Lightning',
     category = MagicItemCategory.WAND,
     xp_value = [4000,4000],
-    gp_value = [30000,30000],
+    gold_value = [30000,30000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('This wand has 2 functions which closely resemble magic-user spells:\n\n'
         '1. <i>Shock</i>: This function causes the recipient to take 1-10 hit points of damage, with no saving throw, when struck in melee combat. Any "to hit" score discounts metallic armor and shield (giving opponents armor class 10) but not plain leather or wood. Magic bonuses on metallic armor do not affect armor class, but such items as a <i>ring of protection</i> do. The shock uses 1 charge.\n\n'
@@ -1570,59 +1570,59 @@ MagicItem( name = 'Wand of Lightning'
         'The wand may be recharged. It can perform but 1 function per round.'
     )
 ),
-MagicItem( name = 'Wand of Magic Detection'
+MagicItem( name = 'Wand of Magic Detection',
     category = MagicItemCategory.WAND,
     xp_value = [2500,2500],
-    gp_value = [25000,25000],
+    gold_value = [25000,25000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This wand is similar in operation to the <i>enemy detection</i> wand. If any form of magic is in operation, or a magic item exists, within a 3" radius, the <i>magic detection</i> wand will pulse and point to the strongest source. Note that the wand will point to a person upon whom a spell has been cast. Operation requires 1 round, and successive rounds will point out successively less powerful magic radiation. The category of magic (abjuration, alteration, etc.) can be determined if one round is spent concentrating on the subject emanation. 1 charge is expended per turn (or fraction thereof) of use. Starting with the second round of continuous use, there is a 2% cumulative chance per round that the wand will temporarily malfunction and indicate non-magical items as magical, or vice-versa. The wand may be recharged.'
 ),
-MagicItem( name = 'Wand of Metal and Mineral Detection'
+MagicItem( name = 'Wand of Metal and Mineral Detection',
     category = MagicItemCategory.WAND,
     xp_value = [1500,1500],
-    gp_value = [7500,7500],
+    gold_value = [7500,7500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This wand also has a 3" radius range and pulses and points to the largest mass of metal within its effective area of operation. However, the wielder can concentrate on a specific metal or mineral type (gold, platinum, quartz, beryl, diamond, corundum, etc.); if the specific type is within range the wand will point to any and all places it is located, and the wand possessor will know the approximate quantity as well. Each operation requires 1 round. Each charge powers the wand for 1 full turn. The wand may be recharged.'
 ),
-MagicItem( name = 'Wand of Magic Missiles'
+MagicItem( name = 'Wand of Magic Missiles',
     category = MagicItemCategory.WAND,
     xp_value = [4000,4000],
-    gp_value = [35000,35000],
+    gold_value = [35000,35000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'The <i>missiles</i> wand discharges <i>magic missiles</i> which are similar to those of the first level magic-user spell, <a href="/spells/magic-missile-magic-user-lvl-1"><i>magic missile</i></a>. The device fires a <i>magic missile</i> which causes 2-5 hit points of damage. It operates as the spell of the same name, always hitting its target when wielded by a magic-user, otherwise requiring a "to hit" die roll. Each missile takes 3 segments to discharge, and costs 1 charge. A maximum of 2 may be expended in 1 round. The wand may be recharged.'
 ),
-MagicItem( name = 'Wand of Negation'
+MagicItem( name = 'Wand of Negation',
     category = MagicItemCategory.WAND,
     xp_value = [3500,3500],
-    gp_value = [15000,15000],
+    gold_value = [15000,15000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This device operates to negate the spell or spell-like function(s) of rods, staves, wands and other magical items. The individual with the <i>negation</i> wand points the device, and a pale gray beam shoots forth to touch the target - device or individual. This will totally negate any wand function, and make any other spell or spell-like function from a device 75% likely to be negated, whether it is a low-level spell, or even if it is an ultra-powerful spell. Operation of the wand requires but 1 segment of a round. It can function but once per round, and each negation drains 1 charge. The wand cannot be recharged.'
 ),
-MagicItem( name = 'Wand of Paralyzation'
+MagicItem( name = 'Wand of Paralyzation',
     category = MagicItemCategory.WAND,
     xp_value = [3500,3500],
-    gp_value = [25000,25000],
+    gold_value = [25000,25000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This wand shoots forth a thin ray of bluish color to a maximum range of 6". If the ray touches any creature it must save versus <i>wands</i> or be rigidly immobile for from 5-20 rounds. A save indicates the ray missed, and there was no effect. Each operation takes 3 segments and costs 1 charge. The wand may operate once per round. It may be recharged. (Note that as soon as the ray touches 1 creature it <i>stops</i>; the wand can attack only 1 target per round.)'
 ),
-MagicItem( name = 'Wand of Polymorphing'
+MagicItem( name = 'Wand of Polymorphing',
     category = MagicItemCategory.WAND,
     xp_value = [3500,3500],
-    gp_value = [25000,25000],
+    gold_value = [25000,25000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'The <i>polymorphing</i> wand emits a green beam, a thin ray which darts forth to a maximum distance of 6". If this beam touches any creature, it must make its saving throw versus <i>wands</i> (success indicating a miss) or be <a href="/spells/polymorph-other-magic-user-lvl-4"><i>polymorphed (others)</i></a> as the spell of the same name. The wand wielder may opt to form the victim into a snail, frog, insect, etc. as long as the result is a small and inoffensive creature. The possessor of the want may elect to <i>touch</i> a creature with the device instead. When this is done (unwilling creatures must be <i>hit</i> and they are also entitled to a saving throw) the recipient is surrounded by dancing motes of sparkling emerald light, and then transforms into whatever creature-shape the wand wielder has stated. This is the same magical effect as the <a href="/spells/polymorph-self-magic-user-lvl-4"><i>polymorph (self)</i></a> spell. Either function requires 3 segments. Each draws 1 charge. Only 1 function per round is possible. The wand may be recharged.'
 ),
-MagicItem( name = 'Wand of Secret Door and Trap Location'
+MagicItem( name = 'Wand of Secret Door and Trap Location',
     category = MagicItemCategory.WAND,
     xp_value = [5000,5000],
-    gp_value = [40000,40000],
+    gold_value = [40000,40000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This wand has an effective radius of 1½" for secret door location, 3" for trap location. When the wand is energized it will pulse and point to whichever thing it is to locate if a secret door/trap is within location range. Note that it locates either one or the other, not both during one operation. It requires 1 round to function and draws 1 charge. The wand may be recharged.'
 ),
-MagicItem( name = 'Wand of Wonder'
+MagicItem( name = 'Wand of Wonder',
     category = MagicItemCategory.WAND,
     xp_value = [6000,6000],
-    gp_value = [10000,10000],
+    gold_value = [10000,10000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('The <i>wand of wonder</i> is a strange and unpredictable device which will generate any number of strange effects, randomly, each time it is used. The usual effects are shown on the table below, but you may alter those for any or all of these wands in your campaign as you see fit, although it is recommended that you follow the <i>pattern</i> shown. The functions of the wand are:\n\n'
         '01-10: <a href="/spells/slow-magic-user-lvl-3"><i>slow</i></a> creature pointed at for 1 turn\n'
@@ -1647,34 +1647,34 @@ MagicItem( name = 'Wand of Wonder'
         'The wand uses 1 charge per function. It may not be recharged. Where applicable, saving throws should be made.'
     )
 ),
-MagicItem( name = 'Anything Wand'
+MagicItem( name = 'Anything Wand',
     category = MagicItemCategory.WAND,
     xp_value = [2500,2500],
-    gp_value = [12500,12500],
+    gold_value = [12500,12500],
     source = SourceBook.UNEARTHED_ARCANA,
     desc = 'This device will perform as if it were an ordinary <i>wand of wonder</i>, although it will have no more than 50 usages before being totally expended. In addition, it has three other special uses: Upon command, it will perform as if it were any other sort of known wand, but it can only duplicate the effects of any given wand once. If it is commanded to duplicate a single kind of wand more than once, the second or third such command will have no effect - and after three such demands, successful or not, the wand will be totally drained and useless. The item cannot be recharged.'
 ),
-MagicItem( name = 'Buckler Wand'
+MagicItem( name = 'Buckler Wand',
     category = MagicItemCategory.WAND,
     xp_value = [500,500],
-    gp_value = [5000,5000],
+    gold_value = [5000,5000],
     source = SourceBook.UNEARTHED_ARCANA,
     desc = 'This is a shortish, thick wand about 1½ feet in length with an exceptionally sharp point on one end and a trigger mechanism built into the opposite end, which is blunt. The wand is usable by any character except one of the cleric class, and can be activated in a single segment. When the thick end is grasped firmly and the trigger pressed, the tip of the wand becomes the equivalent of a <i>dagger +1</i> and the rest of the shaft blossoms into a round shield of buckler size having a +1 magic value. The whole becomes equal to a <i>spiked buckler +1</i>. Because of its dweomer, it can be employed by magic-users, but no spells can be cast when it is in buckler form unless the possessor is a multi-classed character with fighter abilities in addition to magic-user abilities. A thief who employs the wand\'s powers cannot <i>climb walls</i> or perform other abilities requiring the use of his or her hands while holding the device.'
 ),
-MagicItem( name = 'Wand of Defoliation'
+MagicItem( name = 'Wand of Defoliation',
     category = MagicItemCategory.WAND,
     xp_value = [1000,1000],
-    gp_value = [6000,6000],
+    gold_value = [6000,6000],
     source = SourceBook.UNEARTHED_ARCANA,
     desc = ('This wand is never constructed of any sort of wood; instead, ivory or bone is typically the major component. It has the following functions:\n\n'
         'When 1 charge is expended, all chlorophyll in a 3" radius from the wand is destroyed. Thus, leaves turn to autumnal colors and drop off, grass becomes brown and dry, and so forth.\n\n'
         'When 2 charges are expended, all normal plant life within the 3" radius area of effect withers and dies. Sentient plant creatures and other non-normal sorts of plants will not necessarily be killed, but they will each suffer 1-6 (1d6) points of damage. If so desired, the possessor of the wand can direct the force of this power into a cone-shaped area of 3" length, widening to 1" diameter at the farthest point from the wand. Effects are the same as for the spherical area of effect, except that sentient and non-normal plant life within the cone will suffer 6-36 points of damage (6d6) instead of only 1-6. Any plant-creature or other non-normal plant that lies partially within the conical area of effect is entitled to a saving throw (versus <i>rods, staves, and wands</i>), and if successful takes only one-half damage (3d6).'
     )
 ),
-MagicItem( name = 'Wand of Earth and Stone'
+MagicItem( name = 'Wand of Earth and Stone',
     category = MagicItemCategory.WAND,
     xp_value = [1000,1500],
-    gp_value = [10000,15000],
+    gold_value = [10000,15000],
     source = SourceBook.UNEARTHED_ARCANA,
     desc = ('A wand of this sort is typically of shortish length and tipped with some form of mineral. It is imbued with the following dweomers:\n\n'
         '<a href="/spells/dig-magic-user-lvl-4"><i>Dig</i></a> ½ charge per use\n'
@@ -1685,17 +1685,17 @@ MagicItem( name = 'Wand of Earth and Stone'
         '<i>Transmute rock to mud</i> 1 charge per use'
     )
 ),
-MagicItem( name = 'Wand of Fireballs'
+MagicItem( name = 'Wand of Fireballs',
     category = MagicItemCategory.WAND,
     xp_value = [2000,2000],
-    gp_value = [16000,16000],
+    gold_value = [16000,16000],
     source = SourceBook.UNEARTHED_ARCANA,
     desc = 'This wand simply enables the wielder to cast a <a href="/spells/fireball-magic-user-lvl-3"><i>fireball</i></a> spell as if he or she were a magic-user of 6th level. The wand takes only 1 segment to activate and 1 segment to activate the <i>fireball</i>. Damage is 6-36 points (6d6), with saving throw applicable for half damage. The wand can be recharged by any magic-user of 8th or higher level.'
 ),
-MagicItem( name = 'Wand of Flame Extinguishing'
+MagicItem( name = 'Wand of Flame Extinguishing',
     category = MagicItemCategory.WAND,
     xp_value = [1250,1250],
-    gp_value = [10000,10000],
+    gold_value = [10000,10000],
     source = SourceBook.UNEARTHED_ARCANA,
     desc = ('This sort of wand has three separate functions:\n\n'
         'When applied to fires of normal sort and size, no charges are expended in extinguishing such fires. Normal size includes anything up to the size of a bonfire or a fire in a regular fireplace - equal to four to six billets of wood burning hotly.\n\n'
@@ -1704,10 +1704,10 @@ MagicItem( name = 'Wand of Flame Extinguishing'
         'If one charge of the device is used upon a creature which is composed of flame (a <a href="/creatures/fire-elemental">fire elemental</a>, for instance), the wand inflicts 6-36 (6d6) points of damage upon the creature.'
     )
 ),
-MagicItem( name = 'Wand of Force'
+MagicItem( name = 'Wand of Force',
     category = MagicItemCategory.WAND,
     xp_value = [3000,3000],
-    gp_value = [30000,30000],
+    gold_value = [30000,30000],
     source = SourceBook.UNEARTHED_ARCANA,
     desc = ('Although it is rumored that the concept of such a wand has taken many forms, the one which has been standardized, so to speak, is a tri-function device which requires considerable operator knowledge only in the application of its third function.\n\n'
         'Firstly, a <i>wand of force</i> enables the wielder to cause a shaft of nearly invisible, blue-white energy to spring forth from its tip. This shaft of energy extends 4 feet and is equal to a +5 bastard sword with respect to hit probability and damage. This usage expends 1 charge per turn.\n\n'
@@ -1716,42 +1716,42 @@ MagicItem( name = 'Wand of Force'
         'Fighters of all types are able to use the first and second functions of the wand. The device can be recharged by a magic-user of 16th or higher level, and in addition it can draw sufficient energy to regain a single charge by being touched to any of the following: a manifestation of one of the <i>Bigby\'s Hand/Fist</i> spells, a manifestation of the <a href="/spells/mordenkainens-sword-magic-user-lvl-7"><i>Mordenkainen\'s Sword</i></a> spell, or a manifestation of a <i>wall of force</i>. Touching any of these things with the wand causes the effect of a <a href="/spells/disintegrate-magic-user-lvl-6"><i>disintegrate</i></a> spell, destroying the spell/manifestation instantly, and enabling the wand to absorb power equivalent to a single charge.'
     )
 ),
-MagicItem( name = 'Wand of Ice Storms'
+MagicItem( name = 'Wand of Ice Storms',
     category = MagicItemCategory.WAND,
     xp_value = [2500,2500],
-    gp_value = [20000,20000],
+    gold_value = [20000,20000],
     source = SourceBook.UNEARTHED_ARCANA,
     desc = 'This device enables the wielder to cause an <a href="/spells/ice-storm-magic-user-lvl-4"><i>ice storm</i></a> just as if he or she were a magic-user of 7th level. Either damaging hail or sleet and slippery conditions are possible (see the <i>ice storm</i> spell explanation). Activation time is 1 segment, and causing the dweomer to emerge from the wand likewise requires 1 segment. The wand can be recharged by a magic-user of 9th or higher level.'
 ),
-MagicItem( name = 'Wand of Lightning Bolts'
+MagicItem( name = 'Wand of Lightning Bolts',
     category = MagicItemCategory.WAND,
     xp_value = [2000,2000],
-    gp_value = [16000,16000],
+    gold_value = [16000,16000],
     source = SourceBook.UNEARTHED_ARCANA,
     desc = 'A wand of this nature enables the possessor to cast a <a href="/spells/lightning-bolt-magic-user-lvl-3"><i>lightning bolt</i></a> as if he or she were a magic-user of 6th level. Damage is 6-36 (6d6) points, with saving throw applicable for half damage. Either form of bolt (forked or single stroke) is possible. The wand takes 1 segment to activate, and another 1 segment is required to discharge the lightning. The device can be recharged by a magic-user of 8th or higher level.'
 ),
-MagicItem( name = 'Wand of Metal Command'
+MagicItem( name = 'Wand of Metal Command',
     category = MagicItemCategory.WAND,
     xp_value = [2500,2500],
-    gp_value = [10000,10000],
+    gold_value = [10000,10000],
     source = SourceBook.UNEARTHED_ARCANA,
     desc = ('This wand appears to be nothing more useful than a <i>wand of metal and mineral detection</i>, but in the hands of a <a href="/creatures/dwarf">dwarf</a> or <a href="/spells/gnome">gnome</a>, its exceptional powers become operational:\n\n'
         'If 1 charge is expended, the wand can transmute gold to lead, or lead to gold. The range of this power is 3", and the amount of metal so converted will be 1 to 6 pounds (10 to 60 gp weight).\n\n'
         'If 2 charges are expended, the user can <a href="/spells/heat-metal-druid-lvl-2"><i>heat metal</i></a> in the same fashion as the druid spell of the same name. Range is 3", and only a single target area of 3-foot diameter can be affected, causing up to 600 gp weight of metal within this area to become heated.\n\n'
         'If 3 charges are expended, the possessor of the wand can cast any one of the following spells just as if he or she were an 18th-level magic-user: <a href="/spells/crystalbrittle-magic-user-lvl-9"><i>crystalbrittle</i></a>, <a href="/spells/glassee-magic-user-lvl-6"><i>glassee</i></a>, or <a href="/spells/glassteel-magic-user-lvl-8"><i>glassteel</i></a>.'
     )
-)
-MagicItem( name = 'Wand of Size Alteration'
+),
+MagicItem( name = 'Wand of Size Alteration',
     category = MagicItemCategory.WAND,
     xp_value = [3000,3000],
-    gp_value = [20000,20000],
+    gold_value = [20000,20000],
     source = SourceBook.UNEARTHED_ARCANA,
     desc = 'A wand of this sort enables the wielder to cause any single creature of virtually and size to <i>enlarge</i> or <i>diminish</i> in size. Either effect will cause a 50% change in size. Relative strength and power also increases or decreases proportionally, providing the weaponry employed is proportionate - or usable. For humanoid creatures enlarged, strength is roughly proportionate to that of a giant of corresponding size; for example, 9 feet tall equals a <a href="/creature/hill-giant">hill giant</a> and 19 strength, 13 feet tall equals a <a href="/creatures/fire-giant">fire giant</a> and 22 strength. The wand\'s power has a range of 1". The target creature and all it is wearing or carrying is affected unless a saving throw succeeds - but note that a willing target need not make a saving throw. The effect of the wand can be removed by a <a href="/spells/dispel-magic-cleric-lvl-3"><i>dispel magic</i></a> spell, but if this is done the target must make a system shock roll. It can also be countered if the possessor of the wand wills the effect to be cancelled before the duration of the effect expires. Each usage of the wand (but not the cancellation of an effect) expends 1 charge. It can be recharged by a magic-user of 12th or higher level.'
-)
-MagicItem( name = 'Wand of Steam and Vapor'
+),
+MagicItem( name = 'Wand of Steam and Vapor',
     category = MagicItemCategory.WAND,
     xp_value = [4500,4500],
-    gp_value = [25000,25000],
+    gold_value = [25000,25000],
     source = SourceBook.UNEARTHED_ARCANA,
     desc = ('A wand of this sort has two separate functions, each of which requires the expenditure of 1 charge:\n\n'
         'STEAM: In one segment the wand will spout forth a jet of super-heated steam in a cone 1" x 3" x 5". Any creature within this area takes 6-36 (6d6) points of damage. The cloud persists, slowly cooling, so that on the second round it inflicts 4d6 damage, and on the third and last round it causes 2d6 damage. Saving throws apply for half damage in all cases. Naturally, fire-dwelling or fire-using creatures will not be harmed by the steam - unless they are harmed by dampness.\n\n'
@@ -1764,7 +1764,7 @@ misc_magic = [
 MagicItem( name = 'Alchemy Jug',
     category = MagicItemCategory.MISC,
     xp_value = [3000,3000],
-    gp_value = [12000,12000],
+    gold_value = [12000,12000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('This magical device can pour forth varying liquids upon command. The quantity of each liquid is dependent upon the liquid itself. The <i>jug</i> can pour only 1 kind of liquid on any given day, 7 pourings maximum. The liquids pourable and quantity per pouring are:\n\n'
         '<table>'
@@ -1787,21 +1787,21 @@ MagicItem( name = 'Alchemy Jug',
 MagicItem( name = 'Amulet of Inescapable Location',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [1000,1000],
+    gold_value = [1000,1000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This device is typically worn on a chain or as a brooch which pins on. It appears to be an amulet which prevents location, scrying (crystal ball viewing and the like), or detection/influence by <i>ESP/telepathy</i>. Actually, the amulet doubles the likelihood and/or range of these location and detection modes, however. Normal determination attempts, including <a href="/spells/detect-magic-cleric-lvl-1"><i>detect magic</i></a>, will not reveal its true nature.'
 ),
 MagicItem( name = 'Amulet of Life Protection',
     category = MagicItemCategory.MISC,
     xp_value = [5000,5000],
-    gp_value = [20000,20000],
+    gold_value = [20000,20000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This pendant or brooch device serves as a ward for the psyche (soul). The wearer cannot be <i>possessed</i> by <a href="/spells/magic-jar-magic-user-lvl-5"><i>magic jar</i> spell or any similar mental attack, including demonic or diabolic means. If the wearer is slain, the psyche enters the amulet and is protected for 7 full days. Thereafter it goes to the plane of its alignment, however. If the amulet is destroyed during the 7 days, the psyche is utterly and irrevocably annihilated. Note: psionic attack modes <i>psionic blast</i> or <i>psychic crush</i> will not harm the wearer.'
 ),
 MagicItem( name = 'Amulet of the Planes',
     category = MagicItemCategory.MISC,
     xp_value = [6000,6000],
-    gp_value = [30000,30000],
+    gold_value = [30000,30000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('The <i>amulet of the planes</i> is a device which enables the individual possessing it to transport himself or herself instantly to or from any one of the upper levels of the Outer Planes. This travel is absolutely safe, but until the individual learns the device, transport will be random. Roll d6, 1-3 = do not add 12, 4-6 = add 12 to d12 for 1-24 random results:\n\n'
         '1-2: Seven Heavens\n'
@@ -1830,14 +1830,14 @@ MagicItem( name = 'Amulet of the Planes',
 MagicItem( name = 'Amulet of Proof Against Detection and Location',
     category = MagicItemCategory.MISC,
     xp_value = [4000,4000],
-    gp_value = [15000,15000],
+    gold_value = [15000,15000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This device wards the wearer against all divination and mental or magical location and/or detection. The wearer cannot be detected through <a href="/spells/clairaudience-magic-user-lvl-3"><i>clairaudience</i></a>, <a href="/spells/clairvoyance-magic-user-lvl-3"><i>clairvoyance</i></a>, <a href="/spells/esp-magic-user-lvl-2"><i>ESP</i></a>, <i>telepathy</i>, <i>crystal balls</i>, or any other scrying devices. No aura is discernible on the wearer, and predictions cannot be made regarding him or her, unless some powerful being is consulted.'
 ),
 MagicItem( name = 'Apparatus of Kwalish',
     category = MagicItemCategory.MISC,
     xp_value = [8000,8000],
-    gp_value = [35000,35000],
+    gold_value = [35000,35000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('When initially found this item will certainly appear as a large iron barrel. It has a secret catch which opens a hatch in one end. Inside are 10 levers:\n\n'
         '1: extends legs and tail/retract same\n'
@@ -1856,14 +1856,14 @@ MagicItem( name = 'Apparatus of Kwalish',
 MagicItem( name = 'Arrow of Direction',
     category = MagicItemCategory.MISC,
     xp_value = [2500,2500],
-    gp_value = [17500,17500],
+    gold_value = [17500,17500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'An <i>arrow of direction</i> typically appears to be a normal (or possibly magic) arrow. Its magical properties make it function much as a <a href="/spells/locate-object-magic-user-lvl-2"><i>locate object</i></a> spell, however, empowering the arrow to show the direction of the desired way. Once per day the device can be tossed into the air; it will fall and point towards the desired way, and this process can be repeated 7 times during the next 7 turns. Note: the arrow will point only towards requested way/location. The request can be only for one of the following: stairway (up or down), sloping passage (up or down), dungeon exit or entrance, cave, cavern. Requests must be phrased by distance (nearest, farthest, highest, lowest) or by direction (north, south, east, west, etc.).'
 ),
 MagicItem( name = 'Bag of Beans',
     category = MagicItemCategory.MISC,
     xp_value = [1000,1000],
-    gp_value = [5000,5000],
+    gold_value = [5000,5000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('This bag is constructed of heavy cloth. It is about 2\' wide and 4\' long (the size of any other bag or large sack). When it is opened and examined it will reveal several large pebble-like objects. If these objects are dumped out of the bag they will each explode for 5-20 hit points of damage each, all creatures within a 10\' radius must save versus magic or take full damage. To be removed safely, the beans in the bag must be taken out by hand; <a href="/spells/telekinesis-magic-user-lvl-5">telekinesis</a> will not work, nor can they be worked out using tools in any way which will not explode them. Each pebble-like bean must be placed in dirt and watered. From each, in succession, will spring some creature or object. It is suggested that 3-12 beans are optimum, and only 1 or 2 will be beneficial, the others being monsters or useless things. For example:\n\n'
         '#1: 3 <a href="/creatures/shrieker">shriekers</a> spring up and begin wailing\n'
@@ -1879,14 +1879,14 @@ MagicItem( name = 'Bag of Beans',
 MagicItem( name = 'Bag of Devouring',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [1500,1500],
+    gold_value = [1500,1500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This bag appears as a typical sack - possibly appearing to be empty, possibly as having <i>beans</i> in its bottom. The sack is, however, the lure used by an extra-dimensional creature. It is one of its feeding orifices. Any substance of animal or vegetable nature is subject to "swallowing" if it is thrust within the bag. The <i>bag of devouring</i> is 90% likely to ignore any initial intrusions, but anytime it senses living human flesh within, it is 60% likely to close and attempt to draw the whole victim within - base 75% chance for success less strength bonus for "damage", each +1 = -5% on base chance. Thus an 18 strength character (with +2 damage) is only 65% likely to be drawn into the bag, while a 5 strength character (with -1 damage) is 80% likely to be drawn in. The bag radiates magic. It can hold up to 30 cubic feet of matter. It will act as a <i>bag of holding</i> (normal capacity), but each turn it has a 5% cumulative chance of "swallowing" the contents and then "spitting the stuff out" in some non-space. Creatures drawn within are consumed in 7 segments of a round, eaten, and forever gone.'
 ),
 MagicItem( name = 'Bag of Holding',
     category = MagicItemCategory.MISC,
     xp_value = [5000,5000],
-    gp_value = [25000,25000],
+    gold_value = [25000,25000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('As with other magic bags, this one appears to be a common cloth sack of about 2\' x 4\' size. The <i>bag of holding</i> opens into a non-dimensional space, and its inside is larger than its outside dimensions. Regardless of what is put into this item, the <i>bag of holding</i> always weighs a fixed amount. This weight, the bag\'s weight limit in contents, and its volume content are dependent upon its quality as shown below:\n\n'
         '<table>'
@@ -1902,16 +1902,16 @@ MagicItem( name = 'Bag of Holding',
 MagicItem( name = 'Bag of Transmuting',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [500,500],
+    gold_value = [500,500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This magical sack appears to be a <i>bag of holding</i> of one of the 4 quality types. It will perform properly for 2-5 uses (or more if the usages are made within a few days time). However, at some point the magic field will waver, and precious metals and gems within the bag will be turned into common metals and stones of no worth. When emptied, the bag will burst to pour forth these transmuted metals and minerals. Any magic items (other than artifacts and relics) placed in the bag will become ordinary and dull lead, glass or wood as appropriate (no saving throw) once the transmuting effects have begun.'
 ),
 MagicItem( name = 'Bag of Tricks',
     category = MagicItemCategory.MISC,
     xp_value = [2500,2500],
-    gp_value = [15000,15000],
+    gold_value = [15000,15000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
-    desc = ('As is usual, a <i>bag of tricks</i> appears to be of typical size for sacks, and visual or other examination will not reveal any contents. However, if an individual reaches inside, he or she will feel a small, fuzzy object. If this is withdrawn and tossed 1' to 20' away, it will balloon into one of the following animals, which will obey and fight for the individual who brought it into being until the current combat terminates. The animals inside a bag of tricks are dependent upon which sort of bag is found. Roll d10 to determine which type:\n\n'
+    desc = ('As is usual, a <i>bag of tricks</i> appears to be of typical size for sacks, and visual or other examination will not reveal any contents. However, if an individual reaches inside, he or she will feel a small, fuzzy object. If this is withdrawn and tossed 1\' to 20\' away, it will balloon into one of the following animals, which will obey and fight for the individual who brought it into being until the current combat terminates. The animals inside a bag of tricks are dependent upon which sort of bag is found. Roll d10 to determine which type:\n\n'
         '<b>Type 1-5</b>\n'
         '<table>'
         '<tr><th>Die</th><th>Animal</th><th>AC</th><th>Hit Dice</th><th>Hit Points</th><th>Damage per Attack</th></tr>'
@@ -1954,28 +1954,28 @@ MagicItem( name = 'Bag of Tricks',
 MagicItem( name = 'Beaker of Plentiful Potions',
     category = MagicItemCategory.MISC,
     xp_value = [1500,1500],
-    gp_value = [12500,12500],
+    gold_value = [12500,12500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This container resembles a jug or flask. It is a magical beaker with alchemical properties which compound from 2-5 doses of from 2-5 potions of any sort as initially determined by random selection. Different potion sorts are layered in the container, and each pouring takes 1 round and spills forth 1 dose of 1 potion type. Roll d4, +1 , to find the number of potions the beaker contains. Roll for each potion contained so as to find what it is - <i>delusion</i> and <i>poison</i> are possible - and record type by order of occurrence. Duplication is possible. If the container holds only 2 potions it will dispense them 1 each per day, 3 times per week; if 3 are contained, it will dispense them 1 each per day, 2 times per week; and if 4 or 5 are contained it will pour each forth but 1 time per week. Once opened, the beaker will gradually lose the ability to produce potions. This reduction in ability results in the permanent loss of one potion type per month.'
 ),
 MagicItem( name = 'Folding Boat',
     category = MagicItemCategory.MISC,
     xp_value = [10000,10000],
-    gp_value = [25000,25000],
+    gold_value = [25000,25000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'A <i>folding boat</i> will always be discovered as a small wooden "box" - about 1\' long, ½\' wide, and ½\' deep. It will, of course, radiate magic if detection is possible. The "box" can contain other things. If a command word is given, the box will unfold itself to form a boat of 10\' length, 4\' width and 2\' depth. A second (different) command word will cause it to unfold to a 24\' long, 8\' wide, and 6\' deep ship. The former will have 1 pair of oars, an anchor, a mast, and lateen sail. The latter is decked, has single rowing seats, 5 sets of oars, a steering oar, anchor, a deck cabin, a mast, and square sail. The first can hold 3 or 4 persons comfortably, the second will carry 15 persons with ease. A third word of command will cause the boat/ship to fold itself into a box once again. You may have the words of command inscribed visibly or invisibly on the box, have them written elsewhere - perhaps on an item within the box, or you might simply have them lost and require a search (via <a href="/spells/legend-lore-magic-user-lvl-6"><i>legend lore</i></a>, consulting a sage, physical search of the dungeon, etc.) to discover them.'
 ),
 MagicItem( name = 'Book of Exalted Deeds',
     category = MagicItemCategory.MISC,
     xp_value = [8000,8000],
-    gp_value = [40000,40000],
+    gold_value = [40000,40000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This holy book is sacred to clerics of <i>good</i> alignment. Reading of the work will require 1 week, but upon completion the <i>good</i> cleric will gain 1 point of wisdom and experience points sufficient to place him or her exactly halfway into the next level of experience. Clerics neither <i>good</i> nor <i>evil</i> will lose 20,000-80,000 experience points from perusal of the work (a negative x.p. total is possible, requiring <a href="/spells/restoration-cleric-lvl-7"><i>restoration</i></a> but not lowering level below 1st). <i>Evil</i> clerics will lose 1 full experience level, dropping to the lowest possible number of experience points possible number of experience points possible to hold the level; they will furthermore have to <i>atone</i> by <a href="/spells/atonement-cleric-lvl-5">magical means</a> or by offering up 50% of everything they gain for 2-5 adventures, losing the appropriate number of experience points as well, or gain no further experience. Fighters who handle or read the book will not be affected, although a <i>paladin</i> will feel it to be <i>good</i>. Magic-users who read it will suffer the loss of 1 point of intelligence unless they save versus magic; and if they do save they will lose from 2,000-20,000 experience points. A thief who handles or reads the work will sustain 5-30 hit points of damage and must save versus magic or lose 1 point of dexterity and have a 10%-60% chance of giving up his or her profession to become a <i>good</i> cleric if wisdom is 15 or higher. Assassins handling or reading the <i>book of exalted deeds</i> will take 5-40 hit points of damage and must save versus magic or commit suicide. Monks are not harmed by the work, nor can they understand it. Bards are treated as neutral clerics, experience point loss being from <i>bard</i> experience only. Note that except as indicated above, this writing cannot be distinguished by cover or scansion from <i>any</i> other magic book, libram, tome, etc. It must be perused. (This applies also to other magical writings detailed hereafter.) Once perused, the book vanishes, never to be seen again, nor can the same player character ever benefit from perusing the like a second time.'
 ),
 MagicItem( name = 'Book of Infinite Spells',
     category = MagicItemCategory.MISC,
     xp_value = [9000,9000],
-    gp_value = [50000,50000],
+    gold_value = [50000,50000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('This magical writing bestows spell use ability upon its possessor, but upon first reading the work any character not already able to use spells will suffer 5-20 hit points of damage and be <i>stunned</i> for 5-20 turns. Thereafter, he or she can examine the writing without further harm. The <i>book of infinite spells</i> contains from 23-30 (22 + d8) pages. The nature of each page must be determined by random die roll. Use the following table:\n\n'
         '01-30: blank page\n'
@@ -1995,63 +1995,63 @@ MagicItem( name = 'Book of Infinite Spells',
 MagicItem( name = 'Book of Vile Darkness',
     category = MagicItemCategory.MISC,
     xp_value = [8000,8000],
-    gp_value = [40000,40000],
+    gold_value = [40000,40000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This work of ineffable <i>evil</i> is meat and drink to clerics of that alignment. To fully consume the contents requires 1 week of reading, but when such has been accomplished, the <i>evil</i> cleric will gain 1 point of wisdom and experience points sufficient to place him or her exactly halfway into the next level of experience. Clerics neither <i>good</i> nor <i>evil</i> who read this book will either lose 30,000-120,000 experience points or become evil without benefit from the work; there is a 50% chance for either. <i>Good</i> clerics perusing the pages of the unspeakable <i>Book of Vile Darkness</i> will have to save versus poison or die; and if they do not die they must save versus magic or become <i>permanently insane</i>. In the latter event, even if the save is successful, the cleric loses 250,000 experience points, less 10,00 for each of his or her points of wisdom. Other characters of <i>good</i> alignment will take 5-30 hit points of damage from handling the tome and if they look inside there is an 80% chance of a <a href="/creatures/night-hag"><i>night hag</i></a> will thereafter come to the character that night and attack. Non-evil <i>neutral</i> characters will take 5-20 hit points of damage from handling the book, and reading its pages will cause them to save versus poison or become <i>evil</i>, immediately seeking out an evil cleric to confirm their new alignment. (Cf. <i>Book of Exalted Deeds</i> for other details.)'
 ),
 MagicItem( name = 'Boots of Dancing',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [5000,5000],
+    gold_value = [5000,5000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'The magical <i>boots of dancing</i> will expand or contract to fit any foot size, from <a href="/creatures/halfling">halfling</a> to giant (just as other magic boots will do, of course). They radiate a dim magic if detection is used. They are indistinguishable from other magic boots, and until actual melee combat is engaged in they will function exactly as if they were one of the other 4 types of useful boots. When in melee combat, or if the wearer is fleeing from the actuality of same, the <i>boots of dancing</i> will impede his or her movement, begin to tap and shuffle, heel and toe, or shuffle off to Buffalo, making the wearer behave exactly as if <a href="/spells/ottos-irresistible-dance-magic-user-lvl-8"><i>Otto\'s Irresistible Dance</i></a> spell had been cast upon him or her (-4 from armor class rating, no saving throws possible, and no attacks possible). Only a <a href="/spells/remove-curse-cleric-lvl-3"><i>remove curse</i></a> spell will allow the boots to be removed once their true nature comes forth.'
 ),
 MagicItem( name = 'Boots of Elvenkind',
     category = MagicItemCategory.MISC,
     xp_value = [1000,1000],
-    gp_value = [5000,5000],
+    gold_value = [5000,5000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'These soft boots enable the wearer to move without sound of footfall in virtually any surroundings. Thus the wearer can walk across a patch of dry leaves or over a normally creaky wooden floor and make only a whisper of noise - say 95% chance of silence in the worst of conditions, 100% in the best.'
 ),
 MagicItem( name = 'Boots of Levitation',
     category = MagicItemCategory.MISC,
     xp_value = [2000,2000],
-    gp_value = [15000,15000],
+    gold_value = [15000,15000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'As other magical boots, these soft footgear will expand or contract to fit giant to <a href="/creatures/halfling">halfling</i>-sized feet. <i>Boots of levitation</i> allow the wearer, at will, to ascend or descend vertically. The speed of ascent/descent is 20\' per round (minute). There is no limitation on usage. The amount of weight the boots can levitate is randomly determined in 14 pound increments by rolling d20 and adding the result to a base of 280 pounds, i.e. a given pair of boots can <i>levitate</i> from 294 to 560 pounds of weight. Thus, an <a href="/creatures/ogre">ogre</a> could be wearing such boots, but its weight would be too great to <i>levitate</i>. (Cf. second level magic-user spell, <a href="/spells/levitate-magic-user-lvl-2"><i>levitation</i></a>.)'
 ),
 MagicItem( name = 'Boots of Speed',
     category = MagicItemCategory.MISC,
     xp_value = [2500,2500],
-    gp_value = [20000,20000],
+    gold_value = [20000,20000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'These boots enable the wearer to run at the speed of a fast horse, viz. 24" base movement speed. For every 10 pounds (100 g.p. equivalent) of weight over 200 pounds, the wearer is slowed 1" in movement, so a 180 pound human with 60 pounds of gear would move at 20" base movement rate, and if a sack of 500 gold pieces were being carried in addition, the movement rate would be slowed yet another 5". For every hour of continuous fast movement, the wearer must rest 1 hour. No more than 8 hours of continuous fast movement are possible before the wearer <i>must</i> rest. <i>Boots of speed</i> give +2 to armor class value in combat situations where movement of this sort is possible.'
 ),
 MagicItem( name = 'Boots of Striding and Springing',
     category = MagicItemCategory.MISC,
     xp_value = [2500,2500],
-    gp_value = [20000,20000],
+    gold_value = [20000,20000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'The wearer of these magical boots has a base movement rate of 12", regardless of size or weight. This speed can be maintained tirelessly for up to 12 hours per day, but thereafter the boots no longer function for 12 hours - assume they "recharge" for that period. In addition to the <i>striding</i> factor, these boots also have a <i>springing</i> factor. While "normal" paces for the individual wearing this type of footgear are 3\' long, the boots also enable forward jumps of up to 30\', backward leaps of 9\', and vertical springs of 15\'. If circumstances permit the use of such movement in combat, the wearer can effectively strike and spring away when he or she has <i>initiative</i> during a melee round. However, such activity has a degree of danger, and there is a base 20% chance that the wearer of the boots will stumble and be stunned the following round; adjust the 20% chance downward by 3% for each point of dexterity above 12 of the wearer, i.e. 17% at 13 dexterity, 14% at 14, 11% at 15, 8% at 16, 5% at 17, and but 2% at 18 dexterity. In any event, the wearer increases armor class value by +1 due to the quickness of movement these boots imbue, so armor class 2 becomes 1, armor class 1 becomes 0, etc.'
 ),
 MagicItem( name = 'Bowl Commanding Water Elementals',
     category = MagicItemCategory.MISC,
     xp_value = [4000,4000],
-    gp_value = [25000,25000],
+    gold_value = [25000,25000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This large container is usually fashioned from blue or green stone of semi-precious value such as malachite or lapis lazuli. Sometimes jade will be used. It is about 1\' in diameter, half that deep, and relatively fragile. When the bowl is filled with water, fresh or salt, and certain words are spoken, an elemental of 12 hit dice will appear. The summoning words require 1 round to speak. Note that if salt water is used, the elemental will be stronger (+2 per hit die, maximum 8 h.p. per die, however). Control and similar information are given under <i>Elemental</i> in <b>ADVANCED DUNGEONS AND DRAGONS, MONSTER MANUAL</b>. (Cf. <i>bowl of watery death</i>.)'
 ),
 MagicItem( name = 'Bowl of Watery Death',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [1000,1000],
+    gold_value = [1000,1000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This device exactly resembles a <i>bowl commanding water elementals</i>, including color, design, magic radiation, etc. However, when it is filled with water, the magic-user must save versus magic or be shrunk to the size of a small ant and plunged into the center of the bowl. Note: if salt water is poured into the bowl the saving throw is at -2. The victim will drown in from 3-8 rounds, unless magic is used to save the individual, for he or she cannot be physically removed from the <i>bowl of watery death</i> except by magical means: <a href="/spells/animal-growth-druid-lvl-5"><i>animal growth</i></a>, <a href="/spells/enlarge-magic-user-lvl-1"><i>enlarge</i></a>, or <a href="/spells/wish-magic-user-lvl-9"><i>wish</i></a> are the only spells which will free the victim, and restore normal size; a <i>growth</i> potion poured into the water will have the same effect; a <i>sweet water</i> potion will allow the victim another saving throw, i.e. a chance that the curse magic of the bowl works only briefly. If the victim drowns, death is permanent, no <a href="/spells/resurrection-cleric-lvl-7"><i>resurrection</i></a> is possible, and even a <i>wish</i> will not work.'
 ),
 MagicItem( name = 'Bracers of Defense',
     category = MagicItemCategory.MISC,
     xp_value = [1000,4000],
-    gp_value = [6000,24000],
+    gold_value = [6000,24000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('These items appear to be some sort of wrist or arm guards. Their magic bestows an effective armor class equal to actually wearing armor and employing a shield. Of course, if armor is actually worn, the <i>bracers</i> will not be effective, but they do work in conjunction with other magical items of protection. The armor class the <i>bracers of defense</i> bestow is determined by random dicing on the table below:\n\n'
         '<table>'
@@ -2070,49 +2070,49 @@ MagicItem( name = 'Bracers of Defense',
 MagicItem( name = 'Bracers of Defenselessness',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [2000,2000],
+    gold_value = [2000,2000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'These items appear to be some sort of <i>bracers of defense</i>, and they will actually serve as one of the above types until the wearer is attacked in anger by a dangerous enemy. At that moment, the <i>bracers</i> will lower armor class to 10 and negate any and all other magical protections and dexterity bonuses. Thereafter the bracers can only be removed by means of a <a href="/spells/remove-curse-cleric-lvl-3"><i>remove curse</i></a> spell.'
 ),
 MagicItem( name = 'Brazier Commanding Fire Elementals',
     category = MagicItemCategory.MISC,
     xp_value = [4000,4000],
-    gp_value = [25000,25000],
+    gold_value = [25000,25000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This device appears to be a normal container for holding burning coals unless magic is detected for. It enables a magic-user to summon an elemental of 12 hit dice strength from the <i>Elemental Plane of Fire</i>. A fire must be lit in the <i>brazier</i> - usually 1 round is required to do so. If sulphur is added the elemental will be of +1 on each hit die, i.e. 2-9 hit points per hit die. The <a href="/creatures/fire-elemental">fire elemental</a> will appear as soon as the fire is burning and a command word is uttered.'
 ),
 MagicItem( name = 'Brazier of Sleep Smoke',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [1000,1000],
+    gold_value = [1000,1000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This device is exactly similar to the <i>brazier commanding fire elementals</i>. However, when a fire is started within it the burning will cause great clouds of magical smoke to pour forth in a cloud of 1" radius from the brazier. All creatures within the cloud must save versus magic or fall into a deep sleep. At the same moment a <a href="/creatures/fire-elemental">fire elemental</a> of 12 hit dice will appear and attack the nearest creature. Sleeping creatures can be only be awakened by means of a <a href="/spells/dispel-magic-cleric-lvl-3"><i>dispel magic</i></a> or <a href="/spells/remove-curse-cleric-lvl-3"><i>remove curse</i></a> spell.'
 ),
 MagicItem( name = 'Brooch of Shielding',
     category = MagicItemCategory.MISC,
     xp_value = [1000,1000],
-    gp_value = [10000,10000],
+    gold_value = [10000,10000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'The <i>brooch of shielding</i> appears to be a piece of silver or gold jewelry, usually (90%) without gems inset, which is meant to fasten a cloak or cape. It has the property, however, to absorb <a href="/spells/magic-missile-magic-user-lvl-1"><i>magic missiles</i></a> of the sort generated by spell, wand, or other magic device. A <i>brooch</i> can absorb up to 101 hit points of <i>magic missile</i> damage before it melts and becomes useless. Its use can normally be determined only by means of a <a href="/spells/detect-magic-magic-user-lvl-1"><i>detect magic</i></a> spell and then experimentation.'
 ),
 MagicItem( name = 'Broom of Animated Attack',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [3000,3000],
+    gold_value = [3000,3000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'Indistinguishable from a normal broom, except by means of detection of its magic, and completely identical to a <i>broom of flying</i> by all tests short of attempted use, the <i>broom of animated attack</i> is a very nasty item. If a command word ("fly", "soar", etc.) is spoken, the <i>broom</i> will do a loop the loop with its hopeful rider, dumping him or her off on his or her head from 6\' to 9\' off the ground. The broom will then attack the stunned victim, swatting the face with the straw/twig end to blind and beating with the "bald headed end", the handle. Each such attack takes place twice per round, the <i>broom</i> attacking as if it were a 4 hit die monster. The straw end will cause blindness for 1 round if it hits. The other end causes 1-3 hit points of damage when it hits. The broom is armor class 7 and takes 18 hit points to destroy.'
 ),
 MagicItem( name = 'Broom of Flying',
     category = MagicItemCategory.MISC,
     xp_value = [2000,2000],
-    gp_value = [10000,10000],
+    gold_value = [10000,10000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This magical broom is able to fly through the air at up to 30" movement speed. The broom can carry 182 pounds at this rate, but every 14 additional pounds slows movement by 1". The device can climb or dive at about 30 degrees. A command word must be used, the word to be determined by you as desired. The broom will travel alone to any destination named. It will come up to 30" to its owner when he or she speaks the command word.'
 ),
 MagicItem( name = 'Bucknard\'s Everfull Purse',
     category = MagicItemCategory.MISC,
     xp_value = [1500,4000],
-    gp_value = [15000,40000],
+    gold_value = [15000,40000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('Appearing as nothing more than a leather pouch or small bag, this magical poke is most useful to its owner, for each morning it will duplicate certain coins - and possibly gems as well. When found, the <i>purse</i> will be full of coins. If totally emptied, and left so for more than a few minutes, the magic of the <i>purse</i> is lost, but if 1 of each type of coin is placed within the bag, the next morning 26 of each applicable type will be found inside. <i>Bucknard\'s Everfull Purse</i> can contain:\n\n'
         '<table>'
@@ -2129,14 +2129,14 @@ MagicItem( name = 'Bucknard\'s Everfull Purse',
 MagicItem( name = 'Candle of Invocation',
     category = MagicItemCategory.MISC,
     xp_value = [1000,1000],
-    gp_value = [5000,5000],
+    gold_value = [5000,5000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = '<i>Candles of Invocation</i> are specially <a href="/spells/bless-cleric-lvl-1"><i>blessed</i></a> and <a href="/spells/prayer-cleric-lvl-3"><i>prayered</i></a> tapers which are dedicated to the pantheon of gods of one of the nine alignments. The typical candle is not remarkable, but it will radiate magic if such is detected, and <i>good</i> or <i>evil</i> will be radiated also if appropriate. Simply burning the candle will generate a favorable aura for the individual so doing if the candle\'s alignment matches that of the character\'s. If burned by a cleric of the same alignment, the <i>candle</i> temporarily increases the cleric\'s level of experience by 2, allowing him or her to cast additional spells, and even normally unavailable spells, as if he or she were of the higher level, but only so long as the taper is aflame. Any burning also allows the casting of a <a href="/spells/gate-magic-user-lvl-9"><i>gate</i></a> spell, the respondent being of the alignment of the <i>candle</i>, but the taper is immediately consumed in the process. Each candle will burn for 4 hours. It is possible to extinguish the candle as any other, but it can be placed in a lantern or otherwise sheltered to protect it from drafts and other things which could put it out, without affecting its magical properties.'
 ),
 MagicItem( name = 'Carpet of Flying',
     category = MagicItemCategory.MISC,
     xp_value = [7500,7500],
-    gp_value = [25000,25000],
+    gold_value = [25000,25000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('The size, carrying capacity and speed of a <i>carpet</i> are determined by use of the table below. Each <i>carpet</i> has its own command word to activate it, and each is then controlled by spoken directions. If the device is within voice range, the command word will activate it. These rugs are of oriental make and design. Each is very beautiful and durable. Note, however, that tears or other rents cannot be repaired without special weaving techniques which are generally known only in the East.\n\n'
         '<table>'
@@ -2151,35 +2151,35 @@ MagicItem( name = 'Carpet of Flying',
 MagicItem( name = 'Censer Controlling Air Elementals',
     category = MagicItemCategory.MISC,
     xp_value = [4000,4000],
-    gp_value = [25000,25000],
+    gold_value = [25000,25000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This perforated golden vessel resembles any thurible found in places of worship. If filled with incense and lit, a command word need only be spoken to summon forth a 12 hit dice-sized <a href="/creatures/air-elemental">air elemental</a> which will appear on the following round. If <i>incense of meditation</i> is burned within this ½\' wide, 1\' high vessel, the air elemental will have +3 on each of its hit dice, and it will <i>willingly</i> obey the commands of its summoner. Note that if the censer is extinguished, the elemental will remain and turn on the summoner.'
 ),
 MagicItem( name = 'Censer of Summoning Hostile Air Elementals',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [1000,1000],
+    gold_value = [1000,1000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This thurible is indistinguishable from other censers - magical or ordinary. It is cursed, so that if any incense is burned within it from 1 to 4 enraged <a href="/creatures/air-elemental">air elementals</a> will appear, 1 per round, from the censer and attack any and all creatures within sight. The censer will burn and cannot be extinguished until either the summoner or the elementals have been killed.'
 ),
 MagicItem( name = 'Chime of Opening',
     category = MagicItemCategory.MISC,
     xp_value = [3500,3500],
-    gp_value = [20000,20000],
+    gold_value = [20000,20000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'A <i>chime of opening</i> is a hollow mithral tube about 1\' long. When it is struck it sends forth magical vibrations which cause locks to open. Likewise lids, doors, valves, and portals will open when the <i>chime</i> is sounded. The device will function against normal bars, shackles, chains, bolts, etc. It also destroys the magic of a <a href="/spells/hold-portal-magic-user-lvl-1"><i>hold portal</i></a> spell or even a <a href="/spells/wizard-lock-magic-user-lvl-2"><i>wizard lock</i></a> cast by a magic-user of less than 15th level. The <i>chime</i> must be pointed at the area of the item or gate which is to be loosed or opened. It is then struck, a clear chiming ring sounds (which may attract monsters), and in 1 round 1 of the functions of the device will be completed, i.e., a lock opened, a shackle loosed, a secret door opened, the lid of a chest lifted, etc. Note that if a chest is chained, padlocked, locked, and <i>wizard locked</i>, it will take 4 or 5 soundings of the <i>chime of opening</i> to get it open. A <a href="/spells/silence-15-radius-cleric-lvl-2"><i>silence</i></a> spell negates the power of the device. The <i>chime</i> has 20-80 (20 + d6 x 10) charges before it will crack and become useless.'
 ),
 MagicItem( name = 'Chime of Hunger',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [0,0],
+    gold_value = [0,0],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This device exactly resembles a <i>chime of opening</i>. When it is struck all creatures within 6" are immediately struck with ravenous hunger. Characters will tear into their rations, ignoring everything else, and even dropping everything they are holding in order to eat. Creatures without food immediately available will rush to where the <i>chime of hunger</i> sounded and attack any creatures there in order to kill and eat them. All creatures must eat for at least 1 round, but they are then entitled to a saving throw vs. magic on each successive round until such is made, i.e. hunger is satisfied. <i>Note</i>: It is recommended that the <i>chime of hunger</i> operate as one of <i>opening</i> for several rounds of use before its curse be put into operation.'
 ),
 MagicItem( name = 'Cloak of Displacement',
     category = MagicItemCategory.MISC,
     xp_value = [3000,3000],
-    gp_value = [17500,17500],
+    gold_value = [17500,17500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('This item appears to be a normal cloak, but when it is worn by a character its magical properties distort and warp light waves. This <i>displacement</i> of light waves causes the wearer to appear to be from 1\' to 2\' from his or her actual position. Any attack by missile or melee strike which is aimed at the wearer will automatically miss the first time*. Thereafter the cloak affords +2 protection, i.e. 2 classes better on armor class, as well as +2 on saving throw dice versus attack forms directed at the wearer (such as spells, gaze weapon attacks, spitting and breath attacks, etc. which are aimed at the wearer of the <i>cloak of displacement</i>). Note that 75% of all <i>cloaks of displacement</i> are sized for humans or elves (persons 5\' to 6\' or so tall), and but 25% are sized for persons of about 4\' height (dwarves, gnomes, halflings).\n\n'
         '* This can apply to first attacks from multiple opponents <i>only</i> if the second and successive attackers were unable to observe the initial <i>displacement</i> miss.'
@@ -2188,7 +2188,7 @@ MagicItem( name = 'Cloak of Displacement',
 MagicItem( name = 'Cloak of Elvenkind',
     category = MagicItemCategory.MISC,
     xp_value = [1000,1000],
-    gp_value = [6000,6000],
+    gold_value = [6000,6000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('A <i>cloak of elvenkind</i> is of a plain neutral gray which is indistinguishable from any sort of ordinary cloak of the same color. However, when it is worn, with the hood drawn up around the head, it enables the wearer to be nearly invisible, for the <i>cloak</i> has chameleon-like powers. In the outdoors the wearer of a <i>cloak of elvenkind</i> is almost totally invisible in natural surroundings, nearly so in other settings. Note that the wearer is easily seen if violently or hastily moving, regardless of the surroundings. The invisibility bestowed is:\n\n'
         'Outdoors, natural surroundings\n'
@@ -2209,21 +2209,21 @@ MagicItem( name = 'Cloak of Elvenkind',
 MagicItem( name = 'Cloak of the Manta Ray',
     category = MagicItemCategory.MISC,
     xp_value = [2000,2000],
-    gp_value = [12500,12500],
+    gold_value = [12500,12500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This cloak appears to be made from leather. When it is donned it appears as a normal cloak until the wearer enters salt water, at which time the <i>cloak of the manta ray</i> adheres to the individual, and he or she appears nearly (90%) identical to a <a href="/creatures/manta-ray">manta ray</a>. The wearer is enabled to breath underwater and move as a manta ray - 18". The wearer also has an armor class of at least 6, that of a manta ray, and other magical protections or magical armor will improve that armor value. Although the <i>cloak</i> does not enable the wearer to bite opponents as a manta ray does, the garment does have a tail spine which the wearer can use to strike at opponents behind him or her -  damage is only 1-6 hit points, and there is no chance of stunning. This attack mode can be used in addition to other sorts, for the wearer can release his or her arms from the <i>cloak\'s</i> "wings" without sacrificing movement if so desired.'
 ),
 MagicItem( name = 'Cloak of Poisonousness',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [2500,2500],
+    gold_value = [2500,2500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This particular cloak is usually of woolen-like material, although it can be leathern. It can be handled without harm, and it radiates magic. A <a href="/spells/neutralize-poison-cleric-lvl-4"><i>neutralize poison</i></a> spell will not affect it. As soon as the <i>cloak of poisonousness</i> is actually worn, the wearer will be stricken stone dead. The <i>cloak</i> can only be removed with a <a href="/spells/remove-curse-cleric-lvl-3"><i>remove curse</i></a>, which destroys the magical properties of the <i>cloak</i>. If a <i>neutralize poison</i> spell is then used, the person can possibly be revived by a <a href="/spells/raise-dead-cleric-lvl-5"><i>raise dead</i></a> or <a href="/spells/resurrection-cleric-lvl-7"><i>resurrection</i></a> spell, but there is a -10% chance of success because of the poison. <i>After</i> its effects are known, a small label saying "Nessus Shirt Company" might be seen at your option.'
 ),
 MagicItem( name = 'Cloak of Protection',
     category = MagicItemCategory.MISC,
     xp_value = [1000,5000],
-    gp_value = [10000,50000],
+    gold_value = [10000,50000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('The various forms of this marvelous device all appear to be normal garments, whether made of cloth or leather. Each lends to its wearer benefits on armor class - each plus of the <i>cloak of protection</i> bettering armor class by 1 factor - and to saving throw - each plus being added to the wearer\'s saving throw dice rolls. Thus a +1 <i>cloak</i> would make armor class 10 (no armor) into armor class 9, and add +1 to saving throw dice rolls. To determine how powerful a given cloak is, use this table:\n\n'
         '<table>'
@@ -2241,7 +2241,7 @@ MagicItem( name = 'Cloak of Protection',
 MagicItem( name = 'Crystal Ball',
     category = MagicItemCategory.MISC,
     xp_value = [1000,2000],
-    gp_value = [5000,10000],
+    gold_value = [5000,10000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('This is the most common form of scrying device, a crystal sphere of about ½\' diameter. A magic-user can use the device to see over virtually any distance or into other planes of existence. The user of a <i>crystal ball</i> must know the subject which is to be viewed. Knowledge can be from personal acquaintance, possession of personal belongings, a likeness of the object, or accumulated information. Knowledge is the key to how successful location will be, not distance:\n\n'
         '<table>'
@@ -2309,14 +2309,14 @@ MagicItem( name = 'Crystal Ball',
 MagicItem( name = 'Crystal Hypnosis Ball',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [3000,3000],
+    gold_value = [3000,3000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This cursed item type is indistinguishable from a normal <i>crystal ball</i>, and it radiates magic, but not evil, if detected for. Any magic-user attempting to use it will become hypnotized, and a telepathic <a href="/spells/suggestion-magic-user-lvl-3"><i>suggestion</i></a> will be implanted in his or her mind. The user of the device will believe that the desired object was viewed, but actually he or she became partially under the influence of a powerful magic-user, <a href="/creatures/lich">lich</a>, or even some power/being from another plane. Each further use will bring the <i>crystal ball</i> gazer more under the influence of the creature, either as a servant, tool, or possession object. As referee, you must decide whether to make this a gradual or sudden affair according to the surroundings and circumstances peculiar to the finding of the <i>crystal hypnosis ball</i> and the character(s) locating it.'
 ),
 MagicItem( name = 'Cube of Force',
     category = MagicItemCategory.MISC,
     xp_value = [3000,3000],
-    gp_value = [20000,20000],
+    gold_value = [20000,20000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('A device of but about the size of a large die - perhaps ¾ of an inch across - the <i>cube of force</i> enables its possessor to put up a <i>wall of force</i> 1" per side around his or her person, and this cubic screen is impervious to the attack forms shown on the table below. The <i>cube</i> has 36 charges, and each day this energy is restored. The holder presses one face of the <i>cube</i> to activate or deactivate the field:\n\n'
         '<table>'
@@ -2352,28 +2352,28 @@ MagicItem( name = 'Cube of Force',
 MagicItem( name = 'Cube of Frost Resistance',
     category = MagicItemCategory.MISC,
     xp_value = [2000,2000],
-    gp_value = [14000,14000],
+    gold_value = [14000,14000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This device resembles a <i>cube of force</i>. When the <i>cube</i> is activated it encloses an area of 1" per side, and the temperature within this area is always 65°F. The field will absorb all cold-based attacks, i.e. <a href="/spells/cone-of-cold-magic-user-lvl-5"><i>cone of cold</i></a>, <a href="/spells/ice-storm-magic-user-lvl-4"><i>ice storm</i></a>, and even <a href="/creatures/white-dragon">white dragon\'s</a> breath. However, if the field is subjected to more than 50 hit points of cold in any turn (10 rounds) it collapses and cannot be renewed for 1 hour. If it receives over 100 hit points of damage in 1 turn the <i>cube</i> is destroyed. Note: cold below 0 degrees F. effectively inflicts 2 hit points of cold for every -10°, so that the <i>cube</i> is at -2 at -1 to -10° F., -4 at -11 to -20, etc. Thus, at -40° F. the device can withstand only 42 hit points.'
 ),
 MagicItem( name = 'Cubic Gate',
     category = MagicItemCategory.MISC,
     xp_value = [5000,5000],
-    gp_value = [17500,17500],
+    gold_value = [17500,17500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'Another small cubic device, this item is fashioned from carnelian. The 6 sides of the cube are each keyed to a plane, 1 of which will always be the <i>Prime Material</i>, of course. The other 5 can be chosen by any means desired. If the side of the <i>cubic gate</i> is pressed but once, it opens a nexus to the appropriate plane, and there is a 10% chance per turn that <i>something</i> will come through it looking for food, fun, and/or trouble. If the side is pressed twice, the creature so doing, along with all creatures in a 5\' radius will be drawn through the nexus to the other plane. It is impossible to open more than 1 nexial link at once.'
 ),
 MagicItem( name = 'Daern\'s Instant Fortress',
     category = MagicItemCategory.MISC,
     xp_value = [7000,7000],
-    gp_value = [27500,27500],
+    gold_value = [27500,27500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This metal cube is of small size, but when activated it grows to form a metal tower 20\' square and 30\' high, with arrow slits on all sides and a machicolated battlement atop it, the metal extending 10\' into the ground. It has a small door which will open only to the command of the owner of the <i>fortress</i>, <a href="/spells/knock-magic-user-lvl-2"><i>knock</i></a> spells notwithstanding. The adamantite walls of <i>Daern\'s Instant Fortress</i> are totally unaffected by normal weapons other than those of catapult type. The whole can take 200 points of damage before the tower collapses. Note that damage sustained is cumulative. The <i>fortress</i> cannot be repaired, although a <a href="/spells/wish-magic-user-lvl-9"><i>wish</i></a> will restore 10 points of damage sustained. It requires but 1 round to cause the <i>fortress</i> to spring up, but the person or persons nearby must be careful not to be caught by its sudden growth, or else they will sustain 10-100 hit points of damage. The door will always be facing the owner of the device when it becomes a <i>fortress</i>, and it will open and close instantly at his command.'
 ),
 MagicItem( name = 'Decanter of Endless Water',
     category = MagicItemCategory.MISC,
     xp_value = [1000,1000],
-    gp_value = [3000,3000],
+    gold_value = [3000,3000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('This flask is quite ordinary looking, but if magic is <a href="/spells/detect-magic-magic-user-lvl-1"><i>detected</i></a> it will radiate that property. The <i>decanter</i> has a stopper, and if this is removed, and the proper words spoken, it will pour forth a stream of fresh or salt water as ordered. There are separate command words for the amount as well as the type of water. Water can be made to come forth as follows:\n\n'
         'Stream: pours out 1 gallon per round\n'
@@ -2385,7 +2385,7 @@ MagicItem( name = 'Decanter of Endless Water',
 MagicItem( name = 'Deck of Many Things',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [10000,10000],
+    gold_value = [10000,10000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('A <i>deck of many things</i> (beneficial and baneful) usually is found contained within a box or leather pouch. Each deck contains a number of thin plaques or plates. These sheets are usually of ivory or vellum. Each is engraved and/or inscribed with glyphs, characters, and magical sigils. As soon as one of these sheets is drawn forth from the pack, its magic is bestowed upon the person who drew it, for better or worse. The character gaining a <i>deck of many things</i> may announce that only 1 will be drawn from the pack, or he or she may opt to draw forth 2, 3, or even 4, but the number <i>must</i> be announced prior to the first plaque withdrawn. Note that if the <i>jester</i> is drawn, the possessor of the <i>deck</i> may elect to draw 2 additional cards. Each time a plaque is taken from the <i>deck</i> it is replaced unless the draw is a <i>jester</i> or <i>fool</i>, in which case the plaque is discarded from the pack. The <i>deck</i> will contain either 13 or 22 plaques, 75%/25% chance. Additional plaques in a 22 card <i>deck</i> are indicated by an asterisk (*) before their names. To simulate the plaques you may use the normal playing card indicated:\n\n'
         'Sun (KD): Gain beneficial miscellaneous magic item and 50,000 experience points\n'
@@ -2438,56 +2438,56 @@ MagicItem( name = 'Deck of Many Things',
 MagicItem( name = 'Drums of Deafening',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [500,500],
+    gold_value = [500,500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This item is a pair of kettle drums, radiating magic if so detected, but otherwise unremarkable. If either is struck nothing happens, but if both are sounded together all creatures within 7" are permanently <i>deaf</i> and will remain so until a <a href="/spells/heal-cleric-lvl-6"><i>heal</i></a> spell or similar cure is used to restore shattered eardrums. Furthermore, those within 1" of the drums will be stunned by the noise for from 2-8 rounds. Each drum is a hemisphere of about 1½\' diameter.'
 ),
 MagicItem( name = 'Drums of Panic',
     category = MagicItemCategory.MISC,
     xp_value = [6500,6500],
-    gp_value = [35000,35000],
+    gold_value = [35000,35000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'These kettle drums are unremarkable in appearance. If both of the pair are sounded, all creatures within 12", save for a "safe zone" of 2" radius from the <i>drums</i>, must make their saving throw versus magic or turn and move directly away from the sound for 1 full turn. Each turn thereafter, the panicked creatures may attempt to save versus magic again. Each failure brings another turn of movement away from the <i>drums of panic</i>. Movement is at fastest possible speed while fleeing in panic, and 3 rounds of rest are required for each 1 turn of fast movement after the saving throw is made. Creatures with intelligence of 2 make saving throws at -2, those with 1 or less save at -4. Each drum is a hemisphere of about 1½\' diameter.'
 ),
 MagicItem( name = 'Dust of Appearance',
     category = MagicItemCategory.MISC,
     xp_value = [1000,1000],
-    gp_value = [4000,4000],
+    gold_value = [4000,4000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This fine powder appears much like any other dust unless a careful examination is conducted. The latter will reveal it to be more like a metal dust, but very fine and very light. One handful of this substance flung into the air will coat all objects, making them visible even if they are invisible, out of phase, astral, or ethereal. Note that the <i>dust</i> will also reveal <a href="/spells/mirror-image-magic-user-lvl-2"><i>mirror images</i></a> and <a href="/spells/project-image-magic-user-lvl-5"><i>projected images</i></a> for what they are, and it likewise negates the effects of <i>cloaks of displacement</i> or <i>elvenkind</i> or <i>robes of blending</i>. Appearance lasts for 2-20 turns. It is typically in small silk packets or hollow bone blow tubes. A packet can be shaken out to cover an area with a radius of 10\' from the user. A tube can be blown in a cone shape, 1\' wide at the start, 15\' at the end, and 20\' long. From 5 to 50 containers can be in one place.'
 ),
 MagicItem( name = 'Dust of Disappearance',
     category = MagicItemCategory.MISC,
     xp_value = [2000,2000],
-    gp_value = [8000,8000],
+    gold_value = [8000,8000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This dust exactly resembles that of <i>appearance</i>, and it is typically found stored in the same manner and quantity. All things touched by it reflect and bend light of all sorts (infra-red and ultra-violet included) so as to become invisible to sight or virtually any other means of normal detection or even magical means such as <a href="/spells/detect-invisibility-magic-user-lvl-2"><i>detect invisibility</i></a> spells, but not <i>dust of appearance</i>. Invisibility bestowed by the <i>dust</i> lasts for 2 to 20 turns, 11-20 if carefully sprinkled upon an object. Attack while thus invisible is possible, always by surprise if the opponent is unable to note invisible things and always at an armor class 4 places better while invisibility lasts. Note that unlike the <a href="/spells/invisibility-magic-user-lvl-2"><i>invisibility</i></a> spell, attack while using the <i>dust of appearance</i> will not obviate the <i>invisibility</i>.'
 ),
 MagicItem( name = 'Dust of Sneezing and Choking',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [1000,1000],
+    gold_value = [1000,1000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This fine dust appears to be either <i>Dust of Appearance</i> or <i>Dust of Disappearance</i>. If spread, however, it will cause those within a 20\' radius to fall into fits of sneezing and coughing, those failing to save versus poison die immediately, those who do being disabled by the choking for 5-20 rounds.'
 ),
 MagicItem( name = 'Efreeti Bottle',
     category = MagicItemCategory.MISC,
     xp_value = [9000,9000],
-    gp_value = [45000,45000],
+    gold_value = [45000,45000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This item is typically fashioned of brass or bronze, with a lead stopper bearing special seals. It not uncommonly has a thin stream of smoke issuing from it. There is a 10% chance that the <a href="/creatures/efreeti">efreeti</a> will be insane and attack immediately upon being released. There is also a 10% chance that the efreeti of the bottle will only grant 3 <a href="/spells/wish-magic-user-lvl-9"><i>wishes</i></a>. The other 80% of the time, however, the inhabitant of the bottle will serve normally. When opened, the efreeti issues from the bottle in but 1 segment.'
 ),
 MagicItem( name = 'Eversmoking Bottle',
     category = MagicItemCategory.MISC,
     xp_value = [500,500],
-    gp_value = [2500,2500],
+    gold_value = [2500,2500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This metal urn is identical to an <i>efreeti bottle</i>. It does nothing but smoke, however. The amount of smoke will be very great if the stopper is pulled out, pouring from the bottle and totally obscuring vision in a 50,000 cubic foot area in 1 round. The bottle, left unstoppered, will fill another 10,000 cubic feet of space with smoke each round until 120,000 cubic feet of space is fogged, and this area will continue to remain so smoked until the <i>eversmoking bottle</i> is <i>stoppered</i>. The <i>bottle</i> can only be resealed if a command word is known.'
 ),
 MagicItem( name = 'Eyes of Charming',
     category = MagicItemCategory.MISC,
     xp_value = [4000,4000],
-    gp_value = [24000,24000],
+    gold_value = [24000,24000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('This item consists of a pair of convex crystal lenses which fit over the user\'s eyes. When in place, the wearer is able to <a href="/spells/charm-person-magic-user-lvl-1"><i>charm persons</i></a> merely by meeting their gaze. Those failing to save versus magic are charmed as per the spell. One person per round can be thus looked at. Saving throws are at -2 if the wearer has both lenses, at +2 if he or she wears only 1 of a pair of <i>eyes of charming</i>.'
         'Note: Mixing magical eye types is certain to cause immediate insanity for 2-8 (2d4) turns.'
@@ -2496,7 +2496,7 @@ MagicItem( name = 'Eyes of Charming',
 MagicItem( name = 'Eyes of the Eagle',
     category = MagicItemCategory.MISC,
     xp_value = [3500,3500],
-    gp_value = [18000,18000],
+    gold_value = [18000,18000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('These optics are also of special crystal and fit over the eyes of the wearer. They give vision 100 times greater than normal at distances of 1\' or more, i.e. the wearer can see at 2,000\' what a person could normally see at 20\'. Wearing only 1 of the cusps will cause the character to become dizzy, and in effect stunned, for 1 round. Thereafter, 1 eye must always be covered to avoid this vertigo.'
         'Note: Mixing magical eye types is certain to cause immediate insanity for 2-8 (2d4) turns.'
@@ -2505,7 +2505,7 @@ MagicItem( name = 'Eyes of the Eagle',
 MagicItem( name = 'Eyes of Minute Seeing',
     category = MagicItemCategory.MISC,
     xp_value = [2000,2000],
-    gp_value = [12500,12500],
+    gold_value = [12500,12500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('Appearing much the same as any other magical lenses, <i>eyes of minute seeing</i> enable the wearer to see 100 times better at distances of 1\' or less. Thus, tiny seams, minute marks, even the impression left from writing can be seen, thus secret compartments and hidden joints can be noted and the information acted upon. The effect of wearing but one of these crystals is the same as given for <i>eyes of the eagle</i>.'
         'Note: Mixing magical eye types is certain to cause immediate insanity for 2-8 (2d4) turns.'
@@ -2514,7 +2514,7 @@ MagicItem( name = 'Eyes of Minute Seeing',
 MagicItem( name = 'Eyes of Petrification',
     category = MagicItemCategory.MISC,
     xp_value = [0,12500],
-    gp_value = [0,50000],
+    gold_value = [0,50000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('Totally indistinguishable from any other magical cusps, the effect of donning these lenses is instantaneous: the wearer is turned to stone. Note: 25% of these devices work as the gaze of a <a href="/creatures/basilisk">basilisk</a> does, including reflection of the weapon turning the gazer to stone.\n\n'
         'Note: Mixing magical eye types is certain to cause immediate insanity for 2-8 (2d4) turns.\n\n'
@@ -2524,7 +2524,7 @@ MagicItem( name = 'Eyes of Petrification',
 MagicItem( name = 'Figurine of Wondrous Power',
     category = MagicItemCategory.MISC,
     xp_value = [100,100],
-    gp_value = [1000,1000],
+    gold_value = [1000,1000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('There are various <i>figurines</i>, but all have the following in common. Each is apparently a statuette of small size, but an inch or so high. When the <i>figurine</i> is tossed down and a command word spoken, however, it becomes a living creature which obeys and serves its owner. If any <i>figurine</i> is destroyed in its statuette form it is forever ruined, all magic is lost, and it has no power. If slain in animal-like form the <i>figurine</i> simply reverts to its statuette conformation and can be used again at a later time as long as the statuette is not broken. When <i>figurines of wondrous power</i> are indicated, roll on the table below to determine the type:\n\n'
         '01-15: ebony fly\n'
@@ -2556,63 +2556,63 @@ MagicItem( name = 'Figurine of Wondrous Power',
 MagicItem( name = 'Flask of Curses',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [1000,1000],
+    gold_value = [1000,1000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This item appears much the same as any beaker, bottle, container, decanter, flask, jug, etc. It has magical properties, but detection will not reveal the nature of the <i>flask of curses</i>. It often contains liquid substance too, or it may emit smoke. When the <i>flask</i> is first unstoppered, a <i>curse</i> of some sort will be visited upon the person or persons nearby (it will subsequently be harmless). The suggestions given for the <i>curse</i> reverse of the cleric <a href="/spells/bless-cleric-lvl-1"><i>bless</i></a> spell, and those stated for typical <i>curses</i> found on a scroll are recommended for use here as well, or some monster can appear and attack all creatures in sight, etc.'
 ),
 MagicItem( name = 'Gauntlets of Dexterity',
     category = MagicItemCategory.MISC,
     xp_value = [1000,1000],
-    gp_value = [10000,10000],
+    gold_value = [10000,10000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'A pair of these gloves appears to be nothing more than light leather handwear of the everyday sort. Naturally, they radiate magic if so detected. They size themselves magically to fit any hand, from that of a huge human to that of a small halfling, when drawn on. A pair of <i>gauntlets of dexterity</i> increase overall dexterity by 4 points if at 6 or less, by 2 points if at 7-13, and be 1 point if dexterity is 14 or higher. Furthermore, wearing these gloves enables non-thief characters to <i>pick pockets</i> or <i>open locks</i> as if he or she were a 4th level thief; if worn by a thief they increase these abilities by adding 10% to the normal percentage chance for the character\'s level.'
 ),
 MagicItem( name = 'Gauntlets of Fumbling',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [1000,1000],
+    gold_value = [1000,1000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'These gauntlets may be of supple leather or heavy protective gloves suitable for use with armor of ring, scale, schain, etc. In the former instance these gauntlets will appear to be of <i>dexterity</i>, in the latter case of <i>ogre power</i>. They will perform according to every test just as if they were other <i>gauntlets</i>, but when an enemy is actively seeking to harm their wearer, or in some similar life or death situation, their curse is activated, and he or she will become very clumsy, with a 50% chance each round of dropping anything held in either hand - not from both singly. The <i>gauntlets</i> will also lower overall dexterity by 2 points. Once the curse is activated, the gloves can only be removed by means of a <a href="/spells/remove-curse-cleric-lvl-3"><i>remove curse</i></a> spell or a <a href="/spells/wish-magic-user-lvl-9"><i>wish</i></a>.'
 ),
 MagicItem( name = 'Gauntlets of Ogre Power',
     category = MagicItemCategory.MISC,
     xp_value = [1000,1000],
-    gp_value = [15000,15000],
+    gold_value = [15000,15000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'A pair of <i>ogre power</i> gauntlets appear the same as typical handwear for armor. The wearer of these gloves, however, is imbued with 18/00 strength in his or her hands, arms, and shoulders. When striking with the hand or with a weapon hurled or held, the gauntlets add +3 to hit probability and +6 to damage inflicted when a hit is made. These gauntlets are particularly desirable when combined with a <i>girdle of giant strength</i> and a hurled weapon. They enlarge or shrink to fit human to <a href="/creatures/halfling">halfling</a>-sized hands.'
 ),
 MagicItem( name = 'Gauntlets of Swimming and Climbing',
     category = MagicItemCategory.MISC,
     xp_value = [1000,1000],
-    gp_value = [10000,10000],
+    gold_value = [10000,10000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'A pair of these gloves appear as normal lightweight handwear, but they are most useful magic items, and radiate their dweomer if a detection is attempted. The wearer can have hands of large (human) or small (<a href="/creatures/halfling">halfling</a>) size. He or she will be enabled to swim as fast as a <a href="/creatures/triton">triton</a> (15") under water, and as fast as a <a href="/creatures/merman">merman</a> (18") on the surface. Of course, these <i>gauntlets</i> do not empower the wearer to breathe water. These gloves also give the wearer a very strong and able gripping and holding ability with respect to climbing, so as to enable him or her to climb vertical or nearly vertical surfaces, upwards or downwards, with a 95% probability of not slipping and falling - and if the wearer is a thief the <i>gauntlets</i> increase success probability to 99.5%.'
 ),
 MagicItem( name = 'Gem of Brightness',
     category = MagicItemCategory.MISC,
     xp_value = [2000,2000],
-    gp_value = [17500,17500],
+    gold_value = [17500,17500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This crystal appears to be nothing more than a gem in rather rough, long prismed shape. Upon utterance of the proper spell words, however, the crystal will emit bright light of 3 sorts. It can be caused to shed a pale light in a cone-shape 10\' long, emanating from the <i>gem</i> to a radius of 2½\' at the end of the beam. This does not discharge any of the energy of the device. Another command will cause the <i>gem of brightness</i> to send out a very bright ray of light of only 1\' diameter but of 50\' length, and any creature who is struck in the eyes by this beam will be dazzled for 1-4 rounds and unable to see. The creature struck is entitled to a saving throw versus magic to determine whether or not its eyes were shut or averted in time. This use of the <i>gem</i> expends 1 energy charge. The third manner in which the item may be used is to cause it to flare in a blinding flash of light in a cone 30\' long and 5\' radius at its terminus. Although this glare lasts but a moment, all creatures within its area must save versus magic or be blinded for 1-4 rounds and thereafter suffer a penalty of -1 to -4 on hit probability dice rolls due to permanent eye damage. This use expends 5 charges. Dazzling or blindness effect can be removed by a <a href="/spells/cure-blindess-cleric-lvl-3"><i>cure blindness</i></a> spell; eye damage can be cured only by a <a href="/spells/heal-cleric-lvl-6"><i>heal</i></a> spell. The <i>gem of brightness</i> has 50 charges and cannot be recharged. A <a href="/spells/darkness-15-radius-magic-user-lvl-2"><i>darkness</i></a> spell will drain 1 of its charges, or make it useless for 1 round, at the option of the <i>gem</i> owner. A <a href="/spells/continual-darkness-illusionist-lvl-3"><i>continual darkness</i></a> spell will cause it to be useless for 1 day, or expend 5 charges, at the option of the owner.'
 ),
 MagicItem( name = 'Gem of Seeing',
     category = MagicItemCategory.MISC,
     xp_value = [2000,2000],
-    gp_value = [25000,25000],
+    gold_value = [25000,25000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'One of these finely cut and polished stones is normally indistinguishable from a jewel of the ordinary sort, although a <a href="/spells/detect-magic-magic-user-lvl-1"><i>detect magic</i></a> will reveal its dweomer. When gazed through, the <i>gem of seeing</i> enables the user to detect all hidden, illusionary, invisible, astral, ethereal, or out of phase things within viewing range. Peering through the crystal is time consuming and tedious. The viewing range of the <i>gem</i> is 30" for a cursory manner, 2 rounds to view a 100\' square area in a careful way. There is a 5% chance each time the <i>gem</i> is used that the viewer will see an hallucination, see something that is not there, or possibly see through some real things as if it were an illusion.'
 ),
 MagicItem( name = 'Girdle of Femininity/Masculinity',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [1000,1000],
+    gold_value = [1000,1000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This broad leather band appears to be a normal belt used commonly by all sorts of adventurers, but of course it is magical. If buckled on, it will <i>immediately</i> change the sex of its wearer to the opposite gender. Its magical curse fulfilled, the belt then loses all power. The original sex of the character cannot be restored by any normal means, although a <a href="/spells/wish-magic-user-lvl-9">wish</i> <i>might</i> do so (50% chance), and a powerful being can alter the situation, i.e., it takes a god-like creature to set matters aright with certainty. 10% of these girdles actually remove <i>all</i> sex from the wearer.'
 ),
 MagicItem( name = 'Girdle of Giant Strength',
     category = MagicItemCategory.MISC,
     xp_value = [200,200],
-    gp_value = [2500,2500],
+    gold_value = [2500,2500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('This belt looks similar to those normal to adventuring. It is imbued with very powerful magic, of course, and when worn it increases the physical prowess of its wearer as follows:\n\n'
         '<table>'
@@ -2643,7 +2643,7 @@ MagicItem( name = 'Girdle of Giant Strength',
 MagicItem( name = 'Helm of Brilliance',
     category = MagicItemCategory.MISC,
     xp_value = [2500,2500],
-    gp_value = [60000,60000],
+    gold_value = [60000,60000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('When discovered, a <i>helm of brilliance</i> appears to be nothing more than an ordinary piece of armor for head protection, viz. a helmet, basinet, sallet, etc. of iron or steel. When worn, it functions only upon the utterance of a special command word. When so empowered the true nature of the <i>helm</i> is visible to all. The <i>helm</i> is armor of +2 value. It is of brilliant silver and polished steel, and set with 10 diamonds, 20 rubies, 30 fire opals, and 40 opals - each of large size and magicked - which perform as explained below. When struck by bright light the helm will scintillate and send forth reflective rays in all directions from its crown-like spikes set with gems. The jewels\' functions are:\n\n'
         '   Diamond: <a href="/spells/prismatic-spray-illusionist-lvl-7"><i>Prismatic spray</i></a> (as the seventh level illusionist spell)\n'
@@ -2662,42 +2662,42 @@ MagicItem( name = 'Helm of Brilliance',
 MagicItem( name = 'Helm of Comprehending Languages and Reading Magic',
     category = MagicItemCategory.MISC,
     xp_value = [1000,1000],
-    gp_value = [12500,12500],
+    gold_value = [12500,12500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'Appearing as a normal war helmet, a <i>helm of comprehending languages and reading magic</i> enables its wearer to understand 90% of strange tongues and writings, 80% of magical writings. (Note these percentage figures apply to whether <i>all</i> or <i>none</i> of the speaking/writing or inscription is understandable. Understanding does not necessarily imply spell use.) This device is equal to a normal helmet of the type accompanying armor class 5.'
 ),
 MagicItem( name = 'Helm of Opposite Alignment',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [1000,1000],
+    gold_value = [1000,1000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'By appearance this metal hat is simply a typical helmet. By test, it will radiate an indeterminate dweomer. Once placed upon the head, however, its curse <i>immediately</i> takes place, and the <i>alignment</i> of the wearer is radically altered - good to evil, neutral to some absolute commitment (LE, LG, CE, CG) as radically different from former alignment as possible. Alteration in alignment is mental and, once effected, is desired by the individual whom the magic changed. Only a <a href="/spells/wish-magic-user-lvl-9"><i>wish</i></a>, or <a href="/spells/alter-reality-illusionist-lvl-7"><i>alter reality</i></a>, can restore former alignment, and the affected individual will <i>not</i> make any attempt to return to former alignment. If a paladin is concerned, he or she must undergo a special <a href="/spells/quest-cleric-lvl-5"><i>quest</i></a> and <a href="/spells/atonement-cleric-lvl-5"><i>atone</i></a> if the curse is to be obliterated. Note that once a <i>helm of opposite alignment</i> has functioned it loses all of its magical properties.'
 ),
 MagicItem( name = 'Helm of Telepathy',
     category = MagicItemCategory.MISC,
     xp_value = [3000,3000],
-    gp_value = [35000,35000],
+    gold_value = [35000,35000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This sturdy metal helmet appears to be a normal piece of headgear, although it will radiate magic if this is detected for. The wearer of a <i>helm of telepathy</i> is able to determine the thoughts of creatures within a 6" range, provided the wearer knows the language used by such creatures (the racial tongue will be used in thoughts in preference to the common, the common in preference to alignment languages), and there is not more than 3\' of solid stone, ¼\' of iron, or any solid sheeting of lead or gold between the wearer and the creatures. The thought pick-up is directional. Concious effort must be made to pick up thoughts. The wearer may communicate by language with any creature within range if there is a mutually known speech, or emotions may be transmitted (empathy) so that a creature will receive the emotional message of the wearer. If the wearer of the <i>helm</i> desires to implant a <a href="/spells/suggestion-magic-user-lvl-3"><i>suggestion</i></a> (see the third level magic-user spell of that name), he or she may attempt to do so as follows: For every 2 points of intelligence <i>greater</i> than the subject, the wearer is 5% more likely to be successful; but for every 1 point of intelligence <i>lower</i> than the subject, the probability decreases by 5%. Thus the subject creature receiving the <i>suggestion</i> gains a saving throw versus magic with a -1 for every 2 points of intelligence lower than the telepathist, but +1 for every 1 point of intelligence <i>higher</i> than the wearer of the <i>helm</i>, and if intelligence is equal no adjustment is made when the saving throw is rolled. The <i>helm of telepathy</i> gives a +4 with respect to psionic related attacks (see Dungeon Masters Guide ATTACK MATRICES). It increases total psionic strength by 40 points.'
 ),
 MagicItem( name = 'Helm of Teleportation',
     category = MagicItemCategory.MISC,
     xp_value = [2500,2500],
-    gp_value = [30000,30000],
+    gold_value = [30000,30000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This is another helmet of normal appearance which will give off a magical aura if detected for. Any character wearing this device may <a href="/spells/teleport-magic-user-lvl-5"><i>teleport</i></a> once per day, exactly as if he or she were a magic-user, i.e. the destination must be known, and a risk is involved. If a magic-user has access to this device, its full powers can be employed, for the wearer can then memorize a <i>teleportation</i> spell, and use the helm to refresh his or her memory so as to be able to repeat the spell up to 3 times upon objects or characters and still be able to personally <i>teleport</i> by means of the <i>helm</i>. As long as the magic-user retains the <i>teleportation</i> spell uncast, he or she can personally teleport up to 6 times before the memory of the spell is lost, and even then a usage of the <i>helm</i> remains as noted above.'
 ),
 MagicItem( name = 'Helm of Underwater Action',
     category = MagicItemCategory.MISC,
     xp_value = [1000,1000],
-    gp_value = [10000,10000],
+    gold_value = [10000,10000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'When this <i>helm</i> is viewed, it is indistinguishable from a normal helmet, but detection will reveal it as magical, and the possessor will be able to both see and breathe under water. Visual properties of the helm are activated when small lenses are drawn across the device from compartments on either side of the helmet. They allow the wearer to see 5 times farther than normal water and light conditions allow for normal human vision. (Note that weeds, obstructions, etc. will block vision in the usual manner.) If the command word is spoken, the <i>helm of underwater action</i> creates a globe of air around the wearer\'s head, and maintains it, until the command word is again spoken. Thus, the wearer can breathe freely.'
 ),
 MagicItem( name = 'Horn of Blasting',
     category = MagicItemCategory.MISC,
     xp_value = [5000,5000],
-    gp_value = [55000,55000],
+    gold_value = [55000,55000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('This magical horn appears as a normal trumpet, but it will reveal a dweomer if a detection for magic is cast upon it. It can be sounded as a normal horn, but if the correct word is spoken and the instrument then winded in the proper manner, it has the following effects:\n\n'
         '1. A cone of sound, 12" long and 3" wide at the base, issues forth from the <i>horn</i> and all within it must save versus magic. Those saving are <i>stunned</i> for 1 round and <i>deafened</i> for 2. Those failing the saving throw sustain 1-10 hit points of damage, are <i>stunned</i> for 2 rounds and <i>deafened</i> for 4.\n\n'
@@ -2709,14 +2709,14 @@ MagicItem( name = 'Horn of Blasting',
 MagicItem( name = 'Horn of Bubbles',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [0,0],
+    gold_value = [0,0],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This musical instrument will radiate magic if detected for. It appears as a normal horn, or possibly any one of the many magical ones. It will sound a note and call forth a mass of bubbles which completely surround and blind the individual who blew the horn for 2-20 rounds, but these bubbles will only appear in the presence of a creature actively seeking to slay the character who winded the <i>horn</i> so their appearance might be delayed for a very short of extremely lengthy period.'
 ),
 MagicItem( name = 'Horn of Collapsing',
     category = MagicItemCategory.MISC,
     xp_value = [1500,1500],
-    gp_value = [25000,25000],
+    gold_value = [25000,25000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('The <i>horn</i> appears to be a normal musical instrument, perhaps a bugle or warning horn of some sort. If it is sounded without first speaking the proper rune, or 10% of the time in any event, the following will result:\n\n'
         '<i>Outside</i>: A rain of fist-sized rocks will strike the individual sounding the <i>horn</i>, from 2-12 in number, each causing 1-6 hit points of damage.\n\n'
@@ -2728,7 +2728,7 @@ MagicItem( name = 'Horn of Collapsing',
 MagicItem( name = 'Horn of the Tritons',
     category = MagicItemCategory.MISC,
     xp_value = [2000,2000],
-    gp_value = [17500,17500],
+    gold_value = [17500,17500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('This device is a conch shell horn which can be blown but once per day, except by a triton who can sound it 3 times daily. A <i>horn of the tritons</i> can do any 1 of the following functions when properly blown:\n\n'
         '1. Calm rough waters in a 1 mile radius (this has the effect of dispelling a <a href="/creatures/water-elemental">water elemental</a> or <a href="/creatures/water-weird">water weird</a>);\n\n'
@@ -2740,7 +2740,7 @@ MagicItem( name = 'Horn of the Tritons',
 MagicItem( name = 'Horn of Valhalla',
     category = MagicItemCategory.MISC,
     xp_value = [1000,3000],
-    gp_value = [15000,45000],
+    gold_value = [15000,45000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('There are 4 varieties of this magical device. Each summons a number of bersekers from Valhalla to fight for the character who summoned them by blowing the horn. Each variety of <i>horn</i> can be blown but once every 7 days. These horns all appear to be normal instruments until their command word is discovered. The type of <i>horn</i>, its powers, and who is able to employ it are shown below:\n\n'
         '<table>'
@@ -2759,35 +2759,35 @@ MagicItem( name = 'Horn of Valhalla',
 MagicItem( name = 'Horseshoes of Speed',
     category = MagicItemCategory.MISC,
     xp_value = [2000,2000],
-    gp_value = [10000,10000],
+    gold_value = [10000,10000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'These iron shoes are magical and will not wear out. They consist of 4 normal-appearing horse shoes, but when affixed to any horse\'s hooves, they double the animal\'s speed. There is a 1% chance per 7 leagues travelled that 1 will drop off, and if this passes unnoticed, the horse\'s speed will drop to 150% normal rate. If 2 are lost, speed is normal.'
 ),
 MagicItem( name = 'Horseshoes of a Zephyr',
     category = MagicItemCategory.MISC,
     xp_value = [1500,1500],
-    gp_value = [7500,7500],
+    gold_value = [7500,7500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'These iron shoes can be affixed as normal horseshoes, and they allow a horse to travel without actually touching the ground, so water can be passed over or no tracks made on any sort of ground. The horse is able to move at normal speeds, and it will not tire for as long as 12 hours continuous riding per day when wearing these magical horseshoes.'
 ),
 MagicItem( name = 'Incense of Meditation',
     category = MagicItemCategory.MISC,
     xp_value = [500,500],
-    gp_value = [7500,7500],
+    gold_value = [7500,7500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'The small rectangular blocks of sweet-smelling <i>incense of meditation</i> are indistinguishable from non-magical incense until one is lit. When burning, the special fragrance and pearly-hued smoke of this special incense are recognizable by any cleric of 5th or higher level. When a cleric lights a block of the <i>incense of meditation</i> and spends 8 hours praying and meditating nearby, the <i>incense</i> will enable him or her to gain full and best spell effects. Thus, <i>cure wounds</i> spells are always maximum, spell effects are of the broadest area possible, and saving throws against their effects are at -1, and when dead are brought back to life the cleric reduces their chance of <i>not</i> surviving by one-half (rounded down). When this item of magic is discovered, there will be from 2-8 pieces of incense. One piece burns for 8 hours; the effects remain for 24 hours.'
 ),
 MagicItem( name = 'Incense of Obsession',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [500,500],
+    gold_value = [500,500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'These strange blocks of incense exactly resemble <i>incense of meditation</i>. If set alight and meditation and prayer are conducted while the <i>incense of obsession</i> is nearby, its odor and smoke will cause the cleric to become totally confident that his or her spell ability is superior due to the magical incense. The cleric will be completely determined to use his or her spells at every opportunity, typically when not needed or when useless. Nonetheless, the cleric will remain obsessed with his or her abilities and spells until all are cast or 24 hours have elapsed. There are 2-8 pieces of this incense normally, each burning for 1 hour.'
 ),
 MagicItem( name = 'Ioun Stones',
     category = MagicItemCategory.MISC,
     xp_value = [300,300],
-    gp_value = [5000,5000],
+    gold_value = [5000,5000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('There are 14 sorts of useful <i>ioun stones</i>. These magical stones always float in the air and must be within 3\' of their owner to be efficacious. The new possessor of the <i>stones</i> must hold each and then release it, so it takes up a circling orbit, whirling and trailing, circling at 1\' to 3\' radius of his or her head. Thereafter, they must be grasped or netted to separate them from their owner. The owner may voluntarily seize and stow the <i>stones</i> (at night, for example) to keep them safe. He or she would of course lose the benefits during that time. From 1-10 <i>ioun stones</i> will be found. Dice for the property of each <i>stone</i>, a duplication indicating a stone which is burned out and useless:\n\n'
         '<table>'
@@ -2818,7 +2818,7 @@ MagicItem( name = 'Ioun Stones',
 MagicItem( name = 'Instrument of the Bards',
     category = MagicItemCategory.MISC,
     xp_value = [1000,7000],
-    gp_value = [5000,35000],
+    gold_value = [5000,35000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('There are 7 magical instruments. Each can be fully utilized only by a bard, particularly a bard of at least as high a <i>college</i> as the instrument is named for, i.e. Fochlucan, Mac-Fuirmidh, Doss, etc. Bards of lower status, as well as other characters able to play such an <i>instrument</i>, will be able to use the device with only limited results. The 7 <i>instruments</i> are described below:\n\n'
         '<i>Fochlucan Bandore</i>: If this small, 3-stringed instrument is played by a 1st level bard (<i>probationer</i>) or a non-bard, it has a 50% chance per round of playing to cast a <a href="/spells/faerie-fire-druid-lvl-1"><i>faerie fire</i></a> spell, but there is a 10% chance that the musician will be limned by the glow, if the spell is so cast, rather than the desired target. A bard of Fochlucan or higher college casts the <i>faerie fire</i> spell at base 50% per level of bard experience above 1st, reducing the reverse effect by 1% per level above 1st. Furthermore, the <i>bandore</i> also has the following song properties when properly played:\n\n'
@@ -2877,7 +2877,7 @@ MagicItem( name = 'Instrument of the Bards',
 MagicItem( name = 'Iron Flask',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [0,0],
+    gold_value = [0,0],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('One of these special containers will typically be inlaid with runes of silver and stoppered by a brass plug bearing a seal of great dweomer set round with sigils, glyphs, and special symbols. When the user speaks a command, he or she can force any creature from another plane (daemon, demon, devil, elemental, etc.) <i>into</i> the container, provided the creature does not make its saving throw versus magic - after magic resistance, if any, is checked. Range is 6". Only 1 creature at a time can be so contained. Loosing the stopper frees the captured creature; and if the individual loosing the plug knows the command word, the creature can be forced to serve for 1 turn (or to perform a <i>minor</i> service which takes up to 1 hour of time). If freed without command knowledge, dice for the creature\'s reaction... Any attempt to force the same creature into the <i>flask</i> a second time allows it a +2 on its saving throw and makes it VERY angry and totally hostile. A discovered bottle can contain:\n\n'
         '01-50: empty\n'
@@ -2904,28 +2904,28 @@ MagicItem( name = 'Iron Flask',
 MagicItem( name = 'Javelin of Lightning',
     category = MagicItemCategory.MISC,
     xp_value = [250,250],
-    gp_value = [3000,3000],
+    gold_value = [3000,3000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'A <i>javelin of lightning</i> is considered equal to a +2 magic weapon, although it has neither "to hit" nor damage bonuses. It has a range of 9" and whenever it strikes, the <i>javelin</i> then becomes the head of a ½" wide, 3" long stroke of lightning. Any creature hit by the <i>javelin</i> suffers 1-6 hit points of damage, plus 20 hit points of electrical damage. Any other creatures in the path of the back stroke take either 20 or 10 hit points of damage. (Draw a straight line between point of impact 3" back in the direction of the character hurling it.) From 2-5 will be found. The <i>javelin</i> is consumed in the lightning discharge.'
 ),
 MagicItem( name = 'Javelin of Piercing',
     category = MagicItemCategory.MISC,
     xp_value = [250,250],
-    gp_value = [3000,3000],
+    gold_value = [3000,3000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This weapon is not actually hurled, as when a command word is spoken; the <i>javelin of piercing</i> launches itself. Range is 6", all distances considered as <i>short</i> range. The javelin is +6 "to hit" and inflicts 7-12 hit points of damage. (Note this missile will fly horizontally, vertically, or any combination thereof to the full extent of its range.) From 2-8 will be found. The magic of the <i>javelin</i> is good for only 1 throw.'
 ),
 MagicItem( name = 'Jewel of Attacks',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [1000,1000],
+    gold_value = [1000,1000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This gleaming gem radiates magic and appears to be a valuable item. It is cursed, however, and it brings both 100% more likelihood of encountering wandering monsters and 100% greater likelihood of pursuit when monsters are encountered and the party seeks to evade them by flight. Once picked up, the <i>jewel of attacks</i> will always magically return to its finder (secreting itself in pouch, bag, pack, pocket, etc.) until a <a href="/spells/remove-curse-cleric-lvl-3"><i>remove curse</i></a> spell or an <a href="/spells/atonement-cleric-lvl-5"><i>atonement</i></a> is cast upon him or her.'
 ),
 MagicItem( name = 'Jewel of Flawlessness',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [1000,100000],
+    gold_value = [1000,100000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('This magical gem appears to be a very fine stone of some sort, but if magic is detected for, its dweomer will be noted. When a <i>jewel of flawlessness</i> is placed with other gems, it increases the likelihood of their being more valuable by 100%, i.e., the chance for each stone going up in value increases from 1 in 10 to 2 in 10. The <i>jewel</i> has from 10-100 facets, and whenever a gem increases in value because of the magic of the <i>jewel of flawlessness</i> (a roll of 2 on d10), 1 of these facets disappears. When all are gone, the <i>jewel</i> is a spherical stone of no value.'
         'The g.p. value of the gem is 1,000 g.p. per facet.'
@@ -2934,56 +2934,56 @@ MagicItem( name = 'Jewel of Flawlessness',
 MagicItem( name = 'Keoghtom\'s Ointment',
     category = MagicItemCategory.MISC,
     xp_value = [500,500],
-    gp_value = [10000,10000],
+    gold_value = [10000,10000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This sovereign salve is useful for drawing poison, curing disease, or healing wounds. A jar of the ungent is small - perhaps three inches in diameter and one inch deep - but contains 5 applications. Placed upon a poisoned wound (or swallowed), it detoxifies any poison or disease. Rubbed on the body, the <i>ointment</i> heals 9-12 points of damage. 1-3 jars will commonly be found.'
 ),
 MagicItem( name = 'Libram of Gainful Conjuration',
     category = MagicItemCategory.MISC,
     xp_value = [8000,8000],
-    gp_value = [40000,40000],
+    gold_value = [40000,40000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This mystic compilation contains much arcane knowledge for magic-users (including illusionists) of <i>neutral</i> (neutral, chaotic neutral, lawful neutral) alignment. If a character of this class and alignment spends a full week, cloistered and undisturbed, pondering its contents, he or she will gain experience points sufficient to place him or her exactly at the mid-point of the next higher level. When this occurs, the <i>libram</i> will disappear - totally gone - and that same character can never benefit again from reading such a work. Any non-neutral magic-user reading so much as a line of the <i>libram</i> will take 5-20 points of damage, be unconcious for a like number of turns, and must seek a cleric to <a href="/spells/atonement-cleric-lvl-5"><i>atone</i></a> in order to regain the ability to progress in experience (until doing so, he or she will gain no further experience). Any non-magic-user perusing the work will be required to save versus magic in order to avoid <i>insanity</i>. Those characters going <i>insane</i> must receive a <a href="/spells/remove-curse-cleric-lvl-3"><i>remove curse</i></a> and rest for 1 month or have a cleric <a href="/spells/heal-cleric-lvl-6"><i>heal</i></a> them.'
 ),
 MagicItem( name = 'Libram of Ineffable Damnation',
     category = MagicItemCategory.MISC,
     xp_value = [8000,8000],
-    gp_value = [40000,40000],
+    gold_value = [40000,40000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This work is exactly like the <i>Libram of Gainful Conjuration</i> except that it benefits <i>evil</i> magic-users, and non-evil characters of that class will <i>lose</i> 1 level of experience merely from looking inside of its brass-bound covers, in addition to the other ill effects of perusing but 1 line of its contents.'
 ),
 MagicItem( name = 'Libram of Silver Magic',
     category = MagicItemCategory.MISC,
     xp_value = [8000,8000],
-    gp_value = [40000,40000],
+    gold_value = [40000,40000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This mystic text is the reverse of the <i>Libram of Ineffable Damnation</i>, greatly beneficial to <i>good</i> magic-users, most baneful to non-good ones. Like all magical works of this sort, it vanishes after 1 week of study, and the character having benefited from it can never be so aided again.'
 ),
 MagicItem( name = 'Lyre of Building',
     category = MagicItemCategory.MISC,
     xp_value = [5000,5000],
-    gp_value = [30000,30000],
+    gold_value = [30000,30000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'The enchantments placed upon this instrument make it indistinguishable from a normal one; and even if its magic is detected, it cannot be told from an <i>instrument of the bards</i> until it is played. If the proper chords are struck, the <i>lyre</i> will negate the effects of a <i>horn of blasting</i>, a <a href="/spells/disintegrate-magic-user-lvl-6"><i>disintegrate</i></a> spell, or the effects of 6 rounds of an attack of an earth elemental - all as pertains to constructions. Such playing of these negatory chords can be done once per day. The <i>lyre</i> is also useful with respect to actual building, of course. Once per week its strings can be strummed so as to produce actual chords which magically construct buildings, mines, tunnels, ditches, or whatever. The effect produced in but 3 turns of such playing is equal to the work of 100 men laboring for 3 days. If a false chord is struck, all effects of the <i>lyre</i> are 20% likely to be negated. A false chord is only 5% likely once the character knows the proper ones, but if disturbed by physical or mental attack while playing, the likelihood rises to 50%.'
 ),
 MagicItem( name = 'Manual of Bodily Health',
     category = MagicItemCategory.MISC,
     xp_value = [5000,5000],
-    gp_value = [50000,50000],
+    gold_value = [50000,50000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'As with all magical writings of this nature, the metal-bound <i>Manual of Bodily Health</i> appears to be an arcane, rare, but non-magical book. If a <a href="/spells/detect-magic-cleric-lvl-1"><i>detect magic</i></a> spell is cast upon it, the <i>manual</i> will radiate an aura of magic. Any single character who reads the work (24 hours of time over 3-5 days) will know how to increase his or her constitution by 1 point by following a regimen of special dietary intake and breathing exercises over a 1 month period. The book disappears immediately upon completion of its contents. The 1 point of constitution is gained only after the prescribed regimen is followed. In 3 months the knowledge of the secrets to bodily health will be forgotten. The knowledge cannot be articulated or recorded by the reader. The <i>manual</i> will not be useful to any character a second time, nor will other than a single character be able to benefit from it.'
 ),
 MagicItem( name = 'Manual of Gainful Exercise',
     category = MagicItemCategory.MISC,
     xp_value = [5000,5000],
-    gp_value = [50000,50000],
+    gold_value = [50000,50000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This work is similar to the <i>Manual of Bodily Health</i>, but its reading and prescribed course of action will result in the addition of 1 point to the reader\'s strength.'
 ),
 MagicItem( name = 'Manual of Golems',
     category = MagicItemCategory.MISC,
     xp_value = [3000,3000],
-    gp_value = [30000,30000],
+    gold_value = [30000,30000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('This compilation is a treatise on the construction and animation of a golem. It contains all of the information and incantations necessary to make 1 of the 4 sorts of golems. It will take a considerable amount of time, and be expensive as well, to construct and animate the golem. During this period, a single magic-user or cleric must have the <i>manual</i> at hand to study, and he or she must not be interrupted. The type of <i>manual</i> found is determined as noted below:\n\n'
         '<table>'
@@ -3000,42 +3000,42 @@ MagicItem( name = 'Manual of Golems',
 MagicItem( name = 'Manual of Puissant Skill at Arms',
     category = MagicItemCategory.MISC,
     xp_value = [8000,8000],
-    gp_value = [40000,40000],
+    gold_value = [40000,40000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This scholarly study contains expert advice and instruction regarding weapon use and various attack and defense modes. Any single fighter (including a bard, but <i>not</i> a paladin or ranger) who reads the <i>manual</i> and practices the skills described therein for 1 month will go up to the mid-point of the next higher level. The book disappears after it is read, and the knowledge therein will be forgotten within 3 months, so it must be acted upon with reasonable expedition. The fighter cannot articulate what he or she has read, nor can it be recorded in any fashion. A paladin or ranger will understand the work but it cannot benefit either class. Any cleric (including druid), thief (including assassin), or monk who handles/reads the <i>manual</i> will not understand it. If a magic-user (including an illusionist) so much as scans a few of its letters, he or she will be stunned for 1-6 turns and lose 10,000-60,000 experience points as the work is so opposed to the magic-using profession. Only one perusal of the work will benefit the same character.'
 ),
 MagicItem( name = 'Manual of Quickness of Action',
     category = MagicItemCategory.MISC,
     xp_value = [5000,5000],
-    gp_value = [50000,50000],
+    gold_value = [50000,50000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'The heavy covers and metal bindings of this compilation will not distinguish it from any of scores of semi-valuable, non-magical texts. This work contains secret formulae and prescriptions for unguents and exercises which enable a single reader to assimilate the text (3 days of uninterrupted study) and then practice the skills detailed therein. If this practice is faithfully done for 1 month, the character will gain 1 point of dexterity. While the <i>manual</i> will disappear immediately after reading, the contents will be remembered for 3 months (although the reader will <i>not</i> be able to articulate or otherwise record the information he or she retains). Only after the month of training will the dexterity bonus be gained. Further perusal of a similar text will not add further to the same character\'s dexterity.'
 ),
 MagicItem( name = 'Manual of Stealthy Pilfering',
     category = MagicItemCategory.MISC,
     xp_value = [8000,8000],
-    gp_value = [40000,40000],
+    gold_value = [40000,40000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This guide to expertise at thievery is so learned and erudite that any single thief who reads it and then spends 1 month thereafter practicing the skills therein will gain experience points sufficient to place him or her at the mid-point of the next higher level. The text disappears after reading, but knowledge is retained for 3 months - as with other magical texts of this sort, the knowledge cannot be recorded or told of, however. Any additional reading of a like <i>manual</i> is of no benefit to the same character. Assassins who read the work will gain but 5,000 additional experience points after the contents have been read and pondered for 1 week. Fighters, magic-users, and monks will not comprehend the work. Clerics, rangers, and paladins who read even a word of the book take 5-20 hit points of damage, are <i>stunned</i> for a like number of rounds, and if a saving throw versus magic is failed, they lose 5,000-20,000 experience points as well. In addition, such characters must <a href="/spells/atonement-cleric-lvl-5"><i>atone</i></a> within 1 day or lose 1 point of wisdom.'
 ),
 MagicItem( name = 'Mattock of the Titans',
     category = MagicItemCategory.MISC,
     xp_value = [3500,3500],
-    gp_value = [7000,7000],
+    gold_value = [7000,7000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This huge digging tool is 10\' long and weighs over 100 pounds. Any giant-sized creature with a strength of 20 or more can use it to loosen (or tumble) earth (or earthern ramparts) in a 100 cubic foot area in 1 turn. It will smash rock in a 20 cubic feet area in the same amount of time. If used as a weapon, it is +3 "to hit" and does 5-30 hit points of damage, exclusive of strength bonuses. (Cf. <i>girdle of giant strength.)'
 ),
 MagicItem( name = 'Maul of the Titans',
     category = MagicItemCategory.MISC,
     xp_value = [3500,3500],
-    gp_value = [7000,7000],
+    gold_value = [7000,7000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This huge mallet is 8\' long and weighs over 150 pounds. Any giant-sized creature with strength of 21 or greater can employ it to drive piles of up to 2\' diameter into normal earth at 4\' per blow - 2 blows per round. The <i>maul</i> will smash to flinders an oaken door of up to 10\' height by 4\' width by 2 inch thickness in 1 blow - 2 if the door is heavily bound with iron. If used as a weapon it is +2 "to hit" and inflicts 10-40 hit points of damage, exclusive of strength bonuses.'
 ),
 MagicItem( name = 'Medallion of ESP',
     category = MagicItemCategory.MISC,
     xp_value = [1000,3000],
-    gp_value = [10000,30000],
+    gold_value = [10000,30000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('An <i>ESP Medallion</i> appears to be a normal neck chain - usually fashioned from bronze, copper, or nickel-silver - with pendant disc. The device enables the wearer to concentrate and pick up thoughts in a path 1" wide at the <i>medallion</i> and broadening 2\' every 10\' from the device the magic reaches, up to an 11\' maximum width at 50\' (5"). It requires a full round for a character to so use the device. The <i>medallion</i> is prevented from functioning by stone of over 3\' thickness, metal of over 1/6\' thickness, or any continuous sheeting of lead, gold or platinum of any thickness greater than paint. The medallion malfunctions (with no result) on a die roll of 6 on d6, and the device must be checked each time it is used. The character using the device can pick up only the surface thoughts of creatures in the path of the ESP area. The general distance can be determined, but all thoughts will be understandable only if the user knows the language of the thinkers. If the creatures use no language, only the prevailing emotions can be felt - understood only with an <i>ESP-Empathy</i> device (see below). Note that undead and mindless golems have neither readable thoughts nor emotions. (See also <b>PSIONICS</b>.) The type of <i>medallion</i> found is determined below:\n\n'
         '<table>'
@@ -3051,21 +3051,21 @@ MagicItem( name = 'Medallion of ESP',
 MagicItem( name = 'Medallion of Thought Projection',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [1000,1000],
+    gold_value = [1000,1000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This device is exactly like an <i>ESP Medallion</i> in every respect, even as to the range it functions at. However, in addition to picking up the thoughts of creatures, it broadcasts the thoughts of the user to the creatures in the path of the beam, thus alerting them. Note: it functions correctly, <i>without projecting thoughts</i>, on a roll of 6.'
 ),
 MagicItem( name = 'Mirror of Life Trapping',
     category = MagicItemCategory.MISC,
     xp_value = [2500,2500],
-    gp_value = [25000,25000],
+    gold_value = [25000,25000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This crystal device is usually about 4 square feet in area, framed in metal, wood, etc. It is usable only by magic-users, although it cana be affixed to a surface to operate alone by giving a command word. A <i>mirror</i> has from 13 to 18 non-spatial/extra-dimensional compartments within it. Any creatures coming within 30\' of the device and looking at it so as to see its reflection must save versus magic or be <i>trapped</i> within the mirror in one of the cells. It is 100% probable that any creature not aware of the nature of the device will see its reflection, the probability dropping to 50% if the creature actively avoids so doing and 20% if the creature is aware that the mirror traps life. When a creature is trapped, it is taken bodily into the <i>mirror</i>. Size is not a factor, but automatons and non-living matter (including golems but excluding <i>intelligent</i> undead) are not trapped. The possessor of the mirror can call the reflection of any creature that is trapped within to the surface of the mirror, and the powerless creature can be conversed with. If mirror capacity is exceeded, 1 victim (random) will be set free to accommodate the latest one. If the mirror is broken, all victims are freed (usually to then attack the possessor of the device). Note that the possessor of a <i>mirror of life trapping</i> can speak a command word so as to free a trapped creature, but the cell of the creature must be known. Example: "In the name of Zagig the Great I command the occupant of the 3rd cell to come forth!"'
 ),
 MagicItem( name = 'Mirror of Mental Prowess',
     category = MagicItemCategory.MISC,
     xp_value = [5000,5000],
-    gp_value = [50000,50000],
+    gold_value = [50000,50000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('This magical mirror resembles an ordinary one. The possessor, however, knowing the proper commands can cause it to perform as follows:\n\n'
         '1. Read the thoughts of any creature reflected therein, even though these thoughts are in an unknown language;\n'
@@ -3078,21 +3078,21 @@ MagicItem( name = 'Mirror of Mental Prowess',
 MagicItem( name = 'Mirror of Opposition',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [2000,2000],
+    gold_value = [2000,2000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This mirror exactly resembles a normal mirror. Any creature reflected in its surface will cause an exact duplicate to come into being, and this opposite will immediately attack. Note that the duplicate will have all items and powers of the original (including magic), but upon the defeat or destruction of either, the duplicate and his or her items disappear completely.'
 ),
 MagicItem( name = 'Necklace of Adaptation',
     category = MagicItemCategory.MISC,
     xp_value = [1000,1000],
-    gp_value = [10000,10000],
+    gold_value = [10000,10000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This chain will resemble a medallion. The wearer will be able to ignore gases of all sorts which affect creatures through respiration, breathe underwater, or even exist in airless space for up to 7 days.'
 ),
 MagicItem( name = 'Necklace of Missiles',
     category = MagicItemCategory.MISC,
     xp_value = [100,2950],
-    gp_value = [400,11800],
+    gold_value = [400,11800],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('A device of this sort appears to be nothing but a cheap medallion or piece of valueless jewelry due to special enchantments placed upon it. If a character places it about his or her neck, however, that individual can see the necklace as it really is - a golden missile globes depending from a golden chain. Each sphere is detachable only by the wearer. They can be easily hurled up to 7" distance. When they arrive at the end of their trajectory they burst as a magical <a href="/spells/fireball-magic-user-lvl-3"><i>fireball</i></a>. The number of missiles, and their respective hit dice of <i>fireball</i> damage, are determined on the table below:\n\n'
         '<table>'
@@ -3113,7 +3113,7 @@ MagicItem( name = 'Necklace of Missiles',
 MagicItem( name = 'Necklace of Prayer Beads',
     category = MagicItemCategory.MISC,
     xp_value = [1500,3000],
-    gp_value = [9000,18000],
+    gold_value = [9000,18000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('A magical necklace of this sort appears to be a normal piece of non-valuable jewelry until it is placed about a character\'s neck. Even then, the true nature of the item will only be revealed if the wearer is a cleric (excluding druids and characters otherwise able to use spells of a clerical nature such as paladins and rangers). The <i>necklace of prayer beads</i> consists of 25-30 semi-precious (60%) and fancy (40%) stones. The wearer will be 25% more likely to successfully petition his or her deity to grant desired spells. There will also be 3-6 special beads (precious stones, gems of 1,000 g.p. base value) of the following sort (roll for each bead):\n\n'
         '<table>'
@@ -3132,28 +3132,28 @@ MagicItem( name = 'Necklace of Prayer Beads',
 MagicItem( name = 'Necklace of Strangulation',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [1000,1000],
+    gold_value = [1000,1000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'Also covered by enchantments to completely mask its true nature, a <i>necklace of strangulation</i> can be discovered only when placed around a character\'s neck. The <i>necklace</i> immediately constricts and cannot be removed short of an <a href="/spells/alter-reality-illusionist-lvl-7"><i>alter reality</i></a>, <a href="/spells/limited-wish-magic-user-lvl-7"><i>limited wish</i></a> or <a href="/spells/wish-magic-user-lvl-9"><i>wish</i></a> spell. The wearer will suffer 6 hit points of strangulation damage per round until the character is dead and the <i>necklace</i> remains clasped until the character is a dry skeleton.'
 ),
 MagicItem( name = 'Net of Entrapment',
     category = MagicItemCategory.MISC,
     xp_value = [1000,1000],
-    gp_value = [7500,7500],
+    gold_value = [7500,7500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This magical rope net is so strong as to defy strength under 20 and is equal to AC -10 with respect to blows aimed at cutting it. (Normal sawing attempts to cut it with dagger or sword will <i>not</i> succeed; it must be hacked at to sever a strand of its mesh.) Each net is 10\' square and has ¼\' mesh. It can be thrown 20\' so as to cover and close upon opponents; each in its area must save versus magic to avoid being entrapped. It can be suspended from a ceiling (or generally overhead) and drop upon a command word. It can be laid upon the floor and likewise close upwards upon command. The <i>net</i> stretches so as to close over an area of up to a 5\' cube in the latter case. It can be loosened by its possessor on command.'
 ),
 MagicItem( name = 'Net of Snaring',
     category = MagicItemCategory.MISC,
     xp_value = [1000,1000],
-    gp_value = [6000,6000],
+    gold_value = [6000,6000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This net exactly resembles a <i>net of entrapment</i>, but it functions only underwater. There, it can be commanded to shoot forth up to 3" distance to trap a creature. It is otherwise the same as the former magical net.'
 ),
 MagicItem( name = 'Nolzur\'s Marvelous Pigments',
     category = MagicItemCategory.MISC,
     xp_value = [500,2000],
-    gp_value = [3000,12000],
+    gold_value = [3000,12000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('These magical emulsions enable their possessor to create actual objects simply by depicting their form in 2 dimensions. The variegated <i>pigments</i> are applied by a stick tipped with bristles, hair, or fur. The emulsion flows from the application to form the desired object as the wielder concentrates on the desired image. One pot of <i>Nolzur\'s Marvelous Pigments</i> is sufficient to create a 1,000 cubic foot object by depicting it 2 dimensionally over a 100 square foot surface. Thus, a 10\' x 10\' x 10\' pit, or a 10\' x 10\' x 10\' room, or a large door with a passage behind it, etc. can be created by application of the <i>pigments</i>. Note that only normal, inanimate things can be so created - doors, pits, flowers, trees, cells, etc.; not monsters, people, golems, and the like. The pigments must be applied to a surface, i.e. a floor, wall, ceiling, door, etc. From 1-4 containers of <i>pigments</i> will be found, usually with a single instrument about 1\' long with which to apply them. It takes 1 turn to depict an object with <i>pigments</i>. Objects of value depicted by <i>pigments</i> - precious metals, gems, jewelry, ivory, etc. - will <i>appear</i> valuable but will be tin, lead, paste gems, brass, bone, etc. Normal armor or weapons can, of course, be created.\n\n'
         'When sold, the x.p. value is 500 and g.p. value is 3,000 per pot of <i>pigments</i>.'
@@ -3162,7 +3162,7 @@ MagicItem( name = 'Nolzur\'s Marvelous Pigments',
 MagicItem( name = 'Pearl of Power',
     category = MagicItemCategory.MISC,
     xp_value = [200,2400],
-    gp_value = [2000,24000],
+    gold_value = [2000,24000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('This seemingly normal pearl of average size and coloration is a potent aid to a magic-user. Once a day, a <i>pearl of power</i> enables the possessor to recall any 1 spell as desired, even if the spell has already been cast. Of course, the magic-user must have the spell to be remembered amongst those he or she most recently memorized. The power of the <i>pearl</i> is determined below:\n\n'
         '<table>'
@@ -3185,28 +3185,28 @@ MagicItem( name = 'Pearl of Power',
 MagicItem( name = 'Pearl of Wisdom',
     category = MagicItemCategory.MISC,
     xp_value = [500,500],
-    gp_value = [5000,5000],
+    gold_value = [5000,5000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'Although it appears to be a normal pearl, a <i>pearl of wisdom</i> will cause a cleric to increase 1 point in wisdom if he or she retains the pearl for a 1 month period. The increse happens at the expiration of 30 days, but thereafter the pearl must be retained by the cleric and kept on his or her person, or the 1 point gain will be lost. Note that 1 in 20 of these magical pearls are cursed to work in reverse, but once the 1 point of wisdom is lost, the pearl turns to powder, and the loss is permanent barring some magical restoration means such as a <a href="/spells/wish-magic-user-lvl-9"><i>wish</i></a> or a <i>Tome of Understanding</i>.'
 ),
 MagicItem( name = 'Periapt of Foul Rotting',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [1000,1000],
+    gold_value = [1000,1000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This engraved gem is magicked so as to appear to be a gem of small value. If any character claims it as his or her own, he or she will contract a terrible rotting disease, a form of leprosy which can be removed only by application of a <a href="/spells/remove-curse-cleric-lvl-3"><i>remove curse</i></a> spell followed by a <a href="/spells/cure-disease-cleric-lvl-3"><i>cure disease</i></a> and then a <a href="/spells/heal-cleric-lvl-6"><i>heal</i></a> or <a href="/spells/limited-wish-magic-user-lvl-7"><i>limited wish</i></a> or <a href="/spells/wish-magic-user-lvl-9"><i>wish</i></a> spell. The rotting can also be countered by the crushing of a <i>periapt of health</i> and sprinkling of the dust thereof upon the afflicted character. Otherwise, the afflicted loses 1 point each of dexterity and constitution and charisma per week beginning 1 week after claiming the item, and when any score reaches 0, the character is dead. Each point lost due to the disease will be permanent regardless of subsequent removal of the affliction.'
 ),
 MagicItem( name = 'Periapt of Health',
     category = MagicItemCategory.MISC,
     xp_value = [1000,1000],
-    gp_value = [10000,10000],
+    gold_value = [10000,10000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'The gem appears exactly as a <i>periapt of foul rotting</i>, but the possessor will be immune from all diseases save that of the latter <i>periapt</i> so long as he or she has it on his or her person.'
 ),
 MagicItem( name = 'Periapt of Proof Against Poison',
     category = MagicItemCategory.MISC,
     xp_value = [1500,1500],
-    gp_value = [12500,12500],
+    gold_value = [12500,12500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('The <i>periapt of proof against poison</i> is <i>indistinguishable</i> from any of the other <i>periapts</i>. The character who has one of these magical gems is allowed a 10% saving throw per plus of <i>periapt</i> against poisons which normally disallow any such opportunity, a normal score for poisons which usually are at penalty, and a plus on all other poison saves:\n\n'
         '<table>'
@@ -3221,49 +3221,49 @@ MagicItem( name = 'Periapt of Proof Against Poison',
 MagicItem( name = 'Periapt of Wound Closure',
     category = MagicItemCategory.MISC,
     xp_value = [1000,1000],
-    gp_value = [10000,10000],
+    gold_value = [10000,10000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This magical stone looks exactly the same as the others of this ilk. The person possessing it will never need fear open, bleeding wounds, for the <i>periapt</i> prevents them. In addition, the <i>periapt</i> doubles the normal rate of healing, or allows normal healing of wounds which would not so do normally.'
 ),
 MagicItem( name = 'Phylactery of Faithfulness',
     category = MagicItemCategory.MISC,
     xp_value = [1000,1000],
-    gp_value = [7500,7500],
+    gold_value = [7500,7500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'There is no means to determine what function this device performs until it is worn. The wearer of a <i>phylactery of faithfulness</i> will be aware of any action or item which will adversely affect his or her alignment and standing with his or her deity prior to performing the action of becoming associated with such an item, if a prior moment is taken to contemplate the action. The <i>phylactery</i> must be worn normally by the cleric, of course.'
 ),
 MagicItem( name = 'Phylactery of Long Years',
     category = MagicItemCategory.MISC,
     xp_value = [3000,3000],
-    gp_value = [25000,25000],
+    gold_value = [25000,25000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This device slows the aging process by one-quarter for as long as the cleric wears it. The reduction applies even to magical aging. Thus, if a cleric dons the <i>phylactery</i> at age 20, he or she will age 9 months every 12; so that in 12 chronological years, he or she will have aged but 9 and will physically be 29 rather than 32. 1 in 20 of these devices are cursed to operate in reverse.'
 ),
 MagicItem( name = 'Phylactery of Monstrous Attention',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [2000,2000],
+    gold_value = [2000,2000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'While this arm wrapping appears to be some sort of beneficial device, it actually draws the attention of supernatural creatures of exactly the opposite alignment of the cleric wearing it. This results in the cleric being plagued by powerful and hostile creatures whenever he or she is in an area where such creatures are or can appear. If the cleric is of 10th or higher level, the attention of his or her deity\'s most powerful enemy will be drawn, so as to cause this being to interfere directly. For example, a lawful good cleric attracts various demons and eventually the notice of <a href="/creatures/orcus">Orcus</a> or <a href="/creatures/demogorgon">Demogorgon</a>. Once donned, a <i>phylactery of monstrous attention</i> cannot be removed without an <a href="/spells/exorcise-cleric-lvl-4"><i>exorcism</i></a> spell and then a quest must be performed to re-establish the cleric in his or her alignment.'
 ),
 MagicItem( name = 'Pipes of the Sewers',
     category = MagicItemCategory.MISC,
     xp_value = [1750,1750],
-    gp_value = [8500,8500],
+    gold_value = [8500,8500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'A set of these wooden pipes appear to be nothing extraordinary, but if the possessor learns the proper tune, he or she can attract from 10-60 (d6 x 10) <a href="/creatures/giant-rat">giant rats</a> (80%) or 30-180 (3d6 x 10) normal <a href="/creatures/rat">rats</a> (20%) if either or both are within 40". For each 5" distance the rats have to travel there will be a 1 round delay. The piper must continue playing until the rats appear, and when they do so, they are 95% likely to obey the piper so long as he or she continues to play. If for any reason the piper ceases playing, the rats summoned will leave immediately. If they are again called it is 70% probable that they will come and obey, 30% likely that they will turn upon the piper. If the rats are under control of a creature such as a <a href="/creatures/vampire">vampire</a>, the piper\'s chance of taking over control is 30% per round of piping. Once control is assumed, there is a 70% chance of maintaining it if the other creature is actively seeking to reassert its control.'
 ),
 MagicItem( name = 'Portable Hole',
     category = MagicItemCategory.MISC,
     xp_value = [5000,5000],
-    gp_value = [50000,50000],
+    gold_value = [50000,50000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'A <i>portable hole</i> is a circle of magical cloth spun from the webs of a <a href="/creatures/phase-spider">phase spider</a> interwoven with strands of ether and beams of Astral Plane luminaries. When opened fully, a portable hole is 6\' in diameter, but it can be folded as small as a pocket handkerchief. When spread upon any surface, it causes an extra-dimensional hole 10\' deep to come into being. This hole can be "picked up" from inside or out by simply taking hold of the edges of the magical cloth and folding it up. Either way, the entrance disappears, but anything inside the "hole" remains. The only oxygen in the "hole" is that allowed by creation of the space, so creatures requiring the gas cannot remain inside for more than a turn or so without opening the space again by means of the magical cloth. The cloth does not accumulate weight even if its hole is filled with gold, for example. Each <i>portable hole</i> opens on its own particular non-dimensional space. If a <i>bag of holding</i> is placed within a <i>portable hole</i>, a rift to the Astral Plane is torn in the space, and the <i>bag</i> and the cloth are sucked into the void and forever lost. If a <i>portable hole</i> is placed within a <i>bag of holding</i>, it opens a <i>gate</i> to another plane, and the <i>hole</i>, <i>bag</i> and any creatures within a 10\' radius are drawn to the plane, the <i>portable hole</i> and <i>bag of holding</i> being <i>destroyed</i> in the process.'
 ),
 MagicItem( name = 'Quaal\'s Feather Token',
     category = MagicItemCategory.MISC,
     xp_value = [500,1000],
-    gp_value = [2000,7000],
+    gold_value = [2000,7000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('A <i>feather token</i> is a small magical device of various forms to suit a special need. These various tokens are listed below. Each is usable but once:\n\n'
         '<table>'
@@ -3281,7 +3281,7 @@ MagicItem( name = 'Quaal\'s Feather Token',
 MagicItem( name = 'Robe of the Archmagi',
     category = MagicItemCategory.MISC,
     xp_value = [6000,6000],
-    gp_value = [65000,65000],
+    gold_value = [65000,65000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('This normal-appearing garment can be <i>white</i> (45% - good alignment), <i>gray</i> (30% - neutral, but neither good nor evil, alignment), or <i>black</i> (25% - evil alignment). Its wearer gains the following powers:\n\n'
         '1. It serves as armor equal to AC 5;\n'
@@ -3294,35 +3294,35 @@ MagicItem( name = 'Robe of the Archmagi',
 MagicItem( name = 'Robe of Blending',
     category = MagicItemCategory.MISC,
     xp_value = [3500,3500],
-    gp_value = [35000,35000],
+    gold_value = [35000,35000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This ordinary appearing robe <i>cannot</i> be detected by magical means. When it is put on, however, the wearer will detect a dweomer and know that the garment has very special properties. A <i>robe of blending</i> enables its wearer to appear to be part of a rock wall, a plant, a creature of another sort - whatever is appropriate. The coloration, form, and even odor are produced by the robe, although it will not make its wearer appear to be more than twice/one-half normal height, and it does not empower language/noise capabilities - either understanding or imitating. (In situations where several different forms are appropriate, the wearer is obliged to state which form he wishes the <i>robe</i> to camouflage him or her as.) Creatures with <i>exceptional</i> (15+) or better intelligence have a 1% per intelligence point chance of detecting something amiss when they are within 3" of a <i>robe of blending</i>, and those creatures with <i>low</i> intelligence (5+) or better and 10 or more levels of experience or hit dice have a 1% per level or hit dice chance of likewise noting something unusual about a <i>robe</i>-wearing character. (The latter is cumulative with the former chance for detection, so an 18 intelligence magic-user of 12th level has a 30% chance - 18% + 12% - of noting something amiss.) There must be an initial check per eligible creature, and successive checks should be made each turn thereafter, if the same creatures are within the 3" range. All creatures acquainted with and friendly to the wearer will see him or her normally.'
 ),
 MagicItem( name = 'Robe of Eyes',
     category = MagicItemCategory.MISC,
     xp_value = [4500,4500],
-    gp_value = [50000,50000],
+    gold_value = [50000,50000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This garment is most valuable (though it appears as a normal robe until it is put on), for its wearer is able to "see" in all directions at the same moment due to the scores of magical "eyes" which adorn te <i>robe</i>. The wearer is empowered with <i>infravisual</i> capability to 12" range, <i>ultravisual abilties</i>, and the power to see <i>displaced</i> or <i>out of phase</i> objects and creatures in their actual positions. The <i>robe of eyes</> sees <i>all</i> forms of invisible things within a 24" normal vision range (or 12" if infravision is being used). Of course, solid objects obstruct even the <i>robe\'s</i> powers of observation. While <i>invisibility</i>, <i>dust of disappearance</i>, a <i>robe of blending</i>, or even <a href="/spells/improved-invisibility-illusionist-lvl-4"><i>improved invisibility</i></a> are not proof against observation, astral or ethereal things cannot be seen by means of this robe. <i>Illusions</i> and secret doors also cannot be seen, but creatures camouflaged or hidden in shadows are easily detected, so ambush or surprise of a character wearing a <i>robe of eyes</i> is impossible. Furthermore, the <i>robe</i> enables its wearer to <i>track</i> as if he or she were a 12th level ranger. A <a href="/spells/light-cleric-lvl-1"><i>light</i></a> spell thrown directly on a <i>robe of eyes</i> will blind it for 1-3 rounds, a <a href="/spells/continual-light-magic-user-lvl-2"><i>continual light</i></a> for 2-8 rounds.'
 ),
 MagicItem( name = 'Robe of Powerlessness',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [1000,1000],
+    gold_value = [1000,1000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'A robe of this nature appears to be a robe of another sort, and detection of any sort will discover nothing more than the fact that it has a magic aura. As soon as a character dons this garment, he or she drops to 3 intelligence, forgets all spells and magical knowledge, and becomes weak as well (3 strength). The <i>robe</i> can be removed easily, but in order to restore mind and body, the character must have a <a href="/spells/remove-curse-cleric-lvl-3"><i>remove curse</i></a> spell and then a <a href="/spells/heal-cleric-lvl-6"><i>heal</i></a> spell placed upon his or her person.'
 ),
 MagicItem( name = 'Robe of Scintillating Colors',
     category = MagicItemCategory.MISC,
     xp_value = [2750,2750],
-    gp_value = [25000,25000],
+    gold_value = [25000,25000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This garment appears quite normal, but a magic aura is detectable. Unless the wearer has an intelligence of 15 or higher and a wisdom of 13 or more, he or she will be unable to cause a <i>robe of scintillating colors</i> to function. If intelligence and wisdom are sufficient, the wearer can cause the garment to become a shifting pattern of incredible hues, color after color cascading from the upper part of the <i>robe</i> to the hem in sparkling rainbows of dazzling light. Although this effect sheds light in a 40\' diameter sphere, it also has the powers of hypnotizing opponents and causing them to be unable to attack the wearer. It requires a full round for the wearer to cause the colors to begin "flowing" on the <i>robe</i>, but each round that they scintillate and move, any opponent not making its saving throw versus magic (or magic resistance check, then save) will stand transfixed for 2-5 rounds, hypnotized, and even when this effect wears off, additional saves must again be made in order to successfully attack. Furthermore, every round of continuous scintillation of the <i>robe</i> makes the wearer 5% more difficult to hit with missile attacks or hand-held or body weaponry (hands, fists, claws, fangs, horns, etc.) until a maximum of 25% (-5) is attained - 5 continuous rounds of the dazzling play of hues. After the initial round of concealment, the wearer is able to cast spells or engage in all forms of activity which do not require movement of more than 1" from his or her starting position. In non-combat situations, the <i>robe</i> will simply hypnotize creatures failing their saving throws versus magic for a period of 2-5 <i>turns</i>.'
 ),
 MagicItem( name = 'Robe of Useful Items',
     category = MagicItemCategory.MISC,
     xp_value = [1500,1500],
-    gp_value = [15000,15000],
+    gold_value = [15000,15000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('Although this appears to be an unremarkable item of apparel, if the <i>robe of useful items</i> is worn, the magic-user will note that it has small cloth patches in various shapes sewn onto it. The wearer, and <i>only</i> the wearer of the robe, can see, recognize, and detach any 1 of these patches in 1 round. Detaching a patch causes it to become an actual item as indicated below. A <i>robe</i> will always have 2 each of the following patches:\n\n'
         'dagger\n'
@@ -3354,84 +3354,84 @@ MagicItem( name = 'Robe of Useful Items',
 MagicItem( name = 'Rope of Climbing',
     category = MagicItemCategory.MISC,
     xp_value = [1000,1000],
-    gp_value = [10000,10000],
+    gold_value = [10000,10000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'A 60\' long <i>rope of climbing</i> is no thicker than a slender wand, weighs no more than 3 pounds, but is strong enough to support 3,000 pounds. Upon command the <i>rope</i> will snake forward, upward, downward, or any other direction at 10\' per round and attach itself securely wherever desired. It will return or unfasten itself likewise. In any event, one end of the <i>rope</i> must be held by a character when it performs such actions. It can also be commanded to <i>knot</i> itself, and this will cause large knots to appear at 1\' intervals along the rope; knotting shortens the <i>rope</i> to 50\' length while so knotted. Any magical rope which is broken or severed will immediately lose its special properties.'
 ),
 MagicItem( name = 'Rope of Constriction',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [1000,1000],
+    gold_value = [1000,1000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This <i>rope</i> exactly resembles a <i>rope of climbing</i> or <i>entanglement</i>, but as soon as it is commanded to perform some action, it lashes itself about the neck of the character holding it, and from 1-4 others within 10\' of the victim (each entitled to a saving throw versus magic) and strangles and crushes the life from each and every such victim. Each round it delivers 2-12 hit points of damage, and it will continue to constrict until a <a href="/spells/dispel-magic-cleric-lvl-3"><i>dispel magic</i></a> is cast upon it. Note that any creature entwined by the <i>rope</i> cannot cast spells or otherwise free himself or herself by any means. This rope is AC -2 and takes 22 hit points to cut through; all hit points must be inflicted by the same creature (not the one entangled). Any magical rope which is broken or severed will immediately lose its special properties.'
 ),
 MagicItem( name = 'Rope of Entanglement',
     category = MagicItemCategory.MISC,
     xp_value = [1250,1250],
-    gp_value = [12000,12000],
+    gold_value = [12000,12000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'A <i>rope of entanglement</i> is exactly the same in appearance as any other magical rope. Upon command, the <i>rope</i> will last forward 20\', or upwards 10\' to entangle and tie fast up to 8 man-sized creatures. (Figure 1 <a href="/creatures/storm-giant">storm giant</a> or <a href="/creatures/fire-giant">fire giant</a> = 2 <a href="/creatures/frost-giant">frost</a> or <a href="/creatures/stone-giant">stone</a> or <a href="/creatures/hill-giant">hill giants</a> = 3 <a href="/creatures/ogre">ogres</a> = 4 <a href="/creatures/bugbear">bugbears</a> = 6 <a href="/creatures/gnoll">gnolls</a> = 8 men = 10 elves = 12 dwarves = 16 gnomes or <a href="/creatures/kobold">kobolds</a>.) It takes but a single segment to strike, and another to entwine; the command requires 1 segment also, while the whole takes 3 segments to perform. The rope cannot be broken by sheer strength, it must be hit by an edged weapon. The rope cannot be broken by sheer strength, it must be hit by an edged weapon. The <i>rope</i> is AC -2 and takes 22 hit points to cut through; all hit points must be inflicted by the same creature (not the one entangled). Damage under 22 hit points will repair itself in 6 turns. If a <i>rope of entanglement</i> is severed, it is destroyed. Any magical rope which is broken or severed will immediately lose its special properties.'
 ),
 MagicItem( name = 'Rug of Smothering',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [1500,1500],
+    gold_value = [1500,1500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This finely woven carpet resembles a <i>carpet of flying</i> and will give off magical radiations if detected for. The character seating himself or herself upon it and giving a command will be surprised, however, as the <i>rug of smothering</i> will tightly roll itself around that individual and suffocate him or her in 3-6 rounds. The <i>rug</i> cannot be physically prevented from so wrapping itself, and the <i>rug</i> can be prevented from smothering its victim only by the casting of any one of the following spells: <a href="/spells/alter-reality-illusionist-lvl-7"><i>alter reality</i></a>, <a href="/spells/animate-object-cleric-lvl-6"><i>animate object</i></a>, <a href="/spells/hold-plant-druid-lvl-4"><i>hold plant</i></a>, <a href="/spells/wish-magic-user-lvl-9"><i>wish</i></a>.'
 ),
 MagicItem( name = 'Rug of Welcome',
     category = MagicItemCategory.MISC,
     xp_value = [6500,6500],
-    gp_value = [45000,45000],
+    gold_value = [45000,45000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'A rug of this type appears exactly the same as a <i>carpet of flying</i>, and it performs the functions of one (6\' x 9\' size), but a <i>rug of welcome</i> has other powers in addition. Upon command it will function as a <i>rug of smothering</i>, entrapping any creature up to <a href="/creatures/ogre">ogre</a>-size which steps upon it. A <i>rug of welcome</i> will also elongate itself and stiffen to become as hard and strong as steel, the maximum length being 27\' long at 2\' width, to serve as a bridge, barricade, etc. In this latter form it is AC 0 and will take 100 hit points to destroy. Best of all, the possessor need only utter a word of command, and the <i>rug</i> will shrink to 1/12 size for easy storage and transportation.'
 ),
 MagicItem( name = 'Saw of Mighty Cutting',
     category = MagicItemCategory.MISC,
     xp_value = [1750,1750],
-    gp_value = [12500,12500],
+    gold_value = [12500,12500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This notched adamantite blade is 12\' long and over 1\' wide. It requires 18/00 or greater strength to operate alone, or 2 persons of 17 or greater strength to work in tandem. The blade will slice through a 2\' thick hardwood tree in 1 turn, a 4\' thick trunk in 3 turns, or a 1\' diameter tree in but 3 rounds. After 6 turns of cutting with the <i>saw</i>, the character or characters must rest for 6 turns before doing any further work.'
 ),
 MagicItem( name = 'Scarab of Death',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [2500,2500],
+    gold_value = [2500,2500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This small brooch or pin of magical nature appears to be one of the various amulets, brooches, or scarabs of beneficial sort. However, if it is held for more than 1 round or placed within a container (bag, pack, etc.) within 1\' of a warm living body for 1 turn, it will change into a horrible burrowing beetle-like creature. The thing will then tear through any leather or cloth, burrow into flesh, and reach the victim\'s heart in a single round, causing death. It then returns to its <i>scarab</i> form. (Hard wood, ceramic, bone, ivory, or metal will prevent the monster from coming to life, if the <i>scarab</i> is secured within a container of such substance.)'
 ),
 MagicItem( name = 'Scarab of Enraging Enemies',
     category = MagicItemCategory.MISC,
     xp_value = [1000,1000],
-    gp_value = [8000,8000],
+    gold_value = [8000,8000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'When one of these devices is displayed and a command uttered, all intelligent hostile creatures within a 4" radius must save versus magic or become <i>enraged</i>. Those making the saving throw may perform normally; <i>enraged</i> enemies will fly into a berserk fury and attack the nearest creature (even their own comrades) - +1 "to hit", +2 on damage, -3 on their own armor class. The rage will last for 7-12 rounds, and during this period, the <i>enraged</i> creatures will continually attack without reason or fear, moving on to attack other creatures nearest them if initial opponents are slain. A <i>scarab</i> of this type contains 19-24 charges.'
 ),
 MagicItem( name = 'Scarab of Insanity',
     category = MagicItemCategory.MISC,
     xp_value = [1500,1500],
-    gp_value = [11000,11000],
+    gold_value = [11000,11000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This scarab is absolutely indistinguishable from any other amulet, brooch, or scarab. When displayed and a command word is spoken, all other creatures within a 2" radius must save versus magic at -2 (and -10% from any magic resistance as well). Those failing the save are completely <i>insane</i> for 9-12 rounds, unable to cast spells or use reasoning of any sort (treat as a <a href="/spells/confusion-druid-lvl-7"><i>confusion</i></a> spell with no chance for acting in a non-confused manner). The <i>scarab</i> has 9-16 charges.'
 ),
 MagicItem( name = 'Scarab of Protection',
     category = MagicItemCategory.MISC,
     xp_value = [2500,2500],
-    gp_value = [25000,25000],
+    gold_value = [25000,25000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This device appears to be any one of the various magical amulets, stones, etc. It gives off a faint dweomer, of course, and if it is held for 1 round by any character an inscription will appear on its surface letting the holder know it is a protective device. The possessor gains +1 on all saving throws versus magic, and if no save is normally possible, he or she gains one of 20, adjusted by any other magical protections which normally give bonuses to saving throw dice rolls. Thus, this device allows a save versus magic at base 20 against <a href="/spells/magic-missile-magic-user-lvl-1"><i>magic missile</i></a> attacks, for example, and if the target also has +4 for magical armor and +1 for a <i>ring of protection</i>, any roll of 15 or better would indicate that the <i>missiles</i> did no damage. The <i>scarab</i> can additionally absorb up to 12 life energy level draining attacks (2 level drains count as 2 absorbings) or <i>death touches</i>/<i>death rays</i>/<a href="/spells/finger-of-death-druid-lvl-7"><i>fingers of death</i></a>. However, upon absorbing 12 such attacks the <i>scarab</i> turns to powder - totally destroyed. 1 in 20 of these <i>scarabs</i> are reversed cursed items, giving the possessor a -2 on his or her dice. However, 1 in 5 of these cursed items are actually +2 if the curse is removed by a cleric of 16 or higher level. In this latter case, the scarab will have absorption capability of 24 rather than 12.'
 ),
 MagicItem( name = 'Spade of Colossal Excavation',
     category = MagicItemCategory.MISC,
     xp_value = [1000,1000],
-    gp_value = [6500,6500],
+    gold_value = [6500,6500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This digging tool is 8\' long with a spade-like blade 2\' wide and 3\' long. Any fighter with 18 strength can use this magical shovel to dig great holes. 1 cubic yard of normal earth can be excavated in 1 round. Every 10 rounds, the user must rest for 5 rounds. Hard pan clay takes twice as long to dig, as does gravel. Loose soil takes only half as long.'
 ),
 MagicItem( name = 'Sphere of Annihilation',
     category = MagicItemCategory.MISC,
     xp_value = [3750,3750],
-    gp_value = [30000,30000],
+    gold_value = [30000,30000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('A <i>sphere of annihilation</i> is a globe of absolute blackness, a ball of nothingness 2\' in diameter. A <i>sphere</i> is actually a hole in the continuity of the multiverse, a void. Any matter which comes in contact with a <i>sphere</i> is instantly sucked into the void, gone, utterly destroyed, <a href="/spells/wish-magic-user-lvl-9"><i>wishes</i></a> and similar magicks notwithstanding! A <i>sphere of annihilation</i> is basically static, resting in some spot just as if it were a normal hole. It can be caused to move, however, by mental effort, the brain waves of the individual concentrating on changing its position bending spatial fabrics so as to cause the hole to slide in some direction. Control range is 40\' initially, 1"/level once control is established. Basic movement rate is 10\' per round, modified as shown below. Concentration control is based on intelligence and level of experience - the higher the level the greater the mental power and discipline. For every 1 point of intelligence above 12, the magic-user adds 1%; for every 1 point over 15, he or she adds another 3%, i.e. 1% for each point from 13 to 15, and additional 3% for each point from 16-18 - a maximum of 12% bonus at 18 intelligence. The bonus applies to this table:\n\n'
         '<table>'
@@ -3454,119 +3454,119 @@ MagicItem( name = 'Sphere of Annihilation',
 MagicItem( name = 'Stone of Controlling Earth Elementals',
     category = MagicItemCategory.MISC,
     xp_value = [1500,1500],
-    gp_value = [12500,12500],
+    gold_value = [12500,12500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'A stone of this nature is typically an oddly-shaped bit of extrusive rock, shaped and roughly polished. The possessor of such a stone needs but utter a single command word, and an <a href="/creatures/earth-elemental">earth elemental</a> of 12 hit dice size will come to the summoner if earth is available, an 8 hit dice elemental if rough, unhewn stone is the summoning medium. (An earth elemental cannot be summoned from worked stone, but one can be from mud, clay, or even sand, although one from sand is an 8 dice monster also. The area of summoning for an earth elemental must be at least 4\' square and have 4 cubic yards volume.) The elemental will appear in 1-4 rounds. For details of elementals and their control see <b>ADVANCED DUNGEONS & DRAGONS, MONSTER MANUAL</b>. One elemental per day can be summoned by means of the <i>stone</i>.'
 ),
 MagicItem( name = 'Stone of Good Luck (Luckstone)',
     category = MagicItemCategory.MISC,
     xp_value = [3000,3000],
-    gp_value = [25000,25000],
+    gold_value = [25000,25000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This magical stone is typically a bit of rough polished agate or similar mineral. Its possessor gains a +1 (+5% where applicable) on all dice rolls involving factors such as saving, slipping, dodging, etc. - whenever a die or dice are rolled to find whether the character has an adverse happening befall or not. This luck does <i>not</i> affect "to hit" and damage dice or spell failure dice. Additionally, the <i>luckstone</i> gives the possessor a +/- 1%-10% (at owner\'s option) on rolls for determination of magic items or division of treasure. The <i>most</i> favorable results will always be gained with a <i>stone of good luck</i>.'
 ),
 MagicItem( name = 'Stone of Weight (Loadstone)',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [1000,1000],
+    gold_value = [1000,1000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This magical stone appears to be any one of the other sorts, and testing will not reveal its nature. However, as soon as the possessor of a <i>stone of weight</i> is in a situation where he or she is required to move quickly in order to avoid an enemy - combat or pursuit - the item causes a 50% reduction in movement, and even attacks are reduced to 50% normal rate. Furthermore, the stone <i>cannot</i> be gotten rid of by any means - throwing it away or smashing it notwithstanding - and it will always turn up somewhere on the character\'s person. If a <a href="/spells/dispel-evil-cleric-lvl-5">dispel evil</i></a> is cast upon a <i>loadstone</i>, the item will disappear and no longer haunt the individual.'
 ),
 MagicItem( name = 'Talisman of Pure Good',
     category = MagicItemCategory.MISC,
     xp_value = [3500,3500],
-    gp_value = [27500,27500],
+    gold_value = [27500,27500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'If a high priest or priestess possesses one of these mighty <i>talismans</i>, he or she has the power to cause an evil cleric to be swallowed up forever by a flaming crack which will open at the feet of the victim and precipitate him or her to the center of the earth. The wielder of the <i>talisman</i> <b>must</b> be good, and if he or she is not exceptionally pure in thought and deed, the evil cleric will gain a saving throw versus magic. A <i>talisman of pure good</i> has 7 charges. It cannot be recharged. If a neutral cleric touches one of these magic stones, he or she will take 7-28 hit points of damage; and if an evil cleric touches one he or she will take 12-48 hit points of damage. Non-clerics will not be affected by the device.'
 ),
 MagicItem( name = 'Talisman of the Sphere',
     category = MagicItemCategory.MISC,
     xp_value = [100,100],
-    gp_value = [10000,10000],
+    gold_value = [10000,10000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This is a small adamantite loop and handle which will be useless in any but a magic-user\'s possession, and any other class touching a talisman of this sort will take 5-30 hit points of damage. When held by a magic-user concentrating on control of a <i>sphere of annihilation</i>, a <i>talisman of the sphere</i> doubles the intelligence bonus percentage for control, i.e. 2% per point of intelligence from 13-15, 6% per point of intelligence from 16-18. If control is established by the wielder of a <i>talisman</i>, he or she need check for continual control only every other round thereafter. If control is not established, the <i>sphere</i> will move towards the magic-user at maximum speed (16\'/round). Note that a <i>wand of negation</i> will have no effect upon a <i>sphere of annihilation</i>, but if the wand is directed at the <i>talisman</i> it will negate its power of control so long as the wand is so directed.'
 ),
 MagicItem( name = 'Talisman of Ultimate Evil',
     category = MagicItemCategory.MISC,
     xp_value = [3500,3500],
-    gp_value = [32500,32500],
+    gold_value = [32500,32500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This device exactly resembles a <i>talisman of pure good</i> and is exactly its opposite in all respects. It has 6 charges.'
 ),
 MagicItem( name = 'Talisman of Zagy',
     category = MagicItemCategory.MISC,
     xp_value = [1000,1000],
-    gp_value = [10000,10000],
+    gold_value = [10000,10000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'A <i>talisman</i> of this sort appears exactly the same as a <i>stone controlling earth elementals</i>. Its power is quite different, and these are dependent upon the charisma of the individual holding the <i>talisman</i>. Whenever a character touches a <i>Talisman of Zagy</i>, a reaction check is made as if the individual were meeting another creature. If a <i>hostile</i> reaction result is obtained, the device will act as a <i>stone of weight</i>, although discarding it or destroying it results only in 5-30 hit points of damage and the disappearance of the <i>talisman</i>. If a neutral reaction results, the <i>talisman</i> will remain with the character for 5-30 hours, or until a <a href="/spells/wish-magic-user-lvl-9"><i>wish</i></a> is made upon it, whichever first occurs, and it will then disappear. If a <i>friendly</i> reaction result is obtained, the character will find it impossible to be rid of the <i>talisman</i> for as many months as he or she has points of charisma. The device will grant 1 <a href="/spells/wish-magic-user-lvl-9"><i>wish</i></a> for every 6 points of the character\'s charisma; and it will also grow warm and throb whenever its possessor comes within 20\' of a mechanical or magical trap. (If the <i>talisman</i> is not held, its warning heat and pulses will be of no avail.) Regardless of which reaction result is obtained, when its time period expires the <i>talisman</i> will disappear, but a base 10,000 g.p. gem (diamond) will remain in its stead.'
 ),
 MagicItem( name = 'Tome of Clear Thought',
     category = MagicItemCategory.MISC,
     xp_value = [8000,8000],
-    gp_value = [48000,48000],
+    gold_value = [48000,48000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'A work of this nature is indistinguishable from any normal book (cf. <i>Manual of Bodily Health</i>). Any single character who reads a <i>tome of clear thought</i> will be able to practice mental excercises which will increase his or her intelligence by 1 point. Reading a work of this nature takes 48 hours time over 6 days, and immediately thereafter the book disappears. The reader must begin a program of concentration and mental disciplines within 1 week of reading the <i>tome</i>. After 1 full month of such exercise, intelligence goes up. If psionics are employed in the campaign and the character is previously a non-psionic, another check may be allowed. The knowledge gained from reading the work can never be recorded or articulated. Any further perusal of a <i>tome of clear thought</i> will be of no benefit to the character.'
 ),
 MagicItem( name = 'Tome of Leadership and Influence',
     category = MagicItemCategory.MISC,
     xp_value = [7500,7500],
-    gp_value = [40000,40000],
+    gold_value = [40000,40000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This leather and brass bound book is similar to a <i>tome of clear thought</i>; but upon completion of reading and practice of what was revealed therein, charisma is increased by 1 point.'
 ),
 MagicItem( name = 'Tome of Understanding',
     category = MagicItemCategory.MISC,
     xp_value = [8000,8000],
-    gp_value = [43500,43500],
+    gold_value = [43500,43500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'Identical to a <i>tome of clear thought</i>, this work increases wisdom by 1 point.'
 ),
 MagicItem( name = 'Trident of Fish Command',
     category = MagicItemCategory.MISC,
     xp_value = [500,500],
-    gp_value = [4000,4000],
+    gold_value = [4000,4000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This three-tined fork atop a stout rod of 6\' length appears to be a barbed military fork of some sort. However, its magical properties enable its wielder to cause all fish - including sharks and eels, but excluding mollusks, crustaceans, amphibians, reptiles, mammals and similar sorts of non-piscine marine creatures - within a 6" radius to save versus magic (this uses one charge of the trident). Those which fail this throw are completely under empathic command, they will not attack the possessor of the <i>trident</i> nor any creature within 10\' of him or her, and the wielder of the device can cause them to move in whatever direction is desired and convey messages of emotion, i.e. fear, hunger, anger, indifference, repletion, etc. Fish which make their saving throw are free of empathic control, but they will not approach closer than 10\' of the <i>trident</i>. Fish which school must be checked as a single entity. A <i>trident</i> of this type contains 17-20 charges. It is otherwise a +1 magic weapon.'
 ),
 MagicItem( name = 'Trident of Submission',
     category = MagicItemCategory.MISC,
     xp_value = [1250,1250],
-    gp_value = [12500,12500],
+    gold_value = [12500,12500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'A weapon of this nature appears unremarkable, exactly as any normal trident. The wielder of a <i>trident of submission</i> causes any opponent struck to save versus magic. If the opponent fails to save, it must check morale the next round <i>instead</i> of attacking; if morale is <i>good</i>, the opponent may act normally next round, but if it is <i>poor</i>, the opponent will cease fighting and surrender, overcome with a feeling of hopelessness. The duration of this hopelessness is 2-8 rounds. Thereafter the creature is normal once again. The <i>trident</i> has 17-20 charges. A <i>trident</i> of this type is a +1 magic weapon.'
 ),
 MagicItem( name = 'Trident of Warning',
     category = MagicItemCategory.MISC,
     xp_value = [1000,1000],
-    gp_value = [10000,10000],
+    gold_value = [10000,10000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'A weapon of this type enables its wielder to determine the location, depth, species, and number of hostile and/or hungry marine predators within 24". A <i>trident of warning</i> must be grasped and pointed in order for the person using it to gain such information, and it requires 1 round to so scan a 24" radius hemisphere. There are 19-24 charges in a <i>trident</i> of this type, each charge sufficient to last for 2 rounds of scanning. The weapon is otherwise a +2 magical arm.'
 ),
 MagicItem( name = 'Trident of Yearning',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [1000,1000],
+    gold_value = [1000,1000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'A <i>trident of yearning</i> looks exactly like any normal trident, and its dweomer is also indistinguishable from the magic aura of other enchanted weapons of this sort. Any character grasping this type of trident immediately conceives an overwhelming desire to immerse himself or herself in as great a depth of water as is possible. The unquenchable longing so generated causes the affected character to instantly proceed toward the largest/deepest body of water - in any event one that is sufficient to completely cover his or her person - and immerse himself or herself therein permanently. The character cannot loose his or her grip on the <i>trident</i>, and only a <a href="/spells/water-breathing-druid-lvl-3"><i>water breathing</i></a> spell (after submersion) placed upon him or her, or use of a <a href="/spells/wish-magic-user-lvl-9"><i>wish</i></a> or <a href="/spells/alter-reality-illusionist-lvl-7"><i>alter reality</i></a>, will enable the character to do so. The <i>trident</i> is otherwise a -2 cursed magical weapon. Note that this item does not confer the ability to breathe underwater.'
 ),
 MagicItem( name = 'Vacuous Grimoire',
     category = MagicItemCategory.MISC,
     xp_value = [0,0],
-    gp_value = [1000,1000],
+    gold_value = [1000,1000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'A book of this sort is totally impossible to tell from a normal one, although if a <a href="/spells/detect-magic-cleric-lvl-1"><i>detect magic</i></a> spell is cast, there will be a magical aura noted. Any character who opens the work and reads so much as a single glyph therein must make 2 saving throws versus magic. The first is to determine if 1 point of <i>intelligence</i> is lost or not, the second is to find if 2 points of <i>wisdom</i> are lost. Once opened and read, the <i>vacuous grimoire</i> remains, and it must be burned to be rid of it after first casting a <a href="/spells/remove-curse-cleric-lvl-3"><i>remove curse</i></a> spell. If the tome is placed with other books, its appearance will instantly alter to conform to one of the other works it is amongst.'
 ),
 MagicItem( name = 'Well of Many Worlds',
     category = MagicItemCategory.MISC,
     xp_value = [6000,6000],
-    gp_value = [12000,12000],
+    gold_value = [12000,12000],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = 'This strange inter-dimensional device is exactly the same in appearance as a <i>portable hole</i>. Anything placed within is immediately cast into another world - a parallel earth, another planet, or a different plane at your option or by random determination. If the <i>well</i> is moved, the random factor again comes into play. It can be picked up, folded, etc. just as a <i>portable hole</i>. Note that things from the world the <i>well</i> touches can come through the opening, just as easily as from the initiating place.'
 ),
 MagicItem( name = 'Wings of Flying',
     category = MagicItemCategory.MISC,
     xp_value = [750,750],
-    gp_value = [7500,7500],
+    gold_value = [7500,7500],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ('A pair of these magical wings appears to be nothing more than a plain cloak of old, black cloth. If the wearer speaks a command word, the cloak will turn into a pair of gigantic bat wings (20\' span) and empower the wearer to fly as follows:\n\n'
         '2 turns at 32" speed\n'
@@ -3581,8 +3581,10 @@ MagicItem( name = 'Wings of Flying',
 MagicItem( name = '',
     category = MagicItemCategory.MISC,
     xp_value = [,],
-    gp_value = [,],
+    gold_value = [,],
     source = SourceBook.DUNGEON_MASTERS_GUIDE,
     desc = ''
 )
 """
+
+all_items = potions + scrolls + rings + rods + staves + wands + misc_magic

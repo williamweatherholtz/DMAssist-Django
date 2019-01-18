@@ -1,0 +1,22 @@
+{% extends "home/base.html" %}
+
+{% block title_suffix %}
+ - Items
+{% endblock %}
+
+{% block content %}
+    <form action='' method="get">
+        <table>
+        {{filter.form}}
+        </table>
+        <input type="submit" />
+    </form>
+
+    <p>{{filter.qs|length}} items found.</p>
+
+    <ul>
+    {% for item in filter.qs %}
+        <li><a href="{% url 'items:detail' item.slug %}">{{item}}</a></li>
+    {% endfor %}
+    </ul>
+{% endblock %}

@@ -23,8 +23,8 @@
     </p>
     <p>Area of Effect: {{spell.aoe}}</p>
     <p>Saving Throw: {{spell.saving_throw}}</p>
-    <p> Description :{% autoescape off %} {{ spell.description | linebreaks}} {% endautoescape %} </p>
+    <p> Description:{% autoescape off %} {{ spell.description | linebreaks}} {% endautoescape %} </p>
     {% if spell.commentary %}
-        <p>{% autoescape off %} {{spell.commentary | linebreaks}} {% endautoescape %}</p>
+        <p>Dungeon Master Commentary: {% autoescape off %} {{spell.commentary | linebreaks}} {% endautoescape %}</p>
     {% endif %}
 {% endblock %}

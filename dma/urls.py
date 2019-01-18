@@ -26,6 +26,7 @@ urlpatterns = [
     url(r'^random_encounters/', include('random_encounters.urls')),
     url(r'^spells/', include('spells.urls')),
     url(r'^characters/', include('characters.urls')),
+    url(r'^items/', include('items.urls')),
     url('accounts/', include('django.contrib.auth.urls')),
     url(r'^admin/', admin.site.urls),
 ]

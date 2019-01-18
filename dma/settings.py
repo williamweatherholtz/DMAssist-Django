@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'random_encounters.apps.RandomEncountersConfig',
     'spells.apps.SpellsConfig',
     'characters.apps.CharactersConfig',
+    'items.apps.ItemsConfig',
 
     'django_filters',
     'twitter_bootstrap',
