@@ -3574,6 +3574,532 @@ MagicItem( name = 'Wings of Flying',
         '8 turns at 12" speed\n\n'
         'Combinations are possible at the ratio above. After the maximum number of possible turns flying, the wearer must rest for 1 hour - sitting, lying down, or sleeping. Shorter periods of flight do not require full rest, but only relative quiet such as slow walking for 1 hour. Any flying of less than 1 turn duration does not require any rest. Note that regardless of the length of time spent flying the <i>wings</i> can be used but once per day. They will support up to 500 pounds weight.'
     )
+),
+#Unearthed Misc Magic
+MagicItem( name = 'Amulet Versus Undead',
+    category = MagicItemCategory.MISC,
+    xp_value = [1000,1800],
+    gold_value = [5000,9000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = ('This prized charm is a specially blessed symbol which has within it the power to affect all undead creatures as if a cleric were using his or her power to turn these monsters. While it appears ordinary at other times, the amulet glows brightly when presented strongly (as if it were a holy symbol) in the presence of undead. The success of the attempt to turn is determined as for a cleric of a certain level; the strength of each <i>amulet</i> varies, and when one is discovered its type is ascertained by rolling on the following table:\n\n'
+        '<table>'
+        '<tr><th>Dice Score</th><th>Effective Cleric Level of Amulet</th></tr>'
+        '<tr><td>01-30</td><td>5th</td></tr>'
+        '<tr><td>31-55</td><td>6th</td></tr>'
+        '<tr><td>56-75</td><td>7th</td></tr>'
+        '<tr><td>76-90</td><td>8th</td></tr>'
+        '<tr><td>91-00</td><td>9th</td></tr>'
+        '</table>\n\n'
+        'The <i>amulet</i> must be worn at all times to have it as an effective tool. When it is not worn, it becomes inert, and will remain so for the first seven days after it is put on. Its value is a function of its strength: 200 x.p. value per effective cleric level, and 1,000 g.p. sale value per effective cleric level.'
+    )
+),
+MagicItem( name = 'Anything Item',
+    category = MagicItemCategory.MISC,
+    xp_value = [4000,4000],
+    gold_value = [40000,40000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'A magic item of this sort appears to be any one of the small, rather weak miscellaneous magic items which are more frequently found - typically one with a limited number of usages, although this is not always true. If the possessor commands, the item will suddenly alter itself to become any other miscellaneous magic item except an artifact or relic. This enables the possessor to command the item to become some form of <a href="/items/horn-of-valhalla"><i>Horn of Valhalla</i></a>, for instance. The limitations on the item are these: No form can ever be repeated. If the item commanded into being is normally destroyed in usage, the <i>anything item</i> will likewise be destroyed after that use. If the item duplicated has a short-term, single-usage effect (such as a horn or drums), then the <i>anything item</i> will return to its original form after one use of that power. If the item has a long-term effect (such as a <a href="/items/helm-of-underwater-action"><i>helm of underwater action</i></a>), the dweomer of the <i>anything item</i> will last for one day (24 hours). In any case, the item will disappear after three uses.'
+),
+MagicItem( name = 'Beads of Force',
+    category = MagicItemCategory.MISC,
+    xp_value = [200,1600],
+    gold_value = [1000,8000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'One of these small, black spheres might be mistaken for some common bead, a marble, or perhaps an unusually black but lusterless pearl. Each is about three-quarters of an inch diameter and quite heavy, weighing almost an ounce. One can be hurled up to 3" distance. Upon impact, the bead will send forth a burst of force which will inflict 5-20 (5d4) hit points of damage upon all creatures within a 10-foot radius of its center. Each victim is allowed a saving throw vs. spell. Those who save will be thrown out of the blast area, but those who fail to save will be encapsulated by a sphere of force after taking damage. The sphere will form around any and all such creatures in the 10-foot radius area, even those of large size, and will persist for 3-12 rounds. Victims will be unable to escape except by the same means used to bring down a <a href="/spells/wall-of-force-magic-user-lvl-5"><i>wall of force</i></a> spell. From 5-8 of these beads are usually found at one time.'
+),
+MagicItem( name = 'Boccob\'s Blessed Book',
+    category = MagicItemCategory.MISC,
+    xp_value = [4500,4500],
+    gold_value = [35000,35000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'This well-made tome is always of small size. One will typically be no more than 12 inches tall, 6 inches wide, and 1 inch thick, and some are a mere 6 inches in height. All such books are very durable, waterproof, iron- and silver-bound and locked, and gain a +3 bonus on their saving throws (as "leather or book"). The pages of such a book will accept magic spells scribed upon them, and any book can contain up to 45 levels of spells. The book is thus highly prized by magic-users of all sorts as a travelling spell book. It is totally unlikely that such a libram will ever be discovered (randomly) with spells written therein, because enscribed or partially enscribed works of this nature are kept carefully by their owners.'
+),
+MagicItem( name = 'Boots of the North',
+    category = MagicItemCategory.MISC,
+    xp_value = [1500,1500],
+    gold_value = [7500,7500],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'This highly dweomered set of footgear bestows many powers upon the wearer. He or she is able to travel across snow at normal rate of movement, leaving no tracks. The boots also allow the wearer to travel at half normal movement rate across the most slippery ice (horizontal surfaces only, not vertical or sharply slanted ones) without falling or slipping. And, the footgear bestows warmth upon the wearer, so that even in a temperature as low as -50°F, he or she is warm and comfortable with only scant clothing - a loin cloth and cloak, for instance. Being fully dressed in cold-weather clothing enables the wearer to withstand temperatures of as low as -100°F.'
+),
+MagicItem( name = 'Boots of Varied Tracks',
+    category = MagicItemCategory.MISC,
+    xp_value = [1500,1500],
+    gold_value = [7500,7500],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = ('The wearer of these ordinary-looking boots is able, on command, to alter the tracks he or she makes while wearing them. <i>Boots of varied tracks</i> have the basic power of making the footprints of the wearer as small as those of a <a href="/creatures/halfling">halfling</a> or as large as those of an <a href="/creatures/ogre">ogre</a>, appearing to be bare or shod as desired. In addition, each pair has four of the following track-making capabilities:\n\n'
+        '<table>'
+        '<tr><th>Die Roll</th><th>Track Print Left</th></tr>'
+        '<tr><td>1</td><td><a href="/creatures/basilisk">basilisk</a></td></tr>'
+        '<tr><td>2</td><td><a href="/creatures/bear">bear</a></td></tr>'
+        '<tr><td>3</td><td><a href="/creatures/wild-boar">boar</a></td></tr>'
+        '<tr><td>4</td><td><a href="/creatures/bull">bull</a></td></tr>'
+        '<tr><td>5</td><td><a href="/creatures/wild-camel">camel</a></td></tr>'
+        '<tr><td>6</td><td><a href="/creatures/wild-dog">dog</a></td></tr>'
+        '<tr><td>7</td><td><a href="/creatures/hill-giant">giant, hill</a></td></tr>'
+        '<tr><td>8</td><td><a href="/creatures/goat">goat</a></td></tr>'
+        '<tr><td>9</td><td><a href="/creatures/horse">horse</a></td></tr>'
+        '<tr><td>10</td><td><a href="/creatures/lion">lion</a> (or <a href="/creatures/giant-lynx">giant lynx</a>)</td></tr>'
+        '<tr><td>11</td><td><a href="/creatures/mule">mule</a></td></tr>'
+        '<tr><td>12</td><td>rabbit</td></tr>'
+        '<tr><td>13</td><td><a href="/creatures/stag">stag</a></td></tr>'
+        '<tr><td>14</td><td><a href="/creatures/tiger">tiger</a> (or <a href="/creatures/leopard">leopard</a>)</td></tr>'
+        '<tr><td>15</td><td><a href="/creatures/wolf">wolf</a></td></tr>'
+        '<tr><td>16</td><td><a href="/creatures/wyvern">wyvern</a></td></tr>'
+        '</table>'
+    )
+),
+MagicItem( name = 'Winged Boots',
+    category = MagicItemCategory.MISC,
+    xp_value = [2000,2000],
+    gold_value = [20000,20000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = ('These boots always appear to be nothing more than ordinary footgear. If magic is detected for, they radiate a faint dweomer of both the <i>enchantment</i> and <i>alteration</i> sorts. When they are on the possessor\'s feet and he or she concentrates on the desire to fly, the boots sprout wings at the heel and empower the wearer to fly, without having to maintain concentration. The wearer may use the boots for up to two hours per day, taken either all at once or in one or more shorter flights. If the wearer tries to use them for a longer duration, the power of the boots will rapidly fade (but not abruptly disappear), and the wearer will slowly descend to the ground. For every 12 hours of uninterrupted non-use, the boots will regain one hour of flying power, but will never be capable of more than the two-hour maximum duration. Each set of these boots is of a certain type, as follows:\n\n'
+        '<table>'
+        '<tr><th>Die Roll</th><th>Flying Speed</th><th>Maneuverability Class</th></tr>'
+        '<tr><td>1</td><td>15"</td><td>A</td></tr>'
+        '<tr><td>2</td><td>18"</td><td>B</td></tr>'
+        '<tr><td>3</td><td>21"</td><td>C</td></tr>'
+        '<tr><td>4</td><td>24"</td><td>D</td></tr>'
+        '</table>'
+    )
+),
+MagicItem( name = 'Bracers of Archery',
+    category = MagicItemCategory.MISC,
+    xp_value = [1000,1000],
+    gold_value = [10000,10000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'These magical wrist bands are indistinguishable from normal, non-magical protective wear. When worn by a character type or creature able to employ a bow, they enable the wearer to excel at archery. The bracers empower such a wearer to use any bow (not including crossbows) as if he or she were proficient in its usage, if such is not already the case. If the wearer of the bracers has proficiency with any type of bow, then he or she gains a +2 bonus for hit determination and a +1 bonus on damage inflicted whenever that type of bow is used. These bonuses are cumulative with any others, including those already bestowed by a magic bow or magic arrows, except for a bonus due to weapon specialization.'
+),
+MagicItem( name = 'Bracers of Brachiation',
+    category = MagicItemCategory.MISC,
+    xp_value = [1000,1000],
+    gold_value = [10000,10000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'These wrist bands appear to be of the ordinary sort, but they have the power to enable the wearer to move by brachiation - swinging from one tree limb, vine, etc., to another to get from place to place. The power can only be employed in locales where these sorts of hand-holds can be found. Movement is at a rate of 3", 6", or 9" - the more jungle-like the conditions, the greater the movement rate. The wearer is also able to climb trees, vines, poles, ropes, etc., at a rate of 6", and can swing on a rope, vine, or other dangling, flexible object as if he or she were an ape or other sort of simian. Also, if the wearer desires, he or she can leap and jump as if wearing <a href="/items/boots-of-striding-and-springing"><i>boots of striding and springing</i></a>, but the jump must culminate in the grasping of a rope or vine, movement through the upper portion of trees, the climbing of a tree or pole or some other activity associated with brachiation.'
+),
+MagicItem( name = 'Chime of Interruption',
+    category = MagicItemCategory.MISC,
+    xp_value = [2000,2000],
+    gold_value = [20000,20000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'This magical instrument can be struck only once every turn. Its resonant tone lasts for three full rounds. While the chime is resonating, no spell requiring a verbal component can be cast within a 30-foot radius of it unless the caster is able to make a saving throw versus breath weapon. After its effects fade, the chime must be rested for at least 7 rounds. If it is struck again before this time elapses, no sound will issue forth, and a full turn must elapse from that point in time before it can again be sounded.'
+),
+MagicItem( name = 'Cloak of Arachnidia',
+    category = MagicItemCategory.MISC,
+    xp_value = [3000,3000],
+    gold_value = [25000,25000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'This black garment is of great magical power. When magic is detected for, the cloak will radiate a strong aura of the <i>alteration</i> sort. When wearing it, an individual will notice that he or she is able to climb just as if a <a href="/spells/spider-climb-magic-user-lvl-1"><i>spider climb</i></a> spell had been placed upon him or her. In addition, the wearer is immune to entrapment by webs of any sort, and can actually move in them at a rate equal to that of the spider which created the web, or at a base movement rate of 6" in other cases. Once per day the wearer of this cloak can cast a double-sized <a href="/spells/web-magic-user-lvl-2"><i>web</i></a>, as per the 2nd-level magic-user spell. Best of all, the wearer is less subject to the poison of arachnids, so that he or she gains a +2 on all saving throws versus such poison.'
+),
+MagicItem( name = 'Cloak of the Bat',
+    category = MagicItemCategory.MISC,
+    xp_value = [1500,1500],
+    gold_value = [15000,15000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'Fashioned of dark brown or black cloth, a cloak of this type is not readily noticeable as unusual. It will radiate both <i>enchantment</i> and <i>alteration</i> in equal proportions. The cloak bestows upon its wearer a 90% probability of being <i>invisible</i> when the wearer is stationary within a shadowy or dark place. The wearer is able to hang upside down from the ceiling just as does a bat and maintain this same chance of <i>invisibility</i>. By holding the edges of the garment, the wearer is able to fly at 15" speed (MC: B). If so desired, the wearer can actually transform into an ordinary <a href="/creatures/bat">bat</a> - all possessions worn or carried will be likewise part of the transformation - and fly accordingly. Flying, either with the cloak or as an ordinary bat, can only be accomplished in darknes (either under the night sky or in a lightless or near-lightless environment underground). Either of the flying powers is usable for up to one hour at a time, but after a flight (either type) of any duration, the cloak will not bestow any flying power for a like period of time. The cloak also provides protection, just as a <a href="/items/robe-of-protection"><i>robe of protection</i></a>, at +2, and this benefit extends to the wearer even when he or she is in bat form.'
+),
+MagicItem( name = 'Cyclocone',
+    category = MagicItemCategory.MISC,
+    xp_value = [300,300],
+    gold_value = [15000,15000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'Appearing as an ordinary pointed hat, this magical device will radiate a dim dweomer of the <i>evocation</i> sort. Any magic-user possessing the item can cause its power to function by pointing the small end of the cone toward the ground and then tossing the <i>cyclocone</i> forward with a spinning motion imparted by opposite movement of the palms of the hands. When thus set in motion, the cone begins to rotate at blurring speed and grows into a miniature but exceptionally powerful whirlwind. This whirlwind is 5 feet wide at its base, 15 feet wide at its top, and as much as 45 feet high (depending upon ceiling height or some other such limiting factor). It appears within 1-4 segments after the <i>cyclocone</i> is cast forth. It sweeps ahead in a straight line at a movement rate of 18", proceeding for 1 full round or until a solid, sturdy object destroys it; a stone wall, very thick woods, etc., will cause it to break up. (Note that a living thing which serves to break up the whirlwind in this fashion will take damage as described below.) Any creatures of under 2 +1 hit dice that are caught within the whirlwind when it forms or are touched by it along its movement path are instantly killed by the force and carried along by the whirlwind. Other creatures caught within the whirlwind or touched by it will take 4-16 points of damage, and those within 5 feet of its outer edge when it forms will take 2-8 points of damage. The <i>cyclocone</i> is not reusable; the item is destroyed when the whirlwind is dissipated.'
+),
+MagicItem( name = 'Dart of the Hornets\' Nest',
+    category = MagicItemCategory.MISC,
+    xp_value = [750,750],
+    gold_value = [7500,7500],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = ('While appearing to be nothing more than a magic dart, this missile weapon is of far greater power. Once it is hurled, the dart multiplies in the air, even as it speeds toward its target, all the while making an angry buzzing noise similar to the sound of a swarm of hornets. When such a dart is hurled, percentile dice are rolled to determine the bonus "to hit" and the appropriate number of darts contained in this particular item. Note that the bonus applies only to hit probability - not to damage, which of the standard amount (1-3 vs. S or M, 1-2 vs. L) for a dart of normal sort.\n\n'
+        '<table>'
+        '<tr><th>Dice roll</th><th>Bonus To Hit</th><th>No. of Darts</th></tr>'
+        '<tr><td>01-40</td><td>+1</td><td>5-20 (5d4)</td></tr>'
+        '<tr><td>41-70</td><td>+2</td><td>4-16 (4d4)</td></tr>'
+        '<tr><td>71-90</td><td>+3</td><td>3-12 (3d4)</td></tr>'
+        '<tr><td>91-00</td><td>+4</td><td>2-8 (2d4)</td></tr>'
+        '</table>'
+    )
+),
+MagicItem( name = 'Deck of Illusions',
+    category = MagicItemCategory.MISC,
+    xp_value = [1500,1500],
+    gold_value = [15000,15000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = ('This set of parchment cards is usually found in ivory, leather, or wood box. A full deck consists of 34 of these plaques. When one is drawn at random and cast out, an <i>illusion</i> with audial and visual components is formed. It lasts until dispelled. The illusory creature will not go more than 30 feet away from where the card lands when it is thrown, but will otherwise move and act as if it were real. When the illusion is dispelled, the card becomes blank and cannot be used again. If the card is picked up from where it lies, the illusion is automatically and instantly dispelled. The cards in a deck and the illusions they bring forth are as follows:\n\n'
+        'Jokers (2): Illusion of the deck\'s owner\n\n'
+        '<table>'
+        '<tr><th>Hearts</th><th>Diamonds</th><th>Clubs</th><th>Spades</th></tr>'
+        '<tr><td>A: <a href="/creatures/red-dragon">Red dragon</a></td><td>A: <a href="/creatures/beholder">Beholder</a></td><td>A: <a href="/creatures/lich">Lich</a></td><td>A: <a href="/creatures/iron-golem">Iron golem</a></td></tr>'
+        '<tr><td>K: Fighter and 4 guards</td><td>K: M-U and 1 apprentice</td><td>K: Cleric and 2 underpriests</td><td>K: Thief and 3 cohorts</td></tr>'
+        '<tr><td>Q: <a href="/creatures/succubus">Succubus</a></td><td>Q: <a href="/creatures/night-hag">Night hag</a></td><td>Q: <a href="/creatures/medusa">Medusa</a></td><td>Q: <a href="/creatures/erinyes">Erinyes</a></td></tr>'
+        '<tr><td>J: Druid</td><td>J: Assassin</td><td>J: Monk</td><td>J: Bard</td></tr>'
+        '<tr><td>10: <a href="/creatures/cloud-giant">Cloud giant</a></td><td>10: <a href="/creatures/fire-giant">Fire giant</a></td><td>10: <a href="/creatures/frost-giant">Frost giant</a></td><td>10: <a href="/creatures/hill-giant">Hill giant</a></td></tr>'
+        '<tr><td>9: <a href="/creatures/ettin">Ettin</a></td><td>9: <a href="/creatures/ogre-mage">Ogre mage</a></td><td>9: <a href="/creatures/troll">Troll</a></td><td>9: <a href="/creatures/ogre">Ogre</a></td></tr>'
+        '<tr><td>8: <a href="/creatures/bugbear">Bugbear</a></td><td>8: <a href="/creatures/gnoll">Gnoll</a></td><td>8: <a href="/creatures/hobgoblin">Hobgoblin</a></td><td>8: <a href="/creatures/orc">Orc</a></td></tr>'
+        '<tr><td>2: <a href="/creatures/goblin">Goblin</a></td><td>2: <a href="/creatures/kobold">Kobold</a></td><td>2: <a href="/creatures/goblin">Goblin</a></td><td>2: <a href="/creatures/kobold">Kobold</a></td></tr>'
+        '</table>\n\n'
+        'The cards in a particular deck may differ from these, and a deck may be discovered with some of its plaques missing. The illusions perform normal routines and respond to attacks; i.e., DMs are to play them as if they were real creatures.'
+    )
+),
+MagicItem( name = 'Dicerion of Light and Darkness',
+    category = MagicItemCategory.MISC,
+    xp_value = [2500,2500],
+    gold_value = [25000,25000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = ('This clerical candlestick is a specially alloyed metal holder with two branches. One is of silver and mithral, the other arm of iron and adamantite - as dark and dead-looking as the first branch is bright and glittering. The two branches intertwine to form a twisting stem of intermittent bright and dull bands. The base is likewise formed of alternating projections of the silvery and ebon metals spreading to form eight legs. The whole object is about 1 foot tall and just over half as broad, with a weight of between 30 and 40 gold pieces. Although the <i>dicerion of light and darkness</i> gives off a faint dweomer of its own, it must have specially manufactured candles to function magically. When a pair of candles made from purest wax with finely powdered obsidian and crystal layered within, and then both <a href="/spells/bless-cleric-lvl-1"><i>blessed</i></a> and <i>consecrated</i> (see 1st-level cleric spell <a href="/spells/ceremony-cleric-lvl-1"><i>ceremony</i></a>), are put within the sockets of the dicerion\'s arms, the whole radiates a powerful magical aura. When both special candles are alight, the cleric touching or holding the device can see into any form of darkness or the brightest of lights as if the illumination were normal daylight. Furthermore, upon command of the cleric, the candles will emit a strange, metallic illumination which dispels all shadows (of the natural sort, not the undead creature) within a 30-foot radius. However, when the latter power is employed, the cleric\'s vision is then not specially endowed with respect to seeing in darkness or light. A special candle will burn for 5-8 turns in a gentle draft such as that created by walking while holding the dicerion. A strong draft will reduce this burning time by 1-2 turns. If the candle remains still and unaffected by breezes, it will last for 9-16 turns.\n\n'
+        'If only the candle held in the black arm of the dicerion is lighted, then the cleric will effectively be englobed by a sphere of <a href="/spells/darkness-15-radius-magic-user-lvl-2"><i>darkness</i></a> of 15-foot radius. This lack of illumination will not hamper the cleric\'s vision or movement, but will affect any other creatures within the 15-foot radius. If a bright light strikes the cleric\'s eyes while so conditioned, he or she will be blinded for 1-4 rounds. Conversely, when only the candle in the bright branch is lighted, a sphere of brilliant <i>light</i> will surround the cleric, who will not have his or her vision impaired as long as the dicerion is touched or held, but whose radiation will blind creatures of darkness (evil) for 2-8 rounds, those of light (good) being unable to look at the area without being blinded for 1-4 rounds. If magical <i>darkness</i> envelops the cleric while the dicerion is functioning in this manner, he or she will be unable to see for 1-4 rounds. In either case, even though only one candle is burning, both branches of the dicerion must actually contain tapers.'
+    )
+),
+MagicItem( name = 'Dust of Dryness',
+    category = MagicItemCategory.MISC,
+    xp_value = [1000,1000],
+    gold_value = [8000,8000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'This special dust has many uses. If a pinch is cast into a goodly volume of water, 1 cubic yard of liquid is instantly transformed to nothingness, and the dust pinch becomes a marble-sized pellet floating, or resting, where it was cast. Whenever this pellet is hurled down, it breaks and releases the same volume of water. When the dust is sprinkled over an area (such as with a wave of the arm), it will negate a <a href="/spells/precipitation-cleric-lvl-1"><i>precipitation</i></a> or <a href="/spells/cloudburst-cleric-lvl-3"><i>cloudburst</i></a> spell, or else dry up as much as 1 cubic rod of water. The dust will not affect liquids which are not some form of water (fresh, salt, brackish, alkaline, etc.). If the dust is employed against a <a href="/creatures/water-elemental">water elemental</a> or similar creature, the creature must save versus spell or be destroyed. A successful save still inflicts 6-30 points of damage upon the water-creature. A pouch of this dust will contain from 11-20 pinches. The contents of the pouch can be sprinkled (to dry up moisture) so long as at least half of the original amount (in pinches) remains. If several pinches have been used so that what is left is less than half of what was found, then sprinkling the remainder will have no effect.'
+),
+MagicItem( name = 'Dust of Illusion',
+    category = MagicItemCategory.MISC,
+    xp_value = [10,200],
+    gold_value = [100,2000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'This unremarkable powder rather resembles chalk dust or powdered graphite - unless it is stared at. It then becomes evident that it is something entirely different, for the dust changes color and form under scrutiny. A pinch of <i>dust of illusion</i> allows the creature dusted to appear as any other creature of similar shape, with a size variance of 50% (plus or minus) from the actual size of the affected creature. (An unwilling recipient is allowed a saving throw versus spell to escape the effect.) Thus, a halfling could appear as a human of small stature, a human as an ogre, a pegasus as a mule, etc. The individual who sprinkles the pinch of magical dust must envision the illusion desired as the powder is shaken over the subject creature. The illusionary power lasts for 7-12 hours unless otherwise dispelled. A typical pouch of this dust will contain 11-20 pinches.'
+),
+MagicItem( name = 'Dust of Tracelessness',
+    category = MagicItemCategory.MISC,
+    xp_value = [500,500],
+    gold_value = [200,4800],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'This normal-seeming dust is actually a highly magical powder which can be used to conceal the passage of its possessor and his or her compatriots. Tossing a pinch of this dust into the air will cause a chamber of up to 1,000 square feet in an area to become as dusty, dirty, and cobweb-laden as if it had been abandoned and disused for a decade. A pinch of dust sprinkled along a trail will cause evidence of the passage of as many as a dozen men and horses to be obliterated for a mile back into the distance. No magical radiation will occur from the use of this dust. The substance is typically found in a finely sewn pouch in which 13-24 pinches will be contained.'
+),
+MagicItem( name = 'Egg of Desire',
+    category = MagicItemCategory.MISC,
+    xp_value = [500,900],
+    gold_value = [5000,10000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = ('There are at least five different sorts of these items, each more strange and potent than the last. An <i>egg of desire</i> is a smallish ovoid which when placed upon its large end and touched in a certain way will commence to rock back and forth rhythmically, issuing a soft, chiming sound in the process. Once it is so activated, any creature that views it must save versus spell or be affected by the <i>egg\'s</i> dweomer. The effect of each sort of <i>egg</i> is:\n\n'
+        '<i>Black</i>: <a href="/spells/hold-person-cleric-lvl-2">><i>Holds</i></a> viewers permanently, unless circumstances permit a breaking of the spell or they die.\n'
+        '<i>Bone</i>: Causes viewers to place their most prized magic item before the <i>egg</i>, and then leave and <a href="/spells/forget-magic-user-lvl-2"><i>forget</i></a> what occured.\n'
+        '<i>Crystal</i>: Causes viewers to place all the gems they possess before the <i>egg</i>, and then leave and <i>forget</i> what occurred.\n'
+        '<i>Golden</i>: Causes viewers to place all precious metals they possess before the <i>egg</i>, and then leave and <i>forget</i> what occurred.\n'
+        '<i>Scarlet</i>: <i>Holds</i> viewers for one minute, then causes them to become <i>enraged</i> and attack the first living thing they see after the one-minute time limit has expired.\n\n'
+        'The viewing range of an <i>egg</i> is 20 feet. The effects of one can be removed only by a <a href="/spells/dispel-magic-cleric-lvl-3"><i>dispel magic</i></a> or <a href="/spells/remove-curse-cleric-lvl-3"><i>remove curse</i></a> spell. Even unintelligent creatures can be affected by an <i>egg</i>, since each such item sends signals directly to the viewer\'s brain, but the <i>Bone</i>, <i>Crystal</i>, and <i>Golden Eggs of Desire</i> affect creatures of under 7 intelligence differently. These creatures will grab any magic item, gems, etc. dropped by another victim (if such an item is present), covet what is taken, and regard it as their most secret and valued treasure. Experience-point values and gold piece sale values for the various types are as follows: <i>Black</i>, 500 and 5,000; <i>Bone, 900 and 10,000; <i>Crystal</i>, 800 and 9,000; <i>Golden</i>, 600 and 4,000; and <i>Scarlet</i>, 700 and 3,500.'
+    )
+),
+MagicItem( name = 'Egg of Reason',
+    category = MagicItemCategory.MISC,
+    xp_value = [250,250],
+    gold_value = [2500,2500],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'A specially enchanted egg of this sort is always coated with <a href="/items/oil-of-timelessness"><i>oil of timelessness</i></a>. Although very old and quite vile-smelling, each such egg has the possibility of increasing the eater\'s intelligence or wisdom. However, an individual who consumes an <i>egg of reason</i> must first make a saving throw versus poison - with no bonuses whatsoever - or else the matter consumed will slay him or her. The effect of this poison cannot be <a href="/spells/neutralize-poison-cleric-lvl-4"><i>neutralized</i></a>. If eating the egg does not prove fatal, there is a possibility that the consumer will gain one point of either intelligence (60% chance) or wisdom (40%). The chance of successful enhancement is equal to the eater\'s current ability score (whichever applies), doubled and subtracted from 100. Example: An egg which improves intelligence is eaten by a character with an intelligence score of 17. The chance of successful enhancement is equal to the eater\'s current ability score (whichever applies), doubled and subtracted from 100. Example: An egg which improves intelligence is eaten by a character with an intelligence score of 17. The chance of successful enhancement is 100 - (17 * 2) = 68%. Ability scores of 18 or higher are effectively enhanced by only 1/10 point at a time, so that a character would have to successfully consume 10 <i>eggs of reason</i> (if, somehow, that many were available) in order to raise an ability score from 18 to 19. Racial limitations apply when determining how much an ability score can be enhanced. If the <i>oil of timelessness</i> is removed from an <i>egg of reason</i> before it is consumed, the egg will still have a chance of poisoning the eater but will have lost its ability-enhancing property.'
+),
+MagicItem( name = 'Egg of Shattering',
+    category = MagicItemCategory.MISC,
+    xp_value = [0,0],
+    gold_value = [500,500],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'This magical egg-shaped object is most undesirable, for when it is handled normally or touched by a detection spell, it shatters with a loud noise, sending sharp pieces of its case everywhere within a 1" radius. Each creature in that area will suffer attack by 1-4 fragments of the egg. Hit probability is determined using actual armor class only, with no dexterity bonuses applicable. Each fragment that hits will inflict 2-7 points of damage. <i>Note</i>: Fragile objects within 1 foot of a shattering egg will be broken automatically from the force of shattering, while those within 2 feet must save versus <i>crushing blow</i>, or likewise suffer breakage.'
+),
+MagicItem( name = 'Gem of Insight',
+    category = MagicItemCategory.MISC,
+    xp_value = [3000,3000],
+    gold_value = [3000,3000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'This jewel appears to be nothing more than a well-cut stone of not less than 5,000 gp value. If magic is detected for, the gem will radiate a faint aura of the <i>enchantment</i> sort. If any character possesses the item, he or she will begin to feel its power after keeping the gem on his or her person for one week. At the end of two weeks, the individual will discover that he or she is able to understand things more easily, have better insight, memory, recall, etc. In fact, possession of the gem on a continuing basis (3 or more months) raises the intelligence and wisdom of the character by 1 point each. If for any reason the gem is not kept beyond the 3 month period or longer, the additional intelligence remains, but the 1 point of additional wisdom is lost. Any one such gem will function but once every 50 years. If a character possesses a second gem after benefitting from one already, the second item will not increase either wisdom or intelligence, even if wisdom was not permanently affected by the first gem.'
+),
+MagicItem( name = 'Girdle of Dwarvenkind',
+    category = MagicItemCategory.MISC,
+    xp_value = [3500,3500],
+    gold_value = [20000,20000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'A great belt of this nature actually lowers the wearer\'s charisma score by 1, but only with respect to non-dwarves and their ilk. The girdle causes the wearer to gain 1 point of charisma with respect to halflings of the stout sort and with respect to all gnomes as well. Dwarves regard the wearer as if he or she had charisma 2 points higher than before. The dweomer of the girdle also enables the wearer to understand, speak, and read dwarvish language. He or she is also empowered to otherwise gain the racial benefits of dwarvenkind, i.e. +1 constitution, saving throw bonuses based on total constitution, 6" infravision, and detection/determination of approximate depth underground as shown in the <b>PLAYERS HANDBOOK</b>. All apply only as long as the individual actually wears the girdle. Benefits such as additional languages and armor class against giant-type opponents never apply.'
+),
+MagicItem( name = 'Girdle of Many Pouches',
+    category = MagicItemCategory.MISC,
+    xp_value = [1000,1000],
+    gold_value = [10000,10000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'This broad wasit-belt seems to be nothing more than a well-made article of dress. However, if magic is detected for, the item will radiate a strong <i>enchantment</i> dweomer, along with a fainter aura of <i>alteration</i>. Examination will reveal that the girdle has eight small pouches on its inner front area. In fact, there are a total of 64 magical pouches in the girdle, seven others "behind" each of the eight apparent ones. Each of these pouches is similar to a miniature <a href="/items/bag-of-holding"><i>bag of holding</i></a>, able to contain up to one cubic foot of material weighing as much as 10 pounds. The girdle responds to the thoughts of its wearer by either providing a full pouch (to extract something from) or an empty one (to put something in) as desired. Naturally, this item is greatly prized by spell casters, for it will hold components for many spells and make them readily available.'
+),
+MagicItem( name = 'Gloves of Missile Snaring',
+    category = MagicItemCategory.MISC,
+    xp_value = [1500,1500],
+    gold_value = [10000,10000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'These gloves radiate a slight <i>enchantment</i> and <i>alteration</i> dweomer if magic is detected for. Once snugly worn, they seem to meld with the hands, becoming almost invisible (undetectable unless within 5 feet of the wearer). Either or both hands so clad, if not already holding something, can be used to actually pick many sorts of missiles out of the air, thus preventing possible harm, and possibly enabling the wearer to actually return the missile to its sender as an attack. All forms of small, hand-hurled or weapon-propelled missiles (arrows, bolts, darts, bullets, javelins, axes, hammers, spears, and the like) can be caught. If the weapon magically returns to the attacker, then catching it simply prevents damage, and returning the weapon does not result in an attack.'
+),
+MagicItem( name = 'Gloves of Thievery',
+    category = MagicItemCategory.MISC,
+    xp_value = [1000,1000],
+    gold_value = [5000,5000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'This normal-seeming handwear radiates a faint aura of <i>enchantment</i> and <i>alteration</i>. When placed snugly upon the hands, these gloves cannot be seen, except by means of magical sight or detection. Wearing them allows the possessor to <i>open locks</i> as if a 7th-level thief and <i>pick pockets</i> as if a 5th-level thief. If actually worn by a thief, the gloves enable him or her to operate thus, or gain 5% in both categories if already equal to or above the stated levels due to advancement.'
+),
+MagicItem( name = 'Hat of Difference',
+    category = MagicItemCategory.MISC,
+    xp_value = [1000,1000],
+    gold_value = [8000,8000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'When this dweomered chapeau is donned, the wearer is able to assume the role of a character of any profession different from that he or she actually follows. This magical headgear only empowers assumption of 1st-level ability, but as long as it is worn, the possessor is able to act as a member of the named profession. Any experience thus gained is in the assumed role only, but it is cumulative, so if in several wearings the individual actually goes to 2nd level, then he or she will retain that level whenever adorned with the hat and desiring to assume the different profession. Such progress may continue indefinitely, but if the hat is discarded, lost or stolen, or not within a one-mile radius of its owner for any 24-hour period, then all experience in the different profession is likewise lost. The hit points of the character are always those actually possessed, just as all ability scores are those of the actual character.'
+),
+MagicItem( name = 'Hat of Disguise',
+    category = MagicItemCategory.MISC,
+    xp_value = [1000,1000],
+    gold_value = [7500,7500],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = ('This normal-appearing chapeau contains a powerful enchantment which allows its wearer to alter his or her appearance as follows:\n\n'
+        'Height: +/- 25% of actual height\n'
+        'Weight: +/- 50% of actual weight\n'
+        'Sex: Male or female\n'
+        'Facial features: Highly mutable\n'
+        'Hair: Any color\n'
+        'Eyes: Any color\n'
+        'Complexion: Any color\n\n'
+        'Thus, the wearer could appear as a comley woman, a half-orc, or possibly even a gnome. If the hat is removed, the dweomer of the disguise is instantly dispelled, but the headgear can be used over and over. Note that the hat can be changed (as part of a disguise) to appear as a comb, ribbon, head band, fillet, cap, coif, hood, helmet, etc.'
+    )
+),
+MagicItem( name = 'Hat of Stupidity',
+    category = MagicItemCategory.MISC,
+    xp_value = [0,0],
+    gold_value = [1000,1000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'This hat is totally indistinguishable from any of the other magical headgear, even when most carefully detected by magical means. Only by placing it upon the head can its powers be determined. Of course, once on the head, the wearer will believe that the hat is a specially beneficial item, for he or she will be overcome by stupidity. Intelligence will be lowered to 7, or by -1 if the wearer has a 7 or lower intelligence normally. The wearer will always desire to have the hat on - especially when he or she is engaged in any activity which requires thinking, spell casting, etc. Without the benefit of a <a href="/spells/remove-curse-cleric-lvl-3"><i>remove curse</i></a> spell or similar magic, the wearer will never be free from the dweomer of the hat.'
+),
+MagicItem( name = 'Heward\'s Handy Haversack',
+    category = MagicItemCategory.MISC,
+    xp_value = [3000,3000],
+    gold_value = [30000,30000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'A magical backpack of this sort appears quite ordinary - well-made and well-used. It is of finely tanned leather, and the straps have brass hardware and buckles. There are two side pouches, each of which appears large enough to hold about a quart of material, but each is similar to a <a href="/items/bag-of-holding"><i>bag of holding</i></a> and will actually contain material equal to as much as 2 cubic feet in volume or 20 pounds in weight. The large central portion of the pack can contain up to 8 cubic feet or 80 pounds of material - and the pack has an even greater dweomer: When the wearer reaches into one of its parts for a specific item, that item will be on top of whatever else might be in the same part of the pack. Thus, no digging around and fumbling is ever necessary to find what the <i>haversack</i> keeps safe. Because of its dweomer, <i>Heward\'s Handy Haversack</i> and whatever it contains gain +2 on all saving throws for any reason.'
+),
+MagicItem( name = 'Horn of Fog',
+    category = MagicItemCategory.MISC,
+    xp_value = [400,400],
+    gold_value = [4000,4000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'This small, buglelike device allows its possessor to blow forth a thick cloud of heavy fog equal to that of an illusionist\'s <a href="/spells/fog-cloud-illusionist-lvl-2"><i>fog cloud</i></a> spell. Each round spent blowing it creates a 10-foot cubic fog cloud. The entire cloud of vapors will last for 2-8 rounds after the last round of winding the instrument. Note that should it stop being sounded for a round, a new <i>fog cloud</i> will have begun, as the initial one has a life expectancy of but 2-8 more minutes, and will have drifted away from the individual sounding it. The device makes a deep, horn-like noise, the note dropping abruptly to a lower register at the end (OOOOOO - UMP!)'
+),
+MagicItem( name = 'Horn of Goodness/Evil',
+    category = MagicItemCategory.MISC,
+    xp_value = [750,750],
+    gold_value = [3250,3250],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'This magical instrument adapts itself to the ethical disposition of its possessor, so it will produce either a good or an evil effect depending on the alignment of its owner. If the possessor is absolutely neutral in ethical alignment, then the horn will have no power whatsoever. If the owner is good, then winding the horn has the effect of a <a href="/spells/protection-from-evil-magic-user-lvl-1"><i>protection from evil</i></a> spell in a 10-foot radius, and this protection will last for 10 rounds. Each friendly/allied creature within this area will be affected as if he or she was granted the spell. If the horn is of evil alignment, then the reverse of the noted spell occurs within the area of effect. The horn can be blown but once per day.'
+),
+MagicItem( name = 'Iron Bands of Bilarro',
+    category = MagicItemCategory.MISC,
+    xp_value = [750,750],
+    gold_value = [5000,5000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'When initially discovered, this very potent item will appear to be little more than a somewhat rusty iron sphere. Close examination will reveal that there are bandings on the 3-inch-diameter globe. Magic detection will reveal a strong dweomer of indeterminable nature. When the proper command word is spoken and the spherical iron device is hurled at an opponent, the bands will expand and tightly constrict the target creature if a successful, unadjusted "to hit" roll is made. A single creature of up to <a href="/creatures/frost-giant">frost</a>/<a href="/creatures/fire-giant">fire giant</a>-size can be captured thus and held immobile until the command word is spoken to bring the bands into globular form again. Any creature so banded gains the chance to break (and ruin) the bands, however. This chance equals the captive\'s chance to <i>bend bars</i>. Only one attempt is possible before the bands are so set as to be inescapable.'
+),
+MagicItem( name = 'Lens of Detection',
+    category = MagicItemCategory.MISC,
+    xp_value = [250,250],
+    gold_value = [1500,1500],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'This circular prism enables its user to detect minute things at 50% of the ability of <a href="/items/eyes-of-minute-seeing"><i>eyes of minute seeing</i></a>, but it also enables the possessor to look through it and track as a ranger does, although only at 6" base speed. The <i>lens of detection</i> is about 6 inches in diameter. It must be set in a frame with a handle in order to be properly used.'
+),
+MagicItem( name = 'Lens of Ultravision',
+    category = MagicItemCategory.MISC,
+    xp_value = [750,750],
+    gold_value = [5000,5000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'This circular, faceted prism is fashioned from a perfect crystal of pale aquamarine. When held before the eye, it enables the user to sense radiation in the ultraviolet spectrum. In effect, the user is able to see in total darkness as if he or she were in bright moonlight. General outlines can be distinguished from up to 240 feet away, and details can be seen clearly for 120 feet distance. Of course, the device must be held so as to be able to look through it. A <i>lens of ultravision</i> is about 1½ inches in diameter.'
+),
+MagicItem( name = 'Mantle of Celestian',
+    category = MagicItemCategory.MISC,
+    xp_value = [1500,1500],
+    gold_value = [15000,15000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = ('This garment is of black cloth - the color of the 7th Order of clerics of Celestian. It is otherwise unremarkable. If magic is checked for, the mantle will radiate an aura of <i>alteration</i>. The principal power of this wrap is to enable the wearer to exist in the cold void of outer space. Its wearer can breathe and feel as if he or she were in a cool, well-ventilated place where any oxygen-breathing creature could exist. It also protects against poison gases of all sorts. The mantle also provides +1 on all saving throws versus electricity, fire, and noise (including <a href="/items/drums-of-deafening"><i>drums of deafening</i></a> or <a href="/items/drums-of-panic"><i>panic</i></a>, roaring, thunder). The mantle is also well suited for travel, having the following qualities:\n\n'
+        '<b>Food</b>: The wearer may simply reach inside one of its many pockets and find sufficient rations for one person for one day; this nourishment is available once per day.\n'
+        '<b>Drink</b>: In another pocket there will be a small ewer which will provide up to seven gallons of water, pouring cold or warm as the pourer commands. Such a draught is obtainable once per day.\n'
+        '<b>Shelter</b>: The wearer will not grow cold or hot or become wet or damp while wearing the mantle.\n'
+        '<b>Belongings</b>: The mantle has seven large and seven small pockets, and only one of each are needed for food and water, so the remaining 12 can be used to store whatever is desired (up to 70 gp weight in the small pockets or 140 gp weight in the large) with no bulk, bulge, or added weight.\n\n'
+        'The mantle also has a special power which is conveyed to the wearer only if he or she is a cleric of Celestian, whether druidical or not. This dweomer enables the wearer to "see" the aura of any stranger met along the way, so as to give warning of evil, neutral, or good intent. The power is not automatically bestowed, however, for the wearer must concentrate to sense the aura.'
+    )
+),
+MagicItem( name = 'Murlynd\'s Spoon',
+    category = MagicItemCategory.MISC,
+    xp_value = [750,750],
+    gold_value = [4000,4000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'This unremarkable eating utensil is typically fashioned from horn. It radiates a dim dweomer of the <i>conjuration</i> sort if magic is detected for. If the spoon is placed in any empty container - a bowl, cup, dish, etc. - the vessel will fill with a thick, pasty gruel. Although this substance has a flavor similar to warm, wet cardboard, it is highly nourishing and contains everything necessary to sustain any herbivorous, omnivorous, or carnivorous creature. The spoon will produce sufficient gruel each day to feed up to four humans.'
+),
+MagicItem( name = 'Pearl of the Sirines',
+    category = MagicItemCategory.MISC,
+    xp_value = [900,900],
+    gold_value = [4500,4500],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'This normal-seeming pearl will radiate a faint dweomer of <i>enchantment</i> sort if magic is detected for. In any event, the stone will be very beautiful and worth at least 1,000 gp on this basis alone. If it is clasped firmly in hand or to breast and the possessor attempts actions related to any of the pearl\'s power areas, he or she will understand and be able to employ the item. The pearl enables its possessor to breathe in water as if he or she were in clean, fresh air. Underwater movement rate is 24". The possessor is also immune to any ill effects from the touch of a <a href="/creatures/sirine">sirine</a>. The pearl must be within the general area of the possessor - less than 1" distant - to convey its powers to him or her.'
+),
+MagicItem( name = 'Philosopher\'s Stone',
+    category = MagicItemCategory.MISC,
+    xp_value = [1000,1000],
+    gold_value = [10000,10000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'This is a rare and magical substance which appears to be an ordinary, rather blackish and sooty piece of rock. It radiates a faint dweomer of indeterminate sort. If the stone is broken open, a geode-like cavity will be discovered. The interior of this cavity is lined with a quicksilver which will enable the transmutation of the base metals, iron and lead, into silver and gold. Either an alchemist or a magic-user will be required to effectuate such transmutation, however. From 50 to 500 pounds of iron can be made into silver, or from 10 to 100 pounds of lead can be turned into gold from a single <i>philosopher\'s stone</i>. Transmutation must be made fully upon the first attempt, all the quicksilver being employed at one time. Better still, there are two additional substances possible within such a stone. The first is a greenish, crystalline salt which will allow the manufacture of 1-4 <a href="/items/potion-of-longetivity"><i>potions of longevity</i></a>; this substance has a 75% chance of occuring inside a given stone. The second is a pure white powder which, when admixed with a <i>potion of longevity</i>, can actually restore life to a dead human or demi-human if administered internally within one week of his or her demise (cf. <a href="/spells/raise-dead-cleric-lvl-5"><i>raise dead</i></a> spell). There is a 25% chance that the white powder will occur. Note that the experience point value and gold piece sale value apply only to an unopened stone.'
+),
+MagicItem( name = 'Pouch of Accessibility',
+    category = MagicItemCategory.MISC,
+    xp_value = [1250,1250],
+    gold_value = [12500,12500],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'This normal-seeming pouch is actually a strongly magicked item which can contain up to 3,000 gp of weight in 30 specially constructed pockets within it. Each pocket, in turn, holds a maximum of 100 gp weight, or 1 cubic foot of volume, whichever is reached first. Better still, this device enables the possessor to open the pouch and call forth the item(s) desired. Merely speaking the name of a desired object causes it to appear at the top of the pouch, ready for instant grasp. Of course, these items are similar to <a href="/items/bag-of-holding"><i>bags of holding</i></a> and <a href="/items/portable-hole"><i>portable holes</i></a>, and the strictures about placement within such magical spaces apply fully. The pouch weighs 10 gp empty and 40 gp when filled.'
+),
+MagicItem( name = 'Prison of Zagyg',
+    category = MagicItemCategory.MISC,
+    xp_value = [2750,2750],
+    gold_value = [25000,25000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'Only five of these brass devices are thought to exist. Each is nearly identical, appearing to be nothing more than a small, well-made birdcage. No amount of normal handling or examination will reveal it to be magical, but if a <a href="/spells/detect-magic-cleric-lvl-1"><i>detect magic</i></a> spell is cast upon one, it is 50% likely to show a vague dweomer of uncertain nature - either no class of magic or an erroneous one will be detected. Each prison-cage has a <i>permanent</i> <a href="/spells/anti-magic-shell-magic-user-lvl-6"><i>anti-magic</i></a> and <a href="/spells/non-detection-illusionist-lvl-3"><i>non-detection</i></a> spell in and upon it. Each such item attunes itself to the magic-user possessing it when he or she learns the wording which activates that particular <i>Prison of Zagyg</i>. Speaking the <i>activation word</i> has two effects: First, the door to the cage is immediately held fast by a <a href="/spells/wizard-lock-magic-user-lvl-2"><i>wizard lock</i></a> spell as if the possessor had cast it, and that portal can be opened only from the outside by a character of the magic-user profession who can normally overcome such a <i>wizard lock</i> without resorting to additional magic. Second, the cage is attuned to a single <i>trigger word</i> which will enable its possessor to imprison a creature within the cage by invoking an enchantment of 1 round casting time. This <i>command spell</i> must name the true name of the creature to be imprisoned, or else its history (in great detail) in the case of creatures without a name. If the creature being commanded into imprisonment fails to make its saving throw versus <i>spell</i>, it shrinks to about ¼ foot in height and is instantaneously transported into the cage. Since magic does not function within the cage, the imprisoned creature cannot itself escape. It can be freed by a magic-user able to open the door of the device or by any other being who can do so by use of a <a href="/spells/wish-magic-user-lvl-9"><i>wish</i></a> or an <a href="/spells/alter-reality-illusionist-lvl-7"><i>alter reality</i></a> spell. A <i>Prison of Zagyg</i> cannot be harmed or affected by the use of force or magic. Any creature inside cannot be located by any means except actual sight or hearing due to normal proximity. Naturally, the possessor can free a prisoner by use of a single <i>freedom</i> word. Once freed, the former captive is restored to its former size and abilities. Imprisoned creatures need neither food nor drink when in the cage, for its magic negates the need for either.'
+),
+MagicItem( name = 'Quiver of Ehlonna',
+    category = MagicItemCategory.MISC,
+    xp_value = [1500,1500],
+    gold_value = [10000,10000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'This arrow container appears to be a typical device to hold about a score of shafts. It has an aura of <i>alteration</i>, however, if magic is detected for, and examination shows that it has three distinct portions. The first and smallest one can contain up to 60 objects of the same general size and shape as the sort of arrows employed with a long bow. The second, slightly longer compartment will hold up to 18 objects of the same general size and shape as a javelin. The third and longest portion of the case will contain as many as 6 objects of the same general size and shape as a bow - spears or staves, for example. The possessor of this item need merely command the quiver to produce whatever item he or she wishes each round, i.e. "an <i>arrow +1</i>," "an <i>arrow +3</i>," "a javelin," etc.'
+),
+MagicItem( name = 'Robe of Stars',
+    category = MagicItemCategory.MISC,
+    xp_value = [4000,4000],
+    gold_value = [12000,12000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'This rather ordinary-appearing garment seems typical of any such item of apparel worn by a magic-user. However, it will radiate a strong aura of <i>alteration</i> and <i>evocation</i> if examined for magic. The robe enables its wearer to travel on the Astral Plane, physically, along with all that he or she wears or carries. The garment similarly enables the wearer to survive comfortably in the void of outer space, as well as on the Astral Plane. In other situations, the robe gives its wearer a +1 on all saving throws, and in addition, he or she is able to employ up to six of the stars embroidered on the robe as missile weapons, provided the magic-user is proficient with darts as a weapon. Each star is a throwing weapon of +5 value, both to hit and damage, having a maximum range of 6" and base damage of 2-8 points per hit. The special star weapons are located on the chest portion of the robe. If the wearer does not use all of these missiles, they will replace themselves magically at the rate of one per day - but if all six are used, then all of the robe\'s power is gone forever.'
+),
+MagicItem( name = 'Robe of Vermin',
+    category = MagicItemCategory.MISC,
+    xp_value = [0,0],
+    gold_value = [1000,1000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'This magical-seeming garment will radiate a dim aura of <i>enchantment</i> if magic is detected for. The wearer will notice nothing unusual when the robe is donned, and it will actually convey some magic power at that time - <i>protection +1</i>, for example. However, as soon as the wearer is in a situation which requires his or her concentration and action against hostile opponents, the true nature of the garment will be revealed. The wearer will immediately suffer a multitude of bites from the vermin which will magically infest the garment. He or she will have to cease all other activities in order to scratch, shift the robe, and generally evidence all signs of extreme discomfort from the movement and biting of these pests. Thus, the wearer is unable to gain initiative, and he or she will certainly have a 50% chance of actually being unable to complete a spell due to the vermin. All other actions and attack forms requiring manual/locomotive/somatic activity are at only one-half normal probability. The dweomer of the garment prevents its removal except by means of a <a href="/spells/remove-curse-cleric-lvl-3"><i>remove curse</i></a> spell or similar magic.'
+),
+MagicItem( name = 'Scarab Versus Golems',
+    category = MagicItemCategory.MISC,
+    xp_value = [400,900],
+    gold_value = [3200,6000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = ('This magical pin enables its wearer to detect any form of golem within 6", although he or she must actually concentrate upon such detection for it to take place. Furthermore, the scarab will enable its possessor to actually combat a golem; with hand-held or missile weapons, as if it were a normal monster, i.e. hit and damage as if the golem had no special defenses. The power of the scarab is effective against any <i>lesser golem</i> created by the 5th-level clerical spell <a href="/spells/golem-cleric-lvl-5"><i>golem</i></a>, and each item has particular protective abilities as follows:\n\n'
+        '<table>'
+        '<tr><th>Dice Roll</th><th>Type(s) of Golem Affected by Scarab</th><th>Experience Point Value</th><th>Gold Piece Sale Value</th></tr>'
+        '<tr><td>01-30</td><td><a href="/creatures/flesh-golem">Flesh</a></td><td>400</td><td>3,200</td></tr>'
+        '<tr><td>31-55</td><td><a href="/creatures/clay-golem">Clay</a></td><td>500</td><td>3,500</td></tr>'
+        '<tr><td>56-75</td><td><a href="/creatures/stone-golem">Stone</a></td><td>600</td><td>4,000</td></tr>'
+        '<tr><td>76-85</td><td><a href="/creatures/iron-golem">Iron</a></td><td>800</td><td>5,000</td></tr>'
+        '<tr><td>86-95</td><td>Flesh, Clay, <a href="/creatures/wood-golem">Wood</a></td><td>900</td><td>6,000</td></tr>'
+        '<tr><td>96-00</td><td>Any golem</td><td>1,250</td><td>12,500</td></tr>'
+        '</table>'
+    )
+),
+MagicItem( name = 'Shadow Lanthorn',
+    category = MagicItemCategory.MISC,
+    xp_value = [750,750],
+    gold_value = [6000,6000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'This mundane-appearing light radiates a faint, evil dweomer. If it is fueled by oil rendered from fat of human corpses, its beam will generate 5-8 <a href="/creatures/shadow">shadows</a> who will serve the possessor of the device for as long as it burns. When the oil is consumed the shadows will disappear. Typical burning time is one hour. Note: Characters of good alignment will <i>lose</i> experience points equal to the value of the item if they do not destroy such a device.'
+),
+MagicItem( name = 'Sheet of Smallness',
+    category = MagicItemCategory.MISC,
+    xp_value = [1250,1250],
+    gold_value = [12500,12500],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'A magic item of this sort appears to be nothing more than a well-made piece of material - possibly some sort of covering or sheet woven of very fine linen or possibly silk. One side will have a larger pattern than the other, or perhaps one side will be white, the other black. In any event, there will be an aura of <i>alteration</i> detectable from this cloth if magic is checked for. The power of this dweomer is such that any item of regular magical sort (not an artifact or relic) which is wrapped within the cloth will shrink to 1/12 of its normal size and weight. If the item is then wrapped in the sheet so as to be touching the reverse side of the material, it will grow back to its normal size and weight. Note that this dweomer will not affect living material, only non-living items - and no item shrunk in this fashion is functional or usable while in reduced form. Change in size requires a full two rounds to accomplish, whether shrinking something or restoring it to normal size.'
+),
+MagicItem( name = 'Shoes of Fharlanghn',
+    category = MagicItemCategory.MISC,
+    xp_value = [2000,2000],
+    gold_value = [20000,20000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = ('These low, thick-soled shoes are so durable and tough that they never wear out. Better still, the individual shod in this footwear will never grow fatigued from walking, being able to easily maintain a pace of 20-30 miles per day. If the wearer is of neutral or neutral good alignment, the following additional benefits are gained:\n\n'
+        '1. The wearer will never trip, step into a snare or pit, or become <a href="/spells/entangle-druid-lvl-1"><i>entangled</i></a>.\n'
+        '2. The dweomer of the shoes enables the wearer to climb up or down hills, even those with a 45-degree angle, without effort.\n'
+        '3. The wearer will also be so sure-footed as to be able to walk along narrow ledges or slippery logs without fear of a slip or like mishap.\n\n'
+        'Should the person shod actually be a worshiper of Fharlanghhn, then he or she will also get these additional benefits:\n\n'
+        '4. Becoming lost is impossible for the wearer.\n'
+        '5. Nothing walking on the earth can surprise the wearer.\n'
+        '6. The wearer can run at 18" movement rate and jump horizontal distances of up to 20 feet.\n'
+        '7. Climbing vertical surfaces is done as if the wearer were a 10th-level thief.\n'
+        '8. Whenever there is earth (including dust, sand, or mud), the wearer can tread as if he or she were on a smooth roadway.\n\n'
+        'At least a dozen pairs of these magical shoes are known to exist in treasure troves.'
+    )
+),
+MagicItem( name = 'Slippers of Kicking',
+    category = MagicItemCategory.MISC,
+    xp_value = [750,750],
+    gold_value = [6000,6000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'The wearer of these magical shoes is empowered to utilize his or her feet as effective weapons. The wearer of this footgear is able to attack twice each combat round, and although his or her level of attack remains unchanged, the slippers enable two special attacks each round if the wearer chooses to forego other attack methods. Damage inflicted by kicking with these slippers is special. The opponent suffering damage takes 1-6 points if man-sized or smaller and 1-4 points if larger than man-sized. The dweomer of the footgear actually inflicts twice normal damage, but the additional effect is maintained in a separate category, for such points are recovered by the opponent after one complete turn - similar to stunning damage, which wears off after a time. For instance, the wearer attacks a larger than man-sized opponent. Initial attacks are successful, and the damage inflicted is 3 points (plus 3) and 4 points (plus 4). At the beginning of the 11th round of combat (or on the 11th round thereafter, in any event), the opponent would recover 7 points (the "plus 3" and "plus 4") noted above) as the stunning effects of the kicks wore off. If these slippers are worn by a character able to employ martial arts skills, their effect is merely +1 on foot attacks and damage inflicted.'
+),
+MagicItem( name = 'Slippers of Spider Climbing',
+    category = MagicItemCategory.MISC,
+    xp_value = [1000,1000],
+    gold_value = [10000,10000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'A pair of these magical shoes appear to be totally unremarkable, although they will give off a faint dweomer of the <i>alteration</i> sort if magic is detected for. When worn, the slippers enable the individual to move at a 6" rate on vertical surfaces or even upside down along ceilings, with hands free to do whatever he or she desires. It must be noted, however, that extremely slippery surfaces, ice, or oiled or greased surfaces make these slippers useless.'
+),
+MagicItem( name = 'Sovereign Glue',
+    category = MagicItemCategory.MISC,
+    xp_value = [1000,10000],
+    gold_value = [750,7500],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'This pale amber substance is thick and viscous. Because of its particular powers, it can be contained only within a flask coated with <a href="/items/oil-of-slipperiness"><i>oil of slipperiness</i></a>, and each time any of the bonding agent is poured forth from the flask, a new application of the <i>oil of slipperiness</i> must be put on the flask within 1 round to prevent the remaining glue from adhering to the side of the container. One ounce of the adhesive will cover approximately one square foot of surface, bonding virtually any two substances together in a permanent union. The glue takes one full round to set; if the objects are pulled apart before that time has elapsed, that application of the glue will lose its stickiness and be worthless. If the glue is allowed to set, then attempting to separate the two bonded objects will only result in the rending of one or the other except when <a href="/items/oil-of-etherealness"><i>oil of etherealness</i></a> or <a href="/items/ultimate-solution"><i>ultimate solution</i></a> is applied to the bond, since the <i>sovereign glue</i> is dissolved only by those liquids. A typical container of the substance holds from 1-10 ounces of glue.'
+),
+MagicItem( name = 'Spoon of Stirring',
+    category = MagicItemCategory.MISC,
+    xp_value = [500,500],
+    gold_value = [5000,5000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'Appearing as a normal spoon of unremarkable sort, this instrument will not even radiate magic unless it is dipped into a potion. Immediately upon being inserted into a container of such magical liquid, the spoon will give off a burst of the <i>alteration</i> sort of magic. The contents of the container will be magically altered into some other sort of potion, and the spoon will again seem normal thereafter. The spoon can be taken out of the liquid and used repeatedly on the same potion or on different ones. However, if the same potion is treated thus more than three times, the liquid will lose all of its magical properties (when a fourth usage of the spoon is tried), becoming a noisome liqour of no value whatsoever. To find out the type of potion produced by the spoon, simply use dice to determine it from Table III.A or Table III.A.2 in <b>Unearthed Arcana</b>. If the result is the same as the previous contents, then the appearance of the liquid has changed and the strength of the stuff is twice normal (01-50) or half normal (51-00).'
+),
+MagicItem( name = 'Stone Horse',
+    category = MagicItemCategory.MISC,
+    xp_value = [2000,2000],
+    gold_value = [12000,12000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = ('All items of this nature appear similar. Each is a full-sized, roughly-hewn statue of a horse, carved from some type of hard stone. The dweomer of an item of this nature is activated by speaking a command word. This word brings the steed to animation, enables it to carry a burden, and even to attack as if it were a <a href="/creatures/horse">warhorse</a>. There are two sorts of these steeds:\n\n'
+        '<i>Courser</i>: This stone horse travels at the same movement rate as a light horse (24") and attacks as if it were a medium warhorse (3 attacks for 1-6/1-6/1-3). It is armor class 3 and has 18 hit points. It makes saving throws versus all applicable attack forms as if it were "Metal, hard."\n\n'
+        '<i>Destrier</i>: This stone horse travels at the same movement rate as a medium horse (18") and attacks as if it were a heavy warhorse (3 attacks for 1-8/1-8/1-3). It is armor class 1 and has 26 hit points. It makes saving throws versus all applicable attack forms as if it were "Metal, hard."\n\n'
+        'A stone horse can carry 1,000 pounds tirelessly and never need to rest or feed. Damage inflicted to it can be repaired by first using a <a href="/spells/stone-to-flesh-magic-user-lvl-6"><i>stone to flesh</i></a> spell, thus causing the stone horse to become a normal horse. If allowed to graze and rest, the animal will heal its wounds at the rate of 1 point per day, and when it is fully healed it will automatically revert to its magical form.'
+    )
+),
+MagicItem( name = 'Ultimate Solution',
+    category = MagicItemCategory.MISC,
+    xp_value = [1000,1000],
+    gold_value = [7000,7000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'This strange and magical liquid appears to be nothing more than some sort of minor oil or potion. In fact, upon first examination it seems to have the properties of both <a href="/items/oil-of-slipperiness"><i>oil of slipperiness</i></a> and a potion of <a href="/items/potion-of-delusion"><i>delusion</i></a>. However, if it is applied to any form of adhesive or sticky material, the solution will immediately dissolve it. Thus, for instance, the effect of <i>sovereign glue</i> will immediately be negated by this liquid, as will any other form of cement, glue, or adhesive. The area of effect of this liquid is 1 cubic foot per ounce, and a typical container holds 27 ounces. If the liquid is carefully distilled to bring it down to one-third of its original volume, then each ounce will actually dissolve 1 cubic foot of material, organic or inorganic, just as if a <a href="/spells/disintegrate-magic-user-lvl-6"><i>disintegrate</i></a> spell had been employed. To find if a target is affected by this concentrated solution, a successful roll "to hit" is required, and the subject is then also entitled to a saving throw versus spell. Inanimate objects are automatically affected by the solution; however, for such items of magical nature a saving throw versus <i>disintegrate</i> applies.'
+),
+MagicItem( name = 'Wind Fan',
+    category = MagicItemCategory.MISC,
+    xp_value = [500,500],
+    gold_value = [2500,2500],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'A <i>wind fan</i> is a magical apparatus which appears to be nothing more than a wood and papyrus or cloth instrument with which to create a cooling breeze. The possessor can, however, by uttering the correct word, cause the fan to generate a movement of air exactly duplicating a <a href="/spells/gust-of-wind-magic-user-lvl-3"><i>gust of wind</i></a> spell as if cast by a 5th-level magic-user. The fan can be used only once per day with no risk. If it is used more frequently, there is a cumulative 20% chance per usage that the device will tear into useless, non-magical tatters.'
+),
+MagicItem( name = 'Zagyg\'s Flowing Flagon',
+    category = MagicItemCategory.MISC,
+    xp_value = [750,750],
+    gold_value = [3500,3500],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = 'This magical drinking vessel appears to be nothing more than a rather well-made figure, usually of nickel-silver, with some fair amount of engraving and bas-relief sculptures depicting grapes, vines, wine cellars, drinking, etc. Somewhere on the vessel will be a line of magical writing - the words of a toast. The first individual to pick up the flagon will be able to read what is written, but no other can do so, normally or magically, until they become the owner of the vessel. The toast phrase is read to activate the flagon - and each time it is activated, the phrase changes. Recitation of the magical toasting words causes the flagon to fill with good-tasting, but rather weak, wine. Each time thereafter that the flagon is drained, it refills itself with better-tasting liquid. The weak wine initially therein is of about 7% alcohol content: The next liquid is about 10% alcohol, the third draught of wine is 13%, the fourth is port-like and about 20%, the fifth is a near-liquor of some 40% alcoholic content, and the sixth and last draught is brandy-like liquid of nearly 80% alochol. The typical flagon contains about 1 pint of liquid (16 ounces). It is 90% unlikely that any creature partaking of the first draught will notice the increase in alcohol of the second, third, and so on. Thus, unsuspecting drinkers are quickly and easily made intoxicated and possibly brought to stupor from the contents of the flagon. The container is usable a maximum of three times per day.'
+),
+MagicItem( name = 'Zagyg\'s Spell Component Case',
+    category = MagicItemCategory.MISC,
+    xp_value = [200,700],
+    gold_value = [2000,7000],
+    source = SourceBook.UNEARTHED_ARCANA,
+    desc = ('This item appears to be a normal belt pouch of unremarkable sort, although it will radiate a faint magic aura if such is detected for. Any magic-user possessing this sort of pouch can simply think of the material components desired for a certain spell, and they will appear in the pouch. If these components are not used within 1 round after they appear, they immediately disappear, and that usage of the pouch becomes wasted. If the components are employed in spell casting, they likewise immediately disappear as soon as the spell is cast. The number of times per day that <i>Zagyg\'s Spell Component Case</i> can be used is determined on the table below. The experience point value of any such item is 100 times its number of uses per day (thus, from 200 to 700), and its gold piece sale value is 1,000 times its number of uses (ranging from 2,000 to 7,000).\n\n'
+        '<table>'
+        '<tr><th>Die Roll</th><th>Result</th></tr>'
+        '<tr><td>1-3</td><td>2 times/day</td></tr>'
+        '<tr><td>4-6</td><td>3 times/day</td></tr>'
+        '<tr><td>7-10</td><td>4 times/day</td></tr>'
+        '<tr><td>11-14</td><td>5 times/day</td></tr>'
+        '<tr><td>15-19</td><td>6 times/day</td></tr>'
+        '<tr><td>20</td><td>7 times/day</td></tr>'
+        '</table>'
+    )
 )
 ]
 """
@@ -3582,7 +4108,7 @@ MagicItem( name = '',
     category = MagicItemCategory.MISC,
     xp_value = [,],
     gold_value = [,],
-    source = SourceBook.DUNGEON_MASTERS_GUIDE,
+    source = SourceBook.UNEARTHED_ARCANA,
     desc = ''
 )
 """
