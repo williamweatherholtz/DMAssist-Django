@@ -57,7 +57,7 @@ INSTALLED_APPS = [
 
     'django_filters',
     'twitter_bootstrap',
-    'bootstrap4',
+    'bootstrap5',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -152,10 +152,3 @@ LOGIN_REDIRECT_URL = '/'
 
 # Logs sent emails to console
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
-'''
-INSTALLED_APPS = [
-    'bootstrap4',
-    #'bootstrap5'
-]
-'''
