@@ -1,5 +1,5 @@
 from django.views import generic
-from django.shortcuts import render, redirect, render_to_response
+from django.shortcuts import render, redirect
 from django.db import IntegrityError
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required

@@ -1,4 +1,4 @@
 -r requirements/heroku.txt
-django-filters
-twitter-bootstrap
+django-filter
+django-twitter-bootstrap
 django-bootstrap4

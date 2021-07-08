@@ -2,7 +2,7 @@ from random import randint, random
 import json
 
 from django.db import models
-from django.contrib.staticfiles.templatetags.staticfiles import static
+from django.templatetags.static import static
 
 from dma.dnd.roll import roll
 from dma.dnd.creature_info import Intelligence, SourceBook
