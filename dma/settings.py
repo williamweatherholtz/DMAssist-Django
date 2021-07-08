@@ -146,10 +146,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/static/'
-MEDIA_URL = '/static/images/'
+MEDIA_URL = '/static/media/'
 
 LOGIN_REDIRECT_URL = '/'
 
 # Logs sent emails to console
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
+'''
+INSTALLED_APPS = [
+    'bootstrap4',
+    #'bootstrap5'
+]
+'''
