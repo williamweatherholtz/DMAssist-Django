@@ -34,7 +34,7 @@ class CreatureInfo(models.Model):
     #json representation of a list of strings
     alt_names = models.CharField(max_length=500)
     #int representing SourceBook IntEnum
-    source = models.SmallIntegerField()
+    source = models.SmallIntegerField(default=0)
     
     description = models.CharField(max_length=4000, default = '')
     
@@ -53,7 +53,7 @@ class CreatureInfo(models.Model):
     #Most movement is given as integers, but some are fractional
     ground_speed = models.DecimalField(max_digits=5, decimal_places=2)
     air_speed = models.DecimalField(max_digits=5, decimal_places=2)
-    flight_class = models.CharField(max_length=1)
+    flight_class = models.CharField(max_length=1, default='')
     water_speed = models.DecimalField(max_digits=5, decimal_places=2)
     burrow_speed = models.DecimalField(max_digits=5, decimal_places=2)
     climb_speed = models.DecimalField(max_digits=5, decimal_places=2)
@@ -73,7 +73,7 @@ class CreatureInfo(models.Model):
     psi_attack_max = models.PositiveSmallIntegerField(default=0)
     psi_defense_min = models.PositiveSmallIntegerField(default=0)
     psi_defense_max = models.PositiveSmallIntegerField(default=0)
-    psi_modes = models.CharField(max_length=10)
+    psi_modes = models.CharField(max_length=10, default='')
     
     #Int representing Intelligence IntEnum
     iq_class = models.SmallIntegerField()

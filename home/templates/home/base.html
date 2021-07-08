@@ -1,22 +1,20 @@
 {% extends 'home/bootstrap.html' %}
 
-{% block bootstrap5_title %}EasyPC{% endblock %}
+{% block bootstrap5_title %} EasyPC - {% block title %}An RPG Cruncher{% endblock %}{% endblock %}
 
-{# Load the tag library #}
 {% load bootstrap5 %}
 {% load static %}
 
-{% block bootstrap5_content %}
 
-<link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
-<link rel="stylesheet" href="{% static 'css/base.css' %}">
-
-    
+{% block bootstrap5_before_content %}
 {% block head_extras %}
 {% endblock head_extras%}
+<link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+{% endblock %}
 
-{% block body %}
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+{% block bootstrap5_content %}
+<nav class="navbar navbar-dark bg-dark navbar-expand-md ">
     <a class="navbar-brand" href="/">EasyPC</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse"
         data-target="#navbarSupportedContent"
@@ -61,15 +59,17 @@
 <div id="content">
     {% block content %}
     {% endblock content %}
-</div>
-{% endblock body %}
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-    <script>
-        $("table").addClass("table table-sm")
-    </script>
+</div> 
 {% endblock bootstrap5_content%}
+
+{% block bootstrap5_extra_script %}
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script>
+    $("table").addClass("table table-sm")
+</script>
+{% endblock bootstrap5_extra_script%}

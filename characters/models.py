@@ -65,6 +65,7 @@ def raceCodeToStr(code):
     return name.replace('_', ' ')
 
 class CharacterInfo(models.Model):
+    #DEFAULT_AUTO_FIELD = models.BigAutoField()
     slug = models.CharField(max_length=151)
     user = models.CharField(max_length=75)
     name = models.CharField(max_length=75)

@@ -42,7 +42,7 @@ SECRET_KEY = get_secret('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '192.168.0.12']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '192.168.1.118']
 
 
 # Application definition
@@ -65,6 +65,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    #'django-configurations',
+    #'django-extensions',
+    #'django-environ',
+    #'model_bakery',
 ]
 
 MIDDLEWARE = [
@@ -108,6 +113,7 @@ DATABASES = {
     }
 }
 
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
