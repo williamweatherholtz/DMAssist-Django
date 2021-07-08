@@ -4,14 +4,13 @@
 
 <html lang="en">
 
-
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink_to_fit=no">
 
     <title>DMA {% block title_suffix %}{% endblock %}</title>
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
 {% block header %}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
@@ -67,7 +66,8 @@
 </nav>
 
 <div id="content">
-    {% block content %}{% endblock content %}
+    {% block content %}
+    {% endblock content %}
 </div>
 {% endblock body %}
     <!-- Optional JavaScript -->
