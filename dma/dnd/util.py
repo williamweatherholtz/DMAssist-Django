@@ -1,5 +1,3 @@
-
-
 def roundDownToNearest(num, interval):
     n = int(num)
     return ((n // interval) * interval)

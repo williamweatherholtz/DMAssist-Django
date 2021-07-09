@@ -7,7 +7,7 @@ from django.template.defaultfilters import slugify
 
 from spells.models import SpellInfo
 
-from dma.dnd.spells import cleric_spells, druid_spells, mu_spells, illusionist_spells
+from dma.dnd.spell import cleric_spells, druid_spells, mu_spells, illusionist_spells
 
 class Command(BaseCommand):
 

@@ -1,6 +1,6 @@
 from django.db import models
 
-class MagicItem(models.Model):
+class MagicItemModel(models.Model):
     slug = models.SlugField(max_length = 75)
     name = models.CharField(max_length = 75, unique=True)
     
@@ -8,7 +8,7 @@ class MagicItem(models.Model):
     category = models.SmallIntegerField()
     
     #int representation for SourceBook IntEnum
-    source = models.SmallIntegerField()
+    source = models.SmallIntegerField(default=0)
     
     min_xp = models.IntegerField(default=0)
     max_xp = models.IntegerField(default=0)

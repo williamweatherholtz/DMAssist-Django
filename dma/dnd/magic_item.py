@@ -1,5 +1,5 @@
 from .roll import roll
-from .spells import randomSpellScroll, randomSpell
+from .spell import randomSpellScroll, randomSpell
 from .magic_weapon import generateSword, generateMiscWeapon
 from .relic import generateRelic
 

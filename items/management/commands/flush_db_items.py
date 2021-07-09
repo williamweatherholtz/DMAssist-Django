@@ -1,8 +1,8 @@
 from django.core.management.base import BaseCommand
-from items.models import MagicItem
+from items.models import MagicItemModel
 
 class Command(BaseCommand):
     def handle(self, *args, **options):
-        count = len(MagicItem.objects.all())
-        MagicItem.objects.all().delete()
-        print('{} MagicItem entries deleted'.format(count))
+        count = len(MagicItemModel.objects.all())
+        MagicItemModel.objects.all().delete()
+        print('{} MagicItemModel entries deleted'.format(count))

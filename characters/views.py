@@ -49,15 +49,12 @@ def importer_view(request):
 @login_required
 def creator_view(request):
     if request.method == 'POST':
-        form = CreateForm(request.POST)
+        form = ImportForm(request.POST)#CreateForm(request.POST)
          
     else:
-        form = CreateForm()
+        form = ImportForm()#CreateForm()
     
-    return render(
-        request, 'characters/create.html',
-        {'form':form}
-    )
+    return render( request, 'characters/create.html', {'form':form} )
 
 class IndexView(generic.ListView):
     model = CharacterInfo

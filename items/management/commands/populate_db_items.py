@@ -5,7 +5,7 @@ from django.db.utils import IntegrityError
 from django.core.management.base import BaseCommand
 from django.template.defaultfilters import slugify
 
-from items.models import MagicItem
+from items.models import MagicItemModel
 
 from dma.dnd.magic_item_definitions import all_items
 
@@ -18,7 +18,7 @@ class Command(BaseCommand):
         
         for item in all_items:
             
-            m = MagicItem(
+            m = MagicItemModel(
                 slug = slugify(item.name),
                 name = item.name,
                 category = item.category.value,
@@ -35,7 +35,7 @@ class Command(BaseCommand):
                 m.save()
             except IntegrityError:
                 fields_changed = 0
-                conflict = MagicItem.objects.get(name=item.name)
+                conflict = MagicItemModel.objects.get(name=item.name)
                 
                 if conflict != m:
                     fields = {key: val for key, val in vars(m).items() if key not in ['_state', 'id']}

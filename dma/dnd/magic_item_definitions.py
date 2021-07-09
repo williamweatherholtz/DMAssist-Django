@@ -1,4 +1,4 @@
-from .sourcebook import SourceBook
+from .sourcebook import SourceBook, sourcebooks
 from .time import TimePeriod, TimeUnit
 
 from enum import Enum

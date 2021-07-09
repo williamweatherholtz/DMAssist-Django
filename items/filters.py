@@ -1,7 +1,7 @@
 import django_filters
 from django import forms
 
-from items.models import MagicItem
+from items.models import MagicItemModel
 
 class ItemFilter(django_filters.FilterSet):
     name = django_filters.CharFilter(
@@ -9,7 +9,7 @@ class ItemFilter(django_filters.FilterSet):
     )
     
     class Meta:
-        model = MagicItem
+        model = MagicItemModel
         
         fields = [
             'name'

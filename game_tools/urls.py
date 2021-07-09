@@ -1,4 +1,5 @@
 from django.conf.urls import url
+from django.urls import path
 from django.views.generic import RedirectView
 
 from .views import (
@@ -9,7 +10,8 @@ from .views import (
 
 app_name = 'game_tools'
 urlpatterns = [
-    url(r'^t_types/result/$', t_types_result_view, name='t_types_result'),
+    path('t_types/result', t_types_result_view, name='t_types_result'),
+    #url(r'^t_types/result/$', t_types_result_view, name='t_types_result'),
     url(r'^t_types/$', t_types_view, name='t_types'),
     url(r'^jewelry/result/$', jewelry_result_view, name='jewelry_result'),
     url(r'^jewelry/$', jewelry_view, name='jewelry'),
