@@ -77,12 +77,3 @@ class SpellInfo(models.Model):
                 return '{}/level'.format(str(lvl_dur))
 
         return 'N/A'
-
-    @property
-    def source_str(self):
-        if self.source == SourceBook.PLAYERS_HANDBOOK:
-            return 'Players Handbook'
-        if self.source == SourceBook.UNEARTHED_ARCANA:
-            return 'Unearthed Arcana'
-
-        return 'Unknown'
