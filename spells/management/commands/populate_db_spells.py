@@ -7,8 +7,7 @@ from django.template.defaultfilters import slugify
 
 from spells.models import SpellInfo
 
-from dma.dnd.spells import (
-    cleric_spells, druid_spells, mu_spells, illusionist_spells)
+from dma.dnd.spells import cleric_spells, druid_spells, mu_spells, illusionist_spells
 
 class Command(BaseCommand):
 
@@ -29,7 +28,7 @@ class Command(BaseCommand):
                 cast_time = spell.cast_time.decisegments,
                 duration = spell.duration.decisegments,
                 duration_per_level = spell.duration_per_level.decisegments,
-                source = spell.sourcebook.value,
+                source = spell.sourcebook.title,
                 description = spell.description,
                 commentary = spell.special_description,
                 saving_throw = spell.save,

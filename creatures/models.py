@@ -10,8 +10,8 @@ from dma.dnd.treasure import Treasure
 
 """
 Creature class represents an individual creature
-"""        
-class Creature(models.Model):
+"""
+class Creature:
     def __init__(self, type_name, hp, xp, combat_hd, name=None):
         self.creature_name = type_name
         self.hp = hp

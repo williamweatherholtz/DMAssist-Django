@@ -1,6 +1,6 @@
 from .roll import roll
 from .time import TimePeriod, TimeUnit
-from .sourcebook import SourceBook
+from .sourcebook import sourcebooks
 
 from random import sample,choice
 from decimal import Decimal
@@ -18,8 +18,12 @@ VA = TimeUnit.variable
 P = TimeUnit.permanent
 tp = TimePeriod
 
-V = SourceBook.PLAYERS_HANDBOOK
-U = SourceBook.UNEARTHED_ARCANA
+from django.template.defaultfilters import slugify
+
+V = sourcebooks['phb']
+U = sourcebooks['ua']
+
+print (V, U)
 
 #contains minimal info on spells (name, class and level)
 class Spell():

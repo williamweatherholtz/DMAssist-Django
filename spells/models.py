@@ -1,5 +1,5 @@
 from dma.dnd.time import simplify
-from dma.dnd.sourcebook import SourceBook
+from dma.dnd.sourcebook import SourceBook, sourcebooks
 
 from django.db import models
 
@@ -12,11 +12,11 @@ CLASS_CHOICES = (
     ('I', 'Illusionist'),
 )
 
-SOURCE_CHOICES = (
-    ('', 'All'),
-    (SourceBook.PLAYERS_HANDBOOK.value, 'Players Handbook'),
-    (SourceBook.UNEARTHED_ARCANA.value, 'Unearthed Arcana'),
-)
+
+SOURCE_CHOICES = [('', 'All')]
+for nickname, book in sourcebooks.items():
+    SOURCE_CHOICES.append((book.title, book.title))
+
 
 class SpellInfo(models.Model):
     slug = models.SlugField(max_length=75, unique=True)
@@ -29,7 +29,7 @@ class SpellInfo(models.Model):
     range = models.CharField(max_length=75, default='')
     aoe = models.CharField(max_length=150, blank=True, default='')
     saving_throw = models.CharField(max_length=75, default='')
-    source = models.SmallIntegerField(default=0)
+    source = models.CharField(max_length=150, default='')
     description = models.TextField(default="Missing description")
     commentary = models.TextField(default='')
 
