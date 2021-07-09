@@ -10,11 +10,11 @@
 {% block head_extras %}
 {% endblock head_extras%}
 <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
-<link rel="stylesheet" href="{% static 'css/base.css' %}">
+<!--  <link rel="stylesheet" href="{% static 'css/base.css' %}"> -->
 {% endblock %}
 
 {% block bootstrap5_content %}
-<nav class="navbar navbar-dark bg-dark navbar-expand-md ">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="/">EasyPC</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse"
         data-target="#navbarSupportedContent"
@@ -24,34 +24,40 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav bd-navbar-nav flex-row">   
+            <li class="nav-item">
+                <a class="nav-link"
+                    href="/game_tools/">Game Tools</a></li>
+            <li class="nav-item">
+                <a class="nav-link"
+                    href="/creatures/">Creatures</a></li>
+            <li class="nav-item">
+                <a class="nav-link"
+                    href="/spells/">Spells</a></li>
+            <li class="nav-item">
+                <a class="nav-link"
+                    href="/items/">Items</a></li>
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link"
+                    href="/characters/">Characters</a></li>
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-link disabled"
+                    href="{% url 'login'%}?next={{request.path}}">Characters</a></li>
+            {% endif %}
+        </ul>
+        
+        <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
             {% if user.is_authenticated %}
             <li class="nav-item active">
                 <a class="nav-link"
                     href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
-            <li class="nav-item active">
-                <a class="nav-link"
-                    href="/characters/">Characters</a></li>
             {% else %}
             <li class="nav-item active">
                 <a class="nav-link"
                     href="{% url 'login'%}?next={{request.path}}">Login</a></li>
-            <li class="nav-item disabled">
-                <a class="nav-link"
-                    href="{% url 'login'%}?next={{request.path}}">Characters</a></li>
             {% endif %}
-            <li class="nav-item active">
-                <a class="nav-link"
-                    href="/game_tools/">Game Tools</a></li>
-            <li class="nav-item active">
-                <a class="nav-link"
-                    href="/creatures/">Creatures</a></li>
-            <li class="nav-item active">
-                <a class="nav-link"
-                    href="/spells/">Spells</a></li>
-            <li class="nav-item active">
-                <a class="nav-link"
-                    href="/items/">Items</a></li>
         </ul>
     </div>
 </nav>

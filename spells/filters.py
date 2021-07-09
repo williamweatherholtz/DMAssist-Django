@@ -12,10 +12,10 @@ class SpellFilter(django_filters.FilterSet):
         lookup_expr='icontains'
     )
 
-    spell_class = django_filters.ChoiceFilter(
+    spell_class = django_filters.MultipleChoiceFilter(
         choices = CLASS_CHOICES,
-        empty_label = None,
-        widget = forms.Select
+        #empty_label = None,
+        widget = forms.CheckboxSelectMultiple
     )
     
     source = django_filters.ChoiceFilter(
